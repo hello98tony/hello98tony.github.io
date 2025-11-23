@@ -17,15 +17,15 @@
     <meta property="og:title" content="Nerds Assemble - Unlock the Wonders of Science">
     <meta property="og:description" content="Interactive learning platform for science students with 3D models, virtual labs, and comprehensive resources">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://Nerds Assemble.com">
-    <meta property="og:image" content="https://Nerds Assemble.com/images/og-image.jpg">
+    <meta property="og:url" content="https://nerdsassemble.com">
+    <meta property="og:image" content="https://nerdsassemble.com/images/og-image.jpg">
     <meta property="og:site_name" content="Nerds Assemble">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Nerds Assemble - Science Student Hub">
     <meta name="twitter:description" content="Interactive science learning platform with 3D models and virtual labs">
-    <meta name="twitter:image" content="https://Nerds Assemble.com/images/twitter-image.jpg">
+    <meta name="twitter:image" content="https://nerdsassemble.com/images/twitter-image.jpg">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -36,11 +36,16 @@
     <!-- Preload Critical Resources -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Poppins:wght@300;600;800&display=swap" as="style">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
+    <link rel="preload" href="assets/css/style.css" as="style">
+    
+    <!-- Canonical URL & Sitemap -->
+    <link rel="canonical" href="https://nerdsassemble.com/">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/css/style.css">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -49,8 +54,8 @@
         "@type": "EducationalOrganization",
         "name": "Nerds Assemble",
         "description": "Interactive learning platform for science students with 3D models, virtual labs, and comprehensive educational resources",
-        "url": "https://Nerds Assemble.com",
-        "logo": "https://Nerds Assemble.com/logo.png",
+        "url": "https://nerdsassemble.com",
+        "logo": "https://nerdsassemble.com/logo.png",
         "foundingDate": "2023",
         "founder": {
             "@type": "Person",
@@ -63,14 +68,14 @@
         },
         "contactPoint": {
             "@type": "ContactPoint",
-            "email": "contact@Nerds Assemble.com",
+            "email": "contact@nerdsassemble.com",
             "telephone": "+91-98765-43210",
             "contactType": "customer service"
         },
         "sameAs": [
-            "https://facebook.com/Nerds Assemble",
-            "https://twitter.com/Nerds Assemble",
-            "https://linkedin.com/company/Nerds Assemble"
+            "https://facebook.com/nerdsassemble",
+            "https://twitter.com/nerdsassemble",
+            "https://linkedin.com/company/nerdsassemble"
         ],
         "offers": {
             "@type": "Offer",
@@ -103,7 +108,7 @@
                     "name": "Physics",
                     "description": "Explore quantum mechanics, wave-particle duality, and quantum entanglement",
                     "provider": "Nerds Assemble",
-                    "url": "https://Nerds Assemble.com/physics"
+                    "url": "https://nerdsassemble.com/physics"
                 }
             },
             {
@@ -114,7 +119,7 @@
                     "name": "Chemistry", 
                     "description": "Master organic compounds and biomolecules structure and reactions",
                     "provider": "Nerds Assemble",
-                    "url": "https://Nerds Assemble.com/chemistry"
+                    "url": "https://nerdsassemble.com/chemistry"
                 }
             },
             {
@@ -125,7 +130,7 @@
                     "name": "Mathematics",
                     "description": "Advanced mathematical concepts and applications",
                     "provider": "Nerds Assemble",
-                    "url": "https://Nerds Assemble.com/maths"
+                    "url": "https://nerdsassemble.com/maths"
                 }
             },
             {
@@ -136,7 +141,7 @@
                     "name": "Programming Languages",
                     "description": "Computer programming and software development",
                     "provider": "Nerds Assemble", 
-                    "url": "https://Nerds Assemble.com/programming"
+                    "url": "https://nerdsassemble.com/programming"
                 }
             }
         ]
@@ -144,7 +149,10 @@
     </script>
 </head>
 <body>
-    <!-- Google Analytics Script (Replace GA_MEASUREMENT_ID with your actual ID) -->
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Google Analytics Script -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -152,9 +160,6 @@
         gtag('js', new Date());
         gtag('config', 'GA_MEASUREMENT_ID');
     </script>
-
-    <!-- Google Search Console Verification (Replace with your code) -->
-    <meta name="google-site-verification" content="your-verification-code-here">
 
     <!-- Animated Background Elements -->
     <div class="science-element atom" style="top: 10%; right: 10%;">
@@ -167,6 +172,16 @@
         <div class="molecule-node"></div>
         <div class="molecule-bond" style="transform: rotate(60deg);"></div>
         <div class="molecule-bond" style="transform: rotate(-60deg);"></div>
+    </div>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent" id="cookieConsent">
+        <div class="cookie-content">
+            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. 
+               <a href="/privacy-policy">Learn more</a>
+            </p>
+            <button class="cookie-accept" id="cookieAccept">Accept</button>
+        </div>
     </div>
 
     <!-- Header -->
@@ -192,120 +207,139 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Unlock the Wonders of Science</h1>
-                <p class="hero-subtitle">For Aspiring Scientists and Curious Minds</p>
-                <p class="hero-description">Dive into the fascinating world of physics, chemistry, and biology with our comprehensive resources designed specifically for science students. Master complex concepts through interactive lessons, 3D models, and real-world applications.</p>
-                <div class="cta-buttons">
-                    <a href="#subjects" class="btn btn-primary">Explore Courses</a>
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Unlock the Wonders of Science</h1>
+                    <p class="hero-subtitle">For Aspiring Scientists and Curious Minds</p>
+                    <p class="hero-description">Dive into the fascinating world of physics, chemistry, and biology with our comprehensive resources designed specifically for science students. Master complex concepts through interactive lessons, 3D models, and real-world applications.</p>
+                    <div class="cta-buttons">
+                        <a href="#subjects" class="btn btn-primary">Explore Courses</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <h2>Why Choose Nerds Assemble?</h2>
-            <p>We provide cutting-edge educational resources tailored for science students at all levels.</p>
-           
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-flask" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="feature-title">Interactive Experiments</h3>
-                    <p>Explore virtual labs and simulations that bring scientific concepts to life, allowing you to conduct experiments safely from anywhere.</p>
-                </div>
+        <!-- Features Section -->
+        <section class="features" id="features">
+            <div class="container">
+                <h2>Why Choose Nerds Assemble?</h2>
+                <p>We provide cutting-edge educational resources tailored for science students at all levels.</p>
                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-atom" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="feature-title">3D Molecular Models</h3>
-                    <p>Visualize complex molecular structures in 3D with our interactive models that you can rotate, zoom, and explore from every angle.</p>
-                </div>
-               
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-brain" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="feature-title">Concept Mastery</h3>
-                    <p>Our adaptive learning system identifies your weak areas and provides targeted exercises to help you master challenging topics.</p>
-                </div>
-               
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-book-open" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="feature-title">Comprehensive Resources</h3>
-                    <p>Access our extensive library of study materials, including video lectures, practice problems, and research papers.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Subjects Section -->
-    <section class="subjects" id="subjects">
-        <div class="container">
-            <h2>Explore Our Subjects</h2>
-            <p>Dive deep into specialized areas of science with our structured curriculum.</p>
-           
-            <div class="subjects-slider">
-                <div class="subject-cards">
-                    <div class="subject-card">
-                        <div class="subject-image" style="background-image: url('https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');" role="img" aria-label="Physics laboratory equipment"></div>
-                        <div class="subject-content">
-                            <h3 class="subject-title">Physics</h3>
-                            <p class="subject-description">Explore the strange world of quantum mechanics, from wave-particle duality to quantum entanglement.</p>
-                            <a href="physics.html" class="subject-link">Start Learning <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-flask" aria-hidden="true"></i>
                         </div>
+                        <h3 class="feature-title">Interactive Experiments</h3>
+                        <p>Explore virtual labs and simulations that bring scientific concepts to life, allowing you to conduct experiments safely from anywhere.</p>
                     </div>
                    
-                    <div class="subject-card">
-                        <div class="subject-image" style="background-image: url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');" role="img" aria-label="Chemistry laboratory glassware"></div>
-                        <div class="subject-content">
-                            <h3 class="subject-title">Chemistry</h3>
-                            <p class="subject-description">Master the structure, properties, and reactions of organic compounds and biomolecules.</p>
-                            <a href="chemistry.html" class="subject-link">Start Learning <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-atom" aria-hidden="true"></i>
                         </div>
+                        <h3 class="feature-title">3D Molecular Models</h3>
+                        <p>Visualize complex molecular structures in 3D with our interactive models that you can rotate, zoom, and explore from every angle.</p>
                     </div>
                    
-                    <div class="subject-card">
-                        <div class="subject-image" style="background-image: url('https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');" role="img" aria-label="Mathematical equations and formulas"></div>
-                        <div class="subject-content">
-                            <h3 class="subject-title">Mathematics</h3>
-                            <p class="subject-description">Master calculus, algebra, and advanced mathematical concepts with interactive problem-solving.</p>
-                            <a href="maths.html" class="subject-link">Start Learning <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain" aria-hidden="true"></i>
                         </div>
+                        <h3 class="feature-title">Concept Mastery</h3>
+                        <p>Our adaptive learning system identifies your weak areas and provides targeted exercises to help you master challenging topics.</p>
                     </div>
                    
-                    <div class="subject-card">
-                        <div class="subject-image" style="background-image: url('https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');" role="img" aria-label="Computer programming code on screen"></div>
-                        <div class="subject-content">
-                            <h3 class="subject-title">Programming Languages</h3>
-                            <p class="subject-description">Learn Python, JavaScript, and other programming languages for scientific computing and data analysis.</p>
-                            <a href="programming.html" class="subject-link">Start Learning <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-book-open" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="feature-title">Comprehensive Resources</h3>
+                        <p>Access our extensive library of study materials, including video lectures, practice problems, and research papers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subjects Section -->
+        <section class="subjects" id="subjects">
+            <div class="container">
+                <h2>Explore Our Subjects</h2>
+                <p>Dive deep into specialized areas of science with our structured curriculum.</p>
+               
+                <div class="subjects-slider">
+                    <div class="subject-cards">
+                        <div class="subject-card">
+                            <div class="subject-image">
+                                <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                                     alt="Physics laboratory equipment with oscilloscopes and scientific instruments" 
+                                     width="600" height="400" loading="lazy">
+                            </div>
+                            <div class="subject-content">
+                                <h3 class="subject-title">Physics</h3>
+                                <p class="subject-description">Explore the strange world of quantum mechanics, from wave-particle duality to quantum entanglement.</p>
+                                <a href="physics.html" class="subject-link">Start Learning <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                       
+                        <div class="subject-card">
+                            <div class="subject-image">
+                                <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                                     alt="Chemistry laboratory glassware with beakers and test tubes" 
+                                     width="600" height="400" loading="lazy">
+                            </div>
+                            <div class="subject-content">
+                                <h3 class="subject-title">Chemistry</h3>
+                                <p class="subject-description">Master the structure, properties, and reactions of organic compounds and biomolecules.</p>
+                                <a href="chemistry.html" class="subject-link">Start Learning <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                       
+                        <div class="subject-card">
+                            <div class="subject-image">
+                                <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                                     alt="Mathematical equations and formulas written on chalkboard" 
+                                     width="600" height="400" loading="lazy">
+                            </div>
+                            <div class="subject-content">
+                                <h3 class="subject-title">Mathematics</h3>
+                                <p class="subject-description">Master calculus, algebra, and advanced mathematical concepts with interactive problem-solving.</p>
+                                <a href="maths.html" class="subject-link">Start Learning <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                       
+                        <div class="subject-card">
+                            <div class="subject-image">
+                                <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                                     alt="Computer programming code displayed on screen" 
+                                     width="600" height="400" loading="lazy">
+                            </div>
+                            <div class="subject-content">
+                                <h3 class="subject-title">Programming Languages</h3>
+                                <p class="subject-description">Learn Python, JavaScript, and other programming languages for scientific computing and data analysis.</p>
+                                <a href="programming.html" class="subject-link">Start Learning <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Transform Your Science Learning?</h2>
-                <p>Join thousands of science students who are mastering complex concepts with our interactive platform.</p>
-                <a href="#subjects" class="btn btn-primary" style="padding: 1.2rem 3rem; font-size: 1.1rem;">Get Started Now</a>
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Transform Your Science Learning?</h2>
+                    <p>Join thousands of science students who are mastering complex concepts with our interactive platform.</p>
+                    <a href="#subjects" class="btn btn-primary" style="padding: 1.2rem 3rem; font-size: 1.1rem;">Get Started Now</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -347,7 +381,7 @@
                 <div class="footer-column">
                     <h3>Contact Us</h3>
                     <ul class="footer-links">
-                        <li><a href="mailto: @Nerds Assemble.com"><i class="fas fa-envelope" style="margin-right: 10px;" aria-hidden="true"></i> contact@Nerds Assemble.com</a></li>
+                        <li><a href="mailto:contact@nerdsassemble.com"><i class="fas fa-envelope" style="margin-right: 10px;" aria-hidden="true"></i> contact@nerdsassemble.com</a></li>
                     </ul>
                 </div>
             </div>
@@ -355,7 +389,8 @@
             <div class="footer-bottom">
                 <p>&copy; 2023 Nerds Assemble. All rights reserved. | 
                    <a href="/privacy-policy">Privacy Policy</a> | 
-                   <a href="/terms">Terms of Service</a> 
+                   <a href="/terms">Terms of Service</a> |
+                   <a href="/cookie-policy">Cookie Policy</a>
                 </p>
             </div>
         </div>
@@ -366,265 +401,7 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Enhanced JavaScript -->
-    <script>
-        // Modern JavaScript for Nerds Assemble Homepage
-        document.addEventListener('DOMContentLoaded', function() {
-            // Mobile Menu Toggle
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const mainNav = document.getElementById('mainNav');
-           
-            if (mobileMenuBtn && mainNav) {
-                mobileMenuBtn.addEventListener('click', function() {
-                    mainNav.classList.toggle('active');
-                    mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ?
-                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-                    mobileMenuBtn.setAttribute('aria-expanded', mainNav.classList.contains('active'));
-                });
-            }
-
-            // Header Scroll Effect
-            const header = document.getElementById('mainHeader');
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            });
-
-            // Smooth Scroll for Navigation Links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                   
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                   
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        // Close mobile menu if open
-                        if (mainNav && mainNav.classList.contains('active')) {
-                            mainNav.classList.remove('active');
-                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                            mobileMenuBtn.setAttribute('aria-expanded', 'false');
-                        }
-                       
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-
-            // Back to Top Button
-            const backToTopBtn = document.getElementById('backToTop');
-           
-            window.addEventListener('scroll', function() {
-                if (window.pageYOffset > 300) {
-                    backToTopBtn.classList.add('active');
-                } else {
-                    backToTopBtn.classList.remove('active');
-                }
-            });
-           
-            backToTopBtn.addEventListener('click', function() {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-
-            // Animate elements when they come into view
-            const animateOnScroll = function() {
-                const elements = document.querySelectorAll('.feature-card, .subject-card, .testimonial-card');
-               
-                elements.forEach(element => {
-                    const elementPosition = element.getBoundingClientRect().top;
-                    const windowHeight = window.innerHeight;
-                   
-                    if (elementPosition < windowHeight - 100) {
-                        element.style.opacity = '1';
-                        element.style.transform = 'translateY(0)';
-                    }
-                });
-            };
-
-            // Set initial state for animated elements
-            document.querySelectorAll('.feature-card, .subject-card, .testimonial-card').forEach(element => {
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(30px)';
-                element.style.transition = 'all 0.6s ease-out';
-            });
-
-            // Run once on load
-            animateOnScroll();
-           
-            // Then run on scroll
-            window.addEventListener('scroll', animateOnScroll);
-
-            // Create floating particles
-            const createParticles = function() {
-                const particlesContainer = document.createElement('div');
-                particlesContainer.className = 'particles-container';
-                particlesContainer.style.position = 'fixed';
-                particlesContainer.style.top = '0';
-                particlesContainer.style.left = '0';
-                particlesContainer.style.width = '100%';
-                particlesContainer.style.height = '100%';
-                particlesContainer.style.pointerEvents = 'none';
-                particlesContainer.style.zIndex = '-1';
-                document.body.appendChild(particlesContainer);
-               
-                const particleCount = window.innerWidth < 768 ? 30 : 50;
-               
-                for (let i = 0; i < particleCount; i++) {
-                    const particle = document.createElement('div');
-                    particle.className = 'particle';
-                   
-                    const size = Math.random() * 4 + 1;
-                    const posX = Math.random() * window.innerWidth;
-                    const posY = Math.random() * window.innerHeight;
-                    const duration = Math.random() * 20 + 10;
-                    const delay = Math.random() * 5;
-                    const opacity = Math.random() * 0.4 + 0.1;
-                   
-                    particle.style.cssText = `
-                        width: ${size}px;
-                        height: ${size}px;
-                        left: ${posX}px;
-                        top: ${posY}px;
-                        opacity: ${opacity};
-                        animation: float ${duration}s ease-in-out ${delay}s infinite;
-                        position: absolute;
-                        border-radius: 50%;
-                        background: rgba(255, 255, 255, 0.7);
-                        z-index: -1;
-                    `;
-                   
-                    particlesContainer.appendChild(particle);
-                }
-            };
-           
-            // Create particles after a short delay
-            setTimeout(createParticles, 1000);
-           
-            // Add animation to subject cards on hover
-            document.querySelectorAll('.subject-card').forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-10px) scale(1.02)';
-                    this.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.4)';
-                });
-               
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0) scale(1)';
-                    this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.2)';
-                });
-            });
-
-            // Login Modal Functionality
-            const loginModal = document.getElementById('loginModal');
-            const loginBtn = document.getElementById('loginBtn');
-            const closeLogin = document.getElementById('closeLogin');
-
-            if (loginBtn && loginModal && closeLogin) {
-                // Open login modal
-                loginBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    loginModal.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                    document.addEventListener('keydown', handleEscapeKey);
-                });
-
-                // Close login modal
-                closeLogin.addEventListener('click', function() {
-                    closeLoginModal();
-                });
-
-                // Close modal when clicking outside
-                loginModal.addEventListener('click', function(e) {
-                    if (e.target === loginModal) {
-                        closeLoginModal();
-                    }
-                });
-
-                // Handle Escape key
-                function handleEscapeKey(e) {
-                    if (e.key === 'Escape' && loginModal.classList.contains('active')) {
-                        closeLoginModal();
-                    }
-                }
-
-                function closeLoginModal() {
-                    loginModal.classList.remove('active');
-                    document.body.style.overflow = '';
-                    document.removeEventListener('keydown', handleEscapeKey);
-                }
-
-                // Form submission
-                const loginForm = document.querySelector('.login-form');
-                if (loginForm) {
-                    loginForm.addEventListener('submit', function(e) {
-                        e.preventDefault();
-                        // Here you would normally handle the form submission
-                        // For demo purposes, we'll just close the modal
-                        alert('Login functionality would be implemented here!');
-                        closeLoginModal();
-                    });
-                }
-            }
-
-            // Cookie Consent Functionality
-            const cookieConsent = document.getElementById('cookieConsent');
-            const cookieAccept = document.getElementById('cookieAccept');
-
-            // Check if user has already accepted cookies
-            if (!localStorage.getItem('cookiesAccepted')) {
-                setTimeout(() => {
-                    cookieConsent.style.display = 'block';
-                }, 1000);
-            }
-
-            if (cookieAccept) {
-                cookieAccept.addEventListener('click', function() {
-                    localStorage.setItem('cookiesAccepted', 'true');
-                    cookieConsent.style.display = 'none';
-                });
-            }
-
-            // Performance monitoring
-            window.addEventListener('load', function() {
-                // Log performance metrics
-                if ('performance' in window) {
-                    const perfData = performance.timing;
-                    const loadTime = perfData.loadEventEnd - perfData.navigationStart;
-                    console.log('Page load time:', loadTime + 'ms');
-                }
-            });
-
-            // Error handling for images
-            document.querySelectorAll('img').forEach(img => {
-                img.addEventListener('error', function() {
-                    this.alt = 'Image not available';
-                    console.warn('Image failed to load:', this.src);
-                });
-            });
-        });
-
-        // Service Worker Registration (for PWA capabilities)
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/sw.js')
-                    .then(function(registration) {
-                        console.log('ServiceWorker registration successful');
-                    })
-                    .catch(function(error) {
-                        console.log('ServiceWorker registration failed: ', error);
-                    });
-            });
-        }
-    </script>
+    <!-- JavaScript -->
+    <script src="assets/js/script.js" defer></script>
 </body>
 </html>
-
