@@ -3,725 +3,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
     <title>NerdsAssemble | Interactive 3D Science Experiments</title>
     <meta name="description" content="NerdsAssemble - Explore physics, chemistry and biology through interactive 3D experiments with projectile motion, chemical bonding, pendulum physics and more.">
     <meta name="google-site-verification" content="ly_ZXu-rBSPWO1YiBgK07AIx5K-u5x5oZ_g62fs1Emo" />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #00f3ff;
-            --secondary: #ff00d6;
-            --accent: #7dffaf;
-            --dark: #0a0a16;
-            --darker: #050510;
-            --card-bg: rgba(255, 255, 255, 0.05);
-            --text: #ffffff;
-            --text-secondary: #b0b0d0;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background: var(--darker);
-            color: var(--text);
-            font-family: 'Exo 2', sans-serif;
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 700;
-        }
-
-        /* Animated Background */
-        .animated-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(0, 243, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 0, 214, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(125, 255, 175, 0.05) 0%, transparent 50%);
-            background-color: var(--darker);
-        }
-
-        .floating-particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-        }
-
-        .particle {
-            position: absolute;
-            border-radius: 50%;
-            background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
-            opacity: 0;
-            animation: float 15s infinite linear;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(100vh) translateX(-100px) rotate(0deg);
-                opacity: 0;
+    <meta name="keywords" content="science education, physics, chemistry, biology, interactive learning, 3D models, virtual labs, student hub, online learning, STEM education">
+    <meta name="author" content="ScienceHub">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#6e00ff">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="ScienceHub - Unlock the Wonders of Science">
+    <meta property="og:description" content="Interactive learning platform for science students with 3D models, virtual labs, and comprehensive resources">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sciencehub.com">
+    <meta property="og:image" content="https://sciencehub.com/images/og-image.jpg">
+    <meta property="og:site_name" content="ScienceHub">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ScienceHub - Science Student Hub">
+    <meta name="twitter:description" content="Interactive science learning platform with 3D models and virtual labs">
+    <meta name="twitter:image" content="https://sciencehub.com/images/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Poppins:wght@300;600;800&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Homepage-styles.css"/>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "ScienceHub",
+        "description": "Interactive learning platform for science students with 3D models, virtual labs, and comprehensive educational resources",
+        "url": "https://sciencehub.com",
+        "logo": "https://sciencehub.com/logo.png",
+        "foundingDate": "2023",
+        "founder": {
+            "@type": "Person",
+            "name": "ScienceHub Team"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bangalore",
+            "addressCountry": "India"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "contact@sciencehub.com",
+            "telephone": "+91-98765-43210",
+            "contactType": "customer service"
+        },
+        "sameAs": [
+            "https://facebook.com/sciencehub",
+            "https://twitter.com/sciencehub",
+            "https://linkedin.com/company/sciencehub"
+        ],
+        "offers": {
+            "@type": "Offer",
+            "description": "Interactive science education resources and courses"
+        },
+        "knowsAbout": [
+            "Physics",
+            "Chemistry", 
+            "Biology",
+            "Mathematics",
+            "Computer Science",
+            "STEM Education"
+        ]
+    }
+    </script>
+    
+    <!-- Additional Schema for Courses -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Science Courses",
+        "description": "Comprehensive science courses available on ScienceHub",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@type": "Course",
+                    "name": "Physics",
+                    "description": "Explore quantum mechanics, wave-particle duality, and quantum entanglement",
+                    "provider": "ScienceHub",
+                    "url": "https://sciencehub.com/physics"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@type": "Course",
+                    "name": "Chemistry", 
+                    "description": "Master organic compounds and biomolecules structure and reactions",
+                    "provider": "ScienceHub",
+                    "url": "https://sciencehub.com/chemistry"
+                }
+            },
+            {
+                "@type": "ListItem", 
+                "position": 3,
+                "item": {
+                    "@type": "Course",
+                    "name": "Mathematics",
+                    "description": "Advanced mathematical concepts and applications",
+                    "provider": "ScienceHub",
+                    "url": "https://sciencehub.com/maths"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                    "@type": "Course",
+                    "name": "Programming Languages",
+                    "description": "Computer programming and software development",
+                    "provider": "ScienceHub", 
+                    "url": "https://sciencehub.com/programming"
+                }
             }
-            10% {
-                opacity: 0.7;
-            }
-            90% {
-                opacity: 0.7;
-            }
-            100% {
-                transform: translateY(-100px) translateX(100px) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-        /* Header Styles */
-        header {
-            padding: 1.5rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(10, 10, 22, 0.8);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            font-size: 1.8rem;
-            font-weight: 900;
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
-        }
-
-        .logo-icon {
-            margin-right: 10px;
-            font-size: 2rem;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav li {
-            margin-left: 2rem;
-            position: relative;
-        }
-
-        nav a {
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s;
-            font-family: 'Exo 2', sans-serif;
-            font-size: 1.1rem;
-            padding: 0.5rem 0;
-        }
-
-        nav a:hover {
-            color: var(--primary);
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            transition: width 0.3s;
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        .cta-nav {
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            color: var(--dark);
-            padding: 0.7rem 1.5rem;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .cta-nav:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 243, 255, 0.3);
-            color: var(--dark);
-        }
-
-        .cta-nav::after {
-            display: none;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 12rem 5% 8rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero h1 {
-            font-size: 4.5rem;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-shadow: 0 0 30px rgba(0, 243, 255, 0.5);
-            animation: glow 3s ease-in-out infinite alternate;
-            line-height: 1.2;
-        }
-
-        @keyframes glow {
-            from {
-                text-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
-            }
-            to {
-                text-shadow: 0 0 30px rgba(0, 243, 255, 0.8), 0 0 40px rgba(255, 0, 214, 0.6);
-            }
-        }
-
-        .hero-subtitle {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--text-secondary);
-            font-weight: 300;
-        }
-
-        .hero-description {
-            font-size: 1.3rem;
-            max-width: 800px;
-            margin: 0 auto 3rem;
-            color: var(--text-secondary);
-            font-weight: 300;
-        }
-
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            padding: 1.2rem 3rem;
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            color: var(--dark);
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1.2rem;
-            transition: all 0.3s;
-            box-shadow: 0 10px 20px rgba(0, 243, 255, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 243, 255, 0.5);
-        }
-
-        .cta-button i {
-            margin-left: 10px;
-            transition: transform 0.3s;
-        }
-
-        .cta-button:hover i {
-            transform: translateX(5px);
-        }
-
-        /* Subjects Section */
-        .subjects {
-            padding: 8rem 5%;
-            position: relative;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 3rem;
-            margin-bottom: 5rem;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 150px;
-            height: 5px;
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            border-radius: 5px;
-        }
-
-        .subjects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .subject-card {
-            background: var(--card-bg);
-            border-radius: 20px;
-            overflow: hidden;
-            transition: all 0.4s;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            position: relative;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .subject-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 20px 40px rgba(0, 243, 255, 0.2);
-            border-color: rgba(0, 243, 255, 0.3);
-        }
-
-        .subject-icon {
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--dark);
-            font-size: 5rem;
-            color: var(--primary);
-        }
-
-        .subject-info {
-            padding: 2rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .subject-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-        }
-
-        .subject-info h3 i {
-            margin-right: 10px;
-        }
-
-        .subject-info p {
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
-        }
-
-        .subject-features {
-            margin-bottom: 1.5rem;
-        }
-
-        .subject-features li {
-            color: var(--text-secondary);
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-        }
-
-        .subject-features li i {
-            color: var(--accent);
-            margin-right: 8px;
-            font-size: 0.8rem;
-        }
-
-        .subject-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.9rem 1.8rem;
-            background: transparent;
-            color: var(--primary);
-            text-decoration: none;
-            border: 2px solid var(--primary);
-            border-radius: 30px;
-            font-weight: 600;
-            transition: all 0.3s;
-            margin-top: auto;
-        }
-
-        .subject-button:hover {
-            background: var(--primary);
-            color: var(--dark);
-            box-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
-        }
-
-        .subject-button i {
-            margin-left: 8px;
-            transition: transform 0.3s;
-        }
-
-        .subject-button:hover i {
-            transform: translateX(5px);
-        }
-
-        /* Features Section */
-        .features {
-            padding: 8rem 5%;
-            background: rgba(255, 255, 255, 0.02);
-            position: relative;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .feature-card {
-            text-align: center;
-            padding: 3rem 2rem;
-            background: var(--card-bg);
-            border-radius: 20px;
-            transition: all 0.4s;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 243, 255, 0.15);
-            border-color: rgba(0, 243, 255, 0.2);
-        }
-
-        .feature-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-        }
-
-        .feature-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .feature-card p {
-            color: var(--text-secondary);
-        }
-
-        /* CTA Section */
-        .cta-section {
-            padding: 8rem 5%;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-content {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .cta-section h2 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .cta-section p {
-            font-size: 1.4rem;
-            margin-bottom: 3rem;
-            color: var(--text-secondary);
-        }
-
-        /* Footer */
-        footer {
-            padding: 5rem 5% 2rem;
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-column h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-        }
-
-        .footer-logo {
-            font-size: 2.2rem;
-            font-weight: 900;
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 1rem;
-            display: inline-block;
-        }
-
-        .footer-column p {
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: var(--primary);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: var(--text);
-            transition: all 0.3s;
-        }
-
-        .social-links a:hover {
-            background: var(--primary);
-            color: var(--dark);
-            transform: translateY(-3px);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .hero h1 {
-                font-size: 3.5rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1.5rem;
-            }
-            
-            .hero-description {
-                font-size: 1.1rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                padding: 1rem 5%;
-            }
-            
-            .logo {
-                margin-bottom: 1rem;
-            }
-            
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            nav li {
-                margin: 0.5rem;
-            }
-            
-            .hero {
-                padding: 10rem 5% 5rem;
-            }
-            
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-            
-            .section-title {
-                font-size: 2.5rem;
-            }
-            
-            .subjects-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
-            
-            .cta-button {
-                padding: 1rem 2rem;
-                font-size: 1rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-    </style>
+        ]
+    }
+    </script>
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="animated-bg"></div>
-    <div class="floating-particles" id="particles"></div>
+    <!-- Google Analytics Script (Replace GA_MEASUREMENT_ID with your actual ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+
+    <!-- Google Search Console Verification (Replace with your code) -->
+    <meta name="google-site-verification" content="your-verification-code-here">
+
+    <!-- Animated Background Elements -->
+    <div class="science-element atom" style="top: 10%; right: 10%;">
+        <div class="electron" style="animation: float 8s ease-in-out infinite;"></div>
+        <div class="electron" style="animation: float 12s ease-in-out infinite 2s; left: 100%; top: 30%;"></div>
+        <div class="electron" style="animation: float 10s ease-in-out infinite 4s; left: 70%; top: 100%;"></div>
+    </div>
+
+    <div class="science-element molecule" style="bottom: 20%; left: 15%;">
+        <div class="molecule-node"></div>
+        <div class="molecule-bond" style="transform: rotate(60deg);"></div>
+        <div class="molecule-bond" style="transform: rotate(-60deg);"></div>
+    </div>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent" id="cookieConsent">
+        <div class="cookie-content">
+            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. 
+               <a href="/privacy-policy">Learn more</a>
+            </p>
+            <button class="cookie-accept" id="cookieAccept">Accept</button>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="login-modal" id="loginModal">
+        <div class="login-container">
+            <button class="login-close" id="closeLogin" aria-label="Close login modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 class="login-title">Access Your Account</h2>
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-input" placeholder="your.email@example.com" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-input" placeholder="Enter your password" required aria-required="true">
+                </div>
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <a href="/forgot-password" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button type="submit" class="login-button">Sign In</button>
+            </form>
+            <div class="login-divider">
+                <span>Or continue with</span>
+            </div>
+            <div class="social-login">
+                <button class="social-btn" aria-label="Login with Google">
+                    <i class="fab fa-google"></i>
+                </button>
+                <button class="social-btn" aria-label="Login with Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </button>
+                <button class="social-btn" aria-label="Login with GitHub">
+                    <i class="fab fa-github"></i>
+                </button>
+            </div>
+            <div class="signup-link">
+                Don't have an account? <a href="sign-up.html">Sign up now</a>
+            </div>
+        </div>
+    </div>
 
     <!-- Header -->
-    <header>
-        <a href="#" class="logo">
-            <i class="fas fa-atom logo-icon"></i>
-            NerdsAssemble
-        </a>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#subjects">Subjects</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="https://github.com/yourusername/NerdsAssemble" class="cta-nav">Get Started</a></li>
-            </ul>
-        </nav>
+    <header id="mainHeader">
+        <div class="container header-container">
+            <a href="/" class="logo" aria-label="ScienceHub Home">
+                <span class="logo-icon"><i class="fas fa-atom"></i></span>
+                <span class="logo-text">ScienceHub</span>
+            </a>
+           
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+           
+            <nav id="mainNav" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#subjects">Subjects</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="#" class="btn btn-secondary" style="padding: 0.5rem 1.5rem;" id="loginBtn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>WHERE SCIENCE COMES ALIVE</h1>
-            <p class="hero-subtitle">Interactive 3D Experiments for the Curious Mind</p>
-            <p class="hero-description">Dive into the fascinating world of physics, chemistry, and biology through cutting-edge 3D simulations that transform complex concepts into intuitive visual experiences.</p>
-            <a href="https://github.com/yourusername/NerdsAssemble" class="cta-button">
-                Explore on GitHub <i class="fab fa-github"></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- Subjects Section -->
-    <section class="subjects" id="subjects">
-        <h2 class="section-title">Science Subjects</h2>
-        <div class="subjects-grid">
-            <!-- Physics -->
-            <div class="subject-card">
-                <div class="subject-icon">
-                    <i class="fas fa-rocket"></i>
-                </div>
-                <div class="subject-info">
-                    <h3><i class="fas fa-atom"></i> Physics</h3>
-                    <p>Explore the fundamental laws of the universe through interactive experiments and simulations.</p>
-                    <ul class="subject-features">
-                        <li><i class="fas fa-check"></i> Projectile Motion</li>
-                        <li><i class="fas fa-check"></i> Pendulum Physics</li>
-                        <li><i class="fas fa-check"></i> Wave Mechanics</li>
-                        <li><i class="fas fa-check"></i> Electromagnetism</li>
-                    </ul>
-                    <a href="#" class="subject-button">
-                        Explore Physics <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Chemistry -->
-            <div class="subject-card">
-                <div class="subject-icon">
-                    <i class="fas fa-flask"></i>
-                </div>
-                <div class="subject-info">
-                    <h3><i class="fas fa-atom"></i> Chemistry</h3>
-                    <p>Discover molecular interactions, chemical reactions, and atomic structures in 3D.</p>
-                    <ul class="subject-features">
-                        <li><i class="fas fa-check"></i> Molecular Bonding</li>
-                        <li><i class="fas fa-check"></i> Chemical Reactions</li>
-                        <li><i class="fas fa-check"></i> Periodic Table</li>
-                        <li><i class="fas fa-check"></i> Organic Chemistry</li>
-                    </ul>
-                    <a href="#" class="subject-button">
-                        Explore Chemistry <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Biology -->
-            <div class="subject-card">
-                <div class="subject-icon">
-                    <i class="fas fa-dna"></i>
-                </div>
-                <div class="subject-info">
-                    <h3><i class="fas fa-atom"></i> Biology</h3>
-                    <p>Explore the complexity of life from cellular structures to ecosystems in interactive 3D.</p>
-                    <ul class="subject-features">
-                        <li><i class="fas fa-check"></i> Cell Biology</li>
-                        <li><i class="fas fa-check"></i> Human Anatomy</li>
-                        <li><i class="fas fa-check"></i> Genetics</li>
-                        <li><i class="fas fa-check"></i> Ecology</li>
-                    </ul>
-                    <a href="#" class="subject-button">
-                        Explore Biology <i class="fas fa-arrow-right"></i>
-                    </a>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Unlock the Wonders of Science</h1>
+                <p class="hero-subtitle">For Aspiring Scientists and Curious Minds</p>
+                <p class="hero-description">Dive into the fascinating world of physics, chemistry, and biology with our comprehensive resources designed specifically for science students. Master complex concepts through interactive lessons, 3D models, and real-world applications.</p>
+                <div class="cta-buttons">
+                    <a href="/courses" class="btn btn-primary">Explore Courses</a>
+                    <a href="/community" class="btn btn-secondary">Join Community</a>
                 </div>
             </div>
         </div>
@@ -729,147 +266,271 @@
 
     <!-- Features Section -->
     <section class="features" id="features">
-        <h2 class="section-title">Why NerdsAssemble?</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-vr-cardboard"></i>
+        <div class="container">
+            <h2>Why Choose ScienceHub?</h2>
+            <p>We provide cutting-edge educational resources tailored for science students at all levels.</p>
+           
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-flask" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="feature-title">Interactive Experiments</h3>
+                    <p>Explore virtual labs and simulations that bring scientific concepts to life, allowing you to conduct experiments safely from anywhere.</p>
                 </div>
-                <h3>Immersive 3D</h3>
-                <p>Experience science in stunning 3D environments that bring abstract concepts to life with realistic physics and interactive elements.</p>
+               
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-atom" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="feature-title">3D Molecular Models</h3>
+                    <p>Visualize complex molecular structures in 3D with our interactive models that you can rotate, zoom, and explore from every angle.</p>
+                </div>
+               
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="feature-title">Concept Mastery</h3>
+                    <p>Our adaptive learning system identifies your weak areas and provides targeted exercises to help you master challenging topics.</p>
+                </div>
+               
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="feature-title">Performance Analytics</h3>
+                    <p>Track your progress with detailed analytics that show your strengths, weaknesses, and improvement over time.</p>
+                </div>
+               
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="feature-title">Study Groups</h3>
+                    <p>Connect with fellow science students worldwide to collaborate, discuss ideas, and solve problems together.</p>
+                </div>
+               
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-open" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="feature-title">Comprehensive Resources</h3>
+                    <p>Access our extensive library of study materials, including video lectures, practice problems, and research papers.</p>
+                </div>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-sliders-h"></i>
+        </div>
+    </section>
+
+    <!-- Subjects Section -->
+    <section class="subjects" id="subjects">
+        <div class="container">
+            <h2>Explore Our Subjects</h2>
+            <p>Dive deep into specialized areas of science with our structured curriculum.</p>
+           
+            <div class="subjects-slider">
+                <div class="subject-cards">
+                    <div class="subject-card">
+                        <div class="subject-image" style="background-image: url('https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');" role="img" aria-label="Physics laboratory equipment"></div>
+                        <div class="subject-content">
+                            <h3 class="subject-title">Physics</h3>
+                            <p class="subject-description">Explore the strange world of quantum mechanics, from wave-particle duality to quantum entanglement.</p>
+                            <a href="physics.html" class="subject-link">Start Learning <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                   
+                    <div class="subject-card">
+                        <div class="subject-image" style="background-image: url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');" role="img" aria-label="Chemistry laboratory glassware"></div>
+                        <div class="subject-content">
+                            <h3 class="subject-title">Chemistry</h3>
+                            <p class="subject-description">Master the structure, properties, and reactions of organic compounds and biomolecules.</p>
+                            <a href="chemistry.html" class="subject-link">Start Learning <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                   
+                    <div class="subject-card">
+                        <div class="subject-image" style="background-image: url('https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');" role="img" aria-label="Mathematical equations and formulas"></div>
+                        <div class="subject-content">
+                            <h3 class="subject-title">Mathematics</h3>
+                            <p class="subject-description">Master calculus, algebra, and advanced mathematical concepts with interactive problem-solving.</p>
+                            <a href="maths.html" class="subject-link">Start Learning <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                   
+                    <div class="subject-card">
+                        <div class="subject-image" style="background-image: url('https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');" role="img" aria-label="Computer programming code on screen"></div>
+                        <div class="subject-content">
+                            <h3 class="subject-title">Programming Languages</h3>
+                            <p class="subject-description">Learn Python, JavaScript, and other programming languages for scientific computing and data analysis.</p>
+                            <a href="programming.html" class="subject-link">Start Learning <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <h3>Interactive Controls</h3>
-                <p>Manipulate variables in real-time and see immediate effects on the experiments with intuitive controls and sliders.</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-chart-bar"></i>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>What Students Say</h2>
+            <p>Hear from science students who have transformed their learning with ScienceHub.</p>
+           
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">ScienceHub's 3D molecular models helped me visualize complex organic compounds in ways textbooks never could. I aced my chemistry finals thanks to this platform!</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AS</div>
+                        <div class="author-info">
+                            <h4>Anika Sharma</h4>
+                            <p>Chemistry Major, IIT Delhi</p>
+                        </div>
+                    </div>
                 </div>
-                <h3>Data Visualization</h3>
-                <p>See real-time graphs and data as you conduct experiments to understand the science behind the phenomena.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-graduation-cap"></i>
+               
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">The quantum physics simulations made abstract concepts tangible. For the first time, I truly understood wave-particle duality and quantum superposition.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RJ</div>
+                        <div class="author-info">
+                            <h4>Rahul Joshi</h4>
+                            <p>Physics Student, University of Mumbai</p>
+                        </div>
+                    </div>
                 </div>
-                <h3>Educational Value</h3>
-                <p>Each experiment is designed with educational principles to maximize learning and conceptual understanding.</p>
+               
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">As a visual learner, the interactive biology modules were game-changing. The detailed 3D cell models helped me score in the top 5% of my class.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PP</div>
+                        <div class="author-info">
+                            <h4>Priya Patel</h4>
+                            <p>Medical Student, AIIMS</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="cta-content">
-            <h2>Ready to Explore Science?</h2>
-            <p>Join thousands of curious minds already experimenting with NerdsAssemble</p>
-            <a href="https://github.com/yourusername/NerdsAssemble" class="cta-button">
-                Get Started on GitHub <i class="fab fa-github"></i>
-            </a>
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Science Learning?</h2>
+                <p>Join thousands of science students who are mastering complex concepts with our interactive platform.</p>
+                <a href="/sign-up" class="btn btn-primary" style="padding: 1.2rem 3rem; font-size: 1.1rem;">Get Started Now</a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
-        <div class="footer-container">
-            <div class="footer-column">
-                <div class="footer-logo">NerdsAssemble</div>
-                <p>Empowering the next generation of scientists with cutting-edge interactive 3D experiments and simulations.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>ScienceHub</h3>
+                    <p>Empowering the next generation of scientists with cutting-edge educational resources and interactive learning tools.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/sciencehub" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/sciencehub" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/sciencehub" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com/company/sciencehub" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://youtube.com/sciencehub" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+               
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#subjects">Subjects</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+               
+                <div class="footer-column">
+                    <h3>Subjects</h3>
+                    <ul class="footer-links">
+                        <li><a href="/physics">Physics</a></li>
+                        <li><a href="/chemistry">Chemistry</a></li>
+                        <li><a href="/biology">Biology</a></li>
+                        <li><a href="/maths">Mathematics</a></li>
+                        <li><a href="/programming">Computer Science</a></li>
+                    </ul>
+                </div>
+               
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contact@sciencehub.com"><i class="fas fa-envelope" style="margin-right: 10px;" aria-hidden="true"></i> contact@sciencehub.com</a></li>
+                        <li><a href="tel:+919876543210"><i class="fas fa-phone" style="margin-right: 10px;" aria-hidden="true"></i> +91 98765 43210</a></li>
+                        <li><a href="https://maps.google.com/?q=Science+Park+Bangalore+India"><i class="fas fa-map-marker-alt" style="margin-right: 10px;" aria-hidden="true"></i> Science Park, Bangalore, India</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-column">
-                <h3>Subjects</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Physics</a></li>
-                    <li><a href="#">Chemistry</a></li>
-                    <li><a href="#">Biology</a></li>
-                    <li><a href="#">Mathematics</a></li>
-                    <li><a href="#">Earth Science</a></li>
-                </ul>
+           
+            <div class="footer-bottom">
+                <p>&copy; 2023 ScienceHub. All rights reserved. | 
+                   <a href="/privacy-policy">Privacy Policy</a> | 
+                   <a href="/terms">Terms of Service</a> | 
+                   <a href="/sitemap.xml">Sitemap</a>
+                </p>
             </div>
-            <div class="footer-column">
-                <h3>Resources</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Documentation</a></li>
-                    <li><a href="#">Tutorials</a></li>
-                    <li><a href="#">Lesson Plans</a></li>
-                    <li><a href="#">Research Papers</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Legal</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
-                    <li><a href="#">Licensing</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 NerdsAssemble. All rights reserved.</p>
         </div>
     </footer>
 
-    <script>
-        // Create animated background particles
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            const particleCount = 80;
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                
-                // Random size between 2px and 8px
-                const size = Math.random() * 6 + 2;
-                particle.style.width = `${size}px`;
-                particle.style.height = `${size}px`;
-                
-                // Random position
-                particle.style.left = `${Math.random() * 100}%`;
-                particle.style.top = `${Math.random() * 100}%`;
-                
-                // Random animation duration and delay
-                const duration = Math.random() * 20 + 10;
-                const delay = Math.random() * 5;
-                particle.style.animationDuration = `${duration}s`;
-                particle.style.animationDelay = `${delay}s`;
-                
-                // Random color variation
-                const colors = ['#00f3ff', '#ff00d6', '#7dffaf'];
-                const color = colors[Math.floor(Math.random() * colors.length)];
-                particle.style.background = `radial-gradient(circle, ${color} 0%, transparent 70%)`;
-                
-                particlesContainer.appendChild(particle);
-            }
-        }
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-        // Initialize everything when the page loads
+    <!-- Enhanced JavaScript -->
+    <script>
+        // Modern JavaScript for ScienceHub Homepage
         document.addEventListener('DOMContentLoaded', function() {
-            createParticles();
-            
-            // Smooth scrolling for anchor links
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+           
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ?
+                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                    mobileMenuBtn.setAttribute('aria-expanded', mainNav.classList.contains('active'));
+                });
+            }
+
+            // Header Scroll Effect
+            const header = document.getElementById('mainHeader');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // Smooth Scroll for Navigation Links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
-                    
+                   
                     const targetId = this.getAttribute('href');
                     if (targetId === '#') return;
-                    
+                   
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
+                        // Close mobile menu if open
+                        if (mainNav && mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                        }
+                       
                         window.scrollTo({
                             top: targetElement.offsetTop - 80,
                             behavior: 'smooth'
@@ -877,20 +538,213 @@
                     }
                 });
             });
-            
-            // Add scroll effect to header
+
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+           
             window.addEventListener('scroll', function() {
-                const header = document.querySelector('header');
-                if (window.scrollY > 100) {
-                    header.style.background = 'rgba(10, 10, 22, 0.95)';
-                    header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('active');
                 } else {
-                    header.style.background = 'rgba(10, 10, 22, 0.8)';
-                    header.style.boxShadow = 'none';
+                    backToTopBtn.classList.remove('active');
                 }
             });
+           
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Animate elements when they come into view
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('.feature-card, .subject-card, .testimonial-card');
+               
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                   
+                    if (elementPosition < windowHeight - 100) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+
+            // Set initial state for animated elements
+            document.querySelectorAll('.feature-card, .subject-card, .testimonial-card').forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'all 0.6s ease-out';
+            });
+
+            // Run once on load
+            animateOnScroll();
+           
+            // Then run on scroll
+            window.addEventListener('scroll', animateOnScroll);
+
+            // Create floating particles
+            const createParticles = function() {
+                const particlesContainer = document.createElement('div');
+                particlesContainer.className = 'particles-container';
+                particlesContainer.style.position = 'fixed';
+                particlesContainer.style.top = '0';
+                particlesContainer.style.left = '0';
+                particlesContainer.style.width = '100%';
+                particlesContainer.style.height = '100%';
+                particlesContainer.style.pointerEvents = 'none';
+                particlesContainer.style.zIndex = '-1';
+                document.body.appendChild(particlesContainer);
+               
+                const particleCount = window.innerWidth < 768 ? 30 : 50;
+               
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                   
+                    const size = Math.random() * 4 + 1;
+                    const posX = Math.random() * window.innerWidth;
+                    const posY = Math.random() * window.innerHeight;
+                    const duration = Math.random() * 20 + 10;
+                    const delay = Math.random() * 5;
+                    const opacity = Math.random() * 0.4 + 0.1;
+                   
+                    particle.style.cssText = `
+                        width: ${size}px;
+                        height: ${size}px;
+                        left: ${posX}px;
+                        top: ${posY}px;
+                        opacity: ${opacity};
+                        animation: float ${duration}s ease-in-out ${delay}s infinite;
+                        position: absolute;
+                        border-radius: 50%;
+                        background: rgba(255, 255, 255, 0.7);
+                        z-index: -1;
+                    `;
+                   
+                    particlesContainer.appendChild(particle);
+                }
+            };
+           
+            // Create particles after a short delay
+            setTimeout(createParticles, 1000);
+           
+            // Add animation to subject cards on hover
+            document.querySelectorAll('.subject-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                    this.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.4)';
+                });
+               
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.2)';
+                });
+            });
+
+            // Login Modal Functionality
+            const loginModal = document.getElementById('loginModal');
+            const loginBtn = document.getElementById('loginBtn');
+            const closeLogin = document.getElementById('closeLogin');
+
+            if (loginBtn && loginModal && closeLogin) {
+                // Open login modal
+                loginBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    loginModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    document.addEventListener('keydown', handleEscapeKey);
+                });
+
+                // Close login modal
+                closeLogin.addEventListener('click', function() {
+                    closeLoginModal();
+                });
+
+                // Close modal when clicking outside
+                loginModal.addEventListener('click', function(e) {
+                    if (e.target === loginModal) {
+                        closeLoginModal();
+                    }
+                });
+
+                // Handle Escape key
+                function handleEscapeKey(e) {
+                    if (e.key === 'Escape' && loginModal.classList.contains('active')) {
+                        closeLoginModal();
+                    }
+                }
+
+                function closeLoginModal() {
+                    loginModal.classList.remove('active');
+                    document.body.style.overflow = '';
+                    document.removeEventListener('keydown', handleEscapeKey);
+                }
+
+                // Form submission
+                const loginForm = document.querySelector('.login-form');
+                if (loginForm) {
+                    loginForm.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        // Here you would normally handle the form submission
+                        // For demo purposes, we'll just close the modal
+                        alert('Login functionality would be implemented here!');
+                        closeLoginModal();
+                    });
+                }
+            }
+
+            // Cookie Consent Functionality
+            const cookieConsent = document.getElementById('cookieConsent');
+            const cookieAccept = document.getElementById('cookieAccept');
+
+            // Check if user has already accepted cookies
+            if (!localStorage.getItem('cookiesAccepted')) {
+                setTimeout(() => {
+                    cookieConsent.style.display = 'block';
+                }, 1000);
+            }
+
+            if (cookieAccept) {
+                cookieAccept.addEventListener('click', function() {
+                    localStorage.setItem('cookiesAccepted', 'true');
+                    cookieConsent.style.display = 'none';
+                });
+            }
+
+            // Performance monitoring
+            window.addEventListener('load', function() {
+                // Log performance metrics
+                if ('performance' in window) {
+                    const perfData = performance.timing;
+                    const loadTime = perfData.loadEventEnd - perfData.navigationStart;
+                    console.log('Page load time:', loadTime + 'ms');
+                }
+            });
+
+            // Error handling for images
+            document.querySelectorAll('img').forEach(img => {
+                img.addEventListener('error', function() {
+                    this.alt = 'Image not available';
+                    console.warn('Image failed to load:', this.src);
+                });
+            });
         });
+
+        // Service Worker Registration (for PWA capabilities)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(function(error) {
+                        console.log('ServiceWorker registration failed: ', error);
+                    });
+            });
+        }
     </script>
 </body>
 </html>
-
