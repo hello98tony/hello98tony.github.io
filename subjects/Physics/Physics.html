@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Student Hub | Physics Education & Resources</title>
+    <meta name="description" content="Explore interactive physics courses, simulations, and resources. Master classical mechanics, quantum physics, electromagnetism, and more with Nerds Assemble.">
+    <meta name="keywords" content="physics education, science hub, physics simulations, quantum mechanics, electromagnetism, thermodynamics">
+    <meta name="author" content="Nerds Assemble">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Physics Background Elements -->
+    <div class="physics-element atom" style="top: 15%; right: 15%;">
+        <div class="nucleus"></div>
+        <div class="orbit" style="width: 100px; height: 100px;"></div>
+        <div class="orbit" style="width: 80px; height: 80px;"></div>
+        <div class="orbit" style="width: 60px; height: 60px;"></div>
+        <div class="electron" style="animation: orbit 5s linear infinite;"></div>
+        <div class="electron" style="animation: orbit 7s linear infinite reverse; top: 20px; left: 20px;"></div>
+        <div class="electron" style="animation: orbit 9s linear infinite; top: 40px; left: 40px;"></div>
+    </div>
+
+    <div class="physics-element pendulum" style="bottom: 10%; left: 5%;">
+        <div class="pendulum-string" style="animation: pendulum-swing 3s ease-in-out infinite;"></div>
+        <div class="pendulum-bob"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="mainHeader">
+        <div class="container header-container">
+            <a href="index.html" class="logo" aria-label="Nerds Assemble Home">
+                <span class="logo-icon"><i class="fas fa-atom" aria-hidden="true"></i></span>
+                <span class="logo-text">Nerds Assemble</span>
+            </a>
+           
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+           
+            <nav id="mainNav" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="Homepage.html">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#topics">Courses</a></li>
+                    <li><a href="#animations">Simulations</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="main-content" aria-labelledby="hero-title">
+        <div class="container">
+            <div class="hero-content">
+                <h1 id="hero-title">Discover the Laws of Physics</h1>
+                <p class="hero-subtitle">From Quantum Mechanics to Astrophysics</p>
+                <p class="hero-description">Explore the fundamental principles that govern our universe. Our interactive physics resources help you visualize complex concepts and master classical mechanics, electromagnetism, thermodynamics, and quantum physics through immersive experiences.</p>
+                <div class="cta-buttons">
+                    <a href="#topics" class="btn btn-primary">Explore Courses</a>
+                    <a href="#animations" class="btn btn-secondary">View Simulations</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features" aria-labelledby="features-title">
+        <div class="container">
+            <h2 id="features-title">Why Physics at Nerds Assemble?</h2>
+            <p>We provide cutting-edge educational resources tailored for physics students at all levels.</p>
+           
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="feature-title">Interactive Simulations</h3>
+                    <p>Experiment with physics principles in our virtual labs. Adjust parameters and observe real-time changes in physical systems.</p>
+                </div>
+               
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-microscope" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="feature-title">Quantum Visualizations</h3>
+                    <p>Visualize wave functions, probability densities, and quantum phenomena with our interactive quantum mechanics tools.</p>
+                </div>
+               
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-magnet" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="feature-title">Field Simulators</h3>
+                    <p>Explore electric, magnetic, and gravitational fields with our interactive field line visualizations.</p>
+                </div>
+               
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calculator" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="feature-title">Physics Calculators</h3>
+                    <p>Solve complex physics problems with our specialized calculators for kinematics, dynamics, and more.</p>
+                </div>
+               
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-vr-cardboard" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="feature-title">VR Experiences</h3>
+                    <p>Immerse yourself in physics concepts with our virtual reality experiences of astronomical phenomena and microscopic worlds.</p>
+                </div>
+               
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-open" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="feature-title">Comprehensive Resources</h3>
+                    <p>Access our extensive library of study materials, including video lectures, practice problems, and research papers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics Section -->
+    <section class="topics" id="topics" aria-labelledby="topics-title">
+        <div class="container">
+            <h2 id="topics-title">Physics Courses</h2>
+            <p>Explore fundamental and advanced physics concepts through our structured learning paths.</p>
+           
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-image" style="background-image: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');" aria-label="Classical Mechanics illustration"></div>
+                    <div class="topic-content">
+                        <h3 class="topic-title">Classical Mechanics</h3>
+                        <p class="topic-description">Master Newton's laws, conservation principles, and the motion of particles and rigid bodies.</p>
+                        <a href="#" class="topic-link">Explore Course <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+               
+                <div class="topic-card">
+                    <div class="topic-image" style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');" aria-label="Electromagnetism illustration"></div>
+                    <div class="topic-content">
+                        <h3 class="topic-title">Electromagnetism</h3>
+                        <p class="topic-description">Understand electric and magnetic fields, Maxwell's equations, and electromagnetic waves.</p>
+                        <a href="#" class="topic-link">Explore Course <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+               
+                <div class="topic-card">
+                    <div class="topic-image" style="background-image: url('https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');" aria-label="Thermodynamics illustration"></div>
+                    <div class="topic-content">
+                        <h3 class="topic-title">Thermodynamics</h3>
+                        <p class="topic-description">Study heat, work, energy transfer, and the laws governing thermodynamic systems.</p>
+                        <a href="#" class="topic-link">Explore Course <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+               
+                <div class="topic-card">
+                    <div class="topic-image" style="background-image: url('https://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');" aria-label="Quantum Mechanics illustration"></div>
+                    <div class="topic-content">
+                        <h3 class="topic-title">Quantum Mechanics</h3>
+                        <p class="topic-description">Dive into the world of particles and waves, uncertainty principle, and quantum states.</p>
+                        <a href="#" class="topic-link">Explore Course <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+               
+                <div class="topic-card">
+                    <div class="topic-image" style="background-image: url('https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');" aria-label="Astrophysics illustration"></div>
+                    <div class="topic-content">
+                        <h3 class="topic-title">Astrophysics</h3>
+                        <p class="topic-description">Explore celestial mechanics, stellar evolution, cosmology, and the physics of the universe.</p>
+                        <a href="#" class="topic-link">Explore Course <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+               
+                <div class="topic-card">
+                    <div class="topic-image" style="background-image: url('https://images.unsplash.com/photo-1518365050014-70fe7232897f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');" aria-label="Optics & Waves illustration"></div>
+                    <div class="topic-content">
+                        <h3 class="topic-title">Optics & Waves</h3>
+                        <p class="topic-description">Study wave phenomena, interference, diffraction, and the behavior of light.</p>
+                        <a href="#" class="topic-link">Explore Course <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animations Section -->
+    <section class="animations" id="animations" aria-labelledby="animations-title">
+        <div class="container">
+            <h2 id="animations-title">Interactive Physics Simulations</h2>
+            <p>Visualize complex physical phenomena with our interactive animations and simulations.</p>
+           
+            <div class="animations-grid">
+                <div class="animation-card">
+                    <div class="animation-preview">
+                        <i class="fas fa-project-diagram" style="font-size: 4rem; color: var(--physics-secondary);" aria-hidden="true"></i>
+                    </div>
+                    <div class="animation-content">
+                        <h3 class="animation-title">Wave Interference</h3>
+                        <p class="animation-description">Create and manipulate waves to observe interference patterns and wave behaviors.</p>
+                        <a href="#" class="topic-link">Try Simulation <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+               
+                <div class="animation-card">
+                    <div class="animation-preview">
+                        <i class="fas fa-atom" style="font-size: 4rem; color: var(--physics-primary);" aria-hidden="true"></i>
+                    </div>
+                    <div class="animation-content">
+                        <h3 class="animation-title">Quantum Wavefunctions</h3>
+                        <p class="animation-description">Visualize quantum probability distributions for different potential wells.</p>
+                        <a href="#" class="topic-link">Try Simulation <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+               
+                <div class="animation-card">
+                    <div class="animation-preview">
+                        <i class="fas fa-magnet" style="font-size: 4rem; color: var(--physics-secondary);" aria-hidden="true"></i>
+                    </div>
+                    <div class="animation-content">
+                        <h3 class="animation-title">Electromagnetic Fields</h3>
+                        <p class="animation-description">Explore electric and magnetic field lines and their interactions.</p>
+                        <a href="#" class="topic-link">Try Simulation <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+               
+                <div class="animation-card">
+                    <div class="animation-preview">
+                        <i class="fas fa-satellite" style="font-size: 4rem; color: var(--tertiary);" aria-hidden="true"></i>
+                    </div>
+                    <div class="animation-content">
+                        <h3 class="animation-title">Orbital Mechanics</h3>
+                        <p class="animation-description">Simulate planetary orbits and understand gravitational forces.</p>
+                        <a href="#" class="topic-link">Try Simulation <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+               
+                <div class="animation-card">
+                    <div class="animation-preview">
+                        <i class="fas fa-temperature-high" style="font-size: 4rem; color: var(--physics-primary);" aria-hidden="true"></i>
+                    </div>
+                    <div class="animation-content">
+                        <h3 class="animation-title">Thermodynamics Lab</h3>
+                        <p class="animation-description">Experiment with heat transfer, gas laws, and entropy changes.</p>
+                        <a href="#" class="topic-link">Try Simulation <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+               
+                <div class="animation-card">
+                    <div class="animation-preview">
+                        <i class="fas fa-lightbulb" style="font-size: 4rem; color: var(--physics-secondary);" aria-hidden="true"></i>
+                    </div>
+                    <div class="animation-content">
+                        <h3 class="animation-title">Optics Laboratory</h3>
+                        <p class="animation-description">Explore reflection, refraction, and lens properties interactively.</p>
+                        <a href="#" class="topic-link">Try Simulation <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources" id="resources" aria-labelledby="resources-title">
+        <div class="container">
+            <h2 id="resources-title">Physics Resources</h2>
+            <p>Access our comprehensive collection of physics learning materials and tools.</p>
+           
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-book" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="resource-title">Textbooks & Guides</h3>
+                    <p>Download our curated collection of physics textbooks and study guides.</p>
+                    <a href="#" class="resource-link">Browse Resources</a>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-video" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="resource-title">Video Lectures</h3>
+                    <p>Watch expert explanations of complex physics concepts and problem-solving techniques.</p>
+                    <a href="#" class="resource-link">Watch Videos</a>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-tasks" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="resource-title">Practice Problems</h3>
+                    <p>Test your understanding with our extensive database of practice problems and solutions.</p>
+                    <a href="#" class="resource-link">Start Practicing</a>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-flask" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="resource-title">Lab Experiments</h3>
+                    <p>Access virtual lab experiments and procedures for hands-on physics learning.</p>
+                    <a href="#" class="resource-link">Explore Labs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" aria-labelledby="cta-title">
+        <div class="container">
+            <div class="cta-content">
+                <h2 id="cta-title">Ready to Master Physics?</h2>
+                <p>Join thousands of students who are already exploring the wonders of physics with Nerds Assemble.</p>
+                <a href="#" class="btn btn-primary">Get Started Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Nerds Assemble</h3>
+                    <p>Your comprehensive platform for science education and exploration.</p>
+                </div>
+               
+                <div class="footer-column">
+                    <h3>Physics Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Classical Mechanics</a></li>
+                        <li><a href="#">Electromagnetism</a></li>
+                        <li><a href="#">Quantum Physics</a></li>
+                        <li><a href="#">Thermodynamics</a></li>
+                        <li><a href="#">Astrophysics</a></li>
+                    </ul>
+                </div>
+               
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="Homepage.html">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#topics">Courses</a></li>
+                        <li><a href="#animations">Simulations</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+           
+            <div class="footer-bottom">
+                <p>&copy; 2023 Nerds Assemble. All rights reserved. | Designed for Physics Education</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
