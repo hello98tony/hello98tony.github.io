@@ -461,48 +461,50 @@ nav {
 
 .subject-cards {
     display: flex;
-    gap: 1.5rem;
-    padding-bottom: 1rem;
+    gap: 2rem;
+    padding-bottom: 2rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
 }
 
 .subject-cards::-webkit-scrollbar {
     height: 6px;
 }
 
+.subject-cards::-webkit-scrollbar {
+    height: 8px;
+}
+
 .subject-cards::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 .subject-cards::-webkit-scrollbar-thumb {
     background: var(--primary);
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 .subject-card {
-    min-width: 280px;
+    min-width: 300px; /* RESTORED ORIGINAL SIZE */
     scroll-snap-align: start;
     background: var(--card-bg);
-    border-radius: 12px;
+    border-radius: 15px;
     overflow: hidden;
     transition: all 0.3s ease;
     position: relative;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    flex-shrink: 0;
 }
 
 .subject-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
 .subject-image {
-    height: 160px;
+    height: 180px; /* RESTORED ORIGINAL HEIGHT */
     position: relative;
     overflow: hidden;
 }
@@ -515,7 +517,7 @@ nav {
 }
 
 .subject-card:hover .subject-image img {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .subject-image::after {
@@ -529,20 +531,20 @@ nav {
 }
 
 .subject-content {
-    padding: 1.25rem;
+    padding: 1.5rem; /* RESTORED ORIGINAL PADDING */
 }
 
 .subject-title {
     font-family: 'Orbitron', sans-serif;
     color: var(--highlight);
     margin-bottom: 0.5rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem; /* RESTORED ORIGINAL SIZE */
 }
 
 .subject-description {
-    font-size: 0.85rem;
-    margin-bottom: 1.25rem;
-    line-height: 1.5;
+    font-size: 0.9rem; /* RESTORED ORIGINAL SIZE */
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
 
 .subject-link {
@@ -661,10 +663,9 @@ footer {
 
 .footer-bottom {
     text-align: center;
-    margin-top: 2rem;
-    padding-top: 1.5rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 0.85rem;
 }
 
 /* Back to Top Button */
@@ -921,15 +922,15 @@ footer {
     
     /* Subjects */
     .subject-cards {
-        gap: 1rem;
+        gap: 1.5rem;
     }
     
     .subject-card {
-        min-width: 260px;
+        min-width: 280px; /* Slightly smaller for mobile but still good */
     }
     
     .subject-image {
-        height: 140px;
+        height: 160px;
     }
     
     .subject-content {
@@ -997,11 +998,11 @@ footer {
     }
     
     .subject-card {
-        min-width: 240px;
+        min-width: 260px;
     }
     
     .subject-image {
-        height: 120px;
+        height: 150px;
     }
     
     .back-to-top {
