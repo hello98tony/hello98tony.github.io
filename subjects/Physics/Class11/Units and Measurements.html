@@ -3,46 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Comprehensive Class 11 Physics guide on Units and Measurement covering SI units, measurement techniques, errors, dimensional analysis and applications">
-    <meta name="keywords" content="Class 11 Physics, Units and Measurement, SI Units, NCERT Physics, Measurement Techniques, Dimensional Analysis">
-    <meta name="author" content="PhysicsHub">
-    <title>Units and Measurement | Class 11 Physics | NCERT Syllabus - PhysicsHub</title>
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Units and Measurement | Class 11 Physics | NCERT Syllabus">
-    <meta property="og:description" content="Comprehensive guide to fundamental concepts of physical quantities, their measurement, and applications">
-    <meta property="og:type" content="website">
-    
-    <!-- Preload Critical Resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&display=swap" as="style">
-    
-    <!-- External Stylesheets -->
+    <title>Units and Measurement | Class 11 Physics | NCERT Syllabus</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Pacifico&family=Dancing+Script:wght@700&family=Abril+Fatface&family=Playfair+Display:wght@700&family=Raleway:wght@300;800&family=Quicksand:wght@500&family=Poiret+One&family=Amatic+SC:wght@700&family=Caveat:wght@700&family=Kaushan+Script&family=Libre+Baskerville&family=Merriweather&family=Nunito:wght@800&family=Oswald:wght@500&family=Roboto+Slab:wght@700&family=Sacramento&family=Tangerine:wght@700&family=Yeseva+One&family=Electrolize&family=Audiowide&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <!-- Internal Stylesheets -->
-    <link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="particles" id="particles" aria-hidden="true"></div>
+    <div class="particles" id="particles"></div>
 
     <!-- Header -->
-    <header role="banner">
+    <header>
         <div class="header-container">
-            <a href="#" class="logo" aria-label="PhysicsHub Home">
-                <span class="logo-icon" aria-hidden="true"><i class="fas fa-atom"></i></span>
-                <span class="logo-text">PhysicsHub</span>
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-atom"></i></span>
+                <span class="logo-text">Nerds Assemble</span>
             </a>
 
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
-                <i class="fas fa-bars" aria-hidden="true"></i>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
             </button>
 
-            <nav id="mainNav" role="navigation" aria-label="Main navigation">
+            <nav id="mainNav">
                 <ul class="nav-links">
                     <li><a href="#introduction">Introduction</a></li>
                     <li><a href="#si-units">SI Units</a></li>
@@ -56,7 +39,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="container" role="main">
+    <div class="container">
         <section class="page-header" data-aos="fade-down">
             <h1>Units and Measurement</h1>
             <p class="subtitle">Class 11 Physics | NCERT Syllabus</p>
@@ -110,63 +93,56 @@
             <h3>SI Base Units</h3>
             <p>The SI system is built upon seven base units which by convention are regarded as dimensionally independent:</p>
 
-            <div class="table-container">
-                <table>
-                    <caption>SI Base Units with Current Definitions</caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Physical Quantity</th>
-                            <th scope="col">SI Unit</th>
-                            <th scope="col">Symbol</th>
-                            <th scope="col">Current Definition (Since 2019)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Length</td>
-                            <td>meter</td>
-                            <td>m</td>
-                            <td>Defined by fixing the speed of light in vacuum to be exactly 299,792,458 m/s</td>
-                        </tr>
-                        <tr>
-                            <td>Mass</td>
-                            <td>kilogram</td>
-                            <td>kg</td>
-                            <td>Defined by fixing Planck's constant to be exactly 6.62607015×10⁻³⁴ J·s</td>
-                        </tr>
-                        <tr>
-                            <td>Time</td>
-                            <td>second</td>
-                            <td>s</td>
-                            <td>Defined by fixing the unperturbed ground-state hyperfine transition frequency of the cesium-133 atom to be exactly 9,192,631,770 Hz</td>
-                        </tr>
-                        <tr>
-                            <td>Electric current</td>
-                            <td>ampere</td>
-                            <td>A</td>
-                            <td>Defined by fixing the elementary charge to be exactly 1.602176634×10⁻¹⁹ C</td>
-                        </tr>
-                        <tr>
-                            <td>Thermodynamic temperature</td>
-                            <td>kelvin</td>
-                            <td>K</td>
-                            <td>Defined by fixing Boltzmann constant to be exactly 1.380649×10⁻²³ J/K</td>
-                        </tr>
-                        <tr>
-                            <td>Amount of substance</td>
-                            <td>mole</td>
-                            <td>mol</td>
-                            <td>Defined by fixing Avogadro constant to be exactly 6.02214076×10²³ mol⁻¹</td>
-                        </tr>
-                        <tr>
-                            <td>Luminous intensity</td>
-                            <td>candela</td>
-                            <td>cd</td>
-                            <td>Defined by fixing luminous efficacy of 540 THz radiation to be exactly 683 lm/W</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <table>
+                <tr>
+                    <th>Physical Quantity</th>
+                    <th>SI Unit</th>
+                    <th>Symbol</th>
+                    <th>Current Definition (Since 2019)</th>
+                </tr>
+                <tr>
+                    <td>Length</td>
+                    <td>meter</td>
+                    <td>m</td>
+                    <td>Defined by fixing the speed of light in vacuum to be exactly 299,792,458 m/s</td>
+                </tr>
+                <tr>
+                    <td>Mass</td>
+                    <td>kilogram</td>
+                    <td>kg</td>
+                    <td>Defined by fixing Planck's constant to be exactly 6.62607015×10⁻³⁴ J·s</td>
+                </tr>
+                <tr>
+                    <td>Time</td>
+                    <td>second</td>
+                    <td>s</td>
+                    <td>Defined by fixing the unperturbed ground-state hyperfine transition frequency of the cesium-133 atom to be exactly 9,192,631,770 Hz</td>
+                </tr>
+                <tr>
+                    <td>Electric current</td>
+                    <td>ampere</td>
+                    <td>A</td>
+                    <td>Defined by fixing the elementary charge to be exactly 1.602176634×10⁻¹⁹ C</td>
+                </tr>
+                <tr>
+                    <td>Thermodynamic temperature</td>
+                    <td>kelvin</td>
+                    <td>K</td>
+                    <td>Defined by fixing Boltzmann constant to be exactly 1.380649×10⁻²³ J/K</td>
+                </tr>
+                <tr>
+                    <td>Amount of substance</td>
+                    <td>mole</td>
+                    <td>mol</td>
+                    <td>Defined by fixing Avogadro constant to be exactly 6.02214076×10²³ mol⁻¹</td>
+                </tr>
+                <tr>
+                    <td>Luminous intensity</td>
+                    <td>candela</td>
+                    <td>cd</td>
+                    <td>Defined by fixing luminous efficacy of 540 THz radiation to be exactly 683 lm/W</td>
+                </tr>
+            </table>
 
             <div class="important">
                 <p><strong>2019 Redefinition:</strong> In November 2018, the CGPM voted to redefine the SI base units in terms of fundamental physical constants, which took effect on May 20, 2019. This change means all SI units are now defined by constants of nature rather than physical artifacts.</p>
@@ -175,85 +151,390 @@
             <h3>SI Derived Units</h3>
             <p>Derived units are formed by combining base units according to the algebraic relations linking the corresponding quantities. Some important derived units include:</p>
 
-            <div class="table-container">
-                <table>
-                    <caption>Important SI Derived Units</caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Quantity</th>
-                            <th scope="col">SI Unit</th>
-                            <th scope="col">Symbol</th>
-                            <th scope="col">In Base Units</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Force</td>
-                            <td>newton</td>
-                            <td>N</td>
-                            <td>kg·m·s⁻²</td>
-                        </tr>
-                        <tr>
-                            <td>Energy</td>
-                            <td>joule</td>
-                            <td>J</td>
-                            <td>kg·m²·s⁻²</td>
-                        </tr>
-                        <tr>
-                            <td>Power</td>
-                            <td>watt</td>
-                            <td>W</td>
-                            <td>kg·m²·s⁻³</td>
-                        </tr>
-                        <tr>
-                            <td>Pressure</td>
-                            <td>pascal</td>
-                            <td>Pa</td>
-                            <td>kg·m⁻¹·s⁻²</td>
-                        </tr>
-                        <tr>
-                            <td>Frequency</td>
-                            <td>hertz</td>
-                            <td>Hz</td>
-                            <td>s⁻¹</td>
-                        </tr>
-                        <tr>
-                            <td>Electric charge</td>
-                            <td>coulomb</td>
-                            <td>C</td>
-                            <td>A·s</td>
-                        </tr>
-                        <tr>
-                            <td>Electric potential</td>
-                            <td>volt</td>
-                            <td>V</td>
-                            <td>kg·m²·s⁻³·A⁻¹</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <table>
+                <tr>
+                    <th>Quantity</th>
+                    <th>SI Unit</th>
+                    <th>Symbol</th>
+                    <th>In Base Units</th>
+                </tr>
+                <tr>
+                    <td>Force</td>
+                    <td>newton</td>
+                    <td>N</td>
+                    <td>kg·m·s⁻²</td>
+                </tr>
+                <tr>
+                    <td>Energy</td>
+                    <td>joule</td>
+                    <td>J</td>
+                    <td>kg·m²·s⁻²</td>
+                </tr>
+                <tr>
+                    <td>Power</td>
+                    <td>watt</td>
+                    <td>W</td>
+                    <td>kg·m²·s⁻³</td>
+                </tr>
+                <tr>
+                    <td>Pressure</td>
+                    <td>pascal</td>
+                    <td>Pa</td>
+                    <td>kg·m⁻¹·s⁻²</td>
+                </tr>
+                <tr>
+                    <td>Frequency</td>
+                    <td>hertz</td>
+                    <td>Hz</td>
+                    <td>s⁻¹</td>
+                </tr>
+                <tr>
+                    <td>Electric charge</td>
+                    <td>coulomb</td>
+                    <td>C</td>
+                    <td>A·s</td>
+                </tr>
+                <tr>
+                    <td>Electric potential</td>
+                    <td>volt</td>
+                    <td>V</td>
+                    <td>kg·m²·s⁻³·A⁻¹</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Measurement Section -->
+        <section class="info-panel" id="measurement" data-aos="fade-up">
+            <h2>Measurement Techniques</h2>
+            <p>Precise measurement is fundamental to physics. Different instruments are used to measure different physical quantities with varying degrees of precision.</p>
+
+            <h3>Measurement of Length</h3>
+            <p>Length is one of the most fundamental physical quantities. The choice of measuring instrument depends on the required precision:</p>
+
+            <ul>
+                <li><strong>Meter Scale:</strong> Measures up to 1 mm precision (least count = 1 mm)</li>
+                <li><strong>Vernier Calipers:</strong> Measures up to 0.1 mm precision (least count = 0.1 mm)</li>
+                <li><strong>Screw Gauge (Micrometer):</strong> Measures up to 0.01 mm precision (least count = 0.01 mm)</li>
+            </ul>
+
+            <h4>Vernier Calipers</h4>
+            <p>A vernier caliper consists of a main scale and a sliding vernier scale. The main scale is graduated in millimeters, while the vernier scale has 10 divisions that cover 9 mm on the main scale.</p>
+
+            <div class="formula">
+                Least Count (LC) = Value of one main scale division - Value of one vernier scale division
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example Calculation:</div>
+                <p>If 1 main scale division (MSD) = 1 mm and 10 vernier scale divisions (VSD) = 9 mm, then:</p>
+                <p>1 VSD = 9/10 = 0.9 mm</p>
+                <p>Least Count = 1 MSD - 1 VSD = 1 mm - 0.9 mm = 0.1 mm</p>
+            </div>
+
+            <h4>Screw Gauge</h4>
+            <p>A screw gauge (or micrometer) uses a screw to amplify small distances that are too small to measure directly into large rotations of the screw that are big enough to read from a scale.</p>
+
+            <div class="formula">
+                Least Count = Pitch / Number of circular scale divisions
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example Calculation:</div>
+                <p>If the pitch (distance moved per rotation) = 1 mm and there are 100 divisions on the circular scale:</p>
+                <p>Least Count = 1 mm / 100 = 0.01 mm</p>
+            </div>
+
+            <h3>Measurement of Mass</h3>
+            <p>Mass is a measure of the amount of matter in an object. Common instruments for measuring mass include:</p>
+
+            <ul>
+                <li><strong>Beam Balance:</strong> Uses comparison with known masses</li>
+                <li><strong>Electronic Balance:</strong> Measures the force needed to counter the mass</li>
+                <li><strong>Spring Balance:</strong> Measures weight which is proportional to mass</li>
+            </ul>
+
+            <h3>Measurement of Time</h3>
+            <p>Time intervals can be measured using various devices:</p>
+
+            <ul>
+                <li><strong>Simple Pendulum:</strong> Can be used to measure time intervals based on its period</li>
+                <li><strong>Stopwatch:</strong> Measures time intervals with precision up to 0.01 s</li>
+                <li><strong>Atomic Clocks:</strong> Most precise timekeeping devices (uncertainty of 1 second in 100 million years)</li>
+            </ul>
+        </section>
+
+        <!-- Errors Section -->
+        <section class="info-panel" id="errors" data-aos="fade-up">
+            <h2>Accuracy, Precision and Errors</h2>
+            <p>Understanding errors and uncertainties is crucial in experimental physics as no measurement can be perfectly accurate.</p>
+
+            <div class="definition">
+                <p><strong>Accuracy:</strong> Refers to how close a measurement is to the true or accepted value.</p>
+                <p><strong>Precision:</strong> Refers to how close the measured values are to each other (reproducibility).</p>
+            </div>
+
+            <h3>Types of Errors</h3>
+            <p>Errors in measurement can be classified into three main categories:</p>
+
+            <table>
+                <tr>
+                    <th>Error Type</th>
+                    <th>Description</th>
+                    <th>Examples</th>
+                    <th>How to Minimize</th>
+                </tr>
+                <tr>
+                    <td>Systematic Errors</td>
+                    <td>Consistent, reproducible errors due to faulty equipment or technique</td>
+                    <td>Zero error in instruments, incorrect calibration, parallax error</td>
+                    <td>Calibrate instruments, improve techniques, use proper measurement methods</td>
+                </tr>
+                <tr>
+                    <td>Random Errors</td>
+                    <td>Unpredictable variations in measurements due to uncontrollable factors</td>
+                    <td>Fluctuations in temperature, observer's reaction time, electrical noise</td>
+                    <td>Take multiple readings and average, improve experimental conditions</td>
+                </tr>
+                <tr>
+                    <td>Gross Errors</td>
+                    <td>Mistakes in observation or recording that lead to outliers</td>
+                    <td>Reading wrong scale, recording incorrect value, calculation errors</td>
+                    <td>Careful measurement and recording, double-check calculations</td>
+                </tr>
+            </table>
+
+            <h3>Absolute, Relative and Percentage Error</h3>
+            <p>Errors can be expressed in different ways depending on the context:</p>
+
+            <div class="formula">
+                Absolute Error (Δa) = |Measured Value (aₘ) - True Value (aₜ)|
+            </div>
+
+            <div class="formula">
+                Relative Error = Absolute Error / True Value = Δa / aₜ
+            </div>
+
+            <div class="formula">
+                Percentage Error = Relative Error × 100% = (Δa / aₜ) × 100%
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example Calculation:</div>
+                <p>If the true value of a length is 5.00 cm and the measured value is 5.02 cm:</p>
+                <p>Absolute Error = |5.02 - 5.00| = 0.02 cm</p>
+                <p>Relative Error = 0.02 / 5.00 = 0.004</p>
+                <p>Percentage Error = 0.004 × 100% = 0.4%</p>
+            </div>
+
+            <h3>Combination of Errors</h3>
+            <p>When measurements are used in calculations, the errors propagate according to specific rules:</p>
+
+            <h4>For Addition/Subtraction</h4>
+            <div class="formula">
+                If Z = A ± B, then ΔZ = ΔA + ΔB (Absolute Errors Add)
+            </div>
+
+            <h4>For Multiplication/Division</h4>
+            <div class="formula">
+                If Z = A × B or A/B, then ΔZ/Z = ΔA/A + ΔB/B (Relative Errors Add)
+            </div>
+
+            <h4>For Power Relations</h4>
+            <div class="formula">
+                If Z = Aⁿ, then ΔZ/Z = n × (ΔA/A)
+            </div>
+
+            <div class="important">
+                <p><strong>Note:</strong> These formulas assume that the errors are independent and random. When dealing with more complex functions, partial derivatives are used to determine error propagation.</p>
             </div>
         </section>
 
-        <!-- Remaining sections (Measurement, Errors, Dimensions, Applications) -->
-        <!-- Content remains the same as in your original code -->
-        <!-- ... -->
+        <!-- Dimensions Section -->
+        <section class="info-panel" id="dimensions" data-aos="fade-up">
+            <h2>Dimensional Analysis</h2>
+            <p>Dimensional analysis is a powerful tool in physics that uses the dimensions of physical quantities to check equations, derive relationships, and convert between different units.</p>
+
+            <div class="definition">
+                <p><strong>Dimensions:</strong> The powers to which the fundamental quantities (mass, length, time, etc.) must be raised to represent a given physical quantity.</p>
+            </div>
+
+            <h3>Dimensional Formula</h3>
+            <p>The dimensional formula expresses a physical quantity in terms of the fundamental quantities. It is written within square brackets [ ].</p>
+
+            <p>For example:</p>
+            <ul>
+                <li>Speed = distance/time → [LT⁻¹]</li>
+                <li>Force = mass × acceleration → [MLT⁻²]</li>
+                <li>Energy = force × distance → [ML²T⁻²]</li>
+            </ul>
+
+            <h3>Applications of Dimensional Analysis</h3>
+            <p>Dimensional analysis has several important applications in physics:</p>
+
+            <h4>1. Checking the Correctness of Equations</h4>
+            <p>Every valid physical equation must be dimensionally consistent (principle of homogeneity). This means the dimensions on both sides of the equation must be identical.</p>
+
+            <div class="example">
+                <div class="example-title">Example:</div>
+                <p>Check the dimensional consistency of the equation for time period of a simple pendulum: T = 2π√(l/g)</p>
+                <p>Left side: [T] = [T]</p>
+                <p>Right side: [√(l/g)] = [√(L/LT⁻²)] = [√(T²)] = [T]</p>
+                <p>Both sides have the same dimensions [T], so the equation is dimensionally correct.</p>
+            </div>
+
+            <h4>2. Deriving Relationships Between Physical Quantities</h4>
+            <p>Dimensional analysis can help derive relationships between physical quantities when the exact form is unknown.</p>
+
+            <div class="example">
+                <div class="example-title">Example:</div>
+                <p>Derive an expression for the time period (T) of a simple pendulum, assuming it depends on length (l) and acceleration due to gravity (g).</p>
+                <p>Assume T ∝ lˣgʸ → T = klˣgʸ</p>
+                <p>Dimensions: [T] = [L]ˣ[LT⁻²]ʸ = [Lˣ⁺ʸT⁻²ʸ]</p>
+                <p>Equating dimensions: x + y = 0 and -2y = 1 → y = -½, x = ½</p>
+                <p>Thus, T ∝ √(l/g)</p>
+            </div>
+
+            <h4>3. Converting Units Between Systems</h4>
+            <p>Dimensional analysis provides a systematic method for converting units from one system to another.</p>
+
+            <div class="example">
+                <div class="example-title">Example:</div>
+                <p>Convert 1 newton (SI unit of force) into dyne (CGS unit of force).</p>
+                <p>1 N = 1 kg·m·s⁻²</p>
+                <p>1 dyne = 1 g·cm·s⁻²</p>
+                <p>1 kg = 1000 g, 1 m = 100 cm</p>
+                <p>1 N = (1000 g)(100 cm)(s⁻²) = 10⁵ g·cm·s⁻² = 10⁵ dyne</p>
+            </div>
+
+            <div class="important">
+                <p><strong>Limitations of Dimensional Analysis:</strong></p>
+                <ul>
+                    <li>Cannot determine dimensionless constants (like 2π in T = 2π√(l/g))</li>
+                    <li>Cannot distinguish between quantities with same dimensions (e.g., work and torque both have dimensions [ML²T⁻²])</li>
+                    <li>Cannot derive trigonometric, logarithmic, or exponential relations</li>
+                    <li>Doesn't provide information about dimensionless quantities</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Applications Section -->
+        <section class="info-panel" id="applications" data-aos="fade-up">
+            <h2>Applications and Problem Solving</h2>
+            <p>The concepts of units and measurement find wide applications in solving practical physics problems. Here are some important applications and problem-solving techniques.</p>
+
+            <h3>Order of Magnitude Calculations</h3>
+            <p>Order of magnitude refers to the scale or size of something in powers of ten. It's useful for making quick estimates and approximations.</p>
+
+            <div class="formula">
+                If N = a × 10ⁿ where 1 ≤ a < 10, then order of magnitude is n
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example:</div>
+                <p>Estimate the number of heartbeats in a human lifetime:</p>
+                <p>Average heart rate ≈ 70 beats/min</p>
+                <p>Average lifespan ≈ 70 years</p>
+                <p>Total beats ≈ 70 beats/min × 60 min/h × 24 h/day × 365 days/year × 70 years</p>
+                <p>≈ 70 × 60 × 24 × 400 × 70 ≈ 3 × 10⁹ beats</p>
+                <p>Order of magnitude ≈ 10⁹ beats</p>
+            </div>
+
+            <h3>Significant Figures in Calculations</h3>
+            <p>Significant figures indicate the precision of a measurement. Rules for arithmetic operations with significant figures:</p>
+
+            <h4>Addition and Subtraction</h4>
+            <p>The result should have the same number of decimal places as the measurement with the least decimal places.</p>
+
+            <div class="example">
+                <div class="example-title">Example:</div>
+                <p>12.345 (3 decimal places) + 1.2 (1 decimal place) = 13.5 (rounded to 1 decimal place)</p>
+            </div>
+
+            <h4>Multiplication and Division</h4>
+            <p>The result should have the same number of significant figures as the measurement with the least significant figures.</p>
+
+            <div class="example">
+                <div class="example-title">Example:</div>
+                <p>3.1416 (5 sig figs) × 2.0 (2 sig figs) = 6.3 (rounded to 2 significant figures)</p>
+            </div>
+
+            <h3>Practical Measurement Problems</h3>
+            <p>Solving problems involving measurement requires careful consideration of instruments, precision, and error analysis.</p>
+
+            <div class="example">
+                <div class="example-title">Problem:</div>
+                <p>The length and width of a rectangular plate are measured to be 15.3 cm and 10.6 cm respectively with a vernier caliper of least count 0.1 cm. Calculate the area of the plate with proper significant figures and determine the percentage error in the area.</p>
+
+                <p><strong>Solution:</strong></p>
+                <p>Length (l) = 15.3 ± 0.1 cm</p>
+                <p>Width (w) = 10.6 ± 0.1 cm</p>
+                <p>Area (A) = l × w = 15.3 × 10.6 = 162.18 cm²</p>
+                <p>Since both measurements have 3 significant figures, area should be reported with 3 sig figs: A = 162 cm²</p>
+
+                <p>Relative error in area:</p>
+                <p>ΔA/A = Δl/l + Δw/w = 0.1/15.3 + 0.1/10.6 ≈ 0.0065 + 0.0094 ≈ 0.0159</p>
+                <p>Percentage error = 0.0159 × 100% ≈ 1.6%</p>
+            </div>
+        </section>
 
         <!-- Key Facts Carousel -->
-        <section aria-labelledby="key-facts-heading">
-            <h2 id="key-facts-heading" class="sr-only">Key Facts About Units and Measurement</h2>
-            <div class="swiper-container" data-aos="fade-up">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div>
-                            <div class="swiper-title">LENGTH STANDARD</div>
-                            <div class="swiper-text">1 meter is defined as the distance traveled by light in vacuum in 1/299,792,458 seconds (exact value since 1983)</div>
-                        </div>
+        <div class="swiper-container" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">LENGTH STANDARD</div>
+                        <div class="swiper-text">1 meter is defined as the distance traveled by light in vacuum in 1/299,792,458 seconds (exact value since 1983)</div>
                     </div>
-                    <!-- Other slides remain the same -->
                 </div>
-                <div class="swiper-pagination" aria-hidden="true"></div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">TIME STANDARD</div>
+                        <div class="swiper-text">1 second is defined as 9,192,631,770 periods of radiation corresponding to the transition between two hyperfine levels of cesium-133 atom</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">MASS STANDARD</div>
+                        <div class="swiper-text">1 kilogram is now defined in terms of Planck's constant (h = 6.62607015×10⁻³⁴ kg·m²·s⁻¹) since 2019 redefinition</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">DIMENSIONAL ANALYSIS</div>
+                        <div class="swiper-text">The dimension of force is [MLT⁻²] and energy is [ML²T⁻²]. Work and torque have same dimensions but different physical meanings</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">SIGNIFICANT FIGURES</div>
+                        <div class="swiper-text">0.00450 has 3 significant figures (the zeros before 4 are not significant, the zero after 5 is significant)</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">ERROR PROPAGATION</div>
+                        <div class="swiper-text">When adding measurements, absolute errors add. When multiplying, relative errors add. For powers, multiply relative error by the exponent</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">VERNIER CALIPERS</div>
+                        <div class="swiper-text">Least count = 1 MSD - 1 VSD. Typical least count is 0.1 mm for standard vernier calipers with 10 divisions on vernier scale</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">SCREW GAUGE</div>
+                        <div class="swiper-text">Least count = Pitch / Number of circular scale divisions. Typical least count is 0.01 mm for standard screw gauges</div>
+                    </div>
+                </div>
             </div>
-        </section>
+            <!-- Add pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
 
         <!-- Summary Section -->
         <section class="info-panel" data-aos="fade-up">
@@ -289,19 +570,19 @@
                 Error Propagation: For Z = A ± B → ΔZ = ΔA + ΔB; For Z = A × B or A/B → ΔZ/Z = ΔA/A + ΔB/B
             </div>
         </section>
-    </main>
+    </div>
 
     <!-- Footer -->
-    <footer role="contentinfo">
+    <footer>
         <div class="footer-container">
             <div class="footer-column">
-                <h3>PhysicsHub</h3>
+                <h3>Nerds Assemble</h3>
                 <p>Your comprehensive resource for Class 11 Physics education based on NCERT syllabus.</p>
                 <div class="social-links">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
 
@@ -319,28 +600,25 @@
             <div class="footer-column">
                 <h3>Contact</h3>
                 <ul class="footer-links">
-                    <li><i class="fas fa-envelope" aria-hidden="true"></i> contact@physicshub.com</li>
-                    <li><i class="fas fa-phone" aria-hidden="true"></i> +91 9876543210</li>
-                    <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 123 Science Street, EduCity</li>
+                    <li><i class="fas fa-envelope"></i> contact@Nerds Assemble.com</li>
+                    <li><i class="fas fa-phone"></i> +91 9876543210</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Science Street, EduCity</li>
                 </ul>
             </div>
         </div>
 
         <div class="copyright">
-            <p>&copy; 2023 PhysicsHub. All rights reserved. | Designed for Class 11 Physics Education</p>
+            <p>&copy; 2023 Nerds Assemble. All rights reserved. | Designed for Class 11 Physics Education</p>
         </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
-        <i class="fas fa-arrow-up" aria-hidden="true"></i>
-    </button>
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
 
-    <!-- External Scripts -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    
-    <!-- Internal Script -->
     <script src="script.js"></script>
 </body>
 </html>
