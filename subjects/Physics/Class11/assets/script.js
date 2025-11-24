@@ -7,11 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (mobileMenuBtn && mainNav) {
         mobileMenuBtn.addEventListener('click', function() {
-            const isExpanded = mainNav.classList.toggle('active');
-            mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
-            mobileMenuBtn.innerHTML = isExpanded ? 
-                '<i class="fas fa-times" aria-hidden="true"></i>' : 
-                '<i class="fas fa-bars" aria-hidden="true"></i>';
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ?
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
         });
     }
 
@@ -43,8 +41,42 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Initialize Swiper - FIXED VERSION
-    initializeSwiper();
+    // Initialize Swiper - SIMPLE FIXED VERSION
+    if (typeof Swiper !== 'undefined') {
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            slidesPerView: 1,
+            spaceBetween: 20,
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 25
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                }
+            }
+        });
+    } else {
+        console.warn('Swiper library not loaded');
+    }
 
     // Smooth Scroll for Navigation Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -58,14 +90,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (targetElement) {
                 smoothScrollTo(targetElement.offsetTop - 80, 800);
 
-                // Update URL without scrolling
-                history.pushState(null, null, targetId);
-
                 // Close mobile menu if open
                 if (mainNav && mainNav.classList.contains('active')) {
                     mainNav.classList.remove('active');
-                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
-                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i>';
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
                 }
             }
         });
@@ -80,123 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Create Particles (Delayed for better load performance)
     setTimeout(createParticles, 500);
-
-    // Handle resize events
-    let resizeTimeout;
-    window.addEventListener('resize', function() {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(function() {
-            createParticles();
-        }, 250);
-    });
-
-    // Preload critical images
-    preloadCriticalImages();
 });
-
-// Initialize Swiper Function - FIXED
-function initializeSwiper() {
-    const swiperContainer = document.querySelector('.swiper-container');
-    if (!swiperContainer) return;
-
-    // Wait for Swiper to load
-    if (typeof Swiper === 'undefined') {
-        console.warn('Swiper library not loaded');
-        return;
-    }
-
-    try {
-        const swiper = new Swiper('.swiper-container', {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: true,
-            slidesPerView: 1,
-            spaceBetween: 20,
-            centeredSlides: true,
-            
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-                dynamicBullets: true
-            },
-
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-            // Autoplay
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
-
-            // Breakpoints for responsive design
-            breakpoints: {
-                640: {
-                    slidesPerView: 1,
-                    spaceBetween: 20
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 25,
-                    centeredSlides: false
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                    centeredSlides: false
-                }
-            },
-
-            // Effects
-            effect: 'slide',
-            speed: 600,
-
-            // Accessibility
-            a11y: {
-                enabled: true,
-                prevSlideMessage: 'Previous slide',
-                nextSlideMessage: 'Next slide',
-                firstSlideMessage: 'This is the first slide',
-                lastSlideMessage: 'This is the last slide',
-            },
-
-            // Lazy loading
-            lazy: {
-                loadPrevNext: true,
-                loadPrevNextAmount: 2,
-            },
-
-            // Keyboard control
-            keyboard: {
-                enabled: true,
-                onlyInViewport: true,
-            },
-
-            // Mousewheel control
-            mousewheel: {
-                forceToAxis: true,
-            }
-        });
-
-        console.log('Swiper initialized successfully');
-
-        // Add hover pause functionality
-        swiper.el.addEventListener('mouseenter', function() {
-            swiper.autoplay.stop();
-        });
-
-        swiper.el.addEventListener('mouseleave', function() {
-            swiper.autoplay.start();
-        });
-
-    } catch (error) {
-        console.error('Error initializing Swiper:', error);
-    }
-}
 
 // Smooth Scroll Function with Easing
 function smoothScrollTo(targetPosition, duration) {
@@ -228,13 +140,8 @@ function createParticles() {
     if (!particlesContainer) return;
 
     const particleCount = window.innerWidth < 768 ? 20 : 30;
-    
-    // Clear existing particles
-    while (particlesContainer.firstChild) {
-        particlesContainer.removeChild(particlesContainer.firstChild);
-    }
+    particlesContainer.innerHTML = '';
 
-    // Create new particles
     for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
         particle.classList.add('particle');
@@ -259,37 +166,6 @@ function createParticles() {
     }
 }
 
-// Preload critical images
-function preloadCriticalImages() {
-    const criticalImages = [
-        // Add paths to critical images here if needed
-    ];
-
-    criticalImages.forEach(src => {
-        const img = new Image();
-        img.src = src;
-    });
-}
-
-// Performance monitoring
-if ('performance' in window) {
-    window.addEventListener('load', function() {
-        setTimeout(function() {
-            const perfData = window.performance.timing;
-            const loadTime = perfData.loadEventEnd - perfData.navigationStart;
-            
-            if (loadTime > 3000) {
-                console.warn('Page load time is high:', loadTime + 'ms');
-            }
-        }, 0);
-    });
-}
-
-// Error handling
-window.addEventListener('error', function(e) {
-    console.error('JavaScript Error:', e.error);
-});
-
 // Request Animation Frame Polyfill
 (function() {
     var lastTime = 0;
@@ -300,21 +176,18 @@ window.addEventListener('error', function(e) {
                                    || window[vendors[x]+'CancelRequestAnimationFrame'];
     }
 
-    if (!window.requestAnimationFrame) {
-        window.requestAnimationFrame = function(callback) {
+    if (!window.requestAnimationFrame)
+        window.requestAnimationFrame = function(callback, element) {
             var currTime = new Date().getTime();
             var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-            var id = window.setTimeout(function() { 
-                callback(currTime + timeToCall); 
-            }, timeToCall);
+            var id = window.setTimeout(function() { callback(currTime + timeToCall); },
+              timeToCall);
             lastTime = currTime + timeToCall;
             return id;
         };
-    }
 
-    if (!window.cancelAnimationFrame) {
+    if (!window.cancelAnimationFrame)
         window.cancelAnimationFrame = function(id) {
             clearTimeout(id);
         };
-    }
 }());
