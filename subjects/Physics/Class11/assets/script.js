@@ -43,51 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Initialize Swiper
-    if (typeof Swiper !== 'undefined') {
-        new Swiper('.swiper-container', {
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            coverflowEffect: {
-                rotate: window.innerWidth < 768 ? 10 : 15,
-                stretch: 0,
-                depth: window.innerWidth < 768 ? 100 : 150,
-                modifier: 1,
-                slideShadows: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true
-            },
-            autoplay: {
-                delay: 3500,
-                disableOnInteraction: false,
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 1,
-                    spaceBetween: 20
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 25
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 30
-                }
-            },
-            preloadImages: false,
-            lazy: true,
-            a11y: {
-                enabled: true,
-                prevSlideMessage: 'Previous slide',
-                nextSlideMessage: 'Next slide',
-            }
-        });
-    }
+    // Initialize Swiper - FIXED VERSION
+    initializeSwiper();
 
     // Smooth Scroll for Navigation Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -136,6 +93,110 @@ document.addEventListener('DOMContentLoaded', function() {
     // Preload critical images
     preloadCriticalImages();
 });
+
+// Initialize Swiper Function - FIXED
+function initializeSwiper() {
+    const swiperContainer = document.querySelector('.swiper-container');
+    if (!swiperContainer) return;
+
+    // Wait for Swiper to load
+    if (typeof Swiper === 'undefined') {
+        console.warn('Swiper library not loaded');
+        return;
+    }
+
+    try {
+        const swiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            centeredSlides: true,
+            
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // Autoplay
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+
+            // Breakpoints for responsive design
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 25,
+                    centeredSlides: false
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    centeredSlides: false
+                }
+            },
+
+            // Effects
+            effect: 'slide',
+            speed: 600,
+
+            // Accessibility
+            a11y: {
+                enabled: true,
+                prevSlideMessage: 'Previous slide',
+                nextSlideMessage: 'Next slide',
+                firstSlideMessage: 'This is the first slide',
+                lastSlideMessage: 'This is the last slide',
+            },
+
+            // Lazy loading
+            lazy: {
+                loadPrevNext: true,
+                loadPrevNextAmount: 2,
+            },
+
+            // Keyboard control
+            keyboard: {
+                enabled: true,
+                onlyInViewport: true,
+            },
+
+            // Mousewheel control
+            mousewheel: {
+                forceToAxis: true,
+            }
+        });
+
+        console.log('Swiper initialized successfully');
+
+        // Add hover pause functionality
+        swiper.el.addEventListener('mouseenter', function() {
+            swiper.autoplay.stop();
+        });
+
+        swiper.el.addEventListener('mouseleave', function() {
+            swiper.autoplay.start();
+        });
+
+    } catch (error) {
+        console.error('Error initializing Swiper:', error);
+    }
+}
 
 // Smooth Scroll Function with Easing
 function smoothScrollTo(targetPosition, duration) {
