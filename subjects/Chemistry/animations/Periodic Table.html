@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Periodic Table | Interactive Chemistry Education</title>
+    <meta name="description" content="Interactive 3D periodic table with detailed element information. Perfect for chemistry students and educators.">
+    <meta name="keywords" content="periodic table, chemistry, elements, interactive, 3D, education">
+    <meta name="author" content="Chem3D">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/planet-universe-svgrepo-com.svg">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Chemistry Animations Background -->
+    <div class="chemistry-animations" id="chemistryAnimations" aria-hidden="true"></div>
+
+    <!-- Header -->
+    <header role="banner">
+        <div class="header-container">
+            <a href="#" class="logo" aria-label="Chem3D Home">
+                <span class="logo-icon"><i class="fas fa-atom" aria-hidden="true"></i></span>
+                <span class="logo-text">Chem3D</span>
+            </a>
+            <nav id="mainNav" role="navigation" aria-label="Main Navigation">
+                <ul class="nav-links">
+                    <li><a href="#periodic-table">Periodic Table</a></li>
+                    <li><a href="#elements">Elements</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container" role="main">
+        <section class="page-header">
+            <h1>Clean Periodic Table</h1>
+            <p class="subtitle">Essential elements at a glance</p>
+        </section>
+
+        <!-- Periodic Table Section -->
+        <section class="info-panel" id="periodic-table" aria-labelledby="periodic-table-heading">
+            <h2 id="periodic-table-heading">Interactive Periodic Table</h2>
+            <p>Click on any element to view detailed information</p>
+           
+            <div class="legend" role="list" aria-label="Element Categories Legend">
+                <div class="legend-item" role="listitem">
+                    <div class="legend-color alkali-metal"></div>
+                    <span>Alkali Metal</span>
+                </div>
+                <div class="legend-item" role="listitem">
+                    <div class="legend-color alkaline-earth"></div>
+                    <span>Alkaline Earth</span>
+                </div>
+                <div class="legend-item" role="listitem">
+                    <div class="legend-color transition-metal"></div>
+                    <span>Transition Metal</span>
+                </div>
+                <div class="legend-item" role="listitem">
+                    <div class="legend-color post-transition"></div>
+                    <span>Post-Transition</span>
+                </div>
+                <div class="legend-item" role="listitem">
+                    <div class="legend-color metalloid"></div>
+                    <span>Metalloid</span>
+                </div>
+                <div class="legend-item" role="listitem">
+                    <div class="legend-color nonmetal"></div>
+                    <span>Nonmetal</span>
+                </div>
+                <div class="legend-item" role="listitem">
+                    <div class="legend-color halogen"></div>
+                    <span>Halogen</span>
+                </div>
+                <div class="legend-item" role="listitem">
+                    <div class="legend-color noble-gas"></div>
+                    <span>Noble Gas</span>
+                </div>
+                <div class="legend-item" role="listitem">
+                    <div class="legend-color lanthanide"></div>
+                    <span>Lanthanide</span>
+                </div>
+                <div class="legend-item" role="listitem">
+                    <div class="legend-color actinide"></div>
+                    <span>Actinide</span>
+                </div>
+            </div>
+           
+            <div class="controls" role="group" aria-label="Table Controls">
+                <button class="control-btn" id="rotateLeft" aria-label="Rotate table left"><i class="fas fa-undo" aria-hidden="true"></i> Rotate Left</button>
+                <button class="control-btn" id="rotateRight" aria-label="Rotate table right"><i class="fas fa-redo" aria-hidden="true"></i> Rotate Right</button>
+                <button class="control-btn" id="resetView" aria-label="Reset table view"><i class="fas fa-sync-alt" aria-hidden="true"></i> Reset View</button>
+            </div>
+           
+            <div class="periodic-table-3d">
+                <div class="table-container" id="tableContainer">
+                    <div class="table-surface" id="periodicTable" role="grid" aria-label="Periodic Table of Elements">
+                        <!-- Elements will be added by JavaScript -->
+                    </div>
+                </div>
+            </div>
+           
+            <div class="important" role="note">
+                <p><strong>Tip:</strong> Hover over elements to see them pop out in 3D space. Click to view detailed information.</p>
+            </div>
+        </section>
+
+        <!-- Elements Section -->
+        <section class="info-panel" id="elements" aria-labelledby="elements-heading">
+            <h2 id="elements-heading">Element Categories</h2>
+            <p>Elements are organized into categories based on their chemical properties and electron configurations.</p>
+           
+            <div class="definition" role="note">
+                <p><strong>Periodic Law:</strong> When elements are arranged in order of increasing atomic number, their physical and chemical properties show a periodic pattern.</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="info-panel" id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About This Project</h2>
+            <p>This clean periodic table focuses on the essential information while maintaining all interactive features.</p>
+        </section>
+    </main>
+
+    <!-- Element Details Modal -->
+    <div class="modal-overlay" id="elementModal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="element-modal">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <div class="element-symbol" id="modalSymbol" aria-hidden="true">H</div>
+                    <div>
+                        <h3 class="element-name" id="modalName">Hydrogen</h3>
+                        <div class="element-number" id="modalNumber">Atomic Number: 1</div>
+                    </div>
+                </div>
+                <button class="close-modal" id="closeModal" aria-label="Close dialog">&times;</button>
+            </div>
+           
+            <div class="modal-content">
+                <div class="element-image" id="elementImage" aria-hidden="true">
+                    <i class="fas fa-atom" style="font-size: 3rem; color: var(--highlight);" aria-hidden="true"></i>
+                </div>
+               
+                <div class="modal-section">
+                    <h4>Basic Information</h4>
+                    <div class="property-grid">
+                        <div class="property">
+                            <div class="property-label">Atomic Mass</div>
+                            <div class="property-value" id="atomicMass">1.008 u</div>
+                        </div>
+                        <div class="property">
+                            <div class="property-label">Category</div>
+                            <div class="property-value" id="category">Nonmetal</div>
+                        </div>
+                        <div class="property">
+                            <div class="property-label">Phase</div>
+                            <div class="property-value" id="phase">Gas</div>
+                        </div>
+                        <div class="property">
+                            <div class="property-label">Density</div>
+                            <div class="property-value" id="density">0.00008988 g/cm³</div>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="modal-section">
+                    <h4>Properties</h4>
+                    <div class="property-grid">
+                        <div class="property">
+                            <div class="property-label">Melting Point</div>
+                            <div class="property-value" id="meltingPoint">-259.16 °C</div>
+                        </div>
+                        <div class="property">
+                            <div class="property-label">Boiling Point</div>
+                            <div class="property-value" id="boilingPoint">-252.87 °C</div>
+                        </div>
+                        <div class="property">
+                            <div class="property-label">Electronegativity</div>
+                            <div class="property-value" id="electronegativity">2.20</div>
+                        </div>
+                        <div class="property">
+                            <div class="property-label">Electron Configuration</div>
+                            <div class="property-value" id="electronConfig">1s¹</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Chem3D</h3>
+                <p>Interactive 3D periodic table for chemistry education</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#periodic-table">Periodic Table</a></li>
+                    <li><a href="#elements">Elements</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Element Data</a></li>
+                    <li><a href="#">Chemistry Tools</a></li>
+                    <li><a href="#">Educational Materials</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Chem3D. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
