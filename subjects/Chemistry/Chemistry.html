@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NerdsAssemble | Chemistry - Interactive Learning Resources</title>
+    <meta name="description" content="Explore interactive chemistry resources including virtual labs, 3D molecular models, and comprehensive study materials for students.">
+    <meta name="keywords" content="chemistry, science education, virtual lab, molecular models, periodic table, chemical reactions">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Chemistry Background Elements -->
+    <div class="chemistry-element flask" style="top: 15%; right: 15%;">
+        <div class="bubbles">
+            <div class="bubble" style="width: 8px; height: 8px; left: 30%;"></div>
+            <div class="bubble" style="width: 12px; height: 12px; left: 60%;"></div>
+            <div class="bubble" style="width: 6px; height: 6px; left: 45%;"></div>
+        </div>
+    </div>
+
+    <div class="chemistry-element periodic-table" style="bottom: 10%; left: 5%;">
+        <!-- Simplified periodic table elements -->
+        <div class="element">H</div>
+        <div class="element">He</div>
+        <div class="element">Li</div>
+        <div class="element">Be</div>
+        <div class="element">B</div>
+        <div class="element">C</div>
+        <div class="element">N</div>
+        <div class="element">O</div>
+        <div class="element">F</div>
+        <div class="element">Ne</div>
+        <div class="element">Na</div>
+        <div class="element">Mg</div>
+        <div class="element">Al</div>
+        <div class="element">Si</div>
+        <div class="element">P</div>
+        <div class="element">S</div>
+        <div class="element">Cl</div>
+        <div class="element">Ar</div>
+    </div>
+
+    <!-- Header -->
+    <header id="mainHeader">
+        <div class="container header-container">
+            <a href="index.html" class="logo" aria-label="NerdsAssemble Home">
+                <span class="logo-icon"><i class="fas fa-atom"></i></span>
+                <span class="logo-text">NerdsAssemble</span>
+            </a>
+           
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+           
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="Homepage.html">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#topics">Topics</a></li>
+                    <li><a href="#animations">Animations</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Explore the World of Chemistry</h1>
+                <p class="hero-subtitle">Where Molecules Create the Universe</p>
+                <p class="hero-description">Dive into the fascinating world of atoms, molecules, and reactions. Our interactive chemistry resources help you visualize complex concepts and master organic, inorganic, and physical chemistry through immersive experiences.</p>
+                <div class="cta-buttons">
+                    <a href="#topics" class="btn btn-primary">Explore Topics</a>
+                    <a href="#animations" class="btn btn-secondary">View Animations</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Why Chemistry at NerdsAssemble?</h2>
+            <p>We provide cutting-edge educational resources tailored for chemistry students at all levels.</p>
+           
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 class="feature-title">Virtual Laboratory</h3>
+                    <p>Conduct experiments safely in our virtual lab environment. Mix chemicals, observe reactions, and learn proper lab techniques without the risks.</p>
+                </div>
+               
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3 class="feature-title">3D Molecular Models</h3>
+                    <p>Visualize complex molecular structures in 3D with our interactive models that you can rotate, zoom, and explore from every angle.</p>
+                </div>
+               
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <h3 class="feature-title">Reaction Simulator</h3>
+                    <p>Watch chemical reactions unfold at molecular level. Adjust conditions and observe how reactions change in real-time.</p>
+                </div>
+               
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-table"></i>
+                    </div>
+                    <h3 class="feature-title">Interactive Periodic Table</h3>
+                    <p>Explore elements with detailed information, properties, and real-world applications in our interactive periodic table.</p>
+                </div>
+               
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3 class="feature-title">Stoichiometry Tools</h3>
+                    <p>Master chemical calculations with our interactive stoichiometry tools that guide you through balancing equations and solving problems.</p>
+                </div>
+               
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="feature-title">Comprehensive Resources</h3>
+                    <p>Access our extensive library of study materials, including video lectures, practice problems, and research papers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics Section -->
+    <section class="topics" id="topics">
+        <div class="container">
+            <h2>Chemistry Topics</h2>
+            <p>Explore fundamental and advanced chemistry concepts through our structured learning paths.</p>
+           
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-image" style="background-image: url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="topic-content">
+                        <h3 class="topic-title">Atomic Structure</h3>
+                        <p class="topic-description">Explore the building blocks of matter - protons, neutrons, electrons, and quantum mechanical models of the atom.</p>
+                        <a href="Atomic structure.html" class="topic-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+               
+                <div class="topic-card">
+                    <div class="topic-image" style="background-image: url('https://images.unsplash.com/photo-1566159674951-15c71ae23b5e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="topic-content">
+                        <h3 class="topic-title">Chemical Bonding</h3>
+                        <p class="topic-description">Understand how atoms connect through ionic, covalent, and metallic bonds to form compounds and materials.</p>
+                        <a href="#" class="topic-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+               
+                <div class="topic-card">
+                    <div class="topic-image" style="background-image: url('https://images.unsplash.com/photo-1554475900-3d9e5b345e2c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="topic-content">
+                        <h3 class="topic-title">Organic Chemistry</h3>
+                        <p class="topic-description">Dive into the chemistry of carbon compounds, functional groups, and reaction mechanisms.</p>
+                        <a href="#" class="topic-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+               
+                <div class="topic-card">
+                    <div class="topic-image" style="background-image: url('https://images.unsplash.com/photo-1603126857596-36bdeef941d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="topic-content">
+                        <h3 class="topic-title">Thermodynamics</h3>
+                        <p class="topic-description">Study energy changes in chemical reactions, entropy, enthalpy, and Gibbs free energy.</p>
+                        <a href="#" class="topic-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+               
+                <div class="topic-card">
+                    <div class="topic-image" style="background-image: url('https://images.unsplash.com/photo-1598072193096-bc6db2a12c4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="topic-content">
+                        <h3 class="topic-title">Electrochemistry</h3>
+                        <p class="topic-description">Explore the relationship between electricity and chemical reactions in batteries and electrolysis.</p>
+                        <a href="#" class="topic-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+               
+                <div class="topic-card">
+                    <div class="topic-image" style="background-image: url('https://images.unsplash.com/photo-1588612326305-5df7c768a254?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="topic-content">
+                        <h3 class="topic-title">Biochemistry</h3>
+                        <p class="topic-description">Discover the chemical processes within living organisms, from metabolism to DNA replication.</p>
+                        <a href="#" class="topic-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animations Section -->
+    <section class="animations" id="animations">
+        <div class="container">
+            <h2>Interactive Chemistry Animations</h2>
+            <p>Visualize complex chemical processes with our interactive animations and simulations.</p>
+           
+            <div class="animations-grid">
+                <div class="animation-card">
+                    <div class="animation-preview">
+                        <i class="fas fa-atom" style="font-size: 4rem; color: var(--chemistry-secondary);"></i>
+                    </div>
+                    <div class="animation-content">
+                        <h3 class="animation-title">Molecular Builder</h3>
+                        <p class="animation-description">Build and manipulate molecules in 3D space. See how atoms bond and molecules form.</p>
+                        <a href="#" class="topic-link">Try Animation <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+               
+                <div class="animation-card">
+                    <div class="animation-preview">
+                        <i class="fas fa-vial" style="font-size: 4rem; color: var(--chemistry-primary);"></i>
+                    </div>
+                    <div class="animation-content">
+                        <h3 class="animation-title">Reaction Simulator</h3>
+                        <p class="animation-description">Mix different chemicals and observe reactions in real-time with safety measures.</p>
+                        <a href="#" class="topic-link">Try Animation <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+               
+                <div class="animation-card">
+                    <div class="animation-preview">
+                        <i class="fas fa-bolt" style="font-size: 4rem; color: var(--highlight);"></i>
+                    </div>
+                    <div class="animation-content">
+                        <h3 class="animation-title">Electrolysis Demo</h3>
+                        <p class="animation-description">Visualize how electric current drives non-spontaneous chemical reactions.</p>
+                        <a href="#" class="topic-link">Try Animation <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+               
+                <div class="animation-card">
+                    <div class="animation-preview">
+                        <i class="fas fa-tint" style="font-size: 4rem; color: var(--chemistry-secondary);"></i>
+                    </div>
+                    <div class="animation-content">
+                        <h3 class="animation-title">pH Scale Interactive</h3>
+                        <p class="animation-description">Test various substances and see their position on the pH scale with color changes.</p>
+                        <a href="#" class="topic-link">Try Animation <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+               
+                <div class="animation-card">
+                    <div class="animation-preview">
+                        <i class="fas fa-fire" style="font-size: 4rem; color: var(--tertiary);"></i>
+                    </div>
+                    <div class="animation-content">
+                        <h3 class="animation-title">Combustion Reactions</h3>
+                        <p class="animation-description">Watch combustion reactions at the molecular level with balanced equations.</p>
+                        <a href="#" class="topic-link">Try Animation <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+               
+                <div class="animation-card">
+                    <div class="animation-preview">
+                        <i class="fas fa-dna" style="font-size: 4rem; color: var(--chemistry-primary);"></i>
+                    </div>
+                    <div class="animation-content">
+                        <h3 class="animation-title">Organic Reaction Mechanisms</h3>
+                        <p class="animation-description">Step-by-step visualization of complex organic chemistry reaction pathways.</p>
+                        <a href="#" class="topic-link">Try Animation <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources" id="resources">
+        <div class="container">
+            <h2>Chemistry Resources</h2>
+            <p>Access our comprehensive collection of study materials, tools, and reference documents.</p>
+           
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="resource-title">Study Guides</h3>
+                    <p>Comprehensive guides covering all major chemistry topics with examples and practice problems.</p>
+                    <a href="#" class="resource-link">Download PDFs</a>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3 class="resource-title">Chemistry Calculators</h3>
+                    <p>Tools for molar mass, concentration, gas laws, pH, and other essential chemistry calculations.</p>
+                    <a href="#" class="resource-link">Access Tools</a>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="resource-title">Video Library</h3>
+                    <p>Hundreds of tutorial videos explaining complex concepts with visual demonstrations.</p>
+                    <a href="#" class="resource-link">Watch Videos</a>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="resource-title">Practice Exams</h3>
+                    <p>Test your knowledge with our collection of practice exams and quizzes with instant feedback.</p>
+                    <a href="#" class="resource-link">Take Tests</a>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-table"></i>
+                    </div>
+                    <h3 class="resource-title">Periodic Table</h3>
+                    <p>Interactive periodic table with detailed element information, properties, and trends.</p>
+                    <a href="Periodic table.html" class="resource-link">Explore Elements</a>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 class="resource-title">Lab Manuals</h3>
+                    <p>Virtual lab procedures and safety guidelines for common chemistry experiments.</p>
+                    <a href="#" class="resource-link">View Manuals</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Master Chemistry?</h2>
+                <p>Join thousands of students who are transforming their understanding of chemistry with our interactive platform.</p>
+                <a href="#" class="btn btn-primary">Get Started Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>NerdsAssemble</h3>
+                    <p>Transforming science education through interactive learning experiences and cutting-edge technology.</p>
+                </div>
+               
+                <div class="footer-column">
+                    <h3>Subjects</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Chemistry</a></li>
+                        <li><a href="#">Physics</a></li>
+                        <li><a href="#">Biology</a></li>
+                        <li><a href="#">Mathematics</a></li>
+                        <li><a href="#">Computer Science</a></li>
+                    </ul>
+                </div>
+               
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Study Guides</a></li>
+                        <li><a href="#">Practice Tests</a></li>
+                        <li><a href="#">Video Library</a></li>
+                        <li><a href="#">Interactive Tools</a></li>
+                        <li><a href="#">Research Papers</a></li>
+                    </ul>
+                </div>
+            </div>
+           
+            <div class="footer-bottom">
+                <p>&copy; 2023 NerdsAssemble. All rights reserved. | Designed for the future of science education</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
