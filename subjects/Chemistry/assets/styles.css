@@ -1,15 +1,15 @@
-/* Science Student Hub - Chemistry Page */
+/* Science Student Hub - Physics Page */
 :root {
-    --primary: #6e00ff;
-    --secondary: #00ffaa;
-    --tertiary: #ff00aa;
+    --primary: #0066ff;
+    --secondary: #ffaa00;
+    --tertiary: #00ccff;
     --bg: #0a0a20;
     --text: #ffffff;
     --highlight: #00f7ff;
     --nav-bg: rgba(10, 5, 30, 0.95);
     --card-bg: rgba(20, 10, 40, 0.7);
-    --chemistry-primary: #ff00aa;
-    --chemistry-secondary: #00ffaa;
+    --physics-primary: #0066ff;
+    --physics-secondary: #ffaa00;
 }
 
 /* Base Styles */
@@ -35,8 +35,8 @@ body {
     display: flex;
     flex-direction: column;
     background-image:
-        radial-gradient(circle at 10% 20%, rgba(255, 0, 170, 0.1) 0%, transparent 20%),
-        radial-gradient(circle at 90% 80%, rgba(0, 255, 170, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 10% 20%, rgba(0, 102, 255, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(255, 170, 0, 0.1) 0%, transparent 20%),
         linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
 }
 
@@ -48,14 +48,14 @@ h1, h2, h3 {
 
 h1 {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
-    background: linear-gradient(45deg, var(--chemistry-primary), var(--chemistry-secondary), var(--tertiary));
+    background: linear-gradient(45deg, var(--physics-primary), var(--physics-secondary), var(--tertiary));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 0 0 20px rgba(255, 0, 170, 0.5);
+    text-shadow: 0 0 20px rgba(0, 102, 255, 0.5);
     line-height: 1.2;
 }
 
@@ -74,12 +74,12 @@ h2::after {
     left: 0;
     width: 100px;
     height: 4px;
-    background: linear-gradient(90deg, var(--chemistry-primary), transparent);
+    background: linear-gradient(90deg, var(--physics-primary), transparent);
     border-radius: 3px;
 }
 
 h3 {
-    color: var(--chemistry-secondary);
+    color: var(--physics-secondary);
     margin: 1.5rem 0 1rem;
     font-size: clamp(1.3rem, 2.5vw, 1.8rem);
 }
@@ -97,14 +97,11 @@ p {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 1rem;
-    position: relative;
-    z-index: 5;
 }
 
 section {
     padding: 4rem 0;
     position: relative;
-    z-index: 2;
 }
 
 /* Header & Navigation */
@@ -152,7 +149,7 @@ header.scrolled {
 .logo-text {
     font-family: 'Orbitron', sans-serif;
     font-weight: 700;
-    background: linear-gradient(45deg, var(--chemistry-primary), var(--chemistry-secondary));
+    background: linear-gradient(45deg, var(--physics-primary), var(--physics-secondary));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -211,28 +208,28 @@ nav {
     z-index: 1001;
 }
 
-/* Hero Section */
+/* Hero Section - FIXED */
 .hero {
-    height: 80vh;
-    min-height: 600px;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding-top: 80px;
-    z-index: 10;
+    padding: 100px 0 4rem;
+    margin-top: 0;
 }
 
 .hero-content {
     position: relative;
-    z-index: 20;
+    z-index: 2;
     max-width: 800px;
+    width: 100%;
 }
 
 .hero-subtitle {
     font-family: 'Montserrat', sans-serif;
     font-size: clamp(1rem, 2vw, 1.3rem);
-    color: var(--chemistry-secondary);
+    color: var(--physics-secondary);
     margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -242,6 +239,7 @@ nav {
     font-size: clamp(1rem, 1.5vw, 1.2rem);
     margin-bottom: 3rem;
     max-width: 600px;
+    line-height: 1.7;
 }
 
 .cta-buttons {
@@ -249,12 +247,12 @@ nav {
     gap: 1.5rem;
     margin-top: 2rem;
     flex-wrap: wrap;
-    position: relative;
-    z-index: 30;
 }
 
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 1rem 2rem;
     border-radius: 50px;
     font-family: 'Orbitron', sans-serif;
@@ -265,22 +263,23 @@ nav {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    z-index: 40;
+    z-index: 1;
     border: none;
     cursor: pointer;
     font-size: 0.9rem;
+    min-width: 180px;
     text-align: center;
 }
 
 .btn-primary {
-    background: linear-gradient(45deg, var(--chemistry-primary), var(--tertiary));
+    background: linear-gradient(45deg, var(--physics-primary), var(--tertiary));
     color: white;
-    box-shadow: 0 5px 15px rgba(255, 0, 170, 0.4);
+    box-shadow: 0 5px 15px rgba(0, 102, 255, 0.4);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255, 0, 170, 0.6);
+    box-shadow: 0 8px 25px rgba(0, 102, 255, 0.6);
 }
 
 .btn-secondary {
@@ -296,84 +295,76 @@ nav {
     box-shadow: 0 8px 25px rgba(0, 247, 255, 0.3);
 }
 
-/* Chemistry-specific Animations */
-.chemistry-element {
+/* Physics-specific Animations */
+.physics-element {
     position: absolute;
     opacity: 0.3;
-    z-index: 1 !important;
+    z-index: 1;
     pointer-events: none;
 }
 
-.flask {
+.atom {
     width: 120px;
-    height: 180px;
-    border-radius: 40% 40% 0 0;
-    border: 3px solid rgba(0, 255, 170, 0.5);
+    height: 120px;
     position: relative;
-    overflow: hidden;
 }
 
-.flask::before {
-    content: '';
+.nucleus {
     position: absolute;
-    bottom: 0;
-    left: 10%;
-    width: 80%;
-    height: 70%;
-    background: rgba(0, 255, 170, 0.2);
-    border-radius: 40% 40% 0 0;
-    animation: bubble 8s ease-in-out infinite;
-}
-
-.bubbles {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.bubble {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.6);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 170, 0, 0.5);
     border-radius: 50%;
-    bottom: 0;
-    opacity: 0;
-    animation: float 5s ease-in-out infinite;
+    box-shadow: 0 0 20px rgba(255, 170, 0, 0.5);
 }
 
-.bubble:nth-child(2) {
-    animation-delay: 1s;
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(0, 204, 255, 0.3);
+    border-radius: 50%;
 }
 
-.bubble:nth-child(3) {
-    animation-delay: 2s;
+.electron {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: rgba(0, 204, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 204, 255, 0.8);
 }
 
-.periodic-table {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    gap: 4px;
-    width: 400px;
-    height: 250px;
+.pendulum {
+    position: relative;
+    width: 100px;
+    height: 200px;
 }
 
-.element {
-    width: 40px;
-    height: 40px;
-    background: rgba(110, 0, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.7rem;
-    transition: all 0.3s ease;
-    animation: float 6s ease-in-out infinite;
+.pendulum-string {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 150px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), transparent);
+    transform-origin: top center;
 }
 
-.element:hover {
-    background: rgba(255, 0, 170, 0.4);
-    transform: scale(1.2);
-    z-index: 2;
+.pendulum-bob {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 170, 0, 0.7);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px rgba(255, 170, 0, 0.7);
 }
 
 /* Features Section */
@@ -408,7 +399,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, transparent 48%, var(--chemistry-primary) 49%, var(--chemistry-primary) 51%, transparent 52%);
+    background: linear-gradient(45deg, transparent 48%, var(--physics-primary) 49%, var(--physics-primary) 51%, transparent 52%);
     background-size: 20px 20px;
     opacity: 0.05;
     pointer-events: none;
@@ -495,11 +486,13 @@ nav {
 .topic-description {
     font-size: 0.9rem;
     margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
 
 .topic-link {
-    display: inline-block;
-    color: var(--chemistry-secondary);
+    display: inline-flex;
+    align-items: center;
+    color: var(--physics-secondary);
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -569,6 +562,7 @@ nav {
 .animation-description {
     font-size: 0.9rem;
     margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
 
 /* Resources Section */
@@ -600,7 +594,7 @@ nav {
 
 .resource-icon {
     font-size: 3rem;
-    color: var(--chemistry-secondary);
+    color: var(--physics-secondary);
     margin-bottom: 1.5rem;
 }
 
@@ -613,7 +607,7 @@ nav {
 .resource-link {
     display: inline-block;
     margin-top: 1rem;
-    color: var(--chemistry-primary);
+    color: var(--physics-primary);
     text-decoration: none;
     font-weight: 600;
 }
@@ -700,7 +694,7 @@ footer {
     right: 2rem;
     width: 50px;
     height: 50px;
-    background: var(--chemistry-primary);
+    background: var(--physics-primary);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -712,7 +706,7 @@ footer {
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 999;
-    box-shadow: 0 5px 15px rgba(255, 0, 170, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 102, 255, 0.3);
     border: none;
 }
 
@@ -730,26 +724,15 @@ footer {
 @keyframes float {
     0%, 100% {
         transform: translate(0, 0);
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
     }
     25% {
-        transform: translate(10px, -50px);
+        transform: translate(10px, 10px);
     }
     50% {
-        transform: translate(-5px, -100px);
+        transform: translate(-5px, 15px);
     }
     75% {
-        transform: translate(5px, -150px);
-    }
-    100% {
-        transform: translate(0, -200px);
-        opacity: 0;
+        transform: translate(5px, -5px);
     }
 }
 
@@ -780,26 +763,57 @@ footer {
     }
 }
 
-@keyframes bubble {
-    0%, 100% {
-        transform: translateY(0) scale(1);
+@keyframes orbit {
+    0% {
+        transform: rotate(0deg) translateX(60px) rotate(0deg);
     }
-    50% {
-        transform: translateY(-10px) scale(1.05);
+    100% {
+        transform: rotate(360deg) translateX(60px) rotate(-360deg);
     }
 }
 
-/* Responsive Styles */
+@keyframes pendulum-swing {
+    0% {
+        transform: rotate(-30deg);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(-30deg);
+    }
+}
+
+/* Skip to main content for accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--physics-primary);
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    z-index: 10000;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Responsive Styles - IMPROVED */
 @media (max-width: 1200px) {
-    .periodic-table {
-        width: 300px;
-        height: 200px;
+    .container {
+        width: 95%;
     }
     
-    .element {
-        width: 30px;
-        height: 30px;
-        font-size: 0.6rem;
+    .features-grid,
+    .topics-grid,
+    .animations-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
     }
 }
 
@@ -808,20 +822,23 @@ footer {
         gap: 1.5rem;
     }
     
-    .flask {
-        width: 80px;
-        height: 120px;
+    .hero {
+        min-height: 80vh;
+        padding: 120px 0 3rem;
     }
     
-    .periodic-table {
-        width: 250px;
-        height: 150px;
+    .hero-content {
+        text-align: center;
+        margin: 0 auto;
     }
     
-    .element {
-        width: 25px;
-        height: 25px;
-        font-size: 0.5rem;
+    .cta-buttons {
+        justify-content: center;
+    }
+    
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
     }
 }
 
@@ -848,42 +865,34 @@ footer {
 
     .nav-links.active {
         transform: translateY(0);
-        z-index: 1000;
     }
 
     .hero {
         min-height: 70vh;
-        text-align: center;
-        height: auto;
-        padding: 120px 0 60px;
-        display: flex;
-        align-items: center;
+        padding: 100px 0 2rem;
+    }
+    
+    .hero-content {
+        padding: 0 1rem;
     }
 
     .cta-buttons {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-        position: relative;
-        z-index: 100;
-        display: flex;
-        margin-top: 2rem;
-    }
-    
-    .cta-buttons .btn {
-        width: 100%;
-        max-width: 280px;
-        margin: 0 auto;
-        position: relative;
-        z-index: 110;
-    }
-    
-    .hero-content {
-        padding: 2rem 0;
     }
 
-    .chemistry-element {
+    .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .physics-element {
         display: none;
+    }
+    
+    section {
+        padding: 3rem 0;
     }
     
     .features-grid,
@@ -891,6 +900,7 @@ footer {
     .animations-grid,
     .resources-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .footer-container {
@@ -898,29 +908,40 @@ footer {
         text-align: center;
     }
     
-    section {
-        padding: 3rem 0;
+    .footer-links a:hover {
+        transform: none;
     }
 }
 
 @media (max-width: 576px) {
-    .cta-buttons {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .cta-buttons .btn {
-        padding: 0.875rem 1.5rem;
-        font-size: 0.85rem;
-    }
-
-    .btn {
+    .container {
         width: 100%;
-        text-align: center;
+        padding: 0 1.5rem;
     }
-
+    
     .hero {
-        padding: 100px 0 40px;
+        min-height: 80vh;
+        padding: 90px 0 2rem;
+    }
+    
+    h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+        margin-bottom: 1rem;
+    }
+    
+    h2 {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        margin: 1.5rem 0 1rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        margin-bottom: 2rem;
     }
     
     .feature-card,
@@ -930,15 +951,46 @@ footer {
         padding: 1.5rem;
     }
     
-    h1 {
-        font-size: 2.2rem;
+    .feature-icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
     }
     
-    h2 {
-        font-size: 1.6rem;
+    .cta {
+        padding: 4rem 0;
+    }
+    
+    footer {
+        padding: 3rem 0 1.5rem;
+    }
+    
+    .back-to-top {
+        bottom: 1rem;
+        right: 1rem;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 0 1rem;
     }
     
     .logo-text {
         font-size: 1.5rem;
+    }
+    
+    .btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.85rem;
+        min-width: 160px;
+    }
+    
+    .feature-card,
+    .topic-card,
+    .animation-card,
+    .resource-card {
+        padding: 1.25rem;
     }
 }
