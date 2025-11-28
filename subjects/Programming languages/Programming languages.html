@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nerds Assemble - Master programming languages with interactive courses, projects, and coding demos. Learn Python, JavaScript, Java, C++, Swift and more.">
+    <meta name="keywords" content="programming, coding, learn to code, python, javascript, java, c++, swift, go">
+    <title>Nerds Assemble | Master Programming Languages with Interactive Courses</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/styles.css">
+
+  <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/planet-universe-svgrepo-com.svg">
+    
+</head>
+<body>
+    <!-- Programming Background Elements -->
+    <div class="code-element floating-code" style="top: 15%; right: 15%;">
+        <div class="code-line"><span class="code-tag">function</span> <span style="color: #ffcc00">helloWorld</span>() {</div>
+        <div class="code-line">&nbsp;&nbsp;console.<span style="color: #00ddff">log</span>(<span class="code-value">"Hello, Developer!"</span>);</div>
+        <div class="code-line">}</div>
+    </div>
+
+    <div class="binary-stream" style="top: 0; left: 5%;">
+        10101010 01010101 11110000 00001111 10101010 01010101 11110000 00001111
+    </div>
+    
+    <div class="binary-stream" style="top: 0; left: 15%;">
+        11001100 00110011 11100100 01001001 11001100 00110011 11100100 01001001
+    </div>
+    
+    <div class="binary-stream" style="top: 0; left: 25%;">
+        10011001 01100110 10110100 01001011 10011001 01100110 10110100 01001011
+    </div>
+
+    <!-- Header -->
+    <header id="mainHeader">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-code"></i></span>
+                <span class="logo-text">Nerds Assemble</span>
+            </a>
+           
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+           
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#topics">Languages</a></li>
+                    <li><a href="#animations">Demos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Master Programming Languages</h1>
+                <p class="hero-subtitle">Where Code Creates the Future</p>
+                <p class="hero-description">Dive into the world of programming with our comprehensive courses. From web development to data science, our interactive platform helps you learn coding concepts through hands-on experiences and real-world projects.</p>
+                <div class="cta-buttons">
+                    <a href="#topics" class="btn btn-primary">Explore Languages</a>
+                    <a href="#animations" class="btn btn-secondary">View Demos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Why Learn Programming at Nerds Assemble?</h2>
+            <p>We provide cutting-edge educational resources tailored for developers at all levels.</p>
+           
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="feature-title">Interactive Coding Environment</h3>
+                    <p>Write, run, and debug code directly in your browser with our built-in IDE. No setup required.</p>
+                </div>
+               
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 class="feature-title">Real-World Projects</h3>
+                    <p>Build portfolio-worthy projects with step-by-step guidance and code reviews from experts.</p>
+                </div>
+               
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="feature-title">Algorithm Visualizer</h3>
+                    <p>Understand complex algorithms and data structures through interactive visualizations.</p>
+                </div>
+               
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="feature-title">Career Paths</h3>
+                    <p>Follow structured learning paths tailored for specific developer roles and career goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics Section -->
+    <section class="topics" id="topics">
+        <div class="container">
+            <h2>Programming Languages</h2>
+            <p>Explore popular programming languages through our structured courses and projects.</p>
+           
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-image" style="background-image: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');" aria-label="Python code on a screen"></div>
+                    <div class="topic-content">
+                        <h3 class="topic-title">Python</h3>
+                        <p class="topic-description">Learn the versatile language popular in data science, AI, web development, and automation.</p>
+                        <a href="Python fundamentals.html" class="topic-link">Start Learning <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+               
+                <div class="topic-card">
+                    <div class="topic-image" style="background-image: url('https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');" aria-label="JavaScript code on a screen"></div>
+                    <div class="topic-content">
+                        <h3 class="topic-title">JavaScript</h3>
+                        <p class="topic-description">Master the language of the web for frontend, backend, and mobile development.</p>
+                        <a href="#" class="topic-link">Start Learning <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+               
+                <div class="topic-card">
+                    <div class="topic-image" style="background-image: url('https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');" aria-label="Java code on a screen"></div>
+                    <div class="topic-content">
+                        <h3 class="topic-title">Java</h3>
+                        <p class="topic-description">Build robust enterprise applications with one of the most widely-used languages.</p>
+                        <a href="#" class="topic-link">Start Learning <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+               
+                <div class="topic-card">
+                    <div class="topic-image" style="background-image: url('https://images.unsplash.com/photo-1607799279861-4dd421887fb3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');" aria-label="C++ code on a screen"></div>
+                    <div class="topic-content">
+                        <h3 class="topic-title">C++</h3>
+                        <p class="topic-description">Dive into high-performance programming for games, systems, and applications.</p>
+                        <a href="#" class="topic-link">Start Learning <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+               
+                <div class="topic-card">
+                    <div class="topic-image" style="background-image: url('https://images.unsplash.com/photo-1611224885990-ab7363d35f2f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');" aria-label="Swift code on a screen"></div>
+                    <div class="topic-content">
+                        <h3 class="topic-title">Swift</h3>
+                        <p class="topic-description">Create powerful iOS and macOS applications with Apple's modern programming language.</p>
+                        <a href="#" class="topic-link">Start Learning <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+               
+                <div class="topic-card">
+                    <div class="topic-image" style="background-image: url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');" aria-label="Go code on a screen"></div>
+                    <div class="topic-content">
+                        <h3 class="topic-title">Go</h3>
+                        <p class="topic-description">Learn Google's efficient language for concurrent programming and cloud services.</p>
+                        <a href="#" class="topic-link">Start Learning <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animations Section -->
+    <section class="animations" id="animations">
+        <div class="container">
+            <h2>Interactive Coding Demos</h2>
+            <p>Experience programming concepts through our interactive demonstrations and visualizations.</p>
+           
+            <div class="animations-grid">
+                <div class="animation-card">
+                    <div class="animation-preview">
+                        <i class="fas fa-code" style="font-size: 4rem; color: var(--code-secondary);"></i>
+                    </div>
+                    <div class="animation-content">
+                        <h3 class="animation-title">Code Execution Visualizer</h3>
+                        <p class="animation-description">Watch your code execute line by line with visual representations of variables and memory.</p>
+                        <a href="#" class="topic-link">Try Demo <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+               
+                <div class="animation-card">
+                    <div class="animation-preview">
+                        <i class="fas fa-sitemap" style="font-size: 4rem; color: var(--code-primary);"></i>
+                    </div>
+                    <div class="animation-content">
+                        <h3 class="animation-title">Data Structure Explorer</h3>
+                        <p class="animation-description">Visualize how data structures work with interactive insertion, deletion, and traversal.</p>
+                        <a href="#" class="topic-link">Try Demo <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+               
+                <div class="animation-card">
+                    <div class="animation-preview">
+                        <i class="fas fa-sort-amount-down" style="font-size: 4rem; color: var(--highlight);"></i>
+                    </div>
+                    <div class="animation-content">
+                        <h3 class="animation-title">Algorithm Animator</h3>
+                        <p class="animation-description">See sorting, searching, and graph algorithms in action with step-by-step visualizations.</p>
+                        <a href="#" class="topic-link">Try Demo <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+               
+                <div class="animation-card">
+                    <div class="animation-preview">
+                        <i class="fas fa-globe" style="font-size: 4rem; color: var(--code-secondary);"></i>
+                    </div>
+                    <div class="animation-content">
+                        <h3 class="animation-title">Web Development Simulator</h3>
+                        <p class="animation-description">Build and preview web pages in real-time with our HTML, CSS, and JavaScript playground.</p>
+                        <a href="#" class="topic-link">Try Demo <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources">
+        <div class="container">
+            <h2>Learning Resources</h2>
+            <p>Access a wealth of materials to support your programming journey.</p>
+           
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="resource-title">Documentation</h3>
+                    <p>Comprehensive guides and references for all programming languages.</p>
+                    <a href="#" class="resource-link">Explore Docs</a>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 class="resource-title">Exercises</h3>
+                    <p>Practice coding challenges to sharpen your skills.</p>
+                    <a href="#" class="resource-link">Start Practicing</a>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 class="resource-title">Projects</h3>
+                    <p>Real-world projects to build your portfolio.</p>
+                    <a href="#" class="resource-link">Browse Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Start Your Coding Journey Today</h2>
+                <p>Join thousands of developers who have transformed their careers with Nerds Assemble.</p>
+                <a href="#" class="btn btn-primary">Get Started for Free</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Nerds Assemble</h3>
+                    <p>Master programming languages and advance your career with our interactive learning platform.</p>
+                </div>
+               
+                <div class="footer-column">
+                    <h3>Learn</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Python</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">Java</a></li>
+                        <li><a href="#">C++</a></li>
+                        <li><a href="#">Web Development</a></li>
+                    </ul>
+                </div>
+               
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+           
+            <div class="footer-bottom">
+                <p>&copy; 2023 Nerds Assemble. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
