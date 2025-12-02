@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKVRN3GREN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKVRN3GREN');
+</script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Projectile Motion Simulator | Interactive Physics Visualization</title>
+    <meta name="description" content="Free interactive 3D vertical projectile motion simulator. Visualize physics concepts in real-time with adjustable parameters. Perfect for students, teachers, and physics enthusiasts.">
+    <meta name="keywords" content="vertical projectile motion, physics simulator, 3D physics visualization, educational tool, free physics simulation, gravity simulation, trajectory calculator">
+    <meta name="author" content="Physics Visualizer">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0a20">
+    <meta property="og:title" content="Vertical Projectile Motion Simulator | Interactive 3D Physics">
+    <meta property="og:description" content="Free interactive 3D vertical projectile motion simulator. Perfect for learning physics concepts visually.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta property="og:image" content="https://yourdomain.com/preview-image.png">
+    
+   
+     <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/planet-universe-svgrepo-com.svg">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="assets/styles.css">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Vertical Projectile Motion Simulator",
+        "description": "Interactive 3D vertical projectile motion visualization tool for physics education",
+        "url": "https://yourdomain.com",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "Physics Visualizer",
+            "url": "https://yourdomain.com"
+        },
+        "educationalUse": ["interactive simulation", "visual learning"],
+        "learningResourceType": "simulation",
+        "timeRequired": "PT5M",
+        "typicalAgeRange": "12-",
+        "interactivityType": "active",
+        "accessibilityFeature": ["fullKeyboardControl", "largePrint", "highContrastDisplay"]
+    }
+    </script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" role="status" aria-live="polite">
+        <div class="loading-content">
+            <div class="spinner" aria-hidden="true"></div>
+            <h1 class="loading-title">Loading Physics Simulator</h1>
+            <p class="loading-text">Initializing 3D visualization engine...</p>
+            <progress class="loading-progress" value="0" max="100" aria-label="Loading progress"></progress>
+        </div>
+    </div>
+
+    <!-- Skip to Main Content (Accessibility) -->
+    <a href="#main-content" class="skip-link">Skip to simulation</a>
+
+    <!-- Header -->
+    <header class="site-header" role="banner">
+        <div class="header-content">
+            <h1 class="site-title">Vertical Projectile Motion Simulator</h1>
+            <p class="site-tagline">Interactive 3D Physics Visualization</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content">
+        <!-- 3D Visualization Container -->
+        <div class="visualization-section">
+            <div id="container" role="region" aria-label="3D visualization of projectile motion">
+                <div class="visualization-info">
+                    <p class="info-text">3D Visualization Active</p>
+                    <p class="hint-text">Drag to rotate view • Scroll to zoom</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Control Panel -->
+        <aside id="info-panel" class="control-panel" role="complementary" aria-label="Simulation controls and information">
+            <div class="panel-header">
+                <h2 class="panel-title">Simulation Controls</h2>
+                <button class="panel-toggle" aria-label="Toggle control panel visibility" aria-expanded="true">
+                    <span class="toggle-icon" aria-hidden="true">▼</span>
+                </button>
+            </div>
+
+            <div class="panel-content">
+                <section class="introduction-section" aria-labelledby="simulation-intro">
+                    <h3 id="simulation-intro" class="section-title">About Vertical Projectile Motion</h3>
+                    <p class="section-description">Adjust the parameters below to visualize vertical projectile motion (90° launch angle). The trajectory updates in real-time. Perfect for understanding free fall and upward/downward motion.</p>
+                </section>
+
+                <section class="parameters-section" aria-labelledby="launch-parameters">
+                    <h3 id="launch-parameters" class="section-title">Launch Parameters</h3>
+                    
+                    <div class="slider-group">
+                        <div class="slider-container">
+                            <label for="velocitySlider" class="slider-label">
+                                <span class="label-text">Initial Velocity</span>
+                                <span class="label-value" id="velocityValue">20 m/s</span>
+                            </label>
+                            <input type="range" id="velocitySlider" min="1" max="50" step="1" value="20" 
+                                   aria-label="Adjust initial velocity from 1 to 50 meters per second"
+                                   aria-valuetext="20 meters per second">
+                            <div class="slider-ticks">
+                                <span>1</span>
+                                <span>25</span>
+                                <span>50</span>
+                            </div>
+                        </div>
+                        
+                        <div class="slider-container">
+                            <label for="heightSlider" class="slider-label">
+                                <span class="label-text">Initial Height</span>
+                                <span class="label-value" id="heightValue">0 m</span>
+                            </label>
+                            <input type="range" id="heightSlider" min="0" max="50" step="1" value="0"
+                                   aria-label="Adjust initial height from 0 to 50 meters"
+                                   aria-valuetext="0 meters">
+                            <div class="slider-ticks">
+                                <span>0</span>
+                                <span>25</span>
+                                <span>50</span>
+                            </div>
+                        </div>
+                        
+                        <div class="slider-container">
+                            <label for="gravitySlider" class="slider-label">
+                                <span class="label-text">Gravity</span>
+                                <span class="label-value" id="gravityValue">9.8 m/s²</span>
+                            </label>
+                            <input type="range" id="gravitySlider" min="1" max="20" step="0.1" value="9.8"
+                                   aria-label="Adjust gravity from 1 to 20 meters per second squared"
+                                   aria-valuetext="9.8 meters per second squared">
+                            <div class="slider-ticks">
+                                <span>1</span>
+                                <span>9.8</span>
+                                <span>20</span>
+                            </div>
+                            <p class="slider-note">Earth gravity is 9.8 m/s²</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="controls-section" aria-labelledby="simulation-controls">
+                    <h3 id="simulation-controls" class="section-title">Simulation Controls</h3>
+                    <div class="button-group" role="group" aria-label="Simulation actions">
+                        <button class="control-btn primary-btn" id="launchBtn" aria-label="Launch projectile">
+                            <span class="btn-icon" aria-hidden="true">🚀</span>
+                            <span class="btn-text">Launch Projectile</span>
+                        </button>
+                        <button class="control-btn secondary-btn" id="resetBtn" aria-label="Reset simulation">
+                            <span class="btn-icon" aria-hidden="true">🔄</span>
+                            <span class="btn-text">Reset</span>
+                        </button>
+                        <button class="control-btn tertiary-btn" id="toggleGridBtn" aria-label="Toggle grid visibility">
+                            <span class="btn-icon" aria-hidden="true">⬜</span>
+                            <span class="btn-text">Grid</span>
+                        </button>
+                        <button class="control-btn tertiary-btn" id="toggleTrajectoryBtn" aria-label="Toggle trajectory line">
+                            <span class="btn-icon" aria-hidden="true">📈</span>
+                            <span class="btn-text">Trajectory</span>
+                        </button>
+                    </div>
+                    
+                    <div class="keyboard-hints">
+                        <p class="hint-title">Keyboard Shortcuts:</p>
+                        <div class="shortcuts">
+                            <kbd>Space</kbd> <span>Launch</span>
+                            <kbd>R</kbd> <span>Reset</span>
+                            <kbd>G</kbd> <span>Toggle Grid</span>
+                            <kbd>T</kbd> <span>Toggle Trajectory</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="stats-section" aria-labelledby="projectile-stats">
+                    <h3 id="projectile-stats" class="section-title">Projectile Statistics</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-icon" aria-hidden="true">📏</span>
+                                <span class="stat-name">Max Height</span>
+                            </div>
+                            <div class="stat-value" id="maxHeight">-</div>
+                            <div class="stat-unit">meters</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-icon" aria-hidden="true">⏱️</span>
+                                <span class="stat-name">Flight Time</span>
+                            </div>
+                            <div class="stat-value" id="flightTime">-</div>
+                            <div class="stat-unit">seconds</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-icon" aria-hidden="true">⚡</span>
+                                <span class="stat-name">Impact Velocity</span>
+                            </div>
+                            <div class="stat-value" id="impactVelocity">-</div>
+                            <div class="stat-unit">m/s</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="physics-section" aria-labelledby="physics-formulas">
+                    <h3 id="physics-formulas" class="section-title">Physics Formulas</h3>
+                    <div class="formulas">
+                        <div class="formula">
+                            <code class="formula-text">h = h₀ + vt - ½gt²</code>
+                            <p class="formula-desc">Height at time t</p>
+                        </div>
+                        <div class="formula">
+                            <code class="formula-text">t_max = v/g</code>
+                            <p class="formula-desc">Time to max height</p>
+                        </div>
+                        <div class="formula">
+                            <code class="formula-text">h_max = h₀ + v²/(2g)</code>
+                            <p class="formula-desc">Maximum height</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4 class="footer-title">About This Simulator</h4>
+                <p class="footer-text">This interactive vertical projectile motion simulator helps visualize physics concepts in 3D. Perfect for students, teachers, and physics enthusiasts.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-title">Educational Use</h4>
+                <ul class="footer-list">
+                    <li>Classroom demonstrations</li>
+                    <li>Homework visualization</li>
+                    <li>Physics concept exploration</li>
+                    <li>Interactive learning</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-title">Features</h4>
+                <ul class="footer-list">
+                    <li>Real-time 3D visualization</li>
+                    <li>Adjustable parameters</li>
+                    <li>Instant calculations</li>
+                    <li>Accessible design</li>
+                    <li>Mobile friendly</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-title">Technical Info</h4>
+                <p class="footer-text">Built with Three.js • No data collection • Free to use</p>
+                <div class="version-info">Version 1.0.0</div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="copyright">&copy; <span id="current-year"></span> Physics Visualizer. All rights reserved.</p>
+            <p class="disclaimer">This tool is for educational purposes. Results are approximate simulations.</p>
+        </div>
+    </footer>
+
+    <!-- Error Display -->
+    <div id="error-display" class="error-alert" role="alert" aria-live="assertive"></div>
+
+    <!-- Performance Warning -->
+    <div id="performance-warning" class="performance-warning" role="alert" aria-live="polite">
+        <p>For best performance, ensure your browser supports WebGL. The simulation may be limited on low-power devices.</p>
+        <button id="dismiss-warning" class="dismiss-btn" aria-label="Dismiss warning">×</button>
+    </div>
+
+    <!-- Local JavaScript -->
+    <script src="assets/script.js" defer></script>
+    <script src="app.js" defer></script>
+</body>
+</html>
