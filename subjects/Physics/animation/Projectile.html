@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKVRN3GREN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKVRN3GREN');
+</script>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projectile Motion Visualizer | Interactive Physics Simulation</title>
+    <meta name="description" content="Interactive 3D projectile motion simulator. Visualize physics in real-time with adjustable parameters. Educational tool for students and teachers.">
+    <meta name="keywords" content="projectile motion, physics simulator, 3D visualization, educational tool, physics simulation, 3d projectile motion animation">
+    <meta name="author" content="Physics Visualizer">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Three.js & Dat.GUI -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dat.gui@0.7.7/build/dat.gui.min.js"></script>
+    
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="assets/styles.css">
+    
+    <!-- Preconnect to improve performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+     <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/planet-universe-svgrepo-com.svg">
+    
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p class="loading-text">Loading 3D Visualizer...</p>
+            <p class="loading-subtext">Initializing physics engine</p>
+        </div>
+    </div>
+
+    <!-- Skip to Content Link (Accessibility) -->
+    <a href="#info-panel" class="skip-link">Skip to controls</a>
+
+    <!-- Main Container -->
+    <div id="container" aria-label="3D visualization area for projectile motion"></div>
+    
+    <!-- Info Panel -->
+    <div id="info-panel" role="complementary" aria-label="Projectile controls and information">
+        <h1>Projectile Motion Visualizer</h1>
+        
+        <p class="description">Adjust the parameters below to visualize projectile motion. The trajectory updates in real-time. Perfect for physics education and experimentation.</p>
+        
+        <div class="control-group" role="group" aria-label="Launch parameters">
+            <h2>Launch Parameters</h2>
+            
+            <div class="slider-container">
+                <label for="velocitySlider">Initial Velocity: <span id="velocityValue">20 m/s</span></label>
+                <input type="range" id="velocitySlider" min="1" max="50" step="1" value="20" 
+                       aria-label="Adjust initial velocity from 1 to 50 meters per second">
+                <div class="value-display">Drag to adjust</div>
+            </div>
+            
+            <div class="slider-container">
+                <label for="angleSlider">Launch Angle: <span id="angleValue">45°</span></label>
+                <input type="range" id="angleSlider" min="0" max="90" step="1" value="45"
+                       aria-label="Adjust launch angle from 0 to 90 degrees">
+                <div class="value-display">Drag to adjust</div>
+            </div>
+            
+            <div class="slider-container">
+                <label for="gravitySlider">Gravity: <span id="gravityValue">9.8 m/s²</span></label>
+                <input type="range" id="gravitySlider" min="1" max="20" step="0.1" value="9.8"
+                       aria-label="Adjust gravity from 1 to 20 meters per second squared">
+                <div class="value-display">Earth gravity is 9.8 m/s²</div>
+            </div>
+            
+            <div class="slider-container">
+                <label for="heightSlider">Initial Height: <span id="heightValue">0 m</span></label>
+                <input type="range" id="heightSlider" min="0" max="50" step="1" value="0"
+                       aria-label="Adjust initial height from 0 to 50 meters">
+                <div class="value-display">Drag to adjust</div>
+            </div>
+        </div>
+        
+        <div class="controls" role="group" aria-label="Simulation controls">
+            <button class="control-btn" id="launchBtn" aria-label="Launch projectile">
+                <span class="btn-icon">🚀</span> Launch Projectile
+            </button>
+            <button class="control-btn" id="resetBtn" aria-label="Reset simulation">
+                <span class="btn-icon">🔄</span> Reset
+            </button>
+            <button class="control-btn" id="toggleGridBtn" aria-label="Toggle grid visibility">
+                <span class="btn-icon">⬜</span> Toggle Grid
+            </button>
+            <button class="control-btn" id="toggleTrajectoryBtn" aria-label="Toggle trajectory line">
+                <span class="btn-icon">📈</span> Toggle Trajectory
+            </button>
+        </div>
+        
+        <div class="stats-display" role="status" aria-label="Projectile statistics">
+            <h2>Projectile Statistics</h2>
+            <div class="stat-item">
+                <span>Max Height:</span>
+                <span class="stat-value" id="maxHeight">-</span>
+            </div>
+            <div class="stat-item">
+                <span>Range:</span>
+                <span class="stat-value" id="range">-</span>
+            </div>
+            <div class="stat-item">
+                <span>Flight Time:</span>
+                <span class="stat-value" id="flightTime">-</span>
+            </div>
+            <div class="stat-item">
+                <span>Impact Velocity:</span>
+                <span class="stat-value" id="impactVelocity">-</span>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>Instructions</h3>
+            <ul>
+                <li>Adjust sliders to change physics parameters</li>
+                <li>Click Launch to start simulation</li>
+                <li>Toggle grid and trajectory for better visualization</li>
+                <li>Values update in real-time</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p>Physics Educational Tool • 3D Visualization</p>
+            <p class="credits">Built with Three.js • For educational purposes</p>
+        </div>
+    </div>
+
+    <!-- Error Display -->
+    <div id="error-display" class="error-hidden" role="alert"></div>
+    
+    <!-- Local JavaScript -->
+    <script src="assets/script.js" defer></script>
+</body>
+</html>
