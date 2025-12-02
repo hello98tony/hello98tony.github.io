@@ -329,7 +329,7 @@ class ProjectileSimulation {
         if (this.trajectoryLine) this.trajectoryLine.visible = !this.trajectoryLine.visible;
     }
     
-    // Animate projectile
+    // Animate projectile - FIXED VERSION (NO DISTRACTING ROTATION)
     animateProjectile() {
         if (!this.isSimulating) return;
         
@@ -341,12 +341,8 @@ class ProjectileSimulation {
         const y = this.initialHeight + this.vy * this.simulationTime - 
                   0.5 * this.gravity * this.simulationTime * this.simulationTime;
         
-        // Update projectile position
+        // Update projectile position - NO ROTATION ADDED
         this.projectile.position.set(x, Math.max(y, 0), 0);
-        
-        // Add subtle rotation
-        this.projectile.rotation.x += 0.1;
-        this.projectile.rotation.y += 0.05;
         
         // Check if projectile hit the ground
         if (y <= 0) {
@@ -357,6 +353,16 @@ class ProjectileSimulation {
         
         // Continue animation
         requestAnimationFrame(() => this.animateProjectile());
+    }
+    
+    // Handle window resize
+    onWindowResize() {
+        const width = this.container.clientWidth;
+        const height = this.container.clientHeight;
+        
+        this.camera.aspect = width / height;
+        this.camera.updateProjectionMatrix();
+        this.renderer.setSize(width, height);
     }
     
     // Setup event listeners
@@ -430,16 +436,6 @@ class ProjectileSimulation {
         document.getElementById('angleValue').textContent = this.angle + '°';
         document.getElementById('gravityValue').textContent = this.gravity + ' m/s²';
         document.getElementById('heightValue').textContent = this.initialHeight + ' m';
-    }
-    
-    // Handle window resize
-    onWindowResize() {
-        const width = this.container.clientWidth;
-        const height = this.container.clientHeight;
-        
-        this.camera.aspect = width / height;
-        this.camera.updateProjectionMatrix();
-        this.renderer.setSize(width, height);
     }
     
     // Main animation loop
