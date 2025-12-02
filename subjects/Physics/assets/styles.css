@@ -159,14 +159,14 @@ p {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .nav-link {
     color: var(--text-secondary);
     text-decoration: none;
     font-weight: 500;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem;
     border-radius: var(--border-radius);
     transition: var(--transition);
     position: relative;
