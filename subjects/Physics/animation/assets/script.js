@@ -39,6 +39,11 @@ class ProjectileSimulation {
         // Animation
         this.animationId = null;
         
+        // Camera control variables
+        this.cameraDistance = 40;
+        this.cameraHeight = 15;
+        this.cameraTarget = new THREE.Vector3(0, 5, 0);
+        
         // Initialize
         this.init();
     }
@@ -87,14 +92,14 @@ class ProjectileSimulation {
         // Scene
         this.scene = new THREE.Scene();
         this.scene.background = new THREE.Color(0x0a0a20);
-        this.scene.fog = new THREE.Fog(0x0a0a20, 10, 100);
+        this.scene.fog = new THREE.Fog(0x0a0a20, 50, 200);
         
-        // Camera
+        // Camera - FIXED POSITION (no rotation)
         const width = this.container.clientWidth;
         const height = this.container.clientHeight;
         this.camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 1000);
-        this.camera.position.set(0, 15, 40);
-        this.camera.lookAt(0, 5, 0);
+        this.camera.position.set(0, this.cameraHeight, this.cameraDistance);
+        this.camera.lookAt(this.cameraTarget);
         
         // Renderer
         this.renderer = new THREE.WebGLRenderer({ 
@@ -320,7 +325,7 @@ class ProjectileSimulation {
     
     // Toggle grid visibility
     toggleGrid() {
-        if (this.grid) this.grid.visible = !this.grid.visible;
+        if (this.grid) this.grid.visible = !grid.visible;
         if (this.axesHelper) this.axesHelper.visible = !this.axesHelper.visible;
     }
     
@@ -329,7 +334,7 @@ class ProjectileSimulation {
         if (this.trajectoryLine) this.trajectoryLine.visible = !this.trajectoryLine.visible;
     }
     
-    // Animate projectile - FIXED VERSION (NO DISTRACTING ROTATION)
+    // Animate projectile - Clean motion without rotation
     animateProjectile() {
         if (!this.isSimulating) return;
         
@@ -341,7 +346,7 @@ class ProjectileSimulation {
         const y = this.initialHeight + this.vy * this.simulationTime - 
                   0.5 * this.gravity * this.simulationTime * this.simulationTime;
         
-        // Update projectile position - NO ROTATION ADDED
+        // Update projectile position
         this.projectile.position.set(x, Math.max(y, 0), 0);
         
         // Check if projectile hit the ground
@@ -438,15 +443,13 @@ class ProjectileSimulation {
         document.getElementById('heightValue').textContent = this.initialHeight + ' m';
     }
     
-    // Main animation loop
+    // Main animation loop - FIXED (NO CAMERA ROTATION)
     animate() {
         this.animationId = requestAnimationFrame(() => this.animate());
         
-        // Smooth camera movement
-        const time = Date.now() * 0.0005;
-        this.camera.position.x = Math.sin(time * 0.3) * 20;
-        this.camera.position.z = 30 + Math.cos(time * 0.2) * 10;
-        this.camera.lookAt(0, 5, 0);
+        // FIXED CAMERA - No movement, stays in one position
+        // The camera is already positioned correctly in setupThreeJS()
+        // and will not move from that position
         
         this.renderer.render(this.scene, this.camera);
     }
