@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKVRN3GREN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKVRN3GREN');
+</script>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relations & Functions | Class 11 Maths | JEE Preparation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Pacifico&family=Dancing+Script:wght@700&family=Abril+Fatface&family=Playfair+Display:wght@700&family=Raleway:wght@300;800&family=Quicksand:wght@500&family=Poiret+One&family=Amatic+SC:wght@700&family=Caveat:wght@700&family=Kaushan+Script&family=Libre+Baskerville&family=Merriweather&family=Nunito:wght@800&family=Oswald:wght@500&family=Roboto+Slab:wght@700&family=Sacramento&family=Tangerine:wght@700&family=Yeseva+One&family=Electrolize&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="relations-functions.css">
+
+    <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/planet-universe-svgrepo-com.svg">
+    
+<style>
+    /* MathMaster - Relations & Functions CSS */
+:root {
+    --primary: #3f51b5;
+    --secondary: #ff5722;
+    --tertiary: #4caf50;
+    --bg: #0a0a20;
+    --text: #ffffff;
+    --highlight: #ffeb3b;
+    --nav-bg: rgba(10, 5, 30, 0.95);
+    --ad-bg: rgba(255, 215, 0, 0.15);
+    --ad-border: rgba(255, 215, 0, 0.5);
+}
+
+/* Base Styles & Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(63, 81, 181, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(255, 87, 34, 0.1) 0%, transparent 20%),
+        linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+}
+
+/* Typography */
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    background: linear-gradient(45deg, var(--primary), var(--secondary), var(--tertiary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px rgba(63, 81, 181, 0.5);
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--highlight);
+    margin: 2rem 0 1.5rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), transparent);
+    border-radius: 3px;
+}
+
+h3 {
+    font-family: 'Roboto Slab', serif;
+    color: var(--secondary);
+    margin: 1.5rem 0 1rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: clamp(1rem, 1.2vw, 1.1rem);
+}
+
+/* Layout Components */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 1rem;
+}
+
+.subtitle {
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+/* Header & Navigation */
+header {
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 0;
+    transform: translateZ(0);
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.logo-icon {
+    color: var(--highlight);
+    font-size: 1.8rem;
+}
+
+.logo-text {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 1.5rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-family: 'Electrolize', sans-serif;
+    font-size: 1rem;
+    transition: color 0.2s ease-out;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-links a:hover {
+    color: var(--highlight);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--highlight);
+    transition: width 0.2s ease-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Content Panels */
+.info-panel {
+    background: rgba(0,0,0,0.5);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: translateZ(0);
+    will-change: transform, opacity;
+}
+
+.info-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%);
+    background-size: 20px 20px;
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+/* Special Content Blocks */
+.important {
+    background: rgba(255, 87, 34, 0.1);
+    border-left: 4px solid var(--secondary);
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+    box-shadow: inset 0 0 10px rgba(255, 87, 34, 0.1);
+}
+
+.definition {
+    background: rgba(76, 175, 80, 0.1);
+    border-left: 4px solid var(--tertiary);
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+    box-shadow: inset 0 0 10px rgba(76, 175, 80, 0.1);
+}
+
+.formula {
+    font-family: 'Audiowide', cursive;
+    color: var(--highlight);
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 235, 59, 0.1);
+    border-radius: 8px;
+    border: 1px dashed var(--highlight);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.formula::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(45deg, transparent 45%, rgba(255, 235, 59, 0.1) 50%, transparent 55%);
+    background-size: 10px 10px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.example {
+    background: rgba(63, 81, 181, 0.1);
+    border-left: 4px solid var(--primary);
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.example-title {
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+/* Lists & Tables */
+ul, ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+th {
+    background-color: rgba(63, 81, 181, 0.2);
+    font-family: 'Electrolize', sans-serif;
+    color: var(--highlight);
+}
+
+tr:hover {
+    background-color: rgba(255,255,255,0.05);
+}
+
+/* Swiper Carousel */
+.swiper-container {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    margin: 3rem 0;
+    will-change: transform;
+}
+
+.swiper-slide {
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.2);
+    font-family: 'Electrolize', sans-serif;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    text-align: center;
+    min-height: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-out;
+    transform: translateZ(0);
+}
+
+.swiper-slide:hover {
+    transform: translateY(-5px);
+}
+
+.swiper-slide div {
+    width: 100%;
+}
+
+.swiper-title {
+    font-family: 'Audiowide', cursive;
+    color: var(--highlight);
+    margin-bottom: 0.5rem;
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+}
+
+.swiper-text {
+    font-family: 'Quicksand', sans-serif;
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+}
+
+/* Particles Background */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    pointer-events: none;
+    will-change: transform;
+    opacity: 0.3;
+}
+
+/* Floating Advertisement */
+.floating-ad {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background: var(--ad-bg);
+    border: 1px solid var(--ad-border);
+    border-radius: 10px;
+    padding: 15px;
+    backdrop-filter: blur(5px);
+    z-index: 999;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+.floating-ad.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.ad-content {
+    position: relative;
+}
+
+.close-ad {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 25px;
+    height: 25px;
+    background: var(--secondary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.ad-content h3 {
+    color: var(--highlight);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.ad-content p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.ad-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background: var(--primary);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Electrolize', sans-serif;
+    transition: all 0.2s ease;
+}
+
+.ad-btn:hover {
+    background: var(--highlight);
+    color: #000;
+}
+
+/* Footer */
+footer {
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    padding: 2rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.footer-column h3 {
+    color: var(--highlight);
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    transition: color 0.2s ease-out;
+}
+
+.footer-links a:hover {
+    color: var(--highlight);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: var(--text);
+    font-size: 1.2rem;
+    transition: color 0.2s ease-out;
+}
+
+.social-links a:hover {
+    color: var(--highlight);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.9rem;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-out;
+    z-index: 999;
+    box-shadow: 0 5px 15px rgba(63, 81, 181, 0.3);
+    transform: translateZ(0);
+}
+
+.back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: var(--highlight);
+    transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(10px, 10px);
+    }
+    50% {
+        transform: translate(-5px, 15px);
+    }
+    75% {
+        transform: translate(5px, -5px);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .floating-ad {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image: 
+            radial-gradient(circle at 10% 20%, rgba(63, 81, 181, 0.05) 0%, transparent 20%),
+            linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+    }
+    
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 1rem;
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.75rem 0;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+    
+    header, .info-panel {
+        backdrop-filter: blur(5px);
+    }
+
+    .container {
+        width: 95%;
+        padding: 0;
+    }
+    
+    .info-panel {
+        padding: 1.5rem;
+    }
+    
+    .info-panel::before {
+        background-size: 30px 30px;
+        opacity: 0.03;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    th, td {
+        padding: 0.5rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .floating-ad {
+        width: 80%;
+        right: 10%;
+        bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .info-panel {
+        padding: 1rem;
+    }
+    
+    ul, ol {
+        padding-left: 1.5rem;
+    }
+
+    .formula {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .swiper-slide {
+        padding: 1rem;
+    }
+    
+    .floating-ad {
+        width: 90%;
+        right: 5%;
+    }
+}
+</style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <!-- Floating Advertisement -->
+    <div class="floating-ad" id="floatingAd">
+        <div class="ad-content">
+            <span class="close-ad" id="closeAd">&times;</span>
+            <h3>JEE Advanced Crash Course</h3>
+            <p>Limited time offer! Get 40% off on our premium course</p>
+            <a href="#" class="ad-btn">Enroll Now</a>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-infinity"></i></span>
+                <span class="logo-text">MathMaster</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#relations">Relations</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                    <li><a href="#types">Types of Functions</a></li>
+                    <li><a href="#composition">Composition</a></li>
+                    <li><a href="#inverse">Inverse Functions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="page-header" data-aos="fade-down">
+            <h1>Relations & Functions</h1>
+            <p class="subtitle">Class 11 Mathematics | JEE Preparation</p>
+            <p>Master the fundamental concepts of Relations and Functions with JEE-focused content and problem-solving techniques</p>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="info-panel" id="introduction" data-aos="fade-up">
+            <h2>Introduction to Relations & Functions</h2>
+            <p>Relations and Functions form the foundation of higher mathematics and are crucial for JEE preparation. They describe how elements from different sets are related to each other.</p>
+            
+            <div class="definition">
+                <p><strong>Relation:</strong> A subset of the Cartesian product A × B that defines a relationship between elements of set A and set B.</p>
+                <p><strong>Function:</strong> A special type of relation where each element of set A is related to exactly one element in set B.</p>
+            </div>
+            
+            <h3>Basic Terminology</h3>
+            <ul>
+                <li><strong>Domain:</strong> Set of all first elements in the ordered pairs (input values)</li>
+                <li><strong>Range:</strong> Set of all second elements in the ordered pairs (output values)</li>
+                <li><strong>Codomain:</strong> The set to which the function maps the domain</li>
+                <li><strong>Image:</strong> The value assigned to a particular element of the domain</li>
+                <li><strong>Pre-image:</strong> The element(s) of the domain that map to a particular element in the range</li>
+            </ul>
+            
+            <div class="important">
+                <p><strong>JEE Focus:</strong> Questions often involve identifying types of relations/functions, composition of functions, inverse functions, and graphical interpretations.</p>
+            </div>
+            
+            <div class="example">
+                <div class="example-title">JEE Problem Example:</div>
+                <p>Let A = {1, 2, 3} and B = {4, 5}. Find the number of relations from A to B.</p>
+                <p><strong>Solution:</strong> 
+                Number of elements in A × B = 3 × 2 = 6 <br>
+                Number of subsets of A × B = 2⁶ = 64 <br>
+                ∴ Number of relations from A to B = 64</p>
+            </div>
+        </section>
+
+        <!-- Relations Section -->
+        <section class="info-panel" id="relations" data-aos="fade-up">
+            <h2>Relations</h2>
+            <p>A relation R from set A to set B is a subset of A × B. When (a, b) ∈ R, we say "a is related to b".</p>
+            
+            <h3>Types of Relations</h3>
+            <table>
+                <tr>
+                    <th>Relation Type</th>
+                    <th>Definition</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Empty Relation</td>
+                    <td>R = ∅ ⊂ A × A</td>
+                    <td>No elements are related</td>
+                </tr>
+                <tr>
+                    <td>Universal Relation</td>
+                    <td>R = A × A</td>
+                    <td>All elements are related</td>
+                </tr>
+                <tr>
+                    <td>Identity Relation</td>
+                    <td>Iₐ = {(a, a) | a ∈ A}</td>
+                    <td>Each element related to itself</td>
+                </tr>
+                <tr>
+                    <td>Reflexive</td>
+                    <td>(a, a) ∈ R ∀ a ∈ A</td>
+                    <td>≥ relation on ℝ</td>
+                </tr>
+                <tr>
+                    <td>Symmetric</td>
+                    <td>(a, b) ∈ R ⇒ (b, a) ∈ R</td>
+                    <td>"Is sibling of" relation</td>
+                </tr>
+                <tr>
+                    <td>Transitive</td>
+                    <td>(a, b), (b, c) ∈ R ⇒ (a, c) ∈ R</td>
+                    <td>"Is ancestor of" relation</td>
+                </tr>
+                <tr>
+                    <td>Equivalence</td>
+                    <td>Reflexive, Symmetric, and Transitive</td>
+                    <td>Congruence modulo n</td>
+                </tr>
+            </table>
+            
+            <div class="formula">
+                Number of relations from A to B = 2<sup>n(A)×n(B)</sup>
+            </div>
+            
+            <div class="example">
+                <div class="example-title">JEE Problem Example:</div>
+                <p>Check whether the relation R in ℝ defined as R = {(a, b) : a ≤ b²} is reflexive, symmetric, or transitive.</p>
+                <p><strong>Solution:</strong> <br>
+                Not reflexive: (1,1) ∉ R since 1 ≤ 1² is false when 1 = 1² <br>
+                Not symmetric: (1,4) ∈ R but (4,1) ∉ R <br>
+                Not transitive: (-2,0) ∈ R and (0,-1) ∈ R but (-2,-1) ∉ R</p>
+            </div>
+        </section>
+
+        <!-- Functions Section -->
+        <section class="info-panel" id="functions" data-aos="fade-up">
+            <h2>Functions</h2>
+            <p>A function f: A → B is a special relation where each element of A appears exactly once as the first component in the ordered pairs.</p>
+            
+            <h3>Function Characteristics</h3>
+            <ul>
+                <li><strong>Domain:</strong> Complete set of possible input values</li>
+                <li><strong>Codomain:</strong> Set of possible output values</li>
+                <li><strong>Range:</strong> Actual set of output values achieved</li>
+                <li><strong>One-to-One (Injective):</strong> f(x₁) = f(x₂) ⇒ x₁ = x₂</li>
+                <li><strong>Onto (Surjective):</strong> Range = Codomain</li>
+                <li><strong>Bijective:</strong> Both injective and surjective</li>
+            </ul>
+            
+            <div class="formula">
+                Vertical Line Test: A curve is a function if no vertical line intersects it more than once
+            </div>
+            
+            <div class="important">
+                <p><strong>JEE Focus:</strong> Function problems often involve domain/range determination, checking injectivity/surjectivity, and piecewise functions.</p>
+            </div>
+            
+            <div class="example">
+                <div class="example-title">JEE Problem Example:</div>
+                <p>Find the domain of the function f(x) = √(x - 1) + √(3 - x).</p>
+                <p><strong>Solution:</strong> <br>
+                x - 1 ≥ 0 ⇒ x ≥ 1 <br>
+                3 - x ≥ 0 ⇒ x ≤ 3 <br>
+                ∴ Domain = [1, 3]</p>
+            </div>
+        </section>
+
+        <!-- Types of Functions Section -->
+        <section class="info-panel" id="types" data-aos="fade-up">
+            <h2>Types of Functions</h2>
+            <p>Functions can be classified based on their mapping properties and algebraic forms.</p>
+            
+            <h3>Standard Function Types</h3>
+            <table>
+                <tr>
+                    <th>Function Type</th>
+                    <th>Definition</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Polynomial</td>
+                    <td>f(x) = aₙxⁿ + aₙ₋₁xⁿ⁻¹ + ... + a₀</td>
+                    <td>f(x) = x² + 3x + 2</td>
+                </tr>
+                <tr>
+                    <td>Rational</td>
+                    <td>Ratio of two polynomials P(x)/Q(x)</td>
+                    <td>f(x) = (x+1)/(x-2)</td>
+                </tr>
+                <tr>
+                    <td>Exponential</td>
+                    <td>f(x) = aˣ, a > 0</td>
+                    <td>f(x) = 2ˣ</td>
+                </tr>
+                <tr>
+                    <td>Logarithmic</td>
+                    <td>f(x) = logₐx, a > 0, a ≠ 1</td>
+                    <td>f(x) = ln x</td>
+                </tr>
+                <tr>
+                    <td>Modulus</td>
+                    <td>f(x) = |x|</td>
+                    <td>f(x) = |x - 3|</td>
+                </tr>
+                <tr>
+                    <td>Signum</td>
+                    <td>sgn(x) = -1, 0, or 1</td>
+                    <td>sgn(-5) = -1</td>
+                </tr>
+                <tr>
+                    <td>Greatest Integer</td>
+                    <td>f(x) = [x]</td>
+                    <td>[3.7] = 3</td>
+                </tr>
+            </table>
+            
+            <h3>Special Functions</h3>
+            <div class="formula">
+                <strong>Even Function:</strong> f(-x) = f(x) (symmetric about y-axis)
+            </div>
+            <div class="formula">
+                <strong>Odd Function:</strong> f(-x) = -f(x) (symmetric about origin)
+            </div>
+            <div class="formula">
+                <strong>Periodic Function:</strong> f(x + T) = f(x) for some period T
+            </div>
+            
+            <div class="example">
+                <div class="example-title">JEE Problem Example:</div>
+                <p>Check if f(x) = (aˣ + a⁻ˣ)/(aˣ - a⁻ˣ) is even, odd, or neither.</p>
+                <p><strong>Solution:</strong> <br>
+                f(-x) = (a⁻ˣ + aˣ)/(a⁻ˣ - aˣ) = (aˣ + a⁻ˣ)/-(aˣ - a⁻ˣ) = -f(x) <br>
+                ∴ f(x) is odd</p>
+            </div>
+        </section>
+
+        <!-- Composition of Functions Section -->
+        <section class="info-panel" id="composition" data-aos="fade-up">
+            <h2>Composition of Functions</h2>
+            <p>The composition of functions f and g is defined as (g ∘ f)(x) = g(f(x)).</p>
+            
+            <h3>Properties of Composition</h3>
+            <ul>
+                <li>Associative: h ∘ (g ∘ f) = (h ∘ g) ∘ f</li>
+                <li>Not commutative: f ∘ g ≠ g ∘ f in general</li>
+                <li>Identity: f ∘ I = I ∘ f = f (where I is identity function)</li>
+            </ul>
+            
+            <div class="important">
+                <p><strong>Important Note:</strong> For g ∘ f to be defined, range of f must be subset of domain of g.</p>
+            </div>
+            
+            <div class="formula">
+                If f: A → B and g: B → C are both injective, then g ∘ f is injective
+            </div>
+            <div class="formula">
+                If f: A → B and g: B → C are both surjective, then g ∘ f is surjective
+            </div>
+            
+            <div class="example">
+                <div class="example-title">JEE Problem Example:</div>
+                <p>If f(x) = x² and g(x) = 2x + 1, find (f ∘ g)(x) and (g ∘ f)(x).</p>
+                <p><strong>Solution:</strong> <br>
+                (f ∘ g)(x) = f(g(x)) = f(2x + 1) = (2x + 1)² = 4x² + 4x + 1 <br>
+                (g ∘ f)(x) = g(f(x)) = g(x²) = 2x² + 1</p>
+            </div>
+        </section>
+
+        <!-- Inverse Functions Section -->
+        <section class="info-panel" id="inverse" data-aos="fade-up">
+            <h2>Inverse Functions</h2>
+            <p>A function f⁻¹ is the inverse of f if f⁻¹(f(x)) = x for all x in domain of f and f(f⁻¹(y)) = y for all y in range of f.</p>
+            
+            <h3>Conditions for Inverse</h3>
+            <ul>
+                <li>A function must be bijective (one-to-one and onto) to have an inverse</li>
+                <li>The graph of f⁻¹ is the reflection of f's graph about y = x</li>
+                <li>Domain of f becomes range of f⁻¹ and vice versa</li>
+            </ul>
+            
+            <div class="formula">
+                To find f⁻¹: <br>
+                1. Set y = f(x) <br>
+                2. Solve for x in terms of y <br>
+                3. Replace y with x to get f⁻¹(x)
+            </div>
+            
+            <div class="important">
+                <p><strong>JEE Focus:</strong> Inverse trigonometric functions are particularly important for JEE problems.</p>
+            </div>
+            
+            <div class="example">
+                <div class="example-title">JEE Problem Example:</div>
+                <p>Find the inverse of f: ℝ → ℝ defined by f(x) = (3x + 2)/(x - 1).</p>
+                <p><strong>Solution:</strong> <br>
+                Let y = (3x + 2)/(x - 1) <br>
+                y(x - 1) = 3x + 2 ⇒ xy - y = 3x + 2 ⇒ xy - 3x = y + 2 <br>
+                x(y - 3) = y + 2 ⇒ x = (y + 2)/(y - 3) <br>
+                ∴ f⁻¹(x) = (x + 2)/(x - 3)</p>
+            </div>
+        </section>
+
+        <!-- Key Facts Carousel -->
+        <div class="swiper-container" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">FUNCTION NOTATION</div>
+                        <div class="swiper-text">f: A → B (f maps A to B) <br> dom(f) = A, codom(f) = B <br> range(f) ⊆ B</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">INJECTIVE TEST</div>
+                        <div class="swiper-text">Horizontal Line Test: A function is injective if no horizontal line intersects its graph more than once</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">COMPOSITION PROPERTIES</div>
+                        <div class="swiper-text">(f ∘ g)⁻¹ = g⁻¹ ∘ f⁻¹ <br> But f ∘ g ≠ g ∘ f in general</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">INVERSE CONDITIONS</div>
+                        <div class="swiper-text">A function has an inverse iff it is bijective <br> The graphs of f and f⁻¹ are symmetric about y = x</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">EVEN & ODD FUNCTIONS</div>
+                        <div class="swiper-text">Even: f(-x) = f(x) <br> Odd: f(-x) = -f(x) <br> Most functions are neither!</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">PERIODIC FUNCTIONS</div>
+                        <div class="swiper-text">f(x + T) = f(x) for smallest T > 0 <br> sin(x) has period 2π <br> tan(x) has period π</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">PIECEWISE FUNCTIONS</div>
+                        <div class="swiper-text">Different definitions on different intervals <br> Important for JEE problems <br> Example: |x| = { x if x ≥ 0, -x if x < 0 }</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">DOMAIN RESTRICTIONS</div>
+                        <div class="swiper-text">Denominator ≠ 0 <br> √(expression) requires expression ≥ 0 <br> log(expression) requires expression > 0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Summary Section -->
+        <section class="info-panel" data-aos="fade-up">
+            <h2>Chapter Summary</h2>
+            <h3>Key Concepts</h3>
+            <ul>
+                <li>Relation is a subset of Cartesian product, function is a special relation</li>
+                <li>Important relation types: reflexive, symmetric, transitive, equivalence</li>
+                <li>Function types: injective, surjective, bijective, polynomial, exponential, etc.</li>
+                <li>Composition of functions is associative but not commutative</li>
+                <li>Inverse functions exist only for bijective functions</li>
+                <li>Domain restrictions are crucial for defining functions properly</li>
+            </ul>
+            
+            <h3>Important Formulas</h3>
+            <div class="formula">
+                Number of relations from A to B = 2<sup>n(A)×n(B)</sup>
+            </div>
+            <div class="formula">
+                Number of functions from A to B = n(B)<sup>n(A)</sup>
+            </div>
+            <div class="formula">
+                Composition: (g ∘ f)(x) = g(f(x))
+            </div>
+            <div class="formula">
+                Inverse: f⁻¹(f(x)) = x and f(f⁻¹(y)) = y
+            </div>
+            <div class="formula">
+                Even: f(-x) = f(x), Odd: f(-x) = -f(x)
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>MathMaster</h3>
+                <p>Your comprehensive resource for JEE Mathematics preparation.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#relations">Relations</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                    <li><a href="#types">Types of Functions</a></li>
+                    <li><a href="#composition">Composition</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> contact@mathmaster.com</li>
+                    <li><i class="fas fa-phone"></i> +91 9876543210</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Math Street, EduCity</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 MathMaster. All rights reserved. | Designed for JEE Mathematics Preparation</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="relations-functions.js"></script>
+<script>
+    // MathMaster - Relations & Functions JavaScript
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mainNav = document.getElementById('mainNav');
+    
+    if (mobileMenuBtn && mainNav) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+    }
+
+    // Back to Top Button
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    function handleScroll() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('active');
+        } else {
+            backToTopBtn.classList.remove('active');
+        }
+    }
+    
+    // Debounced scroll event
+    let scrollTimeout;
+    window.addEventListener('scroll', function() {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(handleScroll, 50);
+    }, { passive: true });
+
+    // Initialize AOS (Animate On Scroll)
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: window.innerWidth < 768 ? 100 : 120,
+            easing: 'ease-out-quad'
+        });
+    }
+
+    // Initialize Swiper
+    if (typeof Swiper !== 'undefined') {
+        new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: window.innerWidth < 768 ? 10 : 15,
+                stretch: 0,
+                depth: window.innerWidth < 768 ? 100 : 150,
+                modifier: 1,
+                slideShadows: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 25
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                }
+            },
+            preloadImages: false,
+            lazy: true
+        });
+    }
+
+    // Smooth Scroll for Navigation Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                smoothScrollTo(targetElement.offsetTop - 80, 800);
+                
+                // Close mobile menu if open
+                if (mainNav && mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            }
+        });
+    });
+
+    // Back to Top Button Click
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', function() {
+            smoothScrollTo(0, 800);
+        });
+    }
+
+    // Create Particles (Delayed for better load performance)
+    setTimeout(createParticles, 500);
+
+    // Floating Advertisement
+    const floatingAd = document.getElementById('floatingAd');
+    const closeAd = document.getElementById('closeAd');
+    
+    if (floatingAd) {
+        // Show ad after 5 seconds
+        setTimeout(() => {
+            floatingAd.classList.add('active');
+        }, 5000);
+        
+        // Close button functionality
+        if (closeAd) {
+            closeAd.addEventListener('click', () => {
+                floatingAd.classList.remove('active');
+            });
+        }
+    }
+
+    // Passive event listeners for touch events
+    document.addEventListener('touchstart', function() {}, { passive: true });
+    document.addEventListener('touchmove', function() {}, { passive: true });
+});
+
+// Smooth Scroll Function with Easing
+function smoothScrollTo(targetPosition, duration) {
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    let startTime = null;
+    
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = ease(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+    
+    function ease(t, b, c, d) {
+        t /= d/2;
+        if (t < 1) return c/2*t*t + b;
+        t--;
+        return -c/2 * (t*(t-2) - 1) + b;
+    }
+    
+    requestAnimationFrame(animation);
+}
+
+// Create Particles Function (Optimized)
+function createParticles() {
+    const particlesContainer = document.getElementById('particles');
+    if (!particlesContainer) return;
+    
+    const particleCount = window.innerWidth < 768 ? 20 : 30;
+    particlesContainer.innerHTML = '';
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        
+        const size = Math.random() * 3 + 1;
+        const posX = Math.random() * window.innerWidth;
+        const posY = Math.random() * window.innerHeight;
+        const duration = Math.random() * 15 + 10;
+        const delay = Math.random() * 5;
+        
+        particle.style.cssText = `
+            width: ${size}px;
+            height: ${size}px;
+            left: ${posX}px;
+            top: ${posY}px;
+            opacity: ${Math.random() * 0.3 + 0.1};
+            animation: float ${duration}s ease-in-out ${delay}s infinite;
+            background: rgba(255,255,255,0.3);
+        `;
+        
+        particlesContainer.appendChild(particle);
+    }
+}
+
+// Request Animation Frame Polyfill
+(function() {
+    var lastTime = 0;
+    var vendors = ['ms', 'moz', 'webkit', 'o'];
+    for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+        window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+        window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
+                                   || window[vendors[x]+'CancelRequestAnimationFrame'];
+    }
+
+    if (!window.requestAnimationFrame)
+        window.requestAnimationFrame = function(callback, element) {
+            var currTime = new Date().getTime();
+            var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+            var id = window.setTimeout(function() { callback(currTime + timeToCall); }, 
+              timeToCall);
+            lastTime = currTime + timeToCall;
+            return id;
+        };
+
+    if (!window.cancelAnimationFrame)
+        window.cancelAnimationFrame = function(id) {
+            clearTimeout(id);
+        };
+}());
+</script>
+</body>
+</html>
