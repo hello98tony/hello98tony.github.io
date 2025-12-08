@@ -1,0 +1,1988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKVRN3GREN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKVRN3GREN');
+</script>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laws of Motion | Class 11 Physics | JEE & NEET Preparation</title>
+    <meta name="description" content="Master Newton's Laws of Motion for Class 11 Physics. Complete guide for JEE & NEET aspirants with forces, friction, equilibrium, and dynamics concepts.">
+    <meta name="keywords" content="Newton's Laws, Physics Class 11, JEE preparation, NEET physics, Force, Friction, Inertia, Momentum, Equilibrium, Dynamics">
+    <meta name="author" content="Nerds Assemble">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Laws of Motion | Class 11 Physics">
+    <meta property="og:description" content="Complete guide to Newton's Laws of Motion for JEE & NEET aspirants">
+    <meta property="og:type" content="website">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Pacifico&family=Dancing+Script:wght@700&family=Abril+Fatface&family=Playfair+Display:wght@700&family=Raleway:wght@300;800&family=Quicksand:wght@500&family=Poiret+One&family=Amatic+SC:wght@700&family=Caveat:wght@700&family=Kaushan+Script&family=Libre+Baskerville&family=Merriweather&family=Nunito:wght@800&family=Oswald:wght@500&family=Roboto+Slab:wght@700&family=Sacramento&family=Tangerine:wght@700&family=Yeseva+One&family=Electrolize&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/planet-universe-svgrepo-com.svg">
+    
+    <style>
+        /* Laws of Motion - Nerds Assemble CSS */
+        :root {
+            --primary: #ff9a3c;
+            --secondary: #155263;
+            --tertiary: #ff6f3c;
+            --bg: #0a0a20;
+            --text: #ffffff;
+            --highlight: #ffc93c;
+            --nav-bg: rgba(10, 5, 30, 0.95);
+            --newton-gradient: linear-gradient(45deg, #ff9a3c, #ff6f3c);
+            --force-gradient: linear-gradient(45deg, #155263, #0c3441);
+            --friction-gradient: linear-gradient(45deg, #ff6f3c, #ff3c3c);
+        }
+
+        /* Base Styles & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overscroll-behavior-y: contain;
+            -webkit-overflow-scrolling: touch;
+            background-image:
+                radial-gradient(circle at 15% 20%, rgba(255, 154, 60, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 85% 80%, rgba(21, 82, 99, 0.1) 0%, transparent 20%),
+                linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--tertiary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(255, 154, 60, 0.5);
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--highlight);
+            margin: 2rem 0 1.5rem;
+            font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-family: 'Roboto Slab', serif;
+            color: var(--secondary);
+            margin: 1.5rem 0 1rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+        }
+
+        p {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+        }
+
+        /* Layout Components */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            flex: 1;
+            padding: 0 1rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Raleway', sans-serif;
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            transform: translateZ(0);
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            color: var(--highlight);
+            font-size: 1.6rem;
+        }
+
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.4rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Electrolize', sans-serif;
+            font-size: 0.95rem;
+            transition: color 0.2s ease-out;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--highlight);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--highlight);
+            transition: width 0.2s ease-out;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* Content Panels */
+        .info-panel {
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
+            padding: 1.8rem;
+            margin: 1.8rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: translateZ(0);
+            will-change: transform, opacity;
+        }
+
+        .info-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%),
+                linear-gradient(-45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%);
+            background-size: 20px 20px;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        /* Special Content Blocks */
+        .important {
+            background: rgba(255, 154, 60, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(255, 154, 60, 0.1);
+        }
+
+        .definition {
+            background: rgba(255, 201, 60, 0.1);
+            border-left: 4px solid var(--highlight);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(255, 201, 60, 0.1);
+        }
+
+        .formula {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin: 1.2rem 0;
+            padding: 1.2rem;
+            background: rgba(21, 82, 99, 0.1);
+            border-radius: 8px;
+            border: 1px dashed var(--highlight);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.1rem;
+        }
+
+        .formula::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, transparent 45%, rgba(21, 82, 99, 0.1) 50%, transparent 55%);
+            background-size: 10px 10px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .example {
+            background: rgba(255, 111, 60, 0.1);
+            border-left: 4px solid var(--tertiary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Lists & Tables */
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 1.8rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background-color: rgba(255, 154, 60, 0.2);
+            font-family: 'Electrolize', sans-serif;
+            color: var(--highlight);
+            font-size: 0.95rem;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+
+        tr:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* Concept Cards */
+        .concept-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .concept-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(255, 154, 60, 0.2);
+        }
+
+        .concept-card.first-law {
+            border-top: 4px solid var(--primary);
+        }
+
+        .concept-card.second-law {
+            border-top: 4px solid var(--secondary);
+        }
+
+        .concept-card.third-law {
+            border-top: 4px solid var(--tertiary);
+        }
+
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title.first-law { color: var(--primary); }
+        .card-title.second-law { color: var(--secondary); }
+        .card-title.third-law { color: var(--tertiary); }
+
+        /* Swiper Carousel */
+        .swiper-container {
+            width: 100%;
+            height: auto;
+            min-height: 180px;
+            margin: 2.5rem 0;
+            will-change: transform;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .swiper-slide {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+            font-family: 'Electrolize', sans-serif;
+            padding: 1.2rem;
+            box-sizing: border-box;
+            text-align: center;
+            min-height: 180px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-out;
+            transform: translateZ(0);
+            height: auto;
+        }
+
+        .swiper-slide:hover {
+            transform: translateY(-5px);
+        }
+
+        .swiper-slide div {
+            width: 100%;
+        }
+
+        .swiper-title {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin-bottom: 0.5rem;
+            font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+        }
+
+        .swiper-text {
+            font-family: 'Quicksand', sans-serif;
+            font-size: clamp(0.85rem, 1.1vw, 1rem);
+        }
+
+        /* Swiper Navigation */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: var(--highlight);
+            background: rgba(0, 0, 0, 0.5);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            backdrop-filter: blur(10px);
+            margin-top: -17.5px;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .swiper-pagination-bullet {
+            background: var(--text);
+            opacity: 0.5;
+            width: 8px;
+            height: 8px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: var(--highlight);
+            opacity: 1;
+        }
+
+        /* Problem Solving Section */
+        .problem-solving {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .problem-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary);
+        }
+
+        .problem-title {
+            color: var(--primary);
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Force Visualization */
+        .force-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .force-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .force-title {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--highlight);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .force-icon {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin: 1rem 0;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .force-desc {
+            font-size: 0.9rem;
+            color: var(--text);
+            opacity: 0.8;
+        }
+
+        /* Particles Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            will-change: transform;
+            opacity: 0.3;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .footer-column h3 {
+            color: var(--highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            transition: color 0.2s ease-out;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--highlight);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text);
+            font-size: 1.1rem;
+            transition: color 0.2s ease-out;
+        }
+
+        .social-links a:hover {
+            color: var(--highlight);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 1.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Quicksand', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease-out;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(255, 154, 60, 0.3);
+            transform: translateZ(0);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--highlight);
+            transform: translateY(-5px);
+        }
+
+        /* JEE/NEET Specific Styling */
+        .exam-highlight {
+            background: rgba(255, 235, 0, 0.1);
+            border: 2px solid var(--highlight);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .exam-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--highlight);
+            color: var(--bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(10px, 10px) rotate(90deg); }
+            50% { transform: translate(-5px, 15px) rotate(180deg); }
+            75% { transform: translate(5px, -5px) rotate(270deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        @keyframes force-push {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(20px); }
+            100% { transform: translateX(0); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        .force-push {
+            animation: force-push 2s ease-in-out infinite;
+        }
+
+        /* Motion Specific */
+        .law-diagram {
+            text-align: center;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+        }
+
+        .law-diagram i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin: 1rem;
+            display: inline-block;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .comparison-table {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        /* FBD Diagram */
+        .fbd-diagram {
+            position: relative;
+            height: 200px;
+            margin: 2rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .force-arrow {
+            position: absolute;
+            background: var(--primary);
+            height: 3px;
+            transform-origin: left center;
+        }
+
+        .force-label {
+            position: absolute;
+            color: var(--highlight);
+            font-family: 'Audiowide', cursive;
+            font-size: 0.9rem;
+        }
+
+        /* Newton Cradle Animation */
+        .newton-cradle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: 2rem 0;
+            perspective: 1000px;
+        }
+
+        .cradle-ball {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            position: relative;
+            animation: cradle-swing 3s ease-in-out infinite;
+            animation-delay: calc(var(--i) * 0.1s);
+        }
+
+        .cradle-ball:nth-child(odd) {
+            background: var(--secondary);
+        }
+
+        .cradle-ball:nth-child(even) {
+            background: var(--tertiary);
+        }
+
+        @keyframes cradle-swing {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(15deg); }
+            75% { transform: rotate(-15deg); }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background-image:
+                    radial-gradient(circle at 10% 20%, rgba(255, 154, 60, 0.05) 0%, transparent 20%),
+                    linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+            }
+
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                margin-top: 1rem;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.75rem 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            header, .info-panel {
+                backdrop-filter: blur(5px);
+            }
+
+            .container {
+                width: 95%;
+                padding: 0;
+            }
+
+            .info-panel {
+                padding: 1.5rem;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            th, td {
+                padding: 0.5rem;
+                font-size: 0.85rem;
+            }
+
+            .concept-cards, .problem-solving {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none;
+            }
+
+            .force-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-panel {
+                padding: 1rem;
+            }
+
+            ul, ol {
+                padding-left: 1.5rem;
+            }
+
+            .formula {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+
+            .swiper-slide {
+                padding: 1rem;
+            }
+
+            .newton-cradle {
+                gap: 5px;
+            }
+
+            .cradle-ball {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-balance-scale"></i></span>
+                <span class="logo-text">Nerds Assemble</span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#first-law">First Law</a></li>
+                    <li><a href="#second-law">Second Law</a></li>
+                    <li><a href="#third-law">Third Law</a></li>
+                    <li><a href="#forces">Types of Forces</a></li>
+                    <li><a href="#friction">Friction</a></li>
+                    <li><a href="#equilibrium">Equilibrium</a></li>
+                    <li><a href="#problems">Problems</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="page-header" data-aos="fade-down">
+            <h1>Newton's Laws of Motion</h1>
+            <p class="subtitle">Class 11 Physics | JEE & NEET Preparation Guide</p>
+            <p>Master the fundamental principles governing motion - the foundation of classical mechanics and essential for competitive exams</p>
+            
+            <!-- Newton's Cradle Animation -->
+            <div class="newton-cradle">
+                <div class="cradle-ball" style="--i: 0"></div>
+                <div class="cradle-ball" style="--i: 1"></div>
+                <div class="cradle-ball" style="--i: 2"></div>
+                <div class="cradle-ball" style="--i: 3"></div>
+                <div class="cradle-ball" style="--i: 4"></div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="info-panel" id="introduction" data-aos="fade-up">
+            <h2>Introduction to Newton's Laws</h2>
+            <p>Newton's Laws of Motion form the foundation of classical mechanics. They describe the relationship between a body and the forces acting upon it, and its motion in response to those forces.</p>
+
+            <div class="definition">
+                <p><strong>Sir Isaac Newton (1642-1727):</strong> Published "Philosophiæ Naturalis Principia Mathematica" in 1687, where he formulated the three laws of motion that revolutionized physics.</p>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card first-law" data-aos="flip-left">
+                    <div class="card-title first-law"><i class="fas fa-couch"></i> First Law (Inertia)</div>
+                    <p>An object at rest stays at rest, and an object in motion stays in motion with constant velocity, unless acted upon by a net external force.</p>
+                    <div class="formula">If ΣF = 0, then a = 0</div>
+                </div>
+
+                <div class="concept-card second-law" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-title second-law"><i class="fas fa-tachometer-alt"></i> Second Law (Force)</div>
+                    <p>The acceleration of an object is directly proportional to the net force acting on it and inversely proportional to its mass.</p>
+                    <div class="formula">F = ma</div>
+                </div>
+
+                <div class="concept-card third-law" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card-title third-law"><i class="fas fa-exchange-alt"></i> Third Law (Action-Reaction)</div>
+                    <p>For every action, there is an equal and opposite reaction. Forces always occur in pairs.</p>
+                    <div class="formula">F_AB = -F_BA</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- First Law Section -->
+        <section class="info-panel" id="first-law" data-aos="fade-up">
+            <h2>Newton's First Law: Law of Inertia</h2>
+            <p>The First Law defines the concept of inertia - the tendency of an object to resist changes in its state of motion.</p>
+
+            <div class="definition">
+                <p><strong>Inertia:</strong> The property of matter that causes it to resist changes in velocity (both magnitude and direction).</p>
+            </div>
+
+            <h3>Key Concepts of First Law</h3>
+            <table>
+                <tr>
+                    <th>Concept</th>
+                    <th>Definition</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Inertia of Rest</td>
+                    <td>Tendency to remain at rest</td>
+                    <td>Passenger thrown backward when bus starts</td>
+                </tr>
+                <tr>
+                    <td>Inertia of Motion</td>
+                    <td>Tendency to remain in motion</td>
+                    <td>Passenger thrown forward when bus stops suddenly</td>
+                </tr>
+                <tr>
+                    <td>Inertia of Direction</td>
+                    <td>Tendency to maintain direction</td>
+                    <td>Passenger thrown sideways when bus turns</td>
+                </tr>
+            </table>
+
+            <div class="force-container">
+                <div class="force-box">
+                    <div class="force-title">No Net Force</div>
+                    <div class="force-icon"><i class="fas fa-balance-scale"></i></div>
+                    <div class="force-desc">
+                        <p>ΣF = 0</p>
+                        <p>Constant velocity or at rest</p>
+                        <p>No acceleration</p>
+                    </div>
+                </div>
+
+                <div class="force-box">
+                    <div class="force-title">Net Force ≠ 0</div>
+                    <div class="force-icon force-push"><i class="fas fa-hand-rock"></i></div>
+                    <div class="force-desc">
+                        <p>ΣF ≠ 0</p>
+                        <p>Acceleration occurs</p>
+                        <p>Velocity changes</p>
+                    </div>
+                </div>
+
+                <div class="force-box">
+                    <div class="force-title">Mass & Inertia</div>
+                    <div class="force-icon"><i class="fas fa-weight-hanging"></i></div>
+                    <div class="force-desc">
+                        <p>More mass = More inertia</p>
+                        <p>Inertia ∝ Mass</p>
+                        <p>Measure of resistance to acceleration</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Frame of Reference:</strong> First law holds only in inertial frames (non-accelerating frames). In non-inertial frames (accelerating frames), pseudo-forces appear.</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: First Law Application</div>
+                <p>Why does a passenger tend to fall forward when a moving bus stops suddenly?</p>
+                <p><strong>Explanation:</strong></p>
+                <p>The passenger's body has inertia of motion. When the bus stops, the lower part of the body in contact with the seat stops, but the upper part continues moving forward due to inertia.</p>
+            </div>
+        </section>
+
+        <!-- Second Law Section -->
+        <section class="info-panel" id="second-law" data-aos="fade-up">
+            <h2>Newton's Second Law: Force & Acceleration</h2>
+            <p>The Second Law quantifies the relationship between force, mass, and acceleration.</p>
+
+            <div class="definition">
+                <p><strong>Mathematical Form:</strong> The net force acting on an object equals the rate of change of its momentum.</p>
+            </div>
+
+            <div class="formula">
+                F = ma (for constant mass)
+            </div>
+            <div class="formula">
+                F = dp/dt = d(mv)/dt (general form)
+            </div>
+
+            <h3>Key Aspects of Second Law</h3>
+            <table>
+                <tr>
+                    <th>Aspect</th>
+                    <th>Description</th>
+                    <th>Implication</th>
+                </tr>
+                <tr>
+                    <td>Vector Nature</td>
+                    <td>F and a are vectors in same direction</td>
+                    <td>Acceleration direction = Net force direction</td>
+                </tr>
+                <tr>
+                    <td>Instantaneous</td>
+                    <td>F = ma at each instant</td>
+                    <td>Force causes instantaneous acceleration</td>
+                </tr>
+                <tr>
+                    <td>Principle of Superposition</td>
+                    <td>Forces add as vectors</td>
+                    <td>ΣF = F₁ + F₂ + F₃ + ...</td>
+                </tr>
+                <tr>
+                    <td>Mass Measurement</td>
+                    <td>m = F/a (inertial mass)</td>
+                    <td>Mass resists acceleration</td>
+                </tr>
+            </table>
+
+            <h3>Applications of Second Law</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Constant Force</div>
+                    <p>Constant force produces constant acceleration.</p>
+                    <div class="formula">a = F/m = constant</div>
+                    <p>Example: Object falling under gravity</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Variable Force</div>
+                    <p>Variable force produces variable acceleration.</p>
+                    <div class="formula">a(t) = F(t)/m</div>
+                    <p>Example: Spring force, rocket propulsion</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Impulse-Momentum</div>
+                    <p>Force applied over time changes momentum.</p>
+                    <div class="formula">J = ∫F dt = Δp</div>
+                    <p>Impulse = Change in momentum</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Variable Mass Systems</h4>
+                <p>For systems with changing mass (like rockets):</p>
+                <div class="formula">F_ext + v_rel(dm/dt) = m(dv/dt)</div>
+                <p>Where v_rel is relative velocity of ejected mass</p>
+                <p>For rocket: Thrust = v_rel(dm/dt)</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Second Law Calculation</div>
+                <p>A force of 10 N acts on a mass of 2 kg. Find acceleration. If force is doubled, find new acceleration.</p>
+                <p><strong>Solution:</strong></p>
+                <p>a = F/m = 10/2 = 5 m/s²</p>
+                <p>When force doubled: F' = 20 N</p>
+                <p>a' = F'/m = 20/2 = 10 m/s²</p>
+                <p>Acceleration doubles when force doubles (mass constant)</p>
+            </div>
+        </section>
+
+        <!-- Third Law Section -->
+        <section class="info-panel" id="third-law" data-aos="fade-up">
+            <h2>Newton's Third Law: Action & Reaction</h2>
+            <p>Forces always occur in pairs. If object A exerts a force on object B, then object B simultaneously exerts an equal and opposite force on object A.</p>
+
+            <div class="definition">
+                <p><strong>Action-Reaction Pair:</strong> Two forces that are equal in magnitude, opposite in direction, and act on different bodies.</p>
+            </div>
+
+            <div class="formula">
+                F_AB = -F_BA
+            </div>
+
+            <h3>Characteristics of Action-Reaction Pairs</h3>
+            <table>
+                <tr>
+                    <th>Characteristic</th>
+                    <th>Explanation</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Equal Magnitude</td>
+                    <td>Both forces have same magnitude</td>
+                    <td>Foot pushes ground, ground pushes foot</td>
+                </tr>
+                <tr>
+                    <td>Opposite Direction</td>
+                    <td>Forces act in opposite directions</td>
+                    <td>Rocket exhaust down, rocket goes up</td>
+                </tr>
+                <tr>
+                    <td>Different Bodies</td>
+                    <td>Forces act on different objects</td>
+                    <td>Book on table: Book pushes table, table pushes book</td>
+                </tr>
+                <tr>
+                    <td>Same Type</td>
+                    <td>Both forces are of same type</td>
+                    <td>Both gravitational, both contact, etc.</td>
+                </tr>
+                <tr>
+                    <td>Simultaneous</td>
+                    <td>Both forces exist at same time</td>
+                    <td>No delay between action and reaction</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Common Misconceptions:</strong></p>
+                <ul>
+                    <li>Action and reaction forces do NOT cancel each other (they act on different bodies)</li>
+                    <li>Third law pairs are always of the same type (both contact or both non-contact)</li>
+                    <li>The stronger object does NOT exert a greater force</li>
+                    <li>Action and reaction forces exist simultaneously</li>
+                </ul>
+            </div>
+
+            <h3>Real-World Examples</h3>
+            <div class="force-container">
+                <div class="force-box">
+                    <div class="force-title">Walking/Running</div>
+                    <div class="force-icon"><i class="fas fa-walking"></i></div>
+                    <div class="force-desc">
+                        <p>Foot pushes ground backward</p>
+                        <p>Ground pushes foot forward</p>
+                        <p>Forward push causes motion</p>
+                    </div>
+                </div>
+
+                <div class="force-box">
+                    <div class="force-title">Rocket Propulsion</div>
+                    <div class="force-icon"><i class="fas fa-rocket"></i></div>
+                    <div class="force-desc">
+                        <p>Rocket pushes exhaust down</p>
+                        <p>Exhaust pushes rocket up</p>
+                        <p>Conservation of momentum</p>
+                    </div>
+                </div>
+
+                <div class="force-box">
+                    <div class="force-title">Swimming</div>
+                    <div class="force-icon"><i class="fas fa-swimmer"></i></div>
+                    <div class="force-desc">
+                        <p>Swimmer pushes water backward</p>
+                        <p>Water pushes swimmer forward</p>
+                        <p>Forward motion results</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Third Law Application</div>
+                <p>A horse pulls a cart. The horse exerts a force on the cart. What is the reaction force?</p>
+                <p><strong>Explanation:</strong></p>
+                <p>Action: Horse pulls cart forward</p>
+                <p>Reaction: Cart pulls horse backward</p>
+                <p>These forces are equal and opposite, but act on different objects.</p>
+            </div>
+        </section>
+
+        <!-- Types of Forces Section -->
+        <section class="info-panel" id="forces" data-aos="fade-up">
+            <h2>Types of Forces in Nature</h2>
+            <p>Forces can be classified based on their nature and how they act on objects.</p>
+
+            <div class="definition">
+                <p><strong>Force:</strong> A push or pull that can cause an object to accelerate. Measured in Newtons (N). 1 N = 1 kg·m/s²</p>
+            </div>
+
+            <h3>Fundamental Forces</h3>
+            <table>
+                <tr>
+                    <th>Force</th>
+                    <th>Relative Strength</th>
+                    <th>Range</th>
+                    <th>Mediator</th>
+                    <th>Examples</th>
+                </tr>
+                <tr>
+                    <td>Gravitational</td>
+                    <td>1</td>
+                    <td>Infinite</td>
+                    <td>Graviton (hypothetical)</td>
+                    <td>Planetary motion, weight</td>
+                </tr>
+                <tr>
+                    <td>Electromagnetic</td>
+                    <td>10³⁶</td>
+                    <td>Infinite</td>
+                    <td>Photon</td>
+                    <td>Friction, tension, normal</td>
+                </tr>
+                <tr>
+                    <td>Strong Nuclear</td>
+                    <td>10³⁸</td>
+                    <td>10⁻¹⁵ m</td>
+                    <td>Gluons</td>
+                    <td>Holds nucleus together</td>
+                </tr>
+                <tr>
+                    <td>Weak Nuclear</td>
+                    <td>10²⁵</td>
+                    <td>10⁻¹⁸ m</td>
+                    <td>W/Z bosons</td>
+                    <td>Radioactive decay</td>
+                </tr>
+            </table>
+
+            <h3>Common Forces in Mechanics</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Weight (Gravity)</div>
+                    <p>Force due to gravity.</p>
+                    <div class="formula">W = mg</div>
+                    <p>Always acts downward toward Earth's center</p>
+                    <p>g = 9.8 m/s² (approx)</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Normal Force</div>
+                    <p>Contact force perpendicular to surface.</p>
+                    <div class="formula">N = mg cosθ (on incline)</div>
+                    <p>Prevents objects from passing through surfaces</p>
+                    <p>Perpendicular to contact surface</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Tension</div>
+                    <p>Force transmitted through string/rope.</p>
+                    <div class="formula">T = Force along string</div>
+                    <p>Always pulls, never pushes</p>
+                    <p>Massless, inextensible string idealization</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Spring Force</div>
+                    <p>Force exerted by stretched/compressed spring.</p>
+                    <div class="formula">F = -kx (Hooke's Law)</div>
+                    <p>k = spring constant</p>
+                    <p>x = displacement from equilibrium</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Applied Force</div>
+                    <p>Direct push or pull by external agent.</p>
+                    <div class="formula">F_applied</div>
+                    <p>Example: Pushing a box, pulling a cart</p>
+                    <p>Direction depends on application</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Buoyant Force</div>
+                    <p>Upward force in fluids.</p>
+                    <div class="formula">F_b = ρVg</div>
+                    <p>ρ = fluid density</p>
+                    <p>V = volume displaced</p>
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Free Body Diagram (FBD)</div>
+                <p>Draw FBD for a book resting on a table.</p>
+                <p><strong>Solution:</strong></p>
+                <p>1. Weight (W) downward: W = mg</p>
+                <p>2. Normal force (N) upward: N = mg (since book is at rest)</p>
+                <p>These two forces are equal and opposite, but NOT action-reaction pair (both act on same body - the book).</p>
+            </div>
+        </section>
+
+        <!-- Friction Section -->
+        <section class="info-panel" id="friction" data-aos="fade-up">
+            <h2>Friction</h2>
+            <p>Friction is the force that opposes relative motion or tendency of relative motion between surfaces in contact.</p>
+
+            <div class="definition">
+                <p><strong>Causes of Friction:</strong> Microscopic irregularities on surfaces, intermolecular forces, and adhesion between surfaces.</p>
+            </div>
+
+            <h3>Types of Friction</h3>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                    <th>Formula</th>
+                    <th>Characteristics</th>
+                </tr>
+                <tr>
+                    <td>Static Friction</td>
+                    <td>No relative motion</td>
+                    <td>f_s ≤ μ_sN</td>
+                    <td>Self-adjusting, prevents motion</td>
+                </tr>
+                <tr>
+                    <td>Kinetic Friction</td>
+                    <td>Relative motion exists</td>
+                    <td>f_k = μ_kN</td>
+                    <td>Constant, opposes motion</td>
+                </tr>
+                <tr>
+                    <td>Rolling Friction</td>
+                    <td>Rolling without slipping</td>
+                    <td>f_r = μ_rN</td>
+                    <td>Least among three types</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Key Properties:</strong></p>
+                <ul>
+                    <li>Friction is independent of area of contact (for given normal force)</li>
+                    <li>Static friction coefficient (μ_s) > Kinetic friction coefficient (μ_k)</li>
+                    <li>Friction depends on nature of surfaces (roughness, materials)</li>
+                    <li>Friction is parallel to surface, opposite to intended motion</li>
+                    <li>Rolling friction < Sliding friction < Static friction</li>
+                </ul>
+            </div>
+
+            <h3>Angle of Friction & Repose</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Angle of Friction (λ)</div>
+                    <p>Angle between resultant contact force and normal.</p>
+                    <div class="formula">tan λ = μ</div>
+                    <p>For limiting friction: tan λ = μ_s</p>
+                    <p>For kinetic friction: tan λ = μ_k</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Angle of Repose (θ)</div>
+                    <p>Maximum angle before object slides down incline.</p>
+                    <div class="formula">μ_s = tan θ</div>
+                    <p>On verge of sliding: mg sinθ = μ_s mg cosθ</p>
+                    <p>Thus: μ_s = tan θ</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Friction in Inclined Plane Problems</h4>
+                <p>For object on incline with friction:</p>
+                <div class="formula">Upward motion: ma = mg sinθ + μ_k mg cosθ</div>
+                <div class="formula">Downward motion: ma = mg sinθ - μ_k mg cosθ</div>
+                <p>For no motion: mg sinθ ≤ μ_s mg cosθ</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Friction Calculation</div>
+                <p>A 5 kg block rests on horizontal surface with μ_s = 0.4. What minimum horizontal force is needed to start motion?</p>
+                <p><strong>Solution:</strong></p>
+                <p>Normal force N = mg = 5 × 9.8 = 49 N</p>
+                <p>Maximum static friction f_s(max) = μ_sN = 0.4 × 49 = 19.6 N</p>
+                <p>Minimum force to start motion = 19.6 N</p>
+                <p>Once moving, kinetic friction f_k = μ_kN (μ_k < μ_s)</p>
+            </div>
+        </section>
+
+        <!-- Equilibrium Section -->
+        <section class="info-panel" id="equilibrium" data-aos="fade-up">
+            <h2>Equilibrium of Forces</h2>
+            <p>A body is in equilibrium when the net force and net torque acting on it are zero.</p>
+
+            <div class="definition">
+                <p><strong>Conditions for Equilibrium:</strong></p>
+                <ol>
+                    <li>Translational equilibrium: Net force = 0 (ΣF = 0)</li>
+                    <li>Rotational equilibrium: Net torque = 0 (Στ = 0)</li>
+                </ol>
+            </div>
+
+            <h3>Types of Equilibrium</h3>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                    <th>Stability</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Static</td>
+                    <td>At rest, no motion</td>
+                    <td>Stable</td>
+                    <td>Book on table</td>
+                </tr>
+                <tr>
+                    <td>Dynamic</td>
+                    <td>Moving with constant velocity</td>
+                    <td>Stable</td>
+                    <td>Car on highway at constant speed</td>
+                </tr>
+                <tr>
+                    <td>Unstable</td>
+                    <td>Small displacement causes motion</td>
+                    <td>Unstable</td>
+                    <td>Pencil standing on tip</td>
+                </tr>
+                <tr>
+                    <td>Neutral</td>
+                    <td>Displacement doesn't change equilibrium</td>
+                    <td>Neutral</td>
+                    <td>Sphere on flat surface</td>
+                </tr>
+            </table>
+
+            <h3>Solving Equilibrium Problems</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Free Body Diagram (FBD)</div>
+                    <p>Essential first step in equilibrium problems.</p>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Isolate object</li>
+                        <li>Show all forces acting</li>
+                        <li>Choose coordinate system</li>
+                        <li>Resolve forces into components</li>
+                    </ol>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Lami's Theorem</div>
+                    <p>For three concurrent forces in equilibrium.</p>
+                    <div class="formula">F₁/sinα = F₂/sinβ = F₃/sinγ</div>
+                    <p>α, β, γ are angles opposite to forces F₁, F₂, F₃</p>
+                    <p>Useful for three-force equilibrium problems</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Method of Components</div>
+                    <p>Most general method for equilibrium.</p>
+                    <div class="formula">ΣF_x = 0, ΣF_y = 0</div>
+                    <p>For 3D: ΣF_x = 0, ΣF_y = 0, ΣF_z = 0</p>
+                    <p>Also Στ = 0 for rotational equilibrium</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">IMPORTANT</div>
+                <h4>Concurrent vs Non-concurrent Forces</h4>
+                <p><strong>Concurrent forces:</strong> Lines of action meet at a point. Only need ΣF = 0 for equilibrium.</p>
+                <p><strong>Non-concurrent forces:</strong> Lines of action don't meet. Need both ΣF = 0 and Στ = 0.</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Equilibrium Problem</div>
+                <p>A 10 kg mass hangs from two strings making angles 30° and 60° with horizontal. Find tensions in strings.</p>
+                <p><strong>Solution:</strong></p>
+                <p>Weight W = mg = 10 × 9.8 = 98 N downward</p>
+                <p>Let T₁ and T₂ be tensions</p>
+                <p>Horizontal equilibrium: T₁ cos30° = T₂ cos60°</p>
+                <p>Vertical equilibrium: T₁ sin30° + T₂ sin60° = 98</p>
+                <p>Solving: T₁ = 49 N, T₂ = 84.87 N</p>
+            </div>
+        </section>
+
+        <!-- Problem Solving Section -->
+        <section class="info-panel" id="problems" data-aos="fade-up">
+            <h2>Problem Solving Strategies</h2>
+            <p>Effective techniques for solving Laws of Motion problems in JEE and NEET.</p>
+
+            <div class="problem-solving">
+                <div class="problem-box">
+                    <div class="problem-title">Type 1: Single Body Problems</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Draw Free Body Diagram (FBD)</li>
+                        <li>Identify all forces acting</li>
+                        <li>Apply ΣF = ma in relevant directions</li>
+                        <li>Solve for unknowns</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Choose coordinate system wisely (along and perpendicular to motion)</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 2: Connected Bodies</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Draw separate FBD for each body</li>
+                        <li>Apply ΣF = ma to each body</li>
+                        <li>Consider constraints (same acceleration for connected bodies)</li>
+                        <li>Solve simultaneous equations</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Tension is same throughout massless string</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 3: Inclined Plane Problems</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Choose axes: x along incline, y perpendicular</li>
+                        <li>Resolve weight into components</li>
+                        <li>Account for friction if present</li>
+                        <li>Apply ΣF_x = ma_x, ΣF_y = 0</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Normal force N = mg cosθ on frictionless incline</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED TIP</div>
+                <h4>Constraint Relations</h4>
+                <p>For connected bodies (pulleys, wedges):</p>
+                <p>• Length of string is constant ⇒ Relation between accelerations</p>
+                <p>• Bodies in contact move together ⇒ Same acceleration</p>
+                <p>• Use geometry to relate displacements, velocities, accelerations</p>
+                <p>• Differentiate constraint equations to get acceleration relations</p>
+            </div>
+        </section>
+
+        <!-- Key Facts Carousel -->
+        <div class="swiper-container" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">NEWTON'S FIRST LAW</div>
+                        <div class="swiper-text">Law of Inertia: Object maintains state of motion unless net force acts. ΣF = 0 ⇒ a = 0</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">NEWTON'S SECOND LAW</div>
+                        <div class="swiper-text">F = ma. Acceleration ∝ Force, ∝ 1/mass. Force causes change in momentum: F = dp/dt</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">NEWTON'S THIRD LAW</div>
+                        <div class="swiper-text">Action-Reaction: F_AB = -F_BA. Forces occur in pairs on different bodies. Never cancel each other.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">INERTIA</div>
+                        <div class="swiper-text">Resistance to change in motion. Inertia ∝ mass. More mass = more inertia = harder to accelerate.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">FRICTION</div>
+                        <div class="swiper-text">Opposes relative motion. Static (f_s ≤ μ_sN) and Kinetic (f_k = μ_kN). μ_s > μ_k > μ_r</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">EQUILIBRIUM</div>
+                        <div class="swiper-text">ΣF = 0 and Στ = 0. Static (at rest) or Dynamic (constant velocity). Solve using FBD.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">IMPULSE</div>
+                        <div class="swiper-text">J = ∫F dt = Δp. Force applied over time changes momentum. Area under F-t graph.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">FREE BODY DIAGRAM</div>
+                        <div class="swiper-text">Essential tool. Isolate object, show all forces, choose coordinates, resolve components.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- Summary Section -->
+        <section class="info-panel" data-aos="fade-up">
+            <h2>Chapter Summary & Formulas</h2>
+            
+            <h3>Key Formulas</h3>
+            <div class="concept-cards">
+                <div class="concept-card first-law">
+                    <div class="card-title first-law">Basic Laws</div>
+                    <div class="formula">First: ΣF = 0 ⇒ a = 0</div>
+                    <div class="formula">Second: F = ma = dp/dt</div>
+                    <div class="formula">Third: F_AB = -F_BA</div>
+                    <div class="formula">Weight: W = mg</div>
+                </div>
+
+                <div class="concept-card second-law">
+                    <div class="card-title second-law">Friction Formulas</div>
+                    <div class="formula">Static: f_s ≤ μ_sN</div>
+                    <div class="formula">Kinetic: f_k = μ_kN</div>
+                    <div class="formula">Rolling: f_r = μ_rN</div>
+                    <div class="formula">Angle: μ = tanθ</div>
+                </div>
+
+                <div class="concept-card third-law">
+                    <div class="card-title third-law">Equilibrium & Momentum</div>
+                    <div class="formula">Equilibrium: ΣF = 0, Στ = 0</div>
+                    <div class="formula">Impulse: J = ∫F dt = Δp</div>
+                    <div class="formula">Momentum: p = mv</div>
+                    <div class="formula">Spring: F = -kx</div>
+                </div>
+            </div>
+
+            <h3>Important Points for JEE/NEET</h3>
+            <ul>
+                <li>Newton's First Law defines inertial frames of reference</li>
+                <li>Second Law is valid only in inertial frames (non-accelerating)</li>
+                <li>Third Law forces always act on different bodies and never cancel</li>
+                <li>Mass is measure of inertia, weight is force due to gravity</li>
+                <li>Static friction is self-adjusting up to maximum value μ_sN</li>
+                <li>Normal force is perpendicular to surface, adjusts to prevent penetration</li>
+                <li>Tension in massless string is same throughout</li>
+                <li>Free Body Diagram is the most important problem-solving tool</li>
+            </ul>
+
+            <div class="important">
+                <p><strong>Common Mistakes to Avoid:</strong></p>
+                <ul>
+                    <li>Confusing mass (scalar) with weight (vector force)</li>
+                    <li>Thinking action-reaction forces cancel (they act on different bodies)</li>
+                    <li>Forgetting that friction opposes intended motion, not necessarily actual motion</li>
+                    <li>Not drawing proper Free Body Diagrams</li>
+                    <li>Confusing coefficient of static friction (μ_s) with kinetic friction (μ_k)</li>
+                    <li>Assuming normal force always equals weight (only on horizontal surfaces)</li>
+                    <li>Forgetting to consider all forces in FBD (especially tension in multiple strings)</li>
+                    <li>Applying F = ma in non-inertial frames without pseudo-forces</li>
+                </ul>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">SUPER TIP</div>
+                <h4>Problem Solving Framework</h4>
+                <p><strong>STEP 1:</strong> Read problem carefully, identify given quantities and what's asked</p>
+                <p><strong>STEP 2:</strong> Draw clear Free Body Diagram for each object</p>
+                <p><strong>STEP 3:</strong> Choose coordinate system (usually along and perpendicular to motion)</p>
+                <p><strong>STEP 4:</strong> Apply ΣF = ma in each direction for each object</p>
+                <p><strong>STEP 5:</strong> Solve equations simultaneously</p>
+                <p><strong>STEP 6:</strong> Check units, magnitude, and direction of answers</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Nerds Assemble</h3>
+                <p>Master Newton's Laws of Motion for JEE & NEET. Comprehensive physics resource with detailed explanations and problem-solving strategies.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#first-law">First Law</a></li>
+                    <li><a href="#second-law">Second Law</a></li>
+                    <li><a href="#third-law">Third Law</a></li>
+                    <li><a href="#forces">Types of Forces</a></li>
+                    <li><a href="#friction">Friction</a></li>
+                    <li><a href="#equilibrium">Equilibrium</a></li>
+                    <li><a href="#problems">Problem Solving</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> 44mr.invisible@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Nerds Assemble. All rights reserved. | Designed for JEE & NEET Aspirants | Newton's Laws of Motion</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Laws of Motion - JavaScript
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ?
+                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+            }
+
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+
+            function handleScroll() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('active');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                }
+            }
+
+            // Debounced scroll event
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(handleScroll, 50);
+            }, { passive: true });
+
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: window.innerWidth < 768 ? 100 : 120,
+                    easing: 'ease-out-quad'
+                });
+            }
+
+            // Initialize Swiper
+            if (typeof Swiper !== 'undefined') {
+                const swiper = new Swiper('.swiper-container', {
+                    loop: true,
+                    autoplay: {
+                        delay: 3500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 25
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        }
+                    }
+                });
+            }
+
+            // Smooth Scroll for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        if (mainNav && mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                });
+            });
+
+            // Back to Top Button Click
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Create Particles
+            createParticles();
+            
+            // Create Newton's Cradle Animation
+            enhanceNewtonsCradle();
+        });
+
+        // Create Particles Function
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
+
+            const particleCount = window.innerWidth < 768 ? 20 : 30;
+            particlesContainer.innerHTML = '';
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                const size = Math.random() * 3 + 1;
+                const posX = Math.random() * window.innerWidth;
+                const posY = Math.random() * window.innerHeight;
+                const duration = Math.random() * 15 + 10;
+                const delay = Math.random() * 5;
+
+                particle.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}px;
+                    top: ${posY}px;
+                    opacity: ${Math.random() * 0.3 + 0.1};
+                    animation: float ${duration}s ease-in-out ${delay}s infinite;
+                    background: rgba(255,255,255,0.3);
+                `;
+
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Enhance Newton's Cradle Animation
+        function enhanceNewtonsCradle() {
+            const cradleBalls = document.querySelectorAll('.cradle-ball');
+            cradleBalls.forEach((ball, index) => {
+                // Add subtle hover effect
+                ball.addEventListener('mouseenter', () => {
+                    ball.style.transform = 'scale(1.2)';
+                    ball.style.transition = 'transform 0.2s ease';
+                });
+                
+                ball.addEventListener('mouseleave', () => {
+                    ball.style.transform = 'scale(1)';
+                });
+            });
+        }
+
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(createParticles, 250);
+        });
+    </script>
+</body>
+</html>
