@@ -1,0 +1,2004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKVRN3GREN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKVRN3GREN');
+</script>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravitation | Class 11 Physics | JEE & NEET Preparation</title>
+    <meta name="description" content="Master Gravitation for Class 11 Physics. Complete guide for JEE & NEET aspirants with Newton's Law of Gravitation, orbital motion, and astrophysics concepts.">
+    <meta name="keywords" content="Gravitation, Physics Class 11, JEE preparation, NEET physics, Newton's Law of Gravitation, Kepler's Laws, Satellite Motion, Escape Velocity, Gravitational Potential">
+    <meta name="author" content="Nerds Assemble">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Gravitation | Class 11 Physics">
+    <meta property="og:description" content="Complete guide to Gravitation for JEE & NEET aspirants">
+    <meta property="og:type" content="website">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Pacifico&family=Dancing+Script:wght@700&family=Abril+Fatface&family=Playfair+Display:wght@700&family=Raleway:wght@300;800&family=Quicksand:wght@500&family=Poiret+One&family=Amatic+SC:wght@700&family=Caveat:wght@700&family=Kaushan+Script&family=Libre+Baskerville&family=Merriweather&family=Nunito:wght@800&family=Oswald:wght@500&family=Roboto+Slab:wght@700&family=Sacramento&family=Tangerine:wght@700&family=Yeseva+One&family=Electrolize&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/planet-universe-svgrepo-com.svg">
+    
+    <style>
+        /* Gravitation - Nerds Assemble CSS */
+        :root {
+            --primary: #8a2be2;
+            --secondary: #00c9ff;
+            --tertiary: #92fe9d;
+            --bg: #0a0a20;
+            --text: #ffffff;
+            --highlight: #ffd700;
+            --nav-bg: rgba(10, 5, 30, 0.95);
+            --newton-gradient: linear-gradient(45deg, #8a2be2, #9400d3);
+            --kepler-gradient: linear-gradient(45deg, #00c9ff, #92fe9d);
+            --satellite-gradient: linear-gradient(45deg, #ffd700, #ff8c00);
+        }
+
+        /* Base Styles & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overscroll-behavior-y: contain;
+            -webkit-overflow-scrolling: touch;
+            background-image:
+                radial-gradient(circle at 15% 20%, rgba(138, 43, 226, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 85% 80%, rgba(0, 201, 255, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.05) 0%, transparent 30%),
+                linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--tertiary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--highlight);
+            margin: 2rem 0 1.5rem;
+            font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-family: 'Roboto Slab', serif;
+            color: var(--secondary);
+            margin: 1.5rem 0 1rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+        }
+
+        p {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+        }
+
+        /* Layout Components */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            flex: 1;
+            padding: 0 1rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Raleway', sans-serif;
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            transform: translateZ(0);
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            color: var(--highlight);
+            font-size: 1.6rem;
+        }
+
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.4rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Electrolize', sans-serif;
+            font-size: 0.95rem;
+            transition: color 0.2s ease-out;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--highlight);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--highlight);
+            transition: width 0.2s ease-out;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* Content Panels */
+        .info-panel {
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
+            padding: 1.8rem;
+            margin: 1.8rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: translateZ(0);
+            will-change: transform, opacity;
+        }
+
+        .info-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%),
+                linear-gradient(-45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%);
+            background-size: 20px 20px;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        /* Special Content Blocks */
+        .important {
+            background: rgba(138, 43, 226, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(138, 43, 226, 0.1);
+        }
+
+        .definition {
+            background: rgba(255, 215, 0, 0.1);
+            border-left: 4px solid var(--highlight);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.1);
+        }
+
+        .formula {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin: 1.2rem 0;
+            padding: 1.2rem;
+            background: rgba(0, 201, 255, 0.1);
+            border-radius: 8px;
+            border: 1px dashed var(--highlight);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.1rem;
+        }
+
+        .formula::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, transparent 45%, rgba(0, 201, 255, 0.1) 50%, transparent 55%);
+            background-size: 10px 10px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .example {
+            background: rgba(146, 254, 157, 0.1);
+            border-left: 4px solid var(--tertiary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Lists & Tables */
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 1.8rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background-color: rgba(138, 43, 226, 0.2);
+            font-family: 'Electrolize', sans-serif;
+            color: var(--highlight);
+            font-size: 0.95rem;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+
+        tr:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* Concept Cards */
+        .concept-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .concept-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(138, 43, 226, 0.2);
+        }
+
+        .concept-card.newton {
+            border-top: 4px solid var(--primary);
+        }
+
+        .concept-card.kepler {
+            border-top: 4px solid var(--secondary);
+        }
+
+        .concept-card.satellite {
+            border-top: 4px solid var(--tertiary);
+        }
+
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title.newton { color: var(--primary); }
+        .card-title.kepler { color: var(--secondary); }
+        .card-title.satellite { color: var(--tertiary); }
+
+        /* Swiper Carousel */
+        .swiper-container {
+            width: 100%;
+            height: auto;
+            min-height: 180px;
+            margin: 2.5rem 0;
+            will-change: transform;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .swiper-slide {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+            font-family: 'Electrolize', sans-serif;
+            padding: 1.2rem;
+            box-sizing: border-box;
+            text-align: center;
+            min-height: 180px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-out;
+            transform: translateZ(0);
+            height: auto;
+        }
+
+        .swiper-slide:hover {
+            transform: translateY(-5px);
+        }
+
+        .swiper-slide div {
+            width: 100%;
+        }
+
+        .swiper-title {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin-bottom: 0.5rem;
+            font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+        }
+
+        .swiper-text {
+            font-family: 'Quicksand', sans-serif;
+            font-size: clamp(0.85rem, 1.1vw, 1rem);
+        }
+
+        /* Swiper Navigation */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: var(--highlight);
+            background: rgba(0, 0, 0, 0.5);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            backdrop-filter: blur(10px);
+            margin-top: -17.5px;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .swiper-pagination-bullet {
+            background: var(--text);
+            opacity: 0.5;
+            width: 8px;
+            height: 8px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: var(--highlight);
+            opacity: 1;
+        }
+
+        /* Problem Solving Section */
+        .problem-solving {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .problem-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary);
+        }
+
+        .problem-title {
+            color: var(--primary);
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Orbital Visualization */
+        .orbit-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .orbit-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .orbit-title {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--highlight);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .orbit-icon {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin: 1rem 0;
+            animation: orbit 6s linear infinite;
+        }
+
+        .orbit-desc {
+            font-size: 0.9rem;
+            color: var(--text);
+            opacity: 0.8;
+        }
+
+        /* Particles Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            will-change: transform;
+            opacity: 0.3;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .footer-column h3 {
+            color: var(--highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            transition: color 0.2s ease-out;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--highlight);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text);
+            font-size: 1.1rem;
+            transition: color 0.2s ease-out;
+        }
+
+        .social-links a:hover {
+            color: var(--highlight);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 1.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Quicksand', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease-out;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
+            transform: translateZ(0);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--highlight);
+            transform: translateY(-5px);
+        }
+
+        /* JEE/NEET Specific Styling */
+        .exam-highlight {
+            background: rgba(255, 235, 0, 0.1);
+            border: 2px solid var(--highlight);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .exam-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--highlight);
+            color: var(--bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(10px, 10px) rotate(90deg); }
+            50% { transform: translate(-5px, 15px) rotate(180deg); }
+            75% { transform: translate(5px, -5px) rotate(270deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        @keyframes orbit {
+            0% { transform: rotate(0deg) translateX(40px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(40px) rotate(-360deg); }
+        }
+
+        @keyframes gravitational-pull {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        .orbit-animation {
+            animation: orbit 6s linear infinite;
+        }
+
+        .gravitational-pull {
+            animation: gravitational-pull 2s ease-in-out infinite;
+        }
+
+        /* Solar System Animation */
+        .solar-system {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .sun {
+            width: 40px;
+            height: 40px;
+            background: var(--highlight);
+            border-radius: 50%;
+            box-shadow: 0 0 20px var(--highlight), 0 0 40px var(--highlight);
+            position: absolute;
+            z-index: 2;
+        }
+
+        .planet {
+            position: absolute;
+            border-radius: 50%;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        .planet-orbit {
+            position: absolute;
+            border: 1px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+        }
+
+        .planet-1 {
+            width: 10px;
+            height: 10px;
+            background: var(--primary);
+            animation: planet-orbit-1 4s linear infinite;
+        }
+
+        .planet-2 {
+            width: 12px;
+            height: 12px;
+            background: var(--secondary);
+            animation: planet-orbit-2 6s linear infinite;
+        }
+
+        .planet-3 {
+            width: 14px;
+            height: 14px;
+            background: var(--tertiary);
+            animation: planet-orbit-3 8s linear infinite;
+        }
+
+        @keyframes planet-orbit-1 {
+            0% { transform: rotate(0deg) translateX(60px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(60px) rotate(-360deg); }
+        }
+
+        @keyframes planet-orbit-2 {
+            0% { transform: rotate(0deg) translateX(90px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(90px) rotate(-360deg); }
+        }
+
+        @keyframes planet-orbit-3 {
+            0% { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background-image:
+                    radial-gradient(circle at 10% 20%, rgba(138, 43, 226, 0.05) 0%, transparent 20%),
+                    linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+            }
+
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                margin-top: 1rem;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.75rem 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            header, .info-panel {
+                backdrop-filter: blur(5px);
+            }
+
+            .container {
+                width: 95%;
+                padding: 0;
+            }
+
+            .info-panel {
+                padding: 1.5rem;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            th, td {
+                padding: 0.5rem;
+                font-size: 0.85rem;
+            }
+
+            .concept-cards, .problem-solving {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none;
+            }
+
+            .orbit-container {
+                grid-template-columns: 1fr;
+            }
+
+            .solar-system {
+                height: 120px;
+            }
+
+            .planet-orbit-1 { width: 50px; height: 50px; }
+            .planet-orbit-2 { width: 70px; height: 70px; }
+            .planet-orbit-3 { width: 90px; height: 90px; }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-panel {
+                padding: 1rem;
+            }
+
+            ul, ol {
+                padding-left: 1.5rem;
+            }
+
+            .formula {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+
+            .swiper-slide {
+                padding: 1rem;
+            }
+
+            .solar-system {
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-globe-americas"></i></span>
+                <span class="logo-text">Nerds Assemble</span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#newton-law">Newton's Law</a></li>
+                    <li><a href="#kepler-laws">Kepler's Laws</a></li>
+                    <li><a href="#gravitational-field">Gravitational Field</a></li>
+                    <li><a href="#satellite-motion">Satellite Motion</a></li>
+                    <li><a href="#escape-velocity">Escape Velocity</a></li>
+                    <li><a href="#problems">Problems</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="page-header" data-aos="fade-down">
+            <h1>Gravitation</h1>
+            <p class="subtitle">Class 11 Physics | JEE & NEET Preparation Guide</p>
+            <p>Master the universal force of gravitation - from planetary motion to satellites and astrophysics concepts</p>
+            
+            <!-- Solar System Animation -->
+            <div class="solar-system">
+                <div class="sun"></div>
+                <div class="planet-orbit" style="width: 120px; height: 120px;"></div>
+                <div class="planet-orbit" style="width: 180px; height: 180px;"></div>
+                <div class="planet-orbit" style="width: 240px; height: 240px;"></div>
+                <div class="planet planet-1"></div>
+                <div class="planet planet-2"></div>
+                <div class="planet planet-3"></div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="info-panel" id="introduction" data-aos="fade-up">
+            <h2>Introduction to Gravitation</h2>
+            <p>Gravitation is one of the four fundamental forces of nature. It is the force that attracts any two objects with mass. Newton's Law of Gravitation describes this universal attraction.</p>
+
+            <div class="definition">
+                <p><strong>Historical Context:</strong> Sir Isaac Newton formulated the Law of Universal Gravitation in 1687, explaining both the motion of celestial bodies and objects on Earth with a single law.</p>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card newton" data-aos="flip-left">
+                    <div class="card-title newton"><i class="fas fa-apple-alt"></i> Newton's Law</div>
+                    <p>Every particle attracts every other particle with a force proportional to their masses and inversely proportional to square of distance.</p>
+                    <div class="formula">F = G(m₁m₂)/r²</div>
+                </div>
+
+                <div class="concept-card kepler" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-title kepler"><i class="fas fa-satellite"></i> Kepler's Laws</div>
+                    <p>Three laws describing planetary motion around the Sun, derived from observations by Johannes Kepler.</p>
+                    <div class="formula">T² ∝ r³</div>
+                </div>
+
+                <div class="concept-card satellite" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card-title satellite"><i class="fas fa-rocket"></i> Satellite Motion</div>
+                    <p>Artificial satellites orbit Earth following the same gravitational principles as natural celestial bodies.</p>
+                    <div class="formula">v = √(GM/r)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newton's Law Section -->
+        <section class="info-panel" id="newton-law" data-aos="fade-up">
+            <h2>Newton's Law of Universal Gravitation</h2>
+            <p>Every particle in the universe attracts every other particle with a force that is directly proportional to the product of their masses and inversely proportional to the square of the distance between their centers.</p>
+
+            <div class="definition">
+                <p><strong>Mathematical Formulation:</strong> F = G(m₁m₂)/r², where G is the universal gravitational constant.</p>
+            </div>
+
+            <div class="formula">
+                F = G × (m₁ × m₂) / r²
+            </div>
+            <p><strong>Where:</strong><br>
+            • F = Gravitational force (N)<br>
+            • G = 6.674 × 10⁻¹¹ N·m²/kg²<br>
+            • m₁, m₂ = Masses of the two objects (kg)<br>
+            • r = Distance between centers of masses (m)</p>
+
+            <h3>Properties of Gravitational Force</h3>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Consequence</th>
+                </tr>
+                <tr>
+                    <td>Universal</td>
+                    <td>Acts between all objects with mass</td>
+                    <td>Exists everywhere in universe</td>
+                </tr>
+                <tr>
+                    <td>Conservative</td>
+                    <td>Work done is path independent</td>
+                    <td>Potential energy concept valid</td>
+                </tr>
+                <tr>
+                    <td>Central Force</td>
+                    <td>Acts along line joining centers</td>
+                    <td>Conserves angular momentum</td>
+                </tr>
+                <tr>
+                    <td>Inverse Square Law</td>
+                    <td>F ∝ 1/r²</td>
+                    <td>Strength decreases with distance²</td>
+                </tr>
+                <tr>
+                    <td>Always Attractive</td>
+                    <td>Never repulsive</td>
+                    <td>Only pulls, never pushes</td>
+                </tr>
+                <tr>
+                    <td>Weakest Force</td>
+                    <td>Relative strength = 1</td>
+                    <td>Dominates only at large scales</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Gravitational Constant (G):</strong></p>
+                <ul>
+                    <li>Value: G = 6.674 × 10⁻¹¹ N·m²/kg²</li>
+                    <li>First measured by Henry Cavendish in 1798</li>
+                    <li>Dimension: [M⁻¹L³T⁻²]</li>
+                    <li>Universal constant - same everywhere in universe</li>
+                    <li>Very small value ⇒ Gravitational force is weak for small masses</li>
+                </ul>
+            </div>
+
+            <h3>Gravitational Force Between Various Objects</h3>
+            <div class="orbit-container">
+                <div class="orbit-box">
+                    <div class="orbit-title">Earth & Object</div>
+                    <div class="orbit-icon gravitational-pull"><i class="fas fa-globe-asia"></i></div>
+                    <div class="orbit-desc">
+                        <p>F = G × (M_earth × m_object)/R_earth²</p>
+                        <p>Weight = mg = GMm/R²</p>
+                        <p>Thus: g = GM/R²</p>
+                    </div>
+                </div>
+
+                <div class="orbit-box">
+                    <div class="orbit-title">Two Planets</div>
+                    <div class="orbit-icon"><i class="fas fa-planet-ringed"></i></div>
+                    <div class="orbit-desc">
+                        <p>F = G × (M₁ × M₂)/r²</p>
+                        <p>r = distance between centers</p>
+                        <p>Keeps planets in orbit</p>
+                    </div>
+                </div>
+
+                <div class="orbit-box">
+                    <div class="orbit-title">Person & Earth</div>
+                    <div class="orbit-icon"><i class="fas fa-user-astronaut"></i></div>
+                    <div class="orbit-desc">
+                        <p>For m = 70 kg person:</p>
+                        <p>F = 70 × 9.8 ≈ 686 N</p>
+                        <p>Earth also pulls with same force on person</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Calculating Gravitational Force</div>
+                <p>Calculate gravitational force between two 1 kg masses separated by 1 m.</p>
+                <p><strong>Solution:</strong></p>
+                <p>F = G × (m₁ × m₂)/r²</p>
+                <p>F = (6.674 × 10⁻¹¹ × 1 × 1)/(1²)</p>
+                <p>F = 6.674 × 10⁻¹¹ N</p>
+                <p><em>This extremely small force shows why we don't feel gravitational attraction to ordinary objects.</em></p>
+            </div>
+        </section>
+
+        <!-- Kepler's Laws Section -->
+        <section class="info-panel" id="kepler-laws" data-aos="fade-up">
+            <h2>Kepler's Laws of Planetary Motion</h2>
+            <p>Johannes Kepler formulated three laws based on Tycho Brahe's observational data, describing how planets move around the Sun.</p>
+
+            <div class="definition">
+                <p><strong>Historical Significance:</strong> Kepler's laws (1609-1619) provided the foundation for Newton's Law of Gravitation and revolutionized our understanding of celestial mechanics.</p>
+            </div>
+
+            <h3>The Three Laws</h3>
+            <table>
+                <tr>
+                    <th>Law</th>
+                    <th>Statement</th>
+                    <th>Mathematical Form</th>
+                    <th>Implication</th>
+                </tr>
+                <tr>
+                    <td>First Law<br>(Law of Orbits)</td>
+                    <td>Planets move in elliptical orbits with Sun at one focus</td>
+                    <td>Ellipse equation</td>
+                    <td>Orbits are elliptical, not circular</td>
+                </tr>
+                <tr>
+                    <td>Second Law<br>(Law of Areas)</td>
+                    <td>Line joining planet to Sun sweeps equal areas in equal times</td>
+                    <td>dA/dt = constant</td>
+                    <td>Planet moves faster when closer to Sun</td>
+                </tr>
+                <tr>
+                    <td>Third Law<br>(Law of Periods)</td>
+                    <td>Square of orbital period is proportional to cube of semi-major axis</td>
+                    <td>T² ∝ r³ or T²/r³ = constant</td>
+                    <td>Planets farther from Sun have longer years</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Kepler's Third Law (Detailed):</strong></p>
+                <div class="formula">T² = (4π²/GM) × r³</div>
+                <p>For solar system: T² ∝ r³, where T is orbital period and r is average distance from Sun</p>
+                <p>Constant = 4π²/GM_sun for all planets</p>
+            </div>
+
+            <h3>Elliptical Orbit Parameters</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Semi-major Axis (a)</div>
+                    <p>Half the longest diameter of ellipse.</p>
+                    <div class="formula">Average distance from Sun</div>
+                    <p>For circular orbit: a = radius</p>
+                    <p>Used in Kepler's Third Law</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Eccentricity (e)</div>
+                    <p>Measure of how elliptical an orbit is.</p>
+                    <div class="formula">0 ≤ e < 1</div>
+                    <p>e = 0: Perfect circle</p>
+                    <p>e ≈ 0.0167: Earth's orbit (nearly circular)</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Perihelion & Aphelion</div>
+                    <p>Closest and farthest points from Sun.</p>
+                    <div class="formula">Perihelion: r_min = a(1 - e)</div>
+                    <div class="formula">Aphelion: r_max = a(1 + e)</div>
+                    <p>Earth: Perihelion in January, Aphelion in July</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Kepler's Laws for Satellites</h4>
+                <p>Kepler's laws apply to any orbital motion:</p>
+                <div class="formula">For Earth satellites: T² = (4π²/GM_earth) × r³</div>
+                <p>For geostationary satellites: T = 24 hours, r = 42,164 km from Earth's center</p>
+                <p>For circular orbits: v = √(GM/r), independent of satellite mass</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Kepler's Third Law Application</div>
+                <p>Mars is 1.52 times farther from Sun than Earth. Find Mars' orbital period.</p>
+                <p><strong>Solution:</strong></p>
+                <p>Using T² ∝ r³:</p>
+                <p>T_mars²/T_earth² = (r_mars/r_earth)³</p>
+                <p>T_mars² = (1.52)³ × (1 year)²</p>
+                <p>T_mars = √(3.51) × 1 year ≈ 1.87 years</p>
+                <p>Mars takes about 1.87 Earth years to orbit Sun.</p>
+            </div>
+        </section>
+
+        <!-- Gravitational Field Section -->
+        <section class="info-panel" id="gravitational-field" data-aos="fade-up">
+            <h2>Gravitational Field and Potential</h2>
+            <p>The gravitational field is the region around a mass where its gravitational influence can be felt. Gravitational potential is the work done to bring a unit mass from infinity to that point.</p>
+
+            <div class="definition">
+                <p><strong>Gravitational Field Intensity (g):</strong> Force experienced by unit mass placed in the gravitational field. g = F/m (vector quantity).</p>
+            </div>
+
+            <h3>Gravitational Field Formulas</h3>
+            <table>
+                <tr>
+                    <th>Situation</th>
+                    <th>Gravitational Field (g)</th>
+                    <th>Direction</th>
+                </tr>
+                <tr>
+                    <td>Point mass M at distance r</td>
+                    <td>g = GM/r²</td>
+                    <td>Towards mass</td>
+                </tr>
+                <tr>
+                    <td>On Earth's surface</td>
+                    <td>g = GM/R² ≈ 9.8 m/s²</td>
+                    <td>Towards Earth's center</td>
+                </tr>
+                <tr>
+                    <td>At height h above Earth</td>
+                    <td>g' = GM/(R+h)² = g[R²/(R+h)²]</td>
+                    <td>Towards Earth's center</td>
+                </tr>
+                <tr>
+                    <td>At depth d below Earth</td>
+                    <td>g' = g(1 - d/R)</td>
+                    <td>Towards Earth's center</td>
+                </tr>
+                <tr>
+                    <td>Inside Earth (uniform density)</td>
+                    <td>g ∝ r (linear)</td>
+                    <td>Towards Earth's center</td>
+                </tr>
+            </table>
+
+            <h3>Gravitational Potential (V)</h3>
+            <div class="formula">
+                V = -GM/r (for point mass)
+            </div>
+            <p><strong>Properties:</strong></p>
+            <ul>
+                <li>Scalar quantity (J/kg)</li>
+                <li>Negative (work done against gravity is positive)</li>
+                <li>Zero at infinity</li>
+                <li>g = -dV/dr (field is negative gradient of potential)</li>
+            </ul>
+
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Gravitational Potential Energy</div>
+                    <p>Energy due to position in gravitational field.</p>
+                    <div class="formula">U = -G(m₁m₂)/r</div>
+                    <p>For Earth: U = -GMm/r</p>
+                    <p>Negative ⇒ Bound system</p>
+                    <p>Zero at infinite separation</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Escape Energy</div>
+                    <p>Minimum energy to escape gravitational field.</p>
+                    <div class="formula">E_escape = GMm/R</div>
+                    <p>From surface: ½mv_escape² = GMm/R</p>
+                    <p>Thus: v_escape = √(2GM/R)</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Orbital Energy</div>
+                    <p>Total energy of orbiting body.</p>
+                    <div class="formula">E_total = -GMm/(2r)</div>
+                    <p>Kinetic: K = GMm/(2r)</p>
+                    <p>Potential: U = -GMm/r</p>
+                    <p>Total: E = K + U = -GMm/(2r)</p>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Variation of g with Height and Depth:</strong></p>
+                <div class="formula">At height h: g_h = g[R²/(R+h)²] ≈ g(1 - 2h/R) for h << R</div>
+                <div class="formula">At depth d: g_d = g(1 - d/R) (linear decrease)</div>
+                <p>At Earth's center: g = 0 (equal pull from all directions)</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Gravitational Potential Energy</div>
+                <p>Calculate gravitational potential energy of 1000 kg satellite at 7000 km from Earth's center. (M_earth = 6×10²⁴ kg, G = 6.67×10⁻¹¹)</p>
+                <p><strong>Solution:</strong></p>
+                <p>U = -GMm/r</p>
+                <p>U = -(6.67×10⁻¹¹ × 6×10²⁴ × 1000)/(7×10⁶)</p>
+                <p>U = -5.72×10¹⁰ J</p>
+                <p>Negative sign indicates bound system (satellite is in Earth's gravitational field)</p>
+            </div>
+        </section>
+
+        <!-- Satellite Motion Section -->
+        <section class="info-panel" id="satellite-motion" data-aos="fade-up">
+            <h2>Satellite Motion</h2>
+            <p>Satellites are objects in orbit around celestial bodies, maintained by gravitational attraction. Their motion follows the same principles as planetary motion.</p>
+
+            <div class="definition">
+                <p><strong>Orbital Velocity:</strong> The velocity required for a satellite to maintain a stable circular orbit at a given distance from the planet's center.</p>
+            </div>
+
+            <h3>Key Parameters for Circular Orbits</h3>
+            <table>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Formula</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Orbital Velocity (v₀)</td>
+                    <td>v₀ = √(GM/r)</td>
+                    <td>Speed needed for circular orbit</td>
+                </tr>
+                <tr>
+                    <td>Time Period (T)</td>
+                    <td>T = 2π√(r³/GM)</td>
+                    <td>Time for one complete orbit</td>
+                </tr>
+                <tr>
+                    <td>Angular Velocity (ω)</td>
+                    <td>ω = √(GM/r³)</td>
+                    <td>Angular speed of satellite</td>
+                </tr>
+                <tr>
+                    <td>Kinetic Energy (K)</td>
+                    <td>K = GMm/(2r)</td>
+                    <td>Energy due to motion</td>
+                </tr>
+                <tr>
+                    <td>Potential Energy (U)</td>
+                    <td>U = -GMm/r</td>
+                    <td>Energy due to position</td>
+                </tr>
+                <tr>
+                    <td>Total Energy (E)</td>
+                    <td>E = -GMm/(2r)</td>
+                    <td>K + U, negative for bound orbit</td>
+                </tr>
+            </table>
+
+            <h3>Types of Satellites</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Low Earth Orbit (LEO)</div>
+                    <p>Altitude: 160-2000 km</p>
+                    <div class="formula">v ≈ 7.8 km/s</div>
+                    <div class="formula">T ≈ 90 minutes</div>
+                    <p>Examples: ISS, Hubble, spy satellites</p>
+                    <p>Applications: Imaging, research, communication</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Geostationary Orbit (GEO)</div>
+                    <p>Altitude: 35,786 km</p>
+                    <div class="formula">v ≈ 3.07 km/s</div>
+                    <div class="formula">T = 24 hours</div>
+                    <p>Fixed above equator, stationary relative to Earth</p>
+                    <p>Applications: Communication, weather, TV broadcast</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Polar Orbit</div>
+                    <p>Altitude: 700-800 km</p>
+                    <div class="formula">v ≈ 7.5 km/s</div>
+                    <div class="formula">T ≈ 100 minutes</p>
+                    <p>Passes over poles, covers entire Earth</p>
+                    <p>Applications: Mapping, reconnaissance, environment monitoring</p>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Geostationary Satellite Conditions:</strong></p>
+                <ol>
+                    <li>Orbit must be circular</li>
+                    <li>Orbit must be in equatorial plane (inclination = 0°)</li>
+                    <li>Orbital period = 24 hours (synchronous with Earth's rotation)</li>
+                    <li>Orbital direction same as Earth's rotation (west to east)</li>
+                </ol>
+                <div class="formula">Orbital radius: r = [GMT²/(4π²)]^(1/3) ≈ 42,164 km from Earth's center</div>
+                <div class="formula">Height above surface: h = r - R ≈ 35,786 km</div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Energy Considerations in Orbit Changes</h4>
+                <p>To move satellite from orbit r₁ to r₂ (r₂ > r₁):</p>
+                <div class="formula">ΔE = GMm(1/r₁ - 1/r₂)/2</div>
+                <p>Energy increases (less negative) for higher orbit</p>
+                <p>To escape from orbit r: E_escape = GMm/r (additional to orbital energy)</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Satellite Orbit Calculation</div>
+                <p>Find orbital velocity and period of satellite at 500 km above Earth's surface.</p>
+                <p><strong>Solution:</strong></p>
+                <p>R = 6400 km, h = 500 km ⇒ r = R + h = 6900 km = 6.9×10⁶ m</p>
+                <p>v = √(GM/r) = √[(6.67×10⁻¹¹ × 6×10²⁴)/(6.9×10⁶)]</p>
+                <p>v = √(5.8×10⁷) ≈ 7616 m/s ≈ 7.62 km/s</p>
+                <p>T = 2π√(r³/GM) = 2π√[(6.9×10⁶)³/(6.67×10⁻¹¹ × 6×10²⁴)]</p>
+                <p>T ≈ 5670 s ≈ 94.5 minutes</p>
+            </div>
+        </section>
+
+        <!-- Escape Velocity Section -->
+        <section class="info-panel" id="escape-velocity" data-aos="fade-up">
+            <h2>Escape Velocity</h2>
+            <p>Escape velocity is the minimum speed needed for an object to break free from the gravitational attraction of a celestial body without further propulsion.</p>
+
+            <div class="definition">
+                <p><strong>Physical Meaning:</strong> The kinetic energy required to overcome gravitational potential energy and reach infinity with zero speed.</p>
+            </div>
+
+            <div class="formula">
+                v_escape = √(2GM/R)
+            </div>
+            <p><strong>Where:</strong><br>
+            • G = Gravitational constant<br>
+            • M = Mass of celestial body<br>
+            • R = Radius of celestial body</p>
+
+            <h3>Escape Velocity for Different Bodies</h3>
+            <table>
+                <tr>
+                    <th>Celestial Body</th>
+                    <th>Escape Velocity</th>
+                    <th>Mass (kg)</th>
+                    <th>Radius (km)</th>
+                </tr>
+                <tr>
+                    <td>Earth</td>
+                    <td>11.2 km/s</td>
+                    <td>5.97×10²⁴</td>
+                    <td>6371</td>
+                </tr>
+                <tr>
+                    <td>Moon</td>
+                    <td>2.38 km/s</td>
+                    <td>7.35×10²²</td>
+                    <td>1737</td>
+                </tr>
+                <tr>
+                    <td>Sun</td>
+                    <td>618 km/s</td>
+                    <td>1.99×10³⁰</td>
+                    <td>696,000</td>
+                </tr>
+                <tr>
+                    <td>Mars</td>
+                    <td>5.03 km/s</td>
+                    <td>6.42×10²³</td>
+                    <td>3390</td>
+                </tr>
+                <tr>
+                    <td>Jupiter</td>
+                    <td>59.5 km/s</td>
+                    <td>1.90×10²⁷</td>
+                    <td>69,911</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Key Points about Escape Velocity:</strong></p>
+                <ul>
+                    <li>Independent of mass of escaping object (m cancels out)</li>
+                    <li>Depends only on mass and radius of celestial body</li>
+                    <li>Direction doesn't matter (scalar minimum speed)</li>
+                    <li>Assumes no atmospheric friction or other forces</li>
+                    <li>For Earth: v_escape ≈ 11.2 km/s (about 40,000 km/h)</li>
+                    <li>Black hole: v_escape ≥ speed of light ⇒ nothing escapes</li>
+                </ul>
+            </div>
+
+            <h3>Orbital Velocity vs Escape Velocity</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Orbital Velocity</div>
+                    <div class="formula">v_orbital = √(GM/r)</div>
+                    <p>For circular orbit</p>
+                    <p>Keeps object in orbit</p>
+                    <p>For low Earth orbit: ≈ 7.9 km/s</p>
+                    <p>Relation: v_escape = √2 × v_orbital</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Escape Velocity</div>
+                    <div class="formula">v_escape = √(2GM/r)</div>
+                    <p>To leave gravitational influence</p>
+                    <p>Reach infinity with zero speed</p>
+                    <p>For Earth: ≈ 11.2 km/s</p>
+                    <p>Exactly √2 times orbital velocity</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Relation</div>
+                    <div class="formula">v_escape = √2 × v_orbital</div>
+                    <p>For same distance r</p>
+                    <p>Proof: √(2GM/r) = √2 × √(GM/r)</p>
+                    <p>Escape velocity is 41.4% greater than orbital velocity</p>
+                    <p>Escape energy = 2 × Orbital kinetic energy</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">IMPORTANT</div>
+                <h4>Black Holes and Schwarzschild Radius</h4>
+                <p>When escape velocity ≥ speed of light (c):</p>
+                <div class="formula">√(2GM/R) ≥ c ⇒ R ≤ 2GM/c²</div>
+                <p>Schwarzschild radius: R_s = 2GM/c²</p>
+                <p>For object compressed within this radius ⇒ Black hole forms</p>
+                <p>For Earth: R_s ≈ 9 mm (if Earth were compressed to this size!)</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Escape Velocity Calculation</div>
+                <p>Calculate escape velocity from Moon's surface.</p>
+                <p><strong>Given:</strong> M_moon = 7.35×10²² kg, R_moon = 1.74×10⁶ m, G = 6.67×10⁻¹¹</p>
+                <p><strong>Solution:</strong></p>
+                <p>v_escape = √(2GM/R)</p>
+                <p>v = √[(2 × 6.67×10⁻¹¹ × 7.35×10²²)/(1.74×10⁶)]</p>
+                <p>v = √(5.63×10⁶) ≈ 2373 m/s ≈ 2.37 km/s</p>
+                <p>Much lower than Earth's 11.2 km/s ⇒ easier to launch from Moon</p>
+            </div>
+        </section>
+
+        <!-- Problem Solving Section -->
+        <section class="info-panel" id="problems" data-aos="fade-up">
+            <h2>Problem Solving Strategies</h2>
+            <p>Effective techniques for solving gravitation problems in JEE and NEET.</p>
+
+            <div class="problem-solving">
+                <div class="problem-box">
+                    <div class="problem-title">Type 1: Force & Field Calculations</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify masses and distance between centers</li>
+                        <li>Use F = Gm₁m₂/r² for force</li>
+                        <li>Use g = GM/r² for field intensity</li>
+                        <li>Remember vector nature for multiple masses</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> For symmetrical mass distributions, use symmetry to simplify</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 2: Orbital Motion</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Use v = √(GM/r) for orbital velocity</li>
+                        <li>Use T = 2π√(r³/GM) for time period</li>
+                        <li>Use Kepler's Third Law: T² ∝ r³</li>
+                        <li>Remember energy formulas: K = GMm/(2r), U = -GMm/r</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> For circular orbits, centripetal force = gravitational force</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 3: Energy & Escape Velocity</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Use U = -GMm/r for potential energy</li>
+                        <li>Use v_escape = √(2GM/R)</li>
+                        <li>Apply energy conservation: K₁ + U₁ = K₂ + U₂</li>
+                        <li>For orbit changes, calculate energy difference</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Escape velocity is independent of object's mass</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED TIP</div>
+                <h4>Gravitational Field of Extended Bodies</h4>
+                <p>• For spherical shell: Field inside = 0, outside = GM/r² (as point mass)</p>
+                <p>• For solid sphere: Field inside ∝ r, outside = GM/r²</p>
+                <p>• For rod/ring: Use integration or symmetry arguments</p>
+                <p>• For Earth: Consider variation with height/depth</p>
+            </div>
+        </section>
+
+        <!-- Key Facts Carousel -->
+        <div class="swiper-container" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">NEWTON'S LAW</div>
+                        <div class="swiper-text">F = G(m₁m₂)/r². Universal, always attractive, weakest fundamental force, conservative</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">GRAVITATIONAL CONSTANT</div>
+                        <div class="swiper-text">G = 6.674×10⁻¹¹ N·m²/kg². Cavendish experiment, universal, dimension [M⁻¹L³T⁻²]</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">KEPLER'S LAWS</div>
+                        <div class="swiper-text">1: Elliptical orbits. 2: Equal areas in equal times. 3: T² ∝ r³. Foundation for Newton</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">ORBITAL VELOCITY</div>
+                        <div class="swiper-text">v = √(GM/r). Independent of satellite mass. For low Earth orbit: ~7.9 km/s</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">ESCAPE VELOCITY</div>
+                        <div class="swiper-text">v_escape = √(2GM/R). Earth: 11.2 km/s. Independent of object mass. v_escape = √2 × v_orbital</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">GEO-STATIONARY SATELLITE</div>
+                        <div class="swiper-text">Altitude: 35,786 km. Period: 24 h. Equatorial orbit. Fixed relative to Earth. r = [GMT²/(4π²)]^(1/3)</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">GRAVITATIONAL POTENTIAL</div>
+                        <div class="swiper-text">V = -GM/r. Scalar, negative, zero at infinity. g = -dV/dr. U = mV</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">VARIATION OF g</div>
+                        <div class="swiper-text">Height: g' = g[R²/(R+h)²]. Depth: g' = g(1 - d/R). Latitude: Max at poles, min at equator</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- Summary Section -->
+        <section class="info-panel" data-aos="fade-up">
+            <h2>Chapter Summary & Formulas</h2>
+            
+            <h3>Key Formulas</h3>
+            <div class="concept-cards">
+                <div class="concept-card newton">
+                    <div class="card-title newton">Newton's Law & Field</div>
+                    <div class="formula">F = G(m₁m₂)/r²</div>
+                    <div class="formula">g = GM/r²</div>
+                    <div class="formula">V = -GM/r</div>
+                    <div class="formula">U = -GMm/r</div>
+                </div>
+
+                <div class="concept-card kepler">
+                    <div class="card-title kepler">Orbital Motion</div>
+                    <div class="formula">v_orbital = √(GM/r)</div>
+                    <div class="formula">T = 2π√(r³/GM)</div>
+                    <div class="formula">v_escape = √(2GM/R)</div>
+                    <div class="formula">T² = (4π²/GM)r³</div>
+                </div>
+
+                <div class="concept-card satellite">
+                    <div class="card-title satellite">Satellite Energy</div>
+                    <div class="formula">K = GMm/(2r)</div>
+                    <div class="formula">U = -GMm/r</div>
+                    <div class="formula">E_total = -GMm/(2r)</div>
+                    <div class="formula">E_binding = GMm/(2r)</div>
+                </div>
+            </div>
+
+            <h3>Important Points for JEE/NEET</h3>
+            <ul>
+                <li>Gravitational force is always attractive, never repulsive</li>
+                <li>G is universal constant, same everywhere in universe</li>
+                <li>Kepler's laws apply to any two-body system (planet-sun, satellite-Earth)</li>
+                <li>Orbital velocity is independent of satellite mass</li>
+                <li>Geostationary satellites must be in equatorial plane with period 24 hours</li>
+                <li>Escape velocity is independent of mass and direction of projection</li>
+                <li>Gravitational field inside spherical shell is zero</li>
+                <li>g decreases with height and depth, but differently</li>
+            </ul>
+
+            <div class="important">
+                <p><strong>Common Mistakes to Avoid:</strong></p>
+                <ul>
+                    <li>Using r as distance from surface instead of from center</li>
+                    <li>Forgetting that orbital velocity is for circular orbits</li>
+                    <li>Confusing orbital period with rotational period</li>
+                    <li>Thinking escape velocity depends on object's mass</li>
+                    <li>Using wrong formula for g at height vs depth</li>
+                    <li>Forgetting negative sign in potential and potential energy</li>
+                    <li>Confusing geostationary with geosynchronous orbits</li>
+                    <li>Not considering vector nature when multiple masses are involved</li>
+                </ul>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">SUPER TIP</div>
+                <h4>Quick Reference Values</h4>
+                <p><strong>Earth:</strong> M = 5.97×10²⁴ kg, R = 6371 km, g = 9.8 m/s²</p>
+                <p><strong>Moon:</strong> M = 7.35×10²² kg, R = 1737 km, g = 1.62 m/s²</p>
+                <p><strong>Sun:</strong> M = 1.99×10³⁰ kg, R = 696,000 km</p>
+                <p><strong>G:</strong> 6.674×10⁻¹¹ N·m²/kg²</p>
+                <p><strong>Useful Approximations:</strong> GM_earth ≈ 4×10¹⁴, √GM_earth ≈ 6.3×10⁷ in SI units</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Nerds Assemble</h3>
+                <p>Master Gravitation for JEE & NEET. Comprehensive physics resource with detailed explanations and problem-solving strategies.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#newton-law">Newton's Law</a></li>
+                    <li><a href="#kepler-laws">Kepler's Laws</a></li>
+                    <li><a href="#gravitational-field">Gravitational Field</a></li>
+                    <li><a href="#satellite-motion">Satellite Motion</a></li>
+                    <li><a href="#escape-velocity">Escape Velocity</a></li>
+                    <li><a href="#problems">Problem Solving</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> 44mr.invisible@gmail.com</li>
+                    <li><i class="fas fa-book"></i> NCERT Physics Class 11</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Nerds Assemble. All rights reserved. | Designed for JEE & NEET Aspirants | Gravitation</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Gravitation - JavaScript
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ?
+                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+            }
+
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+
+            function handleScroll() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('active');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                }
+            }
+
+            // Debounced scroll event
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(handleScroll, 50);
+            }, { passive: true });
+
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: window.innerWidth < 768 ? 100 : 120,
+                    easing: 'ease-out-quad'
+                });
+            }
+
+            // Initialize Swiper
+            if (typeof Swiper !== 'undefined') {
+                const swiper = new Swiper('.swiper-container', {
+                    loop: true,
+                    autoplay: {
+                        delay: 3500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 25
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        }
+                    }
+                });
+            }
+
+            // Smooth Scroll for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        if (mainNav && mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                });
+            });
+
+            // Back to Top Button Click
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Create Particles
+            createParticles();
+            
+            // Enhance Solar System Animation
+            enhanceSolarSystem();
+        });
+
+        // Create Particles Function
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
+
+            const particleCount = window.innerWidth < 768 ? 20 : 30;
+            particlesContainer.innerHTML = '';
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                const size = Math.random() * 3 + 1;
+                const posX = Math.random() * window.innerWidth;
+                const posY = Math.random() * window.innerHeight;
+                const duration = Math.random() * 15 + 10;
+                const delay = Math.random() * 5;
+
+                particle.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}px;
+                    top: ${posY}px;
+                    opacity: ${Math.random() * 0.3 + 0.1};
+                    animation: float ${duration}s ease-in-out ${delay}s infinite;
+                    background: rgba(255,255,255,0.3);
+                `;
+
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Enhance Solar System Animation
+        function enhanceSolarSystem() {
+            const solarSystem = document.querySelector('.solar-system');
+            if (!solarSystem) return;
+
+            // Add more interactive elements
+            const sun = solarSystem.querySelector('.sun');
+            if (sun) {
+                sun.addEventListener('mouseenter', () => {
+                    sun.style.boxShadow = '0 0 30px var(--highlight), 0 0 60px var(--highlight), 0 0 90px var(--highlight)';
+                    sun.style.transform = 'scale(1.2)';
+                    sun.style.transition = 'all 0.3s ease';
+                });
+                
+                sun.addEventListener('mouseleave', () => {
+                    sun.style.boxShadow = '0 0 20px var(--highlight), 0 0 40px var(--highlight)';
+                    sun.style.transform = 'scale(1)';
+                });
+            }
+
+            // Add tooltip effect to planets
+            const planets = solarSystem.querySelectorAll('.planet');
+            planets.forEach((planet, index) => {
+                planet.addEventListener('mouseenter', () => {
+                    const planetNames = ['Mercury', 'Venus', 'Earth'];
+                    planet.style.transform = 'scale(1.5)';
+                    planet.style.transition = 'transform 0.3s ease';
+                    
+                    // Create tooltip
+                    const tooltip = document.createElement('div');
+                    tooltip.textContent = planetNames[index] || `Planet ${index + 1}`;
+                    tooltip.style.position = 'absolute';
+                    tooltip.style.background = 'rgba(0,0,0,0.8)';
+                    tooltip.style.color = 'white';
+                    tooltip.style.padding = '5px 10px';
+                    tooltip.style.borderRadius = '5px';
+                    tooltip.style.fontSize = '0.8rem';
+                    tooltip.style.bottom = '100%';
+                    tooltip.style.left = '50%';
+                    tooltip.style.transform = 'translateX(-50%)';
+                    tooltip.style.whiteSpace = 'nowrap';
+                    
+                    planet.appendChild(tooltip);
+                });
+                
+                planet.addEventListener('mouseleave', () => {
+                    planet.style.transform = 'scale(1)';
+                    const tooltip = planet.querySelector('div');
+                    if (tooltip) {
+                        tooltip.remove();
+                    }
+                });
+            });
+        }
+
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(createParticles, 250);
+        });
+    </script>
+</body>
+</html>
