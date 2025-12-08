@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKVRN3GREN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKVRN3GREN');
+</script>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets | Class 11 Maths | JEE Preparation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Pacifico&family=Dancing+Script:wght@700&family=Abril+Fatface&family=Playfair+Display:wght@700&family=Raleway:wght@300;800&family=Quicksand:wght@500&family=Poiret+One&family=Amatic+SC:wght@700&family=Caveat:wght@700&family=Kaushan+Script&family=Libre+Baskerville&family=Merriweather&family=Nunito:wght@800&family=Oswald:wght@500&family=Roboto+Slab:wght@700&family=Sacramento&family=Tangerine:wght@700&family=Yeseva+One&family=Electrolize&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+  <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/planet-universe-svgrepo-com.svg">
+
+  
+<style>
+    /* MathMaster - Optimized CSS for Sets Theory */
+:root {
+    --primary: #3f51b5;
+    --secondary: #ff5722;
+    --tertiary: #4caf50;
+    --bg: #0a0a20;
+    --text: #ffffff;
+    --highlight: #ffeb3b;
+    --nav-bg: rgba(10, 5, 30, 0.95);
+}
+
+/* Base Styles & Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(63, 81, 181, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(255, 87, 34, 0.1) 0%, transparent 20%),
+        linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+}
+
+/* Typography */
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    background: linear-gradient(45deg, var(--primary), var(--secondary), var(--tertiary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px rgba(63, 81, 181, 0.5);
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--highlight);
+    margin: 2rem 0 1.5rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), transparent);
+    border-radius: 3px;
+}
+
+h3 {
+    font-family: 'Roboto Slab', serif;
+    color: var(--secondary);
+    margin: 1.5rem 0 1rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: clamp(1rem, 1.2vw, 1.1rem);
+}
+
+/* Layout Components */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 1rem;
+}
+
+.subtitle {
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+/* Header & Navigation */
+header {
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 0;
+    transform: translateZ(0);
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.logo-icon {
+    color: var(--highlight);
+    font-size: 1.8rem;
+}
+
+.logo-text {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 1.5rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-family: 'Electrolize', sans-serif;
+    font-size: 1rem;
+    transition: color 0.2s ease-out;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-links a:hover {
+    color: var(--highlight);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--highlight);
+    transition: width 0.2s ease-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Content Panels */
+.info-panel {
+    background: rgba(0,0,0,0.5);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: translateZ(0);
+    will-change: transform, opacity;
+}
+
+.info-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%);
+    background-size: 20px 20px;
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+/* Special Content Blocks */
+.important {
+    background: rgba(255, 87, 34, 0.1);
+    border-left: 4px solid var(--secondary);
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+    box-shadow: inset 0 0 10px rgba(255, 87, 34, 0.1);
+}
+
+.definition {
+    background: rgba(76, 175, 80, 0.1);
+    border-left: 4px solid var(--tertiary);
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+    box-shadow: inset 0 0 10px rgba(76, 175, 80, 0.1);
+}
+
+.formula {
+    font-family: 'Audiowide', cursive;
+    color: var(--highlight);
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 235, 59, 0.1);
+    border-radius: 8px;
+    border: 1px dashed var(--highlight);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.formula::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(45deg, transparent 45%, rgba(255, 235, 59, 0.1) 50%, transparent 55%);
+    background-size: 10px 10px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.example {
+    background: rgba(63, 81, 181, 0.1);
+    border-left: 4px solid var(--primary);
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.example-title {
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+/* Lists & Tables */
+ul, ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+th {
+    background-color: rgba(63, 81, 181, 0.2);
+    font-family: 'Electrolize', sans-serif;
+    color: var(--highlight);
+}
+
+tr:hover {
+    background-color: rgba(255,255,255,0.05);
+}
+
+/* Swiper Carousel */
+.swiper-container {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    margin: 3rem 0;
+    will-change: transform;
+}
+
+.swiper-slide {
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.2);
+    font-family: 'Electrolize', sans-serif;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    text-align: center;
+    min-height: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-out;
+    transform: translateZ(0);
+}
+
+.swiper-slide:hover {
+    transform: translateY(-5px);
+}
+
+.swiper-slide div {
+    width: 100%;
+}
+
+.swiper-title {
+    font-family: 'Audiowide', cursive;
+    color: var(--highlight);
+    margin-bottom: 0.5rem;
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+}
+
+.swiper-text {
+    font-family: 'Quicksand', sans-serif;
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+}
+
+/* Particles Background */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    pointer-events: none;
+    will-change: transform;
+    opacity: 0.3;
+}
+
+/* Footer */
+footer {
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    padding: 2rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.footer-column h3 {
+    color: var(--highlight);
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    transition: color 0.2s ease-out;
+}
+
+.footer-links a:hover {
+    color: var(--highlight);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: var(--text);
+    font-size: 1.2rem;
+    transition: color 0.2s ease-out;
+}
+
+.social-links a:hover {
+    color: var(--highlight);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.9rem;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-out;
+    z-index: 999;
+    box-shadow: 0 5px 15px rgba(63, 81, 181, 0.3);
+    transform: translateZ(0);
+}
+
+.back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: var(--highlight);
+    transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(10px, 10px);
+    }
+    50% {
+        transform: translate(-5px, 15px);
+    }
+    75% {
+        transform: translate(5px, -5px);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .nav-links {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image: 
+            radial-gradient(circle at 10% 20%, rgba(63, 81, 181, 0.05) 0%, transparent 20%),
+            linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+    }
+    
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 1rem;
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.75rem 0;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+    
+    header, .info-panel {
+        backdrop-filter: blur(5px);
+    }
+
+    .container {
+        width: 95%;
+        padding: 0;
+    }
+    
+    .info-panel {
+        padding: 1.5rem;
+    }
+    
+    .info-panel::before {
+        background-size: 30px 30px;
+        opacity: 0.03;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    th, td {
+        padding: 0.5rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .info-panel {
+        padding: 1rem;
+    }
+    
+    ul, ol {
+        padding-left: 1.5rem;
+    }
+
+    .formula {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .swiper-slide {
+        padding: 1rem;
+    }
+}
+</style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-infinity"></i></span>
+                <span class="logo-text">MathMaster</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#representation">Representation</a></li>
+                    <li><a href="#types">Types of Sets</a></li>
+                    <li><a href="#operations">Operations</a></li>
+                    <li><a href="#venn-diagrams">Venn Diagrams</a></li>
+                    <li><a href="#applications">Applications</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="page-header" data-aos="fade-down">
+            <h1>Sets</h1>
+            <p class="subtitle">Class 11 Mathematics | JEE Preparation</p>
+            <p>Master the fundamental concepts of Set Theory with JEE-focused content and problem-solving techniques</p>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="info-panel" id="introduction" data-aos="fade-up">
+            <h2>Introduction to Sets</h2>
+            <p>Set theory forms the foundation of modern mathematics and is crucial for JEE preparation. It provides the language for describing mathematical concepts precisely.</p>
+            
+            <div class="definition">
+                <p><strong>Set:</strong> A well-defined collection of distinct objects. The objects in a set are called its <strong>elements</strong> or <strong>members</strong>.</p>
+            </div>
+            
+            <h3>Basic Terminology</h3>
+            <ul>
+                <li><strong>Element:</strong> An object belonging to a set (denoted by ∈)</li>
+                <li><strong>Cardinality:</strong> Number of elements in a set (denoted by |A| or n(A))</li>
+                <li><strong>Subset:</strong> A set A is a subset of B if all elements of A are in B (A ⊆ B)</li>
+                <li><strong>Proper Subset:</strong> A is a proper subset of B if A ⊆ B but A ≠ B (A ⊂ B)</li>
+                <li><strong>Power Set:</strong> Collection of all subsets of a set (P(A))</li>
+            </ul>
+            
+            <div class="important">
+                <p><strong>JEE Focus:</strong> Set theory questions in JEE often involve operations, Venn diagrams, and applications in probability. Understanding these concepts deeply will help in solving complex problems.</p>
+            </div>
+            
+            <div class="example">
+                <div class="example-title">JEE Problem Example:</div>
+                <p>If A = {1, 2, 3, 4}, B = {2, 3, 5, 6}, and C = {3, 4, 6, 7}, then find (A ∩ B) ∪ (B ∩ C).</p>
+                <p><strong>Solution:</strong> 
+                A ∩ B = {2, 3}, B ∩ C = {3, 6} <br>
+                ∴ (A ∩ B) ∪ (B ∩ C) = {2, 3, 6}</p>
+            </div>
+        </section>
+
+        <!-- Representation Section -->
+        <section class="info-panel" id="representation" data-aos="fade-up">
+            <h2>Representation of Sets</h2>
+            <p>Sets can be represented in different forms depending on the context and requirements.</p>
+            
+            <h3>Roster/Tabular Form</h3>
+            <p>All elements are listed explicitly within curly braces { }.</p>
+            <div class="formula">
+                A = {1, 2, 3, 4, 5} <br>
+                B = {a, e, i, o, u}
+            </div>
+            
+            <h3>Set-Builder Form</h3>
+            <p>Describes properties that elements must satisfy to belong to the set.</p>
+            <div class="formula">
+                A = {x | x is a natural number less than 6} <br>
+                B = {x : x is a vowel in English alphabet}
+            </div>
+            
+            <h3>Interval Notation</h3>
+            <p>Used for sets of real numbers between endpoints.</p>
+            <table>
+                <tr>
+                    <th>Interval Type</th>
+                    <th>Notation</th>
+                    <th>Set-Builder Form</th>
+                </tr>
+                <tr>
+                    <td>Closed</td>
+                    <td>[a, b]</td>
+                    <td>{x | a ≤ x ≤ b}</td>
+                </tr>
+                <tr>
+                    <td>Open</td>
+                    <td>(a, b)</td>
+                    <td>{x | a < x < b}</td>
+                </tr>
+                <tr>
+                    <td>Half-open</td>
+                    <td>[a, b)</td>
+                    <td>{x | a ≤ x < b}</td>
+                </tr>
+            </table>
+            
+            <div class="example">
+                <div class="example-title">JEE Problem Example:</div>
+                <p>Write the set A = {2, 4, 8, 16, 32} in set-builder form.</p>
+                <p><strong>Solution:</strong> A = {2ⁿ | n ∈ ℕ, 1 ≤ n ≤ 5}</p>
+            </div>
+        </section>
+
+        <!-- Types of Sets Section -->
+        <section class="info-panel" id="types" data-aos="fade-up">
+            <h2>Types of Sets</h2>
+            <p>Understanding different types of sets is fundamental for solving JEE problems.</p>
+            
+            <h3>Standard Types</h3>
+            <table>
+                <tr>
+                    <th>Set Type</th>
+                    <th>Definition</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Empty/Null</td>
+                    <td>Set with no elements</td>
+                    <td>∅ or {}</td>
+                </tr>
+                <tr>
+                    <td>Singleton</td>
+                    <td>Set with one element</td>
+                    <td>{5}</td>
+                </tr>
+                <tr>
+                    <td>Finite</td>
+                    <td>Countable number of elements</td>
+                    <td>{1, 2, 3}</td>
+                </tr>
+                <tr>
+                    <td>Infinite</td>
+                    <td>Uncountable elements</td>
+                    <td>ℕ = {1, 2, 3, ...}</td>
+                </tr>
+                <tr>
+                    <td>Universal</td>
+                    <td>Contains all objects under consideration</td>
+                    <td>U (context dependent)</td>
+                </tr>
+            </table>
+            
+            <h3>Special Sets in Mathematics</h3>
+            <ul>
+                <li><strong>ℕ:</strong> Natural numbers = {1, 2, 3, ...}</li>
+                <li><strong>ℤ:</strong> Integers = {..., -2, -1, 0, 1, 2, ...}</li>
+                <li><strong>ℚ:</strong> Rational numbers = {p/q | p, q ∈ ℤ, q ≠ 0}</li>
+                <li><strong>ℝ:</strong> Real numbers (all numbers on number line)</li>
+                <li><strong>ℂ:</strong> Complex numbers = {a + ib | a, b ∈ ℝ}</li>
+            </ul>
+            
+            <div class="important">
+                <p><strong>JEE Focus:</strong> Problems often involve operations on these standard sets. Remember that ℕ excludes 0 unless specified otherwise.</p>
+            </div>
+            
+            <div class="example">
+                <div class="example-title">JEE Problem Example:</div>
+                <p>If A = {x | x ∈ ℝ, x² - 5x + 6 = 0} and B = {2, 3, 4}, then find A × B.</p>
+                <p><strong>Solution:</strong> 
+                A = {2, 3} (roots of equation) <br>
+                A × B = {(2,2), (2,3), (2,4), (3,2), (3,3), (3,4)}</p>
+            </div>
+        </section>
+
+        <!-- Operations Section -->
+        <section class="info-panel" id="operations" data-aos="fade-up">
+            <h2>Set Operations</h2>
+            <p>Set operations allow us to combine and relate sets in various ways.</p>
+            
+            <h3>Basic Operations</h3>
+            <table>
+                <tr>
+                    <th>Operation</th>
+                    <th>Notation</th>
+                    <th>Definition</th>
+                </tr>
+                <tr>
+                    <td>Union</td>
+                    <td>A ∪ B</td>
+                    <td>{x | x ∈ A or x ∈ B}</td>
+                </tr>
+                <tr>
+                    <td>Intersection</td>
+                    <td>A ∩ B</td>
+                    <td>{x | x ∈ A and x ∈ B}</td>
+                </tr>
+                <tr>
+                    <td>Difference</td>
+                    <td>A - B</td>
+                    <td>{x | x ∈ A and x ∉ B}</td>
+                </tr>
+                <tr>
+                    <td>Complement</td>
+                    <td>A' or Aᶜ</td>
+                    <td>{x | x ∈ U and x ∉ A}</td>
+                </tr>
+                <tr>
+                    <td>Symmetric Difference</td>
+                    <td>A Δ B</td>
+                    <td>(A - B) ∪ (B - A)</td>
+                </tr>
+            </table>
+            
+            <h3>Important Laws</h3>
+            <div class="formula">
+                <strong>Commutative:</strong> A ∪ B = B ∪ A; A ∩ B = B ∩ A
+            </div>
+            <div class="formula">
+                <strong>Associative:</strong> (A ∪ B) ∪ C = A ∪ (B ∪ C); (A ∩ B) ∩ C = A ∩ (B ∩ C)
+            </div>
+            <div class="formula">
+                <strong>Distributive:</strong> A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C); A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)
+            </div>
+            <div class="formula">
+                <strong>De Morgan's:</strong> (A ∪ B)' = A' ∩ B'; (A ∩ B)' = A' ∪ B'
+            </div>
+            
+            <div class="important">
+                <p><strong>JEE Focus:</strong> De Morgan's laws are frequently tested. Also, problems often combine set operations with Cartesian products.</p>
+            </div>
+            
+            <div class="example">
+                <div class="example-title">JEE Problem Example:</div>
+                <p>If U = {1,2,3,4,5}, A = {1,2,3}, and B = {2,3,4}, verify De Morgan's laws.</p>
+                <p><strong>Solution:</strong> <br>
+                (A ∪ B)' = {5} and A' ∩ B' = {4,5} ∩ {1,5} = {5} ✔ <br>
+                (A ∩ B)' = {1,4,5} and A' ∪ B' = {4,5} ∪ {1,5} = {1,4,5} ✔</p>
+            </div>
+        </section>
+
+        <!-- Venn Diagrams Section -->
+        <section class="info-panel" id="venn-diagrams" data-aos="fade-up">
+            <h2>Venn Diagrams</h2>
+            <p>Venn diagrams provide visual representation of sets and their relationships.</p>
+            
+            <h3>Basic Components</h3>
+            <ul>
+                <li><strong>Universal Set:</strong> Represented by a rectangle</li>
+                <li><strong>Subsets:</strong> Represented by circles within the rectangle</li>
+                <li><strong>Intersection:</strong> Overlapping area of circles</li>
+                <li><strong>Union:</strong> Total area covered by circles</li>
+            </ul>
+            
+            <h3>Applications in Problem Solving</h3>
+            <p>Venn diagrams are particularly useful for:</p>
+            <ul>
+                <li>Solving problems with 2 or 3 sets</li>
+                <li>Understanding set operations visually</li>
+                <li>Solving word problems involving categorization</li>
+            </ul>
+            
+            <div class="formula">
+                For two sets: n(A ∪ B) = n(A) + n(B) - n(A ∩ B)
+            </div>
+            <div class="formula">
+                For three sets: n(A ∪ B ∪ C) = n(A) + n(B) + n(C) - n(A ∩ B) - n(B ∩ C) - n(A ∩ C) + n(A ∩ B ∩ C)
+            </div>
+            
+            <div class="important">
+                <p><strong>JEE Focus:</strong> Venn diagram problems often appear in JEE Main and Advanced, especially in probability and counting problems.</p>
+            </div>
+            
+            <div class="example">
+                <div class="example-title">JEE Problem Example:</div>
+                <p>In a class of 50 students, 30 study Math, 25 study Physics, and 10 study both. How many students study neither subject?</p>
+                <p><strong>Solution:</strong> <br>
+                Using n(M ∪ P) = n(M) + n(P) - n(M ∩ P) = 30 + 25 - 10 = 45 <br>
+                ∴ Students studying neither = 50 - 45 = 5</p>
+            </div>
+        </section>
+
+        <!-- Applications Section -->
+        <section class="info-panel" id="applications" data-aos="fade-up">
+            <h2>Applications of Sets</h2>
+            <p>Set theory has wide-ranging applications in mathematics and beyond.</p>
+            
+            <h3>In Mathematics</h3>
+            <ul>
+                <li><strong>Probability:</strong> Sample spaces and events are sets</li>
+                <li><strong>Relations & Functions:</strong> Defined as subsets of Cartesian products</li>
+                <li><strong>Graph Theory:</strong> Vertices and edges can be represented as sets</li>
+                <li><strong>Boolean Algebra:</strong> Fundamental for digital circuit design</li>
+            </ul>
+            
+            <h3>In JEE Problems</h3>
+            <p>Set concepts frequently appear in:</p>
+            <ul>
+                <li>Counting problems (using inclusion-exclusion principle)</li>
+                <li>Probability (sample spaces, events)</li>
+                <li>Relations and functions (domain, range, inverse images)</li>
+                <li>Complex numbers (solution sets of equations)</li>
+            </ul>
+            
+            <div class="example">
+                <div class="example-title">JEE Problem Example:</div>
+                <p>In a survey of 100 students: 60 like Tea, 40 like Coffee, and 10 like neither. How many like both drinks?</p>
+                <p><strong>Solution:</strong> <br>
+                Let T = Tea drinkers, C = Coffee drinkers <br>
+                n(T ∪ C) = 100 - 10 = 90 <br>
+                n(T ∩ C) = n(T) + n(C) - n(T ∪ C) = 60 + 40 - 90 = 10</p>
+            </div>
+        </section>
+
+        <!-- Key Facts Carousel -->
+        <div class="swiper-container" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">SET NOTATIONS</div>
+                        <div class="swiper-text">∈: element of, ⊆: subset, ⊂: proper subset, ∪: union, ∩: intersection, A': complement, A Δ B: symmetric difference</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">CARDINALITY FORMULAS</div>
+                        <div class="swiper-text">|A ∪ B| = |A| + |B| - |A ∩ B| <br> |A ∪ B ∪ C| = |A| + |B| + |C| - |A ∩ B| - |B ∩ C| - |A ∩ C| + |A ∩ B ∩ C|</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">POWER SET</div>
+                        <div class="swiper-text">For a set with n elements, the power set has 2ⁿ elements. Example: P({1,2}) = {∅, {1}, {2}, {1,2}}</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">DE MORGAN'S LAWS</div>
+                        <div class="swiper-text">(A ∪ B)' = A' ∩ B' <br> (A ∩ B)' = A' ∪ B' <br> Crucial for set theory and Boolean algebra</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">CARTESIAN PRODUCT</div>
+                        <div class="swiper-text">A × B = {(a,b) | a ∈ A, b ∈ B} <br> |A × B| = |A| × |B| <br> Forms basis for relations and functions</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">SET IDENTITIES</div>
+                        <div class="swiper-text">A ∪ ∅ = A; A ∩ U = A (Identity) <br> A ∪ U = U; A ∩ ∅ = ∅ (Domination) <br> A ∪ A = A; A ∩ A = A (Idempotent)</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">VENN DIAGRAMS</div>
+                        <div class="swiper-text">For 2 sets: 4 regions <br> For 3 sets: 8 regions <br> Visual tool for understanding set relationships</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">INFINITE SETS</div>
+                        <div class="swiper-text">ℕ, ℤ, ℚ are countably infinite <br> ℝ is uncountably infinite <br> |ℕ| = |ℤ| = |ℚ| < |ℝ| (Cardinality)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Summary Section -->
+        <section class="info-panel" data-aos="fade-up">
+            <h2>Chapter Summary</h2>
+            <h3>Key Concepts</h3>
+            <ul>
+                <li>Set is a well-defined collection of distinct objects</li>
+                <li>Sets can be represented in roster or set-builder form</li>
+                <li>Important types: empty, finite, infinite, universal sets</li>
+                <li>Basic operations: union, intersection, difference, complement</li>
+                <li>Venn diagrams visually represent set relationships</li>
+                <li>Cardinality formulas are crucial for counting problems</li>
+            </ul>
+            
+            <h3>Important Formulas</h3>
+            <div class="formula">
+                Union: A ∪ B = {x | x ∈ A or x ∈ B}
+            </div>
+            <div class="formula">
+                Intersection: A ∩ B = {x | x ∈ A and x ∈ B}
+            </div>
+            <div class="formula">
+                Difference: A - B = {x | x ∈ A and x ∉ B}
+            </div>
+            <div class="formula">
+                Complement: A' = {x | x ∈ U and x ∉ A}
+            </div>
+            <div class="formula">
+                Cardinality: |A ∪ B| = |A| + |B| - |A ∩ B|
+            </div>
+            <div class="formula">
+                De Morgan's: (A ∪ B)' = A' ∩ B'; (A ∩ B)' = A' ∪ B'
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>MathMaster</h3>
+                <p>Your comprehensive resource for JEE Mathematics preparation.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#representation">Representation</a></li>
+                    <li><a href="#types">Types of Sets</a></li>
+                    <li><a href="#operations">Operations</a></li>
+                    <li><a href="#venn-diagrams">Venn Diagrams</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> contact@mathmaster.com</li>
+                    <li><i class="fas fa-phone"></i> +91 9876543210</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Math Street, EduCity</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 MathMaster. All rights reserved. | Designed for JEE Mathematics Preparation</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+<script>
+    // MathMaster - Optimized JavaScript for Sets Theory
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mainNav = document.getElementById('mainNav');
+    
+    if (mobileMenuBtn && mainNav) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+    }
+
+    // Back to Top Button
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    function handleScroll() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('active');
+        } else {
+            backToTopBtn.classList.remove('active');
+        }
+    }
+    
+    // Debounced scroll event
+    let scrollTimeout;
+    window.addEventListener('scroll', function() {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(handleScroll, 50);
+    }, { passive: true });
+
+    // Initialize AOS (Animate On Scroll)
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: window.innerWidth < 768 ? 100 : 120,
+            easing: 'ease-out-quad'
+        });
+    }
+
+    // Initialize Swiper
+    if (typeof Swiper !== 'undefined') {
+        new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: window.innerWidth < 768 ? 10 : 15,
+                stretch: 0,
+                depth: window.innerWidth < 768 ? 100 : 150,
+                modifier: 1,
+                slideShadows: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 25
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                }
+            },
+            preloadImages: false,
+            lazy: true
+        });
+    }
+
+    // Smooth Scroll for Navigation Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                smoothScrollTo(targetElement.offsetTop - 80, 800);
+                
+                // Close mobile menu if open
+                if (mainNav && mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            }
+        });
+    });
+
+    // Back to Top Button Click
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', function() {
+            smoothScrollTo(0, 800);
+        });
+    }
+
+    // Create Particles (Delayed for better load performance)
+    setTimeout(createParticles, 500);
+
+    // Passive event listeners for touch events
+    document.addEventListener('touchstart', function() {}, { passive: true });
+    document.addEventListener('touchmove', function() {}, { passive: true });
+});
+
+// Smooth Scroll Function with Easing
+function smoothScrollTo(targetPosition, duration) {
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    let startTime = null;
+    
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = ease(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+    
+    function ease(t, b, c, d) {
+        t /= d/2;
+        if (t < 1) return c/2*t*t + b;
+        t--;
+        return -c/2 * (t*(t-2) - 1) + b;
+    }
+    
+    requestAnimationFrame(animation);
+}
+
+// Create Particles Function (Optimized)
+function createParticles() {
+    const particlesContainer = document.getElementById('particles');
+    if (!particlesContainer) return;
+    
+    const particleCount = window.innerWidth < 768 ? 20 : 30;
+    particlesContainer.innerHTML = '';
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        
+        const size = Math.random() * 3 + 1;
+        const posX = Math.random() * window.innerWidth;
+        const posY = Math.random() * window.innerHeight;
+        const duration = Math.random() * 15 + 10;
+        const delay = Math.random() * 5;
+        
+        particle.style.cssText = `
+            width: ${size}px;
+            height: ${size}px;
+            left: ${posX}px;
+            top: ${posY}px;
+            opacity: ${Math.random() * 0.3 + 0.1};
+            animation: float ${duration}s ease-in-out ${delay}s infinite;
+            background: rgba(255,255,255,0.3);
+        `;
+        
+        particlesContainer.appendChild(particle);
+    }
+}
+
+// Request Animation Frame Polyfill
+(function() {
+    var lastTime = 0;
+    var vendors = ['ms', 'moz', 'webkit', 'o'];
+    for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+        window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+        window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
+                                   || window[vendors[x]+'CancelRequestAnimationFrame'];
+    }
+
+    if (!window.requestAnimationFrame)
+        window.requestAnimationFrame = function(callback, element) {
+            var currTime = new Date().getTime();
+            var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+            var id = window.setTimeout(function() { callback(currTime + timeToCall); }, 
+              timeToCall);
+            lastTime = currTime + timeToCall;
+            return id;
+        };
+
+    if (!window.cancelAnimationFrame)
+        window.cancelAnimationFrame = function(id) {
+            clearTimeout(id);
+        };
+}());
+</script>
+</body>
+</html>
