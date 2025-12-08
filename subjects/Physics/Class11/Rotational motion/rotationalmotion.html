@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKVRN3GREN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKVRN3GREN');
+</script>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System of Rigid Body & Rotational Motion | Class 11 Physics | JEE & NEET Preparation</title>
+    <meta name="description" content="Master System of Rigid Body and Rotational Motion for Class 11 Physics. Complete guide for JEE & NEET aspirants with formulas, concepts, and problem-solving strategies.">
+    <meta name="keywords" content="Rigid Body, Rotational Motion, Physics Class 11, JEE preparation, NEET physics, Torque, Moment of Inertia, Angular Momentum, Rotational Dynamics">
+    <meta name="author" content="Nerds Assemble">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="System of Rigid Body & Rotational Motion | Class 11 Physics">
+    <meta property="og:description" content="Complete guide to Rotational Motion for JEE & NEET aspirants">
+    <meta property="og:type" content="website">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Pacifico&family=Dancing+Script:wght@700&family=Abril+Fatface&family=Playfair+Display:wght@700&family=Raleway:wght@300;800&family=Quicksand:wght@500&family=Poiret+One&family=Amatic+SC:wght@700&family=Caveat:wght@700&family=Kaushan+Script&family=Libre+Baskerville&family=Merriweather&family=Nunito:wght@800&family=Oswald:wght@500&family=Roboto+Slab:wght@700&family=Sacramento&family=Tangerine:wght@700&family=Yeseva+One&family=Electrolize&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+    <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/planet-universe-svgrepo-com.svg">
+    
+    <style>
+        /* System of Rigid Body & Rotational Motion - Nerds Assemble CSS */
+        :root {
+            --primary: #00c6ff;
+            --secondary: #ff2a6d;
+            --tertiary: #7e2aff;
+            --bg: #0a0a20;
+            --text: #ffffff;
+            --highlight: #05ffa1;
+            --nav-bg: rgba(10, 5, 30, 0.95);
+            --rotation-gradient: linear-gradient(45deg, #00c6ff, #0072ff);
+            --rigid-gradient: linear-gradient(45deg, #ff2a6d, #ff9a00);
+            --angular-gradient: linear-gradient(45deg, #7e2aff, #ff2a6d);
+        }
+
+        /* Base Styles & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overscroll-behavior-y: contain;
+            -webkit-overflow-scrolling: touch;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(0, 198, 255, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(255, 42, 109, 0.1) 0%, transparent 20%),
+                linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--tertiary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(0, 198, 255, 0.5);
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--highlight);
+            margin: 2rem 0 1.5rem;
+            font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-family: 'Roboto Slab', serif;
+            color: var(--secondary);
+            margin: 1.5rem 0 1rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+        }
+
+        p {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+        }
+
+        /* Layout Components */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            flex: 1;
+            padding: 0 1rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Raleway', sans-serif;
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            transform: translateZ(0);
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            color: var(--highlight);
+            font-size: 1.6rem;
+        }
+
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.4rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Electrolize', sans-serif;
+            font-size: 0.95rem;
+            transition: color 0.2s ease-out;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--highlight);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--highlight);
+            transition: width 0.2s ease-out;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* Content Panels */
+        .info-panel {
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
+            padding: 1.8rem;
+            margin: 1.8rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: translateZ(0);
+            will-change: transform, opacity;
+        }
+
+        .info-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%),
+                linear-gradient(-45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%);
+            background-size: 20px 20px;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        /* Special Content Blocks */
+        .important {
+            background: rgba(255, 42, 109, 0.1);
+            border-left: 4px solid var(--secondary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(255, 42, 109, 0.1);
+        }
+
+        .definition {
+            background: rgba(5, 255, 161, 0.1);
+            border-left: 4px solid var(--highlight);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(5, 255, 161, 0.1);
+        }
+
+        .formula {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin: 1.2rem 0;
+            padding: 1.2rem;
+            background: rgba(0, 247, 255, 0.1);
+            border-radius: 8px;
+            border: 1px dashed var(--highlight);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.1rem;
+        }
+
+        .formula::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, transparent 45%, rgba(0, 247, 255, 0.1) 50%, transparent 55%);
+            background-size: 10px 10px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .example {
+            background: rgba(126, 42, 255, 0.1);
+            border-left: 4px solid var(--tertiary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Lists & Tables */
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 1.8rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background-color: rgba(0, 198, 255, 0.2);
+            font-family: 'Electrolize', sans-serif;
+            color: var(--highlight);
+            font-size: 0.95rem;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+
+        tr:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* Concept Cards */
+        .concept-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .concept-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 198, 255, 0.2);
+        }
+
+        .concept-card.rigid {
+            border-top: 4px solid var(--primary);
+        }
+
+        .concept-card.rotation {
+            border-top: 4px solid var(--secondary);
+        }
+
+        .concept-card.torque {
+            border-top: 4px solid var(--tertiary);
+        }
+
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title.rigid { color: var(--primary); }
+        .card-title.rotation { color: var(--secondary); }
+        .card-title.torque { color: var(--tertiary); }
+
+        /* Swiper Carousel */
+        .swiper-container {
+            width: 100%;
+            height: auto;
+            min-height: 180px;
+            margin: 2.5rem 0;
+            will-change: transform;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .swiper-slide {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+            font-family: 'Electrolize', sans-serif;
+            padding: 1.2rem;
+            box-sizing: border-box;
+            text-align: center;
+            min-height: 180px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-out;
+            transform: translateZ(0);
+            height: auto;
+        }
+
+        .swiper-slide:hover {
+            transform: translateY(-5px);
+        }
+
+        .swiper-slide div {
+            width: 100%;
+        }
+
+        .swiper-title {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin-bottom: 0.5rem;
+            font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+        }
+
+        .swiper-text {
+            font-family: 'Quicksand', sans-serif;
+            font-size: clamp(0.85rem, 1.1vw, 1rem);
+        }
+
+        /* Swiper Navigation */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: var(--highlight);
+            background: rgba(0, 0, 0, 0.5);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            backdrop-filter: blur(10px);
+            margin-top: -17.5px;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .swiper-pagination-bullet {
+            background: var(--text);
+            opacity: 0.5;
+            width: 8px;
+            height: 8px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: var(--highlight);
+            opacity: 1;
+        }
+
+        /* Problem Solving Section */
+        .problem-solving {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .problem-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .problem-title {
+            color: var(--secondary);
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Particles Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            will-change: transform;
+            opacity: 0.3;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .footer-column h3 {
+            color: var(--highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            transition: color 0.2s ease-out;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--highlight);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text);
+            font-size: 1.1rem;
+            transition: color 0.2s ease-out;
+        }
+
+        .social-links a:hover {
+            color: var(--highlight);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 1.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Quicksand', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease-out;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(0, 198, 255, 0.3);
+            transform: translateZ(0);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--highlight);
+            transform: translateY(-5px);
+        }
+
+        /* JEE/NEET Specific Styling */
+        .exam-highlight {
+            background: rgba(255, 235, 0, 0.1);
+            border: 2px solid var(--highlight);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .exam-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--highlight);
+            color: var(--bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(10px, 10px) rotate(90deg); }
+            50% { transform: translate(-5px, 15px) rotate(180deg); }
+            75% { transform: translate(5px, -5px) rotate(270deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        /* Rotational Motion Specific */
+        .rotation-diagram {
+            text-align: center;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+        }
+
+        .rotation-diagram i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin: 1rem;
+            display: inline-block;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .comparison-table {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background-image:
+                    radial-gradient(circle at 10% 20%, rgba(0, 198, 255, 0.05) 0%, transparent 20%),
+                    linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+            }
+
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                margin-top: 1rem;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.75rem 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            header, .info-panel {
+                backdrop-filter: blur(5px);
+            }
+
+            .container {
+                width: 95%;
+                padding: 0;
+            }
+
+            .info-panel {
+                padding: 1.5rem;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            th, td {
+                padding: 0.5rem;
+                font-size: 0.85rem;
+            }
+
+            .concept-cards, .problem-solving {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-panel {
+                padding: 1rem;
+            }
+
+            ul, ol {
+                padding-left: 1.5rem;
+            }
+
+            .formula {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+
+            .swiper-slide {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-cogs"></i></span>
+                <span class="logo-text">Nerds Assemble</span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#rigid-body">Rigid Body</a></li>
+                    <li><a href="#rotational-motion">Rotational Motion</a></li>
+                    <li><a href="#torque">Torque</a></li>
+                    <li><a href="#moment-of-inertia">Moment of Inertia</a></li>
+                    <li><a href="#angular-momentum">Angular Momentum</a></li>
+                    <li><a href="#problems">Problems</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="page-header" data-aos="fade-down">
+            <h1>System of Rigid Body & Rotational Motion</h1>
+            <p class="subtitle">Class 11 Physics | JEE & NEET Preparation Guide</p>
+            <p>Master rotational dynamics, torque, moment of inertia, and angular momentum - essential concepts for competitive exams</p>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="info-panel" id="introduction" data-aos="fade-up">
+            <h2>Introduction to Rotational Motion</h2>
+            <p>Rotational motion describes the motion of objects that rotate about an axis. While translational motion deals with movement from one point to another, rotational motion involves spinning about a fixed point or axis.</p>
+
+            <div class="definition">
+                <p><strong>Key Concept:</strong> Every point in a rotating rigid body moves in a circle whose center lies on the axis of rotation, and every point moves through the same angle during a particular time interval.</p>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card rigid" data-aos="flip-left">
+                    <div class="card-title rigid"><i class="fas fa-cube"></i> Rigid Body</div>
+                    <p>A body is said to be rigid if the distance between any two particles of the body remains constant, regardless of external forces applied.</p>
+                    <div class="formula">Δr = 0 (for any two points)</div>
+                </div>
+
+                <div class="concept-card rotation" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-title rotation"><i class="fas fa-sync-alt"></i> Rotational Motion</div>
+                    <p>Motion of a body about a fixed axis where all particles move in circular paths centered on the axis.</p>
+                    <div class="formula">θ = s/r</div>
+                </div>
+
+                <div class="concept-card torque" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card-title torque"><i class="fas fa-weight-hanging"></i> Torque</div>
+                    <p>The rotational equivalent of force. It measures how much a force acting on an object causes that object to rotate.</p>
+                    <div class="formula">τ = r × F</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rigid Body Section -->
+        <section class="info-panel" id="rigid-body" data-aos="fade-up">
+            <h2>System of Rigid Body</h2>
+            <p>A rigid body is an idealized body in which deformation is zero or so small it can be neglected. The distance between any two given points on a rigid body remains constant in time regardless of external forces exerted on it.</p>
+
+            <div class="definition">
+                <p><strong>Characteristics of Rigid Body:</strong></p>
+                <ul>
+                    <li>All points maintain fixed relative positions</li>
+                    <li>No deformation under applied forces</li>
+                    <li>Can have both translational and rotational motion</li>
+                    <li>Mass is continuously distributed</li>
+                </ul>
+            </div>
+
+            <h3>Degrees of Freedom</h3>
+            <table>
+                <tr>
+                    <th>Type of Motion</th>
+                    <th>Degrees of Freedom</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Translational</td>
+                    <td>3 (x, y, z)</td>
+                    <td>Motion along three perpendicular axes</td>
+                </tr>
+                <tr>
+                    <td>Rotational</td>
+                    <td>3 (θ_x, θ_y, θ_z)</td>
+                    <td>Rotation about three perpendicular axes</td>
+                </tr>
+                <tr>
+                    <td>Total for Rigid Body</td>
+                    <td>6</td>
+                    <td>3 translational + 3 rotational</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Center of Mass (COM):</strong> The point where the entire mass of the body can be assumed to be concentrated for translational motion.</p>
+                <div class="formula">r_cm = (Σ m_i r_i) / (Σ m_i)</div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Center of Mass of Two Particles</div>
+                <p>Two particles of masses 2 kg and 3 kg are located at positions (1, 2) and (4, 6) respectively. Find their center of mass.</p>
+                <p><strong>Solution:</strong></p>
+                <p>x_cm = (2×1 + 3×4)/(2+3) = (2+12)/5 = 14/5 = 2.8</p>
+                <p>y_cm = (2×2 + 3×6)/(2+3) = (4+18)/5 = 22/5 = 4.4</p>
+                <p>Center of Mass = (2.8, 4.4)</p>
+            </div>
+        </section>
+
+        <!-- Rotational Motion Section -->
+        <section class="info-panel" id="rotational-motion" data-aos="fade-up">
+            <h2>Rotational Motion Parameters</h2>
+            <p>Rotational motion is described using angular quantities analogous to linear quantities in translational motion.</p>
+
+            <div class="comparison-table">
+                <h3>Linear vs Rotational Motion Comparison</h3>
+                <table>
+                    <tr>
+                        <th>Linear Motion</th>
+                        <th>Rotational Motion</th>
+                        <th>Relation</th>
+                    </tr>
+                    <tr>
+                        <td>Displacement (s)</td>
+                        <td>Angular Displacement (θ)</td>
+                        <td>s = rθ</td>
+                    </tr>
+                    <tr>
+                        <td>Velocity (v)</td>
+                        <td>Angular Velocity (ω)</td>
+                        <td>v = rω</td>
+                    </tr>
+                    <tr>
+                        <td>Acceleration (a)</td>
+                        <td>Angular Acceleration (α)</td>
+                        <td>a_t = rα</td>
+                    </tr>
+                    <tr>
+                        <td>Mass (m)</td>
+                        <td>Moment of Inertia (I)</td>
+                        <td>I = Σmr²</td>
+                    </tr>
+                    <tr>
+                        <td>Force (F)</td>
+                        <td>Torque (τ)</td>
+                        <td>τ = rF sinθ</td>
+                    </tr>
+                    <tr>
+                        <td>Momentum (p)</td>
+                        <td>Angular Momentum (L)</td>
+                        <td>L = rp sinθ</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>Equations of Rotational Motion</h3>
+            <div class="concept-cards">
+                <div class="concept-card" data-aos="zoom-in">
+                    <div class="card-title"><i class="fas fa-angle-double-right"></i> Angular Displacement</div>
+                    <p>The angle through which an object rotates. Measured in radians.</p>
+                    <div class="formula">θ = s/r</div>
+                    <p>1 revolution = 2π radians = 360°</p>
+                </div>
+
+                <div class="concept-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card-title"><i class="fas fa-tachometer-alt"></i> Angular Velocity</div>
+                    <p>Rate of change of angular displacement. Measured in rad/s.</p>
+                    <div class="formula">ω = dθ/dt</div>
+                    <p>Average ω = Δθ/Δt</p>
+                </div>
+
+                <div class="concept-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card-title"><i class="fas fa-running"></i> Angular Acceleration</div>
+                    <p>Rate of change of angular velocity. Measured in rad/s².</p>
+                    <div class="formula">α = dω/dt = d²θ/dt²</div>
+                    <p>Average α = Δω/Δt</p>
+                </div>
+            </div>
+
+            <h3>Kinematic Equations for Rotational Motion</h3>
+            <div class="formula">ω = ω₀ + αt</div>
+            <div class="formula">θ = ω₀t + (1/2)αt²</div>
+            <div class="formula">ω² = ω₀² + 2αθ</div>
+            <div class="formula">θ = (ω₀ + ω)t/2</div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Relation between Linear and Angular Acceleration</h4>
+                <p>Total acceleration in circular motion has two components:</p>
+                <div class="formula">a_t = rα (Tangential acceleration)</div>
+                <div class="formula">a_c = rω² = v²/r (Centripetal acceleration)</div>
+                <div class="formula">a_total = √(a_t² + a_c²)</div>
+            </div>
+        </section>
+
+        <!-- Torque Section -->
+        <section class="info-panel" id="torque" data-aos="fade-up">
+            <h2>Torque and Rotational Dynamics</h2>
+            <p>Torque is the rotational equivalent of force. It causes angular acceleration in rigid bodies.</p>
+
+            <div class="definition">
+                <p><strong>Torque (τ):</strong> The turning effect of a force about an axis. It is given by the cross product of position vector and force vector.</p>
+            </div>
+
+            <div class="formula">
+                τ = r × F = rF sinθ n̂
+            </div>
+            <p>Where:<br>
+            • τ = Torque (Nm)<br>
+            • r = Position vector from axis to point of force application<br>
+            • F = Force applied (N)<br>
+            • θ = Angle between r and F<br>
+            • n̂ = Unit vector perpendicular to plane of r and F</p>
+
+            <h3>Conditions for Rotational Equilibrium</h3>
+            <p>For a body to be in rotational equilibrium, the net torque about any axis must be zero.</p>
+            <div class="formula">Στ = 0</div>
+
+            <div class="important">
+                <p><strong>Right Hand Rule:</strong> Point fingers in direction of r, curl toward F; thumb points in direction of torque vector.</p>
+            </div>
+
+            <h3>Types of Torque</h3>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Static Torque</td>
+                    <td>No angular acceleration (τ = 0)</td>
+                    <td>Balanced see-saw</td>
+                </tr>
+                <tr>
+                    <td>Dynamic Torque</td>
+                    <td>Causes angular acceleration (τ = Iα)</td>
+                    <td>Opening a heavy door</td>
+                </tr>
+                <tr>
+                    <td>Couple</td>
+                    <td>Two equal, opposite, parallel forces</td>
+                    <td>Turning a steering wheel</td>
+                </tr>
+            </table>
+
+            <div class="example">
+                <div class="example-title">Example: Calculating Torque</div>
+                <p>A force of 20 N is applied at the edge of a wheel of radius 0.5 m. The force makes an angle of 30° with the radius vector. Calculate the torque.</p>
+                <p><strong>Solution:</strong></p>
+                <p>τ = rF sinθ = 0.5 × 20 × sin30° = 0.5 × 20 × 0.5 = 5 Nm</p>
+            </div>
+        </section>
+
+        <!-- Moment of Inertia Section -->
+        <section class="info-panel" id="moment-of-inertia" data-aos="fade-up">
+            <h2>Moment of Inertia</h2>
+            <p>Moment of inertia is the rotational analogue of mass. It measures how difficult it is to change the rotational motion of a body about a particular axis.</p>
+
+            <div class="definition">
+                <p><strong>Moment of Inertia (I):</strong> For a system of particles, I = Σ m_i r_i². For continuous bodies, I = ∫ r² dm.</p>
+            </div>
+
+            <div class="formula">
+                I = Σ m_i r_i² (Discrete system)
+            </div>
+            <div class="formula">
+                I = ∫ r² dm (Continuous body)
+            </div>
+
+            <h3>Moments of Inertia for Common Shapes</h3>
+            <table>
+                <tr>
+                    <th>Object</th>
+                    <th>Axis</th>
+                    <th>Moment of Inertia</th>
+                </tr>
+                <tr>
+                    <td>Thin rod (length L)</td>
+                    <td>Through center, perpendicular</td>
+                    <td>ML²/12</td>
+                </tr>
+                <tr>
+                    <td>Thin rod (length L)</td>
+                    <td>Through end, perpendicular</td>
+                    <td>ML²/3</td>
+                </tr>
+                <tr>
+                    <td>Ring (radius R)</td>
+                    <td>Through center, perpendicular</td>
+                    <td>MR²</td>
+                </tr>
+                <tr>
+                    <td>Disc (radius R)</td>
+                    <td>Through center, perpendicular</td>
+                    <td>MR²/2</td>
+                </tr>
+                <tr>
+                    <td>Solid sphere (radius R)</td>
+                    <td>Through center</td>
+                    <td>2MR²/5</td>
+                </tr>
+                <tr>
+                    <td>Hollow sphere (radius R)</td>
+                    <td>Through center</td>
+                    <td>2MR²/3</td>
+                </tr>
+            </table>
+
+            <h3>Theorems on Moment of Inertia</h3>
+            
+            <div class="exam-highlight">
+                <div class="exam-badge">IMPORTANT</div>
+                <h4>Parallel Axis Theorem</h4>
+                <p>The moment of inertia about any axis parallel to an axis through the center of mass is:</p>
+                <div class="formula">I = I_cm + Md²</div>
+                <p>Where d is the perpendicular distance between the two axes.</p>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">IMPORTANT</div>
+                <h4>Perpendicular Axis Theorem</h4>
+                <p>For a planar body lying in the x-y plane:</p>
+                <div class="formula">I_z = I_x + I_y</div>
+                <p>Where I_z is the moment of inertia about an axis perpendicular to the plane.</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Using Parallel Axis Theorem</div>
+                <p>Find the moment of inertia of a rod of mass M and length L about an axis perpendicular to the rod through one end.</p>
+                <p><strong>Solution:</strong></p>
+                <p>I_cm (through center) = ML²/12</p>
+                <p>Distance from center to end, d = L/2</p>
+                <p>Using parallel axis theorem: I = I_cm + Md² = ML²/12 + M(L/2)² = ML²/12 + ML²/4 = ML²/3</p>
+            </div>
+        </section>
+
+        <!-- Angular Momentum Section -->
+        <section class="info-panel" id="angular-momentum" data-aos="fade-up">
+            <h2>Angular Momentum and Conservation</h2>
+            <p>Angular momentum is the rotational analogue of linear momentum. It is conserved in the absence of external torque.</p>
+
+            <div class="definition">
+                <p><strong>Angular Momentum (L):</strong> For a particle, L = r × p. For a rigid body rotating about a fixed axis, L = Iω.</p>
+            </div>
+
+            <div class="formula">
+                L = r × p = r × (mv)
+            </div>
+            <div class="formula">
+                L = Iω (For rigid body)
+            </div>
+
+            <h3>Conservation of Angular Momentum</h3>
+            <p>If the net external torque acting on a system is zero, the total angular momentum of the system remains constant.</p>
+            <div class="formula">If τ_ext = 0, then L = constant</div>
+            <div class="formula">I₁ω₁ = I₂ω₂</div>
+
+            <div class="important">
+                <p><strong>Applications of Angular Momentum Conservation:</strong></p>
+                <ul>
+                    <li>Ice skater spinning faster when pulling arms in</li>
+                    <li>Diving from a springboard</li>
+                    <li>Planetary motion</li>
+                    <li>Gyroscopes</li>
+                </ul>
+            </div>
+
+            <h3>Rotational Kinetic Energy</h3>
+            <p>The kinetic energy due to rotational motion.</p>
+            <div class="formula">K_rot = (1/2)Iω²</div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Rolling Motion</h4>
+                <p>For a body rolling without slipping:</p>
+                <div class="formula">v_cm = Rω</div>
+                <div class="formula">K_total = (1/2)Mv_cm² + (1/2)I_cmω²</div>
+                <div class="formula">For pure rolling: K_total = (1/2)Mv_cm²(1 + k²/R²)</div>
+                <p>Where k is radius of gyration (I = Mk²)</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Angular Momentum Conservation</div>
+                <p>A skater spins with arms outstretched at 2 rad/s. Her moment of inertia is 5 kg·m². She pulls her arms in, reducing moment of inertia to 2 kg·m². Find her new angular speed.</p>
+                <p><strong>Solution:</strong></p>
+                <p>Using conservation: I₁ω₁ = I₂ω₂</p>
+                <p>5 × 2 = 2 × ω₂ ⇒ ω₂ = 10/2 = 5 rad/s</p>
+            </div>
+        </section>
+
+        <!-- Problem Solving Section -->
+        <section class="info-panel" id="problems" data-aos="fade-up">
+            <h2>Problem Solving Strategies</h2>
+            <p>Effective techniques for solving rotational motion problems in JEE and NEET.</p>
+
+            <div class="problem-solving">
+                <div class="problem-box">
+                    <div class="problem-title">Type 1: Torque & Equilibrium</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify all forces and their points of application</li>
+                        <li>Choose a convenient pivot point</li>
+                        <li>Calculate torque due to each force (τ = rF sinθ)</li>
+                        <li>Apply Στ = 0 for equilibrium</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Choose pivot at point where unknown force acts to eliminate it from equation</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 2: Rotational Dynamics</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Find moment of inertia about axis</li>
+                        <li>Calculate net torque</li>
+                        <li>Apply τ = Iα</li>
+                        <li>Use rotational kinematic equations if needed</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Use parallel/perpendicular axis theorems for complex shapes</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 3: Conservation Problems</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Check if net external torque = 0</li>
+                        <li>Write angular momentum for initial state</li>
+                        <li>Write angular momentum for final state</li>
+                        <li>Set L_initial = L_final</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Remember L = Iω for rigid bodies, L = r×p for particles</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED TIP</div>
+                <h4>Rolling Motion Problems</h4>
+                <p>• For pure rolling: v = Rω and a = Rα</p>
+                <p>• Total KE = Translational KE + Rotational KE</p>
+                <p>• Friction may be static (no slipping) or kinetic (slipping)</p>
+                <p>• Use energy conservation: mgh = (1/2)mv² + (1/2)Iω²</p>
+            </div>
+        </section>
+
+        <!-- Key Facts Carousel -->
+        <div class="swiper-container" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">RIGID BODY</div>
+                        <div class="swiper-text">A body in which distance between any two particles remains constant regardless of external forces</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">TORQUE</div>
+                        <div class="swiper-text">τ = r × F = rF sinθ. Causes angular acceleration. Unit: Nm</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">MOMENT OF INERTIA</div>
+                        <div class="swiper-text">I = Σmr². Rotational analogue of mass. Depends on mass distribution and axis</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">ANGULAR MOMENTUM</div>
+                        <div class="swiper-text">L = r × p = Iω. Conserved when τ_ext = 0</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">PARALLEL AXIS THEOREM</div>
+                        <div class="swiper-text">I = I_cm + Md². Used to find moment of inertia about parallel axis</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">PURE ROLLING</div>
+                        <div class="swiper-text">v = Rω, a = Rα. No slipping. Friction is static</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">ROTATIONAL KINETIC ENERGY</div>
+                        <div class="swiper-text">K_rot = (1/2)Iω². For rolling: K_total = (1/2)Mv² + (1/2)Iω²</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">ANGULAR VELOCITY</div>
+                        <div class="swiper-text">ω = dθ/dt. Relation with linear velocity: v = rω</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- Summary Section -->
+        <section class="info-panel" data-aos="fade-up">
+            <h2>Chapter Summary & Formulas</h2>
+            
+            <h3>Key Formulas</h3>
+            <div class="concept-cards">
+                <div class="concept-card rigid">
+                    <div class="card-title rigid">Basic Definitions</div>
+                    <div class="formula">θ = s/r</div>
+                    <div class="formula">ω = dθ/dt</div>
+                    <div class="formula">α = dω/dt</div>
+                    <div class="formula">v = rω, a_t = rα</div>
+                </div>
+
+                <div class="concept-card rotation">
+                    <div class="card-title rotation">Dynamics</div>
+                    <div class="formula">τ = r × F</div>
+                    <div class="formula">τ = Iα</div>
+                    <div class="formula">L = r × p = Iω</div>
+                    <div class="formula">K_rot = (1/2)Iω²</div>
+                </div>
+
+                <div class="concept-card torque">
+                    <div class="card-title torque">Theorems & Conservation</div>
+                    <div class="formula">I = I_cm + Md²</div>
+                    <div class="formula">I_z = I_x + I_y</div>
+                    <div class="formula">L = constant if τ=0</div>
+                    <div class="formula">I₁ω₁ = I₂ω₂</div>
+                </div>
+            </div>
+
+            <h3>Important Points for JEE/NEET</h3>
+            <ul>
+                <li>Moment of inertia depends on axis of rotation, not just mass</li>
+                <li>Torque is maximum when force is perpendicular to position vector</li>
+                <li>Angular momentum is conserved if net external torque is zero</li>
+                <li>For pure rolling, friction is static and does no work</li>
+                <li>Center of mass motion is unaffected by internal forces</li>
+                <li>Kinetic energy of rolling body = translational KE + rotational KE</li>
+            </ul>
+
+            <div class="important">
+                <p><strong>Common Mistakes to Avoid:</strong></p>
+                <ul>
+                    <li>Confusing torque (vector) with work (scalar) - both have Nm units</li>
+                    <li>Applying conservation of angular momentum when external torque exists</li>
+                    <li>Using wrong moment of inertia formula for given axis</li>
+                    <li>Forgetting that ω in v = rω is angular speed, not frequency</li>
+                    <li>Mixing up radius of gyration (k) with radius (R)</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Nerds Assemble</h3>
+                <p>Master Rotational Motion for JEE & NEET. Comprehensive physics resource with detailed explanations and problem-solving strategies.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#rigid-body">Rigid Body</a></li>
+                    <li><a href="#rotational-motion">Rotational Motion</a></li>
+                    <li><a href="#torque">Torque</a></li>
+                    <li><a href="#moment-of-inertia">Moment of Inertia</a></li>
+                    <li><a href="#angular-momentum">Angular Momentum</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> 44mr.invisible@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Nerds Assemble. All rights reserved. | Designed for JEE & NEET Aspirants | System of Rigid Body & Rotational Motion</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // System of Rigid Body & Rotational Motion - JavaScript
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ?
+                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+            }
+
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+
+            function handleScroll() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('active');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                }
+            }
+
+            // Debounced scroll event
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(handleScroll, 50);
+            }, { passive: true });
+
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: window.innerWidth < 768 ? 100 : 120,
+                    easing: 'ease-out-quad'
+                });
+            }
+
+            // Initialize Swiper
+            if (typeof Swiper !== 'undefined') {
+                const swiper = new Swiper('.swiper-container', {
+                    loop: true,
+                    autoplay: {
+                        delay: 3500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 25
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        }
+                    }
+                });
+            }
+
+            // Smooth Scroll for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        if (mainNav && mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                });
+            });
+
+            // Back to Top Button Click
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Create Particles
+            createParticles();
+        });
+
+        // Create Particles Function
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
+
+            const particleCount = window.innerWidth < 768 ? 20 : 30;
+            particlesContainer.innerHTML = '';
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                const size = Math.random() * 3 + 1;
+                const posX = Math.random() * window.innerWidth;
+                const posY = Math.random() * window.innerHeight;
+                const duration = Math.random() * 15 + 10;
+                const delay = Math.random() * 5;
+
+                particle.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}px;
+                    top: ${posY}px;
+                    opacity: ${Math.random() * 0.3 + 0.1};
+                    animation: float ${duration}s ease-in-out ${delay}s infinite;
+                    background: rgba(255,255,255,0.3);
+                `;
+
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(createParticles, 250);
+        });
+    </script>
+</body>
+</html>
