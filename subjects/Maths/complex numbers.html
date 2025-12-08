@@ -1,0 +1,2793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKVRN3GREN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKVRN3GREN');
+</script>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Numbers | Class 11 Maths | JEE & NEET Preparation</title>
+    <meta name="description" content="Master Complex Numbers for Class 11 Mathematics. Complete guide for JEE & NEET aspirants with algebra, geometry, De Moivre's theorem, and problem-solving strategies.">
+    <meta name="keywords" content="Complex Numbers, Imaginary Numbers, Algebra, Geometry, Argand Plane, De Moivre's Theorem, Class 11 Maths, JEE Maths, NEET Maths, Complex Algebra">
+    <meta name="author" content="Nerds Assemble">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Complex Numbers | Class 11 Mathematics">
+    <meta property="og:description" content="Complete guide to Complex Numbers for JEE & NEET aspirants">
+    <meta property="og:type" content="website">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Pacifico&family=Dancing+Script:wght@700&family=Abril+Fatface&family=Playfair+Display:wght@700&family=Raleway:wght@300;800&family=Quicksand:wght@500&family=Poiret+One&family=Amatic+SC:wght@700&family=Caveat:wght@700&family=Kaushan+Script&family=Libre+Baskerville&family=Merriweather&family=Nunito:wght@800&family=Oswald:wght@500&family=Roboto+Slab:wght@700&family=Sacramento&family=Tangerine:wght@700&family=Yeseva+One&family=Electrolize&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/planet-universe-svgrepo-com.svg">
+    
+    <style>
+        /* Complex Numbers - Nerds Assemble CSS */
+        :root {
+            --primary: #ff0080;
+            --secondary: #ff8c00;
+            --tertiary: #40e0d0;
+            --bg: #0a0a20;
+            --text: #ffffff;
+            --highlight: #00ff00;
+            --nav-bg: rgba(10, 5, 30, 0.95);
+            --algebra-gradient: linear-gradient(45deg, #ff0080, #ff8c00);
+            --geometry-gradient: linear-gradient(45deg, #ff8c00, #40e0d0);
+            --demoivre-gradient: linear-gradient(45deg, #40e0d0, #ff0080);
+        }
+
+        /* Base Styles & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overscroll-behavior-y: contain;
+            -webkit-overflow-scrolling: touch;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(255, 0, 128, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(64, 224, 208, 0.1) 0%, transparent 20%),
+                linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--tertiary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(255, 0, 128, 0.5);
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--highlight);
+            margin: 2rem 0 1.5rem;
+            font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-family: 'Roboto Slab', serif;
+            color: var(--secondary);
+            margin: 1.5rem 0 1rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+        }
+
+        p {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+        }
+
+        /* Layout Components */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            flex: 1;
+            padding: 0 1rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Raleway', sans-serif;
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            transform: translateZ(0);
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            color: var(--highlight);
+            font-size: 1.6rem;
+        }
+
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.4rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Electrolize', sans-serif;
+            font-size: 0.95rem;
+            transition: color 0.2s ease-out;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--highlight);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--highlight);
+            transition: width 0.2s ease-out;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* Content Panels */
+        .info-panel {
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
+            padding: 1.8rem;
+            margin: 1.8rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: translateZ(0);
+            will-change: transform, opacity;
+        }
+
+        .info-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%),
+                linear-gradient(-45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%);
+            background-size: 20px 20px;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        /* Special Content Blocks */
+        .important {
+            background: rgba(255, 140, 0, 0.1);
+            border-left: 4px solid var(--secondary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(255, 140, 0, 0.1);
+        }
+
+        .definition {
+            background: rgba(255, 0, 128, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(255, 0, 128, 0.1);
+        }
+
+        .formula {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin: 1.2rem 0;
+            padding: 1.2rem;
+            background: rgba(0, 255, 0, 0.1);
+            border-radius: 8px;
+            border: 1px dashed var(--highlight);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.1rem;
+        }
+
+        .formula::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, transparent 45%, rgba(0, 255, 0, 0.1) 50%, transparent 55%);
+            background-size: 10px 10px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .example {
+            background: rgba(64, 224, 208, 0.1);
+            border-left: 4px solid var(--tertiary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Lists & Tables */
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 1.8rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background-color: rgba(255, 0, 128, 0.2);
+            font-family: 'Electrolize', sans-serif;
+            color: var(--highlight);
+            font-size: 0.95rem;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+
+        tr:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* Concept Cards */
+        .concept-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .concept-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(255, 0, 128, 0.2);
+        }
+
+        .concept-card.algebra {
+            border-top: 4px solid var(--primary);
+        }
+
+        .concept-card.geometry {
+            border-top: 4px solid var(--secondary);
+        }
+
+        .concept-card.demoivre {
+            border-top: 4px solid var(--tertiary);
+        }
+
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title.algebra { color: var(--primary); }
+        .card-title.geometry { color: var(--secondary); }
+        .card-title.demoivre { color: var(--tertiary); }
+
+        /* Swiper Carousel */
+        .swiper-container {
+            width: 100%;
+            height: auto;
+            min-height: 180px;
+            margin: 2.5rem 0;
+            will-change: transform;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .swiper-slide {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+            font-family: 'Electrolize', sans-serif;
+            padding: 1.2rem;
+            box-sizing: border-box;
+            text-align: center;
+            min-height: 180px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-out;
+            transform: translateZ(0);
+            height: auto;
+        }
+
+        .swiper-slide:hover {
+            transform: translateY(-5px);
+        }
+
+        .swiper-slide div {
+            width: 100%;
+        }
+
+        .swiper-title {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin-bottom: 0.5rem;
+            font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+        }
+
+        .swiper-text {
+            font-family: 'Quicksand', sans-serif;
+            font-size: clamp(0.85rem, 1.1vw, 1rem);
+        }
+
+        /* Swiper Navigation */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: var(--highlight);
+            background: rgba(0, 0, 0, 0.5);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            backdrop-filter: blur(10px);
+            margin-top: -17.5px;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .swiper-pagination-bullet {
+            background: var(--text);
+            opacity: 0.5;
+            width: 8px;
+            height: 8px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: var(--highlight);
+            opacity: 1;
+        }
+
+        /* Problem Solving Section */
+        .problem-solving {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .problem-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .problem-title {
+            color: var(--secondary);
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Particles Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            will-change: transform;
+            opacity: 0.3;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .footer-column h3 {
+            color: var(--highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            transition: color 0.2s ease-out;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--highlight);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text);
+            font-size: 1.1rem;
+            transition: color 0.2s ease-out;
+        }
+
+        .social-links a:hover {
+            color: var(--highlight);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 1.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Quicksand', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease-out;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(255, 0, 128, 0.3);
+            transform: translateZ(0);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--highlight);
+            transform: translateY(-5px);
+        }
+
+        /* JEE/NEET Specific Styling */
+        .exam-highlight {
+            background: rgba(255, 235, 0, 0.1);
+            border: 2px solid var(--highlight);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .exam-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--highlight);
+            color: var(--bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(10px, 10px); }
+            50% { transform: translate(-5px, 15px); }
+            75% { transform: translate(5px, -5px); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        /* Complex Numbers Specific */
+        .complex-visual {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .complex-number-box {
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary);
+            color: white;
+            border-radius: 8px;
+            font-family: 'Audiowide', cursive;
+            font-size: 1rem;
+            box-shadow: 0 4px 10px rgba(255, 0, 128, 0.3);
+        }
+
+        .real-part {
+            background: var(--primary);
+        }
+
+        .imaginary-part {
+            background: var(--secondary);
+        }
+
+        .i-symbol {
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--tertiary);
+            color: var(--bg);
+            border-radius: 6px;
+            font-family: 'Audiowide', cursive;
+            font-size: 0.9rem;
+            margin: 0.2rem;
+            font-weight: bold;
+        }
+
+        /* Argand Plane Visualizer */
+        .argand-container {
+            width: 100%;
+            height: 400px;
+            margin: 2rem 0;
+            position: relative;
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .argand-plane {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .axis {
+            position: absolute;
+            background: rgba(255,255,255,0.5);
+        }
+
+        .x-axis {
+            width: 100%;
+            height: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .y-axis {
+            width: 2px;
+            height: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .point {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .point:hover {
+            transform: translate(-50%, -50%) scale(1.5);
+        }
+
+        .point-label {
+            position: absolute;
+            color: var(--highlight);
+            font-family: 'Audiowide', cursive;
+            font-size: 0.8rem;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        /* Formula Grid */
+        .formula-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .formula-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .formula-card-title {
+            color: var(--highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        /* Complex Calculator */
+        .calculator {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .calculator-inputs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-group label {
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+            font-family: 'Electrolize', sans-serif;
+        }
+
+        .input-group input {
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid var(--primary);
+            background: rgba(0,0,0,0.3);
+            color: white;
+            font-family: 'Audiowide', cursive;
+        }
+
+        .calculator-controls {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+
+        .calc-btn {
+            padding: 0.5rem 1rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Orbitron', sans-serif;
+            transition: background 0.3s;
+        }
+
+        .calc-btn:hover {
+            background: var(--secondary);
+        }
+
+        .calculator-result {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: rgba(0,0,0,0.3);
+            border-radius: 5px;
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            min-height: 60px;
+        }
+
+        /* Polar Form Visual */
+        .polar-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .polar-representation {
+            background: rgba(255,255,255,0.05);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background-image:
+                    radial-gradient(circle at 10% 20%, rgba(255, 0, 128, 0.05) 0%, transparent 20%),
+                    linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+            }
+
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                margin-top: 1rem;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.75rem 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            header, .info-panel {
+                backdrop-filter: blur(5px);
+            }
+
+            .container {
+                width: 95%;
+                padding: 0;
+            }
+
+            .info-panel {
+                padding: 1.5rem;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            th, td {
+                padding: 0.5rem;
+                font-size: 0.85rem;
+            }
+
+            .concept-cards, .problem-solving {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none;
+            }
+
+            .formula-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .complex-number-box {
+                font-size: 0.9rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            .argand-container {
+                height: 300px;
+            }
+
+            .polar-visual {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-panel {
+                padding: 1rem;
+            }
+
+            ul, ol {
+                padding-left: 1.5rem;
+            }
+
+            .formula {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+
+            .swiper-slide {
+                padding: 1rem;
+            }
+
+            .complex-number-box {
+                font-size: 0.8rem;
+                padding: 0.3rem 0.6rem;
+            }
+
+            .argand-container {
+                height: 250px;
+            }
+
+            .calculator-inputs {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Euler Formula Special */
+        .euler-formula {
+            text-align: center;
+            padding: 2rem;
+            margin: 2rem 0;
+            background: linear-gradient(45deg, rgba(255,0,128,0.1), rgba(64,224,208,0.1));
+            border-radius: 15px;
+            border: 2px solid var(--tertiary);
+        }
+
+        .euler-equation {
+            font-family: 'Audiowide', cursive;
+            font-size: 2rem;
+            color: var(--highlight);
+            margin: 1rem 0;
+        }
+
+        /* Roots of Unity Visual */
+        .roots-container {
+            width: 100%;
+            height: 300px;
+            margin: 2rem 0;
+            position: relative;
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .unit-circle {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border: 2px solid var(--tertiary);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .root-point {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--primary);
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .root-point:hover {
+            transform: translate(-50%, -50%) scale(1.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-infinity"></i></span>
+                <span class="logo-text">Nerds Assemble</span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#algebra">Complex Algebra</a></li>
+                    <li><a href="#geometry">Argand Plane</a></li>
+                    <li><a href="#polar">Polar Form</a></li>
+                    <li><a href="#demoivre">De Moivre's Theorem</a></li>
+                    <li><a href="#applications">Applications</a></li>
+                    <li><a href="#problems">Problems</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="page-header" data-aos="fade-down">
+            <h1>Complex Numbers</h1>
+            <p class="subtitle">Class 11 Mathematics | JEE & NEET Preparation Guide</p>
+            <p>Master complex numbers, Argand plane, and De Moivre's theorem - from basic definitions to advanced applications in engineering and physics</p>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="info-panel" id="introduction" data-aos="fade-up">
+            <h2>Introduction to Complex Numbers</h2>
+            <p>Complex numbers extend the real number system to include solutions to equations like x² + 1 = 0. They form the foundation for advanced mathematics, physics, and engineering.</p>
+
+            <div class="definition">
+                <p><strong>Complex Number:</strong> A number of the form z = a + ib, where a and b are real numbers, and i is the imaginary unit satisfying i² = -1.</p>
+                <p>• a is called the real part: Re(z) = a<br>
+                • b is called the imaginary part: Im(z) = b</p>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card algebra" data-aos="flip-left">
+                    <div class="card-title algebra"><i class="fas fa-calculator"></i> Complex Algebra</div>
+                    <p>Operations with complex numbers: addition, subtraction, multiplication, division, and conjugation.</p>
+                    <div class="formula">(a+ib) ± (c+id) = (a±c) + i(b±d)</div>
+                </div>
+
+                <div class="concept-card geometry" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-title geometry"><i class="fas fa-drafting-compass"></i> Argand Plane</div>
+                    <p>Geometric representation of complex numbers as points in a plane with real and imaginary axes.</p>
+                    <div class="formula">z = x + iy ↔ Point (x, y)</div>
+                </div>
+
+                <div class="concept-card demoivre" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card-title demoivre"><i class="fas fa-superscript"></i> De Moivre's Theorem</div>
+                    <p>For any real number θ and integer n: (cos θ + i sin θ)ⁿ = cos nθ + i sin nθ</p>
+                    <div class="formula">(cos θ + i sin θ)ⁿ = cos nθ + i sin nθ</div>
+                </div>
+            </div>
+
+            <!-- Visual Example -->
+            <div class="complex-visual">
+                <h3>Visual Representation: Complex Number 3 + 4i</h3>
+                <div class="complex-visual" style="display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin: 1rem 0;">
+                    <div class="complex-number-box real-part">3</div>
+                    <div style="color: var(--highlight); font-size: 1.5rem; font-weight: bold;">+</div>
+                    <div class="complex-number-box imaginary-part">4</div>
+                    <div class="i-symbol">i</div>
+                </div>
+                <p style="margin-top: 1rem; color: var(--primary); font-size: 0.9rem;">Real part: Re(z) = 3</p>
+                <p style="color: var(--secondary); font-size: 0.9rem;">Imaginary part: Im(z) = 4</p>
+                <p style="color: var(--tertiary); font-size: 0.9rem;">Modulus: |z| = √(3² + 4²) = √25 = 5</p>
+            </div>
+
+            <div class="important">
+                <p><strong>Historical Development:</strong></p>
+                <ul>
+                    <li><strong>16th Century:</strong> Italian mathematicians discovered complex numbers while solving cubic equations</li>
+                    <li><strong>17th Century:</strong> René Descartes coined the term "imaginary numbers"</li>
+                    <li><strong>18th Century:</strong> Leonhard Euler introduced the notation i for √(-1)</li>
+                    <li><strong>19th Century:</strong> Carl Friedrich Gauss gave complex numbers respectability and geometric interpretation</li>
+                    <li><strong>Modern Era:</strong> Fundamental to quantum mechanics, electrical engineering, signal processing</li>
+                </ul>
+            </div>
+
+            <!-- Interactive Argand Plane -->
+            <div class="complex-visual">
+                <h3>Argand Plane Visualizer</h3>
+                <div class="argand-container" id="argandContainer">
+                    <div class="argand-plane">
+                        <div class="axis x-axis"></div>
+                        <div class="axis y-axis"></div>
+                        <!-- Points will be generated by JavaScript -->
+                    </div>
+                </div>
+                <div style="margin-top: 1rem;">
+                    <button class="calc-btn" onclick="addRandomPoint()">Add Random Point</button>
+                    <button class="calc-btn" onclick="clearPoints()">Clear Points</button>
+                </div>
+                <p style="margin-top: 1rem; color: var(--secondary); font-size: 0.9rem;">
+                    Click "Add Random Point" to plot random complex numbers on the Argand plane
+                </p>
+            </div>
+        </section>
+
+        <!-- Complex Algebra Section -->
+        <section class="info-panel" id="algebra" data-aos="fade-up">
+            <h2>Complex Algebra Operations</h2>
+            <p>Basic algebraic operations with complex numbers follow similar rules to real numbers, with the additional rule i² = -1.</p>
+
+            <div class="definition">
+                <p><strong>Complex Conjugate:</strong> For z = a + ib, the complex conjugate is denoted as z̄ = a - ib.</p>
+                <p><strong>Modulus:</strong> |z| = √(a² + b²) = distance from origin in Argand plane.</p>
+            </div>
+
+            <div class="formula-grid">
+                <div class="formula-card">
+                    <div class="formula-card-title">Addition & Subtraction</div>
+                    <div class="formula">(a+ib) ± (c+id) = (a±c) + i(b±d)</div>
+                    <p>Add/subtract real and imaginary parts separately</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Multiplication</div>
+                    <div class="formula">(a+ib)(c+id) = (ac-bd) + i(ad+bc)</div>
+                    <p>Use distributive property and i² = -1</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Division</div>
+                    <div class="formula">(a+ib)/(c+id) = [(ac+bd)+i(bc-ad)]/(c²+d²)</div>
+                    <p>Multiply numerator and denominator by conjugate</p>
+                </div>
+            </div>
+
+            <!-- Interactive Calculator -->
+            <div class="calculator">
+                <h3>Complex Number Calculator</h3>
+                <div class="calculator-inputs">
+                    <div class="input-group">
+                        <label>First Complex Number (z₁)</label>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <input type="number" id="z1Real" placeholder="Real part" value="3" step="any">
+                            <span style="color: var(--highlight); align-self: center;">+</span>
+                            <input type="number" id="z1Imag" placeholder="Imag part" value="4" step="any">
+                            <span style="color: var(--highlight); align-self: center;">i</span>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Second Complex Number (z₂)</label>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <input type="number" id="z2Real" placeholder="Real part" value="1" step="any">
+                            <span style="color: var(--highlight); align-self: center;">+</span>
+                            <input type="number" id="z2Imag" placeholder="Imag part" value="2" step="any">
+                            <span style="color: var(--highlight); align-self: center;">i</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculator-controls">
+                    <button class="calc-btn" onclick="complexOperation('add')"><i class="fas fa-plus"></i> Add</button>
+                    <button class="calc-btn" onclick="complexOperation('subtract')"><i class="fas fa-minus"></i> Subtract</button>
+                    <button class="calc-btn" onclick="complexOperation('multiply')"><i class="fas fa-times"></i> Multiply</button>
+                    <button class="calc-btn" onclick="complexOperation('divide')"><i class="fas fa-divide"></i> Divide</button>
+                    <button class="calc-btn" onclick="complexOperation('conjugate1')">Conjugate z₁</button>
+                    <button class="calc-btn" onclick="complexOperation('modulus1')">|z₁|</button>
+                </div>
+
+                <div class="calculator-result" id="calcResult">
+                    Result will appear here
+                </div>
+            </div>
+
+            <h3>Properties of Complex Numbers</h3>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Formula</th>
+                    <th>Notes</th>
+                </tr>
+                <tr>
+                    <td>Commutativity</td>
+                    <td>Addition and multiplication are commutative</td>
+                    <td>z₁ + z₂ = z₂ + z₁<br>z₁z₂ = z₂z₁</td>
+                    <td>Same as real numbers</td>
+                </tr>
+                <tr>
+                    <td>Associativity</td>
+                    <td>Addition and multiplication are associative</td>
+                    <td>(z₁+z₂)+z₃ = z₁+(z₂+z₃)<br>(z₁z₂)z₃ = z₁(z₂z₃)</td>
+                    <td>Grouping doesn't matter</td>
+                </tr>
+                <tr>
+                    <td>Distributivity</td>
+                    <td>Multiplication distributes over addition</td>
+                    <td>z₁(z₂+z₃) = z₁z₂ + z₁z₃</td>
+                    <td>Follows from algebra</td>
+                </tr>
+                <tr>
+                    <td>Conjugate Properties</td>
+                    <td>Properties of complex conjugate</td>
+                    <td>z̄̄ = z<br>z₁+z₂̄ = z̄₁ + z̄₂<br>z₁z₂̄ = z̄₁z̄₂</td>
+                    <td>Bar denotes conjugate</td>
+                </tr>
+                <tr>
+                    <td>Modulus Properties</td>
+                    <td>Properties of modulus</td>
+                    <td>|z| = √(z z̄)<br>|z₁z₂| = |z₁||z₂|<br>|z₁/z₂| = |z₁|/|z₂|</td>
+                    <td>Distance from origin</td>
+                </tr>
+                <tr>
+                    <td>Triangle Inequality</td>
+                    <td>Important inequality for moduli</td>
+                    <td>|z₁ + z₂| ≤ |z₁| + |z₂|</td>
+                    <td>Equality for collinear points</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Key Algebraic Formulas:</strong></p>
+                <ul>
+                    <li>i² = -1, i³ = -i, i⁴ = 1, iⁿ = i^(n mod 4)</li>
+                    <li>Conjugate: z̄ = a - ib for z = a + ib</li>
+                    <li>Modulus: |z| = √(a² + b²) = √(z z̄)</li>
+                    <li>Reciprocal: 1/z = z̄/|z|² for z ≠ 0</li>
+                    <li>Division: Multiply numerator and denominator by conjugate of denominator</li>
+                    <li>Real and Imaginary parts: Re(z) = (z + z̄)/2, Im(z) = (z - z̄)/(2i)</li>
+                    <li>Square root: √(a+ib) = ±[√((√(a²+b²)+a)/2) + i sign(b)√((√(a²+b²)-a)/2)]</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Complex Division</div>
+                <p>Simplify: (3 + 4i) / (1 - 2i)</p>
+                <p><strong>Solution:</strong></p>
+                <p>Multiply numerator and denominator by conjugate of denominator:</p>
+                <p>= (3+4i)(1+2i) / [(1-2i)(1+2i)]</p>
+                <p>= [3 + 6i + 4i + 8i²] / [1² - (2i)²]</p>
+                <p>= [3 + 10i - 8] / [1 - (-4)] (since i² = -1)</p>
+                <p>= (-5 + 10i) / 5</p>
+                <p>= -1 + 2i</p>
+                <p>Thus, (3+4i)/(1-2i) = -1 + 2i</p>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE TIP</div>
+                <h4>Complex Number Manipulation</h4>
+                <p>• For division: Always multiply by conjugate of denominator</p>
+                <p>• For modulus: |z|² = z z̄ (useful for simplification)</p>
+                <p>• For powers of i: i¹ = i, i² = -1, i³ = -i, i⁴ = 1 (cycle repeats every 4)</p>
+                <p>• For finding real/imaginary parts: Use z + z̄ and z - z̄ formulas</p>
+                <p>• For square roots: Use formula or convert to polar form</p>
+            </div>
+        </section>
+
+        <!-- Argand Plane Section -->
+        <section class="info-panel" id="geometry" data-aos="fade-up">
+            <h2>Argand Plane & Geometric Interpretation</h2>
+            <p>The Argand plane (complex plane) provides a geometric representation of complex numbers, where each complex number corresponds to a point with coordinates (Re(z), Im(z)).</p>
+
+            <div class="definition">
+                <p><strong>Argand Plane:</strong> A coordinate plane where the x-axis represents the real part and the y-axis represents the imaginary part of complex numbers.</p>
+                <p>• Point representation: z = x + iy ↔ (x, y)<br>
+                • Modulus: |z| = √(x² + y²) = distance from origin<br>
+                • Argument: arg(z) = θ = tan⁻¹(y/x) = angle with positive real axis</p>
+            </div>
+
+            <!-- Advanced Argand Visualizer -->
+            <div class="complex-visual">
+                <h3>Interactive Argand Plane</h3>
+                <div class="argand-container" id="advancedArgand" style="height: 350px;">
+                    <div class="argand-plane">
+                        <div class="axis x-axis"></div>
+                        <div class="axis y-axis"></div>
+                        <div class="unit-circle" style="position: absolute; width: 250px; height: 250px; border: 2px dashed var(--tertiary); border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.3;"></div>
+                    </div>
+                </div>
+                <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <button class="calc-btn" onclick="plotComplexNumber(3, 4)">Plot 3+4i</button>
+                    <button class="calc-btn" onclick="plotComplexNumber(-2, 3)">Plot -2+3i</button>
+                    <button class="calc-btn" onclick="plotComplexNumber(1, -2)">Plot 1-2i</button>
+                    <button class="calc-btn" onclick="plotUnitCircle()">Plot Unit Circle</button>
+                    <button class="calc-btn" onclick="clearAdvancedPoints()">Clear</button>
+                </div>
+                <div id="argandInfo" style="margin-top: 1rem; color: var(--highlight); font-family: 'Audiowide', cursive;"></div>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Modulus (Absolute Value)</div>
+                    <p>Distance from origin in Argand plane</p>
+                    <div class="formula">|z| = √(x² + y²)</div>
+                    <div class="example">
+                        <p><strong>Example:</strong> For z = 3+4i, |z| = √(9+16) = 5</p>
+                        <p>Represents distance from origin to point (3,4)</p>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Argument (Angle)</div>
+                    <p>Angle with positive real axis, measured counterclockwise</p>
+                    <div class="formula">arg(z) = tan⁻¹(y/x)</div>
+                    <div class="example">
+                        <p><strong>Example:</strong> For z = 1+i, arg(z) = tan⁻¹(1) = π/4 = 45°</p>
+                        <p>Angle from positive x-axis to the point</p>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Polar Form</div>
+                    <p>Complex number expressed using modulus and argument</p>
+                    <div class="formula">z = r(cos θ + i sin θ)</div>
+                    <div class="example">
+                        <p><strong>Example:</strong> 1+i = √2(cos π/4 + i sin π/4)</p>
+                        <p>r = √2, θ = π/4</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Geometric Operations in Argand Plane</h3>
+            <table>
+                <tr>
+                    <th>Operation</th>
+                    <th>Geometric Interpretation</th>
+                    <th>Example</th>
+                    <th>Visualization</th>
+                </tr>
+                <tr>
+                    <td>Addition</td>
+                    <td>Vector addition (parallelogram law)</td>
+                    <td>z₁ + z₂ corresponds to diagonal of parallelogram</td>
+                    <td>Resultant vector from origin</td>
+                </tr>
+                <tr>
+                    <td>Subtraction</td>
+                    <td>Vector from z₂ to z₁</td>
+                    <td>z₁ - z₂ gives vector from z₂ to z₁</td>
+                    <td>z₁ - z₂ = vector from z₂ to z₁</td>
+                </tr>
+                <tr>
+                    <td>Multiplication</td>
+                    <td>Rotation and scaling</td>
+                    <td>z₁z₂: rotate z₁ by arg(z₂) and scale by |z₂|</td>
+                    <td>Angles add, moduli multiply</td>
+                </tr>
+                <tr>
+                    <td>Division</td>
+                    <td>Rotation and scaling inverse</td>
+                    <td>z₁/z₂: rotate z₁ by -arg(z₂) and scale by 1/|z₂|</td>
+                    <td>Angles subtract, moduli divide</td>
+                </tr>
+                <tr>
+                    <td>Conjugate</td>
+                    <td>Reflection about real axis</td>
+                    <td>z̄ is mirror image of z across x-axis</td>
+                    <td>y-coordinate changes sign</td>
+                </tr>
+                <tr>
+                    <td>Modulus</td>
+                    <td>Distance from origin</td>
+                    <td>|z| = distance from (0,0) to point z</td>
+                    <td>Length of line segment from origin</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Geometric Properties and Loci:</strong></p>
+                <ul>
+                    <li><strong>Circle:</strong> |z - z₀| = r represents circle with center z₀ and radius r</li>
+                    <li><strong>Perpendicular bisector:</strong> |z - z₁| = |z - z₂| represents perpendicular bisector of segment joining z₁ and z₂</li>
+                    <li><strong>Line:</strong> arg(z - z₁) = θ represents ray starting at z₁ making angle θ with positive real axis</li>
+                    <li><strong>Half-line:</strong> arg(z - z₁) = constant represents a ray from z₁</li>
+                    <li><strong>Region inside circle:</strong> |z - z₀| &lt; r represents interior of circle</li>
+                    <li><strong>Region outside circle:</strong> |z - z₀| &gt; r represents exterior of circle</li>
+                    <li><strong>Annulus:</strong> r₁ &lt; |z - z₀| &lt; r₂ represents circular ring</li>
+                    <li><strong>Ellipse:</strong> |z - z₁| + |z - z₂| = constant represents ellipse with foci at z₁ and z₂</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Locus Problem</div>
+                <p>Find the locus of z if |z - 3| = 2|z + 3|</p>
+                <p><strong>Solution:</strong></p>
+                <p>Let z = x + iy</p>
+                <p>|z - 3| = |(x-3) + iy| = √[(x-3)² + y²]</p>
+                <p>|z + 3| = |(x+3) + iy| = √[(x+3)² + y²]</p>
+                <p>Given: √[(x-3)² + y²] = 2√[(x+3)² + y²]</p>
+                <p>Squaring both sides: (x-3)² + y² = 4[(x+3)² + y²]</p>
+                <p>x² - 6x + 9 + y² = 4[x² + 6x + 9 + y²]</p>
+                <p>x² - 6x + 9 + y² = 4x² + 24x + 36 + 4y²</p>
+                <p>0 = 3x² + 30x + 27 + 3y²</p>
+                <p>Divide by 3: x² + 10x + 9 + y² = 0</p>
+                <p>Complete square: (x² + 10x + 25) + y² = 25 - 9 = 16</p>
+                <p>(x+5)² + y² = 4²</p>
+                <p>This is a circle with center at (-5, 0) and radius 4.</p>
+                <p>Thus, the locus is a circle centered at -5 + 0i with radius 4.</p>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Complex Numbers as Transformations</h4>
+                <p><strong>Translation:</strong> z → z + a (shift by complex number a)</p>
+                <p><strong>Rotation:</strong> z → e^(iθ)z (rotate by angle θ about origin)</p>
+                <p><strong>Scaling:</strong> z → kz (scale by factor k, k real)</p>
+                <p><strong>Rotation and Scaling:</strong> z → (re^(iθ))z (rotate by θ and scale by r)</p>
+                <p><strong>Inversion:</strong> z → 1/z (circle inversion transformation)</p>
+                <p><strong>Linear Transformation:</strong> z → az + b (combination of rotation, scaling, translation)</p>
+                <p><strong>Möbius Transformation:</strong> z → (az+b)/(cz+d) (most general conformal mapping of complex plane)</p>
+            </div>
+        </section>
+
+        <!-- Polar Form Section -->
+        <section class="info-panel" id="polar" data-aos="fade-up">
+            <h2>Polar Form & Euler's Formula</h2>
+            <p>The polar form provides a powerful way to represent complex numbers using modulus and argument, leading to Euler's famous formula connecting complex numbers with trigonometry.</p>
+
+            <div class="definition">
+                <p><strong>Polar Form:</strong> z = r(cos θ + i sin θ), where r = |z| ≥ 0 and θ = arg(z).</p>
+                <p><strong>Euler's Formula:</strong> e^(iθ) = cos θ + i sin θ, for any real θ.</p>
+            </div>
+
+            <!-- Euler Formula Display -->
+            <div class="euler-formula" data-aos="zoom-in">
+                <h3>Euler's Formula - "The Most Beautiful Equation"</h3>
+                <div class="euler-equation">e^(iπ) + 1 = 0</div>
+                <p>Connects five fundamental mathematical constants: e, i, π, 1, and 0</p>
+                <div class="formula">e^(iθ) = cos θ + i sin θ</div>
+                <p>The bridge between exponential and trigonometric functions</p>
+            </div>
+
+            <div class="polar-visual">
+                <div class="polar-representation">
+                    <h4>Rectangular Form</h4>
+                    <div class="formula">z = x + iy</div>
+                    <p>• x = Re(z)<br>• y = Im(z)</p>
+                    <div class="example">
+                        <p><strong>Example:</strong> 3 + 4i<br>x = 3, y = 4</p>
+                    </div>
+                </div>
+
+                <div style="font-size: 2rem; color: var(--highlight); align-self: center;">
+                    ⇔
+                </div>
+
+                <div class="polar-representation">
+                    <h4>Polar Form</h4>
+                    <div class="formula">z = r(cos θ + i sin θ)</div>
+                    <p>• r = |z| = √(x²+y²)<br>• θ = arg(z) = tan⁻¹(y/x)</p>
+                    <div class="example">
+                        <p><strong>Example:</strong> 5(cos 53.13° + i sin 53.13°)<br>r = 5, θ ≈ 53.13°</p>
+                    </div>
+                </div>
+
+                <div style="font-size: 2rem; color: var(--highlight); align-self: center;">
+                    ⇔
+                </div>
+
+                <div class="polar-representation">
+                    <h4>Exponential Form</h4>
+                    <div class="formula">z = re^(iθ)</div>
+                    <p>• r = |z|<br>• θ = arg(z)</p>
+                    <div class="example">
+                        <p><strong>Example:</strong> 5e^(i·0.927)<br>r = 5, θ ≈ 0.927 rad</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Conversion Formulas</h3>
+            <div class="formula-grid">
+                <div class="formula-card">
+                    <div class="formula-card-title">Rectangular → Polar</div>
+                    <div class="formula">r = √(x² + y²)</div>
+                    <div class="formula">θ = tan⁻¹(y/x)</div>
+                    <p>Adjust θ for correct quadrant</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Polar → Rectangular</div>
+                    <div class="formula">x = r cos θ</div>
+                    <div class="formula">y = r sin θ</div>
+                    <p>z = x + iy = r(cos θ + i sin θ)</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Multiplication in Polar</div>
+                    <div class="formula">z₁z₂ = r₁r₂[cos(θ₁+θ₂) + i sin(θ₁+θ₂)]</div>
+                    <div class="formula">= r₁r₂ e^(i(θ₁+θ₂))</div>
+                    <p>Moduli multiply, arguments add</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Division in Polar</div>
+                    <div class="formula">z₁/z₂ = (r₁/r₂)[cos(θ₁-θ₂) + i sin(θ₁-θ₂)]</div>
+                    <div class="formula">= (r₁/r₂) e^(i(θ₁-θ₂))</div>
+                    <p>Moduli divide, arguments subtract</p>
+                </div>
+            </div>
+
+            <!-- Polar Calculator -->
+            <div class="calculator">
+                <h3>Polar Form Calculator</h3>
+                <div class="calculator-inputs">
+                    <div class="input-group">
+                        <label>Complex Number (rectangular)</label>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <input type="number" id="polarReal" placeholder="Real part" value="3" step="any">
+                            <span style="color: var(--highlight); align-self: center;">+</span>
+                            <input type="number" id="polarImag" placeholder="Imag part" value="4" step="any">
+                            <span style="color: var(--highlight); align-self: center;">i</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculator-controls">
+                    <button class="calc-btn" onclick="convertToPolar()">Convert to Polar</button>
+                    <button class="calc-btn" onclick="convertFromPolar()">Convert from Polar</button>
+                </div>
+
+                <div class="calculator-result" id="polarResult">
+                    Polar form will appear here
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Properties of Polar Form:</strong></p>
+                <ul>
+                    <li><strong>Multiplication:</strong> z₁z₂ = r₁r₂[cos(θ₁+θ₂) + i sin(θ₁+θ₂)] = r₁r₂ e^(i(θ₁+θ₂))</li>
+                    <li><strong>Division:</strong> z₁/z₂ = (r₁/r₂)[cos(θ₁-θ₂) + i sin(θ₁-θ₂)] = (r₁/r₂) e^(i(θ₁-θ₂))</li>
+                    <li><strong>Power:</strong> zⁿ = rⁿ[cos(nθ) + i sin(nθ)] = rⁿ e^(inθ) (De Moivre's theorem)</li>
+                    <li><strong>Root:</strong> z^(1/n) = r^(1/n)[cos((θ+2kπ)/n) + i sin((θ+2kπ)/n)], k = 0,1,...,n-1</li>
+                    <li><strong>Argument properties:</strong> arg(z₁z₂) = arg(z₁) + arg(z₂), arg(z₁/z₂) = arg(z₁) - arg(z₂)</li>
+                    <li><strong>Modulus properties:</strong> |z₁z₂| = |z₁||z₂|, |z₁/z₂| = |z₁|/|z₂|, |zⁿ| = |z|ⁿ</li>
+                    <li><strong>Complex conjugate:</strong> If z = re^(iθ), then z̄ = re^(-iθ)</li>
+                    <li><strong>Reciprocal:</strong> 1/z = (1/r)e^(-iθ) for z ≠ 0</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Multiplication in Polar Form</div>
+                <p>Multiply z₁ = 1 + i and z₂ = √3 + i using polar form.</p>
+                <p><strong>Solution:</strong></p>
+                <p>Convert to polar form:</p>
+                <p>z₁ = 1 + i: r₁ = √(1²+1²) = √2, θ₁ = tan⁻¹(1/1) = π/4</p>
+                <p>z₂ = √3 + i: r₂ = √((√3)²+1²) = √(3+1) = 2, θ₂ = tan⁻¹(1/√3) = π/6</p>
+                <p>In polar form: z₁ = √2(cos π/4 + i sin π/4), z₂ = 2(cos π/6 + i sin π/6)</p>
+                <p>Multiplication: z₁z₂ = (√2 × 2)[cos(π/4+π/6) + i sin(π/4+π/6)]</p>
+                <p>= 2√2[cos(5π/12) + i sin(5π/12)]</p>
+                <p>Convert back to rectangular: cos(5π/12) = (√6 - √2)/4, sin(5π/12) = (√6 + √2)/4</p>
+                <p>z₁z₂ = 2√2[(√6-√2)/4 + i(√6+√2)/4] = (√12-√4)/2 + i(√12+√4)/2</p>
+                <p>= (2√3-2)/2 + i(2√3+2)/2 = (√3-1) + i(√3+1)</p>
+                <p>Check: (1+i)(√3+i) = √3 + i + i√3 + i² = (√3-1) + i(1+√3) ✓</p>
+            </div>
+        </section>
+
+        <!-- De Moivre's Theorem Section -->
+        <section class="info-panel" id="demoivre" data-aos="fade-up">
+            <h2>De Moivre's Theorem & Roots of Unity</h2>
+            <p>De Moivre's theorem provides a powerful tool for computing powers and roots of complex numbers, with important applications in solving equations and analyzing periodic phenomena.</p>
+
+            <div class="definition">
+                <p><strong>De Moivre's Theorem:</strong> For any integer n and real number θ, (cos θ + i sin θ)ⁿ = cos nθ + i sin nθ.</p>
+                <p><strong>Corollary:</strong> For any complex number z = r(cos θ + i sin θ), zⁿ = rⁿ(cos nθ + i sin nθ).</p>
+            </div>
+
+            <div class="formula">
+                (cos θ + i sin θ)ⁿ = cos nθ + i sin nθ
+            </div>
+            <p>Also written as: [r(cos θ + i sin θ)]ⁿ = rⁿ(cos nθ + i sin nθ)<br>
+            Or in exponential form: (re^(iθ))ⁿ = rⁿ e^(inθ)</p>
+
+            <!-- Roots of Unity Visualizer -->
+            <div class="complex-visual">
+                <h3>Roots of Unity Visualizer</h3>
+                <div class="roots-container">
+                    <div class="unit-circle"></div>
+                    <!-- Roots will be plotted by JavaScript -->
+                </div>
+                <div style="margin-top: 1rem;">
+                    <input type="number" id="rootDegree" placeholder="n (degree)" value="5" min="2" max="12" style="padding: 0.5rem; border-radius: 5px; border: 1px solid var(--primary); background: rgba(0,0,0,0.3); color: white; width: 80px;">
+                    <button class="calc-btn" onclick="plotRootsOfUnity()">Plot nth Roots</button>
+                    <button class="calc-btn" onclick="clearRoots()">Clear</button>
+                </div>
+                <div id="rootsInfo" style="margin-top: 1rem; color: var(--highlight); font-family: 'Audiowide', cursive;"></div>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Powers of Complex Numbers</div>
+                    <p>Compute zⁿ easily using polar form</p>
+                    <div class="formula">zⁿ = rⁿ(cos nθ + i sin nθ)</div>
+                    <div class="example">
+                        <p><strong>Example:</strong> (1+i)¹⁰</p>
+                        <p>1+i = √2(cos π/4 + i sin π/4)</p>
+                        <p>(1+i)¹⁰ = (√2)¹⁰(cos 10π/4 + i sin 10π/4)</p>
+                        <p>= 32(cos 5π/2 + i sin 5π/2) = 32(0 + i) = 32i</p>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">nth Roots</div>
+                    <p>Find all n solutions to zⁿ = w</p>
+                    <div class="formula">z = r^(1/n)[cos((θ+2kπ)/n) + i sin((θ+2kπ)/n)]</div>
+                    <p>k = 0, 1, 2, ..., n-1</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Roots of Unity</div>
+                    <p>Solutions of zⁿ = 1</p>
+                    <div class="formula">ωₖ = cos(2kπ/n) + i sin(2kπ/n)</div>
+                    <div class="example">
+                        <p><strong>Example:</strong> Cube roots of unity: 1, (-1±i√3)/2</p>
+                        <p>They satisfy ω³ = 1 and 1+ω+ω²=0</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Properties of Roots of Unity</h3>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Formula</th>
+                    <th>Example (n=3)</th>
+                </tr>
+                <tr>
+                    <td>Geometric progression</td>
+                    <td>Roots are in GP with common ratio ω</td>
+                    <td>1, ω, ω², ..., ωⁿ⁻¹</td>
+                    <td>1, ω, ω² where ω = e^(2πi/3)</td>
+                </tr>
+                <tr>
+                    <td>Sum of roots</td>
+                    <td>Sum of all nth roots of unity is 0</td>
+                    <td>1 + ω + ω² + ... + ωⁿ⁻¹ = 0</td>
+                    <td>1 + ω + ω² = 0</td>
+                </tr>
+                <tr>
+                    <td>Product of roots</td>
+                    <td>Product of all nth roots of unity is (-1)ⁿ⁻¹</td>
+                    <td>1·ω·ω²·...·ωⁿ⁻¹ = (-1)ⁿ⁻¹</td>
+                    <td>1·ω·ω² = 1 (since n=3, (-1)²=1)</td>
+                </tr>
+                <tr>
+                    <td>Conjugate pairs</td>
+                    <td>Non-real roots occur in conjugate pairs</td>
+                    <td>If ω is a root, then ω̄ is also a root</td>
+                    <td>ω and ω̄ = ω² are conjugates</td>
+                </tr>
+                <tr>
+                    <td>Cyclic group</td>
+                    <td>Roots form a cyclic group under multiplication</td>
+                    <td>ωᵃ × ωᵇ = ω^(a+b mod n)</td>
+                    <td>ω × ω² = ω³ = 1</td>
+                </tr>
+                <tr>
+                    <td>Regular polygon</td>
+                    <td>Roots form vertices of regular n-gon on unit circle</td>
+                    <td>Equally spaced at angles 2πk/n</td>
+                    <td>Equilateral triangle for n=3</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Key Results from De Moivre's Theorem:</strong></p>
+                <ul>
+                    <li>For any integer n: (cos θ + i sin θ)ⁿ = cos nθ + i sin nθ</li>
+                    <li>zⁿ = rⁿ(cos nθ + i sin nθ) for z = r(cos θ + i sin θ)</li>
+                    <li>nth roots of z = r(cos θ + i sin θ) are: z^(1/n) = r^(1/n)[cos((θ+2kπ)/n) + i sin((θ+2kπ)/n)], k = 0,1,...,n-1</li>
+                    <li>nth roots of unity: Solutions of zⁿ = 1 are ωₖ = cos(2kπ/n) + i sin(2kπ/n), k = 0,1,...,n-1</li>
+                    <li>Sum of nth roots of unity: 1 + ω + ω² + ... + ωⁿ⁻¹ = 0 (for n > 1)</li>
+                    <li>Cube roots of unity: 1, ω, ω² where ω = (-1 + i√3)/2 and ω² = (-1 - i√3)/2, with 1+ω+ω² = 0 and ω³ = 1</li>
+                    <li>Fourth roots of unity: 1, i, -1, -i (powers of i)</li>
+                    <li>For solving equations: Express in polar form and use De Moivre's theorem</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Finding Cube Roots</div>
+                <p>Find all cube roots of -8.</p>
+                <p><strong>Solution:</strong></p>
+                <p>Let z³ = -8</p>
+                <p>Write -8 in polar form: -8 = 8(cos π + i sin π)</p>
+                <p>Cube roots: z = 8^(1/3)[cos((π+2kπ)/3) + i sin((π+2kπ)/3)], k = 0,1,2</p>
+                <p>= 2[cos((π+2kπ)/3) + i sin((π+2kπ)/3)]</p>
+                <p>For k=0: z₀ = 2(cos π/3 + i sin π/3) = 2(1/2 + i√3/2) = 1 + i√3</p>
+                <p>For k=1: z₁ = 2(cos π + i sin π) = 2(-1 + i·0) = -2</p>
+                <p>For k=2: z₂ = 2(cos 5π/3 + i sin 5π/3) = 2(1/2 - i√3/2) = 1 - i√3</p>
+                <p>Thus, cube roots of -8 are: -2, 1 + i√3, 1 - i√3</p>
+                <p>Check: (-2)³ = -8, (1±i√3)³ = 1 ± 3i√3 + 3(i√3)² + (i√3)³ = 1 ± 3i√3 - 9 ∓ i3√3 = -8 ✓</p>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Applications of De Moivre's Theorem</h4>
+                <p><strong>Trigonometric Identities:</strong> Express cos nθ and sin nθ in terms of cos θ and sin θ</p>
+                <p><strong>Summation of Series:</strong> Sum series like cos θ + cos 2θ + ... + cos nθ</p>
+                <p><strong>Solving Equations:</strong> Find all roots of equations like zⁿ = a + ib</p>
+                <p><strong>Geometry:</strong> Regular polygons, rotations, symmetries</p>
+                <p><strong>Number Theory:</strong> Cyclotomic polynomials, primitive roots</p>
+                <p><strong>Fourier Analysis:</strong> Represent periodic functions using complex exponentials</p>
+                <p><strong>Quantum Mechanics:</strong> Wave functions, probability amplitudes</p>
+            </div>
+        </section>
+
+        <!-- Applications Section -->
+        <section class="info-panel" id="applications" data-aos="fade-up">
+            <h2>Applications of Complex Numbers</h2>
+            <p>Complex numbers have profound applications in physics, engineering, signal processing, and many other fields, making them essential for modern science and technology.</p>
+
+            <div class="comparison-table">
+                <h3>Real-World Applications</h3>
+                <table>
+                    <tr>
+                        <th>Application Area</th>
+                        <th>Specific Use</th>
+                        <th>How Complex Numbers Help</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>Electrical Engineering</td>
+                        <td>AC Circuit Analysis</td>
+                        <td>Impedance represented as complex numbers</td>
+                        <td>RLC circuits, power calculations</td>
+                    </tr>
+                    <tr>
+                        <td>Signal Processing</td>
+                        <td>Fourier Transform</td>
+                        <td>Represent signals as sum of complex exponentials</td>
+                        <td>Audio compression, image processing</td>
+                    </tr>
+                    <tr>
+                        <td>Quantum Mechanics</td>
+                        <td>Wave Functions</td>
+                        <td>Probability amplitudes are complex numbers</td>
+                        <td>Schrödinger equation solutions</td>
+                    </tr>
+                    <tr>
+                        <td>Control Theory</td>
+                        <td>System Stability</td>
+                        <td>Poles and zeros in complex plane</td>
+                        <td>Feedback control systems</td>
+                    </tr>
+                    <tr>
+                        <td>Fluid Dynamics</td>
+                        <td>Potential Flow</td>
+                        <td>Complex potential for 2D flows</td>
+                        <td>Aerodynamics, hydrodynamics</td>
+                    </tr>
+                    <tr>
+                        <td>Computer Graphics</td>
+                        <td>2D Transformations</td>
+                        <td>Rotation and scaling as complex multiplication</td>
+                        <td>Image rotation, fractal generation</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>Detailed Applications</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">AC Circuit Analysis</div>
+                    <p>Impedance Z = R + iX where R=resistance, X=reactance</p>
+                    <div class="formula">V = IZ (Ohm's law for AC)</div>
+                    <div class="example">
+                        <p><strong>Example:</strong> For RLC circuit:<br>
+                        Z = R + i(ωL - 1/(ωC))<br>
+                        Phase difference = arg(Z)</p>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Fourier Transform</div>
+                    <p>Decompose signal into frequency components</p>
+                    <div class="formula">F(ω) = ∫ f(t)e^(-iωt) dt</div>
+                    <div class="example">
+                        <p><strong>Example:</strong> MP3 compression, JPEG images, MRI scans all use Fourier transforms</p>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Quantum Mechanics</div>
+                    <p>Wave function ψ(x) is complex-valued</p>
+                    <div class="formula">Probability = |ψ(x)|²</div>
+                    <div class="example">
+                        <p><strong>Example:</strong> Schrödinger equation: iħ∂ψ/∂t = Ĥψ<br>
+                        Complex numbers essential for superposition</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Key Applications in Detail:</strong></p>
+                <ul>
+                    <li><strong>Electrical Engineering:</strong> AC circuits, impedance, phase relationships, power factor correction</li>
+                    <li><strong>Signal Processing:</strong> Fourier analysis, filters, modulation, spectral analysis</li>
+                    <li><strong>Control Systems:</strong> Root locus, Nyquist stability criterion, Bode plots</li>
+                    <li><strong>Quantum Physics:</strong> Wave functions, operators, probability amplitudes, quantum computing</li>
+                    <li><strong>Fluid Dynamics:</strong> Complex potential for incompressible flow, conformal mapping</li>
+                    <li><strong>Electromagnetism:</strong> Maxwell's equations in complex form, wave propagation</li>
+                    <li><strong>Computer Graphics:</strong> 2D transformations, fractal generation (Mandelbrot set)</li>
+                    <li><strong>Mathematics:</strong> Solving polynomial equations, analytic functions, contour integration</li>
+                    <li><strong>Cartography:</strong> Map projections using complex functions</li>
+                    <li><strong>Economics:</strong> Complex numbers in certain economic models</li>
+                </ul>
+            </div>
+
+            <!-- Mandelbrot Set Visualization -->
+            <div class="complex-visual">
+                <h3>Fractals: Mandelbrot Set</h3>
+                <div style="padding: 1rem; background: rgba(0,0,0,0.3); border-radius: 10px; margin: 1rem 0;">
+                    <p>The Mandelbrot set is generated by iterating the function f(z) = z² + c for complex numbers c.</p>
+                    <div class="formula">zₙ₊₁ = zₙ² + c, starting with z₀ = 0</div>
+                    <p>Points c for which the sequence remains bounded are in the Mandelbrot set.</p>
+                    <p style="color: var(--highlight); margin-top: 1rem;">The boundary of the Mandelbrot set is infinitely complex and self-similar at all scales.</p>
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: AC Circuit Application</div>
+                <p>An AC circuit has R = 10Ω, L = 0.1H, and C = 100μF. The source voltage is V = 100∠0° volts at frequency f = 50Hz. Find the current.</p>
+                <p><strong>Solution:</strong></p>
+                <p>Angular frequency: ω = 2πf = 2π×50 = 100π rad/s</p>
+                <p>Inductive reactance: X_L = ωL = 100π×0.1 = 10π Ω ≈ 31.42 Ω</p>
+                <p>Capacitive reactance: X_C = 1/(ωC) = 1/(100π×100×10⁻⁶) = 100/(π) Ω ≈ 31.83 Ω</p>
+                <p>Net reactance: X = X_L - X_C = 31.42 - 31.83 = -0.41 Ω (capacitive)</p>
+                <p>Impedance: Z = R + iX = 10 - 0.41i Ω</p>
+                <p>|Z| = √(10² + 0.41²) ≈ √(100 + 0.168) ≈ √100.168 ≈ 10.008 Ω</p>
+                <p>Phase angle: φ = tan⁻¹(X/R) = tan⁻¹(-0.41/10) ≈ tan⁻¹(-0.041) ≈ -2.35°</p>
+                <p>Current: I = V/Z = 100∠0° / 10.008∠-2.35° = (100/10.008)∠(0° - (-2.35°)) ≈ 9.99∠2.35° A</p>
+                <p>Thus, current magnitude ≈ 9.99 A, leading voltage by 2.35°.</p>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Advanced Applications</h4>
+                <p><strong>Complex Analysis:</strong> Holomorphic functions, Cauchy integral theorem, residue calculus</p>
+                <p><strong>Conformal Mapping:</strong> Preserves angles, used in fluid dynamics and electromagnetism</p>
+                <p><strong>Riemann Hypothesis:</strong> Most famous unsolved problem about zeros of Riemann zeta function</p>
+                <p><strong>Quantum Field Theory:</strong> Path integrals with complex weights</p>
+                <p><strong>String Theory:</strong> Complex manifolds (Calabi-Yau manifolds)</p>
+                <p><strong>Cryptography:</strong> Complex numbers in certain encryption algorithms</p>
+                <p><strong>Chaos Theory:</strong> Complex dynamics, Julia sets</p>
+            </div>
+        </section>
+
+        <!-- Problem Solving Section -->
+        <section class="info-panel" id="problems" data-aos="fade-up">
+            <h2>Problem Solving Strategies</h2>
+            <p>Effective techniques for solving complex number problems in JEE and other competitive exams.</p>
+
+            <div class="problem-solving">
+                <div class="problem-box">
+                    <div class="problem-title">Type 1: Algebraic Manipulation</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Separate real and imaginary parts</li>
+                        <li>Use i² = -1 to simplify</li>
+                        <li>For division, multiply by conjugate</li>
+                        <li>Equate real and imaginary parts if equation = 0</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Use z + z̄ = 2Re(z) and z - z̄ = 2i Im(z)</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 2: Geometric Problems</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Plot points on Argand plane</li>
+                        <li>Use geometry of triangles, circles, etc.</li>
+                        <li>Apply distance formula |z₁ - z₂|</li>
+                        <li>Use argument for angles</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> |z - z₀| = r represents circle with center z₀, radius r</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 3: De Moivre's Theorem</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Convert to polar form: z = r(cos θ + i sin θ)</li>
+                        <li>Apply theorem: zⁿ = rⁿ(cos nθ + i sin nθ)</li>
+                        <li>For roots, use formula with k = 0,1,...,n-1</li>
+                        <li>Convert back to rectangular form if needed</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> For roots of unity, remember 1+ω+ω²+...+ωⁿ⁻¹=0</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Common Problem Types:</strong></p>
+                <ul>
+                    <li><strong>Algebraic simplification:</strong> Operations with complex numbers, finding real/imaginary parts</li>
+                    <li><strong>Equations:</strong> Solving equations involving complex numbers, finding roots</li>
+                    <li><strong>Geometry:</strong> Loci problems, geometric interpretations in Argand plane</li>
+                    <li><strong>Powers and roots:</strong> Using De Moivre's theorem, finding nth roots</li>
+                    <li><strong>Inequalities:</strong> Triangle inequality, modulus inequalities</li>
+                    <li><strong>Applications:</strong> AC circuits, rotation problems, vector representations</li>
+                    <li><strong>Proofs:</strong> Proving identities involving complex numbers</li>
+                    <li><strong>Roots of unity:</strong> Properties and applications of nth roots of unity</li>
+                </ul>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED TIP</div>
+                <h4>Advanced Problem Solving Techniques</h4>
+                <p>• For locus problems: Use geometric interpretation |z-z₁| = distance, arg(z-z₁) = angle</p>
+                <p>• For inequality proofs: Use |z₁+z₂| ≤ |z₁|+|z₂| (triangle inequality)</p>
+                <p>• For finding maximum/minimum: Use geometric interpretation in Argand plane</p>
+                <p>• For roots of polynomials: Complex roots occur in conjugate pairs for real coefficients</p>
+                <p>• For summation of series: Use geometric series formula with complex ratio</p>
+                <p>• For trigonometric identities: Use De Moivre's theorem and binomial expansion</p>
+                <p>• For transformation problems: Multiplication by complex number = rotation + scaling</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Challenging Geometry Problem</div>
+                <p>If z₁, z₂, z₃ are vertices of an equilateral triangle in the complex plane, prove that z₁² + z₂² + z₃² = z₁z₂ + z₂z₃ + z₃z₁.</p>
+                <p><strong>Solution:</strong></p>
+                <p>For an equilateral triangle, the vertices satisfy:</p>
+                <p>z₂ - z₁ = (z₃ - z₁)e^(±iπ/3)</p>
+                <p>Let ω = e^(iπ/3) = cos π/3 + i sin π/3 = 1/2 + i√3/2</p>
+                <p>Then z₂ - z₁ = (z₃ - z₁)ω ...(1)</p>
+                <p>Also, ω satisfies ω² - ω + 1 = 0 (since ω = e^(iπ/3) is a cube root of -1)</p>
+                <p>From (1): z₂ = z₁ + (z₃ - z₁)ω</p>
+                <p>Squaring: z₂² = z₁² + 2z₁(z₃ - z₁)ω + (z₃ - z₁)²ω²</p>
+                <p>Similarly, from z₃ - z₂ = (z₁ - z₂)ω (rotating other way):</p>
+                <p>z₃ = z₂ + (z₁ - z₂)ω = z₂(1-ω) + z₁ω</p>
+                <p>We need to prove: z₁² + z₂² + z₃² = z₁z₂ + z₂z₃ + z₃z₁</p>
+                <p>Or equivalently: z₁² + z₂² + z₃² - z₁z₂ - z₂z₃ - z₃z₁ = 0</p>
+                <p>This expression is symmetric and equals (z₁ + ωz₂ + ω²z₃)(z₁ + ω²z₂ + ωz₃) = 0</p>
+                <p>For equilateral triangle, z₁ + ωz₂ + ω²z₃ = 0 (known property)</p>
+                <p>Thus the product is 0, proving the required identity.</p>
+                <p>Alternatively, note that for equilateral triangle centered at origin, the vertices are r, rω, rω², which clearly satisfy the identity.</p>
+            </div>
+        </section>
+
+        <!-- Key Facts Carousel -->
+        <div class="swiper-container" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">COMPLEX NUMBER</div>
+                        <div class="swiper-text">z = a + ib, where a,b ∈ ℝ and i² = -1. Extends real number system</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">ARGAND PLANE</div>
+                        <div class="swiper-text">Geometric representation: x-axis = real, y-axis = imaginary. z = (x,y)</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">MODULUS & ARGUMENT</div>
+                        <div class="swiper-text">|z| = √(a²+b²), arg(z) = tan⁻¹(b/a). Polar form: z = r(cos θ + i sin θ)</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">EULER'S FORMULA</div>
+                        <div class="swiper-text">e^(iθ) = cos θ + i sin θ. Most beautiful equation: e^(iπ) + 1 = 0</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">DE MOIVRE'S THEOREM</div>
+                        <div class="swiper-text">(cos θ + i sin θ)ⁿ = cos nθ + i sin nθ. Key for powers and roots</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">ROOTS OF UNITY</div>
+                        <div class="swiper-text">Solutions of zⁿ = 1: ωₖ = e^(2πik/n), k=0,...,n-1. Sum = 0 for n>1</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">COMPLEX CONJUGATE</div>
+                        <div class="swiper-text">z̄ = a - ib. Properties: z z̄ = |z|², z₁+z₂̄ = z̄₁+z̄₂, z₁z₂̄ = z̄₁z̄₂</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">APPLICATIONS</div>
+                        <div class="swiper-text">AC circuits, signal processing, quantum mechanics, fractals, control systems</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- Summary Section -->
+        <section class="info-panel" data-aos="fade-up">
+            <h2>Chapter Summary & Formulas</h2>
+            
+            <h3>Key Formulas</h3>
+            <div class="concept-cards">
+                <div class="concept-card algebra">
+                    <div class="card-title algebra">Complex Algebra</div>
+                    <div class="formula">i² = -1, i³ = -i, i⁴ = 1</div>
+                    <div class="formula">(a+ib) ± (c+id) = (a±c) + i(b±d)</div>
+                    <div class="formula">(a+ib)(c+id) = (ac-bd) + i(ad+bc)</div>
+                    <div class="formula">z̄ = a - ib, |z| = √(a²+b²)</div>
+                </div>
+
+                <div class="concept-card geometry">
+                    <div class="card-title geometry">Polar Form</div>
+                    <div class="formula">z = r(cos θ + i sin θ)</div>
+                    <div class="formula">r = |z|, θ = arg(z)</div>
+                    <div class="formula">e^(iθ) = cos θ + i sin θ</div>
+                    <div class="formula">z = re^(iθ) (exponential form)</div>
+                </div>
+
+                <div class="concept-card demoivre">
+                    <div class="card-title demoivre">De Moivre's Theorem</div>
+                    <div class="formula">(cos θ + i sin θ)ⁿ = cos nθ + i sin nθ</div>
+                    <div class="formula">zⁿ = rⁿ(cos nθ + i sin nθ)</div>
+                    <div class="formula">z^(1/n) = r^(1/n)[cos((θ+2kπ)/n) + i sin((θ+2kπ)/n)]</div>
+                    <div class="formula">k = 0,1,...,n-1</div>
+                </div>
+            </div>
+
+            <h3>Important Properties</h3>
+            <div class="formula-grid">
+                <div class="formula-card">
+                    <div class="formula-card-title">Modulus Properties</div>
+                    <div class="formula">|z₁z₂| = |z₁||z₂|</div>
+                    <div class="formula">|z₁/z₂| = |z₁|/|z₂|</div>
+                    <div class="formula">|z₁ + z₂| ≤ |z₁| + |z₂|</div>
+                    <div class="formula">|z₁ - z₂| ≥ ||z₁| - |z₂||</div>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Argument Properties</div>
+                    <div class="formula">arg(z₁z₂) = arg(z₁) + arg(z₂)</div>
+                    <div class="formula">arg(z₁/z₂) = arg(z₁) - arg(z₂)</div>
+                    <div class="formula">arg(zⁿ) = n arg(z)</div>
+                    <div class="formula">arg(z̄) = -arg(z)</div>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Conjugate Properties</div>
+                    <div class="formula">z̄̄ = z</div>
+                    <div class="formula">z₁+z₂̄ = z̄₁ + z̄₂</div>
+                    <div class="formula">z₁z₂̄ = z̄₁z̄₂</div>
+                    <div class="formula">(z₁/z₂)̄ = z̄₁/z̄₂</div>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Roots of Unity</div>
+                    <div class="formula">ωₖ = e^(2πik/n), k=0,...,n-1</div>
+                    <div class="formula">1+ω+ω²+...+ωⁿ⁻¹ = 0</div>
+                    <div class="formula">ωⁿ = 1</div>
+                    <div class="formula">For n=3: ω = (-1+i√3)/2</div>
+                </div>
+            </div>
+
+            <h3>Important Points for JEE/NEET</h3>
+            <ul>
+                <li>Complex number: z = a + ib where a,b ∈ ℝ and i² = -1</li>
+                <li>Real part: Re(z) = a, Imaginary part: Im(z) = b</li>
+                <li>Complex conjugate: z̄ = a - ib</li>
+                <li>Modulus: |z| = √(a² + b²) = √(z z̄)</li>
+                <li>Argument: arg(z) = tan⁻¹(b/a), with quadrant adjustment</li>
+                <li>Polar form: z = r(cos θ + i sin θ) where r = |z|, θ = arg(z)</li>
+                <li>Euler's formula: e^(iθ) = cos θ + i sin θ</li>
+                <li>Exponential form: z = re^(iθ)</li>
+                <li>De Moivre's theorem: (cos θ + i sin θ)ⁿ = cos nθ + i sin nθ</li>
+                <li>nth roots: z^(1/n) = r^(1/n)[cos((θ+2kπ)/n) + i sin((θ+2kπ)/n)], k = 0,1,...,n-1</li>
+                <li>Cube roots of unity: 1, ω, ω² where ω = (-1+i√3)/2, satisfying 1+ω+ω²=0 and ω³=1</li>
+                <li>Triangle inequality: |z₁ + z₂| ≤ |z₁| + |z₂|</li>
+                <li>Geometric interpretation: |z - z₀| = r represents circle with center z₀ and radius r</li>
+                <li>Rotation: Multiplication by e^(iθ) rotates complex number by angle θ</li>
+                <li>Applications: AC circuits (impedance), signal processing, quantum mechanics</li>
+            </ul>
+
+            <div class="important">
+                <p><strong>Common Mistakes to Avoid:</strong></p>
+                <ul>
+                    <li>Forgetting that i² = -1 (not i² = 1 or i² = i)</li>
+                    <li>Incorrectly calculating modulus: |a+ib| = √(a²+b²), not a+b or √(a²-b²)</li>
+                    <li>Wrong quadrant for argument: arg(z) depends on signs of both a and b</li>
+                    <li>Not multiplying by conjugate when dividing complex numbers</li>
+                    <li>Forgetting that |z| ≥ 0 always (modulus is non-negative real number)</li>
+                    <li>Incorrect application of De Moivre's theorem: only for integer n in (cos θ + i sin θ)ⁿ</li>
+                    <li>Missing some roots when finding nth roots: there are exactly n distinct roots</li>
+                    <li>Confusing real and imaginary parts: Re(a+ib) = a, Im(a+ib) = b (not ib)</li>
+                    <li>Not simplifying powers of i: i¹ = i, i² = -1, i³ = -i, i⁴ = 1 (cycle of 4)</li>
+                    <li>Incorrect geometric interpretation in Argand plane</li>
+                    <li>Forgetting that complex roots of polynomials with real coefficients occur in conjugate pairs</li>
+                    <li>Not checking conditions for equality in triangle inequality</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Nerds Assemble</h3>
+                <p>Master Complex Numbers for JEE & NEET. Build strong foundation in complex algebra, geometry, and real-world applications.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#algebra">Complex Algebra</a></li>
+                    <li><a href="#geometry">Argand Plane</a></li>
+                    <li><a href="#polar">Polar Form</a></li>
+                    <li><a href="#demoivre">De Moivre's Theorem</a></li>
+                    <li><a href="#applications">Applications</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> 44mr.invisible@gmail.com</li>
+                    <li><i class="fas fa-book"></i> NCERT Mathematics Class 11 - Chapter 5</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Nerds Assemble. All rights reserved. | Designed for JEE & NEET Aspirants | Complex Numbers - Class 11 Mathematics</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Complex Numbers - JavaScript
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ?
+                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+            }
+
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+
+            function handleScroll() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('active');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                }
+            }
+
+            // Debounced scroll event
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(handleScroll, 50);
+            }, { passive: true });
+
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: window.innerWidth < 768 ? 100 : 120,
+                    easing: 'ease-out-quad'
+                });
+            }
+
+            // Initialize Swiper
+            if (typeof Swiper !== 'undefined') {
+                const swiper = new Swiper('.swiper-container', {
+                    loop: true,
+                    autoplay: {
+                        delay: 3500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 25
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        }
+                    }
+                });
+            }
+
+            // Smooth Scroll for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        if (mainNav && mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                });
+            });
+
+            // Back to Top Button Click
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Create Particles
+            createParticles();
+            
+            // Initialize visualizations
+            initializeArgandPlane();
+            initializeAdvancedArgand();
+            plotRootsOfUnity(); // Initial plot with n=5
+        });
+
+        // Create Particles Function
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
+
+            const particleCount = window.innerWidth < 768 ? 20 : 30;
+            particlesContainer.innerHTML = '';
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                const size = Math.random() * 3 + 1;
+                const posX = Math.random() * window.innerWidth;
+                const posY = Math.random() * window.innerHeight;
+                const duration = Math.random() * 15 + 10;
+                const delay = Math.random() * 5;
+
+                particle.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}px;
+                    top: ${posY}px;
+                    opacity: ${Math.random() * 0.3 + 0.1};
+                    animation: float ${duration}s ease-in-out ${delay}s infinite;
+                    background: rgba(255,255,255,0.3);
+                `;
+
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Argand Plane Functions
+        let points = [];
+        let advancedPoints = [];
+
+        function initializeArgandPlane() {
+            const container = document.getElementById('argandContainer');
+            if (!container) return;
+            
+            // Add initial point
+            addPointToArgand(3, 4, "3+4i", "var(--primary)");
+            addPointToArgand(-2, 1, "-2+i", "var(--secondary)");
+        }
+
+        function initializeAdvancedArgand() {
+            // Add initial points to advanced argand
+            plotComplexNumber(3, 4);
+            plotComplexNumber(-2, 3);
+        }
+
+        function addRandomPoint() {
+            const real = (Math.random() * 8 - 4).toFixed(1);
+            const imag = (Math.random() * 8 - 4).toFixed(1);
+            const label = `${real}${imag >= 0 ? '+' : ''}${imag}i`;
+            addPointToArgand(parseFloat(real), parseFloat(imag), label, getRandomColor());
+        }
+
+        function addPointToArgand(x, y, label, color) {
+            const container = document.getElementById('argandContainer');
+            if (!container) return;
+            
+            const plane = container.querySelector('.argand-plane');
+            if (!plane) return;
+            
+            // Convert coordinates to pixel positions
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            
+            // Center at (0,0) with scale 1 unit = 30 pixels
+            const scale = 30;
+            const centerX = width / 2;
+            const centerY = height / 2;
+            
+            const pixelX = centerX + x * scale;
+            const pixelY = centerY - y * scale; // Invert y for screen coordinates
+            
+            // Create point element
+            const point = document.createElement('div');
+            point.className = 'point';
+            point.style.left = `${pixelX}px`;
+            point.style.top = `${pixelY}px`;
+            point.style.background = color;
+            
+            // Create label
+            const labelEl = document.createElement('div');
+            labelEl.className = 'point-label';
+            labelEl.textContent = label;
+            labelEl.style.left = `${pixelX + 10}px`;
+            labelEl.style.top = `${pixelY + 10}px`;
+            
+            point.appendChild(labelEl);
+            plane.appendChild(point);
+            
+            points.push({point: point, label: labelEl});
+        }
+
+        function clearPoints() {
+            points.forEach(item => {
+                if (item.point && item.point.parentNode) {
+                    item.point.parentNode.removeChild(item.point);
+                }
+            });
+            points = [];
+        }
+
+        // Advanced Argand Functions
+        function plotComplexNumber(real, imag) {
+            const container = document.getElementById('advancedArgand');
+            if (!container) return;
+            
+            const plane = container.querySelector('.argand-plane');
+            if (!plane) return;
+            
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            const scale = 25; // Smaller scale for more points
+            const centerX = width / 2;
+            const centerY = height / 2;
+            
+            const pixelX = centerX + real * scale;
+            const pixelY = centerY - imag * scale;
+            
+            // Calculate modulus and argument
+            const modulus = Math.sqrt(real*real + imag*imag).toFixed(2);
+            const argument = Math.atan2(imag, real).toFixed(2);
+            
+            const point = document.createElement('div');
+            point.className = 'point';
+            point.style.left = `${pixelX}px`;
+            point.style.top = `${pixelY}px`;
+            point.style.background = `hsl(${Math.random()*360}, 70%, 60%)`;
+            point.title = `${real}${imag >= 0 ? '+' : ''}${imag}i\n|z| = ${modulus}\narg(z) = ${argument} rad`;
+            
+            plane.appendChild(point);
+            advancedPoints.push(point);
+            
+            // Update info display
+            const info = document.getElementById('argandInfo');
+            if (info) {
+                info.innerHTML = `Plotted: ${real}${imag >= 0 ? '+' : ''}${imag}i<br>
+                                 Modulus: ${modulus}<br>
+                                 Argument: ${argument} rad ≈ ${(argument * 180 / Math.PI).toFixed(1)}°`;
+            }
+        }
+
+        function plotUnitCircle() {
+            clearAdvancedPoints();
+            const pointsOnCircle = 12;
+            for (let i = 0; i < pointsOnCircle; i++) {
+                const angle = (2 * Math.PI * i) / pointsOnCircle;
+                const real = Math.cos(angle);
+                const imag = Math.sin(angle);
+                plotComplexNumber(real, imag);
+            }
+            
+            const info = document.getElementById('argandInfo');
+            if (info) {
+                info.innerHTML = `Unit Circle: |z| = 1<br>
+                                 ${pointsOnCircle} equally spaced points`;
+            }
+        }
+
+        function clearAdvancedPoints() {
+            advancedPoints.forEach(point => {
+                if (point && point.parentNode) {
+                    point.parentNode.removeChild(point);
+                }
+            });
+            advancedPoints = [];
+            
+            const info = document.getElementById('argandInfo');
+            if (info) info.innerHTML = '';
+        }
+
+        // Complex Calculator Functions
+        function complexOperation(operation) {
+            const z1Real = parseFloat(document.getElementById('z1Real').value) || 0;
+            const z1Imag = parseFloat(document.getElementById('z1Imag').value) || 0;
+            const z2Real = parseFloat(document.getElementById('z2Real').value) || 0;
+            const z2Imag = parseFloat(document.getElementById('z2Imag').value) || 0;
+            
+            const z1 = {real: z1Real, imag: z1Imag};
+            const z2 = {real: z2Real, imag: z2Imag};
+            
+            let result;
+            
+            switch(operation) {
+                case 'add':
+                    result = addComplex(z1, z2);
+                    break;
+                case 'subtract':
+                    result = subtractComplex(z1, z2);
+                    break;
+                case 'multiply':
+                    result = multiplyComplex(z1, z2);
+                    break;
+                case 'divide':
+                    if (z2Real === 0 && z2Imag === 0) {
+                        result = {real: NaN, imag: NaN, text: "Error: Division by zero"};
+                    } else {
+                        result = divideComplex(z1, z2);
+                    }
+                    break;
+                case 'conjugate1':
+                    result = conjugateComplex(z1);
+                    break;
+                case 'modulus1':
+                    const mod = Math.sqrt(z1Real*z1Real + z1Imag*z1Imag).toFixed(4);
+                    result = {real: mod, imag: 0, text: `|z₁| = ${mod}`};
+                    break;
+                default:
+                    result = {real: 0, imag: 0, text: "Unknown operation"};
+            }
+            
+            const resultElement = document.getElementById('calcResult');
+            if (result.text) {
+                resultElement.innerHTML = result.text;
+            } else {
+                const sign = result.imag >= 0 ? '+' : '';
+                resultElement.innerHTML = 
+                    `Result: ${result.real.toFixed(4)} ${sign} ${result.imag.toFixed(4)}i<br>
+                     Modulus: ${Math.sqrt(result.real*result.real + result.imag*result.imag).toFixed(4)}<br>
+                     Argument: ${Math.atan2(result.imag, result.real).toFixed(4)} rad`;
+            }
+        }
+
+        function addComplex(z1, z2) {
+            return {
+                real: z1.real + z2.real,
+                imag: z1.imag + z2.imag
+            };
+        }
+
+        function subtractComplex(z1, z2) {
+            return {
+                real: z1.real - z2.real,
+                imag: z1.imag - z2.imag
+            };
+        }
+
+        function multiplyComplex(z1, z2) {
+            return {
+                real: z1.real*z2.real - z1.imag*z2.imag,
+                imag: z1.real*z2.imag + z1.imag*z2.real
+            };
+        }
+
+        function divideComplex(z1, z2) {
+            const denominator = z2.real*z2.real + z2.imag*z2.imag;
+            return {
+                real: (z1.real*z2.real + z1.imag*z2.imag) / denominator,
+                imag: (z1.imag*z2.real - z1.real*z2.imag) / denominator
+            };
+        }
+
+        function conjugateComplex(z) {
+            return {
+                real: z.real,
+                imag: -z.imag,
+                text: `Conjugate of ${z.real}${z.imag >= 0 ? '+' : ''}${z.imag}i = ${z.real}${-z.imag >= 0 ? '+' : ''}${-z.imag}i`
+            };
+        }
+
+        // Polar Form Converter
+        function convertToPolar() {
+            const real = parseFloat(document.getElementById('polarReal').value) || 0;
+            const imag = parseFloat(document.getElementById('polarImag').value) || 0;
+            
+            const r = Math.sqrt(real*real + imag*imag).toFixed(4);
+            let theta = Math.atan2(imag, real);
+            if (theta < 0) theta += 2 * Math.PI; // Make angle positive
+            
+            const degrees = (theta * 180 / Math.PI).toFixed(2);
+            
+            const result = document.getElementById('polarResult');
+            result.innerHTML = 
+                `Rectangular: ${real}${imag >= 0 ? '+' : ''}${imag}i<br>
+                 Polar form: ${r}(cos ${theta.toFixed(4)} + i sin ${theta.toFixed(4)})<br>
+                 Exponential form: ${r}e^(i·${theta.toFixed(4)})<br>
+                 Modulus: |z| = ${r}<br>
+                 Argument: arg(z) = ${theta.toFixed(4)} rad ≈ ${degrees}°`;
+        }
+
+        function convertFromPolar() {
+            // For simplicity, let's use a predefined example
+            const r = 5;
+            const theta = Math.PI / 3; // 60 degrees
+            
+            const real = (r * Math.cos(theta)).toFixed(4);
+            const imag = (r * Math.sin(theta)).toFixed(4);
+            
+            const result = document.getElementById('polarResult');
+            result.innerHTML = 
+                `Polar: ${r}(cos ${theta.toFixed(4)} + i sin ${theta.toFixed(4)})<br>
+                 Rectangular form: ${real} + ${imag}i<br>
+                 = ${real}${imag >= 0 ? '+' : ''}${imag}i<br>
+                 Check: cos(${theta.toFixed(4)}) = ${Math.cos(theta).toFixed(4)}, sin(${theta.toFixed(4)}) = ${Math.sin(theta).toFixed(4)}`;
+        }
+
+        // Roots of Unity Visualizer
+        function plotRootsOfUnity() {
+            const n = parseInt(document.getElementById('rootDegree').value) || 5;
+            if (n < 2 || n > 12) {
+                alert("Please enter n between 2 and 12");
+                return;
+            }
+            
+            clearRoots();
+            
+            const container = document.querySelector('.roots-container');
+            if (!container) return;
+            
+            const unitCircle = container.querySelector('.unit-circle');
+            if (!unitCircle) return;
+            
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            const centerX = width / 2;
+            const centerY = height / 2;
+            const radius = 100; // Radius of unit circle
+            
+            let rootsInfo = "Roots of unity for n = " + n + ":<br>";
+            
+            for (let k = 0; k < n; k++) {
+                const angle = (2 * Math.PI * k) / n;
+                const real = Math.cos(angle);
+                const imag = Math.sin(angle);
+                
+                // Convert to pixel coordinates
+                const pixelX = centerX + real * radius;
+                const pixelY = centerY - imag * radius; // Invert y
+                
+                // Create root point
+                const rootPoint = document.createElement('div');
+                rootPoint.className = 'root-point';
+                rootPoint.style.left = `${pixelX}px`;
+                rootPoint.style.top = `${pixelY}px`;
+                
+                // Color based on position
+                const hue = (k * 360) / n;
+                rootPoint.style.background = `hsl(${hue}, 80%, 60%)`;
+                
+                // Add label
+                const label = document.createElement('div');
+                label.className = 'point-label';
+                label.textContent = `ω${k === 0 ? '' : k}`;
+                label.style.left = `${pixelX + 15}px`;
+                label.style.top = `${pixelY + 15}px`;
+                label.style.color = `hsl(${hue}, 80%, 70%)`;
+                
+                rootPoint.appendChild(label);
+                container.appendChild(rootPoint);
+                
+                // Format root nicely
+                let rootStr;
+                if (k === 0) {
+                    rootStr = "1";
+                } else {
+                    const angleDeg = (360 * k / n).toFixed(1);
+                    rootStr = `e^(2πi·${k}/${n}) = cos(${angleDeg}°) + i sin(${angleDeg}°)`;
+                }
+                rootsInfo += `ω${k === 0 ? '' : k} = ${rootStr}<br>`;
+            }
+            
+            // Update info display
+            const infoElement = document.getElementById('rootsInfo');
+            if (infoElement) {
+                infoElement.innerHTML = rootsInfo;
+            }
+        }
+
+        function clearRoots() {
+            const container = document.querySelector('.roots-container');
+            if (!container) return;
+            
+            const rootPoints = container.querySelectorAll('.root-point');
+            rootPoints.forEach(point => {
+                if (point.parentNode) {
+                    point.parentNode.removeChild(point);
+                }
+            });
+            
+            const infoElement = document.getElementById('rootsInfo');
+            if (infoElement) infoElement.innerHTML = '';
+        }
+
+        // Helper Functions
+        function getRandomColor() {
+            const colors = [
+                'var(--primary)', 'var(--secondary)', 'var(--tertiary)',
+                '#ff6b6b', '#4ecdc4', '#ffd166', '#06d6a0', '#118ab2', '#ef476f'
+            ];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(createParticles, 250);
+        });
+    </script>
+</body>
+</html>
