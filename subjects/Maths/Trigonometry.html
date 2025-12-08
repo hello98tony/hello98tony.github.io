@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKVRN3GREN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKVRN3GREN');
+</script>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometry | Class 11 Maths | JEE Preparation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Pacifico&family=Dancing+Script:wght@700&family=Abril+Fatface&family=Playfair+Display:wght@700&family=Raleway:wght@300;800&family=Quicksand:wght@500&family=Poiret+One&family=Amatic+SC:wght@700&family=Caveat:wght@700&family=Kaushan+Script&family=Libre+Baskerville&family=Merriweather&family=Nunito:wght@800&family=Oswald:wght@500&family=Roboto+Slab:wght@700&family=Sacramento&family=Tangerine:wght@700&family=Yeseva+One&family=Electrolize&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="trigonometry.css">
+
+    <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/planet-universe-svgrepo-com.svg">
+    
+    <style>
+        /* Nerds Assemble - Trigonometry CSS */
+:root {
+    --primary: #2196F3;
+    --secondary: #FF5252;
+    --tertiary: #4CAF50;
+    --bg: #0a0a20;
+    --text: #ffffff;
+    --highlight: #FFEB3B;
+    --nav-bg: rgba(10, 5, 30, 0.95);
+    --ad-primary: #FF5722;
+    --ad-secondary: #FF9800;
+    --ad-bg: rgba(25, 15, 45, 0.95);
+}
+
+/* Base Styles & Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(33, 150, 243, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(255, 82, 82, 0.1) 0%, transparent 20%),
+        linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+}
+
+/* Typography */
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    background: linear-gradient(45deg, var(--primary), var(--secondary), var(--tertiary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px rgba(33, 150, 243, 0.5);
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--highlight);
+    margin: 2rem 0 1.5rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), transparent);
+    border-radius: 3px;
+}
+
+h3 {
+    font-family: 'Roboto Slab', serif;
+    color: var(--secondary);
+    margin: 1.5rem 0 1rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: clamp(1rem, 1.2vw, 1.1rem);
+}
+
+/* Layout Components */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 1rem;
+}
+
+.subtitle {
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+/* Header & Navigation */
+header {
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 0;
+    transform: translateZ(0);
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.logo-icon {
+    color: var(--highlight);
+    font-size: 1.8rem;
+}
+
+.logo-text {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 1.5rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-family: 'Electrolize', sans-serif;
+    font-size: 1rem;
+    transition: color 0.2s ease-out;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-links a:hover {
+    color: var(--highlight);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--highlight);
+    transition: width 0.2s ease-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Content Panels */
+.info-panel {
+    background: rgba(0,0,0,0.5);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: translateZ(0);
+    will-change: transform, opacity;
+}
+
+.info-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%);
+    background-size: 20px 20px;
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+/* Special Content Blocks */
+.important {
+    background: rgba(255, 82, 82, 0.1);
+    border-left: 4px solid var(--secondary);
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+    box-shadow: inset 0 0 10px rgba(255, 82, 82, 0.1);
+}
+
+.definition {
+    background: rgba(76, 175, 80, 0.1);
+    border-left: 4px solid var(--tertiary);
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+    box-shadow: inset 0 0 10px rgba(76, 175, 80, 0.1);
+}
+
+.formula {
+    font-family: 'Audiowide', cursive;
+    color: var(--highlight);
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 235, 59, 0.1);
+    border-radius: 8px;
+    border: 1px dashed var(--highlight);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.formula::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(45deg, transparent 45%, rgba(255, 235, 59, 0.1) 50%, transparent 55%);
+    background-size: 10px 10px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.example {
+    background: rgba(33, 150, 243, 0.1);
+    border-left: 4px solid var(--primary);
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.example-title {
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+/* Lists & Tables */
+ul, ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+th {
+    background-color: rgba(33, 150, 243, 0.2);
+    font-family: 'Electrolize', sans-serif;
+    color: var(--highlight);
+}
+
+tr:hover {
+    background-color: rgba(255,255,255,0.05);
+}
+
+/* Swiper Carousel */
+.swiper-container {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    margin: 3rem 0;
+    will-change: transform;
+}
+
+.swiper-slide {
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.2);
+    font-family: 'Electrolize', sans-serif;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    text-align: center;
+    min-height: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-out;
+    transform: translateZ(0);
+}
+
+.swiper-slide:hover {
+    transform: translateY(-5px);
+}
+
+.swiper-slide div {
+    width: 100%;
+}
+
+.swiper-title {
+    font-family: 'Audiowide', cursive;
+    color: var(--highlight);
+    margin-bottom: 0.5rem;
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+}
+
+.swiper-text {
+    font-family: 'Quicksand', sans-serif;
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+}
+
+/* Particles Background */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    pointer-events: none;
+    will-change: transform;
+    opacity: 0.3;
+}
+
+/* Floating Advertisement */
+.floating-ad {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    background: var(--ad-bg);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    transform: translateX(120%);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+.floating-ad.active {
+    transform: translateX(0);
+}
+
+.ad-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.ad-icon {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--ad-primary), var(--ad-secondary));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+    box-shadow: 0 5px 15px rgba(255, 87, 34, 0.5);
+    z-index: 1;
+}
+
+.ad-text {
+    padding: 30px 20px 20px;
+    background: var(--ad-bg);
+    margin-top: 30px;
+}
+
+.ad-text h3 {
+    color: var(--highlight);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.ad-text p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.ad-timer {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.timer-box {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 8px;
+    min-width: 60px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timer-box span:first-child {
+    font-family: 'Audiowide', cursive;
+    font-size: 1.5rem;
+    color: var(--highlight);
+    display: block;
+}
+
+.timer-box span:last-child {
+    font-size: 0.7rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+}
+
+.ad-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ad-close {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    padding: 0 10px;
+}
+
+.ad-close:hover {
+    color: var(--secondary);
+    transform: scale(1.1);
+}
+
+.ad-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, var(--ad-primary), var(--ad-secondary));
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Electrolize', sans-serif;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.ad-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 87, 34, 0.4);
+}
+
+/* Footer */
+footer {
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    padding: 2rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.footer-column h3 {
+    color: var(--highlight);
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    transition: color 0.2s ease-out;
+}
+
+.footer-links a:hover {
+    color: var(--highlight);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: var(--text);
+    font-size: 1.2rem;
+    transition: color 0.2s ease-out;
+}
+
+.social-links a:hover {
+    color: var(--highlight);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.9rem;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-out;
+    z-index: 999;
+    box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
+    transform: translateZ(0);
+}
+
+.back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: var(--highlight);
+    transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(10px, 10px);
+    }
+    50% {
+        transform: translate(-5px, 15px);
+    }
+    75% {
+        transform: translate(5px, -5px);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .floating-ad {
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image: 
+            radial-gradient(circle at 10% 20%, rgba(33, 150, 243, 0.05) 0%, transparent 20%),
+            linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+    }
+    
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 1rem;
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.75rem 0;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+    
+    header, .info-panel {
+        backdrop-filter: blur(5px);
+    }
+
+    .container {
+        width: 95%;
+        padding: 0;
+    }
+    
+    .info-panel {
+        padding: 1.5rem;
+    }
+    
+    .info-panel::before {
+        background-size: 30px 30px;
+        opacity: 0.03;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    th, td {
+        padding: 0.5rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .floating-ad {
+        width: 80%;
+        right: 10%;
+        bottom: 10px;
+    }
+    
+    .ad-content {
+        flex-direction: column;
+    }
+    
+    .ad-icon {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .ad-text {
+        margin-top: 40px;
+        text-align: center;
+    }
+    
+    .ad-timer {
+        justify-content: center;
+    }
+    
+    .ad-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .ad-btn {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .info-panel {
+        padding: 1rem;
+    }
+    
+    ul, ol {
+        padding-left: 1.5rem;
+    }
+
+    .formula {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .swiper-slide {
+        padding: 1rem;
+    }
+    
+    .floating-ad {
+        width: 90%;
+        right: 5%;
+    }
+    
+    .timer-box {
+        min-width: 50px;
+        padding: 5px;
+    }
+    
+    .timer-box span:first-child {
+        font-size: 1.2rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <!-- Floating Advertisement -->
+    <div class="floating-ad" id="floatingAd">
+        <div class="ad-content">
+            <div class="ad-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="ad-text">
+                <h3>TRIGONOMETRY MASTERY COURSE</h3>
+                <p>Enroll now to get 40% discount on our premium trigonometry course for JEE preparation</p>
+                <div class="ad-timer">
+                    <div class="timer-box">
+                        <span id="adHours">02</span>
+                        <span>HRS</span>
+                    </div>
+                    <div class="timer-box">
+                        <span id="adMinutes">45</span>
+                        <span>MINS</span>
+                    </div>
+                    <div class="timer-box">
+                        <span id="adSeconds">30</span>
+                        <span>SECS</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ad-actions">
+                <button class="ad-close" id="closeAd"><i class="fas fa-times"></i></button>
+                <a href="#" class="ad-btn">ENROLL NOW</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-square-root-alt"></i></span>
+                <span class="logo-text">Nerds Assemble</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#angles">Angles</a></li>
+                    <li><a href="#functions">Trig Functions</a></li>
+                    <li><a href="#identities">Identities</a></li>
+                    <li><a href="#equations">Equations</a></li>
+                    <li><a href="#graphs">Graphs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="page-header" data-aos="fade-down">
+            <h1>Trigonometry</h1>
+            <p class="subtitle">Class 11 Mathematics | JEE Preparation</p>
+            <p>Master trigonometric concepts with JEE-focused content and problem-solving techniques</p>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="info-panel" id="introduction" data-aos="fade-up">
+            <h2>Introduction to Trigonometry</h2>
+            <p>Trigonometry is the branch of mathematics that deals with the relationships between the sides and angles of triangles, particularly right triangles.</p>
+            
+            <div class="definition">
+                <p><strong>Trigonometry:</strong> Derived from Greek words "trigonon" (triangle) and "metron" (measure), it's the study of relationships involving lengths and angles of triangles.</p>
+            </div>
+            
+            <h3>Historical Context</h3>
+            <ul>
+                <li>Developed by ancient Greek, Indian, and Arab mathematicians</li>
+                <li>Hipparchus (190-120 BCE) created the first trigonometric table</li>
+                <li>Used in astronomy, navigation, engineering, and physics</li>
+            </ul>
+            
+            <div class="important">
+                <p><strong>JEE Focus:</strong> Trigonometry accounts for about 10-15% of JEE Main questions and is fundamental for calculus and physics problems.</p>
+            </div>
+            
+            <div class="example">
+                <div class="example-title">JEE Problem Example:</div>
+                <p>If sinθ + cosθ = √2cosθ, prove that cosθ - sinθ = √2sinθ.</p>
+                <p><strong>Solution:</strong> 
+                Square both sides: (sinθ + cosθ)² = 2cos²θ ⇒ sin²θ + cos²θ + 2sinθcosθ = 2cos²θ <br>
+                Using sin²θ + cos²θ = 1 ⇒ 1 + 2sinθcosθ = 2cos²θ <br>
+                Rearrange: 2sinθcosθ = 2cos²θ - 1 ⇒ sin2θ = cos2θ ⇒ tan2θ = 1 <br>
+                Therefore, cosθ - sinθ = √2sinθ can be verified by substitution.</p>
+            </div>
+        </section>
+
+        <!-- Angles Section -->
+        <section class="info-panel" id="angles" data-aos="fade-up">
+            <h2>Angles and Their Measurement</h2>
+            <p>Understanding angle measurement is fundamental to trigonometry.</p>
+            
+            <h3>Angle Measurement Systems</h3>
+            <table>
+                <tr>
+                    <th>System</th>
+                    <th>Unit</th>
+                    <th>Full Rotation</th>
+                    <th>Conversion</th>
+                </tr>
+                <tr>
+                    <td>Degree</td>
+                    <td>°</td>
+                    <td>360°</td>
+                    <td>1° = π/180 radians</td>
+                </tr>
+                <tr>
+                    <td>Radian</td>
+                    <td>rad</td>
+                    <td>2π rad</td>
+                    <td>1 rad = 180°/π</td>
+                </tr>
+                <tr>
+                    <td>Gradian</td>
+                    <td>grad</td>
+                    <td>400 grad</td>
+                    <td>1 grad = 0.9°</td>
+                </tr>
+            </table>
+            
+            <div class="formula">
+                Angle in radians = (π/180) × Angle in degrees
+            </div>
+            
+            <h3>Important Angles</h3>
+            <div class="formula">
+                0°, 30°, 45°, 60°, 90°, 180°, 270°, 360°
+            </div>
+            <div class="formula">
+                Corresponding radians: 0, π/6, π/4, π/3, π/2, π, 3π/2, 2π
+            </div>
+            
+            <div class="example">
+                <div class="example-title">JEE Problem Example:</div>
+                <p>Convert 225° to radians.</p>
+                <p><strong>Solution:</strong> <br>
+                225° × (π/180) = 5π/4 radians</p>
+            </div>
+        </section>
+
+        <!-- Trig Functions Section -->
+        <section class="info-panel" id="functions" data-aos="fade-up">
+            <h2>Trigonometric Functions</h2>
+            <p>The six basic trigonometric functions relate angles to ratios of side lengths in right triangles.</p>
+            
+            <h3>Primary Trigonometric Functions</h3>
+            <div class="formula">
+                sinθ = Opposite/Hypotenuse <br>
+                cosθ = Adjacent/Hypotenuse <br>
+                tanθ = Opposite/Adjacent
+            </div>
+            
+            <h3>Reciprocal Functions</h3>
+            <div class="formula">
+                cosecθ = 1/sinθ <br>
+                secθ = 1/cosθ <br>
+                cotθ = 1/tanθ
+            </div>
+            
+            <h3>Signs in Different Quadrants</h3>
+            <table>
+                <tr>
+                    <th>Quadrant</th>
+                    <th>Positive Functions</th>
+                    <th>Negative Functions</th>
+                </tr>
+                <tr>
+                    <td>I (0°-90°)</td>
+                    <td>All</td>
+                    <td>None</td>
+                </tr>
+                <tr>
+                    <td>II (90°-180°)</td>
+                    <td>sin, cosec</td>
+                    <td>cos, sec, tan, cot</td>
+                </tr>
+                <tr>
+                    <td>III (180°-270°)</td>
+                    <td>tan, cot</td>
+                    <td>sin, cosec, cos, sec</td>
+                </tr>
+                <tr>
+                    <td>IV (270°-360°)</td>
+                    <td>cos, sec</td>
+                    <td>sin, cosec, tan, cot</td>
+                </tr>
+            </table>
+            
+            <div class="important">
+                <p><strong>JEE Focus:</strong> Questions often involve finding values of trigonometric functions for non-standard angles using identities.</p>
+            </div>
+        </section>
+
+        <!-- Identities Section -->
+        <section class="info-panel" id="identities" data-aos="fade-up">
+            <h2>Trigonometric Identities</h2>
+            <p>Identities are equations that hold true for all values of the variables.</p>
+            
+            <h3>Pythagorean Identities</h3>
+            <div class="formula">
+                sin²θ + cos²θ = 1 <br>
+                1 + tan²θ = sec²θ <br>
+                1 + cot²θ = cosec²θ
+            </div>
+            
+            <h3>Angle Sum and Difference</h3>
+            <div class="formula">
+                sin(A±B) = sinAcosB ± cosAsinB <br>
+                cos(A±B) = cosAcosB ∓ sinAsinB <br>
+                tan(A±B) = (tanA ± tanB)/(1 ∓ tanAtanB)
+            </div>
+            
+            <h3>Double Angle Formulas</h3>
+            <div class="formula">
+                sin2θ = 2sinθcosθ <br>
+                cos2θ = cos²θ - sin²θ = 2cos²θ - 1 = 1 - 2sin²θ <br>
+                tan2θ = 2tanθ/(1 - tan²θ)
+            </div>
+            
+            <h3>Triple Angle Formulas</h3>
+            <div class="formula">
+                sin3θ = 3sinθ - 4sin³θ <br>
+                cos3θ = 4cos³θ - 3cosθ <br>
+                tan3θ = (3tanθ - tan³θ)/(1 - 3tan²θ)
+            </div>
+            
+            <div class="example">
+                <div class="example-title">JEE Problem Example:</div>
+                <p>Prove that: (sinA + cosecA)² + (cosA + secA)² = 7 + tan²A + cot²A</p>
+                <p><strong>Solution:</strong> <br>
+                Expand LHS: sin²A + 2 + cosec²A + cos²A + 2 + sec²A <br>
+                = (sin²A + cos²A) + 4 + (1 + cot²A) + (1 + tan²A) <br>
+                = 1 + 4 + 1 + cot²A + 1 + tan²A = 7 + tan²A + cot²A = RHS</p>
+            </div>
+        </section>
+
+        <!-- Equations Section -->
+        <section class="info-panel" id="equations" data-aos="fade-up">
+            <h2>Trigonometric Equations</h2>
+            <p>Equations involving trigonometric functions that are satisfied by specific values of the variables.</p>
+            
+            <h3>General Solutions</h3>
+            <div class="formula">
+                sinθ = sinα ⇒ θ = nπ + (-1)ⁿα <br>
+                cosθ = cosα ⇒ θ = 2nπ ± α <br>
+                tanθ = tanα ⇒ θ = nπ + α
+            </div>
+            
+            <h3>Solving Strategies</h3>
+            <ol>
+                <li>Express equation in terms of single trigonometric function</li>
+                <li>Factorize when possible</li>
+                <li>Use identities to simplify</li>
+                <li>Consider domain restrictions</li>
+                <li>Find general solution first, then specific solutions</li>
+            </ol>
+            
+            <div class="important">
+                <p><strong>JEE Focus:</strong> Trigonometric equations often appear in JEE with domain restrictions or combined with other concepts.</p>
+            </div>
+            
+            <div class="example">
+                <div class="example-title">JEE Problem Example:</div>
+                <p>Solve: 2cos²θ + 3sinθ = 0</p>
+                <p><strong>Solution:</strong> <br>
+                Convert to sin: 2(1 - sin²θ) + 3sinθ = 0 ⇒ 2sin²θ - 3sinθ - 2 = 0 <br>
+                Let x = sinθ: 2x² - 3x - 2 = 0 ⇒ x = [3 ± √(9 + 16)]/4 ⇒ x = 2 or x = -½ <br>
+                sinθ = 2 has no solution, sinθ = -½ ⇒ θ = nπ - (-1)ⁿ(π/6)</p>
+            </div>
+        </section>
+
+        <!-- Graphs Section -->
+        <section class="info-panel" id="graphs" data-aos="fade-up">
+            <h2>Graphs of Trigonometric Functions</h2>
+            <p>Understanding graphs helps visualize function behavior and solve equations graphically.</p>
+            
+            <h3>Basic Graphs</h3>
+            <table>
+                <tr>
+                    <th>Function</th>
+                    <th>Period</th>
+                    <th>Amplitude</th>
+                    <th>Range</th>
+                </tr>
+                <tr>
+                    <td>sin(x)</td>
+                    <td>2π</td>
+                    <td>1</td>
+                    <td>[-1, 1]</td>
+                </tr>
+                <tr>
+                    <td>cos(x)</td>
+                    <td>2π</td>
+                    <td>1</td>
+                    <td>[-1, 1]</td>
+                </tr>
+                <tr>
+                    <td>tan(x)</td>
+                    <td>π</td>
+                    <td>∞</td>
+                    <td>(-∞, ∞)</td>
+                </tr>
+                <tr>
+                    <td>cosec(x)</td>
+                    <td>2π</td>
+                    <td>∞</td>
+                    <td>(-∞, -1] ∪ [1, ∞)</td>
+                </tr>
+                <tr>
+                    <td>sec(x)</td>
+                    <td>2π</td>
+                    <td>∞</td>
+                    <td>(-∞, -1] ∪ [1, ∞)</td>
+                </tr>
+                <tr>
+                    <td>cot(x)</td>
+                    <td>π</td>
+                    <td>∞</td>
+                    <td>(-∞, ∞)</td>
+                </tr>
+            </table>
+            
+            <h3>Transformations</h3>
+            <div class="formula">
+                y = asin(bx + c) + d <br>
+                • |a| = amplitude <br>
+                • 2π/|b| = period <br>
+                • -c/b = phase shift <br>
+                • d = vertical shift
+            </div>
+            
+            <div class="example">
+                <div class="example-title">JEE Problem Example:</div>
+                <p>Find the period of the function f(x) = 3sin(5x - π/2) + 4</p>
+                <p><strong>Solution:</strong> <br>
+                Period = 2π/|b| = 2π/5</p>
+            </div>
+        </section>
+
+        <!-- Key Facts Carousel -->
+        <div class="swiper-container" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">UNIT CIRCLE</div>
+                        <div class="swiper-text">Radius = 1 unit <br> x = cosθ, y = sinθ <br> All trigonometric functions can be represented</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">SPECIAL ANGLES</div>
+                        <div class="swiper-text">0°, 30°, 45°, 60°, 90° <br> Exact values should be memorized <br> Used frequently in JEE problems</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">PERIODICITY</div>
+                        <div class="swiper-text">sin(2π + θ) = sinθ <br> cos(2π + θ) = cosθ <br> tan(π + θ) = tanθ <br> Functions repeat at regular intervals</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">INVERSE FUNCTIONS</div>
+                        <div class="swiper-text">sin⁻¹x, cos⁻¹x, tan⁻¹x <br> Restricted domains <br> Principal values must be considered</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">TRIG INEQUALITIES</div>
+                        <div class="swiper-text">Solve using unit circle <br> Consider periodic nature <br> Graphical approach often helps</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">MAXIMA/MINIMA</div>
+                        <div class="swiper-text">Max value of asinθ + bcosθ = √(a² + b²) <br> Min value = -√(a² + b²) <br> Important for optimization problems</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">TRIG SUBSTITUTION</div>
+                        <div class="swiper-text">√(a² - x²) ⇒ x = asinθ <br> √(a² + x²) ⇒ x = atanθ <br> √(x² - a²) ⇒ x = asecθ <br> Useful in calculus</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">HARMONIC MOTION</div>
+                        <div class="swiper-text">Modeled by trig functions <br> x(t) = Asin(ωt + φ) <br> Connects trigonometry with physics</div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Summary Section -->
+        <section class="info-panel" data-aos="fade-up">
+            <h2>Chapter Summary</h2>
+            <h3>Key Concepts</h3>
+            <ul>
+                <li>Angle measurement in degrees and radians</li>
+                <li>Six trigonometric functions and their reciprocals</li>
+                <li>Signs of trig functions in different quadrants</li>
+                <li>Fundamental trigonometric identities</li>
+                <li>Angle sum, difference, and multiple angle formulas</li>
+                <li>General solutions of trigonometric equations</li>
+                <li>Graphs and transformations of trig functions</li>
+            </ul>
+            
+            <h3>Important Formulas</h3>
+            <div class="formula">
+                sin²θ + cos²θ = 1 <br>
+                sin(A±B) = sinAcosB ± cosAsinB <br>
+                cos(A±B) = cosAcosB ∓ sinAsinB <br>
+                sin2θ = 2sinθcosθ <br>
+                cos2θ = cos²θ - sin²θ
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Nerds Assemble</h3>
+                <p>Your comprehensive resource for JEE Mathematics preparation.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#angles">Angles</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                    <li><a href="#identities">Identities</a></li>
+                    <li><a href="#equations">Equations</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> contact@Nerds Assemble.com</li>
+                    <li><i class="fas fa-phone"></i> +91 9876543210</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Math Avenue, EduCity</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 Nerds Assemble. All rights reserved. | Designed for JEE Mathematics Preparation</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="trigonometry.js"></script>
+    <script>
+        // Nerds Assemble - Trigonometry JavaScript
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mainNav = document.getElementById('mainNav');
+    
+    if (mobileMenuBtn && mainNav) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+    }
+
+    // Back to Top Button
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    function handleScroll() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('active');
+        } else {
+            backToTopBtn.classList.remove('active');
+        }
+    }
+    
+    // Debounced scroll event
+    let scrollTimeout;
+    window.addEventListener('scroll', function() {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(handleScroll, 50);
+    }, { passive: true });
+
+    // Initialize AOS (Animate On Scroll)
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: window.innerWidth < 768 ? 100 : 120,
+            easing: 'ease-out-quad'
+        });
+    }
+
+    // Initialize Swiper
+    if (typeof Swiper !== 'undefined') {
+        new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: window.innerWidth < 768 ? 10 : 15,
+                stretch: 0,
+                depth: window.innerWidth < 768 ? 100 : 150,
+                modifier: 1,
+                slideShadows: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 25
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                }
+            },
+            preloadImages: false,
+            lazy: true
+        });
+    }
+
+    // Smooth Scroll for Navigation Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                smoothScrollTo(targetElement.offsetTop - 80, 800);
+                
+                // Close mobile menu if open
+                if (mainNav && mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            }
+        });
+    });
+
+    // Back to Top Button Click
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', function() {
+            smoothScrollTo(0, 800);
+        });
+    }
+
+    // Create Particles (Delayed for better load performance)
+    setTimeout(createParticles, 500);
+
+    // Floating Advertisement with Countdown Timer
+    const floatingAd = document.getElementById('floatingAd');
+    const closeAd = document.getElementById('closeAd');
+    
+    if (floatingAd) {
+        // Show ad after 5 seconds
+        setTimeout(() => {
+            floatingAd.classList.add('active');
+            startCountdown();
+        }, 5000);
+        
+        // Close button functionality
+        if (closeAd) {
+            closeAd.addEventListener('click', () => {
+                floatingAd.classList.remove('active');
+                // Store in localStorage to prevent showing again
+                localStorage.setItem('adClosed', 'true');
+            });
+        }
+        
+        // Check if user previously closed the ad
+        if (localStorage.getItem('adClosed') === 'true') {
+            floatingAd.style.display = 'none';
+        }
+    }
+
+    // Countdown Timer for Ad
+    function startCountdown() {
+        let hours = 2;
+        let minutes = 45;
+        let seconds = 30;
+        
+        const hoursElement = document.getElementById('adHours');
+        const minutesElement = document.getElementById('adMinutes');
+        const secondsElement = document.getElementById('adSeconds');
+        
+        const timer = setInterval(() => {
+            seconds--;
+            
+            if (seconds < 0) {
+                seconds = 59;
+                minutes--;
+                
+                if (minutes < 0) {
+                    minutes = 59;
+                    hours--;
+                    
+                    if (hours < 0) {
+                        clearInterval(timer);
+                        floatingAd.classList.remove('active');
+                        return;
+                    }
+                }
+            }
+            
+            // Update display
+            hoursElement.textContent = hours.toString().padStart(2, '0');
+            minutesElement.textContent = minutes.toString().padStart(2, '0');
+            secondsElement.textContent = seconds.toString().padStart(2, '0');
+            
+        }, 1000);
+    }
+
+    // Passive event listeners for touch events
+    document.addEventListener('touchstart', function() {}, { passive: true });
+    document.addEventListener('touchmove', function() {}, { passive: true });
+});
+
+// Smooth Scroll Function with Easing
+function smoothScrollTo(targetPosition, duration) {
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    let startTime = null;
+    
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = ease(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+    
+    function ease(t, b, c, d) {
+        t /= d/2;
+        if (t < 1) return c/2*t*t + b;
+        t--;
+        return -c/2 * (t*(t-2) - 1) + b;
+    }
+    
+    requestAnimationFrame(animation);
+}
+
+// Create Particles Function (Optimized)
+function createParticles() {
+    const particlesContainer = document.getElementById('particles');
+    if (!particlesContainer) return;
+    
+    const particleCount = window.innerWidth < 768 ? 20 : 30;
+    particlesContainer.innerHTML = '';
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        
+        const size = Math.random() * 3 + 1;
+        const posX = Math.random() * window.innerWidth;
+        const posY = Math.random() * window.innerHeight;
+        const duration = Math.random() * 15 + 10;
+        const delay = Math.random() * 5;
+        
+        particle.style.cssText = `
+            width: ${size}px;
+            height: ${size}px;
+            left: ${posX}px;
+            top: ${posY}px;
+            opacity: ${Math.random() * 0.3 + 0.1};
+            animation: float ${duration}s ease-in-out ${delay}s infinite;
+            background: rgba(255,255,255,0.3);
+        `;
+        
+        particlesContainer.appendChild(particle);
+    }
+}
+
+// Request Animation Frame Polyfill
+(function() {
+    var lastTime = 0;
+    var vendors = ['ms', 'moz', 'webkit', 'o'];
+    for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+        window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+        window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
+                                   || window[vendors[x]+'CancelRequestAnimationFrame'];
+    }
+
+    if (!window.requestAnimationFrame)
+        window.requestAnimationFrame = function(callback, element) {
+            var currTime = new Date().getTime();
+            var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+            var id = window.setTimeout(function() { callback(currTime + timeToCall); }, 
+              timeToCall);
+            lastTime = currTime + timeToCall;
+            return id;
+        };
+
+    if (!window.cancelAnimationFrame)
+        window.cancelAnimationFrame = function(id) {
+            clearTimeout(id);
+        };
+}());
+    </script>
+</body>
+</html>
