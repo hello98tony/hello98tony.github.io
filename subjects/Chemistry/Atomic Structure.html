@@ -1,0 +1,2169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKVRN3GREN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKVRN3GREN');
+</script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structure of Atom | Class 11 Chemistry | JEE & NEET Preparation</title>
+    <meta name="description" content="Master the Structure of Atom for Class 11 Chemistry. Complete guide for JEE & NEET aspirants with atomic models, quantum mechanics, and electron configuration.">
+    <meta name="keywords" content="Structure of Atom, Chemistry Class 11, JEE preparation, NEET chemistry, Atomic Models, Quantum Mechanics, Electron Configuration, Bohr's Model, Schrodinger Equation">
+    <meta name="author" content="Nerds Assemble">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Structure of Atom | Class 11 Chemistry">
+    <meta property="og:description" content="Complete guide to Structure of Atom for JEE & NEET aspirants">
+    <meta property="og:type" content="website">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Pacifico&family=Dancing+Script:wght@700&family=Abril+Fatface&family=Playfair+Display:wght@700&family=Raleway:wght@300;800&family=Quicksand:wght@500&family=Poiret+One&family=Amatic+SC:wght@700&family=Caveat:wght@700&family=Kaushan+Script&family=Libre+Baskerville&family=Merriweather&family=Nunito:wght@800&family=Oswald:wght@500&family=Roboto+Slab:wght@700&family=Sacramento&family=Tangerine:wght@700&family=Yeseva+One&family=Electrolize&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+     <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/planet-universe-svgrepo-com.svg">
+    
+    <style>
+        /* Structure of Atom - Nerds Assemble CSS */
+        :root {
+            --primary: #00b4d8;
+            --secondary: #9d4edd;
+            --tertiary: #ff9e00;
+            --bg: #0a0a20;
+            --text: #ffffff;
+            --highlight: #ffea00;
+            --nav-bg: rgba(10, 5, 30, 0.95);
+            --bohr-gradient: linear-gradient(45deg, #00b4d8, #0077b6);
+            --quantum-gradient: linear-gradient(45deg, #9d4edd, #c77dff);
+            --electron-gradient: linear-gradient(45deg, #ff9e00, #ff9100);
+        }
+
+        /* Base Styles & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overscroll-behavior-y: contain;
+            -webkit-overflow-scrolling: touch;
+            background-image:
+                radial-gradient(circle at 15% 20%, rgba(0, 180, 216, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 85% 80%, rgba(157, 78, 221, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(255, 158, 0, 0.05) 0%, transparent 30%),
+                linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--tertiary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(0, 180, 216, 0.5);
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--highlight);
+            margin: 2rem 0 1.5rem;
+            font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-family: 'Roboto Slab', serif;
+            color: var(--secondary);
+            margin: 1.5rem 0 1rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+        }
+
+        p {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+        }
+
+        /* Layout Components */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            flex: 1;
+            padding: 0 1rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Raleway', sans-serif;
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            transform: translateZ(0);
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            color: var(--highlight);
+            font-size: 1.6rem;
+        }
+
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.4rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Electrolize', sans-serif;
+            font-size: 0.95rem;
+            transition: color 0.2s ease-out;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--highlight);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--highlight);
+            transition: width 0.2s ease-out;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* Content Panels */
+        .info-panel {
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
+            padding: 1.8rem;
+            margin: 1.8rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: translateZ(0);
+            will-change: transform, opacity;
+        }
+
+        .info-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%),
+                linear-gradient(-45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%);
+            background-size: 20px 20px;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        /* Special Content Blocks */
+        .important {
+            background: rgba(0, 180, 216, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(0, 180, 216, 0.1);
+        }
+
+        .definition {
+            background: rgba(255, 234, 0, 0.1);
+            border-left: 4px solid var(--highlight);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(255, 234, 0, 0.1);
+        }
+
+        .formula {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin: 1.2rem 0;
+            padding: 1.2rem;
+            background: rgba(157, 78, 221, 0.1);
+            border-radius: 8px;
+            border: 1px dashed var(--highlight);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.1rem;
+        }
+
+        .formula::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, transparent 45%, rgba(157, 78, 221, 0.1) 50%, transparent 55%);
+            background-size: 10px 10px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .example {
+            background: rgba(255, 158, 0, 0.1);
+            border-left: 4px solid var(--tertiary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Lists & Tables */
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 1.8rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background-color: rgba(0, 180, 216, 0.2);
+            font-family: 'Electrolize', sans-serif;
+            color: var(--highlight);
+            font-size: 0.95rem;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+
+        tr:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* Concept Cards */
+        .concept-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .concept-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 180, 216, 0.2);
+        }
+
+        .concept-card.bohr {
+            border-top: 4px solid var(--primary);
+        }
+
+        .concept-card.quantum {
+            border-top: 4px solid var(--secondary);
+        }
+
+        .concept-card.electron {
+            border-top: 4px solid var(--tertiary);
+        }
+
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title.bohr { color: var(--primary); }
+        .card-title.quantum { color: var(--secondary); }
+        .card-title.electron { color: var(--tertiary); }
+
+        /* Swiper Carousel */
+        .swiper-container {
+            width: 100%;
+            height: auto;
+            min-height: 180px;
+            margin: 2.5rem 0;
+            will-change: transform;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .swiper-slide {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+            font-family: 'Electrolize', sans-serif;
+            padding: 1.2rem;
+            box-sizing: border-box;
+            text-align: center;
+            min-height: 180px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-out;
+            transform: translateZ(0);
+            height: auto;
+        }
+
+        .swiper-slide:hover {
+            transform: translateY(-5px);
+        }
+
+        .swiper-slide div {
+            width: 100%;
+        }
+
+        .swiper-title {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin-bottom: 0.5rem;
+            font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+        }
+
+        .swiper-text {
+            font-family: 'Quicksand', sans-serif;
+            font-size: clamp(0.85rem, 1.1vw, 1rem);
+        }
+
+        /* Swiper Navigation */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: var(--highlight);
+            background: rgba(0, 0, 0, 0.5);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            backdrop-filter: blur(10px);
+            margin-top: -17.5px;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .swiper-pagination-bullet {
+            background: var(--text);
+            opacity: 0.5;
+            width: 8px;
+            height: 8px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: var(--highlight);
+            opacity: 1;
+        }
+
+        /* Problem Solving Section */
+        .problem-solving {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .problem-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary);
+        }
+
+        .problem-title {
+            color: var(--primary);
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Atom Visualization */
+        .atom-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .nucleus {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            box-shadow: 0 0 20px var(--primary), 0 0 40px var(--primary);
+            position: absolute;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nucleus-text {
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .orbit {
+            position: absolute;
+            border: 1px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+        }
+
+        .electron {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: var(--tertiary);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--tertiary);
+            z-index: 1;
+        }
+
+        .electron.orbiting {
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        /* Electron Cloud Visualization */
+        .electron-cloud {
+            width: 200px;
+            height: 200px;
+            margin: 2rem auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cloud-point {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--tertiary);
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+
+        /* Quantum Numbers Visualization */
+        .quantum-numbers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .quantum-box {
+            background: rgba(157, 78, 221, 0.1);
+            border-radius: 10px;
+            padding: 1.2rem;
+            text-align: center;
+            border: 1px solid rgba(157, 78, 221, 0.3);
+        }
+
+        .quantum-label {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Particles Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            will-change: transform;
+            opacity: 0.3;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .footer-column h3 {
+            color: var(--highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            transition: color 0.2s ease-out;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--highlight);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text);
+            font-size: 1.1rem;
+            transition: color 0.2s ease-out;
+        }
+
+        .social-links a:hover {
+            color: var(--highlight);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 1.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Quicksand', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease-out;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(0, 180, 216, 0.3);
+            transform: translateZ(0);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--highlight);
+            transform: translateY(-5px);
+        }
+
+        /* JEE/NEET Specific Styling */
+        .exam-highlight {
+            background: rgba(255, 235, 0, 0.1);
+            border: 2px solid var(--highlight);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .exam-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--highlight);
+            color: var(--bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(10px, 10px) rotate(90deg); }
+            50% { transform: translate(-5px, 15px) rotate(180deg); }
+            75% { transform: translate(5px, -5px) rotate(270deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        @keyframes electron-orbit-1 {
+            0% { transform: rotate(0deg) translateX(60px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(60px) rotate(-360deg); }
+        }
+
+        @keyframes electron-orbit-2 {
+            0% { transform: rotate(120deg) translateX(90px) rotate(-120deg); }
+            100% { transform: rotate(480deg) translateX(90px) rotate(-480deg); }
+        }
+
+        @keyframes electron-orbit-3 {
+            0% { transform: rotate(240deg) translateX(120px) rotate(-240deg); }
+            100% { transform: rotate(600deg) translateX(120px) rotate(-600deg); }
+        }
+
+        @keyframes electron-cloud {
+            0%, 100% { transform: translate(0, 0); opacity: 0.7; }
+            25% { transform: translate(10px, -10px); opacity: 0.9; }
+            50% { transform: translate(-5px, 15px); opacity: 0.5; }
+            75% { transform: translate(-15px, -5px); opacity: 0.8; }
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        .spin {
+            animation: spin 10s linear infinite;
+        }
+
+        /* Periodic Table Preview */
+        .periodic-preview {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 5px;
+            margin: 1.5rem 0;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .element-cell {
+            width: 30px;
+            height: 30px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.7rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .element-cell:hover {
+            transform: scale(1.5);
+            z-index: 10;
+            box-shadow: 0 0 10px var(--primary);
+        }
+
+        .element-cell.alkali { background: rgba(255, 100, 100, 0.3); }
+        .element-cell.alkaline { background: rgba(255, 200, 100, 0.3); }
+        .element-cell.transition { background: rgba(100, 200, 255, 0.3); }
+        .element-cell.other { background: rgba(200, 100, 255, 0.3); }
+        .element-cell.noble { background: rgba(100, 255, 200, 0.3); }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background-image:
+                    radial-gradient(circle at 10% 20%, rgba(0, 180, 216, 0.05) 0%, transparent 20%),
+                    linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+            }
+
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                margin-top: 1rem;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.75rem 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            header, .info-panel {
+                backdrop-filter: blur(5px);
+            }
+
+            .container {
+                width: 95%;
+                padding: 0;
+            }
+
+            .info-panel {
+                padding: 1.5rem;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            th, td {
+                padding: 0.5rem;
+                font-size: 0.85rem;
+            }
+
+            .concept-cards, .problem-solving {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none;
+            }
+
+            .atom-container {
+                height: 200px;
+            }
+
+            .electron-cloud {
+                width: 150px;
+                height: 150px;
+            }
+
+            .periodic-preview {
+                grid-template-columns: repeat(8, 1fr);
+                gap: 4px;
+                max-width: 300px;
+            }
+
+            .element-cell {
+                width: 25px;
+                height: 25px;
+                font-size: 0.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-panel {
+                padding: 1rem;
+            }
+
+            ul, ol {
+                padding-left: 1.5rem;
+            }
+
+            .formula {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+
+            .swiper-slide {
+                padding: 1rem;
+            }
+
+            .atom-container {
+                height: 150px;
+            }
+
+            .electron-cloud {
+                width: 120px;
+                height: 120px;
+            }
+
+            .periodic-preview {
+                grid-template-columns: repeat(5, 1fr);
+                gap: 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-atom"></i></span>
+                <span class="logo-text">Nerds Assemble</span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#atomic-models">Atomic Models</a></li>
+                    <li><a href="#bohr-model">Bohr's Model</a></li>
+                    <li><a href="#quantum-mechanics">Quantum Mechanics</a></li>
+                    <li><a href="#electron-config">Electron Configuration</a></li>
+                    <li><a href="#periodic-table">Periodic Table</a></li>
+                    <li><a href="#problems">Problems</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="page-header" data-aos="fade-down">
+            <h1>Structure of Atom</h1>
+            <p class="subtitle">Class 11 Chemistry | JEE & NEET Preparation Guide</p>
+            <p>Journey from Dalton's solid sphere to quantum mechanical model - understanding the fundamental building blocks of matter</p>
+            
+            <!-- Animated Atom -->
+            <div class="atom-container">
+                <div class="nucleus"></div>
+                <div class="orbit" style="width: 120px; height: 120px;"></div>
+                <div class="orbit" style="width: 180px; height: 180px;"></div>
+                <div class="orbit" style="width: 240px; height: 240px;"></div>
+                
+                <div class="electron orbiting" style="animation: electron-orbit-1 3s linear infinite;"></div>
+                <div class="electron orbiting" style="animation: electron-orbit-2 4s linear infinite; animation-delay: -1s;"></div>
+                <div class="electron orbiting" style="animation: electron-orbit-3 5s linear infinite; animation-delay: -2s;"></div>
+                
+                <!-- Additional electrons -->
+                <div class="electron orbiting" style="animation: electron-orbit-1 3s linear infinite; animation-delay: -0.5s;"></div>
+                <div class="electron orbiting" style="animation: electron-orbit-2 4s linear infinite; animation-delay: -1.5s;"></div>
+                <div class="electron orbiting" style="animation: electron-orbit-3 5s linear infinite; animation-delay: -2.5s;"></div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="info-panel" id="introduction" data-aos="fade-up">
+            <h2>Introduction to Atomic Structure</h2>
+            <p>The atom is the basic unit of matter that constitutes a chemical element. Understanding atomic structure is fundamental to all branches of chemistry and physics.</p>
+
+            <div class="definition">
+                <p><strong>Historical Evolution:</strong> The concept of the atom has evolved from Democritus' indivisible particles to the complex quantum mechanical model we use today.</p>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card bohr" data-aos="flip-left">
+                    <div class="card-title bohr"><i class="fas fa-sun"></i> Bohr's Atomic Model</div>
+                    <p>Electrons move in specific circular orbits around the nucleus with quantized energy levels.</p>
+                    <div class="formula">E = -13.6/n² eV</div>
+                </div>
+
+                <div class="concept-card quantum" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-title quantum"><i class="fas fa-wave-square"></i> Quantum Mechanical Model</div>
+                    <p>Electrons exist in probability clouds called orbitals, described by wave functions.</p>
+                    <div class="formula">Ĥψ = Eψ</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Atomic Models Section -->
+        <section class="info-panel" id="atomic-models" data-aos="fade-up">
+            <h2>Evolution of Atomic Models</h2>
+            <p>Our understanding of atomic structure has evolved through several key models, each building upon the previous one and explaining more experimental observations.</p>
+
+            <h3>Historical Atomic Models Timeline</h3>
+            <table>
+                <tr>
+                    <th>Model</th>
+                    <th>Year</th>
+                    <th>Scientist</th>
+                    <th>Key Features</th>
+                    <th>Limitations</th>
+                </tr>
+                <tr>
+                    <td>Dalton's Model</td>
+                    <td>1808</td>
+                    <td>John Dalton</td>
+                    <td>Atoms as indivisible solid spheres</td>
+                    <td>No internal structure</td>
+                </tr>
+                <tr>
+                    <td>Thomson's Model</td>
+                    <td>1904</td>
+                    <td>J.J. Thomson</td>
+                    <td>Plum pudding model, electrons embedded in positive sphere</td>
+                    <td>Couldn't explain scattering experiments</td>
+                </tr>
+                <tr>
+                    <td>Rutherford Model</td>
+                    <td>1911</td>
+                    <td>Ernest Rutherford</td>
+                    <td>Nuclear model, dense nucleus with electrons orbiting</td>
+                    <td>Electrons should spiral into nucleus</td>
+                </tr>
+                <tr>
+                    <td>Bohr's Model</td>
+                    <td>1913</td>
+                    <td>Niels Bohr</td>
+                    <td>Quantized orbits, fixed energy levels</td>
+                    <td>Only worked for hydrogen</td>
+                </tr>
+                <tr>
+                    <td>Quantum Model</td>
+                    <td>1926</td>
+                    <td>Schrödinger</td>
+                    <td>Wave functions, electron clouds, orbitals</td>
+                    <td>Complex mathematics</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Key Experiments:</strong></p>
+                <ul>
+                    <li><strong>Cathode Ray Tube (1897):</strong> J.J. Thomson discovered electrons</li>
+                    <li><strong>Gold Foil Experiment (1911):</strong> Rutherford discovered nucleus</li>
+                    <li><strong>Hydrogen Spectrum (1885):</strong> Balmer series led to Bohr's model</li>
+                    <li><strong>Photoelectric Effect (1905):</strong> Einstein explained particle nature of light</li>
+                    <li><strong>Davisson-Germer (1927):</strong> Confirmed wave nature of electrons</li>
+                </ul>
+            </div>
+
+            <h3>Subatomic Particles</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Protons</div>
+                    <p><strong>Charge:</strong> +1.602×10⁻¹⁹ C</p>
+                    <p><strong>Mass:</strong> 1.6726×10⁻²⁷ kg</p>
+                    <p><strong>Location:</strong> Nucleus</p>
+                    <p>Determines atomic number (Z)</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Neutrons</div>
+                    <p><strong>Charge:</strong> 0 (neutral)</p>
+                    <p><strong>Mass:</strong> 1.6749×10⁻²⁷ kg</p>
+                    <p><strong>Location:</strong> Nucleus</p>
+                    <p>Contributes to mass number (A)</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Electrons</div>
+                    <p><strong>Charge:</strong> -1.602×10⁻¹⁹ C</p>
+                    <p><strong>Mass:</strong> 9.109×10⁻³¹ kg</p>
+                    <p><strong>Location:</strong> Orbitals around nucleus</p>
+                    <p>Determines chemical properties</p>
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Calculating Number of Subatomic Particles</div>
+                <p>For Carbon-14 atom (¹⁴₆C), calculate protons, neutrons, and electrons.</p>
+                <p><strong>Solution:</strong></p>
+                <p>Atomic number (Z) = 6 ⇒ Protons = 6</p>
+                <p>Mass number (A) = 14 ⇒ Neutrons = A - Z = 14 - 6 = 8</p>
+                <p>For neutral atom: Electrons = Protons = 6</p>
+                <p><em>Thus: Protons = 6, Neutrons = 8, Electrons = 6</em></p>
+            </div>
+        </section>
+
+        <!-- Bohr's Model Section -->
+        <section class="info-panel" id="bohr-model" data-aos="fade-up">
+            <h2>Bohr's Atomic Model</h2>
+            <p>Niels Bohr proposed his model in 1913 to explain the hydrogen spectrum and overcome limitations of Rutherford's model. It introduced quantization of electron orbits.</p>
+
+            <div class="definition">
+                <p><strong>Postulates of Bohr's Model:</strong></p>
+                <ol>
+                    <li>Electrons move in circular orbits without radiating energy</li>
+                    <li>Only certain orbits are permitted where angular momentum is quantized</li>
+                    <li>Electrons can jump between orbits by absorbing or emitting photons</li>
+                </ol>
+            </div>
+
+            <div class="formula">
+                Angular Momentum: mvr = nħ, where ħ = h/2π
+            </div>
+            <div class="formula">
+                Radius of nth orbit: rₙ = n²a₀, where a₀ = 0.529 Å
+            </div>
+            <div class="formula">
+                Energy of nth orbit: Eₙ = -13.6/n² eV (for hydrogen)
+            </div>
+
+            <h3>Hydrogen Spectrum</h3>
+            <table>
+                <tr>
+                    <th>Series</th>
+                    <th>Transition</th>
+                    <th>Region</th>
+                    <th>Formula</th>
+                    <th>First Line (nm)</th>
+                </tr>
+                <tr>
+                    <td>Lyman</td>
+                    <td>n→1</td>
+                    <td>Ultraviolet</td>
+                    <td>1/λ = R(1 - 1/n²)</td>
+                    <td>121.6</td>
+                </tr>
+                <tr>
+                    <td>Balmer</td>
+                    <td>n→2</td>
+                    <td>Visible</td>
+                    <td>1/λ = R(1/4 - 1/n²)</td>
+                    <td>656.3</td>
+                </tr>
+                <tr>
+                    <td>Paschen</td>
+                    <td>n→3</td>
+                    <td>Infrared</td>
+                    <td>1/λ = R(1/9 - 1/n²)</td>
+                    <td>1875</td>
+                </tr>
+                <tr>
+                    <td>Brackett</td>
+                    <td>n→4</td>
+                    <td>Infrared</td>
+                    <td>1/λ = R(1/16 - 1/n²)</td>
+                    <td>4050</td>
+                </tr>
+                <tr>
+                    <td>Pfund</td>
+                    <td>n→5</td>
+                    <td>Infrared</td>
+                    <td>1/λ = R(1/25 - 1/n²)</td>
+                    <td>7460</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Rydberg Constant:</strong></p>
+                <div class="formula">R = 1.097 × 10⁷ m⁻¹</div>
+                <p>Rydberg formula for hydrogen: 1/λ = R(1/n₁² - 1/n₂²)</p>
+                <p>Where n₁ and n₂ are principal quantum numbers (n₂ > n₁)</p>
+            </div>
+
+            <!-- Electron Cloud Visualization -->
+            <div class="electron-cloud" id="electronCloud">
+                <!-- Electron cloud points will be generated by JavaScript -->
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Bohr-Sommerfeld Model</h4>
+                <p>Extended Bohr's model with elliptical orbits:</p>
+                <div class="formula">∮pᵢdqᵢ = nᵢh (Quantization condition)</div>
+                <p>For circular orbits: mvr = nh/2π</p>
+                <p>For elliptical orbits: Two quantum numbers - n (principal) and k (azimuthal)</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Energy of Photon Emitted</div>
+                <p>Calculate energy of photon emitted when electron in hydrogen atom jumps from n=4 to n=2.</p>
+                <p><strong>Solution:</strong></p>
+                <p>E₄ = -13.6/4² = -0.85 eV</p>
+                <p>E₂ = -13.6/2² = -3.4 eV</p>
+                <p>ΔE = E₄ - E₂ = (-0.85) - (-3.4) = 2.55 eV</p>
+                <p>Convert to Joules: 2.55 × 1.602×10⁻¹⁹ = 4.08×10⁻¹⁹ J</p>
+                <p>Alternatively: ΔE = 13.6(1/2² - 1/4²) = 13.6(1/4 - 1/16) = 13.6 × 3/16 = 2.55 eV</p>
+            </div>
+        </section>
+
+        <!-- Quantum Mechanics Section -->
+        <section class="info-panel" id="quantum-mechanics" data-aos="fade-up">
+            <h2>Quantum Mechanical Model</h2>
+            <p>The quantum mechanical model describes electrons not as particles in orbits but as wave functions that give probability distributions for finding electrons in particular regions.</p>
+
+            <div class="definition">
+                <p><strong>Schrödinger Equation:</strong> Ĥψ = Eψ, where Ĥ is the Hamiltonian operator, ψ is the wave function, and E is energy. Solutions give atomic orbitals.</p>
+            </div>
+
+            <h3>Quantum Numbers</h3>
+            <div class="quantum-numbers">
+                <div class="quantum-box">
+                    <div class="quantum-label">Principal (n)</div>
+                    <p>Energy level, shell</p>
+                    <p>n = 1, 2, 3, ...</p>
+                    <p>Determines energy and size</p>
+                </div>
+
+                <div class="quantum-box">
+                    <div class="quantum-label">Azimuthal (l)</div>
+                    <p>Subshell shape</p>
+                    <p>l = 0 to n-1</p>
+                    <p>s, p, d, f orbitals</p>
+                </div>
+
+                <div class="quantum-box">
+                    <div class="quantum-label">Magnetic (mₗ)</div>
+                    <p>Orbital orientation</p>
+                    <p>mₗ = -l to +l</p>
+                    <p>For p-orbitals: -1, 0, +1</p>
+                </div>
+
+                <div class="quantum-box">
+                    <div class="quantum-label">Spin (mₛ)</div>
+                    <p>Electron spin</p>
+                    <p>mₛ = +½ or -½</p>
+                    <p>Pauli exclusion principle</p>
+                </div>
+            </div>
+
+            <h3>Atomic Orbitals</h3>
+            <table>
+                <tr>
+                    <th>Orbital</th>
+                    <th>l value</th>
+                    <th>Number of Orbitals</th>
+                    <th>Max Electrons</th>
+                    <th>Shape</th>
+                </tr>
+                <tr>
+                    <td>s</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>Spherical</td>
+                </tr>
+                <tr>
+                    <td>p</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>6</td>
+                    <td>Dumbbell</td>
+                </tr>
+                <tr>
+                    <td>d</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>Cloverleaf</td>
+                </tr>
+                <tr>
+                    <td>f</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>14</td>
+                    <td>Complex</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Quantum Mechanical Principles:</strong></p>
+                <ul>
+                    <li><strong>Heisenberg Uncertainty Principle:</strong> Δx·Δp ≥ h/4π</li>
+                    <li><strong>Pauli Exclusion Principle:</strong> No two electrons can have all four quantum numbers same</li>
+                    <li><strong>Aufbau Principle:</strong> Electrons fill lowest energy orbitals first</li>
+                    <li><strong>Hund's Rule:</strong> Electrons occupy degenerate orbitals singly first</li>
+                    <li><strong>Wave-Particle Duality:</strong> Electrons exhibit both wave and particle properties</li>
+                </ul>
+            </div>
+
+            <h3>Orbital Shapes and Nodes</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">s-orbitals</div>
+                    <p>Spherical symmetry</p>
+                    <p>No nodal plane</p>
+                    <p>Size increases with n</p>
+                    <p>1s, 2s, 3s...</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">p-orbitals</div>
+                    <p>Dumbbell shape</p>
+                    <p>Three orientations: pₓ, pᵧ, p_z</p>
+                    <p>One nodal plane through nucleus</p>
+                    <p>2p, 3p, 4p...</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">d-orbitals</div>
+                    <p>Cloverleaf shapes</p>
+                    <p>Five orbitals: dxy, dyz, dzx, dx²-y², dz²</p>
+                    <p>Two nodal planes</p>
+                    <p>3d, 4d, 5d...</p>
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Quantum Numbers</div>
+                <p>Which quantum numbers are possible for an electron in 3d orbital?</p>
+                <p><strong>Solution:</strong></p>
+                <p>For 3d: n = 3</p>
+                <p>d orbital ⇒ l = 2</p>
+                <p>mₗ = -2, -1, 0, +1, +2 (five possible values)</p>
+                <p>mₛ = +½ or -½</p>
+                <p><em>Possible sets: (3,2,-2,±½), (3,2,-1,±½), (3,2,0,±½), (3,2,1,±½), (3,2,2,±½)</em></p>
+            </div>
+        </section>
+
+        <!-- Electron Configuration Section -->
+        <section class="info-panel" id="electron-config" data-aos="fade-up">
+            <h2>Electron Configuration</h2>
+            <p>Electron configuration describes the distribution of electrons in atomic orbitals. It follows specific rules and determines chemical properties.</p>
+
+            <div class="definition">
+                <p><strong>Aufbau Principle:</strong> Electrons fill orbitals in order of increasing energy: 1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p, 5s, 4d, 5p, 6s, 4f, 5d, 6p, 7s, 5f, 6d, 7p...</p>
+            </div>
+
+            <h3>Electron Filling Rules</h3>
+            <table>
+                <tr>
+                    <th>Rule</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Pauli Exclusion</td>
+                    <td>Maximum 2 electrons per orbital with opposite spins</td>
+                    <td>1s² (not 1s³)</td>
+                </tr>
+                <tr>
+                    <td>Aufbau Principle</td>
+                    <td>Fill lowest energy orbitals first</td>
+                    <td>4s fills before 3d</td>
+                </tr>
+                <tr>
+                    <td>Hund's Rule</td>
+                    <td>Fill degenerate orbitals singly first</td>
+                    <td>p³: ↑ ↑ ↑ (not ↑↓ ↑)</td>
+                </tr>
+            </table>
+
+            <!-- Periodic Table Preview -->
+            <div class="periodic-preview" id="periodicPreview">
+                <!-- Generated by JavaScript -->
+            </div>
+
+            <h3>Notable Electron Configurations</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Hydrogen (1)</div>
+                    <div class="formula">1s¹</div>
+                    <p>Simplest atom</p>
+                    <p>One electron</p>
+                    <p>Basis for Bohr model</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Carbon (6)</div>
+                    <div class="formula">1s² 2s² 2p²</div>
+                    <p>Four valence electrons</p>
+                    <p>Forms covalent bonds</p>
+                    <p>Basis of organic chemistry</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Copper (29)</div>
+                    <div class="formula">[Ar] 4s¹ 3d¹⁰</div>
+                    <p>Exception to Aufbau</p>
+                    <p>Half-filled d subshell</p>
+                    <p>More stable configuration</p>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Exceptions to Aufbau Principle:</strong></p>
+                <ul>
+                    <li><strong>Chromium (24):</strong> [Ar] 4s¹ 3d⁵ (not 4s² 3d⁴) - half-filled d subshell</li>
+                    <li><strong>Copper (29):</strong> [Ar] 4s¹ 3d¹⁰ (not 4s² 3d⁹) - filled d subshell</li>
+                    <li><strong>Molybdenum (42):</strong> [Kr] 5s¹ 4d⁵ - similar to Cr</li>
+                    <li><strong>Silver (47):</strong> [Kr] 5s¹ 4d¹⁰ - similar to Cu</li>
+                    <li><strong>Gold (79):</strong> [Xe] 6s¹ 4f¹⁴ 5d¹⁰ - similar to Cu</li>
+                </ul>
+                <p>These exceptions occur because half-filled or fully filled d or f subshells are more stable.</p>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Isoelectronic Species</h4>
+                <p>Species with same electron configuration:</p>
+                <p>N³⁻, O²⁻, F⁻, Ne, Na⁺, Mg²⁺, Al³⁺ all have 1s² 2s² 2p⁶</p>
+                <p>Size decreases with increasing nuclear charge: N³⁻ > O²⁻ > F⁻ > Ne > Na⁺ > Mg²⁺ > Al³⁺</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Electron Configuration</div>
+                <p>Write electron configuration for Iron (Fe, Z=26).</p>
+                <p><strong>Solution:</strong></p>
+                <p>Following Aufbau order: 1s, 2s, 2p, 3s, 3p, 4s, 3d</p>
+                <p>1s² (2) + 2s² (4) + 2p⁶ (10) + 3s² (12) + 3p⁶ (18) + 4s² (20) + 3d⁶ (26)</p>
+                <p>Thus: 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶ or [Ar] 4s² 3d⁶</p>
+                <p>For Fe³⁺ ion: Remove 4s² and one 3d electron ⇒ [Ar] 3d⁵</p>
+            </div>
+        </section>
+
+        <!-- Periodic Table Section -->
+        <section class="info-panel" id="periodic-table" data-aos="fade-up">
+            <h2>Periodic Table and Atomic Structure</h2>
+            <p>The periodic table organizes elements based on atomic structure. Elements in same group have similar electron configurations in their valence shells.</p>
+
+            <h3>Periodic Trends Based on Atomic Structure</h3>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Trend Across Period</th>
+                    <th>Trend Down Group</th>
+                    <th>Explanation</th>
+                </tr>
+                <tr>
+                    <td>Atomic Radius</td>
+                    <td>Decreases</td>
+                    <td>Increases</td>
+                    <td>Increasing nuclear charge vs electron shielding</td>
+                </tr>
+                <tr>
+                    <td>Ionization Energy</td>
+                    <td>Increases</td>
+                    <td>Decreases</td>
+                    <td>Nuclear charge and distance from nucleus</td>
+                </tr>
+                <tr>
+                    <td>Electron Affinity</td>
+                    <td>Increases</td>
+                    <td>Decreases</td>
+                    <td>Stability of added electron</td>
+                </tr>
+                <tr>
+                    <td>Electronegativity</td>
+                    <td>Increases</td>
+                    <td>Decreases</td>
+                    <td>Ability to attract electrons</td>
+                </tr>
+                <tr>
+                    <td>Metallic Character</td>
+                    <td>Decreases</td>
+                    <td>Increases</td>
+                    <td>Ease of losing electrons</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Blocks of Periodic Table:</strong></p>
+                <ul>
+                    <li><strong>s-block:</strong> Groups 1, 2 (alkali and alkaline earth metals) - valence electrons in s orbital</li>
+                    <li><strong>p-block:</strong> Groups 13-18 (including metalloids and nonmetals) - valence electrons in p orbital</li>
+                    <li><strong>d-block:</strong> Groups 3-12 (transition metals) - filling d orbitals</li>
+                    <li><strong>f-block:</strong> Lanthanides and actinides - filling f orbitals</li>
+                </ul>
+            </div>
+
+            <h3>Valence Electrons and Chemical Properties</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Noble Gases</div>
+                    <p>Group 18: He, Ne, Ar, Kr, Xe, Rn</p>
+                    <div class="formula">ns² np⁶ (except He: 1s²)</div>
+                    <p>Stable octet (duet for He)</p>
+                    <p>Low reactivity</p>
+                    <p>High ionization energy</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Halogens</div>
+                    <p>Group 17: F, Cl, Br, I, At</p>
+                    <div class="formula">ns² np⁵</div>
+                    <p>Need one electron</p>
+                    <p>High electronegativity</p>
+                    <p>Form -1 ions</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Alkali Metals</div>
+                    <p>Group 1: Li, Na, K, Rb, Cs, Fr</p>
+                    <div class="formula">ns¹</div>
+                    <p>Lose one electron easily</p>
+                    <p>Low ionization energy</p>
+                    <p>Form +1 ions</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">NEET FOCUS</div>
+                <h4>Effective Nuclear Charge</h4>
+                <div class="formula">Z_eff = Z - σ</div>
+                <p>Where Z = atomic number, σ = shielding constant</p>
+                <p>Slater's rules for calculating σ:</p>
+                <p>1. Electrons in same group: 0.35 (except 1s: 0.30)</p>
+                <p>2. Electrons in n-1 shell: 0.85</p>
+                <p>3. Electrons in n-2 or lower: 1.00</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Periodic Trends</div>
+                <p>Arrange in increasing atomic radius: Mg, Si, S, Na, Al</p>
+                <p><strong>Solution:</strong></p>
+                <p>All are in period 3. Atomic radius decreases across period.</p>
+                <p>Order: Na (group 1) > Mg (group 2) > Al (group 13) > Si (group 14) > S (group 16)</p>
+                <p>Thus: S < Si < Al < Mg < Na (increasing radius)</p>
+            </div>
+        </section>
+
+        <!-- Problem Solving Section -->
+        <section class="info-panel" id="problems" data-aos="fade-up">
+            <h2>Problem Solving Strategies</h2>
+            <p>Effective techniques for solving atomic structure problems in JEE and NEET.</p>
+
+            <div class="problem-solving">
+                <div class="problem-box">
+                    <div class="problem-title">Type 1: Quantum Numbers</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify orbital from principal and azimuthal quantum numbers</li>
+                        <li>Check possible mₗ values: -l to +l</li>
+                        <li>Apply Pauli principle: max 2 electrons per orbital</li>
+                        <li>Remember mₛ = ±½ for electrons</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> For n=3, l can be 0,1,2 ⇒ s, p, d orbitals</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 2: Electronic Configuration</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Use Aufbau order: 1s 2s 2p 3s 3p 4s 3d 4p...</li>
+                        <li>Follow Hund's rule for degenerate orbitals</li>
+                        <li>Check for exceptions (Cr, Cu, etc.)</li>
+                        <li>For ions: remove from highest n first</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> 4s fills before 3d but loses electrons first</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 3: Spectrum Calculations</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Use Rydberg formula: 1/λ = R(1/n₁² - 1/n₂²)</li>
+                        <li>For hydrogen: Eₙ = -13.6/n² eV</li>
+                        <li>ΔE = hc/λ = hν</li>
+                        <li>Identify series from transition</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Lyman: UV, Balmer: Visible, Paschen+: IR</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED TIP</div>
+                <h4>de Broglie Wavelength and Uncertainty Principle</h4>
+                <div class="formula">λ = h/p = h/mv (de Broglie wavelength)</div>
+                <div class="formula">Δx·Δp ≥ h/4π (Heisenberg uncertainty)</div>
+                <p>For electron in Bohr orbit: 2πr = nλ (standing wave condition)</p>
+                <p>Minimum uncertainty in position for confined particle</p>
+            </div>
+        </section>
+
+        <!-- Key Facts Carousel -->
+        <div class="swiper-container" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">BOHR'S MODEL</div>
+                        <div class="swiper-text">Quantized orbits: mvr = nħ. Energy: Eₙ = -13.6/n² eV. Explains hydrogen spectrum</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">QUANTUM NUMBERS</div>
+                        <div class="swiper-text">n=1,2,3... (shell). l=0...n-1 (subshell). mₗ=-l...+l (orbital). mₛ=±½ (spin)</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">AUFBAU PRINCIPLE</div>
+                        <div class="swiper-text">Electrons fill lowest energy orbitals first: 1s,2s,2p,3s,3p,4s,3d,4p... Exceptions: Cr,Cu</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">RYDBERG FORMULA</div>
+                        <div class="swiper-text">1/λ = R(1/n₁² - 1/n₂²). R=1.097×10⁷ m⁻¹. Lyman:n→1, Balmer:n→2, Paschen:n→3</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">HEISENBERG UNCERTAINTY</div>
+                        <div class="swiper-text">Δx·Δp ≥ h/4π. Cannot know both position and momentum exactly. Fundamental limit</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">PAULI EXCLUSION</div>
+                        <div class="swiper-text">No two electrons can have same four quantum numbers. Maximum 2 electrons per orbital</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">DE BROGLIE WAVELENGTH</div>
+                        <div class="swiper-text">λ = h/mv. Wave-particle duality. For Bohr orbit: 2πr = nλ (standing wave)</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">PERIODIC TRENDS</div>
+                        <div class="swiper-text">Atomic radius decreases across period, increases down group. Ionization energy opposite trend</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- Summary Section -->
+        <section class="info-panel" data-aos="fade-up">
+            <h2>Chapter Summary & Formulas</h2>
+            
+            <h3>Key Formulas</h3>
+            <div class="concept-cards">
+                <div class="concept-card bohr">
+                    <div class="card-title bohr">Bohr Model</div>
+                    <div class="formula">mvr = nħ</div>
+                    <div class="formula">rₙ = n²a₀, a₀ = 0.529 Å</div>
+                    <div class="formula">Eₙ = -13.6/n² eV</div>
+                    <div class="formula">1/λ = R(1/n₁²-1/n₂²)</div>
+                </div>
+
+                <div class="concept-card quantum">
+                    <div class="card-title quantum">Quantum Mechanics</div>
+                    <div class="formula">Ĥψ = Eψ</div>
+                    <div class="formula">λ = h/p</div>
+                    <div class="formula">Δx·Δp ≥ h/4π</div>
+                    <div class="formula">E = hν</div>
+                </div>
+
+            </div>
+
+            <h3>Important Points for JEE/NEET</h3>
+            <ul>
+                <li>Bohr's model only works for hydrogen and hydrogen-like ions</li>
+                <li>Quantum numbers define orbitals uniquely</li>
+                <li>Electron configuration determines chemical properties</li>
+                <li>Exceptions to Aufbau: Cr, Cu, Mo, Ag, Au, etc.</li>
+                <li>4s orbital fills before 3d but loses electrons first</li>
+                <li>Heisenberg uncertainty is fundamental, not experimental limitation</li>
+                <li>de Broglie wavelength explains quantization in Bohr model</li>
+                <li>Noble gases have stable electron configurations</li>
+            </ul>
+
+            <div class="important">
+                <p><strong>Common Mistakes to Avoid:</strong></p>
+                <ul>
+                    <li>Confusing n and l quantum numbers</li>
+                    <li>Wrong Aufbau order (3d before 4s)</li>
+                    <li>Forgetting exceptions (Cr, Cu configurations)</li>
+                    <li>Incorrect electron removal order for ions</li>
+                    <li>Mixing up Lyman, Balmer, Paschen series</li>
+                    <li>Wrong Rydberg formula application</li>
+                    <li>Confusing atomic radius trends</li>
+                    <li>Forgetting that 4s loses electrons before 3d</li>
+                </ul>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">SUPER TIP</div>
+                <h4>Quick Reference Values</h4>
+                <p><strong>Bohr radius:</strong> a₀ = 0.529 × 10⁻¹⁰ m = 0.529 Å</p>
+                <p><strong>Rydberg constant:</strong> R = 1.097 × 10⁷ m⁻¹</p>
+                <p><strong>Ground state energy of H:</strong> -13.6 eV</p>
+                <p><strong>Planck's constant:</strong> h = 6.626 × 10⁻³⁴ J·s</p>
+                <p><strong>Electron mass:</strong> mₑ = 9.109 × 10⁻³¹ kg</p>
+                <p><strong>Proton mass:</strong> mₚ = 1.673 × 10⁻²⁷ kg</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Nerds Assemble</h3>
+                <p>Master Structure of Atom for JEE & NEET. Comprehensive chemistry resource with detailed explanations and problem-solving strategies.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#atomic-models">Atomic Models</a></li>
+                    <li><a href="#bohr-model">Bohr's Model</a></li>
+                    <li><a href="#quantum-mechanics">Quantum Mechanics</a></li>
+                    <li><a href="#electron-config">Electron Configuration</a></li>
+                    <li><a href="#periodic-table">Periodic Table</a></li>
+                    <li><a href="#problems">Problem Solving</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> 44mr.invisible@gmail.com</li>
+                    <li><i class="fas fa-book"></i> NCERT Chemistry Class 11</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Nerds Assemble. All rights reserved. | Designed for JEE & NEET Aspirants | Structure of Atom</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Structure of Atom - JavaScript
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ?
+                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+            }
+
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+
+            function handleScroll() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('active');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                }
+            }
+
+            // Debounced scroll event
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(handleScroll, 50);
+            }, { passive: true });
+
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: window.innerWidth < 768 ? 100 : 120,
+                    easing: 'ease-out-quad'
+                });
+            }
+
+            // Initialize Swiper
+            if (typeof Swiper !== 'undefined') {
+                const swiper = new Swiper('.swiper-container', {
+                    loop: true,
+                    autoplay: {
+                        delay: 3500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 25
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        }
+                    }
+                });
+            }
+
+            // Smooth Scroll for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        if (mainNav && mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                });
+            });
+
+            // Back to Top Button Click
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Create Particles
+            createParticles();
+            
+            // Create Electron Cloud
+            createElectronCloud();
+            
+            // Create Periodic Table Preview
+            createPeriodicPreview();
+            
+            // Enhance Atom Animation
+            enhanceAtomAnimation();
+        });
+
+        // Create Particles Function
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
+
+            const particleCount = window.innerWidth < 768 ? 20 : 30;
+            particlesContainer.innerHTML = '';
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                const size = Math.random() * 3 + 1;
+                const posX = Math.random() * window.innerWidth;
+                const posY = Math.random() * window.innerHeight;
+                const duration = Math.random() * 15 + 10;
+                const delay = Math.random() * 5;
+
+                particle.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}px;
+                    top: ${posY}px;
+                    opacity: ${Math.random() * 0.3 + 0.1};
+                    animation: float ${duration}s ease-in-out ${delay}s infinite;
+                    background: rgba(255,255,255,0.3);
+                `;
+
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Create Electron Cloud
+        function createElectronCloud() {
+            const cloudContainer = document.getElementById('electronCloud');
+            if (!cloudContainer) return;
+
+            const pointCount = 80;
+            cloudContainer.innerHTML = '';
+
+            for (let i = 0; i < pointCount; i++) {
+                const point = document.createElement('div');
+                point.classList.add('cloud-point');
+
+                // Random position within circular cloud
+                const radius = Math.random() * 80 + 40;
+                const angle = Math.random() * 2 * Math.PI;
+                const x = radius * Math.cos(angle);
+                const y = radius * Math.sin(angle);
+                
+                const duration = Math.random() * 5 + 3;
+                const delay = Math.random() * 2;
+                const opacity = Math.random() * 0.5 + 0.3;
+
+                point.style.cssText = `
+                    left: calc(50% + ${x}px);
+                    top: calc(50% + ${y}px);
+                    animation: electron-cloud ${duration}s ease-in-out ${delay}s infinite;
+                    opacity: ${opacity};
+                `;
+
+                cloudContainer.appendChild(point);
+            }
+        }
+
+        // Create Periodic Table Preview
+        function createPeriodicPreview() {
+            const previewContainer = document.getElementById('periodicPreview');
+            if (!previewContainer) return;
+
+            // Simplified periodic table - first 40 elements
+            const elements = [
+                { symbol: 'H', group: 1, class: 'alkali' },
+                { symbol: 'He', group: 18, class: 'noble' },
+                { symbol: 'Li', group: 1, class: 'alkali' },
+                { symbol: 'Be', group: 2, class: 'alkaline' },
+                { symbol: 'B', group: 13, class: 'other' },
+                { symbol: 'C', group: 14, class: 'other' },
+                { symbol: 'N', group: 15, class: 'other' },
+                { symbol: 'O', group: 16, class: 'other' },
+                { symbol: 'F', group: 17, class: 'other' },
+                { symbol: 'Ne', group: 18, class: 'noble' },
+                { symbol: 'Na', group: 1, class: 'alkali' },
+                { symbol: 'Mg', group: 2, class: 'alkaline' },
+                { symbol: 'Al', group: 13, class: 'other' },
+                { symbol: 'Si', group: 14, class: 'other' },
+                { symbol: 'P', group: 15, class: 'other' },
+                { symbol: 'S', group: 16, class: 'other' },
+                { symbol: 'Cl', group: 17, class: 'other' },
+                { symbol: 'Ar', group: 18, class: 'noble' },
+                { symbol: 'K', group: 1, class: 'alkali' },
+                { symbol: 'Ca', group: 2, class: 'alkaline' },
+                { symbol: 'Sc', group: 3, class: 'transition' },
+                { symbol: 'Ti', group: 4, class: 'transition' },
+                { symbol: 'V', group: 5, class: 'transition' },
+                { symbol: 'Cr', group: 6, class: 'transition' },
+                { symbol: 'Mn', group: 7, class: 'transition' },
+                { symbol: 'Fe', group: 8, class: 'transition' },
+                { symbol: 'Co', group: 9, class: 'transition' },
+                { symbol: 'Ni', group: 10, class: 'transition' },
+                { symbol: 'Cu', group: 11, class: 'transition' },
+                { symbol: 'Zn', group: 12, class: 'transition' },
+                { symbol: 'Ga', group: 13, class: 'other' },
+                { symbol: 'Ge', group: 14, class: 'other' },
+                { symbol: 'As', group: 15, class: 'other' },
+                { symbol: 'Se', group: 16, class: 'other' },
+                { symbol: 'Br', group: 17, class: 'other' },
+                { symbol: 'Kr', group: 18, class: 'noble' },
+                { symbol: 'Rb', group: 1, class: 'alkali' },
+                { symbol: 'Sr', group: 2, class: 'alkaline' },
+                { symbol: 'Y', group: 3, class: 'transition' },
+                { symbol: 'Zr', group: 4, class: 'transition' }
+            ];
+
+            previewContainer.innerHTML = '';
+
+            elements.forEach(element => {
+                const cell = document.createElement('div');
+                cell.classList.add('element-cell', element.class);
+                cell.textContent = element.symbol;
+                cell.title = `${element.symbol} - Group ${element.group}`;
+
+                cell.addEventListener('mouseenter', () => {
+                    cell.style.transform = 'scale(1.5)';
+                    cell.style.zIndex = '10';
+                    cell.style.boxShadow = '0 0 10px var(--primary)';
+                });
+
+                cell.addEventListener('mouseleave', () => {
+                    cell.style.transform = 'scale(1)';
+                    cell.style.zIndex = '1';
+                    cell.style.boxShadow = 'none';
+                });
+
+                previewContainer.appendChild(cell);
+            });
+        }
+
+        // Enhance Atom Animation
+        function enhanceAtomAnimation() {
+            const atomContainer = document.querySelector('.atom-container');
+            if (!atomContainer) return;
+
+            // Add interaction to electrons
+            const electrons = atomContainer.querySelectorAll('.electron');
+            electrons.forEach((electron, index) => {
+                electron.addEventListener('mouseenter', () => {
+                    electron.style.transform = 'scale(2)';
+                    electron.style.transition = 'transform 0.3s ease';
+                    electron.style.boxShadow = '0 0 20px var(--tertiary)';
+                    
+                    // Show electron info
+                    const tooltip = document.createElement('div');
+                    tooltip.textContent = `Electron ${index + 1}`;
+                    tooltip.style.position = 'absolute';
+                    tooltip.style.background = 'rgba(0,0,0,0.8)';
+                    tooltip.style.color = 'white';
+                    tooltip.style.padding = '5px 10px';
+                    tooltip.style.borderRadius = '5px';
+                    tooltip.style.fontSize = '0.8rem';
+                    tooltip.style.bottom = '100%';
+                    tooltip.style.left = '50%';
+                    tooltip.style.transform = 'translateX(-50%)';
+                    tooltip.style.whiteSpace = 'nowrap';
+                    
+                    electron.appendChild(tooltip);
+                });
+                
+                electron.addEventListener('mouseleave', () => {
+                    electron.style.transform = 'scale(1)';
+                    electron.style.boxShadow = '0 0 10px var(--tertiary)';
+                    const tooltip = electron.querySelector('div');
+                    if (tooltip) {
+                        tooltip.remove();
+                    }
+                });
+            });
+
+            // Add nucleus interaction
+            const nucleus = atomContainer.querySelector('.nucleus');
+            if (nucleus) {
+                nucleus.addEventListener('mouseenter', () => {
+                    nucleus.style.transform = 'scale(1.5)';
+                    nucleus.style.transition = 'all 0.3s ease';
+                    nucleus.style.boxShadow = '0 0 30px var(--primary), 0 0 60px var(--primary)';
+                });
+                
+                nucleus.addEventListener('mouseleave', () => {
+                    nucleus.style.transform = 'scale(1)';
+                    nucleus.style.boxShadow = '0 0 20px var(--primary), 0 0 40px var(--primary)';
+                });
+            }
+        }
+
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                createParticles();
+                createElectronCloud();
+            }, 250);
+        });
+    </script>
+</body>
+</html>
