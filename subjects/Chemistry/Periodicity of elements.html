@@ -1,0 +1,2365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKVRN3GREN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKVRN3GREN');
+</script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periodic Table | Class 11 Chemistry | JEE & NEET Preparation</title>
+    <meta name="description" content="Master the Periodic Table for Class 11 Chemistry. Complete guide for JEE & NEET aspirants with periodic trends, classification, and properties of elements.">
+    <meta name="keywords" content="Periodic Table, Chemistry Class 11, JEE preparation, NEET chemistry, Periodic Trends, Modern Periodic Table, Mendeleev, Electronic Configuration, Chemical Periodicity">
+    <meta name="author" content="Nerds Assemble">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Periodic Table | Class 11 Chemistry">
+    <meta property="og:description" content="Complete guide to Periodic Table and Periodicity for JEE & NEET aspirants">
+    <meta property="og:type" content="website">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Pacifico&family=Dancing+Script:wght@700&family=Abril+Fatface&family=Playfair+Display:wght@700&family=Raleway:wght@300;800&family=Quicksand:wght@500&family=Poiret+One&family=Amatic+SC:wght@700&family=Caveat:wght@700&family=Kaushan+Script&family=Libre+Baskerville&family=Merriweather&family=Nunito:wght@800&family=Oswald:wght@500&family=Roboto+Slab:wght@700&family=Sacramento&family=Tangerine:wght@700&family=Yeseva+One&family=Electrolize&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   
+     <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/planet-universe-svgrepo-com.svg">
+    
+    <style>
+        /* Periodic Table - Nerds Assemble CSS */
+        :root {
+            --primary: #4CC9F0;
+            --secondary: #7209B7;
+            --tertiary: #F72585;
+            --accent: #4361EE;
+            --highlight: #FFEA00;
+            --bg: #0a0a20;
+            --text: #ffffff;
+            --nav-bg: rgba(10, 5, 30, 0.95);
+            --alkali-gradient: linear-gradient(45deg, #FF595E, #FF9E00);
+            --alkaline-gradient: linear-gradient(45deg, #FF9E00, #FFCA3A);
+            --transition-gradient: linear-gradient(45deg, #1982C4, #4361EE);
+            --metalloid-gradient: linear-gradient(45deg, #8AC926, #38B000);
+            --halogen-gradient: linear-gradient(45deg, #6A4C93, #7209B7);
+            --noble-gradient: linear-gradient(45deg, #118AB2, #06D6A0);
+        }
+
+        /* Base Styles & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overscroll-behavior-y: contain;
+            -webkit-overflow-scrolling: touch;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(76, 201, 240, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(114, 9, 183, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(247, 37, 133, 0.05) 0%, transparent 30%),
+                linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--tertiary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(76, 201, 240, 0.5);
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--highlight);
+            margin: 2rem 0 1.5rem;
+            font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-family: 'Roboto Slab', serif;
+            color: var(--secondary);
+            margin: 1.5rem 0 1rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+        }
+
+        p {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+        }
+
+        /* Layout Components */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            flex: 1;
+            padding: 0 1rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Raleway', sans-serif;
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            transform: translateZ(0);
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            color: var(--highlight);
+            font-size: 1.6rem;
+        }
+
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.4rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Electrolize', sans-serif;
+            font-size: 0.95rem;
+            transition: color 0.2s ease-out;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--highlight);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--highlight);
+            transition: width 0.2s ease-out;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* Content Panels */
+        .info-panel {
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
+            padding: 1.8rem;
+            margin: 1.8rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: translateZ(0);
+            will-change: transform, opacity;
+        }
+
+        .info-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%),
+                linear-gradient(-45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%);
+            background-size: 20px 20px;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        /* Special Content Blocks */
+        .important {
+            background: rgba(76, 201, 240, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(76, 201, 240, 0.1);
+        }
+
+        .definition {
+            background: rgba(255, 234, 0, 0.1);
+            border-left: 4px solid var(--highlight);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(255, 234, 0, 0.1);
+        }
+
+        .formula {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin: 1.2rem 0;
+            padding: 1.2rem;
+            background: rgba(114, 9, 183, 0.1);
+            border-radius: 8px;
+            border: 1px dashed var(--highlight);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.1rem;
+        }
+
+        .formula::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, transparent 45%, rgba(114, 9, 183, 0.1) 50%, transparent 55%);
+            background-size: 10px 10px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .example {
+            background: rgba(247, 37, 133, 0.1);
+            border-left: 4px solid var(--tertiary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Lists & Tables */
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 1.8rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background-color: rgba(76, 201, 240, 0.2);
+            font-family: 'Electrolize', sans-serif;
+            color: var(--highlight);
+            font-size: 0.95rem;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+
+        tr:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* Concept Cards */
+        .concept-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .concept-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(76, 201, 240, 0.2);
+        }
+
+        .concept-card.alkali {
+            border-top: 4px solid #FF595E;
+        }
+
+        .concept-card.transition {
+            border-top: 4px solid #4361EE;
+        }
+
+        .concept-card.halogen {
+            border-top: 4px solid #7209B7;
+        }
+
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title.alkali { color: #FF595E; }
+        .card-title.transition { color: #4361EE; }
+        .card-title.halogen { color: #7209B7; }
+
+        /* Swiper Carousel */
+        .swiper-container {
+            width: 100%;
+            height: auto;
+            min-height: 180px;
+            margin: 2.5rem 0;
+            will-change: transform;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .swiper-slide {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+            font-family: 'Electrolize', sans-serif;
+            padding: 1.2rem;
+            box-sizing: border-box;
+            text-align: center;
+            min-height: 180px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-out;
+            transform: translateZ(0);
+            height: auto;
+        }
+
+        .swiper-slide:hover {
+            transform: translateY(-5px);
+        }
+
+        .swiper-slide div {
+            width: 100%;
+        }
+
+        .swiper-title {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin-bottom: 0.5rem;
+            font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+        }
+
+        .swiper-text {
+            font-family: 'Quicksand', sans-serif;
+            font-size: clamp(0.85rem, 1.1vw, 1rem);
+        }
+
+        /* Swiper Navigation */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: var(--highlight);
+            background: rgba(0, 0, 0, 0.5);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            backdrop-filter: blur(10px);
+            margin-top: -17.5px;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .swiper-pagination-bullet {
+            background: var(--text);
+            opacity: 0.5;
+            width: 8px;
+            height: 8px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: var(--highlight);
+            opacity: 1;
+        }
+
+        /* Problem Solving Section */
+        .problem-solving {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .problem-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary);
+        }
+
+        .problem-title {
+            color: var(--primary);
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Periodic Table Visualization */
+        .periodic-table-container {
+            display: grid;
+            grid-template-columns: repeat(18, 1fr);
+            grid-template-rows: repeat(10, 1fr);
+            gap: 4px;
+            margin: 2rem 0;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .element-box {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            font-size: 0.7rem;
+            padding: 2px;
+        }
+
+        .element-box:hover {
+            transform: scale(1.5);
+            z-index: 100;
+            box-shadow: 0 0 15px currentColor;
+        }
+
+        .element-symbol {
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .element-number {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            font-size: 0.6rem;
+            opacity: 0.8;
+        }
+
+        .element-name {
+            font-size: 0.5rem;
+            margin-top: 2px;
+            text-align: center;
+        }
+
+        /* Periodic Trends Visualization */
+        .trend-visualization {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .trend-line {
+            position: absolute;
+            width: 80%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        .trend-point {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Element Groups Visualization */
+        .groups-visualization {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .group-box {
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .group-box:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Particles Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            will-change: transform;
+            opacity: 0.3;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .footer-column h3 {
+            color: var(--highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            transition: color 0.2s ease-out;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--highlight);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text);
+            font-size: 1.1rem;
+            transition: color 0.2s ease-out;
+        }
+
+        .social-links a:hover {
+            color: var(--highlight);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 1.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Quicksand', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease-out;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(76, 201, 240, 0.3);
+            transform: translateZ(0);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--highlight);
+            transform: translateY(-5px);
+        }
+
+        /* JEE/NEET Specific Styling */
+        .exam-highlight {
+            background: rgba(255, 235, 0, 0.1);
+            border: 2px solid var(--highlight);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .exam-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--highlight);
+            color: var(--bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(10px, 10px) rotate(90deg); }
+            50% { transform: translate(-5px, 15px) rotate(180deg); }
+            75% { transform: translate(5px, -5px) rotate(270deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        @keyframes trend-glow {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        /* Element Properties Panel */
+        .element-detail {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.9);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid var(--primary);
+            z-index: 1000;
+            display: none;
+            max-width: 400px;
+            width: 90%;
+            backdrop-filter: blur(10px);
+        }
+
+        .element-detail.active {
+            display: block;
+        }
+
+        .close-detail {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Overlay for element detail */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+            display: none;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        /* Element Blocks Coloring */
+        .alkali-metal { background: linear-gradient(135deg, #FF595E, #FF9E00); color: #000; }
+        .alkaline-earth { background: linear-gradient(135deg, #FF9E00, #FFCA3A); color: #000; }
+        .transition-metal { background: linear-gradient(135deg, #1982C4, #4361EE); color: #fff; }
+        .basic-metal { background: linear-gradient(135deg, #8AC926, #38B000); color: #000; }
+        .metalloid { background: linear-gradient(135deg, #FFCA3A, #FF9E00); color: #000; }
+        .non-metal { background: linear-gradient(135deg, #7209B7, #6A4C93); color: #fff; }
+        .halogen { background: linear-gradient(135deg, #6A4C93, #7209B7); color: #fff; }
+        .noble-gas { background: linear-gradient(135deg, #118AB2, #06D6A0); color: #fff; }
+        .lanthanide { background: linear-gradient(135deg, #F72585, #B5179E); color: #fff; }
+        .actinide { background: linear-gradient(135deg, #560BAD, #3A0CA3); color: #fff; }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .nav-links {
+                gap: 1rem;
+            }
+            .periodic-table-container {
+                grid-template-columns: repeat(9, 1fr);
+                grid-template-rows: repeat(20, 1fr);
+                gap: 3px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background-image:
+                    radial-gradient(circle at 10% 20%, rgba(76, 201, 240, 0.05) 0%, transparent 20%),
+                    linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+            }
+
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                margin-top: 1rem;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.75rem 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            header, .info-panel {
+                backdrop-filter: blur(5px);
+            }
+
+            .container {
+                width: 95%;
+                padding: 0;
+            }
+
+            .info-panel {
+                padding: 1.5rem;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            th, td {
+                padding: 0.5rem;
+                font-size: 0.85rem;
+            }
+
+            .concept-cards, .problem-solving {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none;
+            }
+
+            .periodic-table-container {
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(40, 1fr);
+                gap: 2px;
+            }
+
+            .element-box {
+                font-size: 0.6rem;
+            }
+
+            .element-symbol {
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-panel {
+                padding: 1rem;
+            }
+
+            ul, ol {
+                padding-left: 1.5rem;
+            }
+
+            .formula {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+
+            .swiper-slide {
+                padding: 1rem;
+            }
+
+            .periodic-table-container {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1px;
+            }
+
+            .element-box {
+                aspect-ratio: 0.8;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-atom"></i></span>
+                <span class="logo-text">Nerds Assemble</span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#history">History</a></li>
+                    <li><a href="#modern-table">Modern Table</a></li>
+                    <li><a href="#periodic-trends">Periodic Trends</a></li>
+                    <li><a href="#element-groups">Element Groups</a></li>
+                    <li><a href="#electronic-config">Electronic Config</a></li>
+                    <li><a href="#problems">Problems</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="page-header" data-aos="fade-down">
+            <h1>Periodic Table</h1>
+            <p class="subtitle">Class 11 Chemistry | JEE & NEET Preparation Guide</p>
+            <p>Discover the organization of elements and understand periodicity - the foundation of chemical behavior</p>
+            
+            <!-- Interactive Periodic Table -->
+            <div class="periodic-table-container" id="periodicTable">
+                <!-- Elements will be generated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="info-panel" id="introduction" data-aos="fade-up">
+            <h2>Introduction to Periodic Table</h2>
+            <p>The Periodic Table is a systematic arrangement of chemical elements in order of increasing atomic number, revealing periodic trends in their properties.</p>
+
+            <div class="definition">
+                <p><strong>Periodic Law:</strong> The properties of elements are periodic functions of their atomic numbers. When elements are arranged in order of increasing atomic number, elements with similar properties recur at regular intervals.</p>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card alkali" data-aos="flip-left">
+                    <div class="card-title alkali"><i class="fas fa-fire"></i> Alkali Metals</div>
+                    <p>Group 1 elements: Li, Na, K, Rb, Cs, Fr. Highly reactive metals with one valence electron.</p>
+                    <div class="formula">ns¹ configuration</div>
+                </div>
+
+                <div class="concept-card transition" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-title transition"><i class="fas fa-gem"></i> Transition Metals</div>
+                    <p>Groups 3-12: Elements with partially filled d orbitals. Form colored compounds.</p>
+                    <div class="formula">(n-1)d¹⁻¹⁰ ns¹⁻²</div>
+                </div>
+
+                <div class="concept-card halogen" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card-title halogen"><i class="fas fa-vial"></i> Halogens</div>
+                    <p>Group 17: F, Cl, Br, I, At. Highly reactive nonmetals needing one electron.</p>
+                    <div class="formula">ns² np⁵ configuration</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section class="info-panel" id="history" data-aos="fade-up">
+            <h2>Historical Development</h2>
+            <p>The periodic table evolved through several stages as our understanding of elements and their properties grew.</p>
+
+            <h3>Historical Periodic Tables Timeline</h3>
+            <table>
+                <tr>
+                    <th>Year</th>
+                    <th>Scientist</th>
+                    <th>Contribution</th>
+                    <th>Basis</th>
+                    <th>Limitations</th>
+                </tr>
+                <tr>
+                    <td>1817</td>
+                    <td>Döbereiner</td>
+                    <td>Law of Triads</td>
+                    <td>Atomic weight</td>
+                    <td>Only a few triads</td>
+                </tr>
+                <tr>
+                    <td>1864</td>
+                    <td>Newlands</td>
+                    <td>Law of Octaves</td>
+                    <td>Atomic weight</td>
+                    <td>Failed beyond calcium</td>
+                </tr>
+                <tr>
+                    <td>1869</td>
+                    <td>Mendeleev</td>
+                    <td>First periodic table</td>
+                    <td>Atomic weight</td>
+                    <td>Position anomalies</td>
+                </tr>
+                <tr>
+                    <td>1913</td>
+                    <td>Moseley</td>
+                    <td>Modern periodic law</td>
+                    <td>Atomic number</td>
+                    <td>None significant</td>
+                </tr>
+                <tr>
+                    <td>1945</td>
+                    <td>Seaborg</td>
+                    <td>Actinide concept</td>
+                    <td>Electronic config</td>
+                    <td>None significant</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Mendeleev's Periodic Table (1869):</strong></p>
+                <ul>
+                    <li>Arranged elements in order of increasing atomic weights</li>
+                    <li>Left gaps for undiscovered elements (predicted properties)</li>
+                    <li>Grouped elements with similar properties in vertical columns</li>
+                    <li>Corrected atomic weights of some elements</li>
+                    <li>Predicted existence of eka-aluminium (Ga), eka-boron (Sc), eka-silicon (Ge)</li>
+                </ul>
+            </div>
+
+            <h3>Key Achievements and Limitations</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Mendeleev's Predictions</div>
+                    <p><strong>Predicted:</strong> Gallium (1875), Scandium (1879), Germanium (1886)</p>
+                    <p><strong>Properties:</strong> Accurately predicted density, melting point, atomic weight</p>
+                    <p><strong>Significance:</strong> Validated periodic law</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Anomalies in Mendeleev's Table</div>
+                    <p><strong>Position anomalies:</strong> Ar-K, Co-Ni, Te-I</p>
+                    <p><strong>Hydrogen position:</strong> Could be placed in group 1 or 17</p>
+                    <p><strong>Isotopes:</strong> Same element different positions</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Modern Periodic Law</div>
+                    <p><strong>Moseley (1913):</strong> Properties are periodic function of atomic number</p>
+                    <p><strong>Basis:</strong> X-ray spectra of elements</p>
+                    <p><strong>Result:</strong> Resolved position anomalies</p>
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Mendeleev's Predictions</div>
+                <p>Mendeleev predicted properties of eka-silicon (Germanium) in 1871:</p>
+                <p><strong>Predicted (1871):</strong> Atomic weight = 72, Density = 5.5 g/cm³</p>
+                <p><strong>Actual (1886):</strong> Atomic weight = 72.6, Density = 5.36 g/cm³</p>
+                <p><strong>Predicted:</strong> Will form EsO₂ (density 4.7)</p>
+                <p><strong>Actual:</strong> GeO₂ density = 4.70 g/cm³</p>
+                <p><em>This remarkable accuracy validated the periodic law.</em></p>
+            </div>
+        </section>
+
+        <!-- Modern Periodic Table Section -->
+        <section class="info-panel" id="modern-table" data-aos="fade-up">
+            <h2>Modern Periodic Table</h2>
+            <p>The modern periodic table is based on atomic number and electronic configuration, organized into periods, groups, and blocks.</p>
+
+            <div class="definition">
+                <p><strong>Features of Modern Periodic Table:</strong></p>
+                <ul>
+                    <li><strong>Periods:</strong> 7 horizontal rows (1-7)</li>
+                    <li><strong>Groups:</strong> 18 vertical columns (1-18)</li>
+                    <li><strong>Blocks:</strong> s, p, d, f based on valence electron configuration</li>
+                    <li><strong>Representative Elements:</strong> s and p blocks (Groups 1,2,13-18)</li>
+                    <li><strong>Transition Elements:</strong> d-block (Groups 3-12)</li>
+                    <li><strong>Inner Transition:</strong> f-block (Lanthanides & Actinides)</li>
+                </ul>
+            </div>
+
+            <h3>Periodic Table Structure</h3>
+            <table>
+                <tr>
+                    <th>Period</th>
+                    <th>Number of Elements</th>
+                    <th>Electron Shells</th>
+                    <th>Blocks Present</th>
+                    <th>First Element</th>
+                    <th>Last Element</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>K (n=1)</td>
+                    <td>s only</td>
+                    <td>H (1)</td>
+                    <td>He (2)</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>8</td>
+                    <td>K, L (n=1,2)</td>
+                    <td>s, p</td>
+                    <td>Li (3)</td>
+                    <td>Ne (10)</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>8</td>
+                    <td>K, L, M (n=1-3)</td>
+                    <td>s, p</td>
+                    <td>Na (11)</td>
+                    <td>Ar (18)</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>18</td>
+                    <td>K, L, M, N (n=1-4)</td>
+                    <td>s, p, d</td>
+                    <td>K (19)</td>
+                    <td>Kr (36)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>18</td>
+                    <td>K, L, M, N, O (n=1-5)</td>
+                    <td>s, p, d</td>
+                    <td>Rb (37)</td>
+                    <td>Xe (54)</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>32</td>
+                    <td>K, L, M, N, O, P (n=1-6)</td>
+                    <td>s, p, d, f</td>
+                    <td>Cs (55)</td>
+                    <td>Rn (86)</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>32 (incomplete)</td>
+                    <td>K-P, Q (n=1-7)</td>
+                    <td>s, p, d, f</td>
+                    <td>Fr (87)</td>
+                    <td>Og (118)</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Blocks of Periodic Table:</strong></p>
+                <ul>
+                    <li><strong>s-block:</strong> Groups 1, 2, Helium - last electron enters s orbital</li>
+                    <li><strong>p-block:</strong> Groups 13-18 (except He) - last electron enters p orbital</li>
+                    <li><strong>d-block:</strong> Groups 3-12 - last electron enters d orbital</li>
+                    <li><strong>f-block:</strong> Lanthanides & Actinides - last electron enters f orbital</li>
+                </ul>
+                <p><strong>General Electronic Configuration:</strong></p>
+                <div class="formula">s-block: ns¹⁻² | p-block: ns² np¹⁻⁶ | d-block: (n-1)d¹⁻¹⁰ ns¹⁻² | f-block: (n-2)f¹⁻¹⁴ (n-1)d⁰⁻¹ ns²</div>
+            </div>
+
+            <!-- Periodic Trends Visualization -->
+            <div class="trend-visualization">
+                <div class="trend-line"></div>
+                <div class="trend-point" style="left: 10%; top: 50%; background: var(--tertiary);" title="Atomic Radius: Decreases across period"></div>
+                <div class="trend-point" style="left: 30%; top: 30%; background: var(--primary);" title="Ionization Energy: Increases across period"></div>
+                <div class="trend-point" style="left: 50%; top: 20%; background: var(--accent);" title="Electronegativity: Increases across period"></div>
+                <div class="trend-point" style="left: 70%; top: 70%; background: var(--secondary);" title="Metallic Character: Decreases across period"></div>
+                <div class="trend-point" style="left: 90%; top: 80%; background: var(--highlight);" title="Atomic Size: Increases down group"></div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Anomalous Period 2 Elements</h4>
+                <p>Period 2 elements show anomalies due to:</p>
+                <ol>
+                    <li>Small atomic size</li>
+                    <li>High electronegativity</li>
+                    <li>Absence of d-orbitals</li>
+                    <li>High ionization energy</li>
+                </ol>
+                <p><strong>Examples:</strong> Li (different from other alkali metals), Be (amphoteric), B (non-metal), etc.</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Identifying Element from Position</div>
+                <p>An element is in period 3, group 16. Identify the element and write its electronic configuration.</p>
+                <p><strong>Solution:</strong></p>
+                <p>Period 3 ⇒ n = 3 (valence shell)</p>
+                <p>Group 16 ⇒ 6 valence electrons (ns² np⁴)</p>
+                <p>Electronic configuration: 1s² 2s² 2p⁶ 3s² 3p⁴</p>
+                <p>Atomic number = 2+2+6+2+4 = 16</p>
+                <p><em>Thus, the element is Sulfur (S)</em></p>
+            </div>
+        </section>
+
+        <!-- Periodic Trends Section -->
+        <section class="info-panel" id="periodic-trends" data-aos="fade-up">
+            <h2>Periodic Trends in Properties</h2>
+            <p>Periodic trends are patterns in properties of elements across periods and down groups, explained by electronic configuration and effective nuclear charge.</p>
+
+            <div class="definition">
+                <p><strong>Effective Nuclear Charge (Z_eff):</strong> Z_eff = Z - σ, where Z is atomic number and σ is shielding constant. It determines most periodic trends.</p>
+            </div>
+
+            <h3>Key Periodic Trends</h3>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Trend Across Period</th>
+                    <th>Trend Down Group</th>
+                    <th>Explanation</th>
+                    <th>Exception</th>
+                </tr>
+                <tr>
+                    <td>Atomic Radius</td>
+                    <td>Decreases</td>
+                    <td>Increases</td>
+                    <td>Increasing Z_eff vs added shells</td>
+                    <td>Noble gases larger</td>
+                </tr>
+                <tr>
+                    <td>Ionic Radius</td>
+                    <td>Cations: Decrease<br>Anions: Decrease</td>
+                    <td>Increases</td>
+                    <td>Electron gain/loss vs added shells</td>
+                    <td>Transition metals irregular</td>
+                </tr>
+                <tr>
+                    <td>Ionization Energy</td>
+                    <td>Increases</td>
+                    <td>Decreases</td>
+                    <td>Increasing Z_eff vs distance</td>
+                    <td>Group 13 < 12, Group 16 < 15</td>
+                </tr>
+                <tr>
+                    <td>Electron Affinity</td>
+                    <td>Increases</td>
+                    <td>Decreases</td>
+                    <td>Increasing Z_eff vs size</td>
+                    <td>Group 15 < 14, Noble gases +ve</td>
+                </tr>
+                <tr>
+                    <td>Electronegativity</td>
+                    <td>Increases</td>
+                    <td>Decreases</td>
+                    <td>Increasing Z_eff vs distance</td>
+                    <td>Transition metals irregular</td>
+                </tr>
+                <tr>
+                    <td>Metallic Character</td>
+                    <td>Decreases</td>
+                    <td>Increases</td>
+                    <td>Ease of electron loss</td>
+                    <td>Metalloids show both</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Factors Affecting Periodic Trends:</strong></p>
+                <ul>
+                    <li><strong>Nuclear Charge:</strong> Increases across period, increases down group</li>
+                    <li><strong>Atomic Size:</strong> Decreases across period, increases down group</li>
+                    <li><strong>Shielding Effect:</strong> Constant across period, increases down group</li>
+                    <li><strong>Penetration Effect:</strong> s > p > d > f (affects ionization energy)</li>
+                    <li><strong>Electronic Configuration:</strong> Stability of half-filled/filled orbitals</li>
+                </ul>
+            </div>
+
+            <h3>Trend Exceptions Explained</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Ionization Energy Exceptions</div>
+                    <p><strong>Be > B:</strong> Be (2s² filled) more stable than B (2s² 2p¹)</p>
+                    <p><strong>N > O:</strong> N (2p³ half-filled) more stable than O (2p⁴)</p>
+                    <p><strong>Mg > Al:</strong> Mg (3s² filled) more stable than Al (3s² 3p¹)</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Electron Affinity Exceptions</div>
+                    <p><strong>N < C:</strong> N (2p³ half-filled) stable, less tendency to gain</p>
+                    <p><strong>O < F:</strong> O experiences electron-electron repulsion</p>
+                    <p><strong>Be, Mg:</strong> Have filled s-subshell, stable</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Atomic Size Anomalies</div>
+                    <p><strong>Noble gases:</strong> Larger than halogens (van der Waals radius)</p>
+                    <p><strong>Lanthanide contraction:</strong> 5d elements similar size to 4d</p>
+                    <p><strong>Transition series:</strong> Slow size decrease across period</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">NEET FOCUS</div>
+                <h4>Lanthanide Contraction</h4>
+                <p><strong>Definition:</strong> Gradual decrease in atomic/ionic radii of lanthanides (La to Lu)</p>
+                <p><strong>Causes:</strong> Poor shielding by 4f electrons</p>
+                <p><strong>Consequences:</strong></p>
+                <ul>
+                    <li>Similar sizes of 4d and 5d transition elements</li>
+                    <li>Similar properties of Zr and Hf, Nb and Ta, etc.</li>
+                    <li>Difficulty in separation of lanthanides</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Ordering by Atomic Radius</div>
+                <p>Arrange in increasing atomic radius: Na, Mg, Al, Si, P</p>
+                <p><strong>Solution:</strong></p>
+                <p>All are in period 3. Atomic radius decreases across period due to increasing Z_eff.</p>
+                <p>Order across period: Na > Mg > Al > Si > P</p>
+                <p>Thus increasing radius: P < Si < Al < Mg < Na</p>
+                <p><em>Alternative: Na (186 pm) > Mg (160) > Al (143) > Si (117) > P (115)</em></p>
+            </div>
+        </section>
+
+        <!-- Element Groups Section -->
+        <section class="info-panel" id="element-groups" data-aos="fade-up">
+            <h2>Element Groups and Their Properties</h2>
+            <p>Elements in the same group have similar chemical properties due to identical valence electron configurations.</p>
+
+            <h3>Representative Element Groups</h3>
+            <div class="groups-visualization">
+                <div class="group-box alkali-metal" style="background: linear-gradient(135deg, #FF595E, #FF9E00);">
+                    <h4>Group 1: Alkali Metals</h4>
+                    <p>ns¹ configuration</p>
+                    <p>Highly reactive, soft metals</p>
+                    <p>Form +1 ions</p>
+                </div>
+
+                <div class="group-box alkaline-earth" style="background: linear-gradient(135deg, #FF9E00, #FFCA3A);">
+                    <h4>Group 2: Alkaline Earth</h4>
+                    <p>ns² configuration</p>
+                    <p>Less reactive than group 1</p>
+                    <p>Form +2 ions</p>
+                </div>
+
+                <div class="group-box halogen" style="background: linear-gradient(135deg, #6A4C93, #7209B7);">
+                    <h4>Group 17: Halogens</h4>
+                    <p>ns² np⁵ configuration</p>
+                    <p>Highly reactive nonmetals</p>
+                    <p>Form -1 ions</p>
+                </div>
+
+                <div class="group-box noble-gas" style="background: linear-gradient(135deg, #118AB2, #06D6A0);">
+                    <h4>Group 18: Noble Gases</h4>
+                    <p>ns² np⁶ (He: 1s²)</p>
+                    <p>Inert, monatomic gases</p>
+                    <p>Complete octet</p>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Group-wise Electronic Configuration and Properties:</strong></p>
+                <table>
+                    <tr>
+                        <th>Group</th>
+                        <th>Valence Config</th>
+                        <th>Common Oxidation States</th>
+                        <th>Atomic Radius Trend</th>
+                        <th>Ionization Energy Trend</th>
+                    </tr>
+                    <tr>
+                        <td>1 (Alkali)</td>
+                        <td>ns¹</td>
+                        <td>+1</td>
+                        <td>Increases down group</td>
+                        <td>Decreases down group</td>
+                    </tr>
+                    <tr>
+                        <td>2 (Alkaline Earth)</td>
+                        <td>ns²</td>
+                        <td>+2</td>
+                        <td>Increases down group</td>
+                        <td>Decreases down group</td>
+                    </tr>
+                    <tr>
+                        <td>13 (Boron)</td>
+                        <td>ns² np¹</td>
+                        <td>+3</td>
+                        <td>Increases down group</td>
+                        <td>Decreases down group</td>
+                    </tr>
+                    <tr>
+                        <td>14 (Carbon)</td>
+                        <td>ns² np²</td>
+                        <td>±4, -4 (C,Si)</td>
+                        <td>Increases down group</td>
+                        <td>Decreases down group</td>
+                    </tr>
+                    <tr>
+                        <td>15 (Nitrogen)</td>
+                        <td>ns² np³</td>
+                        <td>-3, +3, +5</td>
+                        <td>Increases down group</td>
+                        <td>Decreases down group</td>
+                    </tr>
+                    <tr>
+                        <td>16 (Oxygen)</td>
+                        <td>ns² np⁴</td>
+                        <td>-2, +4, +6</td>
+                        <td>Increases down group</td>
+                        <td>Decreases down group</td>
+                    </tr>
+                    <tr>
+                        <td>17 (Halogens)</td>
+                        <td>ns² np⁵</td>
+                        <td>-1, +1, +3, +5, +7</td>
+                        <td>Increases down group</td>
+                        <td>Decreases down group</td>
+                    </tr>
+                    <tr>
+                        <td>18 (Noble Gases)</td>
+                        <td>ns² np⁶</td>
+                        <td>0 (mostly)</td>
+                        <td>Increases down group</td>
+                        <td>Decreases down group</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>Special Group Characteristics</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Diagonal Relationship</div>
+                    <p><strong>Li-Mg:</strong> Both form normal oxides, nitrides</p>
+                    <p><strong>Be-Al:</strong> Both amphoteric, form polymeric hydrides</p>
+                    <p><strong>B-Si:</strong> Both form acidic oxides, covalent compounds</p>
+                    <p><strong>Cause:</strong> Similar charge/size ratio</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Inert Pair Effect</div>
+                    <p><strong>Definition:</strong> Reluctance of s-electrons to participate in bonding</p>
+                    <p><strong>Increases down group:</strong> Tl(+1) more stable than Tl(+3)</p>
+                    <p><strong>Examples:</strong> Pb(+2), Bi(+3) more stable than higher states</p>
+                    <p><strong>Cause:</strong> Poor shielding by d/f electrons</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Anomalous Behavior</div>
+                    <p><strong>First member anomaly:</strong> Small size, high electronegativity</p>
+                    <p><strong>Examples:</strong> Li (covalent character), Be (amphoteric)</p>
+                    <p><strong>Period 2 anomalies:</strong> N, O, F show hydrogen bonding</p>
+                    <p><strong>Cause:</strong> Absence of d-orbitals</p>
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Group Properties Comparison</div>
+                <p>Compare properties of alkali metals (Group 1) and halogens (Group 17).</p>
+                <p><strong>Solution:</strong></p>
+                <table>
+                    <tr>
+                        <th>Property</th>
+                        <th>Alkali Metals</th>
+                        <th>Halogens</th>
+                    </tr>
+                    <tr>
+                        <td>Valence electrons</td>
+                        <td>1</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>Atomic size trend</td>
+                        <td>Increases down group</td>
+                        <td>Increases down group</td>
+                    </tr>
+                    <tr>
+                        <td>Ionization energy</td>
+                        <td>Low, decreases down</td>
+                        <td>High, decreases down</td>
+                    </tr>
+                    <tr>
+                        <td>Electron affinity</td>
+                        <td>Low, negative</td>
+                        <td>High, negative</td>
+                    </tr>
+                    <tr>
+                        <td>Electronegativity</td>
+                        <td>Low (0.7-1.0)</td>
+                        <td>High (2.5-4.0)</td>
+                    </tr>
+                    <tr>
+                        <td>Common oxidation state</td>
+                        <td>+1</td>
+                        <td>-1, +1, +3, +5, +7</td>
+                    </tr>
+                    <tr>
+                        <td>Physical state at RT</td>
+                        <td>Solid (except Cs)</td>
+                        <td>Gas (F,Cl), Liquid (Br), Solid (I)</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Electronic Configuration Section -->
+        <section class="info-panel" id="electronic-config" data-aos="fade-up">
+            <h2>Electronic Configuration and Periodicity</h2>
+            <p>Electronic configuration determines an element's position in the periodic table and explains periodic trends in properties.</p>
+
+            <div class="definition">
+                <p><strong>Periodicity in Electronic Configuration:</strong> Elements in same group have same valence shell configuration. Period number = principal quantum number of valence shell.</p>
+            </div>
+
+            <h3>Electronic Configuration Rules</h3>
+            <table>
+                <tr>
+                    <th>Rule</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                    <th>Consequence</th>
+                </tr>
+                <tr>
+                    <td>Aufbau Principle</td>
+                    <td>Electrons fill lowest energy orbitals first</td>
+                    <td>4s before 3d</td>
+                    <td>Determines configuration</td>
+                </tr>
+                <tr>
+                    <td>Hund's Rule</td>
+                    <td>Maximize parallel spins in degenerate orbitals</td>
+                    <td>p³: ↑ ↑ ↑</td>
+                    <td>Affects magnetic properties</td>
+                </tr>
+                <tr>
+                    <td>Pauli Exclusion</td>
+                    <td>No two electrons can have same four quantum numbers</td>
+                    <td>Maximum 2 electrons/orbital</td>
+                    <td>Determines capacity</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Exceptional Configurations:</strong></p>
+                <ul>
+                    <li><strong>Chromium (24):</strong> [Ar] 4s¹ 3d⁵ (not 4s² 3d⁴) - half-filled stability</li>
+                    <li><strong>Copper (29):</strong> [Ar] 4s¹ 3d¹⁰ (not 4s² 3d⁹) - fully filled stability</li>
+                    <li><strong>Silver (47):</strong> [Kr] 5s¹ 4d¹⁰ - similar to copper</li>
+                    <li><strong>Gold (79):</strong> [Xe] 6s¹ 4f¹⁴ 5d¹⁰ - fully filled stability</li>
+                    <li><strong>Molybdenum (42):</strong> [Kr] 5s¹ 4d⁵ - half-filled stability</li>
+                    <li><strong>Palladium (46):</strong> [Kr] 4d¹⁰ - 5s empty, fully filled d</li>
+                </ul>
+                <p><strong>Reason:</strong> Extra stability of half-filled (d⁵, f⁷) and fully filled (d¹⁰, f¹⁴) subshells.</p>
+            </div>
+
+            <h3>Periodic Table and Electronic Configuration</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">s-block Elements</div>
+                    <div class="formula">Group 1: ns¹</div>
+                    <div class="formula">Group 2: ns²</div>
+                    <p>Helium: 1s² (but placed in p-block)</p>
+                    <p>Metals, electropositive</p>
+                    <p>Form ionic compounds</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">p-block Elements</div>
+                    <div class="formula">ns² np¹⁻⁶</div>
+                    <p>Groups 13-18 (except He)</p>
+                    <p>Metals to nonmetals</p>
+                    <p>Show variable oxidation states</p>
+                    <p>Form covalent compounds</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">d-block Elements</div>
+                    <div class="formula">(n-1)d¹⁻¹⁰ ns¹⁻²</div>
+                    <p>Groups 3-12</p>
+                    <p>Transition metals</p>
+                    <p>Form colored compounds</p>
+                    <p>Show variable oxidation states</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Magnetic Properties from Configuration</h4>
+                <p><strong>Paramagnetic:</strong> Unpaired electrons, attracted to magnetic field</p>
+                <p><strong>Diamagnetic:</strong> All electrons paired, repelled by magnetic field</p>
+                <p><strong>Ferromagnetic:</strong> Strong attraction (Fe, Co, Ni)</p>
+                <p><strong>Examples:</strong></p>
+                <ul>
+                    <li>O₂: Paramagnetic (2 unpaired electrons)</li>
+                    <li>N₂: Diamagnetic (all electrons paired)</li>
+                    <li>Cr³⁺: Paramagnetic (3 unpaired d electrons)</li>
+                    <li>Zn²⁺: Diamagnetic (d¹⁰ configuration)</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Predicting Properties from Configuration</div>
+                <p>An element has electronic configuration [Ar] 4s² 3d¹⁰ 4p³. Predict its:</p>
+                <p>1. Group and period 2. Metallic character 3. Common oxidation states</p>
+                <p><strong>Solution:</strong></p>
+                <p>1. Valence configuration: 4s² 4p³ ⇒ Group 15, Period 4</p>
+                <p>2. Located in p-block, right side ⇒ Non-metal (Arsenic - metalloid)</p>
+                <p>3. Group 15 elements show -3, +3, +5 oxidation states</p>
+                <p><em>Thus: Group 15, Period 4, Metalloid, Oxidation states: -3, +3, +5</em></p>
+            </div>
+        </section>
+
+        <!-- Problem Solving Section -->
+        <section class="info-panel" id="problems" data-aos="fade-up">
+            <h2>Problem Solving Strategies</h2>
+            <p>Effective techniques for solving periodic table problems in JEE and NEET.</p>
+
+            <div class="problem-solving">
+                <div class="problem-box">
+                    <div class="problem-title">Type 1: Position Prediction</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Write electronic configuration</li>
+                        <li>Identify valence shell (n = period)</li>
+                        <li>Count valence electrons (determines group)</li>
+                        <li>For d-block: Group = valence electrons + (n-1)d electrons</li>
+                        <li>For f-block: Separate lanthanides/actinides</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Remember exceptional configurations (Cr, Cu, etc.)</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 2: Trend Comparison</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify period and group positions</li>
+                        <li>Remember general trends across and down</li>
+                        <li>Consider exceptions (half-filled stability)</li>
+                        <li>For ions: Consider size change on ion formation</li>
+                        <li>Use data if provided</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> For isoelectronic species: size ∝ 1/nuclear charge</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 3: Property Prediction</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify position in periodic table</li>
+                        <li>Compare with neighboring elements</li>
+                        <li>Consider group characteristics</li>
+                        <li>Remember anomalies (diagonal relationship)</li>
+                        <li>Use periodic law logic</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> For unknown properties, interpolate between known elements</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED TIP</div>
+                <h4>Isoelectronic Species and Size</h4>
+                <p><strong>Definition:</strong> Species with same number of electrons</p>
+                <p><strong>Examples:</strong> O²⁻, F⁻, Ne, Na⁺, Mg²⁺, Al³⁺ (all have 10 electrons)</p>
+                <p><strong>Size order:</strong> O²⁻ > F⁻ > Ne > Na⁺ > Mg²⁺ > Al³⁺</p>
+                <div class="formula">Size ∝ 1/Z_eff (for isoelectronic series)</div>
+                <p><strong>Reason:</strong> Increasing nuclear charge pulls electrons closer</p>
+            </div>
+        </section>
+
+        <!-- Key Facts Carousel -->
+        <div class="swiper-container" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">MODERN PERIODIC LAW</div>
+                        <div class="swiper-text">Properties are periodic functions of atomic numbers (Moseley, 1913). Basis: X-ray spectra.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">ATOMIC RADIUS TRENDS</div>
+                        <div class="swiper-text">Decreases across period (Z_eff increases), increases down group (shells added). Noble gases larger.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">IONIZATION ENERGY</div>
+                        <div class="swiper-text">Increases across period, decreases down group. Exceptions: Be>B, N>O, Mg>Al due to stability.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">ELECTRON AFFINITY</div>
+                        <div class="swiper-text">Increases across period, decreases down group. Exceptions: N<C, O<F due to stability/repulsion.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">ELECTRONEGATIVITY</div>
+                        <div class="swiper-text">Increases across period (F highest: 4.0), decreases down group. Pauling scale most common.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">METALLIC CHARACTER</div>
+                        <div class="swiper-text">Decreases across period (Cs most metallic), increases down group. Related to ionization energy.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">LANTHANIDE CONTRACTION</div>
+                        <div class="swiper-text">Poor shielding by 4f causes gradual size decrease. Results: Similar sizes of 4d & 5d elements.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">DIAGONAL RELATIONSHIP</div>
+                        <div class="swiper-text">Li-Mg, Be-Al, B-Si due to similar charge/size ratio. Explains anomalous properties.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- Summary Section -->
+        <section class="info-panel" data-aos="fade-up">
+            <h2>Chapter Summary & Important Points</h2>
+            
+            <h3>Key Formulas and Values</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Atomic Properties</div>
+                    <p><strong>Atomic radius trends:</strong> ↓ across period, ↑ down group</p>
+                    <p><strong>Ionization energy:</strong> ↑ across period, ↓ down group</p>
+                    <p><strong>Electronegativity:</strong> F = 4.0 (highest), Fr = 0.7 (lowest)</p>
+                    <p><strong>Metallic character:</strong> Cs (highest), F (lowest)</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Electronic Configuration</div>
+                    <p><strong>s-block:</strong> ns¹⁻²</p>
+                    <p><strong>p-block:</strong> ns² np¹⁻⁶</p>
+                    <p><strong>d-block:</strong> (n-1)d¹⁻¹⁰ ns¹⁻²</p>
+                    <p><strong>f-block:</strong> (n-2)f¹⁻¹⁴ (n-1)d⁰⁻¹ ns²</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Important Values</div>
+                    <p><strong>Periods:</strong> 7 (1-7)</p>
+                    <p><strong>Groups:</strong> 18 (1-18)</p>
+                    <p><strong>Elements:</strong> 118 known</p>
+                    <p><strong>Blocks:</strong> s, p, d, f</p>
+                </div>
+            </div>
+
+            <h3>Important Points for JEE/NEET</h3>
+            <ul>
+                <li>Modern periodic law is based on atomic number (Moseley)</li>
+                <li>Period number = principal quantum number of valence shell</li>
+                <li>Group number for s and p blocks = number of valence electrons</li>
+                <li>d-block group = (n-1)d + ns electrons (except few)</li>
+                <li>Atomic radius decreases across period due to increasing Z_eff</li>
+                <li>Ionization energy increases across period with exceptions</li>
+                <li>Electron affinity generally increases across period</li>
+                <li>Metallic character decreases across period, increases down group</li>
+                <li>Diagonal relationship: Li-Mg, Be-Al, B-Si</li>
+                <li>Inert pair effect increases down groups 13-16</li>
+                <li>Lanthanide contraction explains similar sizes of 4d and 5d elements</li>
+                <li>Exceptional configurations: Cr, Cu, Ag, Au, Mo, Pd</li>
+            </ul>
+
+            <div class="important">
+                <p><strong>Common Mistakes to Avoid:</strong></p>
+                <ul>
+                    <li>Confusing atomic number with atomic weight basis</li>
+                    <li>Forgetting ionization energy exceptions (Be>B, N>O, Mg>Al)</li>
+                    <li>Mixing up trends across period vs down group</li>
+                    <li>Forgetting that noble gases have larger atomic radius</li>
+                    <li>Not considering exceptional electronic configurations</li>
+                    <li>Confusing group numbers in old and new notations</li>
+                    <li>Forgetting diagonal relationships</li>
+                    <li>Not considering inert pair effect for heavier elements</li>
+                </ul>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">SUPER TIP</div>
+                <h4>Quick Revision Points</h4>
+                <p><strong>Most electronegative:</strong> Fluorine (4.0 Pauling scale)</p>
+                <p><strong>Most electropositive:</strong> Francium (but Cs studied as most reactive)</p>
+                <p><strong>Smallest atom:</strong> Helium (31 pm)</p>
+                <p><strong>Largest atom:</strong> Francium (est. 270 pm)</p>
+                <p><strong>Highest ionization energy:</strong> Helium (2372 kJ/mol)</p>
+                <p><strong>Lowest ionization energy:</strong> Francium (est. 380 kJ/mol)</p>
+                <p><strong>Highest electron affinity:</strong> Chlorine (349 kJ/mol, F less due to repulsion)</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Element Detail Panel -->
+    <div class="element-detail" id="elementDetail">
+        <button class="close-detail" id="closeDetail">×</button>
+        <h3 id="detailName">Element Details</h3>
+        <p><strong>Symbol:</strong> <span id="detailSymbol"></span></p>
+        <p><strong>Atomic Number:</strong> <span id="detailNumber"></span></p>
+        <p><strong>Atomic Weight:</strong> <span id="detailWeight"></span></p>
+        <p><strong>Group:</strong> <span id="detailGroup"></span></p>
+        <p><strong>Period:</strong> <span id="detailPeriod"></span></p>
+        <p><strong>Block:</strong> <span id="detailBlock"></span></p>
+        <p><strong>Category:</strong> <span id="detailCategory"></span></p>
+        <p><strong>Electronic Configuration:</strong> <span id="detailConfig"></span></p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Nerds Assemble</h3>
+                <p>Master Periodic Table for JEE & NEET. Comprehensive chemistry resource with detailed explanations of periodicity and element properties.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#history">History</a></li>
+                    <li><a href="#modern-table">Modern Table</a></li>
+                    <li><a href="#periodic-trends">Periodic Trends</a></li>
+                    <li><a href="#element-groups">Element Groups</a></li>
+                    <li><a href="#electronic-config">Electronic Config</a></li>
+                    <li><a href="#problems">Problem Solving</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> 44mr.invisible@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Nerds Assemble. All rights reserved. | Designed for JEE & NEET Aspirants | Periodic Table & Periodicity</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Periodic Table - JavaScript
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ?
+                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+            }
+
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+
+            function handleScroll() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('active');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                }
+            }
+
+            // Debounced scroll event
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(handleScroll, 50);
+            }, { passive: true });
+
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: window.innerWidth < 768 ? 100 : 120,
+                    easing: 'ease-out-quad'
+                });
+            }
+
+            // Initialize Swiper
+            if (typeof Swiper !== 'undefined') {
+                const swiper = new Swiper('.swiper-container', {
+                    loop: true,
+                    autoplay: {
+                        delay: 3500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 25
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        }
+                    }
+                });
+            }
+
+            // Smooth Scroll for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        if (mainNav && mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                });
+            });
+
+            // Back to Top Button Click
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Create Particles
+            createParticles();
+            
+            // Create Periodic Table
+            createPeriodicTable();
+            
+            // Setup Element Detail Panel
+            setupElementDetail();
+        });
+
+        // Create Particles Function
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
+
+            const particleCount = window.innerWidth < 768 ? 20 : 30;
+            particlesContainer.innerHTML = '';
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                const size = Math.random() * 3 + 1;
+                const posX = Math.random() * window.innerWidth;
+                const posY = Math.random() * window.innerHeight;
+                const duration = Math.random() * 15 + 10;
+                const delay = Math.random() * 5;
+
+                particle.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}px;
+                    top: ${posY}px;
+                    opacity: ${Math.random() * 0.3 + 0.1};
+                    animation: float ${duration}s ease-in-out ${delay}s infinite;
+                    background: rgba(255,255,255,0.3);
+                `;
+
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Periodic Table Data
+        const elements = [
+            // Period 1
+            { number: 1, symbol: "H", name: "Hydrogen", group: 1, period: 1, category: "non-metal", block: "s", weight: 1.008 },
+            { number: 2, symbol: "He", name: "Helium", group: 18, period: 1, category: "noble-gas", block: "s", weight: 4.0026 },
+            
+            // Period 2
+            { number: 3, symbol: "Li", name: "Lithium", group: 1, period: 2, category: "alkali-metal", block: "s", weight: 6.94 },
+            { number: 4, symbol: "Be", name: "Beryllium", group: 2, period: 2, category: "alkaline-earth", block: "s", weight: 9.0122 },
+            { number: 5, symbol: "B", name: "Boron", group: 13, period: 2, category: "metalloid", block: "p", weight: 10.81 },
+            { number: 6, symbol: "C", name: "Carbon", group: 14, period: 2, category: "non-metal", block: "p", weight: 12.011 },
+            { number: 7, symbol: "N", name: "Nitrogen", group: 15, period: 2, category: "non-metal", block: "p", weight: 14.007 },
+            { number: 8, symbol: "O", name: "Oxygen", group: 16, period: 2, category: "non-metal", block: "p", weight: 15.999 },
+            { number: 9, symbol: "F", name: "Fluorine", group: 17, period: 2, category: "halogen", block: "p", weight: 18.998 },
+            { number: 10, symbol: "Ne", name: "Neon", group: 18, period: 2, category: "noble-gas", block: "p", weight: 20.180 },
+            
+            // Period 3
+            { number: 11, symbol: "Na", name: "Sodium", group: 1, period: 3, category: "alkali-metal", block: "s", weight: 22.990 },
+            { number: 12, symbol: "Mg", name: "Magnesium", group: 2, period: 3, category: "alkaline-earth", block: "s", weight: 24.305 },
+            { number: 13, symbol: "Al", name: "Aluminium", group: 13, period: 3, category: "basic-metal", block: "p", weight: 26.982 },
+            { number: 14, symbol: "Si", name: "Silicon", group: 14, period: 3, category: "metalloid", block: "p", weight: 28.085 },
+            { number: 15, symbol: "P", name: "Phosphorus", group: 15, period: 3, category: "non-metal", block: "p", weight: 30.974 },
+            { number: 16, symbol: "S", name: "Sulfur", group: 16, period: 3, category: "non-metal", block: "p", weight: 32.06 },
+            { number: 17, symbol: "Cl", name: "Chlorine", group: 17, period: 3, category: "halogen", block: "p", weight: 35.45 },
+            { number: 18, symbol: "Ar", name: "Argon", group: 18, period: 3, category: "noble-gas", block: "p", weight: 39.95 },
+            
+            // Period 4
+            { number: 19, symbol: "K", name: "Potassium", group: 1, period: 4, category: "alkali-metal", block: "s", weight: 39.098 },
+            { number: 20, symbol: "Ca", name: "Calcium", group: 2, period: 4, category: "alkaline-earth", block: "s", weight: 40.078 },
+            { number: 21, symbol: "Sc", name: "Scandium", group: 3, period: 4, category: "transition-metal", block: "d", weight: 44.956 },
+            { number: 22, symbol: "Ti", name: "Titanium", group: 4, period: 4, category: "transition-metal", block: "d", weight: 47.867 },
+            { number: 23, symbol: "V", name: "Vanadium", group: 5, period: 4, category: "transition-metal", block: "d", weight: 50.942 },
+            { number: 24, symbol: "Cr", name: "Chromium", group: 6, period: 4, category: "transition-metal", block: "d", weight: 51.996 },
+            { number: 25, symbol: "Mn", name: "Manganese", group: 7, period: 4, category: "transition-metal", block: "d", weight: 54.938 },
+            { number: 26, symbol: "Fe", name: "Iron", group: 8, period: 4, category: "transition-metal", block: "d", weight: 55.845 },
+            { number: 27, symbol: "Co", name: "Cobalt", group: 9, period: 4, category: "transition-metal", block: "d", weight: 58.933 },
+            { number: 28, symbol: "Ni", name: "Nickel", group: 10, period: 4, category: "transition-metal", block: "d", weight: 58.693 },
+            { number: 29, symbol: "Cu", name: "Copper", group: 11, period: 4, category: "transition-metal", block: "d", weight: 63.546 },
+            { number: 30, symbol: "Zn", name: "Zinc", group: 12, period: 4, category: "transition-metal", block: "d", weight: 65.38 },
+            { number: 31, symbol: "Ga", name: "Gallium", group: 13, period: 4, category: "basic-metal", block: "p", weight: 69.723 },
+            { number: 32, symbol: "Ge", name: "Germanium", group: 14, period: 4, category: "metalloid", block: "p", weight: 72.63 },
+            { number: 33, symbol: "As", name: "Arsenic", group: 15, period: 4, category: "metalloid", block: "p", weight: 74.922 },
+            { number: 34, symbol: "Se", name: "Selenium", group: 16, period: 4, category: "non-metal", block: "p", weight: 78.971 },
+            { number: 35, symbol: "Br", name: "Bromine", group: 17, period: 4, category: "halogen", block: "p", weight: 79.904 },
+            { number: 36, symbol: "Kr", name: "Krypton", group: 18, period: 4, category: "noble-gas", block: "p", weight: 83.798 },
+        ];
+
+        // Create Periodic Table
+        function createPeriodicTable() {
+            const tableContainer = document.getElementById('periodicTable');
+            if (!tableContainer) return;
+
+            tableContainer.innerHTML = '';
+
+            // Create empty grid positions first
+            const gridPositions = new Array(18 * 10).fill(null);
+
+            // Place elements in their positions
+            elements.forEach(element => {
+                let position = getGridPosition(element);
+                if (position >= 0 && position < gridPositions.length) {
+                    gridPositions[position] = element;
+                }
+            });
+
+            // Create element boxes
+            gridPositions.forEach((element, index) => {
+                const box = document.createElement('div');
+                box.classList.add('element-box');
+                
+                if (element) {
+                    // Add category class
+                    box.classList.add(getCategoryClass(element.category));
+                    
+                    // Add content
+                    box.innerHTML = `
+                        <div class="element-number">${element.number}</div>
+                        <div class="element-symbol">${element.symbol}</div>
+                        <div class="element-name">${element.name}</div>
+                    `;
+                    
+                    // Add click event
+                    box.addEventListener('click', () => showElementDetail(element));
+                    
+                    // Tooltip
+                    box.title = `${element.name} (${element.symbol})\nAtomic Number: ${element.number}\nGroup: ${element.group}, Period: ${element.period}`;
+                } else {
+                    box.style.visibility = 'hidden';
+                }
+                
+                tableContainer.appendChild(box);
+            });
+        }
+
+        // Get grid position for element
+        function getGridPosition(element) {
+            let row = element.period;
+            let col = element.group;
+            
+            // Adjust for d-block elements
+            if (element.block === 'd' && element.period >= 4) {
+                row = element.period;
+                col = element.group + 1; // d-block starts from group 3
+            }
+            
+            // Adjust for f-block (simplified placement)
+            if (element.block === 'f') {
+                row = element.period + 2;
+                col = 3; // Place in column 3 for simplicity
+            }
+            
+            return (row - 1) * 18 + (col - 1);
+        }
+
+        // Get CSS class for element category
+        function getCategoryClass(category) {
+            const categoryMap = {
+                'alkali-metal': 'alkali-metal',
+                'alkaline-earth': 'alkaline-earth',
+                'transition-metal': 'transition-metal',
+                'basic-metal': 'basic-metal',
+                'metalloid': 'metalloid',
+                'non-metal': 'non-metal',
+                'halogen': 'halogen',
+                'noble-gas': 'noble-gas',
+                'lanthanide': 'lanthanide',
+                'actinide': 'actinide'
+            };
+            return categoryMap[category] || 'basic-metal';
+        }
+
+        // Setup Element Detail Panel
+        function setupElementDetail() {
+            const overlay = document.getElementById('overlay');
+            const detailPanel = document.getElementById('elementDetail');
+            const closeBtn = document.getElementById('closeDetail');
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => {
+                    detailPanel.classList.remove('active');
+                    overlay.classList.remove('active');
+                });
+            }
+
+            if (overlay) {
+                overlay.addEventListener('click', () => {
+                    detailPanel.classList.remove('active');
+                    overlay.classList.remove('active');
+                });
+            }
+        }
+
+        // Show Element Detail
+        function showElementDetail(element) {
+            const detailPanel = document.getElementById('elementDetail');
+            const overlay = document.getElementById('overlay');
+            
+            if (!detailPanel || !overlay) return;
+
+            // Update details
+            document.getElementById('detailName').textContent = element.name;
+            document.getElementById('detailSymbol').textContent = element.symbol;
+            document.getElementById('detailNumber').textContent = element.number;
+            document.getElementById('detailWeight').textContent = element.weight;
+            document.getElementById('detailGroup').textContent = element.group;
+            document.getElementById('detailPeriod').textContent = element.period;
+            document.getElementById('detailBlock').textContent = element.block.toUpperCase();
+            document.getElementById('detailCategory').textContent = formatCategory(element.category);
+            document.getElementById('detailConfig').textContent = getElectronicConfig(element.number);
+
+            // Show panel
+            detailPanel.classList.add('active');
+            overlay.classList.add('active');
+        }
+
+        // Format category name
+        function formatCategory(category) {
+            const categoryNames = {
+                'alkali-metal': 'Alkali Metal',
+                'alkaline-earth': 'Alkaline Earth Metal',
+                'transition-metal': 'Transition Metal',
+                'basic-metal': 'Basic Metal',
+                'metalloid': 'Metalloid',
+                'non-metal': 'Non-metal',
+                'halogen': 'Halogen',
+                'noble-gas': 'Noble Gas',
+                'lanthanide': 'Lanthanide',
+                'actinide': 'Actinide'
+            };
+            return categoryNames[category] || category;
+        }
+
+        // Get electronic configuration (simplified)
+        function getElectronicConfig(atomicNumber) {
+            const configs = {
+                1: "1s¹",
+                2: "1s²",
+                3: "1s² 2s¹",
+                4: "1s² 2s²",
+                5: "1s² 2s² 2p¹",
+                6: "1s² 2s² 2p²",
+                7: "1s² 2s² 2p³",
+                8: "1s² 2s² 2p⁴",
+                9: "1s² 2s² 2p⁵",
+                10: "1s² 2s² 2p⁶",
+                11: "1s² 2s² 2p⁶ 3s¹",
+                12: "1s² 2s² 2p⁶ 3s²",
+                13: "1s² 2s² 2p⁶ 3s² 3p¹",
+                14: "1s² 2s² 2p⁶ 3s² 3p²",
+                15: "1s² 2s² 2p⁶ 3s² 3p³",
+                16: "1s² 2s² 2p⁶ 3s² 3p⁴",
+                17: "1s² 2s² 2p⁶ 3s² 3p⁵",
+                18: "1s² 2s² 2p⁶ 3s² 3p⁶",
+                19: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹",
+                20: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s²",
+                21: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹",
+                22: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d²",
+                23: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d³",
+                24: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹ 3d⁵", // Exception
+                25: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁵",
+                26: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶",
+                27: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁷",
+                28: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁸",
+                29: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹ 3d¹⁰", // Exception
+                30: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰",
+                31: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p¹",
+                32: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p²",
+                33: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p³",
+                34: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁴",
+                35: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁵",
+                36: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶"
+            };
+            return configs[atomicNumber] || "Not available";
+        }
+
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                createParticles();
+            }, 250);
+        });
+    </script>
+</body>
+</html>
