@@ -1,0 +1,2060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKVRN3GREN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKVRN3GREN');
+</script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some Basic Concepts of Chemistry | Class 11 Chemistry | JEE & NEET Preparation</title>
+    <meta name="description" content="Master 'Some Basic Concepts of Chemistry' for Class 11. Complete guide for JEE & NEET aspirants covering laws, atomic theory, mole concept, stoichiometry and calculations.">
+    <meta name="keywords" content="Some Basic Concepts of Chemistry, Class 11 Chemistry, JEE preparation, NEET chemistry, Laws of Chemical Combination, Mole Concept, Stoichiometry, Atomic Theory">
+    <meta name="author" content="Nerds Assemble">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Some Basic Concepts of Chemistry | Class 11 Chemistry">
+    <meta property="og:description" content="Complete guide to Some Basic Concepts of Chemistry for JEE & NEET aspirants">
+    <meta property="og:type" content="website">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Pacifico&family=Dancing+Script:wght@700&family=Abril+Fatface&family=Playfair+Display:wght@700&family=Raleway:wght@300;800&family=Quicksand:wght@500&family=Poiret+One&family=Amatic+SC:wght@700&family=Caveat:wght@700&family=Kaushan+Script&family=Libre+Baskerville&family=Merriweather&family=Nunito:wght@800&family=Oswald:wght@500&family=Roboto+Slab:wght@700&family=Sacramento&family=Tangerine:wght@700&family=Yeseva+One&family=Electrolize&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+     <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/planet-universe-svgrepo-com.svg">
+    
+    <style>
+        /* Some Basic Concepts of Chemistry - Nerds Assemble CSS */
+        :root {
+            --primary: #3a86ff;
+            --secondary: #ff006e;
+            --tertiary: #8338ec;
+            --bg: #0a0a20;
+            --text: #ffffff;
+            --highlight: #fb5607;
+            --nav-bg: rgba(10, 5, 30, 0.95);
+            --laws-gradient: linear-gradient(45deg, #3a86ff, #2667cc);
+            --mole-gradient: linear-gradient(45deg, #ff006e, #cc0058);
+            --stoich-gradient: linear-gradient(45deg, #8338ec, #6a2dc4);
+        }
+
+        /* Base Styles & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overscroll-behavior-y: contain;
+            -webkit-overflow-scrolling: touch;
+            background-image:
+                radial-gradient(circle at 15% 20%, rgba(58, 134, 255, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 85% 80%, rgba(255, 0, 110, 0.1) 0%, transparent 20%),
+                linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.8rem, 4.5vw, 3rem);
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--tertiary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            letter-spacing: 1.5px;
+            text-shadow: 0 0 20px rgba(58, 134, 255, 0.5);
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--highlight);
+            margin: 2rem 0 1.5rem;
+            font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-family: 'Roboto Slab', serif;
+            color: var(--secondary);
+            margin: 1.5rem 0 1rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+        }
+
+        p {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+        }
+
+        /* Layout Components */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            flex: 1;
+            padding: 0 1rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Raleway', sans-serif;
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            transform: translateZ(0);
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            color: var(--highlight);
+            font-size: 1.6rem;
+        }
+
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.4rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Electrolize', sans-serif;
+            font-size: 0.95rem;
+            transition: color 0.2s ease-out;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--highlight);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--highlight);
+            transition: width 0.2s ease-out;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* Content Panels */
+        .info-panel {
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
+            padding: 1.8rem;
+            margin: 1.8rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: translateZ(0);
+            will-change: transform, opacity;
+        }
+
+        .info-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%),
+                linear-gradient(-45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%);
+            background-size: 20px 20px;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        /* Special Content Blocks */
+        .important {
+            background: rgba(58, 134, 255, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(58, 134, 255, 0.1);
+        }
+
+        .definition {
+            background: rgba(251, 86, 7, 0.1);
+            border-left: 4px solid var(--highlight);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(251, 86, 7, 0.1);
+        }
+
+        .formula {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin: 1.2rem 0;
+            padding: 1.2rem;
+            background: rgba(255, 0, 110, 0.1);
+            border-radius: 8px;
+            border: 1px dashed var(--highlight);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.1rem;
+        }
+
+        .formula::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, transparent 45%, rgba(255, 0, 110, 0.1) 50%, transparent 55%);
+            background-size: 10px 10px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .example {
+            background: rgba(131, 56, 236, 0.1);
+            border-left: 4px solid var(--tertiary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Lists & Tables */
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 1.8rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background-color: rgba(58, 134, 255, 0.2);
+            font-family: 'Electrolize', sans-serif;
+            color: var(--highlight);
+            font-size: 0.95rem;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+
+        tr:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* Concept Cards */
+        .concept-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .concept-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(58, 134, 255, 0.2);
+        }
+
+        .concept-card.laws {
+            border-top: 4px solid var(--primary);
+        }
+
+        .concept-card.mole {
+            border-top: 4px solid var(--secondary);
+        }
+
+        .concept-card.stoich {
+            border-top: 4px solid var(--tertiary);
+        }
+
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title.laws { color: var(--primary); }
+        .card-title.mole { color: var(--secondary); }
+        .card-title.stoich { color: var(--tertiary); }
+
+        /* Swiper Carousel */
+        .swiper-container {
+            width: 100%;
+            height: auto;
+            min-height: 180px;
+            margin: 2.5rem 0;
+            will-change: transform;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .swiper-slide {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+            font-family: 'Electrolize', sans-serif;
+            padding: 1.2rem;
+            box-sizing: border-box;
+            text-align: center;
+            min-height: 180px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-out;
+            transform: translateZ(0);
+            height: auto;
+        }
+
+        .swiper-slide:hover {
+            transform: translateY(-5px);
+        }
+
+        .swiper-slide div {
+            width: 100%;
+        }
+
+        .swiper-title {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin-bottom: 0.5rem;
+            font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+        }
+
+        .swiper-text {
+            font-family: 'Quicksand', sans-serif;
+            font-size: clamp(0.85rem, 1.1vw, 1rem);
+        }
+
+        /* Swiper Navigation */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: var(--highlight);
+            background: rgba(0, 0, 0, 0.5);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            backdrop-filter: blur(10px);
+            margin-top: -17.5px;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .swiper-pagination-bullet {
+            background: var(--text);
+            opacity: 0.5;
+            width: 8px;
+            height: 8px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: var(--highlight);
+            opacity: 1;
+        }
+
+        /* Problem Solving Section */
+        .problem-solving {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .problem-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary);
+        }
+
+        .problem-title {
+            color: var(--primary);
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Chemistry Visualization */
+        .chem-visualization {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .chem-visual {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .chem-visual-title {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--highlight);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .chem-icon {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin: 1rem 0;
+        }
+
+        .chem-desc {
+            font-size: 0.9rem;
+            color: var(--text);
+            opacity: 0.8;
+        }
+
+        /* Particles Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            will-change: transform;
+            opacity: 0.3;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .footer-column h3 {
+            color: var(--highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            transition: color 0.2s ease-out;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--highlight);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text);
+            font-size: 1.1rem;
+            transition: color 0.2s ease-out;
+        }
+
+        .social-links a:hover {
+            color: var(--highlight);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 1.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Quicksand', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease-out;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(58, 134, 255, 0.3);
+            transform: translateZ(0);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--highlight);
+            transform: translateY(-5px);
+        }
+
+        /* JEE/NEET Specific Styling */
+        .exam-highlight {
+            background: rgba(255, 235, 0, 0.1);
+            border: 2px solid var(--highlight);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .exam-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--highlight);
+            color: var(--bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(5px, 5px); }
+            50% { transform: translate(-3px, 8px); }
+            75% { transform: translate(3px, -3px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        @keyframes electron-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        .chemistry-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Atomic Visualization - Fixed */
+        .atomic-visualization {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .atom-container {
+            position: relative;
+            width: 180px;
+            height: 180px;
+        }
+
+        .nucleus {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            background: radial-gradient(circle at 30% 30%, #ff006e, #cc0058);
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255, 0, 110, 0.5);
+            z-index: 3;
+        }
+
+        .electron-shell {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px dashed rgba(58, 134, 255, 0.3);
+            border-radius: 50%;
+        }
+
+        .electron {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: radial-gradient(circle at 30% 30%, #3a86ff, #2667cc);
+            border-radius: 50%;
+            box-shadow: 0 0 10px #3a86ff;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .shell-1 {
+            width: 80px;
+            height: 80px;
+            animation: electron-spin 8s linear infinite;
+        }
+
+        .shell-2 {
+            width: 120px;
+            height: 120px;
+            animation: electron-spin 12s linear infinite reverse;
+        }
+
+        .shell-3 {
+            width: 160px;
+            height: 160px;
+            animation: electron-spin 16s linear infinite;
+        }
+
+        .shell-1 .electron {
+            animation: electron-spin 4s linear infinite reverse;
+        }
+
+        .shell-2 .electron {
+            animation: electron-spin 6s linear infinite;
+        }
+
+        .shell-3 .electron {
+            animation: electron-spin 8s linear infinite reverse;
+        }
+
+        /* Mole Concept Visualization */
+        .mole-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .mole-item {
+            text-align: center;
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            min-width: 120px;
+        }
+
+        .mole-number {
+            font-size: 1.5rem;
+            color: var(--highlight);
+            font-family: 'Audiowide', cursive;
+        }
+
+        .mole-label {
+            font-size: 0.9rem;
+            margin-top: 5px;
+            opacity: 0.8;
+        }
+
+        /* Chemical Combination Animation */
+        .combination-animation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .atom-rep {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .atom-h {
+            background: rgba(58, 134, 255, 0.3);
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .atom-o {
+            background: rgba(255, 0, 110, 0.3);
+            border: 2px solid var(--secondary);
+            color: var(--secondary);
+        }
+
+        .reaction-arrow {
+            color: var(--highlight);
+            font-size: 1.5rem;
+        }
+
+        .molecule {
+            display: flex;
+            gap: 5px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background-image:
+                    radial-gradient(circle at 10% 20%, rgba(58, 134, 255, 0.05) 0%, transparent 20%),
+                    linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+            }
+
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                margin-top: 1rem;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.75rem 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            header, .info-panel {
+                backdrop-filter: blur(5px);
+            }
+
+            .container {
+                width: 95%;
+                padding: 0;
+            }
+
+            .info-panel {
+                padding: 1.5rem;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            th, td {
+                padding: 0.5rem;
+                font-size: 0.85rem;
+            }
+
+            .concept-cards, .problem-solving {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none;
+            }
+
+            .chem-visualization {
+                grid-template-columns: 1fr;
+            }
+
+            .atomic-visualization {
+                height: 150px;
+            }
+
+            .atom-container {
+                width: 140px;
+                height: 140px;
+            }
+
+            .shell-1 { width: 60px; height: 60px; }
+            .shell-2 { width: 90px; height: 90px; }
+            .shell-3 { width: 120px; height: 120px; }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-panel {
+                padding: 1rem;
+            }
+
+            ul, ol {
+                padding-left: 1.5rem;
+            }
+
+            .formula {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+
+            .swiper-slide {
+                padding: 1rem;
+            }
+
+            .atomic-visualization {
+                height: 120px;
+            }
+
+            .atom-container {
+                width: 120px;
+                height: 120px;
+            }
+
+            .mole-visual {
+                gap: 10px;
+            }
+
+            .mole-item {
+                min-width: 90px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-flask"></i></span>
+                <span class="logo-text">Nerds Assemble</span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#laws">Laws of Chemical Combination</a></li>
+                    <li><a href="#dalton">Dalton's Atomic Theory</a></li>
+                    <li><a href="#atomic-mass">Atomic & Molecular Mass</a></li>
+                    <li><a href="#mole">Mole Concept</a></li>
+                    <li><a href="#stoich">Stoichiometry</a></li>
+                    <li><a href="#problems">Problems</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="page-header" data-aos="fade-down">
+            <h1>Some Basic Concepts of Chemistry</h1>
+            <p class="subtitle">Class 11 Chemistry | JEE & NEET Preparation Guide</p>
+            <p>Master the foundation of chemistry - from laws of chemical combination to mole concept and stoichiometric calculations</p>
+            
+            <!-- Atomic Visualization - Fixed -->
+            <div class="atomic-visualization">
+                <div class="atom-container">
+                    <div class="nucleus"></div>
+                    <div class="electron-shell shell-1">
+                        <div class="electron"></div>
+                    </div>
+                    <div class="electron-shell shell-2">
+                        <div class="electron"></div>
+                    </div>
+                    <div class="electron-shell shell-3">
+                        <div class="electron"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="info-panel" id="introduction" data-aos="fade-up">
+            <h2>Introduction to Chemistry</h2>
+            <p>Chemistry is the science of matter, its properties, composition, structure, and the changes it undergoes during chemical reactions. This chapter lays the foundation for understanding quantitative aspects of chemical reactions.</p>
+
+            <div class="definition">
+                <p><strong>Chemistry:</strong> The branch of science that deals with the study of the composition, structure, properties, and changes of matter.</p>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card laws" data-aos="flip-left">
+                    <div class="card-title laws"><i class="fas fa-balance-scale"></i> Laws of Chemical Combination</div>
+                    <p>Fundamental laws that govern how elements combine to form compounds.</p>
+                    <div class="formula">Law of Conservation of Mass</div>
+                    <div class="formula">Law of Definite Proportions</div>
+                </div>
+
+                <div class="concept-card mole" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-title mole"><i class="fas fa-calculator"></i> Mole Concept</div>
+                    <p>Bridge between microscopic particles and macroscopic measurements we can make in lab.</p>
+                    <div class="formula">1 mole = 6.022×10²³ particles</div>
+                </div>
+
+                <div class="concept-card stoich" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card-title stoich"><i class="fas fa-exchange-alt"></i> Stoichiometry</div>
+                    <p>Calculation of reactants and products in chemical reactions using balanced equations.</p>
+                    <div class="formula">Based on mole ratios</div>
+                </div>
+            </div>
+
+            <div class="chem-visualization">
+                <div class="chem-visual">
+                    <div class="chem-visual-title">Importance of Measurements</div>
+                    <div class="chem-icon chemistry-float"><i class="fas fa-ruler-combined"></i></div>
+                    <div class="chem-desc">
+                        <p>• SI Units: kg, m, s, mol, K</p>
+                        <p>• Significant Figures</p>
+                        <p>• Precision & Accuracy</p>
+                        <p>• Dimensional Analysis</p>
+                    </div>
+                </div>
+
+                <div class="chem-visual">
+                    <div class="chem-visual-title">Matter Classification</div>
+                    <div class="chem-icon chemistry-float"><i class="fas fa-sitemap"></i></div>
+                    <div class="chem-desc">
+                        <p>• Pure Substances: Elements & Compounds</p>
+                        <p>• Mixtures: Homogeneous & Heterogeneous</p>
+                        <p>• Separation Techniques</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Laws of Chemical Combination Section -->
+        <section class="info-panel" id="laws" data-aos="fade-up">
+            <h2>Laws of Chemical Combination</h2>
+            <p>These are the fundamental laws established through careful experimental observations that govern how elements combine to form compounds.</p>
+
+            <div class="definition">
+                <p><strong>Historical Context:</strong> These laws were established in the late 18th century by scientists like Lavoisier, Proust, and Dalton, leading to the development of atomic theory.</p>
+            </div>
+
+            <h3>The Five Fundamental Laws</h3>
+            <table>
+                <tr>
+                    <th>Law</th>
+                    <th>Statement</th>
+                    <th>Scientist</th>
+                    <th>Example</th>
+                    <th>Significance</th>
+                </tr>
+                <tr>
+                    <td>Law of Conservation of Mass</td>
+                    <td>Mass is neither created nor destroyed in a chemical reaction</td>
+                    <td>Antoine Lavoisier (1789)</td>
+                    <td>2g H₂ + 16g O₂ → 18g H₂O</td>
+                    <td>Total mass reactants = Total mass products</td>
+                </tr>
+                <tr>
+                    <td>Law of Definite Proportions</td>
+                    <td>A given compound always contains exactly the same proportion of elements by mass</td>
+                    <td>Joseph Proust (1799)</td>
+                    <td>Water always has H:O = 1:8 by mass</td>
+                    <td>Constant composition of compounds</td>
+                </tr>
+                <tr>
+                    <td>Law of Multiple Proportions</td>
+                    <td>When two elements form more than one compound, masses of one element combined with fixed mass of other are in simple whole number ratio</td>
+                    <td>John Dalton (1803)</td>
+                    <td>CO & CO₂: Oxygen ratio 1:2</td>
+                    <td>Supports atomic theory</td>
+                </tr>
+                <tr>
+                    <td>Law of Gaseous Volumes</td>
+                    <td>When gases react, they do so in volumes which bear simple ratio to one another and to volumes of products (if gaseous)</td>
+                    <td>Gay-Lussac (1808)</td>
+                    <td>2L H₂ + 1L O₂ → 2L H₂O vapor</td>
+                    <td>Led to Avogadro's hypothesis</td>
+                </tr>
+                <tr>
+                    <td>Avogadro's Law</td>
+                    <td>Equal volumes of all gases under same conditions of temperature and pressure contain equal number of molecules</td>
+                    <td>Amedeo Avogadro (1811)</td>
+                    <td>22.4L of any gas at STP = 1 mole</td>
+                    <td>Foundation for mole concept</td>
+                </tr>
+            </table>
+
+            <!-- Chemical Combination Animation -->
+            <div class="combination-animation" data-aos="zoom-in">
+                <div class="molecule">
+                    <div class="atom-rep atom-h">H</div>
+                    <div class="atom-rep atom-h">H</div>
+                </div>
+                <div style="color: var(--highlight);">+</div>
+                <div class="atom-rep atom-o">O</div>
+                <div class="reaction-arrow"><i class="fas fa-long-arrow-alt-right"></i></div>
+                <div class="molecule">
+                    <div class="atom-rep atom-h">H</div>
+                    <div class="atom-rep atom-o">O</div>
+                    <div class="atom-rep atom-h">H</div>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Key Points about Laws:</strong></p>
+                <ul>
+                    <li>Law of Conservation of Mass is the basis for balancing chemical equations</li>
+                    <li>Law of Definite Proportions explains why compounds have fixed composition</li>
+                    <li>Law of Multiple Proportions provided evidence for Dalton's atomic theory</li>
+                    <li>Gay-Lussac's Law applies only to gases measured at same T & P</li>
+                    <li>Avogadro's Law allows us to relate volumes of gases to number of molecules</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Law of Multiple Proportions</div>
+                <p>Carbon forms two oxides. In first, 12g C combines with 16g O. In second, 12g C combines with 32g O. Show this follows law of multiple proportions.</p>
+                <p><strong>Solution:</strong></p>
+                <p>First oxide: Mass of O combining with 12g C = 16g</p>
+                <p>Second oxide: Mass of O combining with 12g C = 32g</p>
+                <p>Ratio of oxygen masses = 16:32 = 1:2 (simple whole number ratio)</p>
+                <p>Thus follows Law of Multiple Proportions</p>
+            </div>
+        </section>
+
+        <!-- Dalton's Atomic Theory Section -->
+        <section class="info-panel" id="dalton" data-aos="fade-up">
+            <h2>Dalton's Atomic Theory (1808)</h2>
+            <p>John Dalton proposed his atomic theory to explain the laws of chemical combination. This theory marked the beginning of modern chemistry.</p>
+
+            <div class="definition">
+                <p><strong>Postulates of Dalton's Atomic Theory:</strong></p>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Postulate 1</div>
+                    <p>Matter consists of indivisible particles called atoms.</p>
+                    <p><em>Modern modification:</em> Atoms are divisible (contain subatomic particles)</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Postulate 2</div>
+                    <p>Atoms of a given element are identical in mass and chemical properties.</p>
+                    <p><em>Modern modification:</em> Isotopes exist (same element, different mass)</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Postulate 3</div>
+                    <p>Atoms of different elements have different masses and properties.</p>
+                    <p>This part remains valid in modern atomic theory</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Postulate 4</div>
+                    <p>Atoms combine in small whole number ratios to form compounds.</p>
+                    <p>Explains Law of Multiple Proportions</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Postulate 5</div>
+                    <p>Atoms can neither be created nor destroyed in chemical reactions.</p>
+                    <p>Explains Law of Conservation of Mass</p>
+                </div>
+            </div>
+
+            <h3>Drawbacks of Dalton's Atomic Theory</h3>
+            <div class="important">
+                <ol>
+                    <li><strong>Atoms are divisible:</strong> Discovery of subatomic particles (electrons, protons, neutrons)</li>
+                    <li><strong>Isotopes exist:</strong> Atoms of same element can have different masses</li>
+                    <li><strong>Isobars exist:</strong> Atoms of different elements can have same mass number</li>
+                    <li><strong>Allotropes:</strong> Same element can exist in different forms (e.g., diamond & graphite)</li>
+                    <li><strong>Failed to explain:</strong> Why atoms combine, nature of bonding</li>
+                </ol>
+            </div>
+
+            <div class="formula">
+                Atomic Mass Unit (amu) = 1/12th mass of one carbon-12 atom
+            </div>
+            <div class="formula">
+                1 amu = 1.66054 × 10⁻²⁷ kg
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Atomic Theory Application</div>
+                <p>How does Dalton's atomic theory explain:</p>
+                <p>a) Law of Conservation of Mass?</p>
+                <p>b) Law of Definite Proportions?</p>
+                <p><strong>Explanation:</strong></p>
+                <p>a) Since atoms are neither created nor destroyed (Postulate 5), total mass remains constant</p>
+                <p>b) Since atoms combine in fixed ratios (Postulate 4), compounds have definite composition</p>
+            </div>
+        </section>
+
+        <!-- Atomic & Molecular Mass Section -->
+        <section class="info-panel" id="atomic-mass" data-aos="fade-up">
+            <h2>Atomic & Molecular Mass</h2>
+            <p>Understanding mass at atomic and molecular levels is crucial for quantitative chemical calculations.</p>
+
+            <div class="definition">
+                <p><strong>Atomic Mass:</strong> Mass of an atom expressed in atomic mass units (amu). Relative atomic mass is the ratio of average mass of an atom to 1/12th mass of carbon-12 atom.</p>
+            </div>
+
+            <h3>Key Concepts</h3>
+            <table>
+                <tr>
+                    <th>Term</th>
+                    <th>Definition</th>
+                    <th>Formula/Example</th>
+                    <th>Unit</th>
+                </tr>
+                <tr>
+                    <td>Atomic Mass</td>
+                    <td>Mass of single atom</td>
+                    <td>H = 1.008 amu, O = 16.00 amu</td>
+                    <td>amu</td>
+                </tr>
+                <tr>
+                    <td>Gram Atomic Mass</td>
+                    <td>Atomic mass expressed in grams</td>
+                    <td>1 g-atom H = 1.008 g</td>
+                    <td>g</td>
+                </tr>
+                <tr>
+                    <td>Molecular Mass</td>
+                    <td>Sum of atomic masses in molecule</td>
+                    <td>H₂O = 2×1 + 16 = 18 amu</td>
+                    <td>amu</td>
+                </tr>
+                <tr>
+                    <td>Gram Molecular Mass</td>
+                    <td>Molecular mass in grams</td>
+                    <td>1 g-mole H₂O = 18 g</td>
+                    <td>g</td>
+                </tr>
+                <tr>
+                    <td>Formula Mass</td>
+                    <td>For ionic compounds</td>
+                    <td>NaCl = 23 + 35.5 = 58.5 amu</td>
+                    <td>amu</td>
+                </tr>
+            </table>
+
+            <h3>Average Atomic Mass Calculation</h3>
+            <div class="formula">
+                Average Atomic Mass = Σ (Isotopic mass × Fractional abundance)
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Average Atomic Mass</div>
+                <p>Chlorine has two isotopes: Cl-35 (75%) and Cl-37 (25%). Calculate average atomic mass.</p>
+                <p><strong>Solution:</strong></p>
+                <p>Average mass = (35 × 0.75) + (37 × 0.25)</p>
+                <p>= 26.25 + 9.25 = 35.5 amu</p>
+                <p>This explains why atomic mass of chlorine is 35.5 amu (not whole number)</p>
+            </div>
+
+            <div class="chem-visualization">
+                <div class="chem-visual">
+                    <div class="chem-visual-title">Molecular Mass Calculation</div>
+                    <div class="chem-icon"><i class="fas fa-calculator"></i></div>
+                    <div class="chem-desc">
+                        <p><strong>H₂SO₄:</strong></p>
+                        <p>2 × H = 2 × 1 = 2</p>
+                        <p>1 × S = 1 × 32 = 32</p>
+                        <p>4 × O = 4 × 16 = 64</p>
+                        <p>Total = 98 amu</p>
+                    </div>
+                </div>
+
+                <div class="chem-visual">
+                    <div class="chem-visual-title">Common Molar Masses</div>
+                    <div class="chem-icon"><i class="fas fa-weight-hanging"></i></div>
+                    <div class="chem-desc">
+                        <p>H₂O = 18 g/mol</p>
+                        <p>CO₂ = 44 g/mol</p>
+                        <p>NaCl = 58.5 g/mol</p>
+                        <p>H₂SO₄ = 98 g/mol</p>
+                        <p>NaOH = 40 g/mol</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Isotopes & Average Atomic Mass</h4>
+                <p>For element with isotopes A, B, C:</p>
+                <div class="formula">Avg. mass = (m_A × %_A + m_B × %_B + m_C × %_C) / 100</div>
+                <p>Where % = percentage abundance</p>
+                <p>Fractional abundance = %/100</p>
+            </div>
+        </section>
+
+        <!-- Mole Concept Section -->
+        <section class="info-panel" id="mole" data-aos="fade-up">
+            <h2>The Mole Concept</h2>
+            <p>The mole is the SI unit for amount of substance. It provides a bridge between the microscopic world of atoms/molecules and macroscopic measurements.</p>
+
+            <div class="definition">
+                <p><strong>Mole:</strong> Amount of substance containing as many elementary entities as there are atoms in exactly 12 g of carbon-12.</p>
+            </div>
+
+            <div class="formula">
+                Avogadro's Number (N_A) = 6.022 × 10²³ mol⁻¹
+            </div>
+
+            <!-- Mole Visualization -->
+            <div class="mole-visual">
+                <div class="mole-item">
+                    <div class="mole-number">6.022×10²³</div>
+                    <div class="mole-label">Particles</div>
+                </div>
+                <div class="mole-item">
+                    <div class="mole-number">=</div>
+                    <div class="mole-label">Equals</div>
+                </div>
+                <div class="mole-item">
+                    <div class="mole-number">1</div>
+                    <div class="mole-label">Mole</div>
+                </div>
+                <div class="mole-item">
+                    <div class="mole-number">=</div>
+                    <div class="mole-label">Equals</div>
+                </div>
+                <div class="mole-item">
+                    <div class="mole-number">Molar Mass</div>
+                    <div class="mole-label">in grams</div>
+                </div>
+            </div>
+
+            <h3>Key Relationships</h3>
+            <table>
+                <tr>
+                    <th>Relationship</th>
+                    <th>Formula</th>
+                    <th>When to Use</th>
+                </tr>
+                <tr>
+                    <td>Mass ↔ Moles</td>
+                    <td>n = m / M</td>
+                    <td>Given mass, find moles or vice versa</td>
+                </tr>
+                <tr>
+                    <td>Moles ↔ Particles</td>
+                    <td>N = n × N_A</td>
+                    <td>Given moles, find number of particles</td>
+                </tr>
+                <tr>
+                    <td>Volume ↔ Moles (Gas at STP)</td>
+                    <td>n = V / 22.4</td>
+                    <td>Gas volume at STP (0°C, 1 atm)</td>
+                </tr>
+                <tr>
+                    <td>Molarity</td>
+                    <td>M = n / V (in L)</td>
+                    <td>Solution concentration</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Important Values to Remember:</strong></p>
+                <ul>
+                    <li>Avogadro's number (N_A) = 6.022 × 10²³ mol⁻¹</li>
+                    <li>Molar volume at STP = 22.4 L/mol</li>
+                    <li>STP conditions: 0°C (273 K) and 1 atm pressure</li>
+                    <li>NTP conditions: 20°C (293 K) and 1 atm pressure (molar volume ≈ 24 L/mol)</li>
+                    <li>1 mole electrons = 6.022 × 10²³ electrons = 96500 C (1 Faraday)</li>
+                </ul>
+            </div>
+
+            <h3>Percentage Composition</h3>
+            <div class="formula">
+                % of element = (Mass of element in compound / Molar mass of compound) × 100
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Mole Calculation</div>
+                <p>Calculate:</p>
+                <p>a) Number of moles in 180g of water</p>
+                <p>b) Number of molecules in 180g of water</p>
+                <p>c) Number of atoms in 180g of water</p>
+                <p><strong>Solution:</strong></p>
+                <p>a) Molar mass H₂O = 18 g/mol</p>
+                <p>Moles = 180g / 18 g/mol = 10 mol</p>
+                <p>b) Molecules = 10 mol × 6.022×10²³ mol⁻¹ = 6.022×10²⁴ molecules</p>
+                <p>c) Each H₂O molecule has 3 atoms (2H + 1O)</p>
+                <p>Total atoms = 6.022×10²⁴ × 3 = 1.807×10²⁵ atoms</p>
+            </div>
+        </section>
+
+        <!-- Stoichiometry Section -->
+        <section class="info-panel" id="stoich" data-aos="fade-up">
+            <h2>Stoichiometry & Stoichiometric Calculations</h2>
+            <p>Stoichiometry involves calculations based on balanced chemical equations, relating masses, moles, and volumes of reactants and products.</p>
+
+            <div class="definition">
+                <p><strong>Stoichiometry:</strong> Greek: "stoicheion" (element) + "metron" (measure). Quantitative relationship between reactants and products in chemical reactions.</p>
+            </div>
+
+            <h3>Steps in Stoichiometric Calculations</h3>
+            <ol>
+                <li><strong>Write balanced chemical equation</strong></li>
+                <li><strong>Convert given quantities to moles</strong> (using appropriate conversions)</li>
+                <li><strong>Use mole ratios</strong> from balanced equation</li>
+                <li><strong>Convert moles to desired units</strong></li>
+                <li><strong>Check answer</strong> (units, significant figures, reasonableness)</li>
+            </ol>
+
+            <h3>Types of Stoichiometric Problems</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Mass-Mass</div>
+                    <p>Given: Mass of reactant</p>
+                    <p>Find: Mass of product</p>
+                    <div class="formula">Use: n = m/M, then mole ratios</div>
+                    <p>Example: Given CaCO₃ mass, find CO₂ mass produced</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Mass-Volume</div>
+                    <p>Given: Mass of solid</p>
+                    <p>Find: Volume of gas</p>
+                    <div class="formula">Use: n = m/M, then V = n × 22.4 (STP)</div>
+                    <p>Example: Given CaCO₃ mass, find CO₂ volume at STP</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Volume-Volume</div>
+                    <p>Given: Volume of gas</p>
+                    <p>Find: Volume of gas</p>
+                    <div class="formula">Use: Gay-Lussac's Law</div>
+                    <p>Example: Given O₂ volume, find CO₂ volume produced</p>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Limiting Reagent Concept:</strong></p>
+                <ul>
+                    <li><strong>Limiting reagent:</strong> Reactant that gets completely consumed first</li>
+                    <li><strong>Excess reagent:</strong> Reactant left over after reaction</li>
+                    <li><strong>To identify:</strong> Calculate (moles/coefficient) for each reactant; smallest is limiting</li>
+                    <li><strong>Product amount</strong> is determined by limiting reagent</li>
+                </ul>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">IMPORTANT</div>
+                <h4>Reaction Yield Calculations</h4>
+                <div class="formula">Theoretical yield = Calculated maximum product</div>
+                <div class="formula">Actual yield = Experimentally obtained amount</div>
+                <div class="formula">Percentage yield = (Actual yield / Theoretical yield) × 100%</div>
+                <p>Percentage yield is always ≤ 100%</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Stoichiometry with Limiting Reagent</div>
+                <p>2g H₂ reacts with 32g O₂ to form water. Find:</p>
+                <p>a) Limiting reagent</p>
+                <p>b) Mass of water formed</p>
+                <p><strong>Solution:</strong></p>
+                <p>Reaction: 2H₂ + O₂ → 2H₂O</p>
+                <p>Moles H₂ = 2g / 2 g/mol = 1 mol</p>
+                <p>Moles O₂ = 32g / 32 g/mol = 1 mol</p>
+                <p>For H₂: moles/coefficient = 1/2 = 0.5</p>
+                <p>For O₂: moles/coefficient = 1/1 = 1</p>
+                <p>H₂ has smaller ratio ⇒ Limiting reagent</p>
+                <p>From equation: 2 mol H₂ produces 2 mol H₂O</p>
+                <p>So 1 mol H₂ produces 1 mol H₂O = 18 g</p>
+            </div>
+        </section>
+
+        <!-- Problem Solving Section -->
+        <section class="info-panel" id="problems" data-aos="fade-up">
+            <h2>Problem Solving Strategies</h2>
+            <p>Effective techniques for solving problems in "Some Basic Concepts of Chemistry" for JEE and NEET.</p>
+
+            <div class="problem-solving">
+                <div class="problem-box">
+                    <div class="problem-title">Type 1: Mole Concept Problems</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify what's given and what's asked</li>
+                        <li>Convert given to moles using appropriate formula</li>
+                        <li>Perform required calculation in moles</li>
+                        <li>Convert back to asked units</li>
+                        <li>Check significant figures</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Always work in moles first, it simplifies calculations</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 2: Stoichiometry with Limiting Reagent</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Write balanced chemical equation</li>
+                        <li>Convert all reactants to moles</li>
+                        <li>Calculate (moles/coefficient) for each</li>
+                        <li>Identify limiting reagent (smallest ratio)</li>
+                        <li>Calculate product based on limiting reagent</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Product amount is always determined by limiting reagent</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 3: Empirical & Molecular Formulas</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Assume 100g sample → Convert % to grams</li>
+                        <li>Convert grams to moles for each element</li>
+                        <li>Divide by smallest number of moles</li>
+                        <li>Multiply to get simplest whole numbers</li>
+                        <li>Molecular formula = (Empirical formula)ₙ</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> For hydrate formulas, treat water as separate element</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED TIP</div>
+                <h4>Advanced Problem Solving</h4>
+                <p>• For mixture problems: Set up simultaneous equations</p>
+                <p>• For consecutive reactions: Consider all steps or use overall reaction</p>
+                <p>• For redox stoichiometry: Use concept of equivalents</p>
+                <p>• For gas reactions not at STP: Use ideal gas equation PV = nRT</p>
+                <p>• Remember: 1 mole of gas at STP = 22.4 L (memorize this!)</p>
+            </div>
+        </section>
+
+        <!-- Key Facts Carousel -->
+        <div class="swiper-container" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">LAW OF CONSERVATION OF MASS</div>
+                        <div class="swiper-text">Mass neither created nor destroyed. Total mass reactants = Total mass products. Basis for balancing equations.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">LAW OF DEFINITE PROPORTIONS</div>
+                        <div class="swiper-text">Compound always has same element proportions by mass. Water always H:O = 1:8 by mass.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">LAW OF MULTIPLE PROPORTIONS</div>
+                        <div class="swiper-text">When two elements form multiple compounds, mass ratios are simple whole numbers. Evidence for atomic theory.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">AVOGADRO'S NUMBER</div>
+                        <div class="swiper-text">N_A = 6.022×10²³ mol⁻¹. Number of particles in 1 mole. Links microscopic to macroscopic world.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">MOLE CONCEPT</div>
+                        <div class="swiper-text">1 mole = 6.022×10²³ particles = Molar mass in grams = 22.4 L at STP (for gases). Central to all chemical calculations.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">STOICHIOMETRY</div>
+                        <div class="swiper-text">Calculation of reactants/products using balanced equations. Based on mole ratios from balanced equations.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">LIMITING REAGENT</div>
+                        <div class="swiper-text">Reactant completely consumed first. Determines maximum product amount. Identify by (moles/coefficient) ratio.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">PERCENTAGE YIELD</div>
+                        <div class="swiper-text">% yield = (Actual yield/Theoretical yield)×100. Always ≤ 100%. Measures efficiency of reaction.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- Summary Section -->
+        <section class="info-panel" data-aos="fade-up">
+            <h2>Chapter Summary & Formulas</h2>
+            
+            <h3>Key Formulas</h3>
+            <div class="concept-cards">
+                <div class="concept-card laws">
+                    <div class="card-title laws">Mole Concept Formulas</div>
+                    <div class="formula">n = m/M (moles from mass)</div>
+                    <div class="formula">N = n × N_A (particles)</div>
+                    <div class="formula">At STP: n = V/22.4 (gases)</div>
+                    <div class="formula">Molarity: M = n/V(L)</div>
+                </div>
+
+                <div class="concept-card mole">
+                    <div class="card-title mole">Stoichiometry Formulas</div>
+                    <div class="formula">% yield = (Actual/Theoretical)×100</div>
+                    <div class="formula">% composition calculation</div>
+                    <div class="formula">Empirical formula → Molecular formula</div>
+                    <div class="formula">Average atomic mass calculation</div>
+                </div>
+
+                <div class="concept-card stoich">
+                    <div class="card-title stoich">Important Values</div>
+                    <div class="formula">N_A = 6.022×10²³ mol⁻¹</div>
+                    <div class="formula">STP: 0°C, 1 atm, 22.4 L/mol</div>
+                    <div class="formula">1 amu = 1.66054×10⁻²⁷ kg</div>
+                    <div class="formula">Common molar masses</div>
+                </div>
+            </div>
+
+            <h3>Important Points for JEE/NEET</h3>
+            <ul>
+                <li>All stoichiometric calculations require balanced chemical equations</li>
+                <li>Mole concept is the bridge between microscopic particles and macroscopic measurements</li>
+                <li>Limiting reagent determines the maximum amount of product possible</li>
+                <li>Percentage yield is always ≤ 100% (actual yield ≤ theoretical yield)</li>
+                <li>At STP (0°C, 1 atm), 1 mole of any ideal gas occupies 22.4 L</li>
+                <li>Empirical formula gives simplest whole number ratio; molecular formula gives actual numbers</li>
+                <li>Atomic mass is relative; based on carbon-12 scale (exactly 12 amu)</li>
+                <li>Laws of chemical combination are experimental facts; Dalton's theory tried to explain them</li>
+                <li>Significant figures must be maintained in calculations</li>
+                <li>Dimensional analysis helps check correctness of equations</li>
+            </ul>
+
+            <div class="important">
+                <p><strong>Common Mistakes to Avoid:</strong></p>
+                <ul>
+                    <li>Forgetting to balance chemical equations before stoichiometry</li>
+                    <li>Using atomic mass instead of molar mass in calculations</li>
+                    <li>Confusing molarity (mol/L solution) with molality (mol/kg solvent)</li>
+                    <li>Not converting units properly (mg → g, mL → L, etc.)</li>
+                    <li>Assuming 22.4 L/mol applies to all conditions (only at STP!)</li>
+                    <li>Forgetting that limiting reagent determines product amount</li>
+                    <li>Confusing empirical formula with molecular formula</li>
+                    <li>Not considering significant figures in final answers</li>
+                    <li>Mixing up Gay-Lussac's law (volumes) with Avogadro's law</li>
+                    <li>Forgetting that mole applies to atoms, molecules, ions, electrons</li>
+                </ul>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">SUPER TIP</div>
+                <h4>Quick Revision Checklist</h4>
+                <p>✓ Memorize: N_A = 6.022×10²³, 22.4 L/mol at STP</p>
+                <p>✓ Remember: 1 mole = Molar mass in grams = 6.022×10²³ particles</p>
+                <p>✓ Always: Balance equations before stoichiometry</p>
+                <p>✓ Identify: Limiting reagent using (moles/coefficient) ratio</p>
+                <p>✓ Practice: Mass-mass, mass-volume, volume-volume problems</p>
+                <p>✓ Master: Percentage composition, empirical & molecular formulas</p>
+                <p>✓ Understand: All five laws of chemical combination</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Nerds Assemble</h3>
+                <p>Master "Some Basic Concepts of Chemistry" for JEE & NEET. Complete coverage of Class 11 NCERT Chapter 1 with detailed explanations and problems.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#laws">Laws of Chemical Combination</a></li>
+                    <li><a href="#dalton">Dalton's Atomic Theory</a></li>
+                    <li><a href="#atomic-mass">Atomic & Molecular Mass</a></li>
+                    <li><a href="#mole">Mole Concept</a></li>
+                    <li><a href="#stoich">Stoichiometry</a></li>
+                    <li><a href="#problems">Problem Solving</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> 44mr.invisible@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Nerds Assemble. All rights reserved. | Designed for JEE & NEET Aspirants | Some Basic Concepts of Chemistry</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Some Basic Concepts of Chemistry - JavaScript
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ?
+                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+            }
+
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+
+            function handleScroll() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('active');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                }
+            }
+
+            // Debounced scroll event
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(handleScroll, 50);
+            }, { passive: true });
+
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: window.innerWidth < 768 ? 100 : 120,
+                    easing: 'ease-out-quad'
+                });
+            }
+
+            // Initialize Swiper
+            if (typeof Swiper !== 'undefined') {
+                const swiper = new Swiper('.swiper-container', {
+                    loop: true,
+                    autoplay: {
+                        delay: 3500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 25
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        }
+                    }
+                });
+            }
+
+            // Smooth Scroll for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        if (mainNav && mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                });
+            });
+
+            // Back to Top Button Click
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Create Particles
+            createParticles();
+            
+            // Enhance Atomic Visualization
+            enhanceAtomicVisualization();
+            
+            // Enhance Chemical Combination Animation
+            enhanceChemicalAnimation();
+        });
+
+        // Create Particles Function
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
+
+            const particleCount = window.innerWidth < 768 ? 20 : 30;
+            particlesContainer.innerHTML = '';
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                const size = Math.random() * 3 + 1;
+                const posX = Math.random() * window.innerWidth;
+                const posY = Math.random() * window.innerHeight;
+                const duration = Math.random() * 15 + 10;
+                const delay = Math.random() * 5;
+
+                particle.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}px;
+                    top: ${posY}px;
+                    opacity: ${Math.random() * 0.3 + 0.1};
+                    animation: float ${duration}s ease-in-out ${delay}s infinite;
+                    background: rgba(255,255,255,0.3);
+                `;
+
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Enhance Atomic Visualization
+        function enhanceAtomicVisualization() {
+            const atomContainer = document.querySelector('.atom-container');
+            if (!atomContainer) return;
+
+            // Add more electrons to each shell
+            const shells = atomContainer.querySelectorAll('.electron-shell');
+            
+            shells.forEach((shell, shellIndex) => {
+                // Clear existing electron
+                shell.innerHTML = '';
+                
+                // Add appropriate number of electrons based on shell
+                let electronCount;
+                switch(shellIndex) {
+                    case 0: electronCount = 2; break; // First shell: 2 electrons
+                    case 1: electronCount = 8; break; // Second shell: 8 electrons
+                    case 2: electronCount = 8; break; // Third shell: 8 electrons (simplified)
+                    default: electronCount = 2;
+                }
+                
+                // Create electrons
+                for (let i = 0; i < electronCount; i++) {
+                    const electron = document.createElement('div');
+                    electron.classList.add('electron');
+                    
+                    // Position electrons evenly around the shell
+                    const angle = (i * (360 / electronCount)) * (Math.PI / 180);
+                    const radius = shell.offsetWidth / 2;
+                    
+                    electron.style.top = `${50 - Math.sin(angle) * radius}%`;
+                    electron.style.left = `${50 + Math.cos(angle) * radius}%`;
+                    
+                    // Different animation for each electron
+                    electron.style.animation = `electron-spin ${4 + shellIndex * 2}s linear infinite ${i * 0.2}s`;
+                    
+                    shell.appendChild(electron);
+                }
+            });
+        }
+
+        // Enhance Chemical Combination Animation
+        function enhanceChemicalAnimation() {
+            const reactionArrow = document.querySelector('.reaction-arrow');
+            if (reactionArrow) {
+                // Make the arrow pulse
+                reactionArrow.style.animation = 'pulse 2s infinite';
+                
+                // Add click to show reaction
+                reactionArrow.addEventListener('click', function() {
+                    const hydrogenAtoms = document.querySelectorAll('.atom-h');
+                    const oxygenAtom = document.querySelector('.atom-o');
+                    
+                    // Animate combination
+                    hydrogenAtoms.forEach(atom => {
+                        atom.style.transition = 'all 1s ease';
+                        atom.style.transform = 'translateX(20px)';
+                    });
+                    
+                    if (oxygenAtom) {
+                        oxygenAtom.style.transition = 'all 1s ease';
+                        oxygenAtom.style.transform = 'translateX(-20px)';
+                    }
+                    
+                    // Reset after animation
+                    setTimeout(() => {
+                        hydrogenAtoms.forEach(atom => {
+                            atom.style.transform = '';
+                        });
+                        if (oxygenAtom) {
+                            oxygenAtom.style.transform = '';
+                        }
+                    }, 2000);
+                });
+            }
+        }
+
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(createParticles, 250);
+        });
+    </script>
+</body>
+</html>
