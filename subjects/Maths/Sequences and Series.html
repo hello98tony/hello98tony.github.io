@@ -1,0 +1,2368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKVRN3GREN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKVRN3GREN');
+</script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequences & Series | Class 11 Maths | JEE Preparation</title>
+    <meta name="description" content="Master Sequences & Series for Class 11 Mathematics. Complete guide for JEE & NEET aspirants with AP, GP, HP, special series, and problem-solving strategies.">
+    <meta name="keywords" content="Sequences, Series, Arithmetic Progression, Geometric Progression, Harmonic Progression, Class 11 Maths, JEE Maths, NEET Maths, Summation, Mathematical Series">
+    <meta name="author" content="Nerds Assemble">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Sequences & Series | Class 11 Mathematics">
+    <meta property="og:description" content="Complete guide to Sequences & Series for JEE & NEET aspirants">
+    <meta property="og:type" content="website">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Pacifico&family=Dancing+Script:wght@700&family=Abril+Fatface&family=Playfair+Display:wght@700&family=Raleway:wght@300;800&family=Quicksand:wght@500&family=Poiret+One&family=Amatic+SC:wght@700&family=Caveat:wght@700&family=Kaushan+Script&family=Libre+Baskerville&family=Merriweather&family=Nunito:wght@800&family=Oswald:wght@500&family=Roboto+Slab:wght@700&family=Sacramento&family=Tangerine:wght@700&family=Yeseva+One&family=Electrolize&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    
+     <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/planet-universe-svgrepo-com.svg">
+    
+    <style>
+        /* Sequences & Series - Nerds Assemble CSS */
+        :root {
+            --primary: #11998e;
+            --secondary: #38ef7d;
+            --tertiary: #06beb6;
+            --bg: #0a0a20;
+            --text: #ffffff;
+            --highlight: #ff9e6d;
+            --nav-bg: rgba(10, 5, 30, 0.95);
+            --ap-gradient: linear-gradient(45deg, #11998e, #0575e6);
+            --gp-gradient: linear-gradient(45deg, #38ef7d, #11998e);
+            --hp-gradient: linear-gradient(45deg, #06beb6, #38ef7d);
+        }
+
+        /* Base Styles & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overscroll-behavior-y: contain;
+            -webkit-overflow-scrolling: touch;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(17, 153, 142, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(56, 239, 125, 0.1) 0%, transparent 20%),
+                linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--tertiary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(17, 153, 142, 0.5);
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--highlight);
+            margin: 2rem 0 1.5rem;
+            font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-family: 'Roboto Slab', serif;
+            color: var(--secondary);
+            margin: 1.5rem 0 1rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+        }
+
+        p {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+        }
+
+        /* Layout Components */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            flex: 1;
+            padding: 0 1rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Raleway', sans-serif;
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            transform: translateZ(0);
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            color: var(--highlight);
+            font-size: 1.6rem;
+        }
+
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.4rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Electrolize', sans-serif;
+            font-size: 0.95rem;
+            transition: color 0.2s ease-out;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--highlight);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--highlight);
+            transition: width 0.2s ease-out;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* Content Panels */
+        .info-panel {
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
+            padding: 1.8rem;
+            margin: 1.8rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: translateZ(0);
+            will-change: transform, opacity;
+        }
+
+        .info-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%),
+                linear-gradient(-45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%);
+            background-size: 20px 20px;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        /* Special Content Blocks */
+        .important {
+            background: rgba(56, 239, 125, 0.1);
+            border-left: 4px solid var(--secondary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(56, 239, 125, 0.1);
+        }
+
+        .definition {
+            background: rgba(17, 153, 142, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(17, 153, 142, 0.1);
+        }
+
+        .formula {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin: 1.2rem 0;
+            padding: 1.2rem;
+            background: rgba(255, 158, 109, 0.1);
+            border-radius: 8px;
+            border: 1px dashed var(--highlight);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.1rem;
+        }
+
+        .formula::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, transparent 45%, rgba(255, 158, 109, 0.1) 50%, transparent 55%);
+            background-size: 10px 10px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .example {
+            background: rgba(6, 190, 182, 0.1);
+            border-left: 4px solid var(--tertiary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Lists & Tables */
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 1.8rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background-color: rgba(17, 153, 142, 0.2);
+            font-family: 'Electrolize', sans-serif;
+            color: var(--highlight);
+            font-size: 0.95rem;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+
+        tr:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* Concept Cards */
+        .concept-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .concept-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(17, 153, 142, 0.2);
+        }
+
+        .concept-card.ap {
+            border-top: 4px solid var(--primary);
+        }
+
+        .concept-card.gp {
+            border-top: 4px solid var(--secondary);
+        }
+
+        .concept-card.hp {
+            border-top: 4px solid var(--tertiary);
+        }
+
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title.ap { color: var(--primary); }
+        .card-title.gp { color: var(--secondary); }
+        .card-title.hp { color: var(--tertiary); }
+
+        /* Swiper Carousel */
+        .swiper-container {
+            width: 100%;
+            height: auto;
+            min-height: 180px;
+            margin: 2.5rem 0;
+            will-change: transform;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .swiper-slide {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+            font-family: 'Electrolize', sans-serif;
+            padding: 1.2rem;
+            box-sizing: border-box;
+            text-align: center;
+            min-height: 180px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-out;
+            transform: translateZ(0);
+            height: auto;
+        }
+
+        .swiper-slide:hover {
+            transform: translateY(-5px);
+        }
+
+        .swiper-slide div {
+            width: 100%;
+        }
+
+        .swiper-title {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin-bottom: 0.5rem;
+            font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+        }
+
+        .swiper-text {
+            font-family: 'Quicksand', sans-serif;
+            font-size: clamp(0.85rem, 1.1vw, 1rem);
+        }
+
+        /* Swiper Navigation */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: var(--highlight);
+            background: rgba(0, 0, 0, 0.5);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            backdrop-filter: blur(10px);
+            margin-top: -17.5px;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .swiper-pagination-bullet {
+            background: var(--text);
+            opacity: 0.5;
+            width: 8px;
+            height: 8px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: var(--highlight);
+            opacity: 1;
+        }
+
+        /* Problem Solving Section */
+        .problem-solving {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .problem-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .problem-title {
+            color: var(--secondary);
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Particles Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            will-change: transform;
+            opacity: 0.3;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .footer-column h3 {
+            color: var(--highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            transition: color 0.2s ease-out;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--highlight);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text);
+            font-size: 1.1rem;
+            transition: color 0.2s ease-out;
+        }
+
+        .social-links a:hover {
+            color: var(--highlight);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 1.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Quicksand', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease-out;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(17, 153, 142, 0.3);
+            transform: translateZ(0);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--highlight);
+            transform: translateY(-5px);
+        }
+
+        /* JEE/NEET Specific Styling */
+        .exam-highlight {
+            background: rgba(255, 235, 0, 0.1);
+            border: 2px solid var(--highlight);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .exam-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--highlight);
+            color: var(--bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(10px, 10px); }
+            50% { transform: translate(-5px, 15px); }
+            75% { transform: translate(5px, -5px); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        /* Sequences & Series Specific */
+        .series-visual {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .sequence-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .term-box {
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary);
+            color: white;
+            border-radius: 8px;
+            font-family: 'Audiowide', cursive;
+            font-size: 1rem;
+            box-shadow: 0 4px 10px rgba(17, 153, 142, 0.3);
+        }
+
+        .difference-box {
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--secondary);
+            color: var(--bg);
+            border-radius: 6px;
+            font-family: 'Audiowide', cursive;
+            font-size: 0.9rem;
+            margin: 0.2rem;
+            font-weight: bold;
+        }
+
+        .ratio-box {
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--tertiary);
+            color: var(--bg);
+            border-radius: 6px;
+            font-family: 'Audiowide', cursive;
+            font-size: 0.9rem;
+            margin: 0.2rem;
+            font-weight: bold;
+        }
+
+        /* Formula Grid */
+        .formula-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .formula-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .formula-card-title {
+            color: var(--highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        /* Series Visualizer */
+        .series-builder {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+        }
+
+        .series-controls {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .series-controls input,
+        .series-controls select {
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid var(--primary);
+            background: rgba(0,0,0,0.3);
+            color: white;
+            font-family: 'Electrolize', sans-serif;
+        }
+
+        .series-controls button {
+            padding: 0.5rem 1rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Orbitron', sans-serif;
+            transition: background 0.3s;
+        }
+
+        .series-controls button:hover {
+            background: var(--secondary);
+        }
+
+        .series-output {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            padding: 1rem;
+            background: rgba(0,0,0,0.2);
+            border-radius: 5px;
+            min-height: 60px;
+        }
+
+        /* Special Series Visualization */
+        .special-series {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .series-item {
+            background: rgba(255,255,255,0.05);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Progress Bars for Averages */
+        .progress-container {
+            margin: 1rem 0;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 5px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background-image:
+                    radial-gradient(circle at 10% 20%, rgba(17, 153, 142, 0.05) 0%, transparent 20%),
+                    linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+            }
+
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                margin-top: 1rem;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.75rem 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            header, .info-panel {
+                backdrop-filter: blur(5px);
+            }
+
+            .container {
+                width: 95%;
+                padding: 0;
+            }
+
+            .info-panel {
+                padding: 1.5rem;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            th, td {
+                padding: 0.5rem;
+                font-size: 0.85rem;
+            }
+
+            .concept-cards, .problem-solving {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none;
+            }
+
+            .formula-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .term-box {
+                font-size: 0.9rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            .series-controls {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-panel {
+                padding: 1rem;
+            }
+
+            ul, ol {
+                padding-left: 1.5rem;
+            }
+
+            .formula {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+
+            .swiper-slide {
+                padding: 1rem;
+            }
+
+            .term-box {
+                font-size: 0.8rem;
+                padding: 0.3rem 0.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-infinity"></i></span>
+                <span class="logo-text">Nerds Assemble</span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#ap">Arithmetic Progression</a></li>
+                    <li><a href="#gp">Geometric Progression</a></li>
+                    <li><a href="#hp">Harmonic Progression</a></li>
+                    <li><a href="#special">Special Series</a></li>
+                    <li><a href="#applications">Applications</a></li>
+                    <li><a href="#problems">Problems</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="page-header" data-aos="fade-down">
+            <h1>Sequences & Series</h1>
+            <p class="subtitle">Class 11 Mathematics | JEE & NEET Preparation Guide</p>
+            <p>Master sequences, progressions, and series - from basic definitions to advanced applications in calculus and real-world problems</p>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="info-panel" id="introduction" data-aos="fade-up">
+            <h2>Introduction to Sequences & Series</h2>
+            <p>A sequence is an ordered list of numbers following a specific pattern, while a series is the sum of terms of a sequence. They form the foundation for calculus, financial mathematics, and various real-world applications.</p>
+
+            <div class="definition">
+                <p><strong>Sequence:</strong> An ordered list of numbers a₁, a₂, a₃, ... where each term follows a specific rule or pattern.</p>
+                <p><strong>Series:</strong> The sum of terms of a sequence: S = a₁ + a₂ + a₃ + ... + aₙ</p>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card ap" data-aos="flip-left">
+                    <div class="card-title ap"><i class="fas fa-plus-minus"></i> Arithmetic Progression</div>
+                    <p>A sequence where the difference between consecutive terms is constant. Formula: aₙ = a + (n-1)d</p>
+                    <div class="formula">a, a+d, a+2d, a+3d, ...</div>
+                </div>
+
+                <div class="concept-card gp" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-title gp"><i class="fas fa-times-circle"></i> Geometric Progression</div>
+                    <p>A sequence where the ratio between consecutive terms is constant. Formula: aₙ = arⁿ⁻¹</p>
+                    <div class="formula">a, ar, ar², ar³, ...</div>
+                </div>
+
+                <div class="concept-card hp" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card-title hp"><i class="fas fa-divide"></i> Harmonic Progression</div>
+                    <p>A sequence where the reciprocals of terms form an AP. Formula: 1/a, 1/(a+d), 1/(a+2d), ...</p>
+                    <div class="formula">1/a₁, 1/a₂, 1/a₃, ... where aᵢ are in AP</div>
+                </div>
+            </div>
+
+            <!-- Visual Example -->
+            <div class="series-visual">
+                <h3>Visual Comparison: AP vs GP</h3>
+                <div class="sequence-visual">
+                    <div class="term-box">AP: 2</div>
+                    <div class="difference-box">+3</div>
+                    <div class="term-box">5</div>
+                    <div class="difference-box">+3</div>
+                    <div class="term-box">8</div>
+                    <div class="difference-box">+3</div>
+                    <div class="term-box">11</div>
+                    <div class="difference-box">+3</div>
+                    <div class="term-box">14</div>
+                </div>
+                <p style="margin: 1rem 0; color: var(--primary);">Constant difference: d = 3</p>
+                <div class="sequence-visual">
+                    <div class="term-box">GP: 3</div>
+                    <div class="ratio-box">×2</div>
+                    <div class="term-box">6</div>
+                    <div class="ratio-box">×2</div>
+                    <div class="term-box">12</div>
+                    <div class="ratio-box">×2</div>
+                    <div class="term-box">24</div>
+                    <div class="ratio-box">×2</div>
+                    <div class="term-box">48</div>
+                </div>
+                <p style="margin: 1rem 0; color: var(--secondary);">Constant ratio: r = 2</p>
+            </div>
+
+            <div class="important">
+                <p><strong>Key Terminology:</strong></p>
+                <ul>
+                    <li><strong>Term:</strong> Each number in a sequence (a₁, a₂, a₃, ...)</li>
+                    <li><strong>Common Difference (d):</strong> Constant difference in AP</li>
+                    <li><strong>Common Ratio (r):</strong> Constant ratio in GP</li>
+                    <li><strong>nth Term:</strong> General term of sequence (aₙ)</li>
+                    <li><strong>Sum of n terms (Sₙ):</strong> Sum of first n terms</li>
+                    <li><strong>Finite Series:</strong> Series with finite number of terms</li>
+                    <li><strong>Infinite Series:</strong> Series with infinite terms (convergent/divergent)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Arithmetic Progression Section -->
+        <section class="info-panel" id="ap" data-aos="fade-up">
+            <h2>Arithmetic Progression (AP)</h2>
+            <p>An Arithmetic Progression is a sequence where each term after the first is obtained by adding a constant value to the preceding term.</p>
+
+            <div class="definition">
+                <p><strong>Arithmetic Progression:</strong> A sequence a₁, a₂, a₃, ... is called an AP if aₙ₊₁ - aₙ = constant (d) for all n ≥ 1.</p>
+            </div>
+
+            <div class="formula">
+                aₙ = a + (n-1)d
+            </div>
+            <p>Where:<br>
+            • a = first term<br>
+            • d = common difference<br>
+            • n = term number<br>
+            • aₙ = nth term</p>
+
+            <div class="formula-grid">
+                <div class="formula-card">
+                    <div class="formula-card-title">nth Term</div>
+                    <div class="formula">aₙ = a + (n-1)d</div>
+                    <p>General term of AP</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Sum of n Terms</div>
+                    <div class="formula">Sₙ = n/2 [2a + (n-1)d]</div>
+                    <div class="formula">Sₙ = n/2 (a + l)</div>
+                    <p>Two equivalent formulas</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Properties</div>
+                    <div class="formula">2b = a + c</div>
+                    <div class="formula">aₖ = (aₖ₋ₚ + aₖ₊ₚ)/2</div>
+                    <p>Arithmetic mean property</p>
+                </div>
+            </div>
+
+            <!-- Visual AP Builder -->
+            <div class="series-visual">
+                <h3>AP Visualizer</h3>
+                <div class="series-builder">
+                    <div class="series-controls">
+                        <input type="number" id="apFirst" placeholder="First term (a)" value="2" min="-100" max="100">
+                        <input type="number" id="apDiff" placeholder="Common diff (d)" value="3" min="-10" max="10">
+                        <input type="number" id="apTerms" placeholder="Number of terms" value="5" min="1" max="20">
+                        <button onclick="generateAP()">Generate AP</button>
+                    </div>
+                    <div class="series-output" id="apOutput">
+                        <!-- AP will be generated here -->
+                    </div>
+                    <div id="apSum" style="color: var(--highlight); font-family: 'Audiowide', cursive; margin-top: 1rem;"></div>
+                </div>
+            </div>
+
+            <h3>Properties of AP</h3>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Formula</th>
+                    <th>Application</th>
+                </tr>
+                <tr>
+                    <td>Arithmetic Mean</td>
+                    <td>Middle term is average of equidistant terms</td>
+                    <td>2b = a + c</td>
+                    <td>Finding missing terms</td>
+                </tr>
+                <tr>
+                    <td>Sum of equidistant terms</td>
+                    <td>Terms equidistant from ends have constant sum</td>
+                    <td>a₁ + aₙ = a₂ + aₙ₋₁ = ...</td>
+                    <td>Simplifying calculations</td>
+                </tr>
+                <tr>
+                    <td>nth term from end</td>
+                    <td>Last term = a + (n-1)d</td>
+                    <td>l = a + (n-1)d</td>
+                    <td>Reverse sequences</td>
+                </tr>
+                <tr>
+                    <td>Three terms in AP</td>
+                    <td>Can be taken as a-d, a, a+d</td>
+                    <td>a-d, a, a+d</td>
+                    <td>Problem simplification</td>
+                </tr>
+                <tr>
+                    <td>Four terms in AP</td>
+                    <td>Can be taken as a-3d, a-d, a+d, a+3d</td>
+                    <td>a-3d, a-d, a+d, a+3d</td>
+                    <td>Symmetric representation</td>
+                </tr>
+                <tr>
+                    <td>Selection of terms</td>
+                    <td>Choose terms to simplify calculations</td>
+                    <td>Depends on problem</td>
+                    <td>Smart term selection</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Important Results for AP:</strong></p>
+                <ul>
+                    <li>If a, b, c are in AP, then 2b = a + c (b is arithmetic mean of a and c)</li>
+                    <li>The sum of first n natural numbers: Sₙ = n(n+1)/2</li>
+                    <li>The sum of first n odd numbers: 1 + 3 + 5 + ... + (2n-1) = n²</li>
+                    <li>The sum of first n even numbers: 2 + 4 + 6 + ... + 2n = n(n+1)</li>
+                    <li>If Sₙ = An² + Bn, then the sequence is AP with d = 2A</li>
+                    <li>The arithmetic mean of n numbers = (Sum of numbers)/n</li>
+                    <li>For any AP, Sₙ - Sₙ₋₁ = aₙ (nth term)</li>
+                    <li>If the pth term is q and qth term is p, then (p+q)th term is 0</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: AP Problem</div>
+                <p>Find the sum of first 20 terms of an AP whose nth term is given by aₙ = 3n + 2.</p>
+                <p><strong>Solution:</strong></p>
+                <p>Given: aₙ = 3n + 2</p>
+                <p>First term: a₁ = 3(1) + 2 = 5</p>
+                <p>Second term: a₂ = 3(2) + 2 = 8</p>
+                <p>Common difference: d = a₂ - a₁ = 8 - 5 = 3</p>
+                <p>Sum of first 20 terms: S₂₀ = 20/2 [2×5 + (20-1)×3]</p>
+                <p>S₂₀ = 10 [10 + 19×3] = 10 [10 + 57] = 10 × 67 = 670</p>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE TIP</div>
+                <h4>AP Selection of Terms</h4>
+                <p><strong>For 3 terms:</strong> a-d, a, a+d</p>
+                <p><strong>For 4 terms:</strong> a-3d, a-d, a+d, a+3d</p>
+                <p><strong>For 5 terms:</strong> a-2d, a-d, a, a+d, a+2d</p>
+                <p><strong>For even number of terms:</strong> Use symmetric pairs around center</p>
+                <p><strong>For product of terms:</strong> Choose terms symmetrically to cancel d</p>
+            </div>
+        </section>
+
+        <!-- Geometric Progression Section -->
+        <section class="info-panel" id="gp" data-aos="fade-up">
+            <h2>Geometric Progression (GP)</h2>
+            <p>A Geometric Progression is a sequence where each term after the first is obtained by multiplying the preceding term by a constant value.</p>
+
+            <div class="definition">
+                <p><strong>Geometric Progression:</strong> A sequence a₁, a₂, a₃, ... is called a GP if aₙ₊₁/aₙ = constant (r) for all n ≥ 1, r ≠ 0.</p>
+            </div>
+
+            <div class="formula">
+                aₙ = arⁿ⁻¹
+            </div>
+            <p>Where:<br>
+            • a = first term<br>
+            • r = common ratio<br>
+            • n = term number<br>
+            • aₙ = nth term</p>
+
+            <div class="formula-grid">
+                <div class="formula-card">
+                    <div class="formula-card-title">nth Term</div>
+                    <div class="formula">aₙ = arⁿ⁻¹</div>
+                    <p>General term of GP</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Sum of n Terms</div>
+                    <div class="formula">Sₙ = a(1-rⁿ)/(1-r), r≠1</div>
+                    <div class="formula">Sₙ = na, r=1</div>
+                    <p>Finite GP sum</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Infinite GP Sum</div>
+                    <div class="formula">S∞ = a/(1-r)</div>
+                    <p>For |r| < 1 only</p>
+                </div>
+            </div>
+
+            <!-- Visual GP Builder -->
+            <div class="series-visual">
+                <h3>GP Visualizer</h3>
+                <div class="series-builder">
+                    <div class="series-controls">
+                        <input type="number" id="gpFirst" placeholder="First term (a)" value="3" min="-100" max="100">
+                        <input type="number" id="gpRatio" placeholder="Common ratio (r)" value="2" min="-10" max="10" step="0.1">
+                        <input type="number" id="gpTerms" placeholder="Number of terms" value="5" min="1" max="15">
+                        <button onclick="generateGP()">Generate GP</button>
+                    </div>
+                    <div class="series-output" id="gpOutput">
+                        <!-- GP will be generated here -->
+                    </div>
+                    <div id="gpSum" style="color: var(--highlight); font-family: 'Audiowide', cursive; margin-top: 1rem;"></div>
+                </div>
+            </div>
+
+            <h3>Properties of GP</h3>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Formula</th>
+                    <th>Application</th>
+                </tr>
+                <tr>
+                    <td>Geometric Mean</td>
+                    <td>Middle term is geometric mean of equidistant terms</td>
+                    <td>b² = a × c</td>
+                    <td>Finding missing terms</td>
+                </tr>
+                <tr>
+                    <td>Product of equidistant terms</td>
+                    <td>Terms equidistant from ends have constant product</td>
+                    <td>a₁ × aₙ = a₂ × aₙ₋₁ = ...</td>
+                    <td>Simplifying calculations</td>
+                </tr>
+                <tr>
+                    <td>Reciprocal GP</td>
+                    <td>Reciprocals of GP terms also form GP</td>
+                    <td>1/a, 1/ar, 1/ar², ...</td>
+                    <td>Harmonic progression</td>
+                </tr>
+                <tr>
+                    <td>Three terms in GP</td>
+                    <td>Can be taken as a/r, a, ar</td>
+                    <td>a/r, a, ar</td>
+                    <td>Problem simplification</td>
+                </tr>
+                <tr>
+                    <td>Four terms in GP</td>
+                    <td>Can be taken as a/r³, a/r, ar, ar³</td>
+                    <td>a/r³, a/r, ar, ar³</td>
+                    <td>Symmetric representation</td>
+                </tr>
+                <tr>
+                    <td>Selection of terms</td>
+                    <td>Choose terms to simplify calculations</td>
+                    <td>Depends on problem</td>
+                    <td>Smart term selection</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Important Results for GP:</strong></p>
+                <ul>
+                    <li>If a, b, c are in GP, then b² = ac (b is geometric mean of a and c)</li>
+                    <li>The product of first n terms: Pₙ = aⁿ × r^{n(n-1)/2}</li>
+                    <li>Sum of infinite GP: S∞ = a/(1-r) for |r| < 1</li>
+                    <li>If each term of a GP is raised to power k, the new sequence is also GP</li>
+                    <li>The geometric mean of n numbers = (Product of numbers)^{1/n}</li>
+                    <li>For any GP, Sₙ - Sₙ₋₁ = aₙ (nth term)</li>
+                    <li>If Sₙ = A(rⁿ - 1), then the sequence is GP</li>
+                    <li>The sum of infinite geometric series 1 + x + x² + ... = 1/(1-x) for |x| < 1</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Infinite GP Problem</div>
+                <p>Find the sum to infinity of the series: 1 + 1/3 + 1/9 + 1/27 + ...</p>
+                <p><strong>Solution:</strong></p>
+                <p>This is an infinite GP with:</p>
+                <p>First term: a = 1</p>
+                <p>Common ratio: r = (1/3) / 1 = 1/3</p>
+                <p>Since |r| = 1/3 < 1, the infinite sum exists:</p>
+                <p>S∞ = a/(1-r) = 1/(1 - 1/3) = 1/(2/3) = 3/2 = 1.5</p>
+                <p>The sum converges to 1.5 as more terms are added.</p>
+            </div>
+
+            <h3>Special Cases of GP</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Increasing GP</div>
+                    <p>When r > 1, terms increase exponentially</p>
+                    <div class="formula">2, 4, 8, 16, 32, ...</div>
+                    <p>Example: Population growth, compound interest</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Decreasing GP</div>
+                    <p>When 0 < r < 1, terms decrease to zero</p>
+                    <div class="formula">16, 8, 4, 2, 1, 0.5, ...</div>
+                    <p>Example: Radioactive decay, depreciation</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Alternating GP</div>
+                    <p>When r < 0, terms alternate signs</p>
+                    <div class="formula">3, -6, 12, -24, 48, ...</div>
+                    <p>Example: Oscillating systems</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">NEET APPLICATION</div>
+                <h4>GP in Biological Systems</h4>
+                <p><strong>Population Growth:</strong> Bacterial colonies often grow geometrically</p>
+                <p><strong>Cell Division:</strong> Number of cells doubles each generation (r=2)</p>
+                <p><strong>Radioactive Decay:</strong> Follows geometric progression with r < 1</p>
+                <p><strong>Drug Concentration:</strong> In bloodstream decreases geometrically</p>
+                <p><strong>DNA Replication:</strong> Exponential growth patterns</p>
+            </div>
+        </section>
+
+        <!-- Harmonic Progression Section -->
+        <section class="info-panel" id="hp" data-aos="fade-up">
+            <h2>Harmonic Progression (HP)</h2>
+            <p>A Harmonic Progression is a sequence whose reciprocals form an Arithmetic Progression. It appears in physics, music, and various mathematical contexts.</p>
+
+            <div class="definition">
+                <p><strong>Harmonic Progression:</strong> A sequence a₁, a₂, a₃, ... is called an HP if the sequence of reciprocals 1/a₁, 1/a₂, 1/a₃, ... forms an AP.</p>
+            </div>
+
+            <div class="formula">
+                For HP: a, b, c are in HP ⇔ 1/a, 1/b, 1/c are in AP
+            </div>
+            <p>Where:<br>
+            • The reciprocals form an AP<br>
+            • No simple formula for nth term like AP or GP<br>
+            • Harmonic Mean: HM = 2ab/(a+b) for two numbers</p>
+
+            <div class="formula-grid">
+                <div class="formula-card">
+                    <div class="formula-card-title">nth Term of HP</div>
+                    <div class="formula">aₙ = 1/[A + (n-1)D]</div>
+                    <p>Where 1/a₁, 1/a₂, ... form AP with first term A and common difference D</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Harmonic Mean</div>
+                    <div class="formula">HM = n/[1/a₁ + 1/a₂ + ... + 1/aₙ]</div>
+                    <div class="formula">HM = 2ab/(a+b)</div>
+                    <p>For two numbers a and b</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Relation AM ≥ GM ≥ HM</div>
+                    <div class="formula">AM ≥ GM ≥ HM</div>
+                    <p>Equality holds when all numbers are equal</p>
+                </div>
+            </div>
+
+            <h3>Properties of HP</h3>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                    <th>Application</th>
+                </tr>
+                <tr>
+                    <td>Reciprocal Relation</td>
+                    <td>Reciprocals form AP</td>
+                    <td>1/2, 1/5, 1/8, 1/11, ... are AP</td>
+                    <td>Converting HP to AP</td>
+                </tr>
+                <tr>
+                    <td>Three terms in HP</td>
+                    <td>Can be taken as 1/(a-d), 1/a, 1/(a+d)</td>
+                    <td>1/3, 1/5, 1/7 are in HP</td>
+                    <td>Problem simplification</td>
+                </tr>
+                <tr>
+                    <td>No term zero</td>
+                    <td>HP cannot contain zero</td>
+                    <td>Division by zero undefined</td>
+                    <td>Domain restriction</td>
+                </tr>
+                <tr>
+                    <td>Harmonic Mean</td>
+                    <td>Reciprocal of arithmetic mean of reciprocals</td>
+                    <td>HM of 2,4 is 2.67</td>
+                    <td>Average of rates</td>
+                </tr>
+                <tr>
+                    <td>Relation with AP & GP</td>
+                    <td>For two numbers: GM² = AM × HM</td>
+                    <td>For 2,8: AM=5, GM=4, HM=3.2</td>
+                    <td>Inequality proofs</td>
+                </tr>
+                <tr>
+                    <td>Selection of terms</td>
+                    <td>Work with reciprocals in AP</td>
+                    <td>Convert HP to AP first</td>
+                    <td>Problem solving strategy</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Important Results for HP:</strong></p>
+                <ul>
+                    <li>If a, b, c are in HP, then b = 2ac/(a+c) (b is harmonic mean of a and c)</li>
+                    <li>For two positive numbers, AM ≥ GM ≥ HM</li>
+                    <li>If x₁, x₂, ..., xₙ are in HP, then 1/x₁, 1/x₂, ..., 1/xₙ are in AP</li>
+                    <li>There is no general formula for sum of n terms of HP</li>
+                    <li>For any three numbers in HP, the middle term is the harmonic mean of the other two</li>
+                    <li>If a, b, c are in HP, then a/(b+c), b/(c+a), c/(a+b) are also in HP</li>
+                    <li>The harmonic mean is always less than or equal to geometric mean</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: HP Problem</div>
+                <p>If the pth term of an HP is qr and the qth term is pr, find the rth term.</p>
+                <p><strong>Solution:</strong></p>
+                <p>Let the HP be 1/a₁, 1/a₂, 1/a₃, ... where a₁, a₂, a₃, ... form AP</p>
+                <p>Given: pth term of HP = qr ⇒ 1/[A + (p-1)D] = qr ...(1)</p>
+                <p>qth term of HP = pr ⇒ 1/[A + (q-1)D] = pr ...(2)</p>
+                <p>From (1): A + (p-1)D = 1/(qr)</p>
+                <p>From (2): A + (q-1)D = 1/(pr)</p>
+                <p>Subtracting: (p-q)D = 1/(qr) - 1/(pr) = (p-q)/(pqr)</p>
+                <p>⇒ D = 1/(pqr)</p>
+                <p>Substituting: A = 1/(qr) - (p-1)/(pqr) = (p - p + 1)/(pqr) = 1/(pqr)</p>
+                <p>rth term of HP = 1/[A + (r-1)D] = 1/[1/(pqr) + (r-1)/(pqr)]</p>
+                <p>= 1/[r/(pqr)] = 1/[1/(pq)] = pq</p>
+                <p>Thus, the rth term is pq.</p>
+            </div>
+
+            <h3>Relation Between AM, GM, HM</h3>
+            <div class="progress-container">
+                <div class="progress-label">
+                    <span>Arithmetic Mean (AM)</span>
+                    <span>10</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100%"></div>
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-label">
+                    <span>Geometric Mean (GM)</span>
+                    <span>8</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 80%"></div>
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-label">
+                    <span>Harmonic Mean (HM)</span>
+                    <span>6.4</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 64%"></div>
+                </div>
+            </div>
+
+            <div class="formula">
+                For positive numbers a and b:<br>
+                AM = (a+b)/2 ≥ GM = √(ab) ≥ HM = 2ab/(a+b)
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Advanced HP Concepts</h4>
+                <p><strong>Weighted Harmonic Mean:</strong> HM = (∑wᵢ)/(∑(wᵢ/xᵢ))</p>
+                <p><strong>Generalized Mean Inequality:</strong> For positive numbers, Mₚ ≥ Mₖ when p > k</p>
+                <p><strong>Power Mean Inequality:</strong> Extends AM-GM-HM inequality</p>
+                <p><strong>Cauchy-Schwarz in HM:</strong> Applications in inequalities</p>
+                <p><strong>HP in Physics:</strong> Equivalent resistance, focal length of lenses</p>
+            </div>
+        </section>
+
+        <!-- Special Series Section -->
+        <section class="info-panel" id="special" data-aos="fade-up">
+            <h2>Special Series and Summation</h2>
+            <p>Various special series have important applications in mathematics, physics, and engineering. Knowing their sum formulas is crucial for problem-solving.</p>
+
+            <div class="definition">
+                <p><strong>Special Series:</strong> Series whose sums can be expressed in closed form using specific formulas, often involving polynomial expressions in n.</p>
+            </div>
+
+            <div class="special-series">
+                <div class="series-item">
+                    <div class="card-title">Sum of Natural Numbers</div>
+                    <div class="formula">1 + 2 + 3 + ... + n = n(n+1)/2</div>
+                    <p>Triangular numbers</p>
+                </div>
+
+                <div class="series-item">
+                    <div class="card-title">Sum of Squares</div>
+                    <div class="formula">1² + 2² + 3² + ... + n² = n(n+1)(2n+1)/6</div>
+                    <p>Sum of squares formula</p>
+                </div>
+
+                <div class="series-item">
+                    <div class="card-title">Sum of Cubes</div>
+                    <div class="formula">1³ + 2³ + 3³ + ... + n³ = [n(n+1)/2]²</div>
+                    <p>Square of triangular numbers</p>
+                </div>
+
+                <div class="series-item">
+                    <div class="card-title">Sum of Odd Numbers</div>
+                    <div class="formula">1 + 3 + 5 + ... + (2n-1) = n²</div>
+                    <p>Perfect squares</p>
+                </div>
+
+                <div class="series-item">
+                    <div class="card-title">Sum of Even Numbers</div>
+                    <div class="formula">2 + 4 + 6 + ... + 2n = n(n+1)</div>
+                    <p>Twice triangular numbers</p>
+                </div>
+
+                <div class="series-item">
+                    <div class="card-title">Arithmetico-Geometric Series</div>
+                    <div class="formula">a + (a+d)r + (a+2d)r² + ...</div>
+                    <p>Combine AP and GP</p>
+                </div>
+            </div>
+
+            <h3>Method of Differences</h3>
+            <p>When terms of a series can be expressed as difference of consecutive terms of another sequence.</p>
+            
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Telescoping Series</div>
+                    <p>Series where most terms cancel out</p>
+                    <div class="formula">∑(1/k(k+1)) = 1 - 1/(n+1)</div>
+                    <p>Example: ∑ 1/(n(n+1)) = 1 - 1/(n+1)</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Method of Differences</div>
+                    <p>Express term as difference of consecutive terms</p>
+                    <div class="formula">tₖ = uₖ - uₖ₊₁</div>
+                    <p>Then sum telescopes: Sₙ = u₁ - uₙ₊₁</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Vₙ Method</div>
+                    <p>For series where tₙ = polynomial in n</p>
+                    <div class="formula">Let Vₙ = An² + Bn + C</div>
+                    <p>Find A, B, C such that tₙ = Vₙ - Vₙ₋₁</p>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Important Summation Formulas:</strong></p>
+                <ul>
+                    <li>∑k = n(n+1)/2 (sum of first n natural numbers)</li>
+                    <li>∑k² = n(n+1)(2n+1)/6 (sum of squares)</li>
+                    <li>∑k³ = [n(n+1)/2]² (sum of cubes)</li>
+                    <li>∑(2k-1) = n² (sum of first n odd numbers)</li>
+                    <li>∑(2k) = n(n+1) (sum of first n even numbers)</li>
+                    <li>∑k(k+1) = n(n+1)(n+2)/3</li>
+                    <li>∑k(k+1)(k+2) = n(n+1)(n+2)(n+3)/4</li>
+                    <li>∑1/[k(k+1)] = 1 - 1/(n+1) (telescoping series)</li>
+                    <li>∑r⋅xʳ⁻¹ = 1/(1-x)² for |x| < 1 (differentiation of geometric series)</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Sum of Series</div>
+                <p>Find the sum of series: 1² + 3² + 5² + ... to n terms.</p>
+                <p><strong>Solution:</strong></p>
+                <p>We need sum of squares of first n odd numbers.</p>
+                <p>kth odd number = 2k-1</p>
+                <p>Sum = ∑(2k-1)² from k=1 to n = ∑(4k² - 4k + 1)</p>
+                <p>= 4∑k² - 4∑k + ∑1</p>
+                <p>= 4[n(n+1)(2n+1)/6] - 4[n(n+1)/2] + n</p>
+                <p>= [2n(n+1)(2n+1)/3] - 2n(n+1) + n</p>
+                <p>= n[2(n+1)(2n+1)/3 - 2(n+1) + 1]</p>
+                <p>= n[(4n²+6n+2)/3 - 2n - 2 + 1]</p>
+                <p>= n[(4n²+6n+2 - 6n - 6 + 3)/3]</p>
+                <p>= n(4n² - 1)/3</p>
+                <p>Thus, 1² + 3² + 5² + ... to n terms = n(4n² - 1)/3</p>
+            </div>
+
+            <h3>Arithmetico-Geometric Series (AGS)</h3>
+            <p>A series where each term is product of corresponding terms of AP and GP.</p>
+            
+            <div class="formula">
+                Standard AGS: a + (a+d)r + (a+2d)r² + ... + [a+(n-1)d]rⁿ⁻¹
+            </div>
+            <p>Sum formula: Sₙ = a/(1-r) + dr(1 - rⁿ⁻¹)/(1-r)² - [a+(n-1)d]rⁿ/(1-r), for r ≠ 1</p>
+            
+            <div class="example">
+                <div class="example-title">Example: AGS Sum</div>
+                <p>Find sum: 1 + 2x + 3x² + ... + nxⁿ⁻¹</p>
+                <p><strong>Solution:</strong></p>
+                <p>This is AGS with a=1, d=1, r=x</p>
+                <p>Sₙ = 1/(1-x) + 1⋅x(1 - xⁿ⁻¹)/(1-x)² - [1+(n-1)⋅1]xⁿ/(1-x)</p>
+                <p>= 1/(1-x) + x(1-xⁿ⁻¹)/(1-x)² - nxⁿ/(1-x)</p>
+                <p>= [1 - xⁿ]/[1-x]² - nxⁿ/(1-x)</p>
+                <p>For |x| < 1, as n→∞, S∞ = 1/(1-x)²</p>
+            </div>
+        </section>
+
+        <!-- Applications Section -->
+        <section class="info-panel" id="applications" data-aos="fade-up">
+            <h2>Applications of Sequences & Series</h2>
+            <p>Sequences and series have wide-ranging applications in mathematics, physics, economics, computer science, and everyday life.</p>
+
+            <div class="comparison-table">
+                <h3>Real-World Applications</h3>
+                <table>
+                    <tr>
+                        <th>Application Area</th>
+                        <th>Specific Use</th>
+                        <th>Type of Series</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>Finance & Economics</td>
+                        <td>Compound Interest</td>
+                        <td>Geometric Progression</td>
+                        <td>Bank deposits, loans, investments</td>
+                    </tr>
+                    <tr>
+                        <td>Physics</td>
+                        <td>Simple Harmonic Motion</td>
+                        <td>Harmonic Progression</td>
+                        <td>Pendulum, springs, waves</td>
+                    </tr>
+                    <tr>
+                        <td>Computer Science</td>
+                        <td>Algorithm Analysis</td>
+                        <td>Arithmetic Series</td>
+                        <td>Time complexity, Big O notation</td>
+                    </tr>
+                    <tr>
+                        <td>Biology</td>
+                        <td>Population Growth</td>
+                        <td>Geometric Progression</td>
+                        <td>Bacterial growth, cell division</td>
+                    </tr>
+                    <tr>
+                        <td>Engineering</td>
+                        <td>Signal Processing</td>
+                        <td>Fourier Series</td>
+                        <td>Audio, image processing</td>
+                    </tr>
+                    <tr>
+                        <td>Statistics</td>
+                        <td>Moving Averages</td>
+                        <td>Arithmetic Mean</td>
+                        <td>Stock analysis, weather data</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>Detailed Applications</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Compound Interest</div>
+                    <p>Amount after n years: A = P(1 + r/100)ⁿ</p>
+                    <div class="formula">GP with a=P, r=(1+R/100)</div>
+                    <div class="example">
+                        <p><strong>Example:</strong> ₹1000 at 10% for 3 years:</p>
+                        <p>1000, 1100, 1210, 1331 (GP with r=1.1)</p>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Depreciation</div>
+                    <p>Value after n years: V = P(1 - r/100)ⁿ</p>
+                    <div class="formula">GP with a=P, r=(1-R/100)</div>
+                    <div class="example">
+                        <p><strong>Example:</strong> Car worth ₹500,000 depreciates 20% yearly:</p>
+                        <p>500000, 400000, 320000, 256000, ...</p>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Installment Payments</div>
+                    <p>Loan repayment with installments</p>
+                    <div class="formula">Sum of GP for present values</div>
+                    <div class="example">
+                        <p><strong>Example:</strong> EMI calculation uses sum of GP for present value of future payments</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Key Applications in Detail:</strong></p>
+                <ul>
+                    <li><strong>Physics:</strong> Projectile motion (AP for time intervals), radioactive decay (GP), harmonic oscillators (HP)</li>
+                    <li><strong>Economics:</strong> GDP growth (GP), inflation calculations, currency depreciation</li>
+                    <li><strong>Computer Science:</strong> Binary search (logarithmic), sorting algorithms (quadratic/cubic sums), recursion trees</li>
+                    <li><strong>Engineering:</strong> Electrical circuits (series/parallel resistances), structural analysis, control systems</li>
+                    <li><strong>Biology:</strong> Population dynamics, pharmacokinetics (drug concentration over time), genetics</li>
+                    <li><strong>Statistics:</strong> Mean, median, mode calculations, time series analysis, probability distributions</li>
+                    <li><strong>Everyday Life:</strong> Staircase steps, seating arrangements, pyramid structures, musical notes</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Real-World Application</div>
+                <p>A ball is dropped from a height of 80 meters. Each time it hits the ground, it bounces back to 3/4 of the height from which it fell. Find the total distance traveled by the ball before coming to rest.</p>
+                <p><strong>Solution:</strong></p>
+                <p>Initial drop: 80 m</p>
+                <p>First bounce: up = 80 × 3/4 = 60 m, down = 60 m</p>
+                <p>Second bounce: up = 60 × 3/4 = 45 m, down = 45 m</p>
+                <p>This forms two infinite GPs:</p>
+                <p>Downward distances: 80, 60, 45, ... (GP with a=80, r=3/4)</p>
+                <p>Upward distances: 60, 45, 33.75, ... (GP with a=60, r=3/4)</p>
+                <p>Total downward distance = 80/(1 - 3/4) = 80/(1/4) = 320 m</p>
+                <p>Total upward distance = 60/(1 - 3/4) = 60/(1/4) = 240 m</p>
+                <p>Total distance = Downward + Upward = 320 + 240 = 560 meters</p>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Advanced Applications</h4>
+                <p><strong>Calculus:</strong> Riemann sums, Taylor and Maclaurin series, Fourier series</p>
+                <p><strong>Number Theory:</strong> Arithmetic functions, divisor sums, prime number theorems</p>
+                <p><strong>Complex Analysis:</strong> Power series, Laurent series, residue theorem</p>
+                <p><strong>Probability:</strong> Expected values, moment generating functions</p>
+                <p><strong>Differential Equations:</strong> Series solutions, Frobenius method</p>
+                <p><strong>Quantum Mechanics:</strong> Energy level spacings, perturbation series</p>
+            </div>
+        </section>
+
+        <!-- Problem Solving Section -->
+        <section class="info-panel" id="problems" data-aos="fade-up">
+            <h2>Problem Solving Strategies</h2>
+            <p>Effective techniques for solving sequence and series problems in JEE and other competitive exams.</p>
+
+            <div class="problem-solving">
+                <div class="problem-box">
+                    <div class="problem-title">Type 1: Finding Terms</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify type of progression (AP/GP/HP)</li>
+                        <li>Use appropriate formula for nth term</li>
+                        <li>Set up equations from given information</li>
+                        <li>Solve system of equations</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> For three terms, use symmetric representations</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 2: Sum Problems</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify pattern in terms</li>
+                        <li>Use appropriate sum formula</li>
+                        <li>For special series, derive general term first</li>
+                        <li>Apply method of differences if applicable</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> For polynomial series, use ∑k, ∑k², ∑k³ formulas</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 3: Mean Problems</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify which mean is involved (AM/GM/HM)</li>
+                        <li>Use appropriate relationship</li>
+                        <li>Apply inequality AM ≥ GM ≥ HM if needed</li>
+                        <li>Check conditions for equality</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> For two numbers, use AM×HM = GM²</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Common Problem Types:</strong></p>
+                <ul>
+                    <li><strong>Finding terms:</strong> Specific term, missing terms, three/four terms in progression</li>
+                    <li><strong>Sum problems:</strong> Sum of n terms, sum to infinity, partial sums</li>
+                    <li><strong>Mean problems:</strong> AM, GM, HM, inequalities between means</li>
+                    <li><strong>Relation problems:</strong> Terms in multiple progressions, conversion between AP/GP/HP</li>
+                    <li><strong>Application problems:</strong> Compound interest, population growth, physical applications</li>
+                    <li><strong>Special series:</strong> Sum of squares, cubes, telescoping series, arithmetico-geometric series</li>
+                    <li><strong>Inequality problems:</strong> Proving inequalities using AM-GM-HM</li>
+                    <li><strong>Inserting means:</strong> Insert arithmetic/geometric/harmonic means between two numbers</li>
+                </ul>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED TIP</div>
+                <h4>Advanced Problem Solving Techniques</h4>
+                <p>• For AGS: Multiply by common ratio and subtract</p>
+                <p>• For telescoping series: Express term as difference of two consecutive terms</p>
+                <p>• For polynomial series: Use ∑k, ∑k², ∑k³ formulas or method of differences</p>
+                <p>• For inequality proofs: Use AM ≥ GM ≥ HM or Cauchy-Schwarz</p>
+                <p>• For insertion problems: Remember number of means = n, total terms = n+2</p>
+                <p>• For relation between AP, GP, HP: Convert to common format (usually AP)</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Challenging Problem</div>
+                <p>If a, b, c are in AP; b, c, d are in GP; and c, d, e are in HP, prove that a, c, e are in GP.</p>
+                <p><strong>Solution:</strong></p>
+                <p>Given: a, b, c are in AP ⇒ 2b = a + c ...(1)</p>
+                <p>b, c, d are in GP ⇒ c² = bd ...(2)</p>
+                <p>c, d, e are in HP ⇒ d = 2ce/(c+e) ...(3)</p>
+                <p>From (1): b = (a+c)/2</p>
+                <p>From (2): d = c²/b = c²/[(a+c)/2] = 2c²/(a+c)</p>
+                <p>From (3): 2c²/(a+c) = 2ce/(c+e)</p>
+                <p>⇒ c/(a+c) = e/(c+e)</p>
+                <p>⇒ c(c+e) = e(a+c)</p>
+                <p>⇒ c² + ce = ae + ce</p>
+                <p>⇒ c² = ae</p>
+                <p>Thus, a, c, e are in GP (since c² = ae).</p>
+            </div>
+        </section>
+
+        <!-- Key Facts Carousel -->
+        <div class="swiper-container" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">ARITHMETIC PROGRESSION</div>
+                        <div class="swiper-text">aₙ = a + (n-1)d, Sₙ = n/2[2a+(n-1)d]. Constant difference between terms</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">GEOMETRIC PROGRESSION</div>
+                        <div class="swiper-text">aₙ = arⁿ⁻¹, Sₙ = a(1-rⁿ)/(1-r), S∞ = a/(1-r) for |r| < 1</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">HARMONIC PROGRESSION</div>
+                        <div class="swiper-text">Reciprocals form AP. No simple nth term formula. HM = n/[∑(1/aᵢ)]</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">SPECIAL SERIES</div>
+                        <div class="swiper-text">∑k = n(n+1)/2, ∑k² = n(n+1)(2n+1)/6, ∑k³ = [n(n+1)/2]²</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">MEAN INEQUALITY</div>
+                        <div class="swiper-text">For positive numbers: AM ≥ GM ≥ HM. Equality when all numbers equal</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">ARITHMETICO-GEOMETRIC</div>
+                        <div class="swiper-text">Combination of AP and GP. Solved by multiply by ratio and subtract</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">METHOD OF DIFFERENCES</div>
+                        <div class="swiper-text">Express term as difference: tₖ = uₖ - uₖ₊₁. Series telescopes</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">APPLICATIONS</div>
+                        <div class="swiper-text">Compound interest (GP), installment payments, population growth, physics problems</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- Summary Section -->
+        <section class="info-panel" data-aos="fade-up">
+            <h2>Chapter Summary & Formulas</h2>
+            
+            <h3>Key Formulas</h3>
+            <div class="concept-cards">
+                <div class="concept-card ap">
+                    <div class="card-title ap">Arithmetic Progression</div>
+                    <div class="formula">aₙ = a + (n-1)d</div>
+                    <div class="formula">Sₙ = n/2[2a+(n-1)d]</div>
+                    <div class="formula">Sₙ = n/2(a+l)</div>
+                    <div class="formula">AM of a,b = (a+b)/2</div>
+                </div>
+
+                <div class="concept-card gp">
+                    <div class="card-title gp">Geometric Progression</div>
+                    <div class="formula">aₙ = arⁿ⁻¹</div>
+                    <div class="formula">Sₙ = a(1-rⁿ)/(1-r)</div>
+                    <div class="formula">S∞ = a/(1-r), |r|&lt;1</div>
+                    <div class="formula">GM of a,b = √(ab)</div>
+                </div>
+
+                <div class="concept-card hp">
+                    <div class="card-title hp">Harmonic Progression</div>
+                    <div class="formula">1/a, 1/(a+d), 1/(a+2d)...</div>
+                    <div class="formula">HM of a,b = 2ab/(a+b)</div>
+                    <div class="formula">AM ≥ GM ≥ HM</div>
+                    <div class="formula">GM² = AM×HM</div>
+                </div>
+            </div>
+
+            <h3>Important Summation Formulas</h3>
+            <div class="formula-grid">
+                <div class="formula-card">
+                    <div class="formula-card-title">Natural Numbers</div>
+                    <div class="formula">∑k = n(n+1)/2</div>
+                    <p>Sum of first n natural numbers</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Squares</div>
+                    <div class="formula">∑k² = n(n+1)(2n+1)/6</div>
+                    <p>Sum of squares of first n natural numbers</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Cubes</div>
+                    <div class="formula">∑k³ = [n(n+1)/2]²</div>
+                    <p>Sum of cubes of first n natural numbers</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Odd Numbers</div>
+                    <div class="formula">∑(2k-1) = n²</div>
+                    <p>Sum of first n odd numbers</p>
+                </div>
+            </div>
+
+            <h3>Important Points for JEE/NEET</h3>
+            <ul>
+                <li>AP: aₙ = a + (n-1)d, Sₙ = n/2[2a+(n-1)d], three terms: a-d, a, a+d</li>
+                <li>GP: aₙ = arⁿ⁻¹, Sₙ = a(1-rⁿ)/(1-r) for r≠1, S∞ = a/(1-r) for |r|&lt;1, three terms: a/r, a, ar</li>
+                <li>HP: Reciprocals form AP, HM = 2ab/(a+b) for two numbers, no simple nth term formula</li>
+                <li>Relation: For two positive numbers, AM ≥ GM ≥ HM, equality when numbers are equal</li>
+                <li>Special sums: ∑k = n(n+1)/2, ∑k² = n(n+1)(2n+1)/6, ∑k³ = [n(n+1)/2]²</li>
+                <li>AGS: Multiply by common ratio and subtract to find sum</li>
+                <li>Telescoping series: Express term as difference of consecutive terms</li>
+                <li>Method of differences: For series where general term is polynomial in n</li>
+                <li>Applications: Compound interest (GP), simple interest (AP), installment payments, population growth</li>
+                <li>Insertion of means: n AMs between a and b form AP with d = (b-a)/(n+1)</li>
+            </ul>
+
+            <div class="important">
+                <p><strong>Common Mistakes to Avoid:</strong></p>
+                <ul>
+                    <li>Using AP formulas for GP or vice versa</li>
+                    <li>Forgetting that HP has no simple nth term formula (work with reciprocals)</li>
+                    <li>Applying S∞ = a/(1-r) when |r| ≥ 1 (series diverges)</li>
+                    <li>Miscalculating number of terms: n = (l-a)/d + 1 for AP</li>
+                    <li>Using wrong formula for sum of squares/cubes</li>
+                    <li>Forgetting that AM ≥ GM ≥ HM applies only to positive numbers</li>
+                    <li>Not checking conditions for existence of infinite GP sum</li>
+                    <li>Miscounting terms when inserting means between two numbers</li>
+                    <li>Using simple interest formula for compound interest problems</li>
+                    <li>Not converting all quantities to same units in application problems</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Nerds Assemble</h3>
+                <p>Master Sequences & Series for JEE & NEET. Build strong foundation in progressions, summations, and real-world applications.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#ap">Arithmetic Progression</a></li>
+                    <li><a href="#gp">Geometric Progression</a></li>
+                    <li><a href="#hp">Harmonic Progression</a></li>
+                    <li><a href="#special">Special Series</a></li>
+                    <li><a href="#applications">Applications</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> 44mr.invisible@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Nerds Assemble. All rights reserved. | Designed for JEE & NEET Aspirants | Sequences & Series - Class 11 Mathematics</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Sequences & Series - JavaScript
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ?
+                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+            }
+
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+
+            function handleScroll() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('active');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                }
+            }
+
+            // Debounced scroll event
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(handleScroll, 50);
+            }, { passive: true });
+
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: window.innerWidth < 768 ? 100 : 120,
+                    easing: 'ease-out-quad'
+                });
+            }
+
+            // Initialize Swiper
+            if (typeof Swiper !== 'undefined') {
+                const swiper = new Swiper('.swiper-container', {
+                    loop: true,
+                    autoplay: {
+                        delay: 3500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 25
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        }
+                    }
+                });
+            }
+
+            // Smooth Scroll for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        if (mainNav && mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                });
+            });
+
+            // Back to Top Button Click
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Create Particles
+            createParticles();
+            
+            // Initialize AP Visualizer
+            generateAP();
+            generateGP();
+        });
+
+        // Create Particles Function
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
+
+            const particleCount = window.innerWidth < 768 ? 20 : 30;
+            particlesContainer.innerHTML = '';
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                const size = Math.random() * 3 + 1;
+                const posX = Math.random() * window.innerWidth;
+                const posY = Math.random() * window.innerHeight;
+                const duration = Math.random() * 15 + 10;
+                const delay = Math.random() * 5;
+
+                particle.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}px;
+                    top: ${posY}px;
+                    opacity: ${Math.random() * 0.3 + 0.1};
+                    animation: float ${duration}s ease-in-out ${delay}s infinite;
+                    background: rgba(255,255,255,0.3);
+                `;
+
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Generate AP Function
+        function generateAP() {
+            const firstTerm = parseFloat(document.getElementById('apFirst').value) || 2;
+            const commonDiff = parseFloat(document.getElementById('apDiff').value) || 3;
+            const numTerms = parseInt(document.getElementById('apTerms').value) || 5;
+            
+            const output = document.getElementById('apOutput');
+            const sumDisplay = document.getElementById('apSum');
+            
+            if (!output) return;
+            
+            output.innerHTML = '';
+            let sum = 0;
+            let sequence = '';
+            
+            for (let i = 0; i < numTerms; i++) {
+                const term = firstTerm + i * commonDiff;
+                sum += term;
+                
+                const termBox = document.createElement('div');
+                termBox.className = 'term-box';
+                termBox.textContent = term;
+                termBox.style.background = `rgba(17, 153, 142, ${0.5 + i * 0.1})`;
+                output.appendChild(termBox);
+                
+                if (i < numTerms - 1) {
+                    const plus = document.createElement('span');
+                    plus.textContent = ' + ';
+                    plus.style.color = 'var(--highlight)';
+                    plus.style.fontWeight = 'bold';
+                    plus.style.margin = '0 5px';
+                    output.appendChild(plus);
+                }
+                
+                sequence += (i > 0 ? ', ' : '') + term;
+            }
+            
+            // Calculate sum using formula
+            const formulaSum = (numTerms / 2) * (2 * firstTerm + (numTerms - 1) * commonDiff);
+            
+            sumDisplay.innerHTML = `
+                <div>Sequence: ${sequence}</div>
+                <div>Sum (S<sub>${numTerms}</sub>) = ${numTerms}/2 × [2×${firstTerm} + (${numTerms}-1)×${commonDiff}] = ${formulaSum}</div>
+            `;
+        }
+
+        // Generate GP Function
+        function generateGP() {
+            const firstTerm = parseFloat(document.getElementById('gpFirst').value) || 3;
+            const commonRatio = parseFloat(document.getElementById('gpRatio').value) || 2;
+            const numTerms = parseInt(document.getElementById('gpTerms').value) || 5;
+            
+            const output = document.getElementById('gpOutput');
+            const sumDisplay = document.getElementById('gpSum');
+            
+            if (!output) return;
+            
+            output.innerHTML = '';
+            let sum = 0;
+            let sequence = '';
+            
+            for (let i = 0; i < numTerms; i++) {
+                const term = firstTerm * Math.pow(commonRatio, i);
+                sum += term;
+                
+                const termBox = document.createElement('div');
+                termBox.className = 'term-box';
+                termBox.textContent = term.toFixed(2);
+                termBox.style.background = `rgba(56, 239, 125, ${0.5 + i * 0.1})`;
+                output.appendChild(termBox);
+                
+                if (i < numTerms - 1) {
+                    const plus = document.createElement('span');
+                    plus.textContent = ' + ';
+                    plus.style.color = 'var(--highlight)';
+                    plus.style.fontWeight = 'bold';
+                    plus.style.margin = '0 5px';
+                    output.appendChild(plus);
+                }
+                
+                sequence += (i > 0 ? ', ' : '') + term.toFixed(2);
+            }
+            
+            // Calculate sum using formula
+            let formulaSum;
+            if (commonRatio === 1) {
+                formulaSum = numTerms * firstTerm;
+            } else {
+                formulaSum = firstTerm * (1 - Math.pow(commonRatio, numTerms)) / (1 - commonRatio);
+            }
+            
+            sumDisplay.innerHTML = `
+                <div>Sequence: ${sequence}</div>
+                <div>Sum (S<sub>${numTerms}</sub>) = ${firstTerm} × (1 - ${commonRatio}<sup>${numTerms}</sup>) / (1 - ${commonRatio}) = ${formulaSum.toFixed(2)}</div>
+            `;
+        }
+
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(createParticles, 250);
+        });
+    </script>
+</body>
+</html>
