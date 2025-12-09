@@ -1,0 +1,3182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKVRN3GREN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKVRN3GREN');
+</script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Inequalities | Class 11 Maths | JEE Preparation</title>
+    <meta name="description" content="Master Linear Inequalities for Class 11 Mathematics. Complete guide for JEE & NEET aspirants with graphical solutions, systems, linear programming, and problem-solving strategies.">
+    <meta name="keywords" content="Linear Inequalities, Inequality Solving, Graphical Method, Linear Programming, Class 11 Maths, JEE Maths, NEET Maths, Optimization, Feasible Region">
+    <meta name="author" content="Nerds Assemble">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Linear Inequalities | Class 11 Mathematics">
+    <meta property="og:description" content="Complete guide to Linear Inequalities for JEE & NEET aspirants">
+    <meta property="og:type" content="website">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Pacifico&family=Dancing+Script:wght@700&family=Abril+Fatface&family=Playfair+Display:wght@700&family=Raleway:wght@300;800&family=Quicksand:wght@500&family=Poiret+One&family=Amatic+SC:wght@700&family=Caveat:wght@700&family=Kaushan+Script&family=Libre+Baskerville&family=Merriweather&family=Nunito:wght@800&family=Oswald:wght@500&family=Roboto+Slab:wght@700&family=Sacramento&family=Tangerine:wght@700&family=Yeseva+One&family=Electrolize&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    
+     <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/planet-universe-svgrepo-com.svg">
+    
+    <style>
+        /* Linear Inequalities - Nerds Assemble CSS */
+        :root {
+            --primary: #ff416c;
+            --secondary: #ff4b2b;
+            --tertiary: #1d8a99;
+            --bg: #0a0a20;
+            --text: #ffffff;
+            --highlight: #00ff9d;
+            --nav-bg: rgba(10, 5, 30, 0.95);
+            --inequality-gradient: linear-gradient(45deg, #ff416c, #ff4b2b);
+            --graphical-gradient: linear-gradient(45deg, #ff4b2b, #1d8a99);
+            --programming-gradient: linear-gradient(45deg, #1d8a99, #ff416c);
+        }
+
+        /* Base Styles & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overscroll-behavior-y: contain;
+            -webkit-overflow-scrolling: touch;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(255, 65, 108, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(29, 138, 153, 0.1) 0%, transparent 20%),
+                linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--tertiary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(255, 65, 108, 0.5);
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--highlight);
+            margin: 2rem 0 1.5rem;
+            font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-family: 'Roboto Slab', serif;
+            color: var(--secondary);
+            margin: 1.5rem 0 1rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+        }
+
+        p {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+        }
+
+        /* Layout Components */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            flex: 1;
+            padding: 0 1rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Raleway', sans-serif;
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            transform: translateZ(0);
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            color: var(--highlight);
+            font-size: 1.6rem;
+        }
+
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.4rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Electrolize', sans-serif;
+            font-size: 0.95rem;
+            transition: color 0.2s ease-out;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--highlight);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--highlight);
+            transition: width 0.2s ease-out;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* Content Panels */
+        .info-panel {
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
+            padding: 1.8rem;
+            margin: 1.8rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: translateZ(0);
+            will-change: transform, opacity;
+        }
+
+        .info-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%),
+                linear-gradient(-45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%);
+            background-size: 20px 20px;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        /* Special Content Blocks */
+        .important {
+            background: rgba(255, 75, 43, 0.1);
+            border-left: 4px solid var(--secondary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(255, 75, 43, 0.1);
+        }
+
+        .definition {
+            background: rgba(255, 65, 108, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(255, 65, 108, 0.1);
+        }
+
+        .formula {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin: 1.2rem 0;
+            padding: 1.2rem;
+            background: rgba(0, 255, 157, 0.1);
+            border-radius: 8px;
+            border: 1px dashed var(--highlight);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.1rem;
+        }
+
+        .formula::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, transparent 45%, rgba(0, 255, 157, 0.1) 50%, transparent 55%);
+            background-size: 10px 10px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .example {
+            background: rgba(29, 138, 153, 0.1);
+            border-left: 4px solid var(--tertiary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Lists & Tables */
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 1.8rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background-color: rgba(255, 65, 108, 0.2);
+            font-family: 'Electrolize', sans-serif;
+            color: var(--highlight);
+            font-size: 0.95rem;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+
+        tr:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* Concept Cards */
+        .concept-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .concept-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(255, 65, 108, 0.2);
+        }
+
+        .concept-card.inequality {
+            border-top: 4px solid var(--primary);
+        }
+
+        .concept-card.graphical {
+            border-top: 4px solid var(--secondary);
+        }
+
+        .concept-card.programming {
+            border-top: 4px solid var(--tertiary);
+        }
+
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title.inequality { color: var(--primary); }
+        .card-title.graphical { color: var(--secondary); }
+        .card-title.programming { color: var(--tertiary); }
+
+        /* Swiper Carousel */
+        .swiper-container {
+            width: 100%;
+            height: auto;
+            min-height: 180px;
+            margin: 2.5rem 0;
+            will-change: transform;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .swiper-slide {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+            font-family: 'Electrolize', sans-serif;
+            padding: 1.2rem;
+            box-sizing: border-box;
+            text-align: center;
+            min-height: 180px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-out;
+            transform: translateZ(0);
+            height: auto;
+        }
+
+        .swiper-slide:hover {
+            transform: translateY(-5px);
+        }
+
+        .swiper-slide div {
+            width: 100%;
+        }
+
+        .swiper-title {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin-bottom: 0.5rem;
+            font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+        }
+
+        .swiper-text {
+            font-family: 'Quicksand', sans-serif;
+            font-size: clamp(0.85rem, 1.1vw, 1rem);
+        }
+
+        /* Swiper Navigation */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: var(--highlight);
+            background: rgba(0, 0, 0, 0.5);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            backdrop-filter: blur(10px);
+            margin-top: -17.5px;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .swiper-pagination-bullet {
+            background: var(--text);
+            opacity: 0.5;
+            width: 8px;
+            height: 8px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: var(--highlight);
+            opacity: 1;
+        }
+
+        /* Problem Solving Section */
+        .problem-solving {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .problem-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .problem-title {
+            color: var(--secondary);
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Particles Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            will-change: transform;
+            opacity: 0.3;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .footer-column h3 {
+            color: var(--highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            transition: color 0.2s ease-out;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--highlight);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text);
+            font-size: 1.1rem;
+            transition: color 0.2s ease-out;
+        }
+
+        .social-links a:hover {
+            color: var(--highlight);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 1.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Quicksand', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease-out;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(255, 65, 108, 0.3);
+            transform: translateZ(0);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--highlight);
+            transform: translateY(-5px);
+        }
+
+        /* JEE/NEET Specific Styling */
+        .exam-highlight {
+            background: rgba(255, 235, 0, 0.1);
+            border: 2px solid var(--highlight);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .exam-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--highlight);
+            color: var(--bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(10px, 10px); }
+            50% { transform: translate(-5px, 15px); }
+            75% { transform: translate(5px, -5px); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        /* Linear Inequalities Specific */
+        .inequality-visual {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .inequality-box {
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary);
+            color: white;
+            border-radius: 8px;
+            font-family: 'Audiowide', cursive;
+            font-size: 1rem;
+            box-shadow: 0 4px 10px rgba(255, 65, 108, 0.3);
+        }
+
+        .inequality-sign {
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--tertiary);
+            color: var(--bg);
+            border-radius: 6px;
+            font-family: 'Audiowide', cursive;
+            font-size: 1.2rem;
+            margin: 0.2rem;
+            font-weight: bold;
+            min-width: 40px;
+        }
+
+        .coefficient-box {
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--secondary);
+            color: var(--bg);
+            border-radius: 6px;
+            font-family: 'Audiowide', cursive;
+            font-size: 0.9rem;
+            margin: 0.2rem;
+            font-weight: bold;
+        }
+
+        /* Graphical Visualizer */
+        .graph-container {
+            width: 100%;
+            height: 400px;
+            margin: 2rem 0;
+            position: relative;
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .coordinate-plane {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .axis {
+            position: absolute;
+            background: rgba(255,255,255,0.7);
+        }
+
+        .x-axis {
+            width: 100%;
+            height: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .y-axis {
+            width: 2px;
+            height: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .grid-line {
+            position: absolute;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .grid-line.horizontal {
+            width: 100%;
+            height: 1px;
+        }
+
+        .grid-line.vertical {
+            width: 1px;
+            height: 100%;
+        }
+
+        /* Feasible Region Visual */
+        .feasible-region {
+            position: absolute;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        /* Formula Grid */
+        .formula-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .formula-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .formula-card-title {
+            color: var(--highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        /* Inequality Solver */
+        .solver {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .solver-inputs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-group label {
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+            font-family: 'Electrolize', sans-serif;
+        }
+
+        .input-group input, .input-group select {
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid var(--primary);
+            background: rgba(0,0,0,0.3);
+            color: white;
+            font-family: 'Audiowide', cursive;
+        }
+
+        .solver-controls {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+
+        .solve-btn {
+            padding: 0.5rem 1rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Orbitron', sans-serif;
+            transition: background 0.3s;
+        }
+
+        .solve-btn:hover {
+            background: var(--secondary);
+        }
+
+        .solver-result {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: rgba(0,0,0,0.3);
+            border-radius: 5px;
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            min-height: 60px;
+        }
+
+        /* Linear Programming Visual */
+        .lp-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .lp-problem {
+            background: rgba(255,255,255,0.05);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        /* Inequality Chain Visual */
+        .inequality-chain {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+        }
+
+        /* Number Line Visual */
+        .number-line-container {
+            width: 100%;
+            height: 80px;
+            margin: 1.5rem 0;
+            position: relative;
+            background: rgba(0,0,0,0.3);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .number-line {
+            position: absolute;
+            width: 90%;
+            height: 4px;
+            background: var(--secondary);
+            top: 50%;
+            left: 5%;
+            transform: translateY(-50%);
+        }
+
+        .number-tick {
+            position: absolute;
+            width: 2px;
+            height: 10px;
+            background: var(--text);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .number-label {
+            position: absolute;
+            color: var(--highlight);
+            font-family: 'Audiowide', cursive;
+            font-size: 0.8rem;
+            top: 60%;
+            transform: translateX(-50%);
+        }
+
+        .solution-interval {
+            position: absolute;
+            height: 20px;
+            background: rgba(0, 255, 157, 0.3);
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 3px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background-image:
+                    radial-gradient(circle at 10% 20%, rgba(255, 65, 108, 0.05) 0%, transparent 20%),
+                    linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+            }
+
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                margin-top: 1rem;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.75rem 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            header, .info-panel {
+                backdrop-filter: blur(5px);
+            }
+
+            .container {
+                width: 95%;
+                padding: 0;
+            }
+
+            .info-panel {
+                padding: 1.5rem;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            th, td {
+                padding: 0.5rem;
+                font-size: 0.85rem;
+            }
+
+            .concept-cards, .problem-solving {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none;
+            }
+
+            .formula-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .inequality-box {
+                font-size: 0.9rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            .graph-container {
+                height: 300px;
+            }
+
+            .lp-visual {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .solver-inputs {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-panel {
+                padding: 1rem;
+            }
+
+            ul, ol {
+                padding-left: 1.5rem;
+            }
+
+            .formula {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+
+            .swiper-slide {
+                padding: 1rem;
+            }
+
+            .inequality-box {
+                font-size: 0.8rem;
+                padding: 0.3rem 0.6rem;
+            }
+
+            .graph-container {
+                height: 250px;
+            }
+
+            .inequality-sign {
+                font-size: 1rem;
+                min-width: 30px;
+            }
+        }
+
+        /* Inequality Symbol Styling */
+        .inequality-symbol {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--highlight);
+            margin: 0 0.5rem;
+        }
+
+        /* Half-plane Visual */
+        .half-plane-demo {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .half-plane {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            border: 2px solid var(--tertiary);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .half-plane-fill {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.3;
+        }
+
+        /* Corner Point Highlight */
+        .corner-point {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--highlight);
+            border: 2px solid white;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-less-than-equal"></i></span>
+                <span class="logo-text">Nerds Assemble</span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#algebraic">Algebraic Solutions</a></li>
+                    <li><a href="#graphical">Graphical Method</a></li>
+                    <li><a href="#systems">Systems of Inequalities</a></li>
+                    <li><a href="#programming">Linear Programming</a></li>
+                    <li><a href="#applications">Applications</a></li>
+                    <li><a href="#problems">Problems</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="page-header" data-aos="fade-down">
+            <h1>Linear Inequalities</h1>
+            <p class="subtitle">Class 11 Mathematics | JEE & NEET Preparation Guide</p>
+            <p>Master linear inequalities, graphical solutions, and linear programming - from basic concepts to optimization problems in economics and management</p>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="info-panel" id="introduction" data-aos="fade-up">
+            <h2>Introduction to Linear Inequalities</h2>
+            <p>Linear inequalities are mathematical expressions comparing two quantities using inequality symbols. They form the foundation for optimization problems, decision-making, and various real-world applications.</p>
+
+            <div class="definition">
+                <p><strong>Linear Inequality:</strong> An inequality that can be written in the form ax + b &lt; 0, ax + b ≤ 0, ax + b > 0, or ax + b ≥ 0, where a and b are real numbers and a ≠ 0.</p>
+                <p>For two variables: ax + by &lt; c, ax + by ≤ c, ax + by > c, or ax + by ≥ c</p>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card inequality" data-aos="flip-left">
+                    <div class="card-title inequality"><i class="fas fa-not-equal"></i> Inequality Symbols</div>
+                    <p>Four basic inequality symbols: &lt; (less than), > (greater than), ≤ (less than or equal), ≥ (greater than or equal)</p>
+                    <div class="formula">&lt; , > , ≤ , ≥</div>
+                </div>
+
+                <div class="concept-card graphical" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-title graphical"><i class="fas fa-chart-line"></i> Graphical Solution</div>
+                    <p>Representing inequalities on coordinate plane as half-planes</p>
+                    <div class="formula">ax + by ≤ c → Half-plane including boundary</div>
+                </div>
+
+                <div class="concept-card programming" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card-title programming"><i class="fas fa-calculator"></i> Linear Programming</div>
+                    <p>Optimizing linear objective function subject to linear constraints</p>
+                    <div class="formula">Maximize/Minimize: z = ax + by</div>
+                </div>
+            </div>
+
+            <!-- Visual Example -->
+            <div class="inequality-visual">
+                <h3>Visual Comparison: Inequality Symbols</h3>
+                <div class="inequality-chain">
+                    <div class="inequality-box">-5</div>
+                    <div class="inequality-sign">&lt;</div>
+                    <div class="inequality-box">-2</div>
+                    <div class="inequality-sign">&lt;</div>
+                    <div class="inequality-box">0</div>
+                    <div class="inequality-sign">&lt;</div>
+                    <div class="inequality-box">3</div>
+                    <div class="inequality-sign">&lt;</div>
+                    <div class="inequality-box">7</div>
+                </div>
+                <p style="margin: 1rem 0; color: var(--primary);">Reading from left to right: -5 is less than -2, -2 is less than 0, etc.</p>
+                
+                <div class="inequality-chain" style="margin-top: 1.5rem;">
+                    <div class="coefficient-box">2</div>
+                    <div class="inequality-box">x</div>
+                    <div class="inequality-sign">+</div>
+                    <div class="coefficient-box">3</div>
+                    <div class="inequality-box">y</div>
+                    <div class="inequality-sign">≤</div>
+                    <div class="inequality-box">12</div>
+                </div>
+                <p style="margin: 1rem 0; color: var(--secondary);">Linear inequality in two variables: 2x + 3y ≤ 12</p>
+            </div>
+
+            <div class="important">
+                <p><strong>Basic Properties of Inequalities:</strong></p>
+                <ul>
+                    <li><strong>Addition/Subtraction:</strong> If a &lt; b, then a ± c &lt; b ± c</li>
+                    <li><strong>Multiplication by positive number:</strong> If a &lt; b and c > 0, then ac &lt; bc</li>
+                    <li><strong>Multiplication by negative number:</strong> If a &lt; b and c &lt; 0, then ac > bc (sign reverses!)</li>
+                    <li><strong>Division by positive number:</strong> If a &lt; b and c > 0, then a/c &lt; b/c</li>
+                    <li><strong>Division by negative number:</strong> If a &lt; b and c &lt; 0, then a/c > b/c (sign reverses!)</li>
+                    <li><strong>Transitivity:</strong> If a &lt; b and b &lt; c, then a &lt; c</li>
+                    <li><strong>Trichotomy:</strong> For any two real numbers a and b, exactly one is true: a &lt; b, a = b, or a > b</li>
+                </ul>
+            </div>
+
+            <!-- Number Line Visualizer -->
+            <div class="inequality-visual">
+                <h3>Number Line Representation</h3>
+                <div class="number-line-container" id="numberLine">
+                    <!-- Number line will be generated by JavaScript -->
+                </div>
+                <div style="margin-top: 1rem;">
+                    <button class="solve-btn" onclick="plotInequalityOnNumberLine('x < 3')">x &lt; 3</button>
+                    <button class="solve-btn" onclick="plotInequalityOnNumberLine('x ≥ -2')">x ≥ -2</button>
+                    <button class="solve-btn" onclick="plotInequalityOnNumberLine('-1 ≤ x < 4')">-1 ≤ x &lt; 4</button>
+                    <button class="solve-btn" onclick="clearNumberLine()">Clear</button>
+                </div>
+                <p style="margin-top: 1rem; color: var(--tertiary); font-size: 0.9rem;">
+                    Click buttons to visualize different inequalities on the number line
+                </p>
+            </div>
+        </section>
+
+        <!-- Algebraic Solutions Section -->
+        <section class="info-panel" id="algebraic" data-aos="fade-up">
+            <h2>Algebraic Solutions of Linear Inequalities</h2>
+            <p>Solving linear inequalities algebraically involves isolating the variable using properties of inequalities, with careful attention to sign reversal when multiplying/dividing by negative numbers.</p>
+
+            <div class="definition">
+                <p><strong>Solution of Inequality:</strong> A value (or set of values) that makes the inequality true when substituted for the variable.</p>
+                <p><strong>Solution Set:</strong> The set of all solutions of an inequality, often expressed using interval notation or set-builder notation.</p>
+            </div>
+
+            <div class="formula">
+                For inequality ax + b &lt; c:<br>
+                Solution: x &lt; (c - b)/a if a > 0, or x > (c - b)/a if a &lt; 0
+            </div>
+            <p><strong>Key Point:</strong> When multiplying or dividing by a negative number, reverse the inequality sign!</p>
+
+            <div class="formula-grid">
+                <div class="formula-card">
+                    <div class="formula-card-title">Linear Inequality in One Variable</div>
+                    <div class="formula">ax + b &lt; c</div>
+                    <div class="formula">Solution: x &lt; (c-b)/a (if a>0)</div>
+                    <p>Reverse sign if multiplying/dividing by negative</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Quadratic Inequality</div>
+                    <div class="formula">ax² + bx + c &lt; 0</div>
+                    <p>Find roots, test intervals, or use sign chart</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Rational Inequality</div>
+                    <div class="formula">(ax+b)/(cx+d) &lt; 0</div>
+                    <p>Find critical points, test intervals</p>
+                </div>
+            </div>
+
+            <!-- Inequality Solver -->
+            <div class="solver">
+                <h3>Linear Inequality Solver</h3>
+                <div class="solver-inputs">
+                    <div class="input-group">
+                        <label>Coefficient of x (a)</label>
+                        <input type="number" id="coeffA" placeholder="Enter a" value="2" step="any">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Constant term (b)</label>
+                        <input type="number" id="constB" placeholder="Enter b" value="3" step="any">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Right side (c)</label>
+                        <input type="number" id="rightC" placeholder="Enter c" value="12" step="any">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Inequality Sign</label>
+                        <select id="inequalitySign">
+                            <option value="<">&lt; (less than)</option>
+                            <option value="≤">≤ (less than or equal)</option>
+                            <option value=">">> (greater than)</option>
+                            <option value="≥">≥ (greater than or equal)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="solver-controls">
+                    <button class="solve-btn" onclick="solveLinearInequality()"><i class="fas fa-calculator"></i> Solve Inequality</button>
+                    <button class="solve-btn" onclick="clearSolver()">Clear</button>
+                </div>
+
+                <div class="solver-result" id="solverResult">
+                    Solution will appear here
+                </div>
+            </div>
+
+            <h3>Step-by-Step Solution Process</h3>
+            <div class="example">
+                <div class="example-title">Example: Solving 3 - 2x ≤ 7</div>
+                <p><strong>Step 1:</strong> Write the inequality: 3 - 2x ≤ 7</p>
+                <p><strong>Step 2:</strong> Subtract 3 from both sides: -2x ≤ 7 - 3</p>
+                <p><strong>Step 3:</strong> Simplify: -2x ≤ 4</p>
+                <p><strong>Step 4:</strong> Divide both sides by -2 (reverse sign!): x ≥ 4/(-2)</p>
+                <p><strong>Step 5:</strong> Simplify: x ≥ -2</p>
+                <p><strong>Step 6:</strong> Solution set: {x ∈ ℝ : x ≥ -2} or in interval notation: [-2, ∞)</p>
+                <p><strong>Graphical representation:</strong> On number line, closed circle at -2, shaded to the right</p>
+            </div>
+
+            <h3>Interval Notation</h3>
+            <table>
+                <tr>
+                    <th>Inequality</th>
+                    <th>Interval Notation</th>
+                    <th>Description</th>
+                    <th>Number Line</th>
+                </tr>
+                <tr>
+                    <td>x > a</td>
+                    <td>(a, ∞)</td>
+                    <td>Open interval, excludes a</td>
+                    <td>Open circle at a, shaded right</td>
+                </tr>
+                <tr>
+                    <td>x ≥ a</td>
+                    <td>[a, ∞)</td>
+                    <td>Closed interval, includes a</td>
+                    <td>Closed circle at a, shaded right</td>
+                </tr>
+                <tr>
+                    <td>x &lt; a</td>
+                    <td>(-∞, a)</td>
+                    <td>Open interval, excludes a</td>
+                    <td>Open circle at a, shaded left</td>
+                </tr>
+                <tr>
+                    <td>x ≤ a</td>
+                    <td>(-∞, a]</td>
+                    <td>Closed interval, includes a</td>
+                    <td>Closed circle at a, shaded left</td>
+                </tr>
+                <tr>
+                    <td>a &lt; x &lt; b</td>
+                    <td>(a, b)</td>
+                    <td>Open interval between a and b</td>
+                    <td>Open circles at a and b, shaded between</td>
+                </tr>
+                <tr>
+                    <td>a ≤ x ≤ b</td>
+                    <td>[a, b]</td>
+                    <td>Closed interval between a and b</td>
+                    <td>Closed circles at a and b, shaded between</td>
+                </tr>
+                <tr>
+                    <td>a ≤ x &lt; b</td>
+                    <td>[a, b)</td>
+                    <td>Half-open interval</td>
+                    <td>Closed at a, open at b, shaded between</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Special Cases and Important Rules:</strong></p>
+                <ul>
+                    <li>When multiplying/dividing by negative number: REVERSE the inequality sign</li>
+                    <li>Inequalities like x² &lt; a² simplify to -a &lt; x &lt; a (for a > 0)</li>
+                    <li>For inequalities involving absolute value: |x| &lt; a ⇔ -a &lt; x &lt; a (for a > 0)</li>
+                    <li>For inequalities involving absolute value: |x| > a ⇔ x &lt; -a or x > a (for a > 0)</li>
+                    <li>When solving rational inequalities, exclude values that make denominator zero</li>
+                    <li>For quadratic inequalities: Find roots, then test values in each interval</li>
+                    <li>Compound inequalities: Solve each part separately, then take intersection</li>
+                    <li>When both sides are multiplied/divided by variable expression, consider positive and negative cases separately</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Quadratic Inequality</div>
+                <p>Solve: x² - 3x - 4 ≤ 0</p>
+                <p><strong>Solution:</strong></p>
+                <p><strong>Step 1:</strong> Find roots: x² - 3x - 4 = 0 ⇒ (x-4)(x+1) = 0 ⇒ x = -1, 4</p>
+                <p><strong>Step 2:</strong> Plot roots on number line, creating intervals: (-∞, -1), (-1, 4), (4, ∞)</p>
+                <p><strong>Step 3:</strong> Test a value from each interval:</p>
+                <p>• Interval (-∞, -1): Test x = -2 ⇒ (-2)² - 3(-2) - 4 = 4 + 6 - 4 = 6 > 0</p>
+                <p>• Interval (-1, 4): Test x = 0 ⇒ 0² - 3(0) - 4 = -4 &lt; 0 ✓</p>
+                <p>• Interval (4, ∞): Test x = 5 ⇒ 5² - 3(5) - 4 = 25 - 15 - 4 = 6 > 0</p>
+                <p><strong>Step 4:</strong> We want x² - 3x - 4 ≤ 0 (non-positive), so choose intervals where expression ≤ 0</p>
+                <p>At x = -1 and x = 4, expression = 0 (included since ≤)</p>
+                <p><strong>Step 5:</strong> Solution: -1 ≤ x ≤ 4, or in interval notation: [-1, 4]</p>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE TIP</div>
+                <h4>Inequality Solving Strategies</h4>
+                <p>• For linear: Isolate variable, remember sign reversal with negative multiplication/division</p>
+                <p>• For quadratic: Factor, find roots, use sign chart or wavy curve method</p>
+                <p>• For rational: Find critical points (zeros and undefined points), test intervals</p>
+                <p>• For absolute value: Consider cases based on definition of absolute value</p>
+                <p>• For compound: Solve each inequality separately, then find intersection</p>
+                <p>• Always check endpoints for inclusion/exclusion in final answer</p>
+            </div>
+        </section>
+
+        <!-- Graphical Method Section -->
+        <section class="info-panel" id="graphical" data-aos="fade-up">
+            <h2>Graphical Method for Linear Inequalities</h2>
+            <p>The graphical method represents linear inequalities in two variables as half-planes in the coordinate plane, with the boundary line separating the solution region from the non-solution region.</p>
+
+            <div class="definition">
+                <p><strong>Graphical Representation:</strong> For inequality ax + by &lt; c or ax + by > c:</p>
+                <p>• Draw boundary line ax + by = c (dashed for &lt; or >, solid for ≤ or ≥)<br>
+                • Test a point (usually origin if not on line) to determine which half-plane satisfies inequality<br>
+                • Shade the half-plane that contains the solutions</p>
+            </div>
+
+            <!-- Graphical Visualizer -->
+            <div class="inequality-visual">
+                <h3>Graphical Inequality Visualizer</h3>
+                <div class="graph-container" id="graphContainer">
+                    <div class="coordinate-plane">
+                        <!-- Grid and graph will be generated by JavaScript -->
+                    </div>
+                </div>
+                <div class="solver-inputs" style="margin-top: 1rem;">
+                    <div class="input-group">
+                        <label>Coefficient of x (a)</label>
+                        <input type="number" id="graphA" placeholder="Enter a" value="2" step="any">
+                    </div>
+                    <div class="input-group">
+                        <label>Coefficient of y (b)</label>
+                        <input type="number" id="graphB" placeholder="Enter b" value="3" step="any">
+                    </div>
+                    <div class="input-group">
+                        <label>Constant (c)</label>
+                        <input type="number" id="graphC" placeholder="Enter c" value="12" step="any">
+                    </div>
+                    <div class="input-group">
+                        <label>Inequality</label>
+                        <select id="graphInequality">
+                            <option value="<">ax + by &lt; c</option>
+                            <option value="≤">ax + by ≤ c</option>
+                            <option value=">">ax + by > c</option>
+                            <option value="≥">ax + by ≥ c</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="solver-controls">
+                    <button class="solve-btn" onclick="plotLinearInequality()">Plot Inequality</button>
+                    <button class="solve-btn" onclick="clearGraph()">Clear Graph</button>
+                    <button class="solve-btn" onclick="addExampleInequality()">Add Example</button>
+                </div>
+                <div id="graphInfo" style="margin-top: 1rem; color: var(--highlight); font-family: 'Audiowide', cursive;"></div>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Boundary Line</div>
+                    <p>Line ax + by = c separates plane into two half-planes</p>
+                    <div class="formula">For ≤ or ≥: Solid line (included)<br>For &lt; or >: Dashed line (not included)</div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Test Point Method</div>
+                    <p>Use (0,0) if not on line, otherwise use (1,0) or (0,1)</p>
+                    <div class="formula">If test point satisfies inequality, shade that half-plane</div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Half-Plane</div>
+                    <p>Region on one side of boundary line</p>
+                    <div class="formula">Solution set is always a half-plane (or intersection of half-planes for systems)</div>
+                </div>
+            </div>
+
+            <h3>Step-by-Step Graphical Method</h3>
+            <ol>
+                <li><strong>Convert to equation:</strong> Replace inequality sign with = to get boundary line equation</li>
+                <li><strong>Draw boundary line:</strong> Find intercepts or use slope-intercept form
+                    <ul>
+                        <li>x-intercept: Set y=0, solve for x</li>
+                        <li>y-intercept: Set x=0, solve for y</li>
+                    </ul>
+                </li>
+                <li><strong>Line style:</strong> Solid line for ≤ or ≥ (boundary included), dashed line for &lt; or > (boundary not included)</li>
+                <li><strong>Test point:</strong> Choose a point not on the line (usually (0,0) if not on line)
+                    <ul>
+                        <li>If test point satisfies inequality, shade that half-plane</li>
+                        <li>If test point doesn't satisfy inequality, shade the opposite half-plane</li>
+                    </ul>
+                </li>
+                <li><strong>Shade region:</strong> Shade the half-plane containing all solutions</li>
+            </ol>
+
+            <div class="half-plane-demo">
+                <div class="half-plane">
+                    <div class="half-plane-fill" style="background: var(--primary); right: 0;"></div>
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-weight: bold;">ax + by &lt; c</div>
+                </div>
+                <div style="text-align: center;">
+                    <div class="inequality-sign" style="display: inline-block;">&lt;</div>
+                    <div style="margin-top: 0.5rem; color: var(--secondary);">Strict inequality:<br>Dashed boundary line</div>
+                </div>
+                <div class="half-plane">
+                    <div class="half-plane-fill" style="background: var(--tertiary);"></div>
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-weight: bold;">ax + by ≤ c</div>
+                </div>
+                <div style="text-align: center;">
+                    <div class="inequality-sign" style="display: inline-block;">≤</div>
+                    <div style="margin-top: 0.5rem; color: var(--secondary);">Non-strict inequality:<br>Solid boundary line</div>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Key Points for Graphical Method:</strong></p>
+                <ul>
+                    <li>The solution set of a linear inequality in two variables is always a half-plane</li>
+                    <li>Boundary line: ax + by = c</li>
+                    <li>Solid line: Boundary included in solution (≤ or ≥)</li>
+                    <li>Dashed line: Boundary not included in solution (&lt; or >)</li>
+                    <li>Test point: Use (0,0) if it's not on the boundary line</li>
+                    <li>If (0,0) is on the boundary line, use another point like (1,0) or (0,1)</li>
+                    <li>Shading: The half-plane containing the test point if it satisfies the inequality</li>
+                    <li>For vertical lines x = a: x &lt; a is left half-plane, x > a is right half-plane</li>
+                    <li>For horizontal lines y = b: y &lt; b is lower half-plane, y > b is upper half-plane</li>
+                    <li>Always label axes and indicate scale</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Graphical Solution of 2x + 3y ≤ 12</div>
+                <p><strong>Step 1:</strong> Boundary line: 2x + 3y = 12</p>
+                <p><strong>Step 2:</strong> Find intercepts:
+                    <br>• x-intercept: Set y=0 ⇒ 2x = 12 ⇒ x = 6 ⇒ Point (6, 0)
+                    <br>• y-intercept: Set x=0 ⇒ 3y = 12 ⇒ y = 4 ⇒ Point (0, 4)
+                </p>
+                <p><strong>Step 3:</strong> Draw line through (6,0) and (0,4). Since inequality is ≤, line is solid.</p>
+                <p><strong>Step 4:</strong> Test point: Use (0,0) ⇒ 2(0) + 3(0) = 0 ≤ 12 ✓ (satisfies)</p>
+                <p><strong>Step 5:</strong> Since (0,0) satisfies inequality, shade the half-plane containing (0,0).</p>
+                <p><strong>Step 6:</strong> The solution region is the half-plane below and including the line 2x + 3y = 12.</p>
+                <p><strong>Verification:</strong> Test point (3,1): 2(3) + 3(1) = 6 + 3 = 9 ≤ 12 ✓ (in shaded region)
+                    <br>Test point (4,3): 2(4) + 3(3) = 8 + 9 = 17 ≤ 12 ✗ (not in shaded region)
+                </p>
+            </div>
+        </section>
+
+        <!-- Systems of Inequalities Section -->
+        <section class="info-panel" id="systems" data-aos="fade-up">
+            <h2>Systems of Linear Inequalities</h2>
+            <p>A system of linear inequalities consists of two or more linear inequalities in the same variables. The solution is the intersection of the solution sets of all inequalities in the system.</p>
+
+            <div class="definition">
+                <p><strong>System of Linear Inequalities:</strong> A set of two or more linear inequalities in the same variables.</p>
+                <p><strong>Solution:</strong> Ordered pair (x, y) that satisfies ALL inequalities in the system simultaneously.</p>
+                <p><strong>Feasible Region:</strong> The intersection of all solution half-planes, representing all solutions of the system.</p>
+            </div>
+
+            <!-- System Visualizer -->
+            <div class="inequality-visual">
+                <h3>System of Inequalities Visualizer</h3>
+                <div class="graph-container" id="systemGraph">
+                    <div class="coordinate-plane">
+                        <!-- System graph will be generated by JavaScript -->
+                    </div>
+                </div>
+                <div style="margin-top: 1rem;">
+                    <button class="solve-btn" onclick="plotSystemExample1()">Example 1: Basic System</button>
+                    <button class="solve-btn" onclick="plotSystemExample2()">Example 2: Bounded Region</button>
+                    <button class="solve-btn" onclick="plotSystemExample3()">Example 3: Unbounded Region</button>
+                    <button class="solve-btn" onclick="clearSystemGraph()">Clear</button>
+                </div>
+                <div id="systemInfo" style="margin-top: 1rem; color: var(--highlight); font-family: 'Audiowide', cursive;"></div>
+            </div>
+
+            <h3>Solving Systems Graphically</h3>
+            <ol>
+                <li><strong>Graph each inequality:</strong> Treat each inequality separately
+                    <ul>
+                        <li>Graph boundary line (solid/dashed as appropriate)</li>
+                        <li>Shade the solution half-plane for each inequality</li>
+                    </ul>
+                </li>
+                <li><strong>Find intersection:</strong> The feasible region is where ALL shaded regions overlap</li>
+                <li><strong>Identify feasible region:</strong> This is the solution set of the system
+                    <ul>
+                        <li>Bounded: Region is enclosed (polygon)</li>
+                        <li>Unbounded: Region extends infinitely in at least one direction</li>
+                        <li>Empty: No overlap (no solution)</li>
+                    </ul>
+                </li>
+                <li><strong>Find corner points:</strong> Vertices of the feasible region (where boundary lines intersect)</li>
+            </ol>
+
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Feasible Region</div>
+                    <p>Intersection of all solution half-planes</p>
+                    <div class="formula">S = S₁ ∩ S₂ ∩ ... ∩ Sₙ</div>
+                    <div class="example">
+                        <p>Can be bounded (polygon) or unbounded</p>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Corner Points</div>
+                    <p>Vertices of feasible region polygon</p>
+                    <div class="formula">Solve boundary line equations simultaneously</div>
+                    <div class="example">
+                        <p>Important for linear programming optimization</p>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Bounded vs Unbounded</div>
+                    <p>Classification of feasible region</p>
+                    <div class="formula">Bounded: Can be enclosed in circle<br>Unbounded: Extends infinitely</div>
+                </div>
+            </div>
+
+            <h3>Types of Feasible Regions</h3>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Characteristics</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Bounded</td>
+                    <td>Feasible region is enclosed polygon</td>
+                    <td>Finite area, all corner points exist</td>
+                    <td>x≥0, y≥0, x+y≤10</td>
+                </tr>
+                <tr>
+                    <td>Unbounded</td>
+                    <td>Region extends infinitely</td>
+                    <td>Infinite area, may have finite optimal solution</td>
+                    <td>x≥0, y≥0, x+y≥5</td>
+                </tr>
+                <tr>
+                    <td>Empty</td>
+                    <td>No feasible solution</td>
+                    <td>Constraints are inconsistent</td>
+                    <td>x≥5, x≤3</td>
+                </tr>
+                <tr>
+                    <td>Single Point</td>
+                    <td>Feasible region is a single point</td>
+                    <td>All constraints intersect at one point</td>
+                    <td>x+y=5, x-y=1, 2x+y=8</td>
+                </tr>
+                <tr>
+                    <td>Line Segment</td>
+                    <td>Feasible region is a line segment</td>
+                    <td>Two parallel constraints with equality</td>
+                    <td>x+y≤5, x+y≥5, x≥0, y≥0</td>
+                </tr>
+                <tr>
+                    <td>Ray</td>
+                    <td>Feasible region is a ray</td>
+                    <td>Unbounded in one direction along a line</td>
+                    <td>y≥x, x≥0, y≥0</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Properties of Systems of Inequalities:</strong></p>
+                <ul>
+                    <li>The solution set of a system is the intersection of solution sets of individual inequalities</li>
+                    <li>If the system has no feasible region (empty intersection), it has no solution</li>
+                    <li>For a system of two variables, the feasible region is always a convex polygon (or unbounded convex region)</li>
+                    <li>Corner points (vertices) of the feasible region are found by solving pairs of boundary line equations</li>
+                    <li>A bounded feasible region always has a finite number of corner points</li>
+                    <li>An unbounded feasible region may have a finite optimal value in linear programming if the objective function increases/decreases appropriately</li>
+                    <li>Non-negativity constraints (x ≥ 0, y ≥ 0) are common in real-world problems and restrict the feasible region to the first quadrant</li>
+                    <li>The feasible region is always a convex set: If two points are in the region, the entire line segment joining them is also in the region</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: System of Inequalities</div>
+                <p>Solve graphically: x + 2y ≤ 10, 2x + y ≤ 10, x ≥ 0, y ≥ 0</p>
+                <p><strong>Solution:</strong></p>
+                <p><strong>Step 1:</strong> Graph each inequality:</p>
+                <p>1. x + 2y ≤ 10: Boundary x + 2y = 10 ⇒ Points (10,0) and (0,5). Solid line, shade below.</p>
+                <p>2. 2x + y ≤ 10: Boundary 2x + y = 10 ⇒ Points (5,0) and (0,10). Solid line, shade below.</p>
+                <p>3. x ≥ 0: Vertical line x = 0 (y-axis), solid, shade to the right.</p>
+                <p>4. y ≥ 0: Horizontal line y = 0 (x-axis), solid, shade above.</p>
+                <p><strong>Step 2:</strong> Feasible region is the intersection of all shaded regions (quadrant I, below both lines).</p>
+                <p><strong>Step 3:</strong> Find corner points:</p>
+                <p>• Intersection of x-axis (y=0) and 2x+y=10: 2x=10 ⇒ x=5 ⇒ Point A(5,0)</p>
+                <p>• Intersection of y-axis (x=0) and x+2y=10: 2y=10 ⇒ y=5 ⇒ Point B(0,5)</p>
+                <p>• Intersection of x+2y=10 and 2x+y=10:
+                    <br>Solve: x+2y=10 ...(1), 2x+y=10 ...(2)
+                    <br>From (1): x=10-2y. Substitute in (2): 2(10-2y)+y=10 ⇒ 20-4y+y=10 ⇒ -3y=-10 ⇒ y=10/3
+                    <br>Then x=10-2(10/3)=10-20/3=10/3
+                    <br>Point C(10/3, 10/3)
+                </p>
+                <p>• Origin: O(0,0) (intersection of x≥0 and y≥0)</p>
+                <p><strong>Step 4:</strong> Feasible region is quadrilateral with vertices O(0,0), A(5,0), C(10/3, 10/3), B(0,5).</p>
+                <p>All points in this quadrilateral (including boundaries) satisfy all four inequalities.</p>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Advanced System Concepts</h4>
+                <p><strong>Convex Sets:</strong> Feasible region of linear inequalities is always convex</p>
+                <p><strong>Separating Hyperplane Theorem:</strong> Any two convex sets can be separated by a hyperplane (line in 2D)</p>
+                <p><strong>Farkas' Lemma:</strong> Fundamental theorem of linear inequalities and linear programming</p>
+                <p><strong>Integer Solutions:</strong> When variables must be integers (integer programming)</p>
+                <p><strong>Complementary Slackness:</strong> Relationship between primal and dual solutions in linear programming</p>
+                <p><strong>KKT Conditions:</strong> Karush-Kuhn-Tucker conditions for optimization with inequality constraints</p>
+            </div>
+        </section>
+
+        <!-- Linear Programming Section -->
+        <section class="info-panel" id="programming" data-aos="fade-up">
+            <h2>Linear Programming Problems</h2>
+            <p>Linear Programming (LP) involves optimizing (maximizing or minimizing) a linear objective function subject to linear inequality constraints. It has wide applications in business, economics, and engineering.</p>
+
+            <div class="definition">
+                <p><strong>Linear Programming Problem:</strong> Consists of:</p>
+                <p>1. <strong>Objective function:</strong> Linear function to maximize or minimize (z = ax + by)<br>
+                2. <strong>Constraints:</strong> System of linear inequalities<br>
+                3. <strong>Non-negativity restrictions:</strong> x ≥ 0, y ≥ 0 (usually)</p>
+            </div>
+
+            <div class="formula">
+                Standard Form:<br>
+                Maximize/Minimize: z = ax + by<br>
+                Subject to: a₁x + b₁y ≤ c₁, a₂x + b₂y ≤ c₂, ..., x ≥ 0, y ≥ 0
+            </div>
+
+            <!-- LP Visualizer -->
+            <div class="inequality-visual">
+                <h3>Linear Programming Visualizer</h3>
+                <div class="graph-container" id="lpGraph">
+                    <div class="coordinate-plane">
+                        <!-- LP graph will be generated by JavaScript -->
+                    </div>
+                </div>
+                <div style="margin-top: 1rem;">
+                    <button class="solve-btn" onclick="plotLPExample1()">Example 1: Maximization</button>
+                    <button class="solve-btn" onclick="plotLPExample2()">Example 2: Minimization</button>
+                    <button class="solve-btn" onclick="plotLPExample3()">Example 3: Multiple Constraints</button>
+                    <button class="solve-btn" onclick="clearLPGraph()">Clear</button>
+                </div>
+                <div id="lpInfo" style="margin-top: 1rem; color: var(--highlight); font-family: 'Audiowide', cursive;"></div>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Feasible Region</div>
+                    <p>Set of all points satisfying constraints</p>
+                    <div class="formula">Convex polygon (bounded) or unbounded region</div>
+                    <div class="example">
+                        <p>Corner points are candidates for optimal solution</p>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Optimal Solution</div>
+                    <p>Point(s) where objective function attains max/min</p>
+                    <div class="formula">Found at corner points (Fundamental Theorem of LP)</div>
+                    <div class="example">
+                        <p>For bounded region, optimal exists. For unbounded, may not exist.</p>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Corner Point Method</div>
+                    <p>Evaluate objective function at each corner point</p>
+                    <div class="formula">z = ax + by at each vertex</div>
+                    <div class="example">
+                        <p>Maximum/minimum occurs at a corner point</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Fundamental Theorem of Linear Programming</h3>
+            <div class="important">
+                <p>For a linear programming problem:</p>
+                <ol>
+                    <li>If there is an optimal solution, it occurs at a corner point (vertex) of the feasible region.</li>
+                    <li>If the optimal solution exists, there is at least one corner point that is optimal.</li>
+                    <li>If two adjacent corner points are optimal, then every point on the line segment joining them is also optimal (multiple optimal solutions).</li>
+                    <li>If the feasible region is bounded, the optimal solution always exists.</li>
+                    <li>If the feasible region is unbounded, the optimal solution may or may not exist.</li>
+                </ol>
+            </div>
+
+            <h3>Solving Linear Programming Problems Graphically</h3>
+            <ol>
+                <li><strong>Formulate the problem:</strong> Identify decision variables, objective function, and constraints</li>
+                <li><strong>Graph the constraints:</strong> Plot each inequality to find feasible region</li>
+                <li><strong>Identify feasible region:</strong> Determine the intersection of all constraints</li>
+                <li><strong>Find corner points:</strong> Determine coordinates of all vertices of feasible region</li>
+                <li><strong>Evaluate objective function:</strong> Calculate z = ax + by at each corner point</li>
+                <li><strong>Determine optimal solution:</strong>
+                    <ul>
+                        <li>For maximization: Choose point with largest z-value</li>
+                        <li>For minimization: Choose point with smallest z-value</li>
+                    </ul>
+                </li>
+                <li><strong>Check for multiple solutions:</strong> If two corner points give same optimal value, all points on the line segment between them are optimal</li>
+                <li><strong>Interpret the solution:</strong> State optimal values of variables and optimal objective function value</li>
+            </ol>
+
+            <h3>Types of LP Problems</h3>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Characteristics</th>
+                    <th>Example</th>
+                    <th>Solution Method</th>
+                </tr>
+                <tr>
+                    <td>Maximization</td>
+                    <td>Maximize profit, revenue, output</td>
+                    <td>Maximize z = 5x + 7y</td>
+                    <td>Find corner point with maximum z</td>
+                </tr>
+                <tr>
+                    <td>Minimization</td>
+                    <td>Minimize cost, time, waste</td>
+                    <td>Minimize z = 3x + 4y</td>
+                    <td>Find corner point with minimum z</td>
+                </tr>
+                <tr>
+                    <td>Bounded Feasible Region</td>
+                    <td>Feasible region is polygon</td>
+                    <td>All constraints with ≤ and ≥</td>
+                    <td>Optimal solution always exists</td>
+                </tr>
+                <tr>
+                    <td>Unbounded Feasible Region</td>
+                    <td>Region extends infinitely</td>
+                    <td>Some constraints with ≥</td>
+                    <td>Optimal may or may not exist</td>
+                </tr>
+                <tr>
+                    <td>Multiple Optimal Solutions</td>
+                    <td>Objective function parallel to constraint</td>
+                    <td>Same z-value at multiple points</td>
+                    <td>All points on line segment are optimal</td>
+                </tr>
+                <tr>
+                    <td>No Feasible Solution</td>
+                    <td>Constraints contradictory</td>
+                    <td>x≤2 and x≥3 simultaneously</td>
+                    <td>No solution exists</td>
+                </tr>
+            </table>
+
+            <div class="example">
+                <div class="example-title">Example: Linear Programming Problem</div>
+                <p>A company manufactures two products, A and B. Each unit of A requires 2 hours of machine time and 3 hours of labor. Each unit of B requires 3 hours of machine time and 1 hour of labor. The company has at most 60 hours of machine time and 48 hours of labor available per day. Profit is ₹50 per unit of A and ₹40 per unit of B. How many units of each should be produced daily to maximize profit?</p>
+                <p><strong>Solution:</strong></p>
+                <p><strong>Step 1:</strong> Define variables: Let x = units of A, y = units of B</p>
+                <p><strong>Step 2:</strong> Objective function: Maximize z = 50x + 40y (profit)</p>
+                <p><strong>Step 3:</strong> Constraints:
+                    <br>• Machine time: 2x + 3y ≤ 60
+                    <br>• Labor time: 3x + y ≤ 48
+                    <br>• Non-negativity: x ≥ 0, y ≥ 0
+                </p>
+                <p><strong>Step 4:</strong> Graph constraints and find feasible region (bounded quadrilateral in first quadrant).</p>
+                <p><strong>Step 5:</strong> Corner points:
+                    <br>• O(0,0): Intersection of x=0 and y=0
+                    <br>• A(16,0): Intersection of y=0 and 3x+y=48 ⇒ 3x=48 ⇒ x=16
+                    <br>• B(0,20): Intersection of x=0 and 2x+3y=60 ⇒ 3y=60 ⇒ y=20
+                    <br>• C(12,12): Intersection of 2x+3y=60 and 3x+y=48
+                    <br>  Solve: 2x+3y=60 ...(1), 3x+y=48 ...(2)
+                    <br>  From (2): y=48-3x. Substitute in (1): 2x+3(48-3x)=60 ⇒ 2x+144-9x=60 ⇒ -7x=-84 ⇒ x=12
+                    <br>  Then y=48-3(12)=48-36=12
+                </p>
+                <p><strong>Step 6:</strong> Evaluate z = 50x + 40y at each corner point:
+                    <br>• O(0,0): z = 50(0)+40(0) = 0
+                    <br>• A(16,0): z = 50(16)+40(0) = 800
+                    <br>• B(0,20): z = 50(0)+40(20) = 800
+                    <br>• C(12,12): z = 50(12)+40(12) = 600+480 = 1080
+                </p>
+                <p><strong>Step 7:</strong> Maximum profit is ₹1080 at point C(12,12).</p>
+                <p><strong>Conclusion:</strong> Produce 12 units of A and 12 units of B daily for maximum profit of ₹1080.</p>
+                <p><strong>Note:</strong> Points A and B give same profit (₹800), but point C gives higher profit.</p>
+            </div>
+
+            <div class="important">
+                <p><strong>Applications of Linear Programming:</strong></p>
+                <ul>
+                    <li><strong>Production Planning:</strong> Allocate resources to maximize profit or minimize cost</li>
+                    <li><strong>Diet Problems:</strong> Minimize cost while meeting nutritional requirements</li>
+                    <li><strong>Transportation Problems:</strong> Minimize transportation cost from sources to destinations</li>
+                    <li><strong>Assignment Problems:</strong> Assign tasks to workers to minimize time or cost</li>
+                    <li><strong>Blending Problems:</strong> Mix ingredients to meet specifications at minimum cost</li>
+                    <li><strong>Portfolio Selection:</strong> Allocate investments to maximize return for given risk level</li>
+                    <li><strong>Game Theory:</strong> Find optimal strategies in competitive situations</li>
+                    <li><strong>Network Flow:</strong> Maximize flow through networks (pipes, roads, communication)</li>
+                    <li><strong>Scheduling:</strong> Schedule jobs on machines to minimize completion time</li>
+                    <li><strong>Cutting Stock:</strong> Cut raw materials to minimize waste</li>
+                </ul>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Advanced Linear Programming Concepts</h4>
+                <p><strong>Simplex Method:</strong> Algorithm for solving LP problems with many variables</p>
+                <p><strong>Duality Theory:</strong> Every LP problem has a dual problem with important relationships</p>
+                <p><strong>Sensitivity Analysis:</strong> How optimal solution changes with changes in parameters</p>
+                <p><strong>Integer Programming:</strong> Variables must be integers (much harder to solve)</p>
+                <p><strong>Mixed Integer Programming:</strong> Some variables integer, some continuous</p>
+                <p><strong>Network Flow Problems:</strong> Special structure allows efficient algorithms</p>
+                <p><strong>Nonlinear Programming:</strong> Objective function or constraints nonlinear</p>
+                <p><strong>Multi-Objective Optimization:</strong> Optimizing multiple conflicting objectives</p>
+            </div>
+        </section>
+
+        <!-- Applications Section -->
+        <section class="info-panel" id="applications" data-aos="fade-up">
+            <h2>Applications of Linear Inequalities</h2>
+            <p>Linear inequalities and linear programming have extensive applications in business, economics, engineering, and everyday decision-making problems.</p>
+
+            <div class="comparison-table">
+                <h3>Real-World Applications</h3>
+                <table>
+                    <tr>
+                        <th>Application Area</th>
+                        <th>Specific Use</th>
+                        <th>Type of Problem</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>Business & Economics</td>
+                        <td>Profit Maximization</td>
+                        <td>Linear Programming</td>
+                        <td>Production planning, resource allocation</td>
+                    </tr>
+                    <tr>
+                        <td>Manufacturing</td>
+                        <td>Cost Minimization</td>
+                        <td>Linear Programming</td>
+                        <td>Diet problems, blending problems</td>
+                    </tr>
+                    <tr>
+                        <td>Transportation</td>
+                        <td>Route Optimization</td>
+                        <td>Transportation Problem</td>
+                        <td>Shipping goods, delivery routes</td>
+                    </tr>
+                    <tr>
+                        <td>Finance</td>
+                        <td>Portfolio Optimization</td>
+                        <td>Linear Programming</td>
+                        <td>Investment allocation, risk management</td>
+                    </tr>
+                    <tr>
+                        <td>Agriculture</td>
+                        <td>Crop Planning</td>
+                        <td>Linear Programming</td>
+                        <td>Land allocation, fertilizer use</td>
+                    </tr>
+                    <tr>
+                        <td>Healthcare</td>
+                        <td>Diet Planning</td>
+                        <td>Linear Programming</td>
+                        <td>Hospital diets, nutritional planning</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>Detailed Application Examples</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Diet Problem</div>
+                    <p>Minimize cost while meeting nutritional requirements</p>
+                    <div class="formula">Minimize: Cost = ∑(costᵢ × xᵢ)</div>
+                    <div class="example">
+                        <p>Subject to: Nutritional constraints (protein, vitamins, etc.) and non-negativity</p>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Transportation Problem</div>
+                    <p>Minimize shipping cost from warehouses to stores</p>
+                    <div class="formula">Minimize: ∑∑(cᵢⱼ × xᵢⱼ)</div>
+                    <div class="example">
+                        <p>Subject to: Supply constraints at warehouses and demand constraints at stores</p>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Production Planning</div>
+                    <p>Maximize profit given limited resources</p>
+                    <div class="formula">Maximize: Profit = ∑(profitᵢ × xᵢ)</div>
+                    <div class="example">
+                        <p>Subject to: Resource constraints (machine time, labor, materials)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Key Applications in Detail:</strong></p>
+                <ul>
+                    <li><strong>Business:</strong> Product mix optimization, inventory management, marketing budget allocation</li>
+                    <li><strong>Economics:</strong> Input-output analysis, general equilibrium models, welfare economics</li>
+                    <li><strong>Engineering:</strong> Structural design optimization, network design, circuit design</li>
+                    <li><strong>Agriculture:</strong> Crop rotation planning, irrigation scheduling, fertilizer application</li>
+                    <li><strong>Healthcare:</strong> Hospital resource allocation, drug formulation, treatment planning</li>
+                    <li><strong>Transportation:</strong> Vehicle routing, airline scheduling, traffic flow optimization</li>
+                    <li><strong>Finance:</strong> Portfolio optimization, asset-liability management, risk assessment</li>
+                    <li><strong>Environment:</strong> Pollution control, resource management, sustainable development</li>
+                    <li><strong>Military:</strong> Logistics planning, troop deployment, resource allocation</li>
+                    <li><strong>Sports:</strong> Team selection, training schedule optimization</li>
+                    <li><strong>Education:</strong> Timetable scheduling, resource allocation, student assignment</li>
+                    <li><strong>Everyday Life:</strong> Budget planning, diet planning, time management</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Diet Problem Application</div>
+                <p>A nutritionist is planning a diet that includes two foods, F1 and F2. Each unit of F1 costs ₹20 and contains 3 units of vitamins, 4 units of minerals, and 1 unit of protein. Each unit of F2 costs ₹30 and contains 2 units of vitamins, 2 units of minerals, and 3 units of protein. The diet must provide at least 60 units of vitamins, 75 units of minerals, and 60 units of protein. How many units of each food should be used to meet requirements at minimum cost?</p>
+                <p><strong>Solution:</strong></p>
+                <p><strong>Step 1:</strong> Define variables: Let x = units of F1, y = units of F2</p>
+                <p><strong>Step 2:</strong> Objective function: Minimize cost C = 20x + 30y</p>
+                <p><strong>Step 3:</strong> Constraints:
+                    <br>• Vitamins: 3x + 2y ≥ 60
+                    <br>• Minerals: 4x + 2y ≥ 75
+                    <br>• Protein: x + 3y ≥ 60
+                    <br>• Non-negativity: x ≥ 0, y ≥ 0
+                </p>
+                <p><strong>Step 4:</strong> Graph constraints (all ≥, so feasible region is unbounded above).
+                    <br>Find corner points by solving systems of equations:
+                    <br>• Intersection of 3x+2y=60 and 4x+2y=75: Subtract: x=15, then y=(60-45)/2=7.5 ⇒ A(15, 7.5)
+                    <br>• Intersection of 3x+2y=60 and x+3y=60: Solve ⇒ x=12, y=16 ⇒ B(12, 16)
+                    <br>• Intersection of 4x+2y=75 and x+3y=60: Solve ⇒ x=16.5, y=14.5 ⇒ C(16.5, 14.5)
+                </p>
+                <p><strong>Step 5:</strong> Evaluate C = 20x + 30y at corner points:
+                    <br>• A(15, 7.5): C = 20(15) + 30(7.5) = 300 + 225 = 525
+                    <br>• B(12, 16): C = 20(12) + 30(16) = 240 + 480 = 720
+                    <br>• C(16.5, 14.5): C = 20(16.5) + 30(14.5) = 330 + 435 = 765
+                </p>
+                <p><strong>Step 6:</strong> Minimum cost is ₹525 at point A(15, 7.5).</p>
+                <p><strong>Step 7:</strong> Check if feasible region is bounded below (it is, due to constraints).</p>
+                <p><strong>Conclusion:</strong> Use 15 units of F1 and 7.5 units of F2 for minimum cost of ₹525 while meeting all nutritional requirements.</p>
+                <p><strong>Note:</strong> Since we can't buy half units in reality, this would be an integer programming problem, requiring adjustment to integer values near (15, 7.5).</p>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">NEET APPLICATION</div>
+                <h4>Medical Applications of Linear Programming</h4>
+                <p><strong>Radiation Therapy:</strong> Optimize radiation dosage to tumor while minimizing damage to healthy tissue</p>
+                <p><strong>Drug Design:</strong> Optimize molecular structures for maximum efficacy and minimum side effects</p>
+                <p><strong>Hospital Management:</strong> Optimize staff scheduling, bed allocation, equipment utilization</p>
+                <p><strong>Epidemiology:</strong> Optimize resource allocation for disease control and prevention</p>
+                <p><strong>Medical Imaging:</strong> Optimize image reconstruction algorithms</p>
+                <p><strong>Clinical Trials:</strong> Optimize trial design and patient allocation</p>
+                <p><strong>Health Insurance:</strong> Optimize premium pricing and coverage</p>
+            </div>
+        </section>
+
+        <!-- Problem Solving Section -->
+        <section class="info-panel" id="problems" data-aos="fade-up">
+            <h2>Problem Solving Strategies</h2>
+            <p>Effective techniques for solving linear inequality and linear programming problems in JEE and other competitive exams.</p>
+
+            <div class="problem-solving">
+                <div class="problem-box">
+                    <div class="problem-title">Type 1: Algebraic Inequalities</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Isolate variable using properties of inequalities</li>
+                        <li>Remember to reverse sign when multiplying/dividing by negative</li>
+                        <li>Express solution in interval notation or set notation</li>
+                        <li>Represent on number line if required</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> For quadratic inequalities, use sign chart or wavy curve method</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 2: Graphical Solutions</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Convert to equation for boundary line</li>
+                        <li>Determine line style (solid/dashed)</li>
+                        <li>Use test point to determine which half-plane to shade</li>
+                        <li>Shade the solution region</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> For systems, feasible region is intersection of all shaded regions</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 3: Linear Programming</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify decision variables</li>
+                        <li>Formulate objective function</li>
+                        <li>Write all constraints as linear inequalities</li>
+                        <li>Graph feasible region and find corner points</li>
+                        <li>Evaluate objective function at each corner point</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Optimal solution occurs at a corner point (Fundamental Theorem of LP)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Common Problem Types:</strong></p>
+                <ul>
+                    <li><strong>Algebraic inequalities:</strong> Linear, quadratic, rational, absolute value</li>
+                    <li><strong>Graphical representation:</strong> Single inequality, systems of inequalities</li>
+                    <li><strong>Linear programming:</strong> Maximization, minimization, formulation problems</li>
+                    <li><strong>Word problems:</strong> Convert real-world situations to mathematical models</li>
+                    <li><strong>Feasible region analysis:</strong> Bounded vs unbounded, corner points, optimal solutions</li>
+                    <li><strong>Inequality properties:</strong> Proving inequalities, solving compound inequalities</li>
+                    <li><strong>Applications:</strong> Diet problems, transportation problems, production planning</li>
+                    <li><strong>Parametric inequalities:</strong> Inequalities with parameters, finding parameter ranges</li>
+                </ul>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED TIP</div>
+                <h4>Advanced Problem Solving Techniques</h4>
+                <p>• For parametric inequalities: Consider cases based on parameter values</p>
+                <p>• For optimization: Use corner point method for LP, but also consider boundary if unbounded</p>
+                <p>• For systems: Check consistency (feasibility) before solving</p>
+                <p>• For word problems: Carefully define variables and translate constraints accurately</p>
+                <p>• For graphical solutions: Always label axes, intercepts, and shading clearly</p>
+                <p>• For multiple optimal solutions: Look for objective function parallel to a constraint line</p>
+                <p>• For integer solutions: Consider nearest integer points to LP solution</p>
+                <p>• For proving optimality: Use Fundamental Theorem of LP or evaluate all corner points</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Challenging Linear Programming Problem</div>
+                <p>Minimize z = 3x + 5y subject to: x + 2y ≥ 10, x + y ≥ 6, 3x + y ≥ 8, x ≥ 0, y ≥ 0.</p>
+                <p><strong>Solution:</strong></p>
+                <p><strong>Step 1:</strong> Graph constraints (all ≥, so feasible region is unbounded above).</p>
+                <p><strong>Step 2:</strong> Find corner points by solving systems:
+                    <br>• Intersection of x+2y=10 and x+y=6: Subtract ⇒ y=4, then x=2 ⇒ A(2,4)
+                    <br>• Intersection of x+2y=10 and 3x+y=8: Solve ⇒ x=1.2, y=4.4 ⇒ B(1.2, 4.4)
+                    <br>• Intersection of x+y=6 and 3x+y=8: Subtract ⇒ 2x=2 ⇒ x=1, then y=5 ⇒ C(1,5)
+                    <br>• Also check intercepts: x+2y=10 meets axes at (10,0) and (0,5); x+y=6 at (6,0) and (0,6); 3x+y=8 at (8/3,0) and (0,8)
+                </p>
+                <p><strong>Step 3:</strong> Feasible region is unbounded polygon with vertices A(2,4), B(1.2,4.4), C(1,5).</p>
+                <p><strong>Step 4:</strong> Evaluate z = 3x + 5y at corner points:
+                    <br>• A(2,4): z = 3(2)+5(4)=6+20=26
+                    <br>• B(1.2,4.4): z = 3(1.2)+5(4.4)=3.6+22=25.6
+                    <br>• C(1,5): z = 3(1)+5(5)=3+25=28
+                </p>
+                <p><strong>Step 5:</strong> Minimum value appears to be 25.6 at B(1.2, 4.4).</p>
+                <p><strong>Step 6:</strong> Check if minimum exists (feasible region is unbounded, but objective increases as we move away from origin in positive direction, so minimum exists at a corner point).</p>
+                <p><strong>Step 7:</strong> Verify by checking points near B: Point (1,4.5): z=3+22.5=25.5 &lt; 25.6. Need to check if (1,4.5) is feasible:
+                    <br>• x+2y=1+9=10 ≥ 10 ✓
+                    <br>• x+y=1+4.5=5.5 ≥ 6 ✗ (not feasible)
+                    <br>So (1,4.5) is not in feasible region.
+                </p>
+                <p><strong>Step 8:</strong> Minimum is indeed at B(1.2, 4.4) with z=25.6.</p>
+                <p><strong>Conclusion:</strong> Minimum value is 25.6 at x=1.2, y=4.4.</p>
+            </div>
+        </section>
+
+        <!-- Key Facts Carousel -->
+        <div class="swiper-container" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">LINEAR INEQUALITIES</div>
+                        <div class="swiper-text">ax + b &lt; c, ax + b > c, ax + b ≤ c, ax + b ≥ c. Reverse sign when multiplying/dividing by negative</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">GRAPHICAL METHOD</div>
+                        <div class="swiper-text">Represent as half-planes. Solid line for ≤/≥, dashed line for &lt;/>. Test point determines shading</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">SYSTEMS OF INEQUALITIES</div>
+                        <div class="swiper-text">Solution is intersection of individual solution sets. Feasible region can be bounded or unbounded</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">LINEAR PROGRAMMING</div>
+                        <div class="swiper-text">Optimize linear objective subject to linear constraints. Optimal at corner points (Fundamental Theorem)</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">FEASIBLE REGION</div>
+                        <div class="swiper-text">Set of all points satisfying constraints. Convex polygon (bounded) or unbounded region</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">CORNER POINT METHOD</div>
+                        <div class="swiper-text">Evaluate objective function at each vertex of feasible region to find optimum</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">APPLICATIONS</div>
+                        <div class="swiper-text">Production planning, diet problems, transportation, portfolio optimization, resource allocation</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">INTERVAL NOTATION</div>
+                        <div class="swiper-text">(a,b): a&lt;x&lt;b; [a,b]: a≤x≤b; (a,∞): x>a; (-∞,b]: x≤b. Parentheses exclude, brackets include</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- Summary Section -->
+        <section class="info-panel" data-aos="fade-up">
+            <h2>Chapter Summary & Formulas</h2>
+            
+            <h3>Key Formulas</h3>
+            <div class="concept-cards">
+                <div class="concept-card inequality">
+                    <div class="card-title inequality">Linear Inequalities</div>
+                    <div class="formula">ax + b &lt; c</div>
+                    <div class="formula">Solution: x &lt; (c-b)/a if a>0</div>
+                    <div class="formula">Reverse sign if multiplying/dividing by negative</div>
+                </div>
+
+                <div class="concept-card graphical">
+                    <div class="card-title graphical">Graphical Representation</div>
+                    <div class="formula">ax + by &lt; c → Half-plane</div>
+                    <div class="formula">Boundary: ax + by = c</div>
+                    <div class="formula">&lt;/>: Dashed line, ≤/≥: Solid line</div>
+                </div>
+
+                <div class="concept-card programming">
+                    <div class="card-title programming">Linear Programming</div>
+                    <div class="formula">Max/Min: z = ax + by</div>
+                    <div class="formula">Subject to: Constraints</div>
+                    <div class="formula">Optimal at corner points</div>
+                </div>
+            </div>
+
+            <h3>Important Properties and Theorems</h3>
+            <div class="formula-grid">
+                <div class="formula-card">
+                    <div class="formula-card-title">Inequality Properties</div>
+                    <div class="formula">If a &lt; b and c > 0, then ac &lt; bc</div>
+                    <div class="formula">If a &lt; b and c &lt; 0, then ac > bc</div>
+                    <div class="formula">Transitivity: a &lt; b &lt; c ⇒ a &lt; c</div>
+                    <div class="formula">Trichotomy: a&lt;b or a=b or a>b</div>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Graphical Solution</div>
+                    <div class="formula">Test point method</div>
+                    <div class="formula">Feasible region = ∩ of half-planes</div>
+                    <div class="formula">Bounded vs unbounded regions</div>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Linear Programming</div>
+                    <div class="formula">Fundamental Theorem of LP</div>
+                    <div class="formula">Corner point method</div>
+                    <div class="formula">Multiple optimal solutions</div>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Interval Notation</div>
+                    <div class="formula">(a,b) = {x: a&lt;x&lt;b}</div>
+                    <div class="formula">[a,b] = {x: a≤x≤b}</div>
+                    <div class="formula">(a,∞) = {x: x>a}</div>
+                    <div class="formula">(-∞,b] = {x: x≤b}</div>
+                </div>
+            </div>
+
+            <h3>Important Points for JEE/NEET</h3>
+            <ul>
+                <li>Linear inequality: ax + b &lt; c, ax + b > c, ax + b ≤ c, or ax + b ≥ c</li>
+                <li>When multiplying/dividing by negative number: REVERSE the inequality sign</li>
+                <li>Solution of inequality in one variable: Usually an interval</li>
+                <li>Interval notation: ( ) for open intervals, [ ] for closed intervals</li>
+                <li>Graphical representation of ax + by &lt; c: Half-plane below line ax + by = c (if b > 0)</li>
+                <li>Boundary line: Solid for ≤ or ≥, dashed for &lt; or ></li>
+                <li>Test point method: Use (0,0) if not on boundary line to determine which half-plane to shade</li>
+                <li>System of linear inequalities: Solution is intersection of individual solution sets (feasible region)</li>
+                <li>Feasible region: Can be bounded (polygon) or unbounded</li>
+                <li>Linear programming: Optimize linear objective function subject to linear constraints</li>
+                <li>Fundamental Theorem of LP: If optimal solution exists, it occurs at a corner point of feasible region</li>
+                <li>Corner point method: Evaluate objective function at each vertex to find optimum</li>
+                <li>Multiple optimal solutions: If two corner points give same optimal value, all points on line segment between them are optimal</li>
+                <li>Applications: Production planning, diet problems, transportation problems, portfolio optimization</li>
+                <li>Formulating LP problems: Define variables, write objective function, write constraints</li>
+            </ul>
+
+            <div class="important">
+                <p><strong>Common Mistakes to Avoid:</strong></p>
+                <ul>
+                    <li>Forgetting to reverse inequality sign when multiplying/dividing by negative number</li>
+                    <li>Using wrong line style (solid vs dashed) for boundary lines</li>
+                    <li>Shading wrong half-plane in graphical method</li>
+                    <li>Not including endpoints in interval notation when inequality includes equality</li>
+                    <li>Mistaking intersection (∩) for union (∪) when solving systems of inequalities</li>
+                    <li>Not considering non-negativity constraints (x ≥ 0, y ≥ 0) in real-world problems</li>
+                    <li>Assuming optimal solution always exists (unbounded feasible region may have no optimum)</li>
+                    <li>Not checking all corner points in linear programming problems</li>
+                    <li>Incorrectly solving simultaneous equations to find corner points</li>
+                    <li>Not converting word problems into proper mathematical formulation</li>
+                    <li>Forgetting to check if test point (0,0) is on boundary line before using it</li>
+                    <li>Not labeling graphs properly (axes, intercepts, shading)</li>
+                    <li>Confusing maximization and minimization problems</li>
+                    <li>Not considering integer solutions when variables represent countable items</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Nerds Assemble</h3>
+                <p>Master Linear Inequalities for JEE & NEET. Build strong foundation in inequality solving, graphical methods, and linear programming applications.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#algebraic">Algebraic Solutions</a></li>
+                    <li><a href="#graphical">Graphical Method</a></li>
+                    <li><a href="#systems">Systems of Inequalities</a></li>
+                    <li><a href="#programming">Linear Programming</a></li>
+                    <li><a href="#applications">Applications</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> 44mr.invisible@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Nerds Assemble. All rights reserved. | Designed for JEE & NEET Aspirants | Linear Inequalities - Class 11 Mathematics</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Linear Inequalities - JavaScript
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ?
+                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+            }
+
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+
+            function handleScroll() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('active');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                }
+            }
+
+            // Debounced scroll event
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(handleScroll, 50);
+            }, { passive: true });
+
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: window.innerWidth < 768 ? 100 : 120,
+                    easing: 'ease-out-quad'
+                });
+            }
+
+            // Initialize Swiper
+            if (typeof Swiper !== 'undefined') {
+                const swiper = new Swiper('.swiper-container', {
+                    loop: true,
+                    autoplay: {
+                        delay: 3500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 25
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        }
+                    }
+                });
+            }
+
+            // Smooth Scroll for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        if (mainNav && mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                });
+            });
+
+            // Back to Top Button Click
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Create Particles
+            createParticles();
+            
+            // Initialize visualizations
+            initializeNumberLine();
+            initializeGraph();
+            initializeSystemGraph();
+            initializeLPGraph();
+        });
+
+        // Create Particles Function
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
+
+            const particleCount = window.innerWidth < 768 ? 20 : 30;
+            particlesContainer.innerHTML = '';
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                const size = Math.random() * 3 + 1;
+                const posX = Math.random() * window.innerWidth;
+                const posY = Math.random() * window.innerHeight;
+                const duration = Math.random() * 15 + 10;
+                const delay = Math.random() * 5;
+
+                particle.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}px;
+                    top: ${posY}px;
+                    opacity: ${Math.random() * 0.3 + 0.1};
+                    animation: float ${duration}s ease-in-out ${delay}s infinite;
+                    background: rgba(255,255,255,0.3);
+                `;
+
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Number Line Functions
+        function initializeNumberLine() {
+            const container = document.getElementById('numberLine');
+            if (!container) return;
+            
+            // Clear container
+            container.innerHTML = '';
+            
+            // Create number line
+            const numberLine = document.createElement('div');
+            numberLine.className = 'number-line';
+            container.appendChild(numberLine);
+            
+            // Create ticks and labels from -5 to 5
+            for (let i = -5; i <= 5; i++) {
+                // Calculate position (from -5 to 5 maps to 5% to 95%)
+                const position = 5 + ((i + 5) / 10) * 90;
+                
+                // Create tick
+                const tick = document.createElement('div');
+                tick.className = 'number-tick';
+                tick.style.left = `${position}%`;
+                
+                // Create label for every integer
+                const label = document.createElement('div');
+                label.className = 'number-label';
+                label.textContent = i.toString();
+                label.style.left = `${position}%`;
+                
+                container.appendChild(tick);
+                container.appendChild(label);
+            }
+            
+            // Add 0 label with special styling
+            const zeroLabel = container.querySelector('.number-label[style*="left: 55%"]');
+            if (zeroLabel) zeroLabel.style.color = 'var(--highlight)';
+        }
+
+        function plotInequalityOnNumberLine(inequality) {
+            const container = document.getElementById('numberLine');
+            if (!container) return;
+            
+            // Clear previous solution interval
+            const oldInterval = container.querySelector('.solution-interval');
+            if (oldInterval) oldInterval.remove();
+            
+            let interval;
+            
+            if (inequality === 'x < 3') {
+                // x < 3: from -∞ to 3 (open)
+                interval = document.createElement('div');
+                interval.className = 'solution-interval';
+                interval.style.left = '5%'; // Start at left edge (-5)
+                interval.style.width = '45%'; // From -5 to 3 is 8 units out of 10 total from -5 to 5 = 80% of 90% range = 45%
+                interval.style.background = 'rgba(0, 255, 157, 0.3)';
+                
+                // Add open circle at 3
+                const openCircle = document.createElement('div');
+                openCircle.style.position = 'absolute';
+                openCircle.style.width = '12px';
+                openCircle.style.height = '12px';
+                openCircle.style.borderRadius = '50%';
+                openCircle.style.background = 'var(--bg)';
+                openCircle.style.border = '2px solid var(--highlight)';
+                openCircle.style.left = '50%'; // 3 is at 50% position (3 is 8 units from -5, 8/10=80% of 90% range = 72% from left)
+                openCircle.style.top = '50%';
+                openCircle.style.transform = 'translate(-50%, -50%)';
+                container.appendChild(openCircle);
+            }
+            else if (inequality === 'x ≥ -2') {
+                // x ≥ -2: from -2 to ∞ (closed at -2)
+                interval = document.createElement('div');
+                interval.className = 'solution-interval';
+                interval.style.left = '32%'; // -2 is 3 units from -5, 3/10=30% of 90% range = 27% from left
+                interval.style.width = '63%'; // From -2 to 5 is 7 units, 7/10=70% of 90% range = 63%
+                interval.style.background = 'rgba(255, 65, 108, 0.3)';
+                
+                // Add closed circle at -2
+                const closedCircle = document.createElement('div');
+                closedCircle.style.position = 'absolute';
+                closedCircle.style.width = '12px';
+                closedCircle.style.height = '12px';
+                closedCircle.style.borderRadius = '50%';
+                closedCircle.style.background = 'var(--highlight)';
+                closedCircle.style.border = '2px solid white';
+                closedCircle.style.left = '32%';
+                closedCircle.style.top = '50%';
+                closedCircle.style.transform = 'translate(-50%, -50%)';
+                container.appendChild(closedCircle);
+            }
+            else if (inequality === '-1 ≤ x < 4') {
+                // -1 ≤ x < 4: from -1 (closed) to 4 (open)
+                interval = document.createElement('div');
+                interval.className = 'solution-interval';
+                interval.style.left = '41%'; // -1 is 4 units from -5, 4/10=40% of 90% range = 36% from left
+                interval.style.width = '45%'; // From -1 to 4 is 5 units, 5/10=50% of 90% range = 45%
+                interval.style.background = 'rgba(29, 138, 153, 0.3)';
+                
+                // Add closed circle at -1
+                const closedCircle = document.createElement('div');
+                closedCircle.style.position = 'absolute';
+                closedCircle.style.width = '12px';
+                closedCircle.style.height = '12px';
+                closedCircle.style.borderRadius = '50%';
+                closedCircle.style.background = 'var(--highlight)';
+                closedCircle.style.border = '2px solid white';
+                closedCircle.style.left = '41%';
+                closedCircle.style.top = '50%';
+                closedCircle.style.transform = 'translate(-50%, -50%)';
+                container.appendChild(closedCircle);
+                
+                // Add open circle at 4
+                const openCircle = document.createElement('div');
+                openCircle.style.position = 'absolute';
+                openCircle.style.width = '12px';
+                openCircle.style.height = '12px';
+                openCircle.style.borderRadius = '50%';
+                openCircle.style.background = 'var(--bg)';
+                openCircle.style.border = '2px solid var(--highlight)';
+                openCircle.style.left = '86%'; // 4 is 9 units from -5, 9/10=90% of 90% range = 81% from left
+                openCircle.style.top = '50%';
+                openCircle.style.transform = 'translate(-50%, -50%)';
+                container.appendChild(openCircle);
+            }
+            
+            if (interval) {
+                container.appendChild(interval);
+            }
+        }
+
+        function clearNumberLine() {
+            const container = document.getElementById('numberLine');
+            if (!container) return;
+            
+            // Remove solution interval and circles
+            const intervals = container.querySelectorAll('.solution-interval');
+            intervals.forEach(el => el.remove());
+            
+            const circles = container.querySelectorAll('div[style*="position: absolute"]');
+            circles.forEach(el => el.remove());
+            
+            // Reinitialize
+            initializeNumberLine();
+        }
+
+        // Inequality Solver Functions
+        function solveLinearInequality() {
+            const a = parseFloat(document.getElementById('coeffA').value) || 0;
+            const b = parseFloat(document.getElementById('constB').value) || 0;
+            const c = parseFloat(document.getElementById('rightC').value) || 0;
+            const sign = document.getElementById('inequalitySign').value;
+            
+            if (a === 0) {
+                document.getElementById('solverResult').innerHTML = 
+                    "Error: Coefficient of x cannot be 0 for linear inequality";
+                return;
+            }
+            
+            // Solve: ax + b sign c
+            // Equivalent to: ax sign c - b
+            const rhs = c - b;
+            
+            let solution;
+            if (a > 0) {
+                // No sign reversal
+                switch(sign) {
+                    case '<': solution = `x < ${rhs/a}`; break;
+                    case '≤': solution = `x ≤ ${rhs/a}`; break;
+                    case '>': solution = `x > ${rhs/a}`; break;
+                    case '≥': solution = `x ≥ ${rhs/a}`; break;
+                }
+            } else {
+                // a < 0, reverse sign
+                switch(sign) {
+                    case '<': solution = `x > ${rhs/a}`; break;
+                    case '≤': solution = `x ≥ ${rhs/a}`; break;
+                    case '>': solution = `x < ${rhs/a}`; break;
+                    case '≥': solution = `x ≤ ${rhs/a}`; break;
+                }
+            }
+            
+            const resultElement = document.getElementById('solverResult');
+            resultElement.innerHTML = 
+                `Inequality: ${a}x ${b >= 0 ? '+' : ''}${b} ${sign} ${c}<br>
+                 Solution: ${solution}<br>
+                 Interval notation: ${getIntervalNotation(solution)}<br>
+                 Number line: ${getNumberLineDescription(solution)}`;
+        }
+
+        function clearSolver() {
+            document.getElementById('coeffA').value = '2';
+            document.getElementById('constB').value = '3';
+            document.getElementById('rightC').value = '12';
+            document.getElementById('inequalitySign').value = '<';
+            document.getElementById('solverResult').innerHTML = 'Solution will appear here';
+        }
+
+        function getIntervalNotation(solution) {
+            if (solution.includes('x <')) {
+                const num = parseFloat(solution.split('<')[1]);
+                return `(-∞, ${num})`;
+            } else if (solution.includes('x ≤')) {
+                const num = parseFloat(solution.split('≤')[1]);
+                return `(-∞, ${num}]`;
+            } else if (solution.includes('x >')) {
+                const num = parseFloat(solution.split('>')[1]);
+                return `(${num}, ∞)`;
+            } else if (solution.includes('x ≥')) {
+                const num = parseFloat(solution.split('≥')[1]);
+                return `[${num}, ∞)`;
+            }
+            return 'Unknown';
+        }
+
+        function getNumberLineDescription(solution) {
+            if (solution.includes('x <')) {
+                const num = parseFloat(solution.split('<')[1]);
+                return `Open circle at ${num}, shaded to the left`;
+            } else if (solution.includes('x ≤')) {
+                const num = parseFloat(solution.split('≤')[1]);
+                return `Closed circle at ${num}, shaded to the left`;
+            } else if (solution.includes('x >')) {
+                const num = parseFloat(solution.split('>')[1]);
+                return `Open circle at ${num}, shaded to the right`;
+            } else if (solution.includes('x ≥')) {
+                const num = parseFloat(solution.split('≥')[1]);
+                return `Closed circle at ${num}, shaded to the right`;
+            }
+            return 'Unknown';
+        }
+
+        // Graphical Functions
+        let graphElements = [];
+
+        function initializeGraph() {
+            const container = document.getElementById('graphContainer');
+            if (!container) return;
+            
+            const plane = container.querySelector('.coordinate-plane');
+            if (!plane) return;
+            
+            // Clear previous elements
+            plane.innerHTML = '';
+            
+            // Create grid
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            const centerX = width / 2;
+            const centerY = height / 2;
+            const scale = 25; // Pixels per unit
+            
+            // Add grid lines
+            for (let i = -10; i <= 10; i++) {
+                // Vertical grid lines
+                if (i !== 0) {
+                    const vLine = document.createElement('div');
+                    vLine.className = 'grid-line vertical';
+                    vLine.style.left = `${centerX + i * scale}px`;
+                    vLine.style.width = '1px';
+                    vLine.style.height = '100%';
+                    plane.appendChild(vLine);
+                }
+                
+                // Horizontal grid lines
+                if (i !== 0) {
+                    const hLine = document.createElement('div');
+                    hLine.className = 'grid-line horizontal';
+                    hLine.style.top = `${centerY + i * scale}px`;
+                    hLine.style.width = '100%';
+                    hLine.style.height = '1px';
+                    plane.appendChild(hLine);
+                }
+            }
+            
+            // Add axes
+            const xAxis = document.createElement('div');
+            xAxis.className = 'axis x-axis';
+            xAxis.style.top = `${centerY}px`;
+            plane.appendChild(xAxis);
+            
+            const yAxis = document.createElement('div');
+            yAxis.className = 'axis y-axis';
+            yAxis.style.left = `${centerX}px`;
+            plane.appendChild(yAxis);
+            
+            // Add axis labels
+            for (let i = -8; i <= 8; i++) {
+                if (i !== 0) {
+                    // x-axis labels
+                    const xLabel = document.createElement('div');
+                    xLabel.style.position = 'absolute';
+                    xLabel.style.left = `${centerX + i * scale}px`;
+                    xLabel.style.top = `${centerY + 10}px`;
+                    xLabel.style.color = 'var(--text)';
+                    xLabel.style.fontSize = '0.7rem';
+                    xLabel.textContent = i.toString();
+                    plane.appendChild(xLabel);
+                    
+                    // y-axis labels
+                    const yLabel = document.createElement('div');
+                    yLabel.style.position = 'absolute';
+                    yLabel.style.left = `${centerX + 10}px`;
+                    yLabel.style.top = `${centerY - i * scale}px`;
+                    yLabel.style.color = 'var(--text)';
+                    yLabel.style.fontSize = '0.7rem';
+                    yLabel.textContent = i.toString();
+                    plane.appendChild(yLabel);
+                }
+            }
+            
+            // Add origin label
+            const originLabel = document.createElement('div');
+            originLabel.style.position = 'absolute';
+            originLabel.style.left = `${centerX + 10}px`;
+            originLabel.style.top = `${centerY + 10}px`;
+            originLabel.style.color = 'var(--highlight)';
+            originLabel.style.fontSize = '0.7rem';
+            originLabel.textContent = '0';
+            plane.appendChild(originLabel);
+            
+            // Add axis labels
+            const xAxisLabel = document.createElement('div');
+            xAxisLabel.style.position = 'absolute';
+            xAxisLabel.style.left = `${width - 20}px`;
+            xAxisLabel.style.top = `${centerY - 20}px`;
+            xAxisLabel.style.color = 'var(--secondary)';
+            xAxisLabel.textContent = 'x';
+            plane.appendChild(xAxisLabel);
+            
+            const yAxisLabel = document.createElement('div');
+            yAxisLabel.style.position = 'absolute';
+            yAxisLabel.style.left = `${centerX + 10}px`;
+            yAxisLabel.style.top = '10px';
+            yAxisLabel.style.color = 'var(--secondary)';
+            yAxisLabel.textContent = 'y';
+            plane.appendChild(yAxisLabel);
+        }
+
+        function plotLinearInequality() {
+            const a = parseFloat(document.getElementById('graphA').value) || 0;
+            const b = parseFloat(document.getElementById('graphB').value) || 0;
+            const c = parseFloat(document.getElementById('graphC').value) || 0;
+            const sign = document.getElementById('graphInequality').value;
+            
+            if (a === 0 && b === 0) {
+                document.getElementById('graphInfo').innerHTML = 
+                    "Error: Both coefficients cannot be zero";
+                return;
+            }
+            
+            const container = document.getElementById('graphContainer');
+            if (!container) return;
+            
+            const plane = container.querySelector('.coordinate-plane');
+            if (!plane) return;
+            
+            // Clear previous inequality plot
+            const oldPlot = plane.querySelector('.inequality-plot');
+            if (oldPlot) oldPlot.remove();
+            
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            const centerX = width / 2;
+            const centerY = height / 2;
+            const scale = 25;
+            
+            // Create plot container
+            const plot = document.createElement('div');
+            plot.className = 'inequality-plot';
+            plot.style.position = 'absolute';
+            plot.style.width = '100%';
+            plot.style.height = '100%';
+            plot.style.top = '0';
+            plot.style.left = '0';
+            
+            // Draw boundary line
+            if (b !== 0) {
+                // Line can be expressed as y = (c - ax)/b
+                // Find two points to draw line
+                let x1 = -8, y1 = (c - a * x1) / b;
+                let x2 = 8, y2 = (c - a * x2) / b;
+                
+                // Convert to pixel coordinates
+                const pixelX1 = centerX + x1 * scale;
+                const pixelY1 = centerY - y1 * scale;
+                const pixelX2 = centerX + x2 * scale;
+                const pixelY2 = centerY - y2 * scale;
+                
+                // Create line element
+                const line = document.createElement('div');
+                line.style.position = 'absolute';
+                line.style.left = `${pixelX1}px`;
+                line.style.top = `${pixelY1}px`;
+                line.style.width = `${Math.sqrt(Math.pow(pixelX2 - pixelX1, 2) + Math.pow(pixelY2 - pixelY1, 2))}px`;
+                line.style.height = '2px';
+                line.style.backgroundColor = sign === '<' || sign === '>' ? 'var(--tertiary)' : 'var(--primary)';
+                line.style.border = sign === '<' || sign === '>' ? 'none' : 'none';
+                line.style.transformOrigin = '0 0';
+                line.style.transform = `rotate(${Math.atan2(pixelY2 - pixelY1, pixelX2 - pixelX1)}rad)`;
+                
+                // For dashed lines
+                if (sign === '<' || sign === '>') {
+                    line.style.borderTop = '2px dashed var(--tertiary)';
+                    line.style.height = '0';
+                }
+                
+                plot.appendChild(line);
+                
+                // Determine which half-plane to shade
+                // Test point (0,0) if it's not on the line
+                const testValue = a * 0 + b * 0;
+                let shouldShadeOrigin = false;
+                
+                switch(sign) {
+                    case '<': shouldShadeOrigin = testValue < c; break;
+                    case '≤': shouldShadeOrigin = testValue <= c; break;
+                    case '>': shouldShadeOrigin = testValue > c; break;
+                    case '≥': shouldShadeOrigin = testValue >= c; break;
+                }
+                
+                // Create half-plane shading (simplified as a large polygon)
+                // Since we can't easily create complex polygon with CSS, we'll create a large rectangle
+                // and clip it (simplified approach)
+                const halfPlane = document.createElement('div');
+                halfPlane.style.position = 'absolute';
+                halfPlane.style.width = '100%';
+                halfPlane.style.height = '100%';
+                halfPlane.style.backgroundColor = shouldShadeOrigin ? 'rgba(0, 255, 157, 0.1)' : 'rgba(255, 65, 108, 0.1)';
+                halfPlane.style.pointerEvents = 'none';
+                
+                // For a proper implementation, we would use SVG or canvas
+                // This is a simplified visualization
+                plot.appendChild(halfPlane);
+                
+                // Update info
+                const info = document.getElementById('graphInfo');
+                info.innerHTML = `Inequality: ${a}x ${b >= 0 ? '+' : ''}${b}y ${sign} ${c}<br>
+                                 Boundary line: ${a}x ${b >= 0 ? '+' : ''}${b}y = ${c}<br>
+                                 Test point (0,0): ${a}×0 ${b >= 0 ? '+' : ''}${b}×0 = ${testValue} ${sign} ${c} is ${shouldShadeOrigin}<br>
+                                 Shading: ${shouldShadeOrigin ? 'Half-plane containing (0,0)' : 'Half-plane not containing (0,0)'}`;
+            }
+            
+            plane.appendChild(plot);
+            graphElements.push(plot);
+        }
+
+        function addExampleInequality() {
+            // Set example values
+            document.getElementById('graphA').value = 2;
+            document.getElementById('graphB').value = 3;
+            document.getElementById('graphC').value = 12;
+            document.getElementById('graphInequality').value = '≤';
+            
+            // Plot it
+            plotLinearInequality();
+        }
+
+        function clearGraph() {
+            graphElements.forEach(el => {
+                if (el && el.parentNode) {
+                    el.parentNode.removeChild(el);
+                }
+            });
+            graphElements = [];
+            
+            const info = document.getElementById('graphInfo');
+            if (info) info.innerHTML = '';
+            
+            // Reinitialize grid
+            initializeGraph();
+        }
+
+        // System Graph Functions
+        function initializeSystemGraph() {
+            // Similar to initializeGraph but for system
+            const container = document.getElementById('systemGraph');
+            if (!container) return;
+            
+            const plane = container.querySelector('.coordinate-plane');
+            if (!plane) return;
+            
+            plane.innerHTML = '';
+            initializeGraph(); // Reuse graph initialization
+        }
+
+        function plotSystemExample1() {
+            // Basic system: x + y ≤ 6, x ≥ 0, y ≥ 0
+            const container = document.getElementById('systemGraph');
+            if (!container) return;
+            
+            initializeSystemGraph();
+            const info = document.getElementById('systemInfo');
+            if (info) info.innerHTML = 'System: x + y ≤ 6, x ≥ 0, y ≥ 0<br>Feasible region: Triangle with vertices (0,0), (6,0), (0,6)';
+        }
+
+        function plotSystemExample2() {
+            // Bounded region: x + 2y ≤ 10, 2x + y ≤ 10, x ≥ 0, y ≥ 0
+            const container = document.getElementById('systemGraph');
+            if (!container) return;
+            
+            initializeSystemGraph();
+            const info = document.getElementById('systemInfo');
+            if (info) info.innerHTML = 'System: x + 2y ≤ 10, 2x + y ≤ 10, x ≥ 0, y ≥ 0<br>Feasible region: Quadrilateral with vertices (0,0), (5,0), (10/3,10/3), (0,5)';
+        }
+
+        function plotSystemExample3() {
+            // Unbounded region: x + y ≥ 5, x ≥ 0, y ≥ 0
+            const container = document.getElementById('systemGraph');
+            if (!container) return;
+            
+            initializeSystemGraph();
+            const info = document.getElementById('systemInfo');
+            if (info) info.innerHTML = 'System: x + y ≥ 5, x ≥ 0, y ≥ 0<br>Feasible region: Unbounded region in first quadrant above line x + y = 5';
+        }
+
+        function clearSystemGraph() {
+            initializeSystemGraph();
+            const info = document.getElementById('systemInfo');
+            if (info) info.innerHTML = '';
+        }
+
+        // LP Graph Functions
+        function initializeLPGraph() {
+            // Similar to initializeGraph but for LP
+            const container = document.getElementById('lpGraph');
+            if (!container) return;
+            
+            const plane = container.querySelector('.coordinate-plane');
+            if (!plane) return;
+            
+            plane.innerHTML = '';
+            initializeGraph(); // Reuse graph initialization
+        }
+
+        function plotLPExample1() {
+            // Maximization: Max z = 50x + 40y subject to 2x+3y≤60, 3x+y≤48, x≥0, y≥0
+            const container = document.getElementById('lpGraph');
+            if (!container) return;
+            
+            initializeLPGraph();
+            const info = document.getElementById('lpInfo');
+            if (info) info.innerHTML = 'Maximize: z = 50x + 40y<br>Subject to: 2x+3y≤60, 3x+y≤48, x≥0, y≥0<br>Optimal: (12,12) with z=1080';
+        }
+
+        function plotLPExample2() {
+            // Minimization: Min z = 20x + 30y subject to 3x+2y≥60, 4x+2y≥75, x+3y≥60, x≥0, y≥0
+            const container = document.getElementById('lpGraph');
+            if (!container) return;
+            
+            initializeLPGraph();
+            const info = document.getElementById('lpInfo');
+            if (info) info.innerHTML = 'Minimize: z = 20x + 30y<br>Subject to: 3x+2y≥60, 4x+2y≥75, x+3y≥60, x≥0, y≥0<br>Optimal: (15,7.5) with z=525';
+        }
+
+        function plotLPExample3() {
+            // Multiple constraints: Max z = 3x + 2y subject to x+2y≤10, x+y≤6, x≤4, x≥0, y≥0
+            const container = document.getElementById('lpGraph');
+            if (!container) return;
+            
+            initializeLPGraph();
+            const info = document.getElementById('lpInfo');
+            if (info) info.innerHTML = 'Maximize: z = 3x + 2y<br>Subject to: x+2y≤10, x+y≤6, x≤4, x≥0, y≥0<br>Optimal: (4,2) with z=16';
+        }
+
+        function clearLPGraph() {
+            initializeLPGraph();
+            const info = document.getElementById('lpInfo');
+            if (info) info.innerHTML = '';
+        }
+
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                createParticles();
+                initializeNumberLine();
+                initializeGraph();
+                initializeSystemGraph();
+                initializeLPGraph();
+            }, 250);
+        });
+    </script>
+</body>
+</html>
