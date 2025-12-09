@@ -1,0 +1,2052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKVRN3GREN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKVRN3GREN');
+</script>
+      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binomial Theorem | Class 11 Maths | JEE & NEET Preparation</title>
+    <meta name="description" content="Master Binomial Theorem for Class 11 Mathematics. Complete guide for JEE & NEET aspirants with formulas, expansions, Pascal's Triangle, and problem-solving strategies.">
+    <meta name="keywords" content="Binomial Theorem, Binomial Expansion, Mathematics Class 11, JEE Maths, NEET Maths, Pascal's Triangle, Binomial Coefficients, Middle Term, General Term">
+    <meta name="author" content="Nerds Assemble">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Binomial Theorem | Class 11 Mathematics">
+    <meta property="og:description" content="Complete guide to Binomial Theorem for JEE & NEET aspirants">
+    <meta property="og:type" content="website">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Pacifico&family=Dancing+Script:wght@700&family=Abril+Fatface&family=Playfair+Display:wght@700&family=Raleway:wght@300;800&family=Quicksand:wght@500&family=Poiret+One&family=Amatic+SC:wght@700&family=Caveat:wght@700&family=Kaushan+Script&family=Libre+Baskerville&family=Merriweather&family=Nunito:wght@800&family=Oswald:wght@500&family=Roboto+Slab:wght@700&family=Sacramento&family=Tangerine:wght@700&family=Yeseva+One&family=Electrolize&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+   
+     <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/planet-universe-svgrepo-com.svg">
+    
+    <style>
+        /* Binomial Theorem - Nerds Assemble CSS */
+        :root {
+            --primary: #6a11cb;
+            --secondary: #2575fc;
+            --tertiary: #00d2ff;
+            --bg: #0a0a20;
+            --text: #ffffff;
+            --highlight: #ff9e6d;
+            --nav-bg: rgba(10, 5, 30, 0.95);
+            --binomial-gradient: linear-gradient(45deg, #6a11cb, #2575fc);
+            --expansion-gradient: linear-gradient(45deg, #2575fc, #00d2ff);
+            --coefficient-gradient: linear-gradient(45deg, #00d2ff, #6a11cb);
+        }
+
+        /* Base Styles & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overscroll-behavior-y: contain;
+            -webkit-overflow-scrolling: touch;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(106, 17, 203, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(37, 117, 252, 0.1) 0%, transparent 20%),
+                linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--tertiary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(106, 17, 203, 0.5);
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--highlight);
+            margin: 2rem 0 1.5rem;
+            font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-family: 'Roboto Slab', serif;
+            color: var(--secondary);
+            margin: 1.5rem 0 1rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+        }
+
+        p {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+        }
+
+        /* Layout Components */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            flex: 1;
+            padding: 0 1rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Raleway', sans-serif;
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            transform: translateZ(0);
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            color: var(--highlight);
+            font-size: 1.6rem;
+        }
+
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.4rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Electrolize', sans-serif;
+            font-size: 0.95rem;
+            transition: color 0.2s ease-out;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--highlight);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--highlight);
+            transition: width 0.2s ease-out;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* Content Panels */
+        .info-panel {
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
+            padding: 1.8rem;
+            margin: 1.8rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: translateZ(0);
+            will-change: transform, opacity;
+        }
+
+        .info-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%),
+                linear-gradient(-45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%);
+            background-size: 20px 20px;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        /* Special Content Blocks */
+        .important {
+            background: rgba(37, 117, 252, 0.1);
+            border-left: 4px solid var(--secondary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(37, 117, 252, 0.1);
+        }
+
+        .definition {
+            background: rgba(106, 17, 203, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(106, 17, 203, 0.1);
+        }
+
+        .formula {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin: 1.2rem 0;
+            padding: 1.2rem;
+            background: rgba(255, 158, 109, 0.1);
+            border-radius: 8px;
+            border: 1px dashed var(--highlight);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.1rem;
+        }
+
+        .formula::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, transparent 45%, rgba(255, 158, 109, 0.1) 50%, transparent 55%);
+            background-size: 10px 10px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .example {
+            background: rgba(0, 210, 255, 0.1);
+            border-left: 4px solid var(--tertiary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Lists & Tables */
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 1.8rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background-color: rgba(106, 17, 203, 0.2);
+            font-family: 'Electrolize', sans-serif;
+            color: var(--highlight);
+            font-size: 0.95rem;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+
+        tr:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* Concept Cards */
+        .concept-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .concept-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(106, 17, 203, 0.2);
+        }
+
+        .concept-card.binomial {
+            border-top: 4px solid var(--primary);
+        }
+
+        .concept-card.expansion {
+            border-top: 4px solid var(--secondary);
+        }
+
+        .concept-card.coefficient {
+            border-top: 4px solid var(--tertiary);
+        }
+
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title.binomial { color: var(--primary); }
+        .card-title.expansion { color: var(--secondary); }
+        .card-title.coefficient { color: var(--tertiary); }
+
+        /* Swiper Carousel */
+        .swiper-container {
+            width: 100%;
+            height: auto;
+            min-height: 180px;
+            margin: 2.5rem 0;
+            will-change: transform;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .swiper-slide {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+            font-family: 'Electrolize', sans-serif;
+            padding: 1.2rem;
+            box-sizing: border-box;
+            text-align: center;
+            min-height: 180px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-out;
+            transform: translateZ(0);
+            height: auto;
+        }
+
+        .swiper-slide:hover {
+            transform: translateY(-5px);
+        }
+
+        .swiper-slide div {
+            width: 100%;
+        }
+
+        .swiper-title {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin-bottom: 0.5rem;
+            font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+        }
+
+        .swiper-text {
+            font-family: 'Quicksand', sans-serif;
+            font-size: clamp(0.85rem, 1.1vw, 1rem);
+        }
+
+        /* Swiper Navigation */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: var(--highlight);
+            background: rgba(0, 0, 0, 0.5);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            backdrop-filter: blur(10px);
+            margin-top: -17.5px;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .swiper-pagination-bullet {
+            background: var(--text);
+            opacity: 0.5;
+            width: 8px;
+            height: 8px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: var(--highlight);
+            opacity: 1;
+        }
+
+        /* Problem Solving Section */
+        .problem-solving {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .problem-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .problem-title {
+            color: var(--secondary);
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Particles Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            will-change: transform;
+            opacity: 0.3;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .footer-column h3 {
+            color: var(--highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            transition: color 0.2s ease-out;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--highlight);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text);
+            font-size: 1.1rem;
+            transition: color 0.2s ease-out;
+        }
+
+        .social-links a:hover {
+            color: var(--highlight);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 1.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Quicksand', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease-out;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(106, 17, 203, 0.3);
+            transform: translateZ(0);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--highlight);
+            transform: translateY(-5px);
+        }
+
+        /* JEE/NEET Specific Styling */
+        .exam-highlight {
+            background: rgba(255, 235, 0, 0.1);
+            border: 2px solid var(--highlight);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .exam-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--highlight);
+            color: var(--bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(10px, 10px); }
+            50% { transform: translate(-5px, 15px); }
+            75% { transform: translate(5px, -5px); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        /* Binomial Theorem Specific */
+        .binomial-expansion {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .expansion-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .term-box {
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary);
+            color: white;
+            border-radius: 8px;
+            font-family: 'Audiowide', cursive;
+            font-size: 1rem;
+            box-shadow: 0 4px 10px rgba(106, 17, 203, 0.3);
+        }
+
+        .coefficient-box {
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--secondary);
+            color: white;
+            border-radius: 6px;
+            font-family: 'Audiowide', cursive;
+            font-size: 0.9rem;
+            margin: 0.2rem;
+        }
+
+        .pascal-triangle {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+        }
+
+        .pascal-row {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .pascal-number {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--tertiary);
+            color: var(--bg);
+            border-radius: 50%;
+            font-family: 'Audiowide', cursive;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* Formula Grid */
+        .formula-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .formula-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .formula-card-title {
+            color: var(--highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background-image:
+                    radial-gradient(circle at 10% 20%, rgba(106, 17, 203, 0.05) 0%, transparent 20%),
+                    linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+            }
+
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                margin-top: 1rem;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.75rem 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            header, .info-panel {
+                backdrop-filter: blur(5px);
+            }
+
+            .container {
+                width: 95%;
+                padding: 0;
+            }
+
+            .info-panel {
+                padding: 1.5rem;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            th, td {
+                padding: 0.5rem;
+                font-size: 0.85rem;
+            }
+
+            .concept-cards, .problem-solving {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none;
+            }
+
+            .formula-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .term-box {
+                font-size: 0.9rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            .pascal-number {
+                width: 35px;
+                height: 35px;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-panel {
+                padding: 1rem;
+            }
+
+            ul, ol {
+                padding-left: 1.5rem;
+            }
+
+            .formula {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+
+            .swiper-slide {
+                padding: 1rem;
+            }
+
+            .term-box {
+                font-size: 0.8rem;
+                padding: 0.3rem 0.6rem;
+            }
+
+            .pascal-number {
+                width: 30px;
+                height: 30px;
+                font-size: 0.7rem;
+            }
+        }
+
+        /* MathJax Override */
+        .math {
+            font-family: 'Audiowide', cursive !important;
+            color: var(--highlight) !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-sigma"></i></span>
+                <span class="logo-text">Nerds Assemble</span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#history">History</a></li>
+                    <li><a href="#formula">Binomial Formula</a></li>
+                    <li><a href="#properties">Properties</a></li>
+                    <li><a href="#pascal">Pascal's Triangle</a></li>
+                    <li><a href="#applications">Applications</a></li>
+                    <li><a href="#problems">Problems</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="page-header" data-aos="fade-down">
+            <h1>Binomial Theorem</h1>
+            <p class="subtitle">Class 11 Mathematics | JEE & NEET Preparation Guide</p>
+            <p>Master the expansion of binomial expressions - from basic formulas to advanced applications in probability and series</p>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="info-panel" id="introduction" data-aos="fade-up">
+            <h2>Introduction to Binomial Theorem</h2>
+            <p>The Binomial Theorem describes the algebraic expansion of powers of a binomial expression. It's a fundamental concept in algebra with applications in probability, calculus, and various branches of mathematics.</p>
+
+            <div class="definition">
+                <p><strong>Binomial Expression:</strong> An algebraic expression containing two terms connected by a plus or minus sign. Examples: (a + b), (x - y), (1 + x)ⁿ</p>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card binomial" data-aos="flip-left">
+                    <div class="card-title binomial"><i class="fas fa-plus-circle"></i> Binomial Expression</div>
+                    <p>An expression with two terms: (a + b) or (a - b). The theorem expands (a + b)ⁿ for any positive integer n.</p>
+                    <div class="formula">(a + b)ⁿ = Σ ⁿCᵣ aⁿ⁻ʳ bʳ</div>
+                </div>
+
+                <div class="concept-card expansion" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-title expansion"><i class="fas fa-expand-alt"></i> Binomial Expansion</div>
+                    <p>The result of applying the binomial theorem gives the expanded form with (n+1) terms.</p>
+                    <div class="formula">(a+b)³ = a³ + 3a²b + 3ab² + b³</div>
+                </div>
+
+                <div class="concept-card coefficient" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card-title coefficient"><i class="fas fa-superscript"></i> Binomial Coefficients</div>
+                    <p>The coefficients in the expansion are binomial coefficients: ⁿCᵣ = n!/[r!(n-r)!]</p>
+                    <div class="formula">ⁿCᵣ = n!/[r!(n-r)!]</div>
+                </div>
+            </div>
+
+            <!-- Visual Example -->
+            <div class="binomial-expansion">
+                <h3>Visual Example: (a + b)³ Expansion</h3>
+                <div class="expansion-visual">
+                    <div class="term-box">(a + b)³</div>
+                    <div style="color: var(--highlight); font-size: 1.5rem; font-weight: bold;">=</div>
+                    <div class="term-box">a³</div>
+                    <div style="color: var(--highlight); font-size: 1.5rem; font-weight: bold;">+</div>
+                    <div class="term-box">3a²b</div>
+                    <div style="color: var(--highlight); font-size: 1.5rem; font-weight: bold;">+</div>
+                    <div class="term-box">3ab²</div>
+                    <div style="color: var(--highlight); font-size: 1.5rem; font-weight: bold;">+</div>
+                    <div class="term-box">b³</div>
+                </div>
+                <p style="margin-top: 1rem; color: var(--primary); font-size: 0.9rem;">Total terms: 3 + 1 = 4 terms</p>
+                <p style="color: var(--secondary); font-size: 0.9rem;">Binomial coefficients: 1, 3, 3, 1 (from Pascal's Triangle row 3)</p>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section class="info-panel" id="history" data-aos="fade-up">
+            <h2>Historical Development</h2>
+            <p>The Binomial Theorem has a rich history dating back to ancient civilizations, with contributions from mathematicians across different cultures.</p>
+
+            <div class="concept-cards">
+                <div class="concept-card" data-aos="zoom-in">
+                    <div class="card-title">Ancient Foundations</div>
+                    <p>The concept of binomial expansion was known to Indian, Greek, and Chinese mathematicians as early as the 4th century BC.</p>
+                    <div class="example">
+                        <p><strong>Pingala (2nd century BC):</strong> Indian mathematician who described binomial coefficients in his work on Sanskrit prosody.</p>
+                    </div>
+                </div>
+
+                <div class="concept-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card-title">Pascal's Contribution</div>
+                    <p>Blaise Pascal (1623-1662) systematized the binomial coefficients in what is now known as Pascal's Triangle.</p>
+                    <div class="example">
+                        <p><strong>Pascal's Triangle:</strong> A triangular array of binomial coefficients where each number is the sum of the two directly above it.</p>
+                    </div>
+                </div>
+
+                <div class="concept-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card-title">Newton's Generalization</div>
+                    <p>Isaac Newton (1643-1727) generalized the binomial theorem to rational exponents, not just positive integers.</p>
+                    <div class="example">
+                        <p><strong>Newton's Binomial Theorem:</strong> (1+x)ʳ = 1 + rx + [r(r-1)/2!]x² + ... for any real number r.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Timeline of Development</h3>
+            <table>
+                <tr>
+                    <th>Year</th>
+                    <th>Mathematician</th>
+                    <th>Contribution</th>
+                    <th>Significance</th>
+                </tr>
+                <tr>
+                    <td>4th Century BC</td>
+                    <td>Greek Mathematicians</td>
+                    <td>Basic expansions of (a+b)² and (a+b)³</td>
+                    <td>Foundational geometric proofs</td>
+                </tr>
+                <tr>
+                    <td>2nd Century BC</td>
+                    <td>Pingala (India)</td>
+                    <td>Binomial coefficients in prosody</td>
+                    <td>Early combinatorial thinking</td>
+                </tr>
+                <tr>
+                    <td>11th Century</td>
+                    <td>Al-Karaji (Persia)</td>
+                    <td>Binomial coefficients table</td>
+                    <td>Systematic coefficient calculation</td>
+                </tr>
+                <tr>
+                    <td>13th Century</td>
+                    <td>Yang Hui (China)</td>
+                    <td>Yang Hui's Triangle</td>
+                    <td>Chinese version of Pascal's Triangle</td>
+                </tr>
+                <tr>
+                    <td>17th Century</td>
+                    <td>Blaise Pascal (France)</td>
+                    <td>Pascal's Triangle treatise</td>
+                    <td>Systematic study of binomial coefficients</td>
+                </tr>
+                <tr>
+                    <td>17th Century</td>
+                    <td>Isaac Newton (England)</td>
+                    <td>General binomial theorem</td>
+                    <td>Extension to rational exponents</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Key Historical Facts:</strong></p>
+                <ul>
+                    <li>The binomial coefficients appear in the "Meru Prastara" described by Indian mathematician Pingala</li>
+                    <li>Al-Karaji's work on binomial coefficients predates Pascal by 600 years</li>
+                    <li>Yang Hui's Triangle (1261) and Pascal's Triangle (1654) are identical constructions</li>
+                    <li>Newton discovered the generalized binomial theorem while developing calculus</li>
+                    <li>The theorem played a crucial role in the development of probability theory</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Binomial Formula Section -->
+        <section class="info-panel" id="formula" data-aos="fade-up">
+            <h2>Binomial Theorem Formula</h2>
+            <p>The Binomial Theorem provides a formula for expanding expressions of the form (x + y)ⁿ where n is a positive integer.</p>
+
+            <div class="definition">
+                <p><strong>Binomial Theorem:</strong> For any positive integer n, (x + y)ⁿ = ⁿC₀xⁿy⁰ + ⁿC₁xⁿ⁻¹y¹ + ⁿC₂xⁿ⁻²y² + ... + ⁿCₙx⁰yⁿ</p>
+            </div>
+
+            <div class="formula">
+                (x + y)ⁿ = ∑<sub>r=0</sub><sup>n</sup> ⁿCᵣ xⁿ⁻ʳ yʳ
+            </div>
+            <p>Where:<br>
+            • ⁿCᵣ = n!/[r!(n-r)!] are binomial coefficients<br>
+            • n is a positive integer<br>
+            • The sum runs from r = 0 to r = n</p>
+
+            <div class="formula-grid">
+                <div class="formula-card">
+                    <div class="formula-card-title">General Term</div>
+                    <div class="formula">T<sub>r+1</sub> = ⁿCᵣ xⁿ⁻ʳ yʳ</div>
+                    <p>The (r+1)th term in the expansion</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Middle Term</div>
+                    <div class="formula">For even n: T<sub>(n/2)+1</sub><br>For odd n: T<sub>(n+1)/2</sub> & T<sub>(n+3)/2</sub></div>
+                    <p>One or two middle terms depending on n</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Coefficient Sum</div>
+                    <div class="formula">ⁿC₀ + ⁿC₁ + ... + ⁿCₙ = 2ⁿ</div>
+                    <p>Sum of all binomial coefficients</p>
+                </div>
+            </div>
+
+            <!-- Visual Expansion -->
+            <div class="binomial-expansion">
+                <h3>Expansion of (x + y)⁴</h3>
+                <div class="expansion-visual">
+                    <div class="term-box">(x + y)⁴</div>
+                    <div style="color: var(--highlight); font-size: 1.5rem; font-weight: bold;">=</div>
+                    <div class="coefficient-box">1</div>
+                    <div class="term-box">x⁴</div>
+                    <div style="color: var(--highlight); font-size: 1.5rem; font-weight: bold;">+</div>
+                    <div class="coefficient-box">4</div>
+                    <div class="term-box">x³y</div>
+                    <div style="color: var(--highlight); font-size: 1.5rem; font-weight: bold;">+</div>
+                    <div class="coefficient-box">6</div>
+                    <div class="term-box">x²y²</div>
+                    <div style="color: var(--highlight); font-size: 1.5rem; font-weight: bold;">+</div>
+                    <div class="coefficient-box">4</div>
+                    <div class="term-box">xy³</div>
+                    <div style="color: var(--highlight); font-size: 1.5rem; font-weight: bold;">+</div>
+                    <div class="coefficient-box">1</div>
+                    <div class="term-box">y⁴</div>
+                </div>
+                <p style="margin-top: 1rem; color: var(--secondary); font-size: 0.9rem;">
+                    <i class="fas fa-calculator"></i> Coefficients: ⁴C₀=1, ⁴C₁=4, ⁴C₂=6, ⁴C₃=4, ⁴C₄=1
+                </p>
+            </div>
+
+            <h3>Important Expansions to Memorize</h3>
+            <table>
+                <tr>
+                    <th>Expression</th>
+                    <th>Expansion</th>
+                    <th>Number of Terms</th>
+                    <th>Coefficient Sum</th>
+                </tr>
+                <tr>
+                    <td>(x + y)²</td>
+                    <td>x² + 2xy + y²</td>
+                    <td>3</td>
+                    <td>1+2+1 = 4 = 2²</td>
+                </tr>
+                <tr>
+                    <td>(x + y)³</td>
+                    <td>x³ + 3x²y + 3xy² + y³</td>
+                    <td>4</td>
+                    <td>1+3+3+1 = 8 = 2³</td>
+                </tr>
+                <tr>
+                    <td>(x + y)⁴</td>
+                    <td>x⁴ + 4x³y + 6x²y² + 4xy³ + y⁴</td>
+                    <td>5</td>
+                    <td>1+4+6+4+1 = 16 = 2⁴</td>
+                </tr>
+                <tr>
+                    <td>(x + y)⁵</td>
+                    <td>x⁵ + 5x⁴y + 10x³y² + 10x²y³ + 5xy⁴ + y⁵</td>
+                    <td>6</td>
+                    <td>1+5+10+10+5+1 = 32 = 2⁵</td>
+                </tr>
+                <tr>
+                    <td>(x - y)ⁿ</td>
+                    <td>Alternating signs: +, -, +, - ...</td>
+                    <td>n+1</td>
+                    <td>0 for n ≥ 1</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Key Points about the Formula:</strong></p>
+                <ul>
+                    <li>The expansion has (n+1) terms</li>
+                    <li>The powers of x decrease from n to 0 while powers of y increase from 0 to n</li>
+                    <li>The sum of exponents in each term is always n</li>
+                    <li>The coefficients are symmetric: ⁿCᵣ = ⁿCₙ₋ᵣ</li>
+                    <li>For (x - y)ⁿ, the signs alternate: +, -, +, - ... starting with +</li>
+                    <li>The general term T<sub>r+1</sub> = ⁿCᵣ xⁿ⁻ʳ yʳ is crucial for finding specific terms</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Finding Specific Term</div>
+                <p>Find the 5th term in the expansion of (2x - 3y)⁸</p>
+                <p><strong>Solution:</strong></p>
+                <p>General term: T<sub>r+1</sub> = ⁸Cᵣ (2x)⁸⁻ʳ (-3y)ʳ</p>
+                <p>For 5th term, r+1 = 5 ⇒ r = 4</p>
+                <p>T₅ = ⁸C₄ (2x)⁴ (-3y)⁴ = 70 × 16x⁴ × 81y⁴ = 70 × 1296 x⁴y⁴ = 90720 x⁴y⁴</p>
+            </div>
+        </section>
+
+        <!-- Properties Section -->
+        <section class="info-panel" id="properties" data-aos="fade-up">
+            <h2>Properties of Binomial Expansion</h2>
+            <p>Binomial expansions have several important properties that simplify calculations and problem-solving.</p>
+
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Symmetry Property</div>
+                    <p>The binomial coefficients are symmetric: ⁿCᵣ = ⁿCₙ₋ᵣ</p>
+                    <div class="formula">ⁿCᵣ = ⁿCₙ₋ᵣ</div>
+                    <div class="example">
+                        <p><strong>Example:</strong> ¹⁰C₃ = ¹⁰C₇ = 120</p>
+                        <p>This means coefficient of x⁷y³ = coefficient of x³y⁷</p>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Sum of Coefficients</div>
+                    <p>Sum of all binomial coefficients = 2ⁿ</p>
+                    <div class="formula">ⁿC₀ + ⁿC₁ + ⁿC₂ + ... + ⁿCₙ = 2ⁿ</div>
+                    <div class="example">
+                        <p><strong>Example:</strong> For (1+x)⁵: 1 + 5 + 10 + 10 + 5 + 1 = 32 = 2⁵</p>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Alternating Sum</div>
+                    <p>Alternating sum of coefficients = 0 (for n ≥ 1)</p>
+                    <div class="formula">ⁿC₀ - ⁿC₁ + ⁿC₂ - ... + (-1)ⁿⁿCₙ = 0</div>
+                    <div class="example">
+                        <p><strong>Example:</strong> ⁴C₀ - ⁴C₁ + ⁴C₂ - ⁴C₃ + ⁴C₄ = 1-4+6-4+1 = 0</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Advanced Properties</h3>
+            <div class="comparison-table">
+                <table>
+                    <tr>
+                        <th>Property</th>
+                        <th>Formula</th>
+                        <th>Explanation</th>
+                        <th>Application</th>
+                    </tr>
+                    <tr>
+                        <td>Pascal's Rule</td>
+                        <td>ⁿCᵣ + ⁿCᵣ₋₁ = ⁿ⁺¹Cᵣ</td>
+                        <td>Forms Pascal's Triangle relation</td>
+                        <td>Recursive coefficient calculation</td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Coefficient</td>
+                        <td>Max when r = n/2 (even n)<br>r = (n±1)/2 (odd n)</td>
+                        <td>Middle coefficient(s) largest</td>
+                        <td>Finding largest term in expansion</td>
+                    </tr>
+                    <tr>
+                        <td>Binomial Coefficient Sum</td>
+                        <td>ⁿC₀ + ⁿC₂ + ⁿC₄ + ... = 2ⁿ⁻¹</td>
+                        <td>Sum of even-indexed coefficients</td>
+                        <td>Probability calculations</td>
+                    </tr>
+                    <tr>
+                        <td>Vandermonde's Identity</td>
+                        <td>∑(ᵐCₖ × ⁿCᵣ₋ₖ) = ᵐ⁺ⁿCᵣ</td>
+                        <td>Convolution of binomial coefficients</td>
+                        <td>Combinatorial proofs</td>
+                    </tr>
+                    <tr>
+                        <td>Ratio of Consecutive Terms</td>
+                        <td>T<sub>r+1</sub>/Tᵣ = [(n-r+1)/r] × (y/x)</td>
+                        <td>Useful for finding greatest term</td>
+                        <td>Approximation problems</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="important">
+                <p><strong>Properties of Binomial Coefficients:</strong></p>
+                <ul>
+                    <li>ⁿC₀ = ⁿCₙ = 1 (first and last coefficients are always 1)</li>
+                    <li>ⁿC₁ = ⁿCₙ₋₁ = n (second and second-last coefficients equal n)</li>
+                    <li>ⁿCᵣ = ⁿCₙ₋ᵣ (symmetry property)</li>
+                    <li>ⁿCᵣ = ⁿ⁻¹Cᵣ + ⁿ⁻¹Cᵣ₋₁ (Pascal's identity)</li>
+                    <li>r × ⁿCᵣ = n × ⁿ⁻¹Cᵣ₋₁ (useful for simplification)</li>
+                    <li>ⁿCᵣ/ⁿCᵣ₋₁ = (n - r + 1)/r (ratio of consecutive coefficients)</li>
+                </ul>
+            </div>
+
+            <h3>Finding Greatest Term/Coefficient</h3>
+            <p>To find the greatest term in the expansion of (1+x)ⁿ (x > 0):</p>
+            <ol>
+                <li>Calculate ratio: T<sub>r+1</sub>/Tᵣ = [(n-r+1)/r] × x</li>
+                <li>Find r such that T<sub>r+1</sub>/Tᵣ ≥ 1</li>
+                <li>The greatest term occurs when r = ⌊(n+1)x/(1+x)⌋</li>
+            </ol>
+
+            <div class="example">
+                <div class="example-title">Example: Greatest Coefficient</div>
+                <p>Find the greatest coefficient in the expansion of (1+x)¹⁰</p>
+                <p><strong>Solution:</strong></p>
+                <p>For even n=10, the greatest coefficient is at r = n/2 = 5</p>
+                <p>Greatest coefficient = ¹⁰C₅ = 252</p>
+                <p>Check: ¹⁰C₄ = 210, ¹⁰C₅ = 252, ¹⁰C₆ = 210</p>
+                <p>Thus ¹⁰C₅ = 252 is the greatest coefficient.</p>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Properties Involving Multiple Expansions</h4>
+                <p><strong>Multinomial Theorem:</strong> Extension to more than two terms</p>
+                <div class="formula">(x₁+x₂+...+xₘ)ⁿ = ∑[n!/(n₁!n₂!...nₘ!)] x₁ⁿ¹ x₂ⁿ² ... xₘⁿₘ</div>
+                <p>where n₁+n₂+...+nₘ = n</p>
+                <p><strong>Leibniz Rule:</strong> For product differentiation</p>
+                <p><strong>Bernoulli Numbers:</strong> Arise in certain binomial expansions</p>
+            </div>
+        </section>
+
+        <!-- Pascal's Triangle Section -->
+        <section class="info-panel" id="pascal" data-aos="fade-up">
+            <h2>Pascal's Triangle</h2>
+            <p>Pascal's Triangle is a triangular array of binomial coefficients that provides a visual representation of the coefficients in binomial expansions.</p>
+
+            <div class="definition">
+                <p><strong>Pascal's Triangle:</strong> Each number is the sum of the two numbers directly above it. The nth row gives coefficients for (a+b)ⁿ⁻¹.</p>
+            </div>
+
+            <!-- Pascal's Triangle Visualization -->
+            <div class="pascal-triangle">
+                <h3>Pascal's Triangle (First 7 Rows)</h3>
+                <div class="pascal-row">
+                    <div class="pascal-number">1</div>
+                </div>
+                <div class="pascal-row">
+                    <div class="pascal-number">1</div>
+                    <div class="pascal-number">1</div>
+                </div>
+                <div class="pascal-row">
+                    <div class="pascal-number">1</div>
+                    <div class="pascal-number">2</div>
+                    <div class="pascal-number">1</div>
+                </div>
+                <div class="pascal-row">
+                    <div class="pascal-number">1</div>
+                    <div class="pascal-number">3</div>
+                    <div class="pascal-number">3</div>
+                    <div class="pascal-number">1</div>
+                </div>
+                <div class="pascal-row">
+                    <div class="pascal-number">1</div>
+                    <div class="pascal-number">4</div>
+                    <div class="pascal-number">6</div>
+                    <div class="pascal-number">4</div>
+                    <div class="pascal-number">1</div>
+                </div>
+                <div class="pascal-row">
+                    <div class="pascal-number">1</div>
+                    <div class="pascal-number">5</div>
+                    <div class="pascal-number">10</div>
+                    <div class="pascal-number">10</div>
+                    <div class="pascal-number">5</div>
+                    <div class="pascal-number">1</div>
+                </div>
+                <div class="pascal-row">
+                    <div class="pascal-number">1</div>
+                    <div class="pascal-number">6</div>
+                    <div class="pascal-number">15</div>
+                    <div class="pascal-number">20</div>
+                    <div class="pascal-number">15</div>
+                    <div class="pascal-number">6</div>
+                    <div class="pascal-number">1</div>
+                </div>
+                <p style="margin-top: 1rem; color: var(--secondary); font-size: 0.9rem;">
+                    Row n gives coefficients for (a+b)ⁿ⁻¹ (starting with row 0: (a+b)⁰ = 1)
+                </p>
+            </div>
+
+            <h3>Properties of Pascal's Triangle</h3>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Example from Triangle</th>
+                </tr>
+                <tr>
+                    <td>Symmetry</td>
+                    <td>Each row reads same forward and backward</td>
+                    <td>Row 4: 1, 4, 6, 4, 1 is symmetric</td>
+                </tr>
+                <tr>
+                    <td>Sum of Row</td>
+                    <td>Sum of numbers in row n = 2ⁿ</td>
+                    <td>Row 3: 1+3+3+1 = 8 = 2³</td>
+                </tr>
+                <tr>
+                    <td>Hockey Stick Pattern</td>
+                    <td>Diagonal sums create hockey stick pattern</td>
+                    <td>1+3+6+10 = 20 (diagonal sum)</td>
+                </tr>
+                <tr>
+                    <td>Fibonacci Numbers</td>
+                    <td>Sum of shallow diagonals gives Fibonacci sequence</td>
+                    <td>1, 1, 2, 3, 5, 8, 13, ...</td>
+                </tr>
+                <tr>
+                    <td>Sierpinski Triangle</td>
+                    <td>Coloring odd numbers reveals fractal pattern</td>
+                    <td>Pattern resembles Sierpinski triangle</td>
+                </tr>
+                <tr>
+                    <td>Binomial Coefficients</td>
+                    <td>Entry in row n, position r = ⁿCᵣ</td>
+                    <td>Row 5, position 2 = ⁵C₂ = 10</td>
+                </tr>
+            </table>
+
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Construction Rule</div>
+                    <p>Each number = sum of two numbers directly above it.</p>
+                    <div class="formula">ⁿ⁺¹Cᵣ = ⁿCᵣ₋₁ + ⁿCᵣ</div>
+                    <div class="example">
+                        <p>Row 5: 1, 5, 10, 10, 5, 1</p>
+                        <p>10 = 4 + 6 (from row 4: 1, 4, 6, 4, 1)</p>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Hockey Stick Identity</div>
+                    <p>Sum of numbers in a diagonal equals number below last.</p>
+                    <div class="formula">ʳCᵣ + ʳ⁺¹Cᵣ + ... + ⁿCᵣ = ⁿ⁺¹Cᵣ₊₁</div>
+                    <div class="example">
+                        <p>1 + 3 + 6 + 10 = 20</p>
+                        <p>Forms hockey stick shape in triangle</p>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Fibonacci Sequence</div>
+                    <p>Sum of shallow diagonals gives Fibonacci numbers.</p>
+                    <div class="formula">Fₙ = ∑ ⁿ⁻ᵏCₖ</div>
+                    <div class="example">
+                        <p>Fibonacci: 1, 1, 2, 3, 5, 8, 13, ...</p>
+                        <p>1=1, 1=1, 2=1+1, 3=1+2, 5=1+3+1, etc.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Interesting Patterns in Pascal's Triangle:</strong></p>
+                <ul>
+                    <li><strong>Triangular Numbers:</strong> Second diagonal: 1, 3, 6, 10, 15, ...</li>
+                    <li><strong>Tetrahedral Numbers:</strong> Third diagonal: 1, 4, 10, 20, 35, ...</li>
+                    <li><strong>Powers of 11:</strong> First few rows: 11⁰=1, 11¹=11, 11²=121, 11³=1331</li>
+                    <li><strong>Binomial Theorem:</strong> Row n gives coefficients for (x+y)ⁿ</li>
+                    <li><strong>Probability:</strong> Row n gives number of ways to get r successes in n trials</li>
+                    <li><strong>Sierpinski Triangle:</strong> Coloring odd numbers creates fractal pattern</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Using Pascal's Triangle</div>
+                <p>Expand (2a - 3b)⁴ using Pascal's Triangle</p>
+                <p><strong>Solution:</strong></p>
+                <p>From row 4 of Pascal's Triangle: 1, 4, 6, 4, 1</p>
+                <p>(2a - 3b)⁴ = 1·(2a)⁴ + 4·(2a)³(-3b) + 6·(2a)²(-3b)² + 4·(2a)(-3b)³ + 1·(-3b)⁴</p>
+                <p>= 16a⁴ + 4·8a³·(-3b) + 6·4a²·9b² + 4·2a·(-27b³) + 81b⁴</p>
+                <p>= 16a⁴ - 96a³b + 216a²b² - 216ab³ + 81b⁴</p>
+            </div>
+        </section>
+
+        <!-- Applications Section -->
+        <section class="info-panel" id="applications" data-aos="fade-up">
+            <h2>Applications of Binomial Theorem</h2>
+            <p>The Binomial Theorem has wide-ranging applications in mathematics, physics, computer science, and economics.</p>
+
+            <div class="comparison-table">
+                <h3>Real-World Applications</h3>
+                <table>
+                    <tr>
+                        <th>Application Area</th>
+                        <th>Specific Use</th>
+                        <th>How Binomial Theorem Helps</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>Probability & Statistics</td>
+                        <td>Binomial Distribution</td>
+                        <td>Calculates probability of r successes in n trials</td>
+                        <td>Coin tosses, quality control</td>
+                    </tr>
+                    <tr>
+                        <td>Calculus</td>
+                        <td>Derivative approximations</td>
+                        <td>Expands (1+x)ⁿ for small x approximations</td>
+                        <td>Finding derivatives of powers</td>
+                    </tr>
+                    <tr>
+                        <td>Computer Science</td>
+                        <td>Algorithm analysis</td>
+                        <td>Analyzes branching processes, search trees</td>
+                        <td>Binary tree node counting</td>
+                    </tr>
+                    <tr>
+                        <td>Economics</td>
+                        <td>Compound interest</td>
+                        <td>Expands (1+r)ⁿ for interest calculations</td>
+                        <td>Investment growth projection</td>
+                    </tr>
+                    <tr>
+                        <td>Physics</td>
+                        <td>Relativistic corrections</td>
+                        <td>Approximates √(1-v²/c²) for v≪c</td>
+                        <td>Special relativity calculations</td>
+                    </tr>
+                    <tr>
+                        <td>Engineering</td>
+                        <td>Error analysis</td>
+                        <td>Propagates uncertainties in measurements</td>
+                        <td>Measurement precision estimation</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>Probability: Binomial Distribution</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Binomial Distribution Formula</div>
+                    <p>Probability of exactly r successes in n independent trials:</p>
+                    <div class="formula">P(X=r) = ⁿCᵣ pʳ (1-p)ⁿ⁻ʳ</div>
+                    <p>where p = probability of success in single trial</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Mean and Variance</div>
+                    <p>For binomial distribution B(n, p):</p>
+                    <div class="formula">Mean = np<br>Variance = np(1-p)</div>
+                    <p>Standard deviation = √[np(1-p)]</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Normal Approximation</div>
+                    <p>For large n, binomial ≈ normal distribution:</p>
+                    <div class="formula">B(n,p) ≈ N(np, np(1-p))</div>
+                    <p>When np > 5 and n(1-p) > 5</p>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Key Applications in Detail:</strong></p>
+                <ul>
+                    <li><strong>Approximations:</strong> (1+x)ⁿ ≈ 1 + nx for small x (first-order approximation)</li>
+                    <li><strong>Series Expansions:</strong> Foundation for Taylor and Maclaurin series</li>
+                    <li><strong>Combinatorics:</strong> Counting subsets, combinations, and permutations</li>
+                    <li><strong>Algebra:</strong> Factorization of aⁿ - bⁿ and aⁿ + bⁿ expressions</li>
+                    <li><strong>Number Theory:</strong> Proving divisibility properties and congruences</li>
+                    <li><strong>Calculus:</strong> Finding derivatives and integrals of power functions</li>
+                    <li><strong>Financial Mathematics:</strong> Compound interest and annuity calculations</li>
+                    <li><strong>Quantum Mechanics:</strong> Angular momentum addition and Clebsch-Gordan coefficients</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Probability Application</div>
+                <p>A fair coin is tossed 10 times. What is the probability of getting exactly 6 heads?</p>
+                <p><strong>Solution:</strong></p>
+                <p>This follows binomial distribution with n=10, p=0.5</p>
+                <p>P(6 heads) = ¹⁰C₆ (0.5)⁶ (0.5)⁴</p>
+                <p>= 210 × (0.5)¹⁰ = 210 × 1/1024 = 210/1024 ≈ 0.2051</p>
+                <p>About 20.51% chance of getting exactly 6 heads in 10 tosses.</p>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Advanced Applications</h4>
+                <p><strong>Multinomial Theorem:</strong> Generalization to more than two terms</p>
+                <div class="formula">(x₁+x₂+...+xₘ)ⁿ = ∑[n!/(n₁!n₂!...nₘ!)] x₁ⁿ¹ x₂ⁿ² ... xₘⁿₘ</div>
+                <p><strong>Generating Functions:</strong> Using (1+x)ⁿ as generating function for binomial coefficients</p>
+                <p><strong>Hypergeometric Functions:</strong> Generalization of binomial series</p>
+                <p><strong>q-Binomial Theorem:</strong> Quantum analog of binomial theorem</p>
+            </div>
+        </section>
+
+        <!-- Problem Solving Section -->
+        <section class="info-panel" id="problems" data-aos="fade-up">
+            <h2>Problem Solving Strategies</h2>
+            <p>Effective techniques for solving binomial theorem problems in JEE and other competitive exams.</p>
+
+            <div class="problem-solving">
+                <div class="problem-box">
+                    <div class="problem-title">Type 1: Finding Specific Terms</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify general term: T<sub>r+1</sub> = ⁿCᵣ xⁿ⁻ʳ yʳ</li>
+                        <li>Substitute given values for x, y, n</li>
+                        <li>Set up equation based on what's asked (coefficient, power, etc.)</li>
+                        <li>Solve for r, then find the term</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> For independent term (term without x), set power of x = 0</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 2: Coefficient Problems</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Write general term formula</li>
+                        <li>Identify which coefficient is needed</li>
+                        <li>Use properties (symmetry, sum formulas) when possible</li>
+                        <li>Calculate using combination formula</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> For sum of coefficients, put x = y = 1 in expansion</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 3: Approximation Problems</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Express number as (1 ± x)ⁿ form</li>
+                        <li>Use binomial expansion up to required terms</li>
+                        <li>Neglect higher powers if x is small</li>
+                        <li>Calculate approximation</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> For (1.01)ⁿ, write as (1 + 0.01)ⁿ ≈ 1 + n(0.01)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Common Problem Types:</strong></p>
+                <ul>
+                    <li><strong>Finding specific term:</strong> rth term, middle term, term independent of x</li>
+                    <li><strong>Coefficient problems:</strong> Specific coefficient, greatest coefficient, sum of coefficients</li>
+                    <li><strong>Approximations:</strong> Numerical approximations using binomial expansion</li>
+                    <li><strong>Divisibility proofs:</strong> Proving expressions are divisible by certain numbers</li>
+                    <li><strong>Series summation:</strong> Using binomial theorem to sum series</li>
+                    <li><strong>Equating coefficients:</strong> Finding unknowns by comparing coefficients</li>
+                    <li><strong>Probability applications:</strong> Binomial distribution problems</li>
+                </ul>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED TIP</div>
+                <h4>Advanced Problem Solving Techniques</h4>
+                <p>• For (1+x)ⁿ + (1-x)ⁿ, even powers of x remain, odd powers cancel</p>
+                <p>• For (1+x)ⁿ - (1-x)ⁿ, odd powers of x remain, even powers cancel</p>
+                <p>• To find coefficient of xʳ in (1+x)ⁿ/(1-x), consider series multiplication</p>
+                <p>• Use generating functions for complex coefficient problems</p>
+                <p>• Apply multinomial theorem for expansions with more than two terms</p>
+                <p>• Use complex numbers and roots of unity for certain summations</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Complex Problem</div>
+                <p>If the coefficients of xʳ and xʳ⁺¹ in the expansion of (1+x)²ⁿ are equal, find r.</p>
+                <p><strong>Solution:</strong></p>
+                <p>General term: T<sub>k+1</sub> = ²ⁿCₖ xᵏ</p>
+                <p>Coefficient of xʳ = ²ⁿCᵣ</p>
+                <p>Coefficient of xʳ⁺¹ = ²ⁿCᵣ₊₁</p>
+                <p>Given: ²ⁿCᵣ = ²ⁿCᵣ₊₁</p>
+                <p>Using symmetry: ²ⁿCᵣ = ²ⁿC₂ₙ₋ᵣ</p>
+                <p>So ²ⁿCᵣ₊₁ = ²ⁿC₂ₙ₋ᵣ ⇒ r+1 = 2n-r ⇒ 2r = 2n-1 ⇒ r = n - 1/2</p>
+                <p>But r must be integer, so check: ²ⁿCᵣ = ²ⁿCᵣ₊₁ also occurs when r = n-1</p>
+                <p>Verify: ²ⁿCₙ₋₁ = ²ⁿCₙ₊₁ by symmetry, and ²ⁿCₙ₋₁ = ²ⁿCₙ (since ⁿCᵣ = ⁿCₙ₋ᵣ)</p>
+                <p>Thus r = n-1</p>
+            </div>
+        </section>
+
+        <!-- Key Facts Carousel -->
+        <div class="swiper-container" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">BINOMIAL THEOREM</div>
+                        <div class="swiper-text">(x+y)ⁿ = Σ ⁿCᵣ xⁿ⁻ʳ yʳ, r=0 to n. Foundation for expansions, probability, and series</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">GENERAL TERM</div>
+                        <div class="swiper-text">T<sub>r+1</sub> = ⁿCᵣ xⁿ⁻ʳ yʳ. Crucial for finding specific terms in expansion</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">BINOMIAL COEFFICIENTS</div>
+                        <div class="swiper-text">ⁿCᵣ = n!/[r!(n-r)!]. Symmetric: ⁿCᵣ = ⁿCₙ₋ᵣ. Sum = 2ⁿ</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">MIDDLE TERM</div>
+                        <div class="swiper-text">For even n: T<sub>(n/2)+1</sub>. For odd n: two middle terms T<sub>(n+1)/2</sub> & T<sub>(n+3)/2</sub></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">PASCAL'S TRIANGLE</div>
+                        <div class="swiper-text">Triangular array of binomial coefficients. Each number = sum of two above it</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">BINOMIAL DISTRIBUTION</div>
+                        <div class="swiper-text">P(X=r) = ⁿCᵣ pʳ (1-p)ⁿ⁻ʳ. Models r successes in n independent trials</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">APPROXIMATIONS</div>
+                        <div class="swiper-text">(1+x)ⁿ ≈ 1 + nx for small x. Useful for quick calculations and estimates</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">PROPERTIES</div>
+                        <div class="swiper-text">ⁿC₀ + ⁿC₁ + ... + ⁿCₙ = 2ⁿ. ⁿC₀ - ⁿC₁ + ⁿC₂ - ... = 0 for n ≥ 1</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- Summary Section -->
+        <section class="info-panel" data-aos="fade-up">
+            <h2>Chapter Summary & Formulas</h2>
+            
+            <h3>Key Formulas</h3>
+            <div class="concept-cards">
+                <div class="concept-card binomial">
+                    <div class="card-title binomial">Binomial Theorem</div>
+                    <div class="formula">(x+y)ⁿ = Σ ⁿCᵣ xⁿ⁻ʳ yʳ</div>
+                    <div class="formula">T<sub>r+1</sub> = ⁿCᵣ xⁿ⁻ʳ yʳ</div>
+                    <div class="formula">Number of terms = n+1</div>
+                    <div class="formula">(x-y)ⁿ: alternating signs</div>
+                </div>
+
+                <div class="concept-card expansion">
+                    <div class="card-title expansion">Properties</div>
+                    <div class="formula">ⁿCᵣ = ⁿCₙ₋ᵣ</div>
+                    <div class="formula">∑ⁿCᵣ = 2ⁿ</div>
+                    <div class="formula">∑(-1)ʳⁿCᵣ = 0 (n≥1)</div>
+                    <div class="formula">ⁿCᵣ + ⁿCᵣ₋₁ = ⁿ⁺¹Cᵣ</div>
+                </div>
+
+                <div class="concept-card coefficient">
+                    <div class="card-title coefficient">Applications</div>
+                    <div class="formula">Binomial: ⁿCᵣ pʳ (1-p)ⁿ⁻ʳ</div>
+                    <div class="formula">Approximation: (1+x)ⁿ ≈ 1+nx</div>
+                    <div class="formula">Pascal: ⁿ⁺¹Cᵣ = ⁿCᵣ₋₁ + ⁿCᵣ</div>
+                    <div class="formula">Middle term(s) formula</div>
+                </div>
+            </div>
+
+            <h3>Important Points for JEE/NEET</h3>
+            <ul>
+                <li>Binomial theorem: (x+y)ⁿ = Σ ⁿCᵣ xⁿ⁻ʳ yʳ for n ∈ ℕ</li>
+                <li>General term: T<sub>r+1</sub> = ⁿCᵣ xⁿ⁻ʳ yʳ (r = 0,1,2,...,n)</li>
+                <li>Number of terms in expansion = n+1</li>
+                <li>Middle term: For even n, one middle term T<sub>(n/2)+1</sub>; for odd n, two middle terms</li>
+                <li>Binomial coefficients are symmetric: ⁿCᵣ = ⁿCₙ₋ᵣ</li>
+                <li>Sum of binomial coefficients = 2ⁿ (put x = y = 1)</li>
+                <li>Sum of coefficients of odd terms = sum of coefficients of even terms = 2ⁿ⁻¹</li>
+                <li>Greatest binomial coefficient: When n is even, greatest is ⁿC<sub>n/2</sub>; when n is odd, greatest are ⁿC<sub>(n-1)/2</sub> and ⁿC<sub>(n+1)/2</sub></li>
+                <li>For approximation: (1+x)ⁿ = 1 + nx + [n(n-1)/2!]x² + ... (valid for |x| < 1 when n is not positive integer)</li>
+                <li>Binomial distribution: P(r successes in n trials) = ⁿCᵣ pʳ qⁿ⁻ʳ where q = 1-p</li>
+            </ul>
+
+            <div class="important">
+                <p><strong>Common Mistakes to Avoid:</strong></p>
+                <ul>
+                    <li>Forgetting that binomial theorem applies only when n is a positive integer (for finite expansion)</li>
+                    <li>Miscounting terms: (x+y)ⁿ has n+1 terms, not n terms</li>
+                    <li>Incorrect sign in (x-y)ⁿ expansion: signs alternate starting with positive</li>
+                    <li>Wrong binomial coefficient calculation: ⁿCᵣ = n!/[r!(n-r)!]</li>
+                    <li>Confusing term number with index: T<sub>r+1</sub> has coefficient ⁿCᵣ</li>
+                    <li>Forgetting to apply powers to coefficients in terms like (2x+3y)ⁿ</li>
+                    <li>Not simplifying binomial coefficients when possible</li>
+                    <li>Misidentifying middle term(s) for odd/even n</li>
+                    <li>Using binomial approximation for large x values</li>
+                    <li>Confusing binomial distribution with other probability distributions</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Nerds Assemble</h3>
+                <p>Master Binomial Theorem for JEE & NEET. Build strong foundation in algebra, probability, and series expansions.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#history">History</a></li>
+                    <li><a href="#formula">Binomial Formula</a></li>
+                    <li><a href="#properties">Properties</a></li>
+                    <li><a href="#pascal">Pascal's Triangle</a></li>
+                    <li><a href="#applications">Applications</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> 44mr.invisible@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Nerds Assemble. All rights reserved. | Designed for JEE & NEET Aspirants | Binomial Theorem - Class 11 Mathematics</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Binomial Theorem - JavaScript
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ?
+                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+            }
+
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+
+            function handleScroll() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('active');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                }
+            }
+
+            // Debounced scroll event
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(handleScroll, 50);
+            }, { passive: true });
+
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: window.innerWidth < 768 ? 100 : 120,
+                    easing: 'ease-out-quad'
+                });
+            }
+
+            // Initialize Swiper
+            if (typeof Swiper !== 'undefined') {
+                const swiper = new Swiper('.swiper-container', {
+                    loop: true,
+                    autoplay: {
+                        delay: 3500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 25
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        }
+                    }
+                });
+            }
+
+            // Smooth Scroll for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        if (mainNav && mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                });
+            });
+
+            // Back to Top Button Click
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Create Particles
+            createParticles();
+            
+            // Add interactive Pascal's Triangle
+            makePascalInteractive();
+        });
+
+        // Create Particles Function
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
+
+            const particleCount = window.innerWidth < 768 ? 20 : 30;
+            particlesContainer.innerHTML = '';
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                const size = Math.random() * 3 + 1;
+                const posX = Math.random() * window.innerWidth;
+                const posY = Math.random() * window.innerHeight;
+                const duration = Math.random() * 15 + 10;
+                const delay = Math.random() * 5;
+
+                particle.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}px;
+                    top: ${posY}px;
+                    opacity: ${Math.random() * 0.3 + 0.1};
+                    animation: float ${duration}s ease-in-out ${delay}s infinite;
+                    background: rgba(255,255,255,0.3);
+                `;
+
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Make Pascal's Triangle Interactive
+        function makePascalInteractive() {
+            const pascalNumbers = document.querySelectorAll('.pascal-number');
+            pascalNumbers.forEach(number => {
+                number.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.2)';
+                    this.style.transition = 'transform 0.2s ease';
+                });
+                
+                number.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        }
+
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(createParticles, 250);
+        });
+    </script>
+</body>
+</html>
