@@ -1,0 +1,2093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKVRN3GREN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKVRN3GREN');
+</script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permutations & Combinations | Class 11 Maths | JEE Preparation</title>
+    <meta name="description" content="Master Permutations and Combinations for Class 11 Mathematics. Complete guide for JEE & NEET aspirants with formulas, concepts, counting principles, and problem-solving strategies.">
+    <meta name="keywords" content="Permutations, Combinations, Mathematics Class 11, JEE Maths, NEET Maths, Counting Principles, Factorial, Arrangement, Selection, Probability">
+    <meta name="author" content="Nerds Assemble">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Permutations & Combinations | Class 11 Mathematics">
+    <meta property="og:description" content="Complete guide to Permutations and Combinations for JEE & NEET aspirants">
+    <meta property="og:type" content="website">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Pacifico&family=Dancing+Script:wght@700&family=Abril+Fatface&family=Playfair+Display:wght@700&family=Raleway:wght@300;800&family=Quicksand:wght@500&family=Poiret+One&family=Amatic+SC:wght@700&family=Caveat:wght@700&family=Kaushan+Script&family=Libre+Baskerville&family=Merriweather&family=Nunito:wght@800&family=Oswald:wght@500&family=Roboto+Slab:wght@700&family=Sacramento&family=Tangerine:wght@700&family=Yeseva+One&family=Electrolize&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    
+     <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/planet-universe-svgrepo-com.svg">
+    
+    <style>
+        /* Permutations & Combinations - Nerds Assemble CSS */
+        :root {
+            --primary: #ff6b6b;
+            --secondary: #4ecdc4;
+            --tertiary: #ffe66d;
+            --bg: #0a0a20;
+            --text: #ffffff;
+            --highlight: #ff9e6d;
+            --nav-bg: rgba(10, 5, 30, 0.95);
+            --permutation-gradient: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            --combination-gradient: linear-gradient(45deg, #4ecdc4, #6ae6de);
+            --counting-gradient: linear-gradient(45deg, #ffe66d, #ffcc00);
+        }
+
+        /* Base Styles & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overscroll-behavior-y: contain;
+            -webkit-overflow-scrolling: touch;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(255, 107, 107, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(78, 205, 196, 0.1) 0%, transparent 20%),
+                linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--tertiary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--highlight);
+            margin: 2rem 0 1.5rem;
+            font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-family: 'Roboto Slab', serif;
+            color: var(--secondary);
+            margin: 1.5rem 0 1rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+        }
+
+        p {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+        }
+
+        /* Layout Components */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            flex: 1;
+            padding: 0 1rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Raleway', sans-serif;
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            transform: translateZ(0);
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            color: var(--highlight);
+            font-size: 1.6rem;
+        }
+
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.4rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Electrolize', sans-serif;
+            font-size: 0.95rem;
+            transition: color 0.2s ease-out;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--highlight);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--highlight);
+            transition: width 0.2s ease-out;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* Content Panels */
+        .info-panel {
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
+            padding: 1.8rem;
+            margin: 1.8rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: translateZ(0);
+            will-change: transform, opacity;
+        }
+
+        .info-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%),
+                linear-gradient(-45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%);
+            background-size: 20px 20px;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        /* Special Content Blocks */
+        .important {
+            background: rgba(78, 205, 196, 0.1);
+            border-left: 4px solid var(--secondary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(78, 205, 196, 0.1);
+        }
+
+        .definition {
+            background: rgba(255, 107, 107, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(255, 107, 107, 0.1);
+        }
+
+        .formula {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin: 1.2rem 0;
+            padding: 1.2rem;
+            background: rgba(255, 158, 109, 0.1);
+            border-radius: 8px;
+            border: 1px dashed var(--highlight);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.1rem;
+        }
+
+        .formula::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, transparent 45%, rgba(255, 158, 109, 0.1) 50%, transparent 55%);
+            background-size: 10px 10px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .example {
+            background: rgba(255, 230, 109, 0.1);
+            border-left: 4px solid var(--tertiary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Lists & Tables */
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 1.8rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background-color: rgba(255, 107, 107, 0.2);
+            font-family: 'Electrolize', sans-serif;
+            color: var(--highlight);
+            font-size: 0.95rem;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+
+        tr:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* Concept Cards */
+        .concept-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .concept-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(255, 107, 107, 0.2);
+        }
+
+        .concept-card.permutation {
+            border-top: 4px solid var(--primary);
+        }
+
+        .concept-card.combination {
+            border-top: 4px solid var(--secondary);
+        }
+
+        .concept-card.counting {
+            border-top: 4px solid var(--tertiary);
+        }
+
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title.permutation { color: var(--primary); }
+        .card-title.combination { color: var(--secondary); }
+        .card-title.counting { color: var(--tertiary); }
+
+        /* Swiper Carousel */
+        .swiper-container {
+            width: 100%;
+            height: auto;
+            min-height: 180px;
+            margin: 2.5rem 0;
+            will-change: transform;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .swiper-slide {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+            font-family: 'Electrolize', sans-serif;
+            padding: 1.2rem;
+            box-sizing: border-box;
+            text-align: center;
+            min-height: 180px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-out;
+            transform: translateZ(0);
+            height: auto;
+        }
+
+        .swiper-slide:hover {
+            transform: translateY(-5px);
+        }
+
+        .swiper-slide div {
+            width: 100%;
+        }
+
+        .swiper-title {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin-bottom: 0.5rem;
+            font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+        }
+
+        .swiper-text {
+            font-family: 'Quicksand', sans-serif;
+            font-size: clamp(0.85rem, 1.1vw, 1rem);
+        }
+
+        /* Swiper Navigation */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: var(--highlight);
+            background: rgba(0, 0, 0, 0.5);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            backdrop-filter: blur(10px);
+            margin-top: -17.5px;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .swiper-pagination-bullet {
+            background: var(--text);
+            opacity: 0.5;
+            width: 8px;
+            height: 8px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: var(--highlight);
+            opacity: 1;
+        }
+
+        /* Problem Solving Section */
+        .problem-solving {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .problem-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .problem-title {
+            color: var(--secondary);
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Particles Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            will-change: transform;
+            opacity: 0.3;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .footer-column h3 {
+            color: var(--highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            transition: color 0.2s ease-out;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--highlight);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text);
+            font-size: 1.1rem;
+            transition: color 0.2s ease-out;
+        }
+
+        .social-links a:hover {
+            color: var(--highlight);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 1.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Quicksand', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease-out;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+            transform: translateZ(0);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--highlight);
+            transform: translateY(-5px);
+        }
+
+        /* JEE/NEET Specific Styling */
+        .exam-highlight {
+            background: rgba(255, 235, 0, 0.1);
+            border: 2px solid var(--highlight);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .exam-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--highlight);
+            color: var(--bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(10px, 10px); }
+            50% { transform: translate(-5px, 15px); }
+            75% { transform: translate(5px, -5px); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        /* Permutation & Combinations Specific */
+        .counting-diagram {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .arrangement-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .item-box {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary);
+            color: white;
+            border-radius: 8px;
+            font-family: 'Audiowide', cursive;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
+        }
+
+        .arrangement-line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        .arrangement-box {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--secondary);
+            color: white;
+            border-radius: 6px;
+            font-family: 'Audiowide', cursive;
+            font-size: 1rem;
+            margin: 0.2rem;
+        }
+
+        .selection-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        .selection-group {
+            display: flex;
+            gap: 0.5rem;
+            padding: 0.8rem;
+            background: rgba(78, 205, 196, 0.1);
+            border-radius: 10px;
+            border: 1px solid var(--secondary);
+        }
+
+        /* Factorial Visualization */
+        .factorial-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+        }
+
+        .factorial-number {
+            padding: 0.5rem 1rem;
+            background: var(--tertiary);
+            color: var(--bg);
+            border-radius: 5px;
+            font-family: 'Audiowide', cursive;
+            font-weight: bold;
+        }
+
+        .multiply-symbol {
+            color: var(--highlight);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        /* Formula Grid */
+        .formula-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .formula-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .formula-card-title {
+            color: var(--highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background-image:
+                    radial-gradient(circle at 10% 20%, rgba(255, 107, 107, 0.05) 0%, transparent 20%),
+                    linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+            }
+
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                margin-top: 1rem;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.75rem 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            header, .info-panel {
+                backdrop-filter: blur(5px);
+            }
+
+            .container {
+                width: 95%;
+                padding: 0;
+            }
+
+            .info-panel {
+                padding: 1.5rem;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            th, td {
+                padding: 0.5rem;
+                font-size: 0.85rem;
+            }
+
+            .concept-cards, .problem-solving {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none;
+            }
+
+            .formula-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .item-box {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+
+            .arrangement-box {
+                width: 35px;
+                height: 35px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-panel {
+                padding: 1rem;
+            }
+
+            ul, ol {
+                padding-left: 1.5rem;
+            }
+
+            .formula {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+
+            .swiper-slide {
+                padding: 1rem;
+            }
+
+            .item-box {
+                width: 35px;
+                height: 35px;
+                font-size: 0.9rem;
+            }
+
+            .arrangement-box {
+                width: 30px;
+                height: 30px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-sort-amount-down"></i></span>
+                <span class="logo-text">Nerds Assemble</span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#counting-principles">Counting Principles</a></li>
+                    <li><a href="#factorial">Factorial</a></li>
+                    <li><a href="#permutations">Permutations</a></li>
+                    <li><a href="#combinations">Combinations</a></li>
+                    <li><a href="#applications">Applications</a></li>
+                    <li><a href="#problems">Problems</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="page-header" data-aos="fade-down">
+            <h1>Permutations & Combinations</h1>
+            <p class="subtitle">Class 11 Mathematics | JEE & NEET Preparation Guide</p>
+            <p>Master the art of counting - from arranging letters to selecting teams, learn systematic counting methods</p>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="info-panel" id="introduction" data-aos="fade-up">
+            <h2>Introduction to Permutations & Combinations</h2>
+            <p>Permutations and Combinations are fundamental concepts in combinatorics that deal with counting and arranging objects. These concepts form the basis for probability theory and have numerous real-world applications.</p>
+
+            <div class="definition">
+                <p><strong>Key Difference:</strong> Permutations are about <em>arrangements</em> (order matters), while Combinations are about <em>selections</em> (order doesn't matter).</p>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card permutation" data-aos="flip-left">
+                    <div class="card-title permutation"><i class="fas fa-sort-alpha-down"></i> Permutations</div>
+                    <p>Counting the number of ways to arrange objects in a specific order. ABC is different from BAC.</p>
+                    <div class="formula">ⁿPᵣ = n!/(n-r)!</div>
+                </div>
+
+                <div class="concept-card combination" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-title combination"><i class="fas fa-object-group"></i> Combinations</div>
+                    <p>Counting the number of ways to select objects without regard to order. ABC is same as BAC.</p>
+                    <div class="formula">ⁿCᵣ = n!/[r!(n-r)!]</div>
+                </div>
+
+                <div class="concept-card counting" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card-title counting"><i class="fas fa-calculator"></i> Fundamental Principles</div>
+                    <p>Basic counting rules: Multiplication Principle and Addition Principle form the foundation.</p>
+                    <div class="formula">If A has m ways, B has n ways, then A and B have m×n ways</div>
+                </div>
+            </div>
+
+            <!-- Visual Example -->
+            <div class="counting-diagram">
+                <h3>Visual Example: Arrangement vs Selection</h3>
+                <div class="arrangement-visual">
+                    <div class="item-box">A</div>
+                    <div class="item-box">B</div>
+                    <div class="item-box">C</div>
+                </div>
+                <p>Arrangements of 3 letters taken 2 at a time:</p>
+                <div class="arrangement-line">
+                    <div class="arrangement-box">A</div>
+                    <div class="arrangement-box">B</div>
+                    <span style="color: var(--highlight);">≠</span>
+                    <div class="arrangement-box">B</div>
+                    <div class="arrangement-box">A</div>
+                </div>
+                <p style="color: var(--primary); font-size: 0.9rem;">AB and BA are different arrangements (Permutation)</p>
+                
+                <p style="margin-top: 1.5rem;">Selections of 3 letters taken 2 at a time:</p>
+                <div class="selection-visual">
+                    <div class="selection-group">
+                        <div class="arrangement-box">A</div>
+                        <div class="arrangement-box">B</div>
+                    </div>
+                    <span style="color: var(--highlight); font-weight: bold; font-size: 1.2rem;">=</span>
+                    <div class="selection-group">
+                        <div class="arrangement-box">B</div>
+                        <div class="arrangement-box">A</div>
+                    </div>
+                </div>
+                <p style="color: var(--secondary); font-size: 0.9rem;">{A,B} and {B,A} are same selection (Combination)</p>
+            </div>
+        </section>
+
+        <!-- Counting Principles Section -->
+        <section class="info-panel" id="counting-principles" data-aos="fade-up">
+            <h2>Fundamental Principles of Counting</h2>
+            <p>These principles form the foundation of all counting problems. Understanding them is crucial for solving complex permutation and combination problems.</p>
+
+            <div class="concept-cards">
+                <div class="concept-card" data-aos="zoom-in">
+                    <div class="card-title">Multiplication Principle</div>
+                    <p>If one operation can be done in m ways and another independent operation in n ways, then both operations together can be done in m×n ways.</p>
+                    <div class="formula">Total ways = m × n</div>
+                    <div class="example">
+                        <p><strong>Example:</strong> If there are 3 shirts and 4 pants, number of outfits = 3 × 4 = 12</p>
+                    </div>
+                </div>
+
+                <div class="concept-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card-title">Addition Principle</div>
+                    <p>If one operation can be done in m ways and another in n ways (mutually exclusive), then either operation can be done in m + n ways.</p>
+                    <div class="formula">Total ways = m + n</div>
+                    <div class="example">
+                        <p><strong>Example:</strong> Travel by bus (3 routes) or train (2 routes): Total ways = 3 + 2 = 5</p>
+                    </div>
+                </div>
+
+                <div class="concept-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card-title">Inclusion-Exclusion Principle</div>
+                    <p>For counting elements in union of sets: |A ∪ B| = |A| + |B| - |A ∩ B|</p>
+                    <div class="formula">|A ∪ B| = |A| + |B| - |A ∩ B|</div>
+                    <div class="example">
+                        <p><strong>Example:</strong> In a class, 20 students play cricket, 15 play football, 8 play both. Total players = 20 + 15 - 8 = 27</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Visual Representation of Multiplication Principle</h3>
+            <div class="counting-diagram">
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                    <div style="text-align: center;">
+                        <div style="font-weight: bold; color: var(--primary); margin-bottom: 0.5rem;">3 Shirts</div>
+                        <div class="item-box" style="background: var(--primary);">S1</div>
+                        <div class="item-box" style="background: var(--primary); margin-top: 0.5rem;">S2</div>
+                        <div class="item-box" style="background: var(--primary); margin-top: 0.5rem;">S3</div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; color: var(--highlight); font-size: 1.5rem; font-weight: bold;">
+                        ×
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <div style="font-weight: bold; color: var(--secondary); margin-bottom: 0.5rem;">4 Pants</div>
+                        <div class="item-box" style="background: var(--secondary);">P1</div>
+                        <div class="item-box" style="background: var(--secondary); margin-top: 0.5rem;">P2</div>
+                        <div class="item-box" style="background: var(--secondary); margin-top: 0.5rem;">P3</div>
+                        <div class="item-box" style="background: var(--secondary); margin-top: 0.5rem;">P4</div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; color: var(--highlight); font-size: 1.5rem; font-weight: bold;">
+                        =
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <div style="font-weight: bold; color: var(--tertiary); margin-bottom: 0.5rem;">12 Outfits</div>
+                        <div style="font-size: 2rem; color: var(--tertiary);">12</div>
+                    </div>
+                </div>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--highlight);">
+                    <i class="fas fa-lightbulb"></i> Each shirt can be paired with each pant → 3 × 4 = 12 combinations
+                </p>
+            </div>
+
+            <div class="important">
+                <p><strong>When to Use Which Principle:</strong></p>
+                <ul>
+                    <li><strong>Multiplication:</strong> When operations are performed in sequence (AND situation)</li>
+                    <li><strong>Addition:</strong> When operations are alternatives (OR situation)</li>
+                    <li><strong>Both:</strong> Many problems require using both principles together</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Combined Principles</div>
+                <p>A restaurant offers 4 appetizers, 6 main courses, and 3 desserts. A meal consists of either an appetizer and main course, or a main course and dessert. How many different meals are possible?</p>
+                <p><strong>Solution:</strong></p>
+                <p>Case 1: Appetizer and main course = 4 × 6 = 24</p>
+                <p>Case 2: Main course and dessert = 6 × 3 = 18</p>
+                <p>Total meals = 24 + 18 = 42 (using both multiplication and addition principles)</p>
+            </div>
+        </section>
+
+        <!-- Factorial Section -->
+        <section class="info-panel" id="factorial" data-aos="fade-up">
+            <h2>Factorial Notation</h2>
+            <p>Factorial is a fundamental concept in permutations and combinations. It represents the product of all positive integers up to a given number.</p>
+
+            <div class="definition">
+                <p><strong>Factorial (n!):</strong> The product of all positive integers from 1 to n. Defined as n! = n × (n-1) × (n-2) × ... × 3 × 2 × 1</p>
+            </div>
+
+            <div class="formula">
+                n! = n × (n-1) × (n-2) × ... × 3 × 2 × 1
+            </div>
+
+            <!-- Factorial Visualization -->
+            <div class="factorial-visual">
+                <h3 style="width: 100%; text-align: center; margin-bottom: 1rem;">5! = 5 × 4 × 3 × 2 × 1</h3>
+                <div class="factorial-number">5</div>
+                <div class="multiply-symbol">×</div>
+                <div class="factorial-number">4</div>
+                <div class="multiply-symbol">×</div>
+                <div class="factorial-number">3</div>
+                <div class="multiply-symbol">×</div>
+                <div class="factorial-number">2</div>
+                <div class="multiply-symbol">×</div>
+                <div class="factorial-number">1</div>
+                <div class="multiply-symbol" style="color: var(--primary);">=</div>
+                <div class="factorial-number" style="background: var(--primary);">120</div>
+            </div>
+
+            <h3>Important Properties of Factorial</h3>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Expression</th>
+                    <th>Explanation</th>
+                </tr>
+                <tr>
+                    <td>Definition</td>
+                    <td>n! = n × (n-1)!</td>
+                    <td>Recursive definition</td>
+                </tr>
+                <tr>
+                    <td>Zero Factorial</td>
+                    <td>0! = 1</td>
+                    <td>By definition (empty product)</td>
+                </tr>
+                <tr>
+                    <td>One Factorial</td>
+                    <td>1! = 1</td>
+                    <td>Trivial case</td>
+                </tr>
+                <tr>
+                    <td>Double Factorial</td>
+                    <td>n!! = n×(n-2)×...×2 or 1</td>
+                    <td>Product of every other number</td>
+                </tr>
+                <tr>
+                    <td>Factorial Division</td>
+                    <td>n!/(n-r)! = n×(n-1)×...×(n-r+1)</td>
+                    <td>Cancellation property</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Special Values:</strong></p>
+                <ul>
+                    <li>0! = 1 (convention, makes formulas work nicely)</li>
+                    <li>1! = 1</li>
+                    <li>2! = 2</li>
+                    <li>3! = 6</li>
+                    <li>4! = 24</li>
+                    <li>5! = 120</li>
+                    <li>6! = 720</li>
+                    <li>7! = 5040</li>
+                    <li>10! = 3,628,800</li>
+                </ul>
+            </div>
+
+            <h3>Applications in Permutations</h3>
+            <p>The number of ways to arrange n distinct objects in a row is n! (n factorial).</p>
+            
+            <div class="counting-diagram">
+                <h4>Arranging 4 distinct objects: 4! = 24 ways</h4>
+                <div class="arrangement-visual">
+                    <div class="item-box">A</div>
+                    <div class="item-box">B</div>
+                    <div class="item-box">C</div>
+                    <div class="item-box">D</div>
+                </div>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--secondary);">
+                    First position: 4 choices, Second: 3 choices, Third: 2 choices, Fourth: 1 choice<br>
+                    Total: 4 × 3 × 2 × 1 = 4! = 24 arrangements
+                </p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Factorial Problems</div>
+                <p>Simplify: (8! × 5!)/(7! × 6!)</p>
+                <p><strong>Solution:</strong></p>
+                <p>8! = 8 × 7!, so (8 × 7! × 5!)/(7! × 6 × 5!) = 8/6 = 4/3</p>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Factorial Equations</h4>
+                <p>Solve: n! = 720</p>
+                <p><strong>Solution:</strong> 6! = 720, so n = 6</p>
+                <p>Solve: n! + (n+1)! = 8(n-1)!</p>
+                <p><strong>Solution:</strong> n! + (n+1)n! = 8(n-1)! ⇒ n!(1+n+1) = 8(n-1)! ⇒ (n+2)n(n-1)! = 8(n-1)! ⇒ n(n+2) = 8 ⇒ n²+2n-8=0 ⇒ n=2 or n=-4 (reject) ⇒ n=2</p>
+            </div>
+        </section>
+
+        <!-- Permutations Section -->
+        <section class="info-panel" id="permutations" data-aos="fade-up">
+            <h2>Permutations</h2>
+            <p>A permutation is an arrangement of objects in a specific order. The number of permutations depends on whether objects are distinct or identical, and whether repetition is allowed.</p>
+
+            <div class="definition">
+                <p><strong>Permutation (ⁿPᵣ):</strong> The number of ways to arrange r objects from n distinct objects, where order matters.</p>
+            </div>
+
+            <div class="formula">
+                ⁿPᵣ = n!/(n-r)!
+            </div>
+            <p>Where:<br>
+            • n = total number of distinct objects<br>
+            • r = number of objects being arranged<br>
+            • n ≥ r ≥ 0</p>
+
+            <div class="formula-grid">
+                <div class="formula-card">
+                    <div class="formula-card-title">Permutation of all n objects</div>
+                    <div class="formula">ⁿPₙ = n!</div>
+                    <p>Arranging all n distinct objects</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Permutation with repetition</div>
+                    <div class="formula">nʳ</div>
+                    <p>Each of r positions has n choices</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Circular Permutation</div>
+                    <div class="formula">(n-1)!</div>
+                    <p>Arrangements around a circle (rotations considered same)</p>
+                </div>
+            </div>
+
+            <h3>Types of Permutations</h3>
+            <div class="comparison-table">
+                <table>
+                    <tr>
+                        <th>Type</th>
+                        <th>Formula</th>
+                        <th>When to Use</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>Linear (distinct)</td>
+                        <td>ⁿPᵣ = n!/(n-r)!</td>
+                        <td>Arranging r from n distinct objects in line</td>
+                        <td>Arranging 3 books from 5 on shelf</td>
+                    </tr>
+                    <tr>
+                        <td>All distinct</td>
+                        <td>n!</td>
+                        <td>Arranging all n distinct objects</td>
+                        <td>Arranging 5 people in row</td>
+                    </tr>
+                    <tr>
+                        <td>With repetition</td>
+                        <td>nʳ</td>
+                        <td>Each position has n choices</td>
+                        <td>3-digit numbers from 0-9</td>
+                    </tr>
+                    <tr>
+                        <td>Circular</td>
+                        <td>(n-1)!</td>
+                        <td>Arranging around circle</td>
+                        <td>Seating 6 at round table</td>
+                    </tr>
+                    <tr>
+                        <td>With restrictions</td>
+                        <td>Varies</td>
+                        <td>Certain objects must be together/separate</td>
+                        <td>A and B must sit together</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>Special Cases with Examples</h3>
+            
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Permutations with Repetition</div>
+                    <p>When repetition is allowed, each position has n choices.</p>
+                    <div class="formula">Number of arrangements = nʳ</div>
+                    <div class="example">
+                        <p><strong>Example:</strong> Number of 3-letter words using A,B,C with repetition allowed = 3³ = 27</p>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Permutations of Alike Objects</div>
+                    <p>When some objects are identical, we divide by factorial of identical objects.</p>
+                    <div class="formula">n!/(p!q!r!...)</div>
+                    <div class="example">
+                        <p><strong>Example:</strong> Arrange letters of "MISSISSIPPI": 11!/(4!4!2!)</p>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Circular Permutations</div>
+                    <p>In circular arrangements, rotations are considered same.</p>
+                    <div class="formula">(n-1)! for distinct objects</div>
+                    <div class="example">
+                        <p><strong>Example:</strong> 5 people at round table: (5-1)! = 4! = 24 arrangements</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Key Formulas Summary:</strong></p>
+                <ul>
+                    <li>Linear permutation (distinct): ⁿPᵣ = n!/(n-r)!</li>
+                    <li>Linear permutation (all): n!</li>
+                    <li>With repetition allowed: nʳ</li>
+                    <li>With p alike of one kind, q alike of another: n!/(p!q!)</li>
+                    <li>Circular permutation: (n-1)!</li>
+                    <li>Necklace/bracelet (flippable): (n-1)!/2</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Permutation with Restrictions</div>
+                <p>How many ways can 5 boys and 3 girls be arranged in a row if no two girls sit together?</p>
+                <p><strong>Solution:</strong></p>
+                <p>First arrange boys: 5! = 120 ways</p>
+                <p>This creates 6 gaps (before, between, after boys): _B_B_B_B_B_</p>
+                <p>Choose 3 gaps for girls: ⁶P₃ = 6×5×4 = 120 ways</p>
+                <p>Arrange girls in chosen gaps: 3! = 6 ways</p>
+                <p>Total = 120 × 120 × 6 = 86,400 ways</p>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Derangements</h4>
+                <p>Arrangements where no object is in its original position.</p>
+                <div class="formula">!n = n!∑(k=0 to n) (-1)ᵏ/k!</div>
+                <p>For n=3: !3 = 3!(1 - 1 + 1/2 - 1/6) = 6×(1/3) = 2</p>
+                <p>For n=4: !4 = 9</p>
+                <p>Also: !n = (n-1)[!(n-1) + !(n-2)]</p>
+            </div>
+        </section>
+
+        <!-- Combinations Section -->
+        <section class="info-panel" id="combinations" data-aos="fade-up">
+            <h2>Combinations</h2>
+            <p>A combination is a selection of objects without regard to order. It answers the question: "In how many ways can we choose r objects from n objects?"</p>
+
+            <div class="definition">
+                <p><strong>Combination (ⁿCᵣ):</strong> The number of ways to select r objects from n distinct objects, where order does not matter.</p>
+            </div>
+
+            <div class="formula">
+                ⁿCᵣ = n!/[r!(n-r)!]
+            </div>
+            <p>Where:<br>
+            • n = total number of distinct objects<br>
+            • r = number of objects being selected<br>
+            • n ≥ r ≥ 0</p>
+
+            <div class="formula-grid">
+                <div class="formula-card">
+                    <div class="formula-card-title">Basic Formula</div>
+                    <div class="formula">ⁿCᵣ = n!/[r!(n-r)!]</div>
+                    <p>Also written as C(n,r) or (ⁿᵣ)</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Complementary</div>
+                    <div class="formula">ⁿCᵣ = ⁿCₙ₋ᵣ</div>
+                    <p>Choosing r is same as rejecting n-r</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Pascal's Identity</div>
+                    <div class="formula">ⁿCᵣ + ⁿCᵣ₋₁ = ⁿ⁺¹Cᵣ</div>
+                    <p>Forms Pascal's Triangle</p>
+                </div>
+            </div>
+
+            <!-- Visual Example of Combinations -->
+            <div class="counting-diagram">
+                <h3>Selecting 2 from 4: ⁴C₂ = 6 ways</h3>
+                <div class="arrangement-visual">
+                    <div class="item-box">A</div>
+                    <div class="item-box">B</div>
+                    <div class="item-box">C</div>
+                    <div class="item-box">D</div>
+                </div>
+                <p style="margin-top: 1rem;">The 6 selections:</p>
+                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                    <div class="selection-group">{A,B}</div>
+                    <div class="selection-group">{A,C}</div>
+                    <div class="selection-group">{A,D}</div>
+                    <div class="selection-group">{B,C}</div>
+                    <div class="selection-group">{B,D}</div>
+                    <div class="selection-group">{C,D}</div>
+                </div>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--secondary);">
+                    <i class="fas fa-calculator"></i> ⁴C₂ = 4!/(2!2!) = (4×3)/(2×1) = 6
+                </p>
+            </div>
+
+            <h3>Important Properties of Combinations</h3>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Formula</th>
+                    <th>Explanation</th>
+                </tr>
+                <tr>
+                    <td>Complementary</td>
+                    <td>ⁿCᵣ = ⁿCₙ₋ᵣ</td>
+                    <td>Choosing r = rejecting n-r</td>
+                </tr>
+                <tr>
+                    <td>Pascal's Identity</td>
+                    <td>ⁿCᵣ + ⁿCᵣ₋₁ = ⁿ⁺¹Cᵣ</td>
+                    <td>Recursive relation</td>
+                </tr>
+                <tr>
+                    <td>Sum of row in Pascal's Triangle</td>
+                    <td>ⁿC₀ + ⁿC₁ + ... + ⁿCₙ = 2ⁿ</td>
+                    <td>All subsets of n elements</td>
+                </tr>
+                <tr>
+                    <td>Alternating sum</td>
+                    <td>ⁿC₀ - ⁿC₁ + ⁿC₂ - ... = 0</td>
+                    <td>For n ≥ 1</td>
+                </tr>
+                <tr>
+                    <td>Vandermonde's Identity</td>
+                    <td>∑(ᵐCₖ × ⁿCᵣ₋ₖ) = ᵐ⁺ⁿCᵣ</td>
+                    <td>Where k goes from 0 to r</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Key Relations:</strong></p>
+                <ul>
+                    <li>ⁿC₀ = ⁿCₙ = 1 (empty set and full set)</li>
+                    <li>ⁿC₁ = n (selecting 1 from n)</li>
+                    <li>ⁿCᵣ = ⁿCₙ₋ᵣ (symmetry)</li>
+                    <li>ⁿCᵣ = ⁿ⁻¹Cᵣ + ⁿ⁻¹Cᵣ₋₁ (Pascal's rule)</li>
+                    <li>r × ⁿCᵣ = n × ⁿ⁻¹Cᵣ₋₁ (useful for simplification)</li>
+                </ul>
+            </div>
+
+            <h3>Special Types of Combinations</h3>
+            
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Combinations with Repetition</div>
+                    <p>When objects can be chosen more than once (multisets).</p>
+                    <div class="formula">Number of ways = ⁿ⁺ʳ⁻¹Cᵣ</div>
+                    <div class="example">
+                        <p><strong>Example:</strong> Choose 3 fruits from 5 types with repetition: ⁵⁺³⁻¹C₃ = ⁷C₃ = 35</p>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Combinations with Restrictions</div>
+                    <p>When certain objects must be included or excluded.</p>
+                    <p>Include k specific objects: ⁿ⁻ᵏCᵣ₋ₖ</p>
+                    <p>Exclude k specific objects: ⁿ⁻ᵏCᵣ</p>
+                    <div class="example">
+                        <p><strong>Example:</strong> Choose 4 from 10 including A: ⁹C₃ = 84</p>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Division into Groups</div>
+                    <p>Dividing n distinct objects into groups of sizes r₁, r₂, ..., rₖ.</p>
+                    <div class="formula">n!/(r₁!r₂!...rₖ!)</div>
+                    <div class="example">
+                        <p><strong>Example:</strong> Divide 10 into groups of 4,3,3: 10!/(4!3!3!)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Combination Problem</div>
+                <p>In how many ways can a committee of 5 be chosen from 7 men and 5 women if it must contain at least 3 men?</p>
+                <p><strong>Solution:</strong></p>
+                <p>Case 1: 3 men, 2 women = ⁷C₃ × ⁵C₂ = 35 × 10 = 350</p>
+                <p>Case 2: 4 men, 1 woman = ⁷C₄ × ⁵C₁ = 35 × 5 = 175</p>
+                <p>Case 3: 5 men, 0 women = ⁷C₅ × ⁵C₀ = 21 × 1 = 21</p>
+                <p>Total = 350 + 175 + 21 = 546 ways</p>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Multinomial Theorem & Combinations</h4>
+                <p>Number of ways to divide n distinct objects into k groups with sizes n₁, n₂, ..., nₖ:</p>
+                <div class="formula">n!/(n₁!n₂!...nₖ!)</div>
+                <p>Number of non-negative integer solutions to x₁ + x₂ + ... + xₖ = n:</p>
+                <div class="formula">ⁿ⁺ᵏ⁻¹Cₖ₋₁</div>
+                <p>Number of positive integer solutions to x₁ + x₂ + ... + xₖ = n:</p>
+                <div class="formula">ⁿ⁻¹Cₖ₋₁</div>
+            </div>
+        </section>
+
+        <!-- Applications Section -->
+        <section class="info-panel" id="applications" data-aos="fade-up">
+            <h2>Applications and Real-World Examples</h2>
+            <p>Permutations and combinations have numerous practical applications in probability, statistics, computer science, and everyday life.</p>
+
+            <div class="comparison-table">
+                <h3>Common Applications</h3>
+                <table>
+                    <tr>
+                        <th>Application Area</th>
+                        <th>Type</th>
+                        <th>Example</th>
+                        <th>Formula/Approach</th>
+                    </tr>
+                    <tr>
+                        <td>Probability</td>
+                        <td>Combinations</td>
+                        <td>Probability of poker hands</td>
+                        <td>Favorable outcomes / Total outcomes</td>
+                    </tr>
+                    <tr>
+                        <td>Lotteries</td>
+                        <td>Combinations</td>
+                        <td>Choosing winning numbers</td>
+                        <td>ⁿCᵣ for choosing r from n</td>
+                    </tr>
+                    <tr>
+                        <td>Seating Arrangements</td>
+                        <td>Permutations</td>
+                        <td>Arranging people in row/circle</td>
+                        <td>n! or (n-1)!</td>
+                    </tr>
+                    <tr>
+                        <td>Password Security</td>
+                        <td>Permutations with repetition</td>
+                        <td>Number of possible passwords</td>
+                        <td>nʳ where n is character set size</td>
+                    </tr>
+                    <tr>
+                        <td>Committee Formation</td>
+                        <td>Combinations</td>
+                        <td>Selecting team members</td>
+                        <td>ⁿCᵣ with restrictions</td>
+                    </tr>
+                    <tr>
+                        <td>Route Planning</td>
+                        <td>Permutations</td>
+                        <td>Shortest path through cities</td>
+                        <td>(n-1)! for TSP</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>Bridge and Card Games</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Bridge Hand</div>
+                    <p>Number of possible 13-card hands from 52-card deck:</p>
+                    <div class="formula">⁵²C₁₃ = 635,013,559,600</div>
+                    <p>About 635 billion possible hands</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Poker Hands</div>
+                    <p>Probability of royal flush:</p>
+                    <div class="formula">4/⁵²C₅ = 4/2,598,960 ≈ 0.000154%</div>
+                    <p>One of the rarest poker hands</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Lottery Odds</div>
+                    <p>6-number lottery from 49:</p>
+                    <div class="formula">⁴⁹C₆ = 13,983,816</div>
+                    <p>About 1 in 14 million chance</p>
+                </div>
+            </div>
+
+            <h3>Probability Applications</h3>
+            <p>Permutations and combinations are fundamental to calculating probabilities. The basic probability formula:</p>
+            <div class="formula">P(event) = Number of favorable outcomes / Total possible outcomes</div>
+
+            <div class="important">
+                <p><strong>Common Probability Problems:</strong></p>
+                <ul>
+                    <li><strong>Birthday Problem:</strong> Probability that 2 people in room share birthday</li>
+                    <li><strong>Committee Problems:</strong> Probability committee has certain composition</li>
+                    <li><strong>Card Problems:</strong> Probability of specific poker hands</li>
+                    <li><strong>Coin/Dice:</strong> Probability of specific outcomes in repeated trials</li>
+                    <li><strong>Sampling:</strong> Probability in quality control sampling</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Probability Application</div>
+                <p>A bag contains 5 red, 4 blue, and 3 green balls. If 3 balls are drawn at random, what is the probability that:</p>
+                <p>a) All are red?<br>
+                   b) Exactly 2 are blue?<br>
+                   c) At least 1 is green?</p>
+                <p><strong>Solution:</strong></p>
+                <p>Total outcomes = ¹²C₃ = 220</p>
+                <p>a) P(all red) = ⁵C₃/¹²C₃ = 10/220 = 1/22</p>
+                <p>b) P(2 blue, 1 other) = (⁴C₂ × ⁸C₁)/¹²C₃ = (6 × 8)/220 = 48/220 = 12/55</p>
+                <p>c) P(at least 1 green) = 1 - P(no green) = 1 - ⁹C₃/¹²C₃ = 1 - 84/220 = 136/220 = 34/55</p>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Advanced Applications</h4>
+                <p><strong>Binomial Distribution:</strong> Probability of exactly r successes in n trials:</p>
+                <div class="formula">P(X=r) = ⁿCᵣ pʳ (1-p)ⁿ⁻ʳ</div>
+                <p><strong>Multinomial Distribution:</strong> Extension to multiple categories</p>
+                <p><strong>Geometric Probability:</strong> Using combinations in continuous probability</p>
+                <p><strong>Coding Theory:</strong> Error-correcting codes use combinatorial designs</p>
+            </div>
+        </section>
+
+        <!-- Problem Solving Section -->
+        <section class="info-panel" id="problems" data-aos="fade-up">
+            <h2>Problem Solving Strategies</h2>
+            <p>Effective techniques for solving permutation and combination problems in JEE and other competitive exams.</p>
+
+            <div class="problem-solving">
+                <div class="problem-box">
+                    <div class="problem-title">Type 1: Basic Counting</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify if order matters (Permutation) or not (Combination)</li>
+                        <li>Check for restrictions (must include/exclude, together/apart)</li>
+                        <li>Apply appropriate formula</li>
+                        <li>Multiply/Add for multiple cases</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> If unsure, consider small example to test logic</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 2: Restrictions</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Treat restricted objects as units if they must be together</li>
+                        <li>Use gap method if objects must be separate</li>
+                        <li>For "at least" problems, use complement method</li>
+                        <li>Break into cases if needed</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> For circular arrangements, fix one position first</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 3: Probability</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Calculate total possible outcomes</li>
+                        <li>Calculate favorable outcomes</li>
+                        <li>Divide: P = favorable/total</li>
+                        <li>Check if order matters in both numerator and denominator</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Use combinations for card problems, permutations for arrangements</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Common Problem Types:</strong></p>
+                <ul>
+                    <li><strong>Seating Arrangements:</strong> People in row/circle, restrictions</li>
+                    <li><strong>Word Formation:</strong> Letters with/without repetition, restrictions</li>
+                    <li><strong>Committee Selection:</strong> With/without restrictions, men/women</li>
+                    <li><strong>Number Formation:</strong> Digits with/without repetition, divisibility</li>
+                    <li><strong>Distribution:</strong> Identical/distinct objects to persons/boxes</li>
+                    <li><strong>Geometry:</strong> Points, lines, triangles, polygons</li>
+                </ul>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED TIP</div>
+                <h4>Advanced Problem Solving</h4>
+                <p>• For non-negative integer solutions to x₁ + x₂ + ... + xₖ = n: ⁿ⁺ᵏ⁻¹Cₖ₋₁</p>
+                <p>• For positive integer solutions to x₁ + x₂ + ... + xₖ = n: ⁿ⁻¹Cₖ₋₁</p>
+                <p>• Derangements: !n = n!∑(-1)ᵏ/k!</p>
+                <p>• Principle of Inclusion-Exclusion for complex counting</p>
+                <p>• Generating functions for sequence counting</p>
+                <p>• Recurrence relations for complex arrangements</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Complex Problem</div>
+                <p>Find number of ways to arrange letters of "ENGINEERING" such that all vowels are together and all consonants are together.</p>
+                <p><strong>Solution:</strong></p>
+                <p>Vowels: E, I, E, E, I (5 vowels with E repeated 3 times, I repeated 2 times)</p>
+                <p>Consonants: N, G, N, R, N, G (6 consonants with N repeated 3 times, G repeated 2 times, R once)</p>
+                <p>Treat vowel group as 1 unit, consonant group as 1 unit: 2! = 2 arrangements</p>
+                <p>Arrange vowels within group: 5!/(3!2!) = 10 ways</p>
+                <p>Arrange consonants within group: 6!/(3!2!1!) = 60 ways</p>
+                <p>Total = 2 × 10 × 60 = 1200 ways</p>
+            </div>
+        </section>
+
+        <!-- Key Facts Carousel -->
+        <div class="swiper-container" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">FUNDAMENTAL PRINCIPLES</div>
+                        <div class="swiper-text">Multiplication: m×n ways for AND. Addition: m+n ways for OR. Foundation of all counting</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">FACTORIAL</div>
+                        <div class="swiper-text">n! = n×(n-1)×...×1. 0! = 1. Number of arrangements of n distinct objects</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">PERMUTATION</div>
+                        <div class="swiper-text">ⁿPᵣ = n!/(n-r)!. Order matters. Arrangements of r from n distinct objects</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">COMBINATION</div>
+                        <div class="swiper-text">ⁿCᵣ = n!/[r!(n-r)!]. Order doesn't matter. Selection of r from n distinct objects</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">CIRCULAR PERMUTATION</div>
+                        <div class="swiper-text">(n-1)! arrangements around circle. Rotations considered same</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">ALIKE OBJECTS</div>
+                        <div class="swiper-text">Arrangements with p alike of one kind, q alike of another: n!/(p!q!)</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">COMBINATION PROPERTIES</div>
+                        <div class="swiper-text">ⁿCᵣ = ⁿCₙ₋ᵣ. ⁿCᵣ + ⁿCᵣ₋₁ = ⁿ⁺¹Cᵣ. ∑ⁿCᵣ = 2ⁿ</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">PROBABILITY</div>
+                        <div class="swiper-text">P(event) = Favorable outcomes/Total outcomes. Uses combinations/permutations</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- Summary Section -->
+        <section class="info-panel" data-aos="fade-up">
+            <h2>Chapter Summary & Formulas</h2>
+            
+            <h3>Key Formulas</h3>
+            <div class="concept-cards">
+                <div class="concept-card permutation">
+                    <div class="card-title permutation">Permutation Formulas</div>
+                    <div class="formula">ⁿPᵣ = n!/(n-r)!</div>
+                    <div class="formula">n! (all distinct)</div>
+                    <div class="formula">nʳ (with repetition)</div>
+                    <div class="formula">(n-1)! (circular)</div>
+                    <div class="formula">n!/(p!q!...) (alike objects)</div>
+                </div>
+
+                <div class="concept-card combination">
+                    <div class="card-title combination">Combination Formulas</div>
+                    <div class="formula">ⁿCᵣ = n!/[r!(n-r)!]</div>
+                    <div class="formula">ⁿCᵣ = ⁿCₙ₋ᵣ</div>
+                    <div class="formula">ⁿ⁺ʳ⁻¹Cᵣ (with repetition)</div>
+                    <div class="formula">ⁿCᵣ + ⁿCᵣ₋₁ = ⁿ⁺¹Cᵣ</div>
+                    <div class="formula">∑ⁿCᵣ = 2ⁿ</div>
+                </div>
+
+                <div class="concept-card counting">
+                    <div class="card-title counting">Counting Principles</div>
+                    <div class="formula">Multiplication: m×n</div>
+                    <div class="formula">Addition: m+n</div>
+                    <div class="formula">Inclusion-Exclusion: |A∪B|=|A|+|B|-|A∩B|</div>
+                    <div class="formula">Factorial: n! = n×(n-1)!</div>
+                    <div class="formula">0! = 1</div>
+                </div>
+            </div>
+
+            <h3>Important Points for JEE/NEET</h3>
+            <ul>
+                <li>Permutation: Order matters, Combination: Order doesn't matter</li>
+                <li>ⁿPᵣ = ⁿCᵣ × r! (multiply combinations by r! to get permutations)</li>
+                <li>For circular arrangements, fix one object to eliminate rotations</li>
+                <li>For "at least" problems, use complement: P(at least 1) = 1 - P(none)</li>
+                <li>In combinations with repetition, formula is ⁿ⁺ʳ⁻¹Cᵣ</li>
+                <li>Number of diagonals in n-sided polygon = ⁿC₂ - n</li>
+                <li>Number of handshakes among n people = ⁿC₂</li>
+                <li>When dividing into groups, divide by factorial if groups are identical</li>
+                <li>For non-negative integer solutions to x₁+...+xₖ=n: ⁿ⁺ᵏ⁻¹Cₖ₋₁</li>
+                <li>For positive integer solutions to x₁+...+xₖ=n: ⁿ⁻¹Cₖ₋₁</li>
+            </ul>
+
+            <div class="important">
+                <p><strong>Common Mistakes to Avoid:</strong></p>
+                <ul>
+                    <li>Confusing permutations and combinations</li>
+                    <li>Forgetting to divide by factorial for identical objects</li>
+                    <li>Not using complement method for "at least" problems</li>
+                    <li>Incorrectly applying circular permutation formula</li>
+                    <li>Miscounting gaps in "separate" problems</li>
+                    <li>Using permutations when combinations are needed in probability</li>
+                    <li>Forgetting that 0! = 1</li>
+                    <li>Not considering all cases in complex problems</li>
+                    <li>Incorrect application of inclusion-exclusion principle</li>
+                    <li>Mistaking "arrange" (permutation) vs "select" (combination)</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Nerds Assemble</h3>
+                <p>Master Permutations and Combinations for JEE & NEET. Build strong foundation in combinatorics for probability and advanced mathematics.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#counting-principles">Counting Principles</a></li>
+                    <li><a href="#factorial">Factorial</a></li>
+                    <li><a href="#permutations">Permutations</a></li>
+                    <li><a href="#combinations">Combinations</a></li>
+                    <li><a href="#applications">Applications</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> 44mr.invisible@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Nerds Assemble. All rights reserved. | Designed for JEE & NEET Aspirants | Permutations & Combinations - Class 11 Mathematics</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Permutations & Combinations - JavaScript
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ?
+                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+            }
+
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+
+            function handleScroll() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('active');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                }
+            }
+
+            // Debounced scroll event
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(handleScroll, 50);
+            }, { passive: true });
+
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: window.innerWidth < 768 ? 100 : 120,
+                    easing: 'ease-out-quad'
+                });
+            }
+
+            // Initialize Swiper
+            if (typeof Swiper !== 'undefined') {
+                const swiper = new Swiper('.swiper-container', {
+                    loop: true,
+                    autoplay: {
+                        delay: 3500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 25
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        }
+                    }
+                });
+            }
+
+            // Smooth Scroll for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        if (mainNav && mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                });
+            });
+
+            // Back to Top Button Click
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Create Particles
+            createParticles();
+        });
+
+        // Create Particles Function
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
+
+            const particleCount = window.innerWidth < 768 ? 20 : 30;
+            particlesContainer.innerHTML = '';
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                const size = Math.random() * 3 + 1;
+                const posX = Math.random() * window.innerWidth;
+                const posY = Math.random() * window.innerHeight;
+                const duration = Math.random() * 15 + 10;
+                const delay = Math.random() * 5;
+
+                particle.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}px;
+                    top: ${posY}px;
+                    opacity: ${Math.random() * 0.3 + 0.1};
+                    animation: float ${duration}s ease-in-out ${delay}s infinite;
+                    background: rgba(255,255,255,0.3);
+                `;
+
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(createParticles, 250);
+        });
+    </script>
+</body>
+</html>
