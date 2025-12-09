@@ -1,0 +1,3300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKVRN3GREN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKVRN3GREN');
+</script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Straight Lines | Class 11 Maths | JEE Preparation</title>
+    <meta name="description" content="Master Straight Lines for Class 11 Mathematics. Complete guide for JEE & NEET aspirants with slope, equations, distance formulas, coordinate geometry, and problem-solving strategies.">
+    <meta name="keywords" content="Straight Lines, Coordinate Geometry, Slope, Line Equations, Distance Formula, Angle Between Lines, Class 11 Maths, JEE Maths, NEET Maths, Concurrency, Collinearity">
+    <meta name="author" content="Nerds Assemble">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Straight Lines | Class 11 Mathematics">
+    <meta property="og:description" content="Complete guide to Straight Lines for JEE & NEET aspirants">
+    <meta property="og:type" content="website">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Pacifico&family=Dancing+Script:wght@700&family=Abril+Fatface&family=Playfair+Display:wght@700&family=Raleway:wght@300;800&family=Quicksand:wght@500&family=Poiret+One&family=Amatic+SC:wght@700&family=Caveat:wght@700&family=Kaushan+Script&family=Libre+Baskerville&family=Merriweather&family=Nunito:wght@800&family=Oswald:wght@500&family=Roboto+Slab:wght@700&family=Sacramento&family=Tangerine:wght@700&family=Yeseva+One&family=Electrolize&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+     <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/planet-universe-svgrepo-com.svg">
+    
+    <style>
+        /* Straight Lines - Nerds Assemble CSS */
+        :root {
+            --primary: #4169E1;
+            --secondary: #32CD32;
+            --tertiary: #FF6347;
+            --bg: #0a0a20;
+            --text: #ffffff;
+            --highlight: #00ff9d;
+            --nav-bg: rgba(10, 5, 30, 0.95);
+            --line-gradient: linear-gradient(45deg, #4169E1, #32CD32);
+            --angle-gradient: linear-gradient(45deg, #32CD32, #FF6347);
+            --distance-gradient: linear-gradient(45deg, #FF6347, #4169E1);
+        }
+
+        /* Base Styles & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overscroll-behavior-y: contain;
+            -webkit-overflow-scrolling: touch;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(65, 105, 225, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(50, 205, 50, 0.1) 0%, transparent 20%),
+                linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--tertiary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(65, 105, 225, 0.5);
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--highlight);
+            margin: 2rem 0 1.5rem;
+            font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-family: 'Roboto Slab', serif;
+            color: var(--secondary);
+            margin: 1.5rem 0 1rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+        }
+
+        p {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+        }
+
+        /* Layout Components */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            flex: 1;
+            padding: 0 1rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Raleway', sans-serif;
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            transform: translateZ(0);
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            color: var(--highlight);
+            font-size: 1.6rem;
+        }
+
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.4rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Electrolize', sans-serif;
+            font-size: 0.95rem;
+            transition: color 0.2s ease-out;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--highlight);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--highlight);
+            transition: width 0.2s ease-out;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* Content Panels */
+        .info-panel {
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
+            padding: 1.8rem;
+            margin: 1.8rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: translateZ(0);
+            will-change: transform, opacity;
+        }
+
+        .info-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%),
+                linear-gradient(-45deg, transparent 48%, var(--primary) 49%, var(--primary) 51%, transparent 52%);
+            background-size: 20px 20px;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        /* Special Content Blocks */
+        .important {
+            background: rgba(50, 205, 50, 0.1);
+            border-left: 4px solid var(--secondary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(50, 205, 50, 0.1);
+        }
+
+        .definition {
+            background: rgba(65, 105, 225, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(65, 105, 225, 0.1);
+        }
+
+        .formula {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin: 1.2rem 0;
+            padding: 1.2rem;
+            background: rgba(0, 255, 157, 0.1);
+            border-radius: 8px;
+            border: 1px dashed var(--highlight);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.1rem;
+        }
+
+        .formula::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, transparent 45%, rgba(0, 255, 157, 0.1) 50%, transparent 55%);
+            background-size: 10px 10px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .example {
+            background: rgba(255, 99, 71, 0.1);
+            border-left: 4px solid var(--tertiary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Lists & Tables */
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 1.8rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background-color: rgba(65, 105, 225, 0.2);
+            font-family: 'Electrolize', sans-serif;
+            color: var(--highlight);
+            font-size: 0.95rem;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+
+        tr:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* Concept Cards */
+        .concept-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .concept-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(65, 105, 225, 0.2);
+        }
+
+        .concept-card.slope {
+            border-top: 4px solid var(--primary);
+        }
+
+        .concept-card.equation {
+            border-top: 4px solid var(--secondary);
+        }
+
+        .concept-card.geometry {
+            border-top: 4px solid var(--tertiary);
+        }
+
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title.slope { color: var(--primary); }
+        .card-title.equation { color: var(--secondary); }
+        .card-title.geometry { color: var(--tertiary); }
+
+        /* Swiper Carousel */
+        .swiper-container {
+            width: 100%;
+            height: auto;
+            min-height: 180px;
+            margin: 2.5rem 0;
+            will-change: transform;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .swiper-slide {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+            font-family: 'Electrolize', sans-serif;
+            padding: 1.2rem;
+            box-sizing: border-box;
+            text-align: center;
+            min-height: 180px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-out;
+            transform: translateZ(0);
+            height: auto;
+        }
+
+        .swiper-slide:hover {
+            transform: translateY(-5px);
+        }
+
+        .swiper-slide div {
+            width: 100%;
+        }
+
+        .swiper-title {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin-bottom: 0.5rem;
+            font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+        }
+
+        .swiper-text {
+            font-family: 'Quicksand', sans-serif;
+            font-size: clamp(0.85rem, 1.1vw, 1rem);
+        }
+
+        /* Swiper Navigation */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: var(--highlight);
+            background: rgba(0, 0, 0, 0.5);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            backdrop-filter: blur(10px);
+            margin-top: -17.5px;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .swiper-pagination-bullet {
+            background: var(--text);
+            opacity: 0.5;
+            width: 8px;
+            height: 8px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: var(--highlight);
+            opacity: 1;
+        }
+
+        /* Problem Solving Section */
+        .problem-solving {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .problem-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .problem-title {
+            color: var(--secondary);
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Particles Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            will-change: transform;
+            opacity: 0.3;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .footer-column h3 {
+            color: var(--highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            transition: color 0.2s ease-out;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--highlight);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text);
+            font-size: 1.1rem;
+            transition: color 0.2s ease-out;
+        }
+
+        .social-links a:hover {
+            color: var(--highlight);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 1.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Quicksand', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease-out;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(65, 105, 225, 0.3);
+            transform: translateZ(0);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--highlight);
+            transform: translateY(-5px);
+        }
+
+        /* JEE/NEET Specific Styling */
+        .exam-highlight {
+            background: rgba(255, 235, 0, 0.1);
+            border: 2px solid var(--highlight);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .exam-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--highlight);
+            color: var(--bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(10px, 10px); }
+            50% { transform: translate(-5px, 15px); }
+            75% { transform: translate(5px, -5px); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        /* Straight Lines Specific */
+        .line-visual {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .coordinate-box {
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary);
+            color: white;
+            border-radius: 8px;
+            font-family: 'Audiowide', cursive;
+            font-size: 1rem;
+            box-shadow: 0 4px 10px rgba(65, 105, 225, 0.3);
+        }
+
+        .slope-box {
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--tertiary);
+            color: var(--bg);
+            border-radius: 6px;
+            font-family: 'Audiowide', cursive;
+            font-size: 1.2rem;
+            margin: 0.2rem;
+            font-weight: bold;
+            min-width: 40px;
+        }
+
+        .intercept-box {
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--secondary);
+            color: var(--bg);
+            border-radius: 6px;
+            font-family: 'Audiowide', cursive;
+            font-size: 0.9rem;
+            margin: 0.2rem;
+            font-weight: bold;
+        }
+
+        /* Graphical Visualizer */
+        .graph-container {
+            width: 100%;
+            height: 400px;
+            margin: 2rem 0;
+            position: relative;
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .coordinate-plane {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .axis {
+            position: absolute;
+            background: rgba(255,255,255,0.7);
+        }
+
+        .x-axis {
+            width: 100%;
+            height: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .y-axis {
+            width: 2px;
+            height: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .grid-line {
+            position: absolute;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .grid-line.horizontal {
+            width: 100%;
+            height: 1px;
+        }
+
+        .grid-line.vertical {
+            width: 1px;
+            height: 100%;
+        }
+
+        /* Line Plotting */
+        .line-plot {
+            position: absolute;
+            background: var(--highlight);
+            height: 3px;
+            transform-origin: 0 0;
+            pointer-events: none;
+        }
+
+        /* Formula Grid */
+        .formula-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .formula-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .formula-card-title {
+            color: var(--highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        /* Line Equation Solver */
+        .solver {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .solver-inputs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-group label {
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+            font-family: 'Electrolize', sans-serif;
+        }
+
+        .input-group input, .input-group select {
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid var(--primary);
+            background: rgba(0,0,0,0.3);
+            color: white;
+            font-family: 'Audiowide', cursive;
+        }
+
+        .solver-controls {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+
+        .solve-btn {
+            padding: 0.5rem 1rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Orbitron', sans-serif;
+            transition: background 0.3s;
+        }
+
+        .solve-btn:hover {
+            background: var(--secondary);
+        }
+
+        .solver-result {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: rgba(0,0,0,0.3);
+            border-radius: 5px;
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            min-height: 60px;
+        }
+
+        /* Angle Visualizer */
+        .angle-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .angle-display {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            border: 2px solid var(--tertiary);
+        }
+
+        /* Distance Visual */
+        .distance-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        /* Slope Triangle Visual */
+        .slope-triangle {
+            width: 200px;
+            height: 150px;
+            position: relative;
+            margin: 1rem auto;
+        }
+
+        .triangle-line {
+            position: absolute;
+            background: var(--primary);
+        }
+
+        /* Point Visual */
+        .point-visual {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--highlight);
+            border: 2px solid white;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background-image:
+                    radial-gradient(circle at 10% 20%, rgba(65, 105, 225, 0.05) 0%, transparent 20%),
+                    linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+            }
+
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                margin-top: 1rem;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.75rem 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            header, .info-panel {
+                backdrop-filter: blur(5px);
+            }
+
+            .container {
+                width: 95%;
+                padding: 0;
+            }
+
+            .info-panel {
+                padding: 1.5rem;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            th, td {
+                padding: 0.5rem;
+                font-size: 0.85rem;
+            }
+
+            .concept-cards, .problem-solving {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none;
+            }
+
+            .formula-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .coordinate-box {
+                font-size: 0.9rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            .graph-container {
+                height: 300px;
+            }
+
+            .angle-visual, .distance-visual {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .solver-inputs {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-panel {
+                padding: 1rem;
+            }
+
+            ul, ol {
+                padding-left: 1.5rem;
+            }
+
+            .formula {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+
+            .swiper-slide {
+                padding: 1rem;
+            }
+
+            .coordinate-box {
+                font-size: 0.8rem;
+                padding: 0.3rem 0.6rem;
+            }
+
+            .graph-container {
+                height: 250px;
+            }
+
+            .slope-box {
+                font-size: 1rem;
+                min-width: 30px;
+            }
+        }
+
+        /* Slope Visual */
+        .slope-visual {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .slope-demo {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            border: 2px solid var(--primary);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .slope-line {
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: var(--highlight);
+            transform-origin: 0 0;
+        }
+
+        /* Parallel & Perpendicular Lines */
+        .line-relationship {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .parallel-lines, .perpendicular-lines {
+            width: 200px;
+            height: 100px;
+            position: relative;
+        }
+
+        .parallel-line {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .perpendicular-line {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: var(--primary);
+            transform: rotate(90deg);
+            transform-origin: 50% 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-chart-line"></i></span>
+                <span class="logo-text">Nerds Assemble</span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#slope">Slope of a Line</a></li>
+                    <li><a href="#equations">Equations of Lines</a></li>
+                    <li><a href="#distance">Distance Formulas</a></li>
+                    <li><a href="#angles">Angle Between Lines</a></li>
+                    <li><a href="#concurrency">Concurrency & Collinearity</a></li>
+                    <li><a href="#problems">Problems</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="page-header" data-aos="fade-down">
+            <h1>Straight Lines</h1>
+            <p class="subtitle">Class 11 Mathematics | JEE & NEET Preparation Guide</p>
+            <p>Master coordinate geometry, slope, equations of lines, distance formulas, and applications - from basic concepts to advanced problem-solving</p>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="info-panel" id="introduction" data-aos="fade-up">
+            <h2>Introduction to Straight Lines</h2>
+            <p>Straight lines are fundamental concepts in coordinate geometry that describe linear relationships between variables. They form the basis for more complex geometric and algebraic studies.</p>
+
+            <div class="definition">
+                <p><strong>Straight Line:</strong> A line with constant slope, represented algebraically as ax + by + c = 0, where a, b, c are real numbers and a and b are not both zero.</p>
+                <p>Every straight line can be represented in various forms: slope-intercept, point-slope, two-point, intercept, and normal forms.</p>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card slope" data-aos="flip-left">
+                    <div class="card-title slope"><i class="fas fa-chart-line"></i> Slope (Gradient)</div>
+                    <p>Measures steepness and direction of a line</p>
+                    <div class="formula">m = (y₂ - y₁)/(x₂ - x₁)</div>
+                </div>
+
+                <div class="concept-card equation" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-title equation"><i class="fas fa-equals"></i> Line Equations</div>
+                    <p>Various forms to represent straight lines</p>
+                    <div class="formula">y = mx + c<br>ax + by + c = 0</div>
+                </div>
+
+                <div class="concept-card geometry" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card-title geometry"><i class="fas fa-ruler-combined"></i> Coordinate Geometry</div>
+                    <p>Distance, section, midpoint formulas</p>
+                    <div class="formula">d = √[(x₂-x₁)² + (y₂-y₁)²]</div>
+                </div>
+            </div>
+
+            <!-- Visual Example -->
+            <div class="line-visual">
+                <h3>Visual Representation: Various Line Forms</h3>
+                <div class="slope-visual">
+                    <div class="slope-demo">
+                        <div class="slope-line" style="transform: rotate(30deg);"></div>
+                        <div style="position: absolute; bottom: 10px; left: 10px; color: var(--highlight); font-size: 0.8rem;">m = tan(30°) ≈ 0.577</div>
+                    </div>
+                    <div class="slope-demo">
+                        <div class="slope-line" style="transform: rotate(45deg);"></div>
+                        <div style="position: absolute; bottom: 10px; left: 10px; color: var(--highlight); font-size: 0.8rem;">m = tan(45°) = 1</div>
+                    </div>
+                    <div class="slope-demo">
+                        <div class="slope-line" style="transform: rotate(60deg);"></div>
+                        <div style="position: absolute; bottom: 10px; left: 10px; color: var(--highlight); font-size: 0.8rem;">m = tan(60°) ≈ 1.732</div>
+                    </div>
+                </div>
+                
+                <div class="line-relationship" style="margin-top: 2rem;">
+                    <h4>Line Relationships</h4>
+                    <div class="parallel-lines">
+                        <div class="parallel-line" style="top: 30px;"></div>
+                        <div class="parallel-line" style="top: 70px;"></div>
+                        <div style="position: absolute; top: 50%; right: -40px; color: var(--primary);">Parallel Lines<br>m₁ = m₂</div>
+                    </div>
+                    <div class="perpendicular-lines">
+                        <div class="parallel-line" style="top: 50px;"></div>
+                        <div class="perpendicular-line" style="top: 50px;"></div>
+                        <div style="position: absolute; top: 50%; right: -40px; color: var(--secondary);">Perpendicular Lines<br>m₁ × m₂ = -1</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Basic Properties of Straight Lines:</strong></p>
+                <ul>
+                    <li><strong>Uniqueness:</strong> Two points uniquely determine a straight line</li>
+                    <li><strong>Linearity:</strong> Every straight line can be represented by a first-degree equation</li>
+                    <li><strong>Slope:</strong> Constant rate of change, measures steepness</li>
+                    <li><strong>Intercepts:</strong> Points where line crosses x-axis (x-intercept) and y-axis (y-intercept)</li>
+                    <li><strong>Parallelism:</strong> Two lines are parallel if their slopes are equal (m₁ = m₂)</li>
+                    <li><strong>Perpendicularity:</strong> Two lines are perpendicular if product of slopes is -1 (m₁ × m₂ = -1)</li>
+                    <li><strong>Angle with axes:</strong> Angle with x-axis determines slope: m = tan θ</li>
+                    <li><strong>Collinearity:</strong> Three points are collinear if slopes between pairs are equal</li>
+                </ul>
+            </div>
+
+            <!-- Graph Visualizer -->
+            <div class="line-visual">
+                <h3>Interactive Line Plotter</h3>
+                <div class="graph-container" id="lineGraph">
+                    <div class="coordinate-plane">
+                        <!-- Graph will be generated by JavaScript -->
+                    </div>
+                </div>
+                <div class="solver-inputs" style="margin-top: 1rem;">
+                    <div class="input-group">
+                        <label>Slope (m)</label>
+                        <input type="number" id="lineSlope" placeholder="Enter slope" value="2" step="any">
+                    </div>
+                    <div class="input-group">
+                        <label>Y-intercept (c)</label>
+                        <input type="number" id="lineIntercept" placeholder="Enter intercept" value="1" step="any">
+                    </div>
+                    <div class="input-group">
+                        <label>Line Color</label>
+                        <select id="lineColor">
+                            <option value="var(--primary)">Blue</option>
+                            <option value="var(--secondary)">Green</option>
+                            <option value="var(--tertiary)">Red</option>
+                            <option value="var(--highlight)">Cyan</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="solver-controls">
+                    <button class="solve-btn" onclick="plotLine()">Plot Line</button>
+                    <button class="solve-btn" onclick="addHorizontalLine()">Horizontal Line</button>
+                    <button class="solve-btn" onclick="addVerticalLine()">Vertical Line</button>
+                    <button class="solve-btn" onclick="clearLineGraph()">Clear</button>
+                </div>
+                <div id="lineInfo" style="margin-top: 1rem; color: var(--highlight); font-family: 'Audiowide', cursive;"></div>
+            </div>
+        </section>
+
+        <!-- Slope Section -->
+        <section class="info-panel" id="slope" data-aos="fade-up">
+            <h2>Slope (Gradient) of a Line</h2>
+            <p>The slope or gradient of a line measures its steepness and direction. It's defined as the ratio of vertical change (rise) to horizontal change (run) between any two points on the line.</p>
+
+            <div class="definition">
+                <p><strong>Slope (m):</strong> For two points P(x₁, y₁) and Q(x₂, y₂) on a line, slope m = (y₂ - y₁)/(x₂ - x₁), provided x₁ ≠ x₂.</p>
+                <p><strong>Angle of inclination (θ):</strong> The angle the line makes with positive x-axis in counterclockwise direction. m = tan θ, where 0° ≤ θ < 180°, θ ≠ 90°.</p>
+            </div>
+
+            <div class="formula">
+                Slope Formula: m = (y₂ - y₁)/(x₂ - x₁)<br>
+                Slope from angle: m = tan θ<br>
+                Condition for parallel lines: m₁ = m₂<br>
+                Condition for perpendicular lines: m₁ × m₂ = -1
+            </div>
+
+            <div class="formula-grid">
+                <div class="formula-card">
+                    <div class="formula-card-title">Positive Slope</div>
+                    <div class="formula">m > 0</div>
+                    <p>Line rises from left to right<br>0° &lt; θ &lt; 90°</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Negative Slope</div>
+                    <div class="formula">m &lt; 0</div>
+                    <p>Line falls from left to right<br>90° &lt; θ &lt; 180°</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Zero Slope</div>
+                    <div class="formula">m = 0</div>
+                    <p>Horizontal line<br>θ = 0°</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Undefined Slope</div>
+                    <div class="formula">m = undefined</div>
+                    <p>Vertical line<br>θ = 90°</p>
+                </div>
+            </div>
+
+            <!-- Slope Calculator -->
+            <div class="solver">
+                <h3>Slope Calculator</h3>
+                <div class="solver-inputs">
+                    <div class="input-group">
+                        <label>Point A: x₁</label>
+                        <input type="number" id="pointAx" placeholder="Enter x₁" value="1" step="any">
+                    </div>
+                    <div class="input-group">
+                        <label>Point A: y₁</label>
+                        <input type="number" id="pointAy" placeholder="Enter y₁" value="2" step="any">
+                    </div>
+                    <div class="input-group">
+                        <label>Point B: x₂</label>
+                        <input type="number" id="pointBx" placeholder="Enter x₂" value="3" step="any">
+                    </div>
+                    <div class="input-group">
+                        <label>Point B: y₂</label>
+                        <input type="number" id="pointBy" placeholder="Enter y₂" value="4" step="any">
+                    </div>
+                </div>
+
+                <div class="solver-controls">
+                    <button class="solve-btn" onclick="calculateSlope()"><i class="fas fa-calculator"></i> Calculate Slope</button>
+                    <button class="solve-btn" onclick="clearSlopeCalculator()">Clear</button>
+                </div>
+
+                <div class="solver-result" id="slopeResult">
+                    Slope will appear here
+                </div>
+            </div>
+
+            <h3>Understanding Slope Visually</h3>
+            <div class="slope-triangle">
+                <div class="triangle-line" style="width: 150px; height: 3px; top: 100px; left: 25px; background: var(--primary);"></div>
+                <div class="triangle-line" style="width: 3px; height: 75px; top: 25px; left: 175px; background: var(--secondary);"></div>
+                <div class="triangle-line" style="width: 152px; height: 3px; top: 100px; left: 25px; background: var(--highlight); transform: rotate(26.565deg); transform-origin: 0 0;"></div>
+                <div class="point-visual" style="top: 100px; left: 25px;"></div>
+                <div class="point-visual" style="top: 100px; left: 175px;"></div>
+                <div class="point-visual" style="top: 25px; left: 175px;"></div>
+                <div style="position: absolute; top: 110px; left: 100px; color: var(--primary);">Run = 150</div>
+                <div style="position: absolute; top: 60px; left: 180px; color: var(--secondary);">Rise = 75</div>
+                <div style="position: absolute; top: 40px; left: 50px; color: var(--highlight); font-size: 0.9rem;">Slope = Rise/Run = 75/150 = 0.5</div>
+            </div>
+
+            <div class="important">
+                <p><strong>Properties and Applications of Slope:</strong></p>
+                <ul>
+                    <li><strong>Rate of change:</strong> Slope represents rate of change of y with respect to x</li>
+                    <li><strong>Parallel lines:</strong> Have equal slopes (m₁ = m₂)</li>
+                    <li><strong>Perpendicular lines:</strong> Have slopes with product -1 (m₁ × m₂ = -1)</li>
+                    <li><strong>Collinearity:</strong> Three points A, B, C are collinear if slope AB = slope BC = slope AC</li>
+                    <li><strong>Angle between lines:</strong> tan θ = |(m₁ - m₂)/(1 + m₁m₂)|</li>
+                    <li><strong>Horizontal line:</strong> Slope = 0, equation: y = constant</li>
+                    <li><strong>Vertical line:</strong> Slope undefined, equation: x = constant</li>
+                    <li><strong>Increasing function:</strong> Positive slope (m > 0)</li>
+                    <li><strong>Decreasing function:</strong> Negative slope (m &lt; 0)</li>
+                    <li><strong>Constant function:</strong> Zero slope (m = 0)</li>
+                    <li><strong>Applications:</strong> Physics (velocity), economics (marginal cost), engineering (gradient)</li>
+                </ul>
+            </div>
+
+            <h3>Slope in Different Contexts</h3>
+            <table>
+                <tr>
+                    <th>Line Type</th>
+                    <th>Slope (m)</th>
+                    <th>Angle (θ)</th>
+                    <th>Equation Example</th>
+                    <th>Graph</th>
+                </tr>
+                <tr>
+                    <td>Steeply rising</td>
+                    <td>Large positive</td>
+                    <td>Close to 90°</td>
+                    <td>y = 5x + 2</td>
+                    <td>Nearly vertical</td>
+                </tr>
+                <tr>
+                    <td>Gentle rise</td>
+                    <td>Small positive</td>
+                    <td>0° &lt; θ &lt; 45°</td>
+                    <td>y = 0.5x + 3</td>
+                    <td>Slight upward tilt</td>
+                </tr>
+                <tr>
+                    <td>Horizontal</td>
+                    <td>0</td>
+                    <td>0°</td>
+                    <td>y = 4</td>
+                    <td>Flat line</td>
+                </tr>
+                <tr>
+                    <td>Gentle fall</td>
+                    <td>Small negative</td>
+                    <td>135° &lt; θ &lt; 180°</td>
+                    <td>y = -0.5x + 2</td>
+                    <td>Slight downward tilt</td>
+                </tr>
+                <tr>
+                    <td>Steeply falling</td>
+                    <td>Large negative</td>
+                    <td>90° &lt; θ &lt; 135°</td>
+                    <td>y = -3x + 1</td>
+                    <td>Nearly vertical downward</td>
+                </tr>
+                <tr>
+                    <td>Vertical</td>
+                    <td>Undefined</td>
+                    <td>90°</td>
+                    <td>x = 3</td>
+                    <td>Vertical line</td>
+                </tr>
+            </table>
+
+            <div class="example">
+                <div class="example-title">Example: Finding and Interpreting Slope</div>
+                <p>Find the slope of line passing through points A(2, 3) and B(6, 7). Determine if it's rising or falling and find its angle with x-axis.</p>
+                <p><strong>Solution:</strong></p>
+                <p><strong>Step 1:</strong> Use slope formula: m = (y₂ - y₁)/(x₂ - x₁)</p>
+                <p><strong>Step 2:</strong> Substitute values: m = (7 - 3)/(6 - 2) = 4/4 = 1</p>
+                <p><strong>Step 3:</strong> Since m = 1 > 0, line rises from left to right.</p>
+                <p><strong>Step 4:</strong> Angle with x-axis: m = tan θ ⇒ 1 = tan θ ⇒ θ = 45°</p>
+                <p><strong>Step 5:</strong> Interpretation: For every 1 unit increase in x, y increases by 1 unit. Line makes 45° angle with positive x-axis.</p>
+                <p><strong>Verification:</strong> Points C(3, 4) and D(5, 6) should also lie on same line if collinear:
+                    <br>Slope AC = (4-3)/(3-2) = 1/1 = 1 ✓
+                    <br>Slope AD = (6-3)/(5-2) = 3/3 = 1 ✓
+                </p>
+            </div>
+        </section>
+
+        <!-- Equations of Lines Section -->
+        <section class="info-panel" id="equations" data-aos="fade-up">
+            <h2>Equations of Straight Lines</h2>
+            <p>A straight line can be represented in various algebraic forms depending on given information. Each form has its advantages for specific problems.</p>
+
+            <div class="definition">
+                <p><strong>General Form:</strong> ax + by + c = 0, where a, b, c are real numbers and a and b are not both zero.</p>
+                <p><strong>Standard Forms:</strong> Different forms used based on available information: slope-intercept, point-slope, two-point, intercept, normal.</p>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Slope-Intercept Form</div>
+                    <p>When slope and y-intercept are known</p>
+                    <div class="formula">y = mx + c</div>
+                    <div class="example">
+                        <p>m = slope, c = y-intercept</p>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Point-Slope Form</div>
+                    <p>When slope and one point are known</p>
+                    <div class="formula">y - y₁ = m(x - x₁)</div>
+                    <div class="example">
+                        <p>(x₁, y₁) is point on line</p>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Two-Point Form</div>
+                    <p>When two points are known</p>
+                    <div class="formula">(y - y₁)/(y₂ - y₁) = (x - x₁)/(x₂ - x₁)</div>
+                    <div class="example">
+                        <p>(x₁, y₁) and (x₂, y₂) are points</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>All Forms of Line Equations</h3>
+            <table>
+                <tr>
+                    <th>Form</th>
+                    <th>Equation</th>
+                    <th>When to Use</th>
+                    <th>Key Parameters</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>General Form</td>
+                    <td>ax + by + c = 0</td>
+                    <td>General representation</td>
+                    <td>a, b, c constants</td>
+                    <td>2x + 3y - 6 = 0</td>
+                </tr>
+                <tr>
+                    <td>Slope-Intercept</td>
+                    <td>y = mx + c</td>
+                    <td>Slope and y-intercept known</td>
+                    <td>m = slope, c = y-intercept</td>
+                    <td>y = 2x + 3</td>
+                </tr>
+                <tr>
+                    <td>Point-Slope</td>
+                    <td>y - y₁ = m(x - x₁)</td>
+                    <td>Slope and one point known</td>
+                    <td>m = slope, (x₁, y₁) point</td>
+                    <td>y - 2 = 3(x - 1)</td>
+                </tr>
+                <tr>
+                    <td>Two-Point</td>
+                    <td>(y - y₁)/(y₂ - y₁) = (x - x₁)/(x₂ - x₁)</td>
+                    <td>Two points known</td>
+                    <td>(x₁, y₁), (x₂, y₂) points</td>
+                    <td>(y-2)/(5-2) = (x-1)/(3-1)</td>
+                </tr>
+                <tr>
+                    <td>Intercept Form</td>
+                    <td>x/a + y/b = 1</td>
+                    <td>x and y intercepts known</td>
+                    <td>a = x-intercept, b = y-intercept</td>
+                    <td>x/3 + y/4 = 1</td>
+                </tr>
+                <tr>
+                    <td>Normal Form</td>
+                    <td>x cos α + y sin α = p</td>
+                    <td>Perpendicular from origin known</td>
+                    <td>α = angle of normal, p = length</td>
+                    <td>x cos 30° + y sin 30° = 5</td>
+                </tr>
+                <tr>
+                    <td>Parametric Form</td>
+                    <td>x = x₁ + r cos θ, y = y₁ + r sin θ</td>
+                    <td>Point and direction known</td>
+                    <td>(x₁, y₁) point, θ angle, r distance</td>
+                    <td>x = 1 + r/√2, y = 2 + r/√2</td>
+                </tr>
+            </table>
+
+            <!-- Equation Converter -->
+            <div class="solver">
+                <h3>Line Equation Converter</h3>
+                <div class="solver-inputs">
+                    <div class="input-group">
+                        <label>Current Form</label>
+                        <select id="currentForm">
+                            <option value="slope-intercept">Slope-Intercept (y = mx + c)</option>
+                            <option value="point-slope">Point-Slope (y - y₁ = m(x - x₁))</option>
+                            <option value="two-point">Two-Point Form</option>
+                            <option value="intercept">Intercept Form (x/a + y/b = 1)</option>
+                            <option value="general">General Form (ax + by + c = 0)</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Parameter 1</label>
+                        <input type="text" id="param1" placeholder="Enter value" value="2">
+                    </div>
+                    <div class="input-group">
+                        <label>Parameter 2</label>
+                        <input type="text" id="param2" placeholder="Enter value" value="3">
+                    </div>
+                    <div class="input-group">
+                        <label>Parameter 3</label>
+                        <input type="text" id="param3" placeholder="Enter value" value="1">
+                    </div>
+                </div>
+
+                <div class="solver-controls">
+                    <button class="solve-btn" onclick="convertEquation()"><i class="fas fa-exchange-alt"></i> Convert Equation</button>
+                    <button class="solve-btn" onclick="clearConverter()">Clear</button>
+                    <button class="solve-btn" onclick="loadExample()">Load Example</button>
+                </div>
+
+                <div class="solver-result" id="equationResult">
+                    Converted equations will appear here
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Key Points About Line Equations:</strong></p>
+                <ul>
+                    <li>Every first-degree equation in x and y represents a straight line</li>
+                    <li>General form ax + by + c = 0 can be converted to any other form</li>
+                    <li>Slope from general form: m = -a/b (if b ≠ 0)</li>
+                    <li>x-intercept from general form: -c/a (if a ≠ 0)</li>
+                    <li>y-intercept from general form: -c/b (if b ≠ 0)</li>
+                    <li>For vertical line: x = constant (a ≠ 0, b = 0)</li>
+                    <li>For horizontal line: y = constant (a = 0, b ≠ 0)</li>
+                    <li>Line through origin: c = 0 in general form</li>
+                    <li>Parallel to x-axis: a = 0 in general form</li>
+                    <li>Parallel to y-axis: b = 0 in general form</li>
+                    <li>Choosing appropriate form simplifies problem-solving</li>
+                    <li>Intercept form useful when x and y intercepts are known or needed</li>
+                    <li>Normal form useful for finding perpendicular distance from origin</li>
+                    <li>Parametric form useful for locating points at specific distances</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Converting Between Forms</div>
+                <p>Given line in slope-intercept form: y = 2x + 3. Convert to: (a) General form, (b) Intercept form, (c) Normal form.</p>
+                <p><strong>Solution:</strong></p>
+                <p><strong>(a) General form:</strong> y = 2x + 3 ⇒ 2x - y + 3 = 0</p>
+                <p><strong>(b) Intercept form:</strong> First find intercepts:
+                    <br>x-intercept: Set y=0 ⇒ 0 = 2x + 3 ⇒ x = -3/2
+                    <br>y-intercept: Set x=0 ⇒ y = 3
+                    <br>Intercept form: x/(-3/2) + y/3 = 1 ⇒ -2x/3 + y/3 = 1 ⇒ 2x - y = -3 (same as general form rearranged)
+                </p>
+                <p><strong>(c) Normal form:</strong> From general form 2x - y + 3 = 0:
+                    <br>Compare with x cos α + y sin α = p
+                    <br>Divide by √(a² + b²) = √(2² + (-1)²) = √5
+                    <br>(2/√5)x - (1/√5)y + 3/√5 = 0
+                    <br>Normal form: (2/√5)x - (1/√5)y = -3/√5
+                    <br>Here cos α = 2/√5, sin α = -1/√5, p = 3/√5
+                </p>
+                <p><strong>Verification:</strong> All forms represent same line. Test point (1, 5):
+                    <br>Slope-intercept: 5 = 2(1) + 3 = 5 ✓
+                    <br>General form: 2(1) - 5 + 3 = 2 - 5 + 3 = 0 ✓
+                    <br>Normal form: (2/√5)(1) - (1/√5)(5) = 2/√5 - 5/√5 = -3/√5 ✓
+                </p>
+            </div>
+        </section>
+
+        <!-- Distance Formulas Section -->
+        <section class="info-panel" id="distance" data-aos="fade-up">
+            <h2>Distance Formulas</h2>
+            <p>Distance formulas are essential in coordinate geometry for finding distances between points, from points to lines, and between parallel lines.</p>
+
+            <div class="definition">
+                <p><strong>Distance between two points:</strong> P(x₁, y₁) and Q(x₂, y₂): d = √[(x₂ - x₁)² + (y₂ - y₁)²]</p>
+                <p><strong>Distance from point to line:</strong> Distance from P(x₁, y₁) to line ax + by + c = 0: d = |ax₁ + by₁ + c|/√(a² + b²)</p>
+            </div>
+
+            <div class="formula-grid">
+                <div class="formula-card">
+                    <div class="formula-card-title">Distance Between Points</div>
+                    <div class="formula">d = √[(x₂-x₁)² + (y₂-y₁)²]</div>
+                    <p>Pythagorean theorem in coordinate plane</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Point to Line Distance</div>
+                    <div class="formula">d = |ax₁+by₁+c|/√(a²+b²)</div>
+                    <p>Perpendicular distance from point to line</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Parallel Lines Distance</div>
+                    <div class="formula">d = |c₁-c₂|/√(a²+b²)</div>
+                    <p>Lines: ax+by+c₁=0 and ax+by+c₂=0</p>
+                </div>
+            </div>
+
+            <!-- Distance Calculator -->
+            <div class="solver">
+                <h3>Distance Calculator</h3>
+                <div class="solver-inputs">
+                    <div class="input-group">
+                        <label>Calculation Type</label>
+                        <select id="distanceType" onchange="toggleDistanceInputs()">
+                            <option value="point-point">Distance between two points</option>
+                            <option value="point-line">Distance from point to line</option>
+                            <option value="line-line">Distance between parallel lines</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Point-Point Inputs -->
+                    <div id="pointPointInputs">
+                        <div class="input-group">
+                            <label>Point A: x₁</label>
+                            <input type="number" id="ppx1" placeholder="Enter x₁" value="1" step="any">
+                        </div>
+                        <div class="input-group">
+                            <label>Point A: y₁</label>
+                            <input type="number" id="ppy1" placeholder="Enter y₁" value="2" step="any">
+                        </div>
+                        <div class="input-group">
+                            <label>Point B: x₂</label>
+                            <input type="number" id="ppx2" placeholder="Enter x₂" value="4" step="any">
+                        </div>
+                        <div class="input-group">
+                            <label>Point B: y₂</label>
+                            <input type="number" id="ppy2" placeholder="Enter y₂" value="6" step="any">
+                        </div>
+                    </div>
+                    
+                    <!-- Point-Line Inputs -->
+                    <div id="pointLineInputs" style="display: none;">
+                        <div class="input-group">
+                            <label>Point: x</label>
+                            <input type="number" id="plx" placeholder="Enter x" value="1" step="any">
+                        </div>
+                        <div class="input-group">
+                            <label>Point: y</label>
+                            <input type="number" id="ply" placeholder="Enter y" value="2" step="any">
+                        </div>
+                        <div class="input-group">
+                            <label>Line: a</label>
+                            <input type="number" id="pla" placeholder="Enter a" value="2" step="any">
+                        </div>
+                        <div class="input-group">
+                            <label>Line: b</label>
+                            <input type="number" id="plb" placeholder="Enter b" value="3" step="any">
+                        </div>
+                        <div class="input-group">
+                            <label>Line: c</label>
+                            <input type="number" id="plc" placeholder="Enter c" value="-12" step="any">
+                        </div>
+                    </div>
+                    
+                    <!-- Line-Line Inputs -->
+                    <div id="lineLineInputs" style="display: none;">
+                        <div class="input-group">
+                            <label>Line 1: a</label>
+                            <input type="number" id="lla1" placeholder="Enter a" value="2" step="any">
+                        </div>
+                        <div class="input-group">
+                            <label>Line 1: b</label>
+                            <input type="number" id="llb1" placeholder="Enter b" value="3" step="any">
+                        </div>
+                        <div class="input-group">
+                            <label>Line 1: c</label>
+                            <input type="number" id="llc1" placeholder="Enter c" value="6" step="any">
+                        </div>
+                        <div class="input-group">
+                            <label>Line 2: a</label>
+                            <input type="number" id="lla2" placeholder="Enter a" value="2" step="any">
+                        </div>
+                        <div class="input-group">
+                            <label>Line 2: b</label>
+                            <input type="number" id="llb2" placeholder="Enter b" value="3" step="any">
+                        </div>
+                        <div class="input-group">
+                            <label>Line 2: c</label>
+                            <input type="number" id="llc2" placeholder="Enter c" value="12" step="any">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solver-controls">
+                    <button class="solve-btn" onclick="calculateDistance()"><i class="fas fa-ruler"></i> Calculate Distance</button>
+                    <button class="solve-btn" onclick="clearDistanceCalculator()">Clear</button>
+                </div>
+
+                <div class="solver-result" id="distanceResult">
+                    Distance will appear here
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Properties and Applications of Distance Formulas:</strong></p>
+                <ul>
+                    <li><strong>Distance formula:</strong> Derived from Pythagorean theorem</li>
+                    <li><strong>Collinearity check:</strong> Three points A, B, C are collinear if AB + BC = AC (distance)</li>
+                    <li><strong>Triangle inequality:</strong> For any three points, sum of any two sides ≥ third side</li>
+                    <li><strong>Perpendicular distance:</strong> Shortest distance from point to line</li>
+                    <li><strong>Foot of perpendicular:</strong> Point on line closest to given point</li>
+                    <li><strong>Parallel lines distance:</strong> Constant distance between parallel lines</li>
+                    <li><strong>Area of triangle:</strong> Using distance formula and Heron's formula</li>
+                    <li><strong>Circle equation:</strong> Distance from center to any point on circle equals radius</li>
+                    <li><strong>Locus problems:</strong> Set of points equidistant from fixed point/line</li>
+                    <li><strong>Coordinate geometry proofs:</strong> Proving geometric properties using distances</li>
+                    <li><strong>Applications:</strong> Navigation, computer graphics, robotics, physics</li>
+                </ul>
+            </div>
+
+            <h3>Distance Formula Derivation</h3>
+            <div class="example">
+                <div class="example-title">Derivation of Distance Between Two Points</div>
+                <p><strong>Given:</strong> Points P(x₁, y₁) and Q(x₂, y₂)</p>
+                <p><strong>Step 1:</strong> Draw horizontal and vertical lines from P and Q to form right triangle</p>
+                <p><strong>Step 2:</strong> Horizontal distance (base): |x₂ - x₁|</p>
+                <p><strong>Step 3:</strong> Vertical distance (height): |y₂ - y₁|</p>
+                <p><strong>Step 4:</strong> By Pythagorean theorem: PQ² = (x₂ - x₁)² + (y₂ - y₁)²</p>
+                <p><strong>Step 5:</strong> Taking square root: PQ = √[(x₂ - x₁)² + (y₂ - y₁)²]</p>
+                <p><strong>Step 6:</strong> Distance is always positive, so absolute values not needed when squaring</p>
+                <p><strong>Verification:</strong> For P(1, 2) and Q(4, 6):
+                    <br>Horizontal distance: 4 - 1 = 3
+                    <br>Vertical distance: 6 - 2 = 4
+                    <br>Distance: √(3² + 4²) = √(9 + 16) = √25 = 5
+                </p>
+            </div>
+
+            <h3>Distance from Point to Line Derivation</h3>
+            <div class="example">
+                <div class="example-title">Derivation of Perpendicular Distance Formula</div>
+                <p><strong>Given:</strong> Point P(x₁, y₁) and line L: ax + by + c = 0</p>
+                <p><strong>Step 1:</strong> Find equation of line perpendicular to L passing through P</p>
+                <p><strong>Step 2:</strong> Slope of L: m = -a/b (if b ≠ 0)</p>
+                <p><strong>Step 3:</strong> Slope of perpendicular line: m' = b/a (if a ≠ 0)</p>
+                <p><strong>Step 4:</strong> Equation of perpendicular: y - y₁ = (b/a)(x - x₁)</p>
+                <p><strong>Step 5:</strong> Find intersection Q of L and perpendicular line (foot of perpendicular)</p>
+                <p><strong>Step 6:</strong> Solve simultaneously: ax + by + c = 0 and y - y₁ = (b/a)(x - x₁)</p>
+                <p><strong>Step 7:</strong> Coordinates of Q: x = (b²x₁ - aby₁ - ac)/(a² + b²), y = (a²y₁ - abx₁ - bc)/(a² + b²)</p>
+                <p><strong>Step 8:</strong> Distance PQ = √[(x - x₁)² + (y - y₁)²]</p>
+                <p><strong>Step 9:</strong> Simplify: d = |ax₁ + by₁ + c|/√(a² + b²)</p>
+                <p><strong>Verification:</strong> For P(1, 2) and line 2x + 3y - 12 = 0:
+                    <br>d = |2(1) + 3(2) - 12|/√(2² + 3²) = |2 + 6 - 12|/√13 = |-4|/√13 = 4/√13 ≈ 1.109
+                </p>
+            </div>
+        </section>
+
+        <!-- Angle Between Lines Section -->
+        <section class="info-panel" id="angles" data-aos="fade-up">
+            <h2>Angle Between Two Lines</h2>
+            <p>The angle between two lines is measured as the acute angle (0° to 90°) or obtuse angle (90° to 180°) between them. Formulas relate this angle to the slopes of the lines.</p>
+
+            <div class="definition">
+                <p><strong>Angle between lines:</strong> If m₁ and m₂ are slopes of two lines, then tan θ = |(m₁ - m₂)/(1 + m₁m₂)|, where θ is acute angle between lines.</p>
+                <p>If lines are perpendicular: 1 + m₁m₂ = 0 ⇒ m₁m₂ = -1</p>
+                <p>If lines are parallel: m₁ = m₂</p>
+            </div>
+
+            <div class="angle-visual">
+                <div class="angle-display" id="angleDisplay">
+                    <!-- Angle visualization will be generated by JavaScript -->
+                </div>
+                <div>
+                    <h3>Interactive Angle Calculator</h3>
+                    <div class="solver-inputs">
+                        <div class="input-group">
+                            <label>Line 1 Slope (m₁)</label>
+                            <input type="number" id="m1" placeholder="Enter m₁" value="2" step="any">
+                        </div>
+                        <div class="input-group">
+                            <label>Line 2 Slope (m₂)</label>
+                            <input type="number" id="m2" placeholder="Enter m₂" value="-0.5" step="any">
+                        </div>
+                    </div>
+                    <div class="solver-controls">
+                        <button class="solve-btn" onclick="calculateAngle()">Calculate Angle</button>
+                        <button class="solve-btn" onclick="setPerpendicular()">Perpendicular</button>
+                        <button class="solve-btn" onclick="setParallel()">Parallel</button>
+                    </div>
+                    <div id="angleResult" style="margin-top: 1rem; color: var(--highlight); font-family: 'Audiowide', cursive;"></div>
+                </div>
+            </div>
+
+            <div class="formula">
+                Acute angle between lines: tan θ = |(m₁ - m₂)/(1 + m₁m₂)|<br>
+                Condition for perpendicular lines: m₁m₂ = -1<br>
+                Condition for parallel lines: m₁ = m₂
+            </div>
+
+            <h3>Special Cases</h3>
+            <table>
+                <tr>
+                    <th>Case</th>
+                    <th>Condition</th>
+                    <th>Angle (θ)</th>
+                    <th>tan θ</th>
+                    <th>Example Slopes</th>
+                </tr>
+                <tr>
+                    <td>Parallel Lines</td>
+                    <td>m₁ = m₂</td>
+                    <td>0°</td>
+                    <td>0</td>
+                    <td>m₁ = 2, m₂ = 2</td>
+                </tr>
+                <tr>
+                    <td>Perpendicular Lines</td>
+                    <td>m₁m₂ = -1</td>
+                    <td>90°</td>
+                    <td>Undefined</td>
+                    <td>m₁ = 2, m₂ = -0.5</td>
+                </tr>
+                <tr>
+                    <td>Lines at 45°</td>
+                    <td>|(m₁-m₂)/(1+m₁m₂)| = 1</td>
+                    <td>45°</td>
+                    <td>1</td>
+                    <td>m₁ = 0, m₂ = 1</td>
+                </tr>
+                <tr>
+                    <td>Lines at 60°</td>
+                    <td>|(m₁-m₂)/(1+m₁m₂)| = √3</td>
+                    <td>60°</td>
+                    <td>√3 ≈ 1.732</td>
+                    <td>m₁ = 0, m₂ = √3</td>
+                </tr>
+                <tr>
+                    <td>Lines at 30°</td>
+                    <td>|(m₁-m₂)/(1+m₁m₂)| = 1/√3</td>
+                    <td>30°</td>
+                    <td>1/√3 ≈ 0.577</td>
+                    <td>m₁ = 0, m₂ = 1/√3</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Important Points About Angles Between Lines:</strong></p>
+                <ul>
+                    <li>Formula gives acute angle (0° ≤ θ ≤ 90°) by taking absolute value</li>
+                    <li>Obtuse angle = 180° - acute angle</li>
+                    <li>For perpendicular lines, denominator 1 + m₁m₂ = 0, so tan θ undefined (θ = 90°)</li>
+                    <li>For parallel lines, numerator m₁ - m₂ = 0, so tan θ = 0 (θ = 0°)</li>
+                    <li>When one line is vertical (slope undefined), use angle with x-axis: θ = |90° - α| where α is angle of other line</li>
+                    <li>Angle between lines given in general form: tan θ = |(a₁b₂ - a₂b₁)/(a₁a₂ + b₁b₂)|</li>
+                    <li>Lines ax + by + c = 0 and a'x + b'y + c' = 0 are:
+                        <ul>
+                            <li>Parallel if a/a' = b/b' ≠ c/c'</li>
+                            <li>Perpendicular if aa' + bb' = 0</li>
+                        </ul>
+                    </li>
+                    <li>Angle bisectors: Lines that divide angle between two lines into two equal angles</li>
+                    <li>Equation of angle bisectors: |(a₁x + b₁y + c₁)/√(a₁² + b₁²)| = |(a₂x + b₂y + c₂)/√(a₂² + b₂²)|</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Finding Angle Between Lines</div>
+                <p>Find acute angle between lines with slopes m₁ = 2 and m₂ = -3.</p>
+                <p><strong>Solution:</strong></p>
+                <p><strong>Step 1:</strong> Use formula: tan θ = |(m₁ - m₂)/(1 + m₁m₂)|</p>
+                <p><strong>Step 2:</strong> Substitute values: tan θ = |(2 - (-3))/(1 + 2×(-3))| = |(2 + 3)/(1 - 6)| = |5/(-5)| = |-1| = 1</p>
+                <p><strong>Step 3:</strong> Since tan θ = 1, θ = 45° (acute angle)</p>
+                <p><strong>Step 4:</strong> Obtuse angle between lines = 180° - 45° = 135°</p>
+                <p><strong>Verification:</strong> Check if lines are perpendicular: m₁m₂ = 2×(-3) = -6 ≠ -1, so not perpendicular</p>
+                <p><strong>Alternative method:</strong> Angle of line 1: θ₁ = tan⁻¹(2) ≈ 63.43°<br>
+                   Angle of line 2: θ₂ = tan⁻¹(-3) ≈ -71.57° (or 180° - 71.57° = 108.43°)<br>
+                   Acute angle difference: |63.43° - 108.43°| = 45° ✓
+                </p>
+            </div>
+
+            <h3>Angle Bisectors</h3>
+            <div class="example">
+                <div class="example-title">Example: Finding Angle Bisectors</div>
+                <p>Find equations of angle bisectors of lines: 3x + 4y - 7 = 0 and 12x - 5y + 8 = 0.</p>
+                <p><strong>Solution:</strong></p>
+                <p><strong>Step 1:</strong> Formula for angle bisectors: |(a₁x + b₁y + c₁)/√(a₁² + b₁²)| = |(a₂x + b₂y + c₂)/√(a₂² + b₂²)|</p>
+                <p><strong>Step 2:</strong> For lines: L₁: 3x + 4y - 7 = 0 (a₁=3, b₁=4, c₁=-7)<br>
+                   L₂: 12x - 5y + 8 = 0 (a₂=12, b₂=-5, c₂=8)</p>
+                <p><strong>Step 3:</strong> √(a₁² + b₁²) = √(3² + 4²) = √(9 + 16) = √25 = 5<br>
+                   √(a₂² + b₂²) = √(12² + (-5)²) = √(144 + 25) = √169 = 13</p>
+                <p><strong>Step 4:</strong> Equation: |(3x + 4y - 7)/5| = |(12x - 5y + 8)/13|</p>
+                <p><strong>Step 5:</strong> Removing absolute values gives two equations:<br>
+                   (3x + 4y - 7)/5 = (12x - 5y + 8)/13  ... (1)<br>
+                   (3x + 4y - 7)/5 = -(12x - 5y + 8)/13 ... (2)</p>
+                <p><strong>Step 6:</strong> Simplify (1): 13(3x + 4y - 7) = 5(12x - 5y + 8)<br>
+                   39x + 52y - 91 = 60x - 25y + 40<br>
+                   39x - 60x + 52y + 25y - 91 - 40 = 0<br>
+                   -21x + 77y - 131 = 0 ⇒ 21x - 77y + 131 = 0</p>
+                <p><strong>Step 7:</strong> Simplify (2): 13(3x + 4y - 7) = -5(12x - 5y + 8)<br>
+                   39x + 52y - 91 = -60x + 25y - 40<br>
+                   39x + 60x + 52y - 25y - 91 + 40 = 0<br>
+                   99x + 27y - 51 = 0 ⇒ Divide by 3: 33x + 9y - 17 = 0</p>
+                <p><strong>Step 8:</strong> Angle bisectors are: 21x - 77y + 131 = 0 and 33x + 9y - 17 = 0</p>
+                <p><strong>Note:</strong> One bisector is acute angle bisector, other is obtuse angle bisector (perpendicular to each other)</p>
+            </div>
+        </section>
+
+        <!-- Concurrency & Collinearity Section -->
+        <section class="info-panel" id="concurrency" data-aos="fade-up">
+            <h2>Concurrency and Collinearity</h2>
+            <p>Concurrency refers to three or more lines meeting at a single point. Collinearity refers to three or more points lying on a single straight line.</p>
+
+            <div class="definition">
+                <p><strong>Concurrent lines:</strong> Three or more lines that intersect at a single point.</p>
+                <p><strong>Collinear points:</strong> Three or more points that lie on the same straight line.</p>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Condition for Concurrency</div>
+                    <p>Three lines a₁x + b₁y + c₁ = 0, a₂x + b₂y + c₂ = 0, a₃x + b₃y + c₃ = 0 are concurrent if:</p>
+                    <div class="formula">|a₁ b₁ c₁; a₂ b₂ c₂; a₃ b₃ c₃| = 0</div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Condition for Collinearity</div>
+                    <p>Three points (x₁, y₁), (x₂, y₂), (x₃, y₃) are collinear if:</p>
+                    <div class="formula">|x₁ y₁ 1; x₂ y₂ 1; x₃ y₃ 1| = 0</div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Area of Triangle</div>
+                    <p>Three points are collinear if area of triangle formed by them is zero:</p>
+                    <div class="formula">Area = ½|x₁(y₂-y₃)+x₂(y₃-y₁)+x₃(y₁-y₂)| = 0</div>
+                </div>
+            </div>
+
+            <h3>Methods to Check Concurrency</h3>
+            <div class="important">
+                <p><strong>To check if three lines are concurrent:</strong></p>
+                <ol>
+                    <li><strong>Determinant method:</strong> 
+                        <div class="formula" style="font-size: 0.9rem; padding: 0.5rem;">
+                            |a₁ b₁ c₁|<br>
+                            |a₂ b₂ c₂| = 0<br>
+                            |a₃ b₃ c₃|
+                        </div>
+                    </li>
+                    <li><strong>Intersection method:</strong> Find intersection of two lines, substitute in third</li>
+                    <li><strong>Linear combination:</strong> One line can be expressed as linear combination of other two</li>
+                    <li><strong>Geometric method:</strong> Use properties of triangles (altitudes, medians, etc.)</li>
+                </ol>
+            </div>
+
+            <h3>Methods to Check Collinearity</h3>
+            <div class="important">
+                <p><strong>To check if three points are collinear:</strong></p>
+                <ol>
+                    <li><strong>Slope method:</strong> Slope AB = Slope BC = Slope AC</li>
+                    <li><strong>Area method:</strong> Area of triangle ABC = 0</li>
+                    <li><strong>Distance method:</strong> AB + BC = AC or AB + AC = BC or AC + BC = AB</li>
+                    <li><strong>Determinant method:</strong> 
+                        <div class="formula" style="font-size: 0.9rem; padding: 0.5rem;">
+                            |x₁ y₁ 1|<br>
+                            |x₂ y₂ 1| = 0<br>
+                            |x₃ y₃ 1|
+                        </div>
+                    </li>
+                    <li><strong>Equation method:</strong> All points satisfy same linear equation</li>
+                </ol>
+            </div>
+
+            <!-- Concurrency & Collinearity Calculator -->
+            <div class="solver">
+                <h3>Concurrency & Collinearity Checker</h3>
+                <div class="solver-inputs">
+                    <div class="input-group">
+                        <label>Check Type</label>
+                        <select id="checkType" onchange="toggleCheckerInputs()">
+                            <option value="collinearity">Collinearity (3 points)</option>
+                            <option value="concurrency">Concurrency (3 lines)</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Collinearity Inputs -->
+                    <div id="collinearityInputs">
+                        <div class="input-group">
+                            <label>Point A: x₁, y₁</label>
+                            <input type="text" id="p1" placeholder="x₁,y₁" value="1,2">
+                        </div>
+                        <div class="input-group">
+                            <label>Point B: x₂, y₂</label>
+                            <input type="text" id="p2" placeholder="x₂,y₂" value="2,4">
+                        </div>
+                        <div class="input-group">
+                            <label>Point C: x₃, y₃</label>
+                            <input type="text" id="p3" placeholder="x₃,y₃" value="3,6">
+                        </div>
+                    </div>
+                    
+                    <!-- Concurrency Inputs -->
+                    <div id="concurrencyInputs" style="display: none;">
+                        <div class="input-group">
+                            <label>Line 1: a₁,b₁,c₁</label>
+                            <input type="text" id="l1" placeholder="a₁,b₁,c₁" value="1,2,3">
+                        </div>
+                        <div class="input-group">
+                            <label>Line 2: a₂,b₂,c₂</label>
+                            <input type="text" id="l2" placeholder="a₂,b₂,c₂" value="2,3,4">
+                        </div>
+                        <div class="input-group">
+                            <label>Line 3: a₃,b₃,c₃</label>
+                            <input type="text" id="l3" placeholder="a₃,b₃,c₃" value="3,4,5">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solver-controls">
+                    <button class="solve-btn" onclick="checkConcurrencyCollinearity()"><i class="fas fa-check"></i> Check</button>
+                    <button class="solve-btn" onclick="clearChecker()">Clear</button>
+                    <button class="solve-btn" onclick="loadCheckerExample()">Load Example</button>
+                </div>
+
+                <div class="solver-result" id="checkerResult">
+                    Result will appear here
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Concurrency of Lines</div>
+                <p>Check if lines x + 2y - 3 = 0, 2x + 3y - 4 = 0, and 3x + 4y - 5 = 0 are concurrent.</p>
+                <p><strong>Solution (Determinant method):</strong></p>
+                <p>Form determinant:
+                    <br>|1   2   -3|
+                    <br>|2   3   -4|
+                    <br>|3   4   -5|
+                </p>
+                <p>Calculate determinant:
+                    <br>= 1×(3×(-5) - 4×(-4)) - 2×(2×(-5) - 3×(-4)) + (-3)×(2×4 - 3×3)
+                    <br>= 1×(-15 + 16) - 2×(-10 + 12) - 3×(8 - 9)
+                    <br>= 1×1 - 2×2 - 3×(-1)
+                    <br>= 1 - 4 + 3 = 0
+                </p>
+                <p>Since determinant = 0, lines are concurrent.</p>
+                <p><strong>Solution (Intersection method):</strong></p>
+                <p>Solve first two equations:
+                    <br>x + 2y = 3 ...(1)
+                    <br>2x + 3y = 4 ...(2)
+                    <br>From (1): x = 3 - 2y
+                    <br>Substitute in (2): 2(3 - 2y) + 3y = 4 ⇒ 6 - 4y + 3y = 4 ⇒ -y = -2 ⇒ y = 2
+                    <br>Then x = 3 - 2(2) = 3 - 4 = -1
+                    <br>Intersection point is (-1, 2)
+                </p>
+                <p>Check if (-1, 2) satisfies third equation: 3(-1) + 4(2) - 5 = -3 + 8 - 5 = 0 ✓</p>
+                <p>Therefore, all three lines pass through (-1, 2), so they are concurrent.</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Collinearity of Points</div>
+                <p>Check if points A(1, 2), B(2, 4), and C(3, 6) are collinear.</p>
+                <p><strong>Solution (Slope method):</strong></p>
+                <p>Slope AB = (4 - 2)/(2 - 1) = 2/1 = 2</p>
+                <p>Slope BC = (6 - 4)/(3 - 2) = 2/1 = 2</p>
+                <p>Slope AC = (6 - 2)/(3 - 1) = 4/2 = 2</p>
+                <p>Since all slopes are equal (2), points are collinear.</p>
+                <p><strong>Solution (Area method):</strong></p>
+                <p>Area of triangle ABC = ½|1(4-6) + 2(6-2) + 3(2-4)| = ½|1(-2) + 2(4) + 3(-2)| = ½|-2 + 8 - 6| = ½|0| = 0</p>
+                <p>Since area = 0, points are collinear.</p>
+                <p><strong>Solution (Equation method):</strong></p>
+                <p>Equation of line through A(1, 2) and B(2, 4): 
+                    <br>Slope m = 2, equation: y - 2 = 2(x - 1) ⇒ y = 2x
+                    <br>Check if C(3, 6) satisfies: 6 = 2×3 = 6 ✓
+                    <br>Therefore, all points lie on line y = 2x, so they are collinear.
+                </p>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Advanced Concepts</h4>
+                <p><strong>Family of lines:</strong> Set of lines passing through intersection of two given lines</p>
+                <p><strong>Equation:</strong> (a₁x + b₁y + c₁) + λ(a₂x + b₂y + c₂) = 0</p>
+                <p><strong>Pair of straight lines:</strong> General second-degree equation representing two lines</p>
+                <p><strong>Condition:</strong> ax² + 2hxy + by² + 2gx + 2fy + c = 0 represents pair of lines if abc + 2fgh - af² - bg² - ch² = 0</p>
+                <p><strong>Homogeneous equation:</strong> ax² + 2hxy + by² = 0 represents pair of lines through origin</p>
+                <p><strong>Angle between lines:</strong> tan θ = |2√(h² - ab)/(a + b)|</p>
+                <p><strong>Applications:</strong> Conic sections, transformation geometry, vector algebra</p>
+            </div>
+        </section>
+
+        <!-- Problem Solving Section -->
+        <section class="info-panel" id="problems" data-aos="fade-up">
+            <h2>Problem Solving Strategies</h2>
+            <p>Effective techniques for solving straight line problems in JEE and other competitive exams.</p>
+
+            <div class="problem-solving">
+                <div class="problem-box">
+                    <div class="problem-title">Type 1: Finding Line Equations</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify given information (points, slope, intercepts)</li>
+                        <li>Choose appropriate form of line equation</li>
+                        <li>Substitute values and simplify</li>
+                        <li>Convert to required form if needed</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Use point-slope form when slope and one point known</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 2: Distance Problems</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify what distance needs to be found</li>
+                        <li>Use appropriate distance formula</li>
+                        <li>Substitute values carefully</li>
+                        <li>Simplify and find exact or approximate value</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> For point-line distance, use perpendicular distance formula</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 3: Angle Problems</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Find slopes of given lines</li>
+                        <li>Use angle formula: tan θ = |(m₁-m₂)/(1+m₁m₂)|</li>
+                        <li>Determine if acute or obtuse angle needed</li>
+                        <li>Find angle using inverse tangent</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Check if lines are parallel or perpendicular first</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Common Problem Types:</strong></p>
+                <ul>
+                    <li><strong>Equation problems:</strong> Finding line equations from various given conditions</li>
+                    <li><strong>Distance problems:</strong> Point-point, point-line, line-line distances</li>
+                    <li><strong>Angle problems:</strong> Angle between lines, angle bisectors</li>
+                    <li><strong>Concurrency problems:</strong> Proving lines concurrent, finding point of concurrency</li>
+                    <li><strong>Collinearity problems:</strong> Proving points collinear, finding line through points</li>
+                    <li><strong>Locus problems:</strong> Finding equation of path traced by moving point</li>
+                    <li><strong>Reflection problems:</strong> Finding image of point or line about another line</li>
+                    <li><strong>Foot of perpendicular:</strong> Finding point on line closest to given point</li>
+                    <li><strong>Triangle geometry:</strong> Medians, altitudes, perpendicular bisectors</li>
+                    <li><strong>Coordinate geometry proofs:</strong> Proving geometric properties using coordinates</li>
+                </ul>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED TIP</div>
+                <h4>Advanced Problem Solving Techniques</h4>
+                <p>• For complex problems: Break into smaller subproblems</p>
+                <p>• For locus problems: Let moving point be (h, k), find relation, convert to (x, y)</p>
+                <p>• For symmetric points: Use midpoint and slope conditions</p>
+                <p>• For triangle centers: Use formulas for centroid, circumcenter, orthocenter</p>
+                <p>• For transformation problems: Use rotation, translation, reflection formulas</p>
+                <p>• For optimization: Use calculus or geometric properties</p>
+                <p>• For parametric problems: Express coordinates in terms of parameter</p>
+                <p>• For intersection problems: Solve equations simultaneously</p>
+                <p>• For distance minimization: Use perpendicular distance or calculus</p>
+                <p>• For angle bisectors: Remember both acute and obtuse angle bisectors</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Complex Locus Problem</div>
+                <p>A point moves such that the sum of its distances from lines 3x - 4y + 7 = 0 and 12x + 5y - 9 = 0 is always 5 units. Find equation of locus.</p>
+                <p><strong>Solution:</strong></p>
+                <p><strong>Step 1:</strong> Let moving point be P(h, k)</p>
+                <p><strong>Step 2:</strong> Distance from P to line L₁ (3x - 4y + 7 = 0):
+                    <br>d₁ = |3h - 4k + 7|/√(3² + (-4)²) = |3h - 4k + 7|/5
+                </p>
+                <p><strong>Step 3:</strong> Distance from P to line L₂ (12x + 5y - 9 = 0):
+                    <br>d₂ = |12h + 5k - 9|/√(12² + 5²) = |12h + 5k - 9|/13
+                </p>
+                <p><strong>Step 4:</strong> Given: d₁ + d₂ = 5</p>
+                <p><strong>Step 5:</strong> So: |3h - 4k + 7|/5 + |12h + 5k - 9|/13 = 5</p>
+                <p><strong>Step 6:</strong> Multiply by 65 (LCM of 5 and 13): 13|3h - 4k + 7| + 5|12h + 5k - 9| = 325</p>
+                <p><strong>Step 7:</strong> Remove absolute values by considering cases based on signs of expressions:
+                    <br>Case 1: 3h - 4k + 7 ≥ 0 and 12h + 5k - 9 ≥ 0
+                    <br>Case 2: 3h - 4k + 7 ≥ 0 and 12h + 5k - 9 &lt; 0
+                    <br>Case 3: 3h - 4k + 7 &lt; 0 and 12h + 5k - 9 ≥ 0
+                    <br>Case 4: 3h - 4k + 7 &lt; 0 and 12h + 5k - 9 &lt; 0
+                </p>
+                <p><strong>Step 8:</strong> For each case, we get linear equation in h and k. Since h and k can vary, locus consists of four line segments forming a parallelogram.</p>
+                <p><strong>Step 9:</strong> Replace (h, k) with (x, y) to get locus equation:
+                    <br>13|3x - 4y + 7| + 5|12x + 5y - 9| = 325
+                </p>
+                <p><strong>Conclusion:</strong> The locus is not a single line but set of points satisfying above equation, which represents boundary of region between two pairs of parallel lines.</p>
+            </div>
+        </section>
+
+        <!-- Key Facts Carousel -->
+        <div class="swiper-container" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">SLOPE OF A LINE</div>
+                        <div class="swiper-text">m = (y₂ - y₁)/(x₂ - x₁) = tan θ. Positive: rising, Negative: falling, Zero: horizontal, Undefined: vertical</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">EQUATION FORMS</div>
+                        <div class="swiper-text">Slope-intercept: y = mx + c, Point-slope: y-y₁=m(x-x₁), Two-point, Intercept: x/a+y/b=1, General: ax+by+c=0</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">DISTANCE FORMULAS</div>
+                        <div class="swiper-text">Two points: √[(x₂-x₁)²+(y₂-y₁)²], Point-line: |ax₁+by₁+c|/√(a²+b²), Parallel lines: |c₁-c₂|/√(a²+b²)</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">ANGLE BETWEEN LINES</div>
+                        <div class="swiper-text">tan θ = |(m₁-m₂)/(1+m₁m₂)|. Parallel: m₁=m₂, Perpendicular: m₁m₂=-1</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">CONCURRENCY & COLLINEARITY</div>
+                        <div class="swiper-text">Concurrency: |a₁ b₁ c₁; a₂ b₂ c₂; a₃ b₃ c₃|=0. Collinearity: Area=0 or slopes equal</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">SECTION FORMULA</div>
+                        <div class="swiper-text">Point dividing AB in ratio m:n: ((mx₂+nx₁)/(m+n), (my₂+ny₁)/(m+n)). Midpoint: ((x₁+x₂)/2, (y₁+y₂)/2)</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">APPLICATIONS</div>
+                        <div class="swiper-text">Physics (trajectories), Engineering (design), Computer graphics, Navigation, Economics (linear models)</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">JEE IMPORTANCE</div>
+                        <div class="swiper-text">Foundation for coordinate geometry, conic sections, 3D geometry, calculus. 2-3 questions every year</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- Summary Section -->
+        <section class="info-panel" data-aos="fade-up">
+            <h2>Chapter Summary & Formulas</h2>
+            
+            <h3>Key Formulas</h3>
+            <div class="concept-cards">
+                <div class="concept-card slope">
+                    <div class="card-title slope">Slope and Angle</div>
+                    <div class="formula">m = (y₂-y₁)/(x₂-x₁) = tan θ</div>
+                    <div class="formula">Parallel: m₁ = m₂</div>
+                    <div class="formula">Perpendicular: m₁m₂ = -1</div>
+                </div>
+
+                <div class="concept-card equation">
+                    <div class="card-title equation">Line Equations</div>
+                    <div class="formula">y = mx + c</div>
+                    <div class="formula">y-y₁ = m(x-x₁)</div>
+                    <div class="formula">(y-y₁)/(y₂-y₁) = (x-x₁)/(x₂-x₁)</div>
+                </div>
+
+                <div class="concept-card geometry">
+                    <div class="card-title geometry">Distance Formulas</div>
+                    <div class="formula">Points: √[(x₂-x₁)²+(y₂-y₁)²]</div>
+                    <div class="formula">Point-line: |ax₁+by₁+c|/√(a²+b²)</div>
+                    <div class="formula">Parallel: |c₁-c₂|/√(a²+b²)</div>
+                </div>
+            </div>
+
+            <h3>Complete Formula Reference</h3>
+            <div class="formula-grid">
+                <div class="formula-card">
+                    <div class="formula-card-title">Slope and Angle</div>
+                    <div class="formula">Slope: m = (y₂-y₁)/(x₂-x₁)</div>
+                    <div class="formula">Angle: m = tan θ</div>
+                    <div class="formula">Angle between lines: tan θ = |(m₁-m₂)/(1+m₁m₂)|</div>
+                    <div class="formula">Parallel: m₁ = m₂</div>
+                    <div class="formula">Perpendicular: m₁m₂ = -1</div>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Line Equations</div>
+                    <div class="formula">Slope-intercept: y = mx + c</div>
+                    <div class="formula">Point-slope: y-y₁ = m(x-x₁)</div>
+                    <div class="formula">Two-point: (y-y₁)/(y₂-y₁) = (x-x₁)/(x₂-x₁)</div>
+                    <div class="formula">Intercept: x/a + y/b = 1</div>
+                    <div class="formula">General: ax + by + c = 0</div>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Distance Formulas</div>
+                    <div class="formula">Two points: √[(x₂-x₁)²+(y₂-y₁)²]</div>
+                    <div class="formula">Point to line: |ax₁+by₁+c|/√(a²+b²)</div>
+                    <div class="formula">Parallel lines: |c₁-c₂|/√(a²+b²)</div>
+                    <div class="formula">Section: ((mx₂+nx₁)/(m+n), (my₂+ny₁)/(m+n))</div>
+                    <div class="formula">Midpoint: ((x₁+x₂)/2, (y₁+y₂)/2)</div>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-card-title">Concurrency & Collinearity</div>
+                    <div class="formula">Concurrency determinant: |a₁ b₁ c₁; a₂ b₂ c₂; a₃ b₃ c₃| = 0</div>
+                    <div class="formula">Collinearity area: ½|x₁(y₂-y₃)+x₂(y₃-y₁)+x₃(y₁-y₂)| = 0</div>
+                    <div class="formula">Collinearity determinant: |x₁ y₁ 1; x₂ y₂ 1; x₃ y₃ 1| = 0</div>
+                    <div class="formula">Angle bisectors: |(a₁x+b₁y+c₁)/√(a₁²+b₁²)| = |(a₂x+b₂y+c₂)/√(a₂²+b₂²)|</div>
+                </div>
+            </div>
+
+            <h3>Important Points for JEE/NEET</h3>
+            <ul>
+                <li>Slope m = tan θ, where θ is angle with positive x-axis</li>
+                <li>Positive slope: line rises left to right (0° &lt; θ &lt; 90°)</li>
+                <li>Negative slope: line falls left to right (90° &lt; θ &lt; 180°)</li>
+                <li>Zero slope: horizontal line (θ = 0°)</li>
+                <li>Undefined slope: vertical line (θ = 90°)</li>
+                <li>Two points uniquely determine a straight line</li>
+                <li>Every first-degree equation in x and y represents a straight line</li>
+                <li>General form: ax + by + c = 0 can be converted to any other form</li>
+                <li>Distance between parallel lines ax+by+c₁=0 and ax+by+c₂=0: |c₁-c₂|/√(a²+b²)</li>
+                <li>Perpendicular distance from point to line is shortest distance</li>
+                <li>Angle between lines: tan θ = |(m₁-m₂)/(1+m₁m₂)| gives acute angle</li>
+                <li>For perpendicular lines: m₁m₂ = -1</li>
+                <li>For parallel lines: m₁ = m₂</li>
+                <li>Three points collinear if area of triangle = 0 or slopes equal</li>
+                <li>Three lines concurrent if determinant = 0 or intersect at same point</li>
+                <li>Section formula: Point dividing line segment in ratio m:n</li>
+                <li>Midpoint formula: Average of coordinates</li>
+                <li>Centroid of triangle: Average of vertices' coordinates</li>
+                <li>Foot of perpendicular: Find by solving line equation and perpendicular through point</li>
+                <li>Image of point about line: Use midpoint and perpendicular conditions</li>
+                <li>Family of lines through intersection: L₁ + λL₂ = 0</li>
+            </ul>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE STRATEGY</div>
+                <h4>Exam Preparation Tips</h4>
+                <p><strong>Before Exam:</strong></p>
+                <ul>
+                    <li>Memorize all formulas (slope, distance, section, angle)</li>
+                    <li>Practice converting between different forms of line equations</li>
+                    <li>Solve problems on concurrency and collinearity using different methods</li>
+                    <li>Practice finding foot of perpendicular and image of point</li>
+                    <li>Work on locus problems and word problems</li>
+                    <li>Solve previous years' JEE questions on straight lines</li>
+                </ul>
+                <p><strong>During Exam:</strong></p>
+                <ul>
+                    <li>Read problem carefully to identify what's given and what's asked</li>
+                    <li>Choose appropriate formula based on given information</li>
+                    <li>For distance problems, check if perpendicular distance is needed</li>
+                    <li>For angle problems, remember formula gives acute angle</li>
+                    <li>For concurrency/collinearity, use determinant method for speed</li>
+                    <li>Check calculations, especially signs and square roots</li>
+                    <li>Verify answer by alternative method if time permits</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Nerds Assemble</h3>
+                <p>Master Straight Lines for JEE & NEET. Build strong foundation in coordinate geometry, slope, equations, distance formulas, and applications.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#slope">Slope of a Line</a></li>
+                    <li><a href="#equations">Equations of Lines</a></li>
+                    <li><a href="#distance">Distance Formulas</a></li>
+                    <li><a href="#angles">Angle Between Lines</a></li>
+                    <li><a href="#concurrency">Concurrency & Collinearity</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> 44mr.invisible@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Nerds Assemble. All rights reserved. | Designed for JEE & NEET Aspirants | Straight Lines - Class 11 Mathematics</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Straight Lines - JavaScript
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ?
+                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+            }
+
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+
+            function handleScroll() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('active');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                }
+            }
+
+            // Debounced scroll event
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(handleScroll, 50);
+            }, { passive: true });
+
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: window.innerWidth < 768 ? 100 : 120,
+                    easing: 'ease-out-quad'
+                });
+            }
+
+            // Initialize Swiper
+            if (typeof Swiper !== 'undefined') {
+                const swiper = new Swiper('.swiper-container', {
+                    loop: true,
+                    autoplay: {
+                        delay: 3500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 25
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        }
+                    }
+                });
+            }
+
+            // Smooth Scroll for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        if (mainNav && mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                });
+            });
+
+            // Back to Top Button Click
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Create Particles
+            createParticles();
+            
+            // Initialize visualizations
+            initializeLineGraph();
+            initializeAngleDisplay();
+        });
+
+        // Create Particles Function
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
+
+            const particleCount = window.innerWidth < 768 ? 20 : 30;
+            particlesContainer.innerHTML = '';
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                const size = Math.random() * 3 + 1;
+                const posX = Math.random() * window.innerWidth;
+                const posY = Math.random() * window.innerHeight;
+                const duration = Math.random() * 15 + 10;
+                const delay = Math.random() * 5;
+
+                particle.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}px;
+                    top: ${posY}px;
+                    opacity: ${Math.random() * 0.3 + 0.1};
+                    animation: float ${duration}s ease-in-out ${delay}s infinite;
+                    background: rgba(255,255,255,0.3);
+                `;
+
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Line Graph Functions
+        function initializeLineGraph() {
+            const container = document.getElementById('lineGraph');
+            if (!container) return;
+            
+            const plane = container.querySelector('.coordinate-plane');
+            if (!plane) return;
+            
+            // Clear previous elements
+            plane.innerHTML = '';
+            
+            // Create grid
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            const centerX = width / 2;
+            const centerY = height / 2;
+            const scale = 25; // Pixels per unit
+            
+            // Add grid lines
+            for (let i = -10; i <= 10; i++) {
+                // Vertical grid lines
+                if (i !== 0) {
+                    const vLine = document.createElement('div');
+                    vLine.className = 'grid-line vertical';
+                    vLine.style.left = `${centerX + i * scale}px`;
+                    vLine.style.width = '1px';
+                    vLine.style.height = '100%';
+                    plane.appendChild(vLine);
+                }
+                
+                // Horizontal grid lines
+                if (i !== 0) {
+                    const hLine = document.createElement('div');
+                    hLine.className = 'grid-line horizontal';
+                    hLine.style.top = `${centerY + i * scale}px`;
+                    hLine.style.width = '100%';
+                    hLine.style.height = '1px';
+                    plane.appendChild(hLine);
+                }
+            }
+            
+            // Add axes
+            const xAxis = document.createElement('div');
+            xAxis.className = 'axis x-axis';
+            xAxis.style.top = `${centerY}px`;
+            plane.appendChild(xAxis);
+            
+            const yAxis = document.createElement('div');
+            yAxis.className = 'axis y-axis';
+            yAxis.style.left = `${centerX}px`;
+            plane.appendChild(yAxis);
+            
+            // Add axis labels
+            for (let i = -8; i <= 8; i++) {
+                if (i !== 0) {
+                    // x-axis labels
+                    const xLabel = document.createElement('div');
+                    xLabel.style.position = 'absolute';
+                    xLabel.style.left = `${centerX + i * scale}px`;
+                    xLabel.style.top = `${centerY + 10}px`;
+                    xLabel.style.color = 'var(--text)';
+                    xLabel.style.fontSize = '0.7rem';
+                    xLabel.textContent = i.toString();
+                    plane.appendChild(xLabel);
+                    
+                    // y-axis labels
+                    const yLabel = document.createElement('div');
+                    yLabel.style.position = 'absolute';
+                    yLabel.style.left = `${centerX + 10}px`;
+                    yLabel.style.top = `${centerY - i * scale}px`;
+                    yLabel.style.color = 'var(--text)';
+                    yLabel.style.fontSize = '0.7rem';
+                    yLabel.textContent = i.toString();
+                    plane.appendChild(yLabel);
+                }
+            }
+            
+            // Add origin label
+            const originLabel = document.createElement('div');
+            originLabel.style.position = 'absolute';
+            originLabel.style.left = `${centerX + 10}px`;
+            originLabel.style.top = `${centerY + 10}px`;
+            originLabel.style.color = 'var(--highlight)';
+            originLabel.style.fontSize = '0.7rem';
+            originLabel.textContent = '0';
+            plane.appendChild(originLabel);
+            
+            // Add axis labels
+            const xAxisLabel = document.createElement('div');
+            xAxisLabel.style.position = 'absolute';
+            xAxisLabel.style.left = `${width - 20}px`;
+            xAxisLabel.style.top = `${centerY - 20}px`;
+            xAxisLabel.style.color = 'var(--secondary)';
+            xAxisLabel.textContent = 'x';
+            plane.appendChild(xAxisLabel);
+            
+            const yAxisLabel = document.createElement('div');
+            yAxisLabel.style.position = 'absolute';
+            yAxisLabel.style.left = `${centerX + 10}px`;
+            yAxisLabel.style.top = '10px';
+            yAxisLabel.style.color = 'var(--secondary)';
+            yAxisLabel.textContent = 'y';
+            plane.appendChild(yAxisLabel);
+        }
+
+        function plotLine() {
+            const slope = parseFloat(document.getElementById('lineSlope').value) || 0;
+            const intercept = parseFloat(document.getElementById('lineIntercept').value) || 0;
+            const color = document.getElementById('lineColor').value;
+            
+            const container = document.getElementById('lineGraph');
+            if (!container) return;
+            
+            const plane = container.querySelector('.coordinate-plane');
+            if (!plane) return;
+            
+            // Clear previous line
+            const oldLine = plane.querySelector('.line-plot');
+            if (oldLine) oldLine.remove();
+            
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            const centerX = width / 2;
+            const centerY = height / 2;
+            const scale = 25;
+            
+            // Create line
+            const line = document.createElement('div');
+            line.className = 'line-plot';
+            line.style.backgroundColor = color;
+            
+            // Calculate line endpoints
+            // Line equation: y = mx + c
+            // We'll plot from x = -8 to x = 8
+            
+            const x1 = -8;
+            const y1 = slope * x1 + intercept;
+            const x2 = 8;
+            const y2 = slope * x2 + intercept;
+            
+            // Convert to pixel coordinates
+            const pixelX1 = centerX + x1 * scale;
+            const pixelY1 = centerY - y1 * scale;
+            const pixelX2 = centerX + x2 * scale;
+            const pixelY2 = centerY - y2 * scale;
+            
+            // Calculate line length and angle
+            const length = Math.sqrt(Math.pow(pixelX2 - pixelX1, 2) + Math.pow(pixelY2 - pixelY1, 2));
+            const angle = Math.atan2(pixelY2 - pixelY1, pixelX2 - pixelX1);
+            
+            // Position and style the line
+            line.style.width = `${length}px`;
+            line.style.height = '3px';
+            line.style.left = `${pixelX1}px`;
+            line.style.top = `${pixelY1}px`;
+            line.style.transform = `rotate(${angle}rad)`;
+            line.style.transformOrigin = '0 0';
+            
+            plane.appendChild(line);
+            
+            // Update info
+            const info = document.getElementById('lineInfo');
+            info.innerHTML = `Line: y = ${slope}x ${intercept >= 0 ? '+' : ''}${intercept}<br>
+                             Slope: m = ${slope}<br>
+                             Y-intercept: (0, ${intercept})<br>
+                             X-intercept: (${intercept !== 0 ? (-intercept/slope).toFixed(2) : '0'}, 0)`;
+        }
+
+        function addHorizontalLine() {
+            document.getElementById('lineSlope').value = '0';
+            document.getElementById('lineIntercept').value = '2';
+            document.getElementById('lineColor').value = 'var(--secondary)';
+            plotLine();
+        }
+
+        function addVerticalLine() {
+            // Vertical line: x = constant
+            // For our simple plotter, we'll use a very large slope
+            document.getElementById('lineSlope').value = '1000'; // Approximates vertical
+            document.getElementById('lineIntercept').value = '0';
+            document.getElementById('lineColor').value = 'var(--tertiary)';
+            plotLine();
+            
+            const info = document.getElementById('lineInfo');
+            info.innerHTML = 'Vertical line: x = 0 (approximately)<br>Slope: undefined (infinite)<br>Vertical lines cannot be represented in slope-intercept form';
+        }
+
+        function clearLineGraph() {
+            const container = document.getElementById('lineGraph');
+            if (!container) return;
+            
+            const plane = container.querySelector('.coordinate-plane');
+            if (!plane) return;
+            
+            const lines = plane.querySelectorAll('.line-plot');
+            lines.forEach(line => line.remove());
+            
+            const info = document.getElementById('lineInfo');
+            if (info) info.innerHTML = '';
+            
+            // Reinitialize grid
+            initializeLineGraph();
+        }
+
+        // Slope Calculator Functions
+        function calculateSlope() {
+            const x1 = parseFloat(document.getElementById('pointAx').value) || 0;
+            const y1 = parseFloat(document.getElementById('pointAy').value) || 0;
+            const x2 = parseFloat(document.getElementById('pointBx').value) || 0;
+            const y2 = parseFloat(document.getElementById('pointBy').value) || 0;
+            
+            if (x1 === x2) {
+                document.getElementById('slopeResult').innerHTML = 
+                    `Points: A(${x1}, ${y1}) and B(${x2}, ${y2})<br>
+                     Slope: Undefined (vertical line)<br>
+                     Line is vertical: x = ${x1}`;
+                return;
+            }
+            
+            const slope = (y2 - y1) / (x2 - x1);
+            const angle = Math.atan(slope) * 180 / Math.PI;
+            const angleAdjusted = slope >= 0 ? angle : 180 + angle;
+            
+            const resultElement = document.getElementById('slopeResult');
+            resultElement.innerHTML = 
+                `Points: A(${x1}, ${y1}) and B(${x2}, ${y2})<br>
+                 Slope: m = (${y2} - ${y1})/(${x2} - ${x1}) = ${slope.toFixed(2)}<br>
+                 Angle with x-axis: θ = tan⁻¹(${slope.toFixed(2)}) = ${angleAdjusted.toFixed(2)}°<br>
+                 Line ${slope > 0 ? 'rises' : slope < 0 ? 'falls' : 'is horizontal'} from left to right`;
+        }
+
+        function clearSlopeCalculator() {
+            document.getElementById('pointAx').value = '1';
+            document.getElementById('pointAy').value = '2';
+            document.getElementById('pointBx').value = '3';
+            document.getElementById('pointBy').value = '4';
+            document.getElementById('slopeResult').innerHTML = 'Slope will appear here';
+        }
+
+        // Equation Converter Functions
+        function convertEquation() {
+            const form = document.getElementById('currentForm').value;
+            const p1 = document.getElementById('param1').value;
+            const p2 = document.getElementById('param2').value;
+            const p3 = document.getElementById('param3').value;
+            
+            let result = '';
+            
+            switch(form) {
+                case 'slope-intercept':
+                    // p1 = m, p2 = c
+                    const m1 = parseFloat(p1) || 0;
+                    const c1 = parseFloat(p2) || 0;
+                    result = `Slope-intercept: y = ${m1}x ${c1 >= 0 ? '+' : ''}${c1}<br>`;
+                    result += `General form: ${m1}x - y + ${c1} = 0<br>`;
+                    result += `Point-slope using (0, ${c1}): y - ${c1} = ${m1}(x - 0)<br>`;
+                    if (c1 !== 0) {
+                        result += `Intercept form: x/${(-c1/m1).toFixed(2)} + y/${c1} = 1`;
+                    }
+                    break;
+                    
+                case 'point-slope':
+                    // p1 = m, p2 = x1, p3 = y1
+                    const m2 = parseFloat(p1) || 0;
+                    const x1 = parseFloat(p2) || 0;
+                    const y1 = parseFloat(p3) || 0;
+                    result = `Point-slope: y - ${y1} = ${m2}(x - ${x1})<br>`;
+                    const c2 = y1 - m2 * x1;
+                    result += `Slope-intercept: y = ${m2}x ${c2 >= 0 ? '+' : ''}${c2}<br>`;
+                    result += `General form: ${m2}x - y + ${c2} = 0`;
+                    break;
+                    
+                case 'general':
+                    // p1 = a, p2 = b, p3 = c
+                    const a = parseFloat(p1) || 1;
+                    const b = parseFloat(p2) || 1;
+                    const c3 = parseFloat(p3) || 0;
+                    result = `General form: ${a}x ${b >= 0 ? '+' : ''}${b}y ${c3 >= 0 ? '+' : ''}${c3} = 0<br>`;
+                    if (b !== 0) {
+                        const m3 = -a/b;
+                        const interc = -c3/b;
+                        result += `Slope-intercept: y = ${m3.toFixed(2)}x ${interc >= 0 ? '+' : ''}${interc.toFixed(2)}<br>`;
+                        result += `Slope: m = ${m3.toFixed(2)}<br>`;
+                        result += `Y-intercept: (0, ${interc.toFixed(2)})<br>`;
+                        if (a !== 0) {
+                            result += `X-intercept: (${(-c3/a).toFixed(2)}, 0)`;
+                        }
+                    }
+                    break;
+            }
+            
+            document.getElementById('equationResult').innerHTML = result;
+        }
+
+        function clearConverter() {
+            document.getElementById('currentForm').value = 'slope-intercept';
+            document.getElementById('param1').value = '2';
+            document.getElementById('param2').value = '3';
+            document.getElementById('param3').value = '1';
+            document.getElementById('equationResult').innerHTML = 'Converted equations will appear here';
+        }
+
+        function loadExample() {
+            document.getElementById('currentForm').value = 'general';
+            document.getElementById('param1').value = '2';
+            document.getElementById('param2').value = '3';
+            document.getElementById('param3').value = '-12';
+            convertEquation();
+        }
+
+        // Distance Calculator Functions
+        function toggleDistanceInputs() {
+            const type = document.getElementById('distanceType').value;
+            
+            document.getElementById('pointPointInputs').style.display = 
+                type === 'point-point' ? 'grid' : 'none';
+            document.getElementById('pointLineInputs').style.display = 
+                type === 'point-line' ? 'grid' : 'none';
+            document.getElementById('lineLineInputs').style.display = 
+                type === 'line-line' ? 'grid' : 'none';
+        }
+
+        function calculateDistance() {
+            const type = document.getElementById('distanceType').value;
+            let result = '';
+            
+            if (type === 'point-point') {
+                const x1 = parseFloat(document.getElementById('ppx1').value) || 0;
+                const y1 = parseFloat(document.getElementById('ppy1').value) || 0;
+                const x2 = parseFloat(document.getElementById('ppx2').value) || 0;
+                const y2 = parseFloat(document.getElementById('ppy2').value) || 0;
+                
+                const distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+                result = `Distance between A(${x1}, ${y1}) and B(${x2}, ${y2}):<br>`;
+                result += `d = √[(${x2} - ${x1})² + (${y2} - ${y1})²] = √[${(x2-x1)}² + ${(y2-y1)}²] = √${Math.pow(x2-x1,2)+Math.pow(y2-y1,2)} = ${distance.toFixed(2)}`;
+            }
+            else if (type === 'point-line') {
+                const x = parseFloat(document.getElementById('plx').value) || 0;
+                const y = parseFloat(document.getElementById('ply').value) || 0;
+                const a = parseFloat(document.getElementById('pla').value) || 0;
+                const b = parseFloat(document.getElementById('plb').value) || 0;
+                const c = parseFloat(document.getElementById('plc').value) || 0;
+                
+                const numerator = Math.abs(a*x + b*y + c);
+                const denominator = Math.sqrt(a*a + b*b);
+                const distance = numerator / denominator;
+                
+                result = `Distance from point P(${x}, ${y}) to line ${a}x ${b >= 0 ? '+' : ''}${b}y ${c >= 0 ? '+' : ''}${c} = 0:<br>`;
+                result += `d = |${a}×${x} ${b >= 0 ? '+' : ''}${b}×${y} ${c >= 0 ? '+' : ''}${c}| / √(${a}² + ${b}²)<br>`;
+                result += `d = |${a*x + b*y + c}| / √${a*a + b*b}<br>`;
+                result += `d = ${numerator} / ${denominator.toFixed(2)} = ${distance.toFixed(2)}`;
+            }
+            else if (type === 'line-line') {
+                const a1 = parseFloat(document.getElementById('lla1').value) || 0;
+                const b1 = parseFloat(document.getElementById('llb1').value) || 0;
+                const c1 = parseFloat(document.getElementById('llc1').value) || 0;
+                const a2 = parseFloat(document.getElementById('lla2').value) || 0;
+                const b2 = parseFloat(document.getElementById('llb2').value) || 0;
+                const c2 = parseFloat(document.getElementById('llc2').value) || 0;
+                
+                // Check if lines are parallel (a1/a2 = b1/b2)
+                if (Math.abs(a1*b2 - a2*b1) > 0.0001) {
+                    result = `Lines are not parallel. Distance between non-parallel lines is not constant.<br>`;
+                    result += `Check: ${a1}/${a2} = ${(a1/a2).toFixed(2)}, ${b1}/${b2} = ${(b1/b2).toFixed(2)}`;
+                } else {
+                    const numerator = Math.abs(c1 - c2);
+                    const denominator = Math.sqrt(a1*a1 + b1*b1);
+                    const distance = numerator / denominator;
+                    
+                    result = `Distance between parallel lines:<br>`;
+                    result += `Line 1: ${a1}x ${b1 >= 0 ? '+' : ''}${b1}y ${c1 >= 0 ? '+' : ''}${c1} = 0<br>`;
+                    result += `Line 2: ${a2}x ${b2 >= 0 ? '+' : ''}${b2}y ${c2 >= 0 ? '+' : ''}${c2} = 0<br>`;
+                    result += `d = |${c1} - ${c2}| / √(${a1}² + ${b1}²) = ${numerator} / √${a1*a1 + b1*b1}<br>`;
+                    result += `d = ${numerator} / ${denominator.toFixed(2)} = ${distance.toFixed(2)}`;
+                }
+            }
+            
+            document.getElementById('distanceResult').innerHTML = result;
+        }
+
+        function clearDistanceCalculator() {
+            document.getElementById('distanceType').value = 'point-point';
+            toggleDistanceInputs();
+            document.getElementById('distanceResult').innerHTML = 'Distance will appear here';
+        }
+
+        // Angle Calculator Functions
+        function initializeAngleDisplay() {
+            const display = document.getElementById('angleDisplay');
+            if (!display) return;
+            
+            display.innerHTML = '';
+            
+            // Create two lines at 45° and 135° for default display
+            const line1 = document.createElement('div');
+            line1.className = 'slope-line';
+            line1.style.width = '70%';
+            line1.style.height = '3px';
+            line1.style.left = '15%';
+            line1.style.top = '50%';
+            line1.style.transform = 'rotate(45deg)';
+            line1.style.backgroundColor = 'var(--primary)';
+            display.appendChild(line1);
+            
+            const line2 = document.createElement('div');
+            line2.className = 'slope-line';
+            line2.style.width = '70%';
+            line2.style.height = '3px';
+            line2.style.left = '15%';
+            line2.style.top = '50%';
+            line2.style.transform = 'rotate(135deg)';
+            line2.style.backgroundColor = 'var(--secondary)';
+            display.appendChild(line2);
+            
+            // Add angle arc
+            const arc = document.createElement('div');
+            arc.style.position = 'absolute';
+            arc.style.width = '40%';
+            arc.style.height = '40%';
+            arc.style.left = '30%';
+            arc.style.top = '30%';
+            arc.style.border = '2px solid var(--highlight)';
+            arc.style.borderRadius = '50%';
+            arc.style.borderRight = 'none';
+            arc.style.borderTop = 'none';
+            arc.style.transform = 'rotate(45deg)';
+            display.appendChild(arc);
+            
+            // Add angle label
+            const label = document.createElement('div');
+            label.style.position = 'absolute';
+            label.style.left = '50%';
+            label.style.top = '40%';
+            label.style.color = 'var(--highlight)';
+            label.style.fontWeight = 'bold';
+            label.style.fontSize = '1.2rem';
+            label.textContent = '90°';
+            display.appendChild(label);
+        }
+
+        function calculateAngle() {
+            const m1 = parseFloat(document.getElementById('m1').value) || 0;
+            const m2 = parseFloat(document.getElementById('m2').value) || 0;
+            
+            const display = document.getElementById('angleDisplay');
+            if (!display) return;
+            
+            // Clear previous display
+            display.innerHTML = '';
+            
+            // Calculate angles in degrees
+            const angle1 = Math.atan(m1) * 180 / Math.PI;
+            const angle2 = Math.atan(m2) * 180 / Math.PI;
+            
+            // Adjust angles to be between 0 and 180
+            const adjAngle1 = m1 >= 0 ? angle1 : 180 + angle1;
+            const adjAngle2 = m2 >= 0 ? angle2 : 180 + angle2;
+            
+            // Calculate acute angle between lines
+            let acuteAngle = Math.abs(adjAngle1 - adjAngle2);
+            if (acuteAngle > 180) acuteAngle = 360 - acuteAngle;
+            if (acuteAngle > 90) acuteAngle = 180 - acuteAngle;
+            
+            // Create two lines
+            const line1 = document.createElement('div');
+            line1.className = 'slope-line';
+            line1.style.width = '70%';
+            line1.style.height = '3px';
+            line1.style.left = '15%';
+            line1.style.top = '50%';
+            line1.style.transform = `rotate(${adjAngle1}deg)`;
+            line1.style.backgroundColor = 'var(--primary)';
+            display.appendChild(line1);
+            
+            const line2 = document.createElement('div');
+            line2.className = 'slope-line';
+            line2.style.width = '70%';
+            line2.style.height = '3px';
+            line2.style.left = '15%';
+            line2.style.top = '50%';
+            line2.style.transform = `rotate(${adjAngle2}deg)`;
+            line2.style.backgroundColor = 'var(--secondary)';
+            display.appendChild(line2);
+            
+            // Add angle arc (for acute angle)
+            const smallerAngle = Math.min(adjAngle1, adjAngle2);
+            const largerAngle = Math.max(adjAngle1, adjAngle2);
+            const arcAngle = acuteAngle;
+            
+            const arc = document.createElement('div');
+            arc.style.position = 'absolute';
+            arc.style.width = '40%';
+            arc.style.height = '40%';
+            arc.style.left = '30%';
+            arc.style.top = '30%';
+            arc.style.border = '2px solid var(--highlight)';
+            arc.style.borderRadius = '50%';
+            arc.style.borderRight = 'none';
+            arc.style.borderTop = 'none';
+            arc.style.transform = `rotate(${smallerAngle}deg)`;
+            display.appendChild(arc);
+            
+            // Add angle label
+            const label = document.createElement('div');
+            label.style.position = 'absolute';
+            label.style.left = '50%';
+            label.style.top = '40%';
+            label.style.color = 'var(--highlight)';
+            label.style.fontWeight = 'bold';
+            label.style.fontSize = '1.2rem';
+            label.textContent = `${acuteAngle.toFixed(1)}°`;
+            display.appendChild(label);
+            
+            // Update result text
+            const resultElement = document.getElementById('angleResult');
+            resultElement.innerHTML = 
+                `Line 1: m₁ = ${m1}, angle = ${adjAngle1.toFixed(1)}°<br>
+                 Line 2: m₂ = ${m2}, angle = ${adjAngle2.toFixed(1)}°<br>
+                 Acute angle between lines: ${acuteAngle.toFixed(1)}°<br>
+                 Using formula: tan θ = |(${m1} - ${m2})/(1 + ${m1}×${m2})| = ${Math.abs((m1-m2)/(1+m1*m2)).toFixed(2)}`;
+        }
+
+        function setPerpendicular() {
+            document.getElementById('m1').value = '2';
+            document.getElementById('m2').value = '-0.5';
+            calculateAngle();
+        }
+
+        function setParallel() {
+            document.getElementById('m1').value = '2';
+            document.getElementById('m2').value = '2';
+            calculateAngle();
+        }
+
+        // Concurrency & Collinearity Checker Functions
+        function toggleCheckerInputs() {
+            const type = document.getElementById('checkType').value;
+            
+            document.getElementById('collinearityInputs').style.display = 
+                type === 'collinearity' ? 'grid' : 'none';
+            document.getElementById('concurrencyInputs').style.display = 
+                type === 'concurrency' ? 'grid' : 'none';
+        }
+
+        function checkConcurrencyCollinearity() {
+            const type = document.getElementById('checkType').value;
+            let result = '';
+            
+            if (type === 'collinearity') {
+                const p1 = document.getElementById('p1').value.split(',').map(Number);
+                const p2 = document.getElementById('p2').value.split(',').map(Number);
+                const p3 = document.getElementById('p3').value.split(',').map(Number);
+                
+                if (p1.length !== 2 || p2.length !== 2 || p3.length !== 2) {
+                    result = 'Invalid input format. Use: x,y';
+                    document.getElementById('checkerResult').innerHTML = result;
+                    return;
+                }
+                
+                const [x1, y1] = p1;
+                const [x2, y2] = p2;
+                const [x3, y3] = p3;
+                
+                // Check using area method
+                const area = 0.5 * Math.abs(x1*(y2-y3) + x2*(y3-y1) + x3*(y1-y2));
+                
+                result = `Points: A(${x1}, ${y1}), B(${x2}, ${y2}), C(${x3}, ${y3})<br>`;
+                result += `Area of triangle ABC = ½|${x1}(${y2}-${y3}) + ${x2}(${y3}-${y1}) + ${x3}(${y1}-${y2})|<br>`;
+                result += `Area = ½|${x1*(y2-y3)} + ${x2*(y3-y1)} + ${x3*(y1-y2)}| = ½|${x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2)}| = ${area}<br>`;
+                
+                if (Math.abs(area) < 0.0001) {
+                    result += `<span style="color: var(--highlight);">Points are COLLINEAR</span><br>`;
+                    result += `Slope AB = (${y2}-${y1})/(${x2}-${x1}) = ${(y2-y1)/(x2-x1)}<br>`;
+                    result += `Slope BC = (${y3}-${y2})/(${x3}-${x2}) = ${(y3-y2)/(x3-x2)}<br>`;
+                    result += `Slopes are equal, so points are collinear.`;
+                } else {
+                    result += `<span style="color: var(--tertiary);">Points are NOT collinear (area ≠ 0)</span>`;
+                }
+            }
+            else if (type === 'concurrency') {
+                const l1 = document.getElementById('l1').value.split(',').map(Number);
+                const l2 = document.getElementById('l2').value.split(',').map(Number);
+                const l3 = document.getElementById('l3').value.split(',').map(Number);
+                
+                if (l1.length !== 3 || l2.length !== 3 || l3.length !== 3) {
+                    result = 'Invalid input format. Use: a,b,c';
+                    document.getElementById('checkerResult').innerHTML = result;
+                    return;
+                }
+                
+                const [a1, b1, c1] = l1;
+                const [a2, b2, c2] = l2;
+                const [a3, b3, c3] = l3;
+                
+                // Calculate determinant
+                const det = a1*(b2*c3 - b3*c2) - b1*(a2*c3 - a3*c2) + c1*(a2*b3 - a3*b2);
+                
+                result = `Lines:<br>`;
+                result += `L₁: ${a1}x ${b1 >= 0 ? '+' : ''}${b1}y ${c1 >= 0 ? '+' : ''}${c1} = 0<br>`;
+                result += `L₂: ${a2}x ${b2 >= 0 ? '+' : ''}${b2}y ${c2 >= 0 ? '+' : ''}${c2} = 0<br>`;
+                result += `L₃: ${a3}x ${b3 >= 0 ? '+' : ''}${b3}y ${c3 >= 0 ? '' : '+'}${c3} = 0<br><br>`;
+                result += `Determinant = ${a1}(${b2}×${c3} - ${b3}×${c2}) - ${b1}(${a2}×${c3} - ${a3}×${c2}) + ${c1}(${a2}×${b3} - ${a3}×${b2})<br>`;
+                result += `Determinant = ${a1}×${(b2*c3 - b3*c2)} - ${b1}×${(a2*c3 - a3*c2)} + ${c1}×${(a2*b3 - a3*b2)}<br>`;
+                result += `Determinant = ${det}<br><br>`;
+                
+                if (Math.abs(det) < 0.0001) {
+                    result += `<span style="color: var(--highlight);">Lines are CONCURRENT (determinant = 0)</span>`;
+                } else {
+                    result += `<span style="color: var(--tertiary);">Lines are NOT concurrent (determinant ≠ 0)</span>`;
+                }
+            }
+            
+            document.getElementById('checkerResult').innerHTML = result;
+        }
+
+        function clearChecker() {
+            document.getElementById('checkType').value = 'collinearity';
+            toggleCheckerInputs();
+            document.getElementById('checkerResult').innerHTML = 'Result will appear here';
+        }
+
+        function loadCheckerExample() {
+            document.getElementById('checkType').value = 'collinearity';
+            toggleCheckerInputs();
+            document.getElementById('p1').value = '1,2';
+            document.getElementById('p2').value = '2,4';
+            document.getElementById('p3').value = '3,6';
+            checkConcurrencyCollinearity();
+        }
+
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                createParticles();
+                initializeLineGraph();
+                initializeAngleDisplay();
+            }, 250);
+        });
+    </script>
+</body>
+</html>
