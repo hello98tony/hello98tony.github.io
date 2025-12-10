@@ -1,0 +1,2986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKVRN3GREN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKVRN3GREN');
+</script>
+    
+
+  <!-- ====== SEO OPTIMIZATION ====== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="description" content="Complete Python programming guide for beginners. Learn Python fundamentals, web development, and best practices from Nerds Assemble.">
+  <meta name="keywords" content="Python tutorial, programming basics, web development, coding for beginners, Python fundamentals">
+  <meta name="author" content="Nerds Assemble">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nerdsassemble.com/">
+  <meta property="og:title" content="Python Fundamentals | Complete Beginner's Guide">
+  <meta property="og:description" content="Learn Python programming from scratch. Comprehensive guide covering variables, functions, OOP, and best practices.">
+  <meta property="og:image" content="https://nerdsassemble.com/images/og-image.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://nerdsassemble.com/">
+  <meta property="twitter:title" content="Python Fundamentals | Complete Beginner's Guide">
+  <meta property="twitter:description" content="Learn Python programming from scratch. Comprehensive guide covering variables, functions, OOP, and best practices.">
+  <meta property="twitter:image" content="https://nerdsassemble.com/images/og-image.jpg">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Python Fundamentals: Complete Beginner's Guide",
+    "description": "Complete Python programming tutorial for beginners covering all fundamentals",
+    "provider": {
+      "@type": "Organization",
+      "name": "Nerds Assemble",
+      "sameAs": "https://nerdsassemble.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+  
+  <title>Python Fundamentals | Complete Beginner's Guide - Nerds Assemble</title>
+  
+  <!-- Preload critical resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Titillium+Web:wght@200;400;600&family=Black+Ops+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+     <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/planet-universe-svgrepo-com.svg">
+    
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://nerdsassemble.com/python-fundamentals">
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+<style>
+    :root {
+      --primary: #00f0ff;
+      --primary-dark: #00c4d1;
+      --secondary: #ff2d75;
+      --accent: #FE8003;
+      --dark: #0a0a0a;
+      --dark-light: #111;
+      --gray: #aaa;
+      --light: #fff;
+      --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      --shadow: 0 10px 30px -15px rgba(0, 240, 255, 0.3);
+      --nav-height: 70px;
+      --content-width: min(1200px, 95vw);
+      --border-radius: 10px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      border: none;
+      outline: none;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--dark);
+      color: var(--light);
+      line-height: 1.6;
+      overflow-x: hidden;
+      padding-top: var(--nav-height);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Skip to content for accessibility */
+    .skip-to-content {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--primary);
+      color: var(--dark);
+      padding: 8px 16px;
+      z-index: 9999;
+      text-decoration: none;
+      transition: top 0.3s;
+    }
+    
+    .skip-to-content:focus {
+      top: 0;
+    }
+
+    /* ===== IMPROVED SCROLLBAR ===== */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--dark-light);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--primary-dark);
+    }
+
+    /* ===== IMPROVED NAVBAR ===== */
+    nav {
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      position: fixed;
+      top: 0;
+      height: var(--nav-height);
+      width: 100%;
+      background: rgba(17, 17, 17, 0.98);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 clamp(1rem, 3vw, 2rem);
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      font-family: 'Black Ops One', sans-serif;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      letter-spacing: 1px;
+      color: var(--primary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(0.5rem, 2vw, 1.5rem);
+    }
+
+    .nav-links a {
+      color: var(--gray);
+      text-decoration: none;
+      font-family: 'Titillium Web', sans-serif;
+      font-weight: 600;
+      font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+      position: relative;
+      transition: var(--transition);
+      padding: 4px 0;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* ===== IMPROVED MOBILE MENU ===== */
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      min-height: 44px;
+      min-width: 44px;
+      border-radius: 50%;
+      background: transparent;
+      color: var(--gray);
+      cursor: pointer;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      z-index: 1001;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menu-toggle:hover {
+      color: var(--accent);
+    }
+
+    /* ===== IMPROVED SIDE PANEL ===== */
+    .navpanel {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: min(300px, 85vw);
+      height: 100vh;
+      background: rgba(17, 17, 17, 0.98);
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 80px 0;
+      transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      z-index: 999;
+      backdrop-filter: blur(10px);
+    }
+
+    .navpanel.active {
+      right: 0;
+    }
+
+    .navpanel-btn {
+      width: 50px;
+      height: 50px;
+      min-width: 50px;
+      min-height: 50px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.3);
+      color: var(--gray);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(0, 240, 255, 0.1);
+    }
+
+    .navpanel-btn:hover {
+      color: var(--primary);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 240, 255, 0.2);
+    }
+
+    .navpanel-btn i {
+      font-size: 1.2rem;
+    }
+
+    /* ===== IMPROVED RIPPLE EFFECT ===== */
+    .ripple {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ink {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      transform: scale(0);
+      opacity: 1;
+      pointer-events: none;
+    }
+
+    .animate {
+      animation: ripple 0.6s linear;
+    }
+
+    @keyframes ripple {
+      100% {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+
+    /* ===== IMPROVED BUTTONS ===== */
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: var(--dark);
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      min-height: 44px;
+      min-width: 44px;
+      text-align: center;
+    }
+
+    .btn:hover,
+    .btn:focus {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 20px rgba(0, 240, 255, 0.2);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .btn-outline:hover,
+    .btn-outline:focus {
+      background: var(--primary);
+      color: var(--dark);
+    }
+
+    /* ===== IMPROVED HERO SECTION ===== */
+    .hero {
+      text-align: center;
+      padding: clamp(4rem, 10vw, 8rem) clamp(1rem, 3vw, 2rem);
+      position: relative;
+      overflow: hidden;
+      min-height: calc(100vh - var(--nav-height));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 50%, rgba(0, 240, 255, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+      z-index: -1;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 6vw, 4.5rem);
+      margin-bottom: clamp(1rem, 2vw, 1.5rem);
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1.2;
+      animation: float 6s ease-in-out infinite;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 1.5vw, 1.3rem);
+      color: var(--gray);
+      max-width: min(700px, 90vw);
+      margin: 0 auto clamp(1.5rem, 3vw, 2rem);
+    }
+
+    /* ===== IMPROVED SECTIONS ===== */
+    main {
+      flex: 1;
+      width: 100%;
+    }
+
+    section {
+      padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 3vw, 2rem);
+      max-width: var(--content-width);
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      margin-bottom: clamp(2rem, 4vw, 3.5rem);
+      text-align: center;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      font-weight: 700;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(80px, 20vw);
+      height: 4px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: clamp(2rem, 4vw, 4rem);
+    }
+
+    /* ===== IMPROVED CONTENT CARDS ===== */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+      gap: clamp(1rem, 2vw, 1.5rem);
+      width: 100%;
+    }
+
+    .card {
+      background: var(--dark-light);
+      border: 1px solid rgba(0, 240, 255, 0.1);
+      border-radius: var(--border-radius);
+      padding: clamp(1.5rem, 3vw, 2rem);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      height: 100%;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(0, 240, 255, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
+      z-index: -1;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 240, 255, 0.1);
+      border-color: var(--primary);
+    }
+
+    .card i {
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      color: var(--primary);
+      margin-bottom: clamp(1rem, 2vw, 1.5rem);
+    }
+
+    .card h3 {
+      margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+      color: var(--primary);
+      font-size: clamp(1.2rem, 2vw, 1.5rem);
+    }
+
+    .card p {
+      color: var(--gray);
+      margin-bottom: clamp(1rem, 2vw, 1.5rem);
+      font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+    }
+
+    /* ===== IMPROVED CODE BLOCKS ===== */
+    .code-block {
+      background: #000;
+      border-radius: var(--border-radius);
+      overflow-x: auto;
+      margin: clamp(1rem, 2vw, 1.5rem) 0;
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-size: clamp(0.85rem, 1vw, 0.95rem);
+      line-height: 1.5;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    .code-header {
+      background: #3a3a3a;
+      color: #ccc;
+      padding: clamp(0.5rem, 1vw, 0.7rem) clamp(0.75rem, 1.5vw, 1rem);
+      border-top-left-radius: var(--border-radius);
+      border-top-right-radius: var(--border-radius);
+      font-size: clamp(0.75rem, 1vw, 0.85rem);
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .code-content {
+      padding: clamp(0.75rem, 1.5vw, 1rem);
+      background: #000;
+    }
+
+    .code-content pre {
+      margin: 0;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    /* ===== IMPROVED TYPOGRAPHY ===== */
+    h3 {
+      color: var(--accent);
+      margin-top: clamp(1.2rem, 2vw, 1.8rem);
+      font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+      line-height: 1.7;
+      font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+    }
+
+    ul, ol {
+      margin-bottom: clamp(1rem, 2vw, 1.5rem);
+      padding-left: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    li {
+      margin-bottom: clamp(0.5rem, 1vw, 0.7rem);
+      line-height: 1.6;
+    }
+
+    code {
+      background: rgba(0, 240, 255, 0.1);
+      padding: 0.1rem 0.4rem;
+      border-radius: 3px;
+      font-family: 'Fira Code', 'Courier New', monospace;
+      color: #00f0ff;
+      font-size: clamp(0.85rem, 1vw, 0.95rem);
+      word-break: break-word;
+    }
+
+    /* ===== IMPROVED UTILITY CLASSES ===== */
+    .note, .warning, .definition {
+      border-left: 4px solid var(--secondary);
+      padding: clamp(1rem, 2vw, 1.2rem);
+      margin: clamp(1rem, 2vw, 1.5rem) 0;
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+      background: rgba(0, 240, 255, 0.05);
+    }
+
+    .warning {
+      border-left-color: #ff9800;
+    }
+
+    .definition {
+      border: 1px solid rgba(219, 231, 245, 0.1);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .definition strong {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* ===== IMPROVED CONTACT SECTION ===== */
+    .contact {
+      text-align: center;
+      padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 2vw, 2rem);
+    }
+
+    .contact p {
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      color: var(--gray);
+      max-width: min(700px, 90vw);
+      margin: 0 auto clamp(2rem, 4vw, 3rem);
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: clamp(0.75rem, 1.5vw, 1rem);
+      margin-bottom: clamp(2rem, 4vw, 3rem);
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+      transition: var(--transition);
+      padding: clamp(0.5rem, 1vw, 0.75rem) clamp(1rem, 2vw, 1.5rem);
+      border: 1px solid var(--primary);
+      border-radius: 30px;
+      min-height: 44px;
+    }
+
+    .contact-link:hover,
+    .contact-link:focus {
+      background: var(--primary);
+      color: var(--dark);
+      transform: translateY(-3px);
+    }
+
+    .contact-link i {
+      font-size: clamp(1rem, 1.5vw, 1.3rem);
+    }
+
+    /* ===== IMPROVED FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: clamp(1.5rem, 3vw, 2rem) clamp(1rem, 2vw, 1.5rem);
+      background: var(--dark-light);
+      border-top: 1px solid rgba(0, 240, 255, 0.2);
+      color: var(--gray);
+      font-size: clamp(0.8rem, 1vw, 0.9rem);
+      margin-top: auto;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    /* ===== IMPROVED RESPONSIVE DESIGN ===== */
+    @media (max-width: 1100px) {
+      :root {
+        --nav-height: 60px;
+      }
+      
+      .hero h1 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+      }
+      
+      h2 {
+        font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+      }
+      
+      .card {
+        padding: 1.25rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .menu-toggle {
+        display: flex;
+      }
+      
+      .hero h1 {
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+      }
+      
+      h2 {
+        font-size: clamp(1.4rem, 3vw, 2rem);
+      }
+      
+      .hero-btns {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      
+      .btn {
+        width: 100%;
+        max-width: 250px;
+        padding: 12px 20px;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .code-block {
+        font-size: 0.8rem;
+      }
+      
+      .navpanel {
+        width: min(250px, 80vw);
+      }
+      
+      .contact-link {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --nav-height: 56px;
+      }
+      
+      .hero h1 {
+        font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      }
+      
+      .hero p {
+        font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+      }
+      
+      section {
+        padding: clamp(2rem, 4vw, 3rem) clamp(0.75rem, 2vw, 1rem);
+      }
+      
+      .card {
+        padding: 1.25rem 1rem;
+      }
+      
+      .code-block {
+        font-size: 0.75rem;
+      }
+      
+      .navpanel {
+        width: 100vw;
+      }
+      
+      footer {
+        padding: 1.25rem 1rem;
+      }
+    }
+
+    /* ===== PRINT STYLES ===== */
+    @media print {
+      nav, .menu-toggle, .navpanel, .btn, .contact-links {
+        display: none !important;
+      }
+      
+      body {
+        padding-top: 0;
+        background: white;
+        color: black;
+      }
+      
+      .hero h1 {
+        color: black;
+        background: none;
+        -webkit-text-fill-color: black;
+      }
+      
+      .card {
+        border: 1px solid #ddd;
+        page-break-inside: avoid;
+      }
+      
+      .code-block {
+        background: #f5f5f5;
+        color: #333;
+      }
+      
+      a {
+        color: black;
+        text-decoration: underline;
+      }
+    }
+
+    /* ===== HIGH CONTRAST MODE SUPPORT ===== */
+    @media (prefers-contrast: high) {
+      :root {
+        --primary: #00ffff;
+        --secondary: #ff0066;
+        --accent: #ff9900;
+      }
+      
+      .card {
+        border: 2px solid var(--primary);
+      }
+      
+      .btn {
+        border: 2px solid var(--primary);
+      }
+    }
+
+    /* ===== REDUCED MOTION ===== */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      
+      .floating {
+        animation: none;
+      }
+    }
+</style>
+</head>
+<body>
+ 
+  <nav role="navigation" aria-label="Main navigation">
+    <div class="logo ripple" role="banner">Nerds Assemble</div>
+    
+    <div class="nav-links" role="menu">
+      <a href="../../index.html" class="ripple" role="menuitem">Home</a>
+      <a href="#services" class="ripple" role="menuitem">Services</a>
+      <a href="#contact" class="ripple" role="menuitem">Contact</a>
+      <a href="../../challenges/home-challenge.html" class="ripple" role="menuitem">CreativeKids Challenge</a>
+    </div>
+    
+    <button class="menu-toggle ripple material-icons" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navpanel">menu</button>
+    
+    <aside class="navpanel" id="navpanel" role="dialog" aria-label="Mobile menu" aria-hidden="true">
+      <button class="navpanel-btn ripple material-icons" data-tooltip="Home" aria-label="Home">home</button>
+      <button class="navpanel-btn ripple material-icons" data-tooltip="About" aria-label="About">info</button>
+      <button class="navpanel-btn ripple material-icons" data-tooltip="Projects" aria-label="Projects">work</button>
+      <button class="navpanel-btn ripple material-icons" data-tooltip="Contact" aria-label="Contact">mail</button>
+      <button class="navpanel-btn ripple material-icons" data-tooltip="Settings" aria-label="Settings">settings</button>
+    </aside>
+  </nav>
+  
+  <main id="main-content">
+    <section id="home" class="hero" role="banner">
+      <h1 class="floating">Python Fundamentals</h1>
+      <p>Complete Beginner's Guide</p>
+      <a href="#introduction" class="btn ripple" aria-label="Start learning Python">Start Learning</a>
+    </section>
+    
+    <!-- Content sections remain the same but with added aria-labels -->
+    <section id="services" aria-labelledby="services-heading">
+      <div class="services">
+        <div class="card ripple" role="article" aria-labelledby="introduction-heading">
+          <section id="introduction">
+            <h2>Introduction to Python</h2>
+            <div class="definition">
+                <strong>Python</strong> is a high-level, interpreted programming language known for its simplicity and readability. Created by Guido van Rossum and first released in 1991, Python emphasizes code readability with its notable use of significant whitespace.
+            </div>
+            
+            <h3>Why Learn Python?</h3>
+            <p>Python has become one of the most popular programming languages due to its:</p>
+            <ul>
+                <li><strong>Beginner-friendly syntax</strong> that reads almost like English</li>
+                <li><strong>Interpreted nature</strong> - no compilation step needed</li>
+                <li><strong>Dynamically typed</strong> - no need to declare variable types</li>
+                <li><strong>Versatility</strong> - used in web development, data science, AI, automation, and more</li>
+                <li><strong>Rich ecosystem</strong> with extensive libraries (NumPy, Pandas) and frameworks (Django, Flask)</li>
+                <li><strong>Strong community support</strong> and abundant learning resources</li>
+                <li><strong>Cross-platform compatibility</strong> - runs on Windows, macOS, and Linux</li>
+            </ul>
+            
+            <div class="note">
+                <strong>Python 2 vs Python 3:</strong> Always use Python 3 (current version). Python 2 reached end-of-life in 2020 and is no longer maintained.
+            </div>
+            
+            <h3>Your First Python Program</h3>
+            <p>The traditional "Hello, World!" program in Python is remarkably simple:</p>
+            
+            <div class="code-block">
+                <div class="code-header">hello.py</div>
+                <div class="code-content">
+<pre><span class="keyword">print</span>(<span class="string">"Hello, World!"</span>)</pre>
+                </div>
+            </div>
+            
+            <p>Breaking this down:</p>
+            <ul>
+                <li><code><span class="keyword">print</span>()</code> is a built-in function that outputs text to the console</li>
+                <li>The text inside quotes <code><span class="string">"Hello, World!"</span></code> is a <strong>string literal</strong></li>
+                <li>Parentheses <code>()</code> are required after function names to execute them</li>
+                <li>This entire line is called a <strong>statement</strong></li>
+                <li>Unlike some languages, no semicolon is needed at the end</li>
+            </ul>
+            
+            <div class="warning">
+                <strong>Indentation Matters:</strong> Python uses indentation (spaces or tabs) to define code blocks instead of curly braces <code>{}</code> like many other languages. Standard practice is 4 spaces per indentation level.
+            </div>
+        </section>
+
+        <section id="python-shell">
+            <h2>Understanding the Python Shell</h2>
+            <p>Python provides an interactive shell (REPL - Read-Eval-Print Loop) for immediate code execution. When you type <code>python</code> in your terminal (or <code>python3</code> on some systems), you'll see:</p>
+            
+            <div class="code-block">
+                <div class="code-header">Terminal</div>
+                <div class="code-content">
+<pre>Python 3.9.0 (default, Oct  6 2021, 00:00:00) 
+[GCC 10.2.0] on linux
+Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> <span class="keyword">or</span> <span class="string">"license"</span> <span class="keyword">for</span> more information.
+<span class="operator">&gt;&gt;&gt;</span> </pre>
+                </div>
+            </div>
+            
+            <p>Key features of the Python shell:</p>
+            <ul>
+                <li>The <code><span class="operator">&gt;&gt;&gt;</span></code> is the <strong>primary prompt</strong> where you type commands</li>
+                <li>For multi-line statements (like functions), you'll see <code><span class="operator">...</span></code> as the secondary prompt</li>
+                <li>You can execute Python code directly and see immediate results</li>
+                <li>Great for quick tests, experiments, and debugging</li>
+                <li>Access documentation with <code>help()</code> (try <code>help(print)</code>)</li>
+            </ul>
+            
+            <div class="note">
+                <strong>Exiting the Shell:</strong>
+                <ul>
+                    <li>Type <code>exit()</code> or <code>quit()</code></li>
+                    <li>On Linux/Mac: Press <kbd>Ctrl</kbd>+<kbd>D</kbd></li>
+                    <li>On Windows: Press <kbd>Ctrl</kbd>+<kbd>Z</kbd> then <kbd>Enter</kbd></li>
+                </ul>
+            </div>
+            
+            <h3>Running Python Scripts</h3>
+            <p>While the shell is great for testing, real programs are saved in <code>.py</code> files:</p>
+            <ol>
+                <li>Create a file named <code>hello.py</code> with your code</li>
+                <li>Run it from terminal: <code>python hello.py</code></li>
+            </ol>
+        </section>
+
+        <section id="variables">
+            <h2>Variables and Data Assignment</h2>
+            <div class="definition">
+                <strong>Variables</strong> are named references to data stored in memory. Think of them as labeled containers where you store information for later use.
+            </div>
+            
+            <h3>Creating Variables</h3>
+            <div class="code-block">
+                <div class="code-header">variable_examples.py</div>
+                <div class="code-content">
+<pre><span class="comments"># Basic variable assignment</span>
+age = <span class="number">25</span>                     <span class="comments"># Integer (whole number)</span>
+temperature = <span class="number">98.6</span>             <span class="comments"># Float (decimal number)</span>
+name = <span class="string">"Alice"</span>               <span class="comments"># String (text)</span>
+is_student = <span class="keyword">True</span>             <span class="comments"># Boolean (True/False)</span>
+
+<span class="comments"># Multiple assignment</span>
+x, y, z = <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>           <span class="comments"># x=1, y=2, z=3</span>
+a = b = c = <span class="number">10</span>               <span class="comments"># All set to 10</span>
+
+<span class="comments"># Dynamic typing - variables can change type</span>
+var = <span class="number">10</span>                    <span class="comments"># Now an integer</span>
+var = <span class="string">"now a string"</span>        <span class="comments"># Changed to string</span></pre>
+                </div>
+            </div>
+            
+            <h3>Variable Naming Rules</h3>
+            <p>Python has specific rules for variable names (identifiers):</p>
+            <ul>
+                <li>Can contain letters (<code>a-z</code>, <code>A-Z</code>), digits (<code>0-9</code>), and underscores (<code>_</code>)</li>
+                <li><strong>Cannot</strong> start with a digit</li>
+                <li><strong>Cannot</strong> be a Python keyword (like <code>if</code>, <code>for</code>, <code>while</code>, etc.)</li>
+                <li>Case-sensitive (<code>age</code>, <code>Age</code>, and <code>AGE</code> are different)</li>
+            </ul>
+            
+            <div class="note">
+                <strong>Naming Conventions:</strong>
+                <ul>
+                    <li>Use <code>snake_case</code> for variables and functions (<code>user_age</code>)</li>
+                    <li>Use <code>PascalCase</code> for class names (<code>ClassName</code>)</li>
+                    <li>Use <code>UPPER_CASE</code> for constants (<code>MAX_USERS</code>)</li>
+                    <li>Make names descriptive but concise (<code>num_students</code> better than <code>n</code> or <code>number_of_students_in_class</code>)</li>
+                </ul>
+            </div>
+            
+            <h3>Checking Variable Types</h3>
+            <p>Python automatically determines variable types at runtime:</p>
+            <div class="code-block">
+                <div class="code-header">type_checking.py</div>
+                <div class="code-content">
+<pre><span class="keyword">print</span>(<span class="builtin">type</span>(<span class="number">5</span>))           <span class="comments"># &lt;class 'int'&gt;</span>
+<span class="keyword">print</span>(<span class="builtin">type</span>(<span class="number">3.14</span>))       <span class="comments"># &lt;class 'float'&gt;</span>
+<span class="keyword">print</span>(<span class="builtin">type</span>(<span class="string">"hello"</span>))    <span class="comments"># &lt;class 'str'&gt;</span>
+<span class="keyword">print</span>(<span class="builtin">type</span>(<span class="keyword">True</span>))       <span class="comments"># &lt;class 'bool'&gt;</span>
+<span class="keyword">print</span>(<span class="builtin">type</span>([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]))    <span class="comments"># &lt;class 'list'&gt;</span></pre>
+                </div>
+            </div>
+            
+            <div class="warning">
+                <strong>Common Mistake:</strong> Trying to use variables before assignment raises a <code>NameError</code>. Always assign a value before using a variable.
+            </div>
+        </section>
+
+        <section id="data-types">
+            <h2>Fundamental Data Types</h2>
+            <p>Python has several built-in data types. Let's explore the core ones in detail.</p>
+            
+            <h3>Numeric Types</h3>
+            <div class="definition">
+                <strong>Integers (<code>int</code>)</strong> are whole numbers (positive, negative, or zero) of unlimited length.
+            </div>
+            
+            <div class="code-block">
+                <div class="code-header">integers.py</div>
+                <div class="code-content">
+<pre>positive = <span class="number">42</span>
+negative = -<span class="number">10</span>
+zero = <span class="number">0</span>
+large = <span class="number">12345678901234567890</span>  <span class="comments"># No size limit like in other languages</span></pre>
+                </div>
+            </div>
+            
+            <div class="definition">
+                <strong>Floats (<code>float</code>)</strong> are real numbers with decimal points, represented as 64-bit double-precision values.
+            </div>
+            
+            <div class="code-block">
+                <div class="code-header">floats.py</div>
+                <div class="code-content">
+<pre>pi = <span class="number">3.14159</span>
+temperature = -<span class="number">10.5</span>
+scientific = <span class="number">2.5e4</span>          <span class="comments"># 2.5 × 10^4 = 25000.0</span></pre>
+                </div>
+            </div>
+            
+            <div class="note">
+                <strong>Floating-Point Precision:</strong> Due to how computers represent decimals, floats can have precision issues (e.g., <code>0.1 + 0.2</code> equals <code>0.30000000000000004</code>). For precise decimal arithmetic, use the <code>decimal</code> module.
+            </div>
+            
+            <h3>Boolean Type</h3>
+            <div class="definition">
+                <strong>Booleans (<code>bool</code>)</strong> represent truth values: <code>True</code> or <code>False</code> (must be capitalized in Python).
+            </div>
+            
+            <div class="code-block">
+                <div class="code-header">booleans.py</div>
+                <div class="code-content">
+<pre>is_active = <span class="keyword">True</span>
+is_admin = <span class="keyword">False</span>
+
+<span class="comments"># Boolean values are actually integers (True=1, False=0)</span>
+<span class="keyword">print</span>(<span class="keyword">True</span> + <span class="number">1</span>)           <span class="comments"># 2</span>
+<span class="keyword">print</span>(<span class="keyword">False</span> * <span class="number">5</span>)         <span class="comments"># 0</span></pre>
+                </div>
+            </div>
+            
+            <h3>String Type</h3>
+            <div class="definition">
+                <strong>Strings (<code>str</code>)</strong> are sequences of Unicode characters used to represent text. They're immutable (cannot be changed after creation).
+            </div>
+            
+            <div class="code-block">
+                <div class="code-header">strings.py</div>
+                <div class="code-content">
+<pre><span class="comments"># Creating strings</span>
+single = <span class="string">'Single quotes'</span>
+double = <span class="string">"Double quotes"</span>
+multiline = <span class="string">"""Triple quotes
+can span multiple
+lines"""</span>
+escape = <span class="string">"Use \\n for newline and \\t for tab"</span>
+
+<span class="comments"># Raw strings (ignore escape sequences)</span>
+path = <span class="string">r"C:\new_folder"</span>    <span class="comments"># The \n won't become a newline</span></pre>
+                </div>
+            </div>
+            
+            <h4>String Operations</h4>
+            <div class="code-block">
+                <div class="code-header">string_operations.py</div>
+                <div class="code-content">
+<pre>s = <span class="string">"Python"</span>
+
+<span class="comments"># Concatenation</span>
+full = s + <span class="string">" is awesome!"</span>   <span class="comments"># "Python is awesome!"</span>
+
+<span class="comments"># Repetition</span>
+lots = s * <span class="number">3</span>               <span class="comments"># "PythonPythonPython"</span>
+
+<span class="comments"># Length</span>
+length = <span class="builtin">len</span>(s)             <span class="comments"># 6</span>
+
+<span class="comments"># Indexing (0-based)</span>
+first = s[<span class="number">0</span>]              <span class="comments"># 'P'</span>
+last = s[-<span class="number">1</span>]             <span class="comments"># 'n' (negative indexes count from end)</span>
+
+<span class="comments"># Slicing [start:stop:step]</span>
+slice1 = s[<span class="number">1</span>:<span class="number">4</span>]           <span class="comments"># 'yth' (stops before index 4)</span>
+slice2 = s[::<span class="number">2</span>]            <span class="comments"># 'Pto' (every second character)</span>
+reverse = s[::-<span class="number">1</span>]         <span class="comments"># 'nohtyP' (reverse the string)</span></pre>
+                </div>
+            </div>
+            
+            <h4>String Methods</h4>
+            <p>Strings have many useful built-in methods (functions that belong to objects):</p>
+            <div class="code-block">
+                <div class="code-header">string_methods.py</div>
+                <div class="code-content">
+<pre>text = <span class="string">"  Hello, World!  "</span>
+
+<span class="comments"># Case conversion</span>
+lower = text.lower()       <span class="comments"># "  hello, world!  "</span>
+upper = text.upper()       <span class="comments"># "  HELLO, WORLD!  "</span>
+title = text.title()       <span class="comments"># "  Hello, World!  "</span>
+
+<span class="comments"># Whitespace handling</span>
+stripped = text.strip()    <span class="comments"># "Hello, World!"</span>
+
+<span class="comments"># Searching</span>
+position = text.find(<span class="string">"World"</span>)   <span class="comments"># 9 (returns -1 if not found)</span>
+count = text.count(<span class="string">"l"</span>)         <span class="comments"># 3</span>
+starts = text.startswith(<span class="string">"Hello"</span>) <span class="comments"># False (due to leading spaces)</span>
+
+<span class="comments"># Replacement and splitting</span>
+replaced = text.replace(<span class="string">"Hello"</span>, <span class="string">"Hi"</span>)  <span class="comments"># "  Hi, World!  "</span>
+parts = text.split(<span class="string">","</span>)               <span class="comments"># ['  Hello', ' World!  ']</span>
+
+<span class="comments"># Joining</span>
+words = [<span class="string">"Hello"</span>, <span class="string">"World"</span>]
+joined = <span class="string">", "</span>.join(words)          <span class="comments"># "Hello, World"</span></pre>
+                </div>
+            </div>
+            
+            <h4>String Formatting</h4>
+            <p>Multiple ways to embed variables in strings:</p>
+            <div class="code-block">
+                <div class="code-header">string_formatting.py</div>
+                <div class="code-content">
+<pre>name = <span class="string">"Alice"</span>
+age = <span class="number">25</span>
+
+<span class="comments"># f-strings (Python 3.6+, recommended)</span>
+message = <span class="string">f"My name is {name} and I'm {age} years old."</span>
+
+<span class="comments"># format() method</span>
+message = <span class="string">"My name is {} and I'm {} years old."</span>.<span class="builtin">format</span>(name, age)
+
+<span class="comments"># %-formatting (older style)</span>
+message = <span class="string">"My name is %s and I'm %d years old."</span> % (name, age)</pre>
+                </div>
+            </div>
+            
+            <div class="note">
+                <strong>String Immutability:</strong> Strings can't be changed after creation. Methods like <code>upper()</code> return new strings rather than modifying the original.
+            </div>
+            
+            <h3>Type Conversion</h3>
+            <p>Convert between types using built-in functions:</p>
+            <div class="code-block">
+                <div class="code-header">type_conversion.py</div>
+                <div class="code-content">
+<pre><span class="comments"># To integer</span>
+int_num = <span class="builtin">int</span>(<span class="string">"10"</span>)       <span class="comments"># 10</span>
+int_num = <span class="builtin">int</span>(<span class="number">3.9</span>)        <span class="comments"># 3 (truncates decimal)</span>
+
+<span class="comments"># To float</span>
+float_num = <span class="builtin">float</span>(<span class="string">"3.14"</span>)  <span class="comments"># 3.14</span>
+float_num = <span class="builtin">float</span>(<span class="number">5</span>)       <span class="comments"># 5.0</span>
+
+<span class="comments"># To string</span>
+str_num = <span class="builtin">str</span>(<span class="number">42</span>)         <span class="comments"># "42"</span>
+str_float = <span class="builtin">str</span>(<span class="number">3.14</span>)      <span class="comments"># "3.14"</span>
+
+<span class="comments"># To boolean (any value can be converted to bool)</span>
+bool_val = <span class="builtin">bool</span>(<span class="number">1</span>)        <span class="comments"># True</span>
+bool_val = <span class="builtin">bool</span>(<span class="number">0</span>)        <span class="comments"># False</span>
+bool_val = <span class="builtin">bool</span>(<span class="string">"Hello"</span>)  <span class="comments"># True</span>
+bool_val = <span class="builtin">bool</span>(<span class="string">""</span>)       <span class="comments"># False</span></pre>
+                </div>
+            </div>
+            
+            <div class="warning">
+                <strong>Conversion Errors:</strong> Trying to convert invalid values (like <code>int("hello")</code>) raises a <code>ValueError</code>.
+            </div>
+        </section>
+
+        <section id="lists">
+            <h2>Lists: Ordered Collections</h2>
+            <div class="definition">
+                <strong>Lists</strong> are ordered, mutable sequences of elements. They're one of Python's most versatile data types, allowing mixed types and nested structures.
+            </div>
+            
+            <h3>Creating Lists</h3>
+            <div class="code-block">
+                <div class="code-header">list_creation.py</div>
+                <div class="code-content">
+<pre><span class="comments"># Basic lists</span>
+numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]
+fruits = [<span class="string">"apple"</span>, <span class="string">"banana"</span>, <span class="string">"cherry"</span>]
+mixed = [<span class="number">1</span>, <span class="string">"two"</span>, <span class="number">3.0</span>, <span class="keyword">True</span>]
+
+<span class="comments"># Empty list</span>
+empty = []
+
+<span class="comments"># Nested lists</span>
+matrix = [[<span class="number">1</span>, <span class="number">2</span>], [<span class="number">3</span>, <span class="number">4</span>]]
+
+<span class="comments"># Using list() constructor</span>
+chars = <span class="builtin">list</span>(<span class="string">"hello"</span>)      <span class="comments"># ['h', 'e', 'l', 'l', 'o']</span></pre>
+                </div>
+            </div>
+            
+            <h3>List Operations</h3>
+            <div class="code-block">
+                <div class="code-header">list_operations.py</div>
+                <div class="code-content">
+<pre>my_list = [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>]
+
+<span class="comments"># Accessing elements</span>
+first = my_list[<span class="number">0</span>]          <span class="comments"># 10</span>
+last = my_list[-<span class="number">1</span>]         <span class="comments"># 50</span>
+slice = my_list[<span class="number">1</span>:<span class="number">4</span>]       <span class="comments"># [20, 30, 40]</span>
+
+<span class="comments"># Modifying lists</span>
+my_list[<span class="number">0</span>] = <span class="number">100</span>            <span class="comments"># [100, 20, 30, 40, 50]</span>
+my_list.append(<span class="number">60</span>)        <span class="comments"># [100, 20, 30, 40, 50, 60]</span>
+my_list.insert(<span class="number">1</span>, <span class="number">15</span>)      <span class="comments"># [100, 15, 20, 30, 40, 50, 60]</span>
+my_list.remove(<span class="number">20</span>)        <span class="comments"># [100, 15, 30, 40, 50, 60]</span>
+popped = my_list.pop()    <span class="comments"># returns 60, list is [100, 15, 30, 40, 50]</span>
+popped = my_list.pop(<span class="number">1</span>)   <span class="comments"># returns 15, list is [100, 30, 40, 50]</span>
+
+<span class="comments"># Combining lists</span>
+list1 = [<span class="number">1</span>, <span class="number">2</span>]
+list2 = [<span class="number">3</span>, <span class="number">4</span>]
+combined = list1 + list2   <span class="comments"># [1, 2, 3, 4]</span>
+
+<span class="comments"># Repetition</span>
+repeated = [<span class="number">0</span>] * <span class="number">5</span>         <span class="comments"># [0, 0, 0, 0, 0]</span></pre>
+                </div>
+            </div>
+            
+            <h3>List Methods</h3>
+            <div class="code-block">
+                <div class="code-header">list_methods.py</div>
+                <div class="code-content">
+<pre>nums = [<span class="number">5</span>, <span class="number">2</span>, <span class="number">8</span>, <span class="number">1</span>, <span class="number">9</span>]
+
+<span class="comments"># Adding elements</span>
+nums.append(<span class="number">10</span>)           <span class="comments"># Add to end</span>
+nums.extend([<span class="number">11</span>, <span class="number">12</span>])     <span class="comments"># Add multiple elements</span>
+
+<span class="comments"># Removing elements</span>
+nums.remove(<span class="number">8</span>)            <span class="comments"># Remove first occurrence of 8</span>
+popped = nums.pop()       <span class="comments"># Remove and return last item</span>
+nums.clear()              <span class="comments"># Empty the list</span>
+
+<span class="comments"># Information</span>
+index = nums.index(<span class="number">2</span>)      <span class="comments"># Find position of 2</span>
+count = nums.count(<span class="number">5</span>)      <span class="comments"># Count occurrences of 5</span>
+length = <span class="builtin">len</span>(nums)        <span class="comments"># Number of elements</span>
+
+<span class="comments"># Reorganization</span>
+nums.reverse()            <span class="comments"># Reverse in place</span>
+nums.sort()               <span class="comments"># Sort in ascending order</span>
+nums.sort(reverse=<span class="keyword">True</span>)  <span class="comments"># Sort descending</span>
+
+<span class="comments"># Copying</span>
+copy = nums.copy()        <span class="comments"># Shallow copy</span>
+deep_copy = nums[:]       <span class="comments"># Another way to copy</span></pre>
+                </div>
+            </div>
+            
+            <h3>List Comprehensions</h3>
+            <p>A concise way to create lists:</p>
+            <div class="code-block">
+                <div class="code-header">list_comprehensions.py</div>
+                <div class="code-content">
+<pre><span class="comments"># Basic comprehension</span>
+squares = [x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> <span class="builtin">range</span>(<span class="number">10</span>)]  <span class="comments"># [0, 1, 4, 9, 16, 25, ...]</span>
+
+<span class="comments"># With condition</span>
+evens = [x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="builtin">range</span>(<span class="number">20</span>) <span class="keyword">if</span> x % <span class="number">2</span> == <span class="number">0</span>]  <span class="comments"># All even numbers</span>
+
+<span class="comments"># Nested comprehensions</span>
+matrix = [[<span class="number">1</span>, <span class="number">2</span>], [<span class="number">3</span>, <span class="number">4</span>], [<span class="number">5</span>, <span class="number">6</span>]]
+flattened = [num <span class="keyword">for</span> row <span class="keyword">in</span> matrix <span class="keyword">for</span> num <span class="keyword">in</span> row]  <span class="comments"># [1, 2, 3, 4, 5, 6]</span></pre>
+                </div>
+            </div>
+            
+            <div class="note">
+                <strong>Lists vs. Tuples:</strong> Lists are mutable (can be changed), while tuples are immutable (cannot be changed after creation). Use tuples for fixed collections.
+            </div>
+        </section>
+
+        <section id="conditionals">
+            <h2>Conditional Statements</h2>
+            <p>Conditionals allow your program to make decisions based on certain conditions.</p>
+            
+            <h3>Comparison Operators</h3>
+            <p>These return <code>True</code> or <code>False</code>:</p>
+            <div class="code-block">
+                <div class="code-header">comparisons.py</div>
+                <div class="code-content">
+<pre>==      <span class="comments"># Equal to</span>
+!=      <span class="comments"># Not equal to</span>
+&gt;       <span class="comments"># Greater than</span>
+&lt;       <span class="comments"># Less than</span>
+&gt;=      <span class="comments"># Greater than or equal to</span>
+&lt;=      <span class="comments"># Less than or equal to</span>
+
+<span class="comments"># Examples</span>
+<span class="number">5</span> == <span class="number">5</span>      <span class="comments"># True</span>
+<span class="number">5</span> != <span class="number">3</span>      <span class="comments"># True</span>
+<span class="number">10</span> &gt; <span class="number">20</span>      <span class="comments"># False</span>
+<span class="number">10</span> &lt;= <span class="number">10</span>     <span class="comments"># True</span></pre>
+                </div>
+            </div>
+            
+            <h3>if Statements</h3>
+            <div class="code-block">
+                <div class="code-header">if_statements.py</div>
+                <div class="code-content">
+<pre>age = <span class="number">18</span>
+
+<span class="keyword">if</span> age &gt;= <span class="number">18</span>:
+    <span class="keyword">print</span>(<span class="string">"You're an adult"</span>)
+<span class="keyword">elif</span> age &gt;= <span class="number">13</span>:
+    <span class="keyword">print</span>(<span class="string">"You're a teenager"</span>)
+<span class="keyword">else</span>:
+    <span class="keyword">print</span>(<span class="string">"You're a child"</span>)</pre>
+                </div>
+            </div>
+            
+            <div class="note">
+                <strong>Indentation is Crucial:</strong> The code blocks after <code>if</code>, <code>elif</code>, and <code>else</code> must be indented (typically 4 spaces). This is how Python knows which code belongs to which block.
+            </div>
+            
+            <h3>Boolean Logic</h3>
+            <p>Combine conditions with <code>and</code>, <code>or</code>, and <code>not</code>:</p>
+            <div class="code-block">
+                <div class="code-header">boolean_logic.py</div>
+                <div class="code-content">
+<pre>temperature = <span class="number">22</span>
+is_summer = <span class="keyword">True</span>
+
+<span class="keyword">if</span> temperature &gt; <span class="number">30</span> <span class="keyword">or</span> is_summer:
+    <span class="keyword">print</span>(<span class="string">"It's hot or summer"</span>)
+    
+<span class="keyword">if</span> temperature &gt; <span class="number">15</span> <span class="keyword">and</span> temperature &lt; <span class="number">25</span>:
+    <span class="keyword">print</span>(<span class="string">"Pleasant weather"</span>)
+    
+<span class="keyword">if</span> <span class="keyword">not</span> is_summer:
+    <span class="keyword">print</span>(<span class="string">"It's not summer"</span>)</pre>
+                </div>
+            </div>
+            
+            <h3>Truthy and Falsy Values</h3>
+            <p>In Python, non-boolean values are evaluated in boolean contexts:</p>
+            <div class="code-block">
+                <div class="code-header">truthy_falsy.py</div>
+                <div class="code-content">
+<pre><span class="comments"># Falsy values</span>
+<span class="keyword">False</span>
+<span class="keyword">None</span>
+<span class="number">0</span>
+<span class="number">0.0</span>
+<span class="string">""</span>      <span class="comments"># Empty string</span>
+[]      <span class="comments"># Empty list</span>
+()      <span class="comments"># Empty tuple</span>
+{}      <span class="comments"># Empty dict</span>
+
+<span class="comments"># Everything else is truthy</span>
+<span class="keyword">if</span> <span class="string">"hello"</span>:       <span class="comments"># True</span>
+<span class="keyword">if</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]:    <span class="comments"># True</span>
+<span class="keyword">if</span> <span class="number">42</span>:           <span class="comments"># True</span></pre>
+                </div>
+            </div>
+            
+            <h3>Ternary Operator</h3>
+            <p>A concise way to write simple conditionals:</p>
+            <div class="code-block">
+                <div class="code-header">ternary.py</div>
+                <div class="code-content">
+<pre>age = <span class="number">20</span>
+status = <span class="string">"adult"</span> <span class="keyword">if</span> age &gt;= <span class="number">18</span> <span class="keyword">else</span> <span class="string">"minor"</span>
+
+<span class="comments"># Equivalent to:</span>
+<span class="keyword">if</span> age &gt;= <span class="number">18</span>:
+    status = <span class="string">"adult"</span>
+<span class="keyword">else</span>:
+    status = <span class="string">"minor"</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="loops">
+            <h2>Loops and Iteration</h2>
+            <p>Loops allow you to execute a block of code repeatedly.</p>
+            
+            <h3>while Loops</h3>
+            <p>Execute code as long as a condition is true:</p>
+            <div class="code-block">
+                <div class="code-header">while_loops.py</div>
+                <div class="code-content">
+<pre>count = <span class="number">0</span>
+<span class="keyword">while</span> count &lt; <span class="number">5</span>:
+    <span class="keyword">print</span>(count)
+    count += <span class="number">1</span>        <span class="comments"># Increment count</span>
+
+<span class="comments"># Infinite loop (with break)</span>
+<span class="keyword">while</span> <span class="keyword">True</span>:
+    user_input = <span class="builtin">input</span>(<span class="string">"Enter 'quit' to exit: "</span>)
+    <span class="keyword">if</span> user_input == <span class="string">"quit"</span>:
+        <span class="keyword">break</span></pre>
+                </div>
+            </div>
+            
+            <h3>for Loops</h3>
+            <p>Iterate over sequences (lists, strings, etc.) or a range of numbers:</p>
+            <div class="code-block">
+                <div class="code-header">for_loops.py</div>
+                <div class="code-content">
+<pre><span class="comments"># Looping through a list</span>
+fruits = [<span class="string">"apple"</span>, <span class="string">"banana"</span>, <span class="string">"cherry"</span>]
+<span class="keyword">for</span> fruit <span class="keyword">in</span> fruits:
+    <span class="keyword">print</span>(fruit)
+
+<span class="comments"># Looping through a string</span>
+<span class="keyword">for</span> char <span class="keyword">in</span> <span class="string">"Python"</span>:
+    <span class="keyword">print</span>(char)
+
+<span class="comments"># Looping with range()</span>
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="builtin">range</span>(<span class="number">5</span>):        <span class="comments"># 0 to 4</span>
+    <span class="keyword">print</span>(i)
+
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="builtin">range</span>(<span class="number">1</span>, <span class="number">6</span>):    <span class="comments"># 1 to 5</span>
+    <span class="keyword">print</span>(i)
+
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="builtin">range</span>(<span class="number">0</span>, <span class="number">10</span>, <span class="number">2</span>):  <span class="comments"># 0, 2, 4, 6, 8</span>
+    <span class="keyword">print</span>(i)</pre>
+                </div>
+            </div>
+            
+            <h3>Loop Controls</h3>
+            <p>Modify loop behavior with <code>break</code>, <code>continue</code>, and <code>else</code>:</p>
+            <div class="code-block">
+                <div class="code-header">loop_controls.py</div>
+                <div class="code-content">
+<pre><span class="comments"># break - exit the loop immediately</span>
+<span class="keyword">for</span> num <span class="keyword">in</span> <span class="builtin">range</span>(<span class="number">10</span>):
+    <span class="keyword">if</span> num == <span class="number">5</span>:
+        <span class="keyword">break</span>
+    <span class="keyword">print</span>(num)  <span class="comments"># Prints 0-4</span>
+
+<span class="comments"># continue - skip to next iteration</span>
+<span class="keyword">for</span> num <span class="keyword">in</span> <span class="builtin">range</span>(<span class="number">10</span>):
+    <span class="keyword">if</span> num % <span class="number">2</span> == <span class="number">0</span>:
+        <span class="keyword">continue</span>
+    <span class="keyword">print</span>(num)  <span class="comments"># Prints odd numbers 1, 3, 5, 7, 9</span>
+
+<span class="comments"># else - runs if loop completes normally (no break)</span>
+<span class="keyword">for</span> num <span class="keyword">in</span> <span class="builtin">range</span>(<span class="number">5</span>):
+    <span class="keyword">print</span>(num)
+<span class="keyword">else</span>:
+    <span class="keyword">print</span>(<span class="string">"Loop completed"</span>)</pre>
+                </div>
+            </div>
+            
+            <h3>Nested Loops</h3>
+            <div class="code-block">
+                <div class="code-header">nested_loops.py</div>
+                <div class="code-content">
+<pre><span class="comments"># Multiplication table</span>
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="builtin">range</span>(<span class="number">1</span>, <span class="number">6</span>):
+    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="builtin">range</span>(<span class="number">1</span>, <span class="number">6</span>):
+        <span class="keyword">print</span>(i * j, end=<span class="string">"\t"</span>)
+    <span class="keyword">print</span>()  <span class="comments"># New line after each row</span></pre>
+                </div>
+            </div>
+            
+            <div class="note">
+                <strong>Loop Variables Persist:</strong> The loop variable (like <code>i</code>) remains accessible after the loop completes, containing its last value.
+            </div>
+        </section>
+
+        <section id="functions">
+            <h2>Functions: Reusable Code Blocks</h2>
+            <div class="definition">
+                <strong>Functions</strong> are named blocks of code that perform specific tasks. They help organize code into manageable, reusable pieces.
+            </div>
+            
+            <h3>Defining Functions</h3>
+            <div class="code-block">
+                <div class="code-header">function_basics.py</div>
+                <div class="code-content">
+<pre><span class="keyword">def</span> <span class="builtin">greet</span>(name):
+    <span class="comments">"""This function greets the person passed in"""</span>
+    <span class="keyword">print</span>(<span class="string">f"Hello, {name}!"</span>)
+    
+<span class="builtin">greet</span>(<span class="string">"Alice"</span>)  <span class="comments"># Calling the function</span></pre>
+                </div>
+            </div>
+            
+            <div class="definition">
+                <strong>Parameters vs Arguments:</strong>
+                <ul>
+                    <li><strong>Parameter:</strong> Variable listed inside the parentheses in the function definition</li>
+                    <li><strong>Argument:</strong> Value sent to the function when it's called</li>
+                </ul>
+            </div>
+            
+            <h3>Return Values</h3>
+            <p>Functions can return data using the <code>return</code> statement:</p>
+            <div class="code-block">
+                <div class="code-header">return_values.py</div>
+                <div class="code-content">
+<pre><span class="keyword">def</span> <span class="builtin">add</span>(a, b):
+    <span class="keyword">return</span> a + b
+    
+result = <span class="builtin">add</span>(<span class="number">3</span>, <span class="number">5</span>)  <span class="comments"># result is 8</span>
+
+<span class="keyword">def</span> <span class="builtin">is_even</span>(num):
+    <span class="keyword">return</span> num % <span class="number">2</span> == <span class="number">0</span>
+    
+<span class="keyword">print</span>(<span class="builtin">is_even</span>(<span class="number">4</span>))  <span class="comments"># True</span></pre>
+                </div>
+            </div>
+            
+            <div class="note">
+                <strong>Multiple Returns:</strong> A function can have multiple <code>return</code> statements, but only one will execute (the first one encountered).
+            </div>
+            
+            <h3>Default Parameters</h3>
+            <p>Parameters can have default values if no argument is provided:</p>
+            <div class="code-block">
+                <div class="code-header">default_params.py</div>
+                <div class="code-content">
+<pre><span class="keyword">def</span> <span class="builtin">greet</span>(name=<span class="string">"World"</span>):
+    <span class="keyword">print</span>(<span class="string">f"Hello, {name}!"</span>)
+    
+<span class="builtin">greet</span>()         <span class="comments"># "Hello, World!"</span>
+<span class="builtin">greet</span>(<span class="string">"Alice"</span>)  <span class="comments"># "Hello, Alice!"</span>
+
+<span class="keyword">def</span> <span class="builtin">power</span>(base, exponent=<span class="number">2</span>):
+    <span class="keyword">return</span> base ** exponent
+    
+<span class="keyword">print</span>(<span class="builtin">power</span>(<span class="number">3</span>))     <span class="comments"># 9 (3^2)</span>
+<span class="keyword">print</span>(<span class="builtin">power</span>(<span class="number">3</span>, <span class="number">3</span>))  <span class="comments"># 27 (3^3)</span></pre>
+                </div>
+            </div>
+            
+            <h3>Keyword Arguments</h3>
+            <p>Arguments can be specified by parameter name:</p>
+            <div class="code-block">
+                <div class="code-header">keyword_args.py</div>
+                <div class="code-content">
+<pre><span class="keyword">def</span> <span class="builtin">describe_person</span>(name, age, occupation):
+    <span class="keyword">print</span>(<span class="string">f"{name} is {age} years old and works as a {occupation}"</span>)
+    
+<span class="comments"># All these calls are equivalent</span>
+<span class="builtin">describe_person</span>(<span class="string">"Alice"</span>, <span class="number">30</span>, <span class="string">"engineer"</span>)
+<span class="builtin">describe_person</span>(name=<span class="string">"Alice"</span>, age=<span class="number">30</span>, occupation=<span class="string">"engineer"</span>)
+<span class="builtin">describe_person</span>(age=<span class="number">30</span>, occupation=<span class="string">"engineer"</span>, name=<span class="string">"Alice"</span>)</pre>
+                </div>
+            </div>
+            
+            <h3>Variable Scope</h3>
+            <p>Variables have different visibility depending on where they're defined:</p>
+            <div class="code-block">
+                <div class="code-header">variable_scope.py</div>
+                <div class="code-content">
+<pre>global_var = <span class="string">"I'm global"</span>
+
+<span class="keyword">def</span> <span class="builtin">my_function</span>():
+    local_var = <span class="string">"I'm local"</span>
+    <span class="keyword">print</span>(global_var)  <span class="comments"># Can access global</span>
+    <span class="keyword">print</span>(local_var)   <span class="comments"># Can access local</span>
+    
+<span class="builtin">my_function</span>()
+<span class="keyword">print</span>(global_var)    <span class="comments"># Still accessible</span>
+<span class="keyword">print</span>(local_var)     <span class="comments"># Error! local_var doesn't exist here</span></pre>
+                </div>
+            </div>
+            
+            <div class="note">
+                <strong>Global Keyword:</strong> To modify a global variable inside a function, use the <code>global</code> keyword:
+                <div class="code-block">
+                    <div class="code-content">
+<pre>count = <span class="number">0</span>
+
+<span class="keyword">def</span> <span class="builtin">increment</span>():
+    <span class="keyword">global</span> count
+    count += <span class="number">1</span></pre>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Docstrings</h3>
+            <p>Document your functions with docstrings (enclosed in triple quotes):</p>
+            <div class="code-block">
+                <div class="code-header">docstrings.py</div>
+                <div class="code-content">
+<pre><span class="keyword">def</span> <span class="builtin">calculate_area</span>(length, width):
+    <span class="comments">"""Calculate the area of a rectangle.
+    
+    Args:
+        length (float): The length of the rectangle
+        width (float): The width of the rectangle
+        
+    Returns:
+        float: The area of the rectangle
+    """</span>
+    <span class="keyword">return</span> length * width</pre>
+                </div>
+            </div>
+            
+            <div class="note">
+                <strong>Accessing Docstrings:</strong> Use <code>help(function_name)</code> or <code>function_name.__doc__</code> to view a function's docstring.
+            </div>
+        </section>
+        
+        <section id="object-oriented">
+            <h2>Object-Oriented Programming in Python</h2>
+            <div class="definition">
+                <strong>Object-Oriented Programming (OOP)</strong> is a programming paradigm that organizes code into objects that contain both data (attributes) and behavior (methods). Python is a multi-paradigm language that fully supports OOP.
+            </div>
+            
+            <h3>Classes and Objects</h3>
+            <div class="code-block">
+                <div class="code-header">class_example.py</div>
+                <div class="code-content">
+<pre><span class="keyword">class</span> <span class="class-name">Dog</span>:
+    <span class="comments">"""A simple Dog class"""</span>
+    
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="keyword">self</span>, name, age):
+        <span class="comments">"""Initialize name and age attributes"""</span>
+        <span class="keyword">self</span>.name = name
+        <span class="keyword">self</span>.age = age
+        
+    <span class="keyword">def</span> <span class="function">bark</span>(<span class="keyword">self</span>):
+        <span class="comments">"""Simulate a dog barking"""</span>
+        <span class="keyword">print</span>(<span class="string">f"</span>{<span class="keyword">self</span>.name}<span class="string"> says woof!"</span>)
+
+<span class="comments"># Create an instance of Dog</span>
+my_dog = <span class="builtin">Dog</span>(<span class="string">"Rex"</span>, <span class="number">3</span>)
+
+<span class="keyword">print</span>(my_dog.name)  <span class="comments"># Access attribute</span>
+my_dog.bark()      <span class="comments"># Call method</span></pre>
+                </div>
+            </div>
+            
+            <h4>Key Concepts:</h4>
+            <ul>
+                <li><code><span class="keyword">class</span></code>: Keyword to define a class</li>
+                <li><code>__init__</code>: Special method called when an object is instantiated (constructor)</li>
+                <li><code><span class="keyword">self</span></code>: Reference to the current instance (first parameter of instance methods)</li>
+                <li><strong>Instance attributes</strong>: Variables specific to each object (like <code>name</code> and <code>age</code>)</li>
+                <li><strong>Methods</strong>: Functions defined inside a class that operate on instances</li>
+            </ul>
+            
+            <h3>Inheritance</h3>
+            <div class="code-block">
+                <div class="code-header">inheritance.py</div>
+                <div class="code-content">
+<pre><span class="keyword">class</span> <span class="class-name">Animal</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="keyword">self</span>, name):
+        <span class="keyword">self</span>.name = name
+        
+    <span class="keyword">def</span> <span class="function">speak</span>(<span class="keyword">self</span>):
+        <span class="keyword">raise</span> <span class="builtin">NotImplementedError</span>(<span class="string">"Subclass must implement this method"</span>)
+
+<span class="keyword">class</span> <span class="class-name">Dog</span>(<span class="class-name">Animal</span>):
+    <span class="keyword">def</span> <span class="function">speak</span>(<span class="keyword">self</span>):
+        <span class="keyword">return</span> <span class="string">f"</span>{<span class="keyword">self</span>.name}<span class="string"> says woof!"</span>
+
+<span class="keyword">class</span> <span class="class-name">Cat</span>(<span class="class-name">Animal</span>):
+    <span class="keyword">def</span> <span class="function">speak</span>(<span class="keyword">self</span>):
+        <span class="keyword">return</span> <span class="string">f"</span>{<span class="keyword">self</span>.name}<span class="string"> says meow!"</span>
+
+<span class="comments"># Usage</span>
+animals = [<span class="builtin">Dog</span>(<span class="string">"Rex"</span>), <span class="builtin">Cat</span>(<span class="string">"Whiskers"</span>)]
+<span class="keyword">for</span> animal <span class="keyword">in</span> animals:
+    <span class="keyword">print</span>(animal.speak())</pre>
+                </div>
+            </div>
+            
+            <div class="note">
+                <strong>Polymorphism:</strong> The ability to present the same interface for different underlying forms (data types). In the example above, different animal types implement the <code>speak()</code> method differently.
+            </div>
+            
+            <h3>Special Methods (Magic/Dunder Methods)</h3>
+            <p>Special methods in Python are surrounded by double underscores (dunder). They allow you to define how objects behave with language operators.</p>
+            
+            <div class="code-block">
+                <div class="code-header">special_methods.py</div>
+                <div class="code-content">
+<pre><span class="keyword">class</span> <span class="class-name">Vector</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="keyword">self</span>, x, y):
+        <span class="keyword">self</span>.x = x
+        <span class="keyword">self</span>.y = y
+        
+    <span class="keyword">def</span> <span class="function">__add__</span>(<span class="keyword">self</span>, other):
+        <span class="keyword">return</span> <span class="builtin">Vector</span>(<span class="keyword">self</span>.x + other.x, <span class="keyword">self</span>.y + other.y)
+        
+    <span class="keyword">def</span> <span class="function">__repr__</span>(<span class="keyword">self</span>):
+        <span class="keyword">return</span> <span class="string">f"Vector(</span>{<span class="keyword">self</span>.x}<span class="string">, </span>{<span class="keyword">self</span>.y}<span class="string">)"</span>
+        
+    <span class="keyword">def</span> <span class="function">__len__</span>(<span class="keyword">self</span>):
+        <span class="keyword">return</span> <span class="number">2</span>  <span class="comments"># Vectors are always 2D in this example</span>
+        
+    <span class="keyword">def</span> <span class="function">__call__</span>(<span class="keyword">self</span>):
+        <span class="keyword">print</span>(<span class="string">"Called as a function!"</span>)
+
+<span class="comments"># Usage</span>
+v1 = <span class="builtin">Vector</span>(<span class="number">2</span>, <span class="number">4</span>)
+v2 = <span class="builtin">Vector</span>(<span class="number">1</span>, <span class="number">3</span>)
+v3 = v1 + v2  <span class="comments"># Uses __add__</span>
+<span class="keyword">print</span>(v3)    <span class="comments"># Uses __repr__</span>
+<span class="builtin">len</span>(v3)      <span class="comments"># Uses __len__</span>
+v3()          <span class="comments"># Uses __call__</span></pre>
+                </div>
+            </div>
+            
+            <h4>Common Special Methods:</h4>
+            <ul>
+                <li><code>__init__</code>: Object initialization</li>
+                <li><code>__str__</code>: Informal string representation (used by <code>print()</code> and <code>str()</code>)</li>
+                <li><code>__repr__</code>: Official string representation (used by <code>repr()</code> and the interpreter)</li>
+                <li><code>__len__</code>: Called by <code>len()</code></li>
+                <li><code>__getitem__</code>, <code>__setitem__</code>: Enable indexing (<code>obj[key]</code>)</li>
+                <li><code>__iter__</code>, <code>__next__</code>: Make objects iterable</li>
+                <li><code>__call__</code>: Make instances callable like functions</li>
+            </ul>
+            
+            <h3>Class and Static Methods</h3>
+            <div class="code-block">
+                <div class="code-header">class_static_methods.py</div>
+                <div class="code-content">
+<pre><span class="keyword">class</span> <span class="class-name">MyClass</span>:
+    <span class="comments"># Regular instance method</span>
+    <span class="keyword">def</span> <span class="function">instance_method</span>(<span class="keyword">self</span>):
+        <span class="keyword">return</span> <span class="string">'instance method called'</span>, <span class="keyword">self</span>
+    
+    <span class="comments"># Class method - takes cls as first parameter</span>
+    <span class="keyword">@classmethod</span>
+    <span class="keyword">def</span> <span class="function">class_method</span>(cls):
+        <span class="keyword">return</span> <span class="string">'class method called'</span>, cls
+    
+    <span class="comments"># Static method - no self or cls parameter</span>
+    <span class="keyword">@staticmethod</span>
+    <span class="keyword">def</span> <span class="function">static_method</span>():
+        <span class="keyword">return</span> <span class="string">'static method called'</span>
+
+<span class="comments"># Instance method requires an instance</span>
+obj = <span class="builtin">MyClass</span>()
+obj.instance_method()
+
+<span class="comments"># Class method can be called on the class</span>
+<span class="builtin">MyClass</span>.class_method()
+
+<span class="comments"># Static method can be called on the class</span>
+<span class="builtin">MyClass</span>.static_method()</pre>
+                </div>
+            </div>
+            
+            <div class="note">
+                <strong>When to Use Each:</strong>
+                <ul>
+                    <li><strong>Instance methods:</strong> Need access to instance attributes</li>
+                    <li><strong>Class methods:</strong> Need access to the class but not instance-specific data (often used for alternative constructors)</li>
+                    <li><strong>Static methods:</strong> Don't need access to either class or instance (just logically belong with the class)</li>
+                </ul>
+            </div>
+            
+            <h3>Property Decorators</h3>
+            <p>Properties allow you to customize attribute access while maintaining a simple interface.</p>
+            
+            <div class="code-block">
+                <div class="code-header">properties.py</div>
+                <div class="code-content">
+<pre><span class="keyword">class</span> <span class="class-name">Circle</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="keyword">self</span>, radius):
+        <span class="keyword">self</span>._radius = radius
+        
+    <span class="keyword">@property</span>
+    <span class="keyword">def</span> <span class="function">radius</span>(<span class="keyword">self</span>):
+        <span class="comments">"""Get the radius of the circle"""</span>
+        <span class="keyword">return</span> <span class="keyword">self</span>._radius
+        
+    <span class="keyword">@radius.setter</span>
+    <span class="keyword">def</span> <span class="function">radius</span>(<span class="keyword">self</span>, value):
+        <span class="keyword">if</span> value &lt;= <span class="number">0</span>:
+            <span class="keyword">raise</span> <span class="builtin">ValueError</span>(<span class="string">"Radius must be positive"</span>)
+        <span class="keyword">self</span>._radius = value
+        
+    <span class="keyword">@property</span>
+    <span class="keyword">def</span> <span class="function">area</span>(<span class="keyword">self</span>):
+        <span class="keyword">return</span> <span class="number">3.14</span> * <span class="keyword">self</span>._radius ** <span class="number">2</span>
+
+<span class="comments"># Usage</span>
+c = <span class="builtin">Circle</span>(<span class="number">5</span>)
+<span class="keyword">print</span>(c.radius)  <span class="comments"># 5 (uses getter)</span>
+c.radius = <span class="number">10</span>     <span class="comments"># Uses setter</span>
+<span class="keyword">print</span>(c.area)    <span class="comments"># 314.0 (computed property)</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="decorators">
+            <h2>Decorators: Enhancing Functions</h2>
+            <div class="definition">
+                <strong>Decorators</strong> are functions that modify the behavior of other functions. They provide a way to add functionality to existing code without modifying the original function.
+            </div>
+            
+            <h3>Basic Decorator</h3>
+            <div class="code-block">
+                <div class="code-header">simple_decorator.py</div>
+                <div class="code-content">
+<pre><span class="keyword">def</span> <span class="function">my_decorator</span>(func):
+    <span class="keyword">def</span> <span class="function">wrapper</span>():
+        <span class="keyword">print</span>(<span class="string">"Something is happening before the function is called."</span>)
+        func()
+        <span class="keyword">print</span>(<span class="string">"Something is happening after the function is called."</span>)
+    <span class="keyword">return</span> wrapper
+
+<span class="keyword">@my_decorator</span>
+<span class="keyword">def</span> <span class="function">say_hello</span>():
+    <span class="keyword">print</span>(<span class="string">"Hello!"</span>)
+
+<span class="comments"># Calling the decorated function</span>
+say_hello()
+
+<span class="comments"># Equivalent to:</span>
+<span class="comments"># say_hello = my_decorator(say_hello)</span></pre>
+                </div>
+            </div>
+            
+            <h3>Decorators with Arguments</h3>
+            <div class="code-block">
+                <div class="code-header">decorator_with_args.py</div>
+                <div class="code-content">
+<pre><span class="keyword">def</span> <span class="function">repeat</span>(num_times):
+    <span class="keyword">def</span> <span class="function">decorator_repeat</span>(func):
+        <span class="keyword">def</span> <span class="function">wrapper</span>(*args, **kwargs):
+            <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="builtin">range</span>(num_times):
+                result = func(*args, **kwargs)
+            <span class="keyword">return</span> result
+        <span class="keyword">return</span> wrapper
+    <span class="keyword">return</span> decorator_repeat
+
+<span class="keyword">@repeat</span>(num_times=<span class="number">3</span>)
+<span class="keyword">def</span> <span class="function">greet</span>(name):
+    <span class="keyword">print</span>(<span class="string">f"Hello </span>{name}<span class="string">"</span>)
+
+greet(<span class="string">"Alice"</span>)</pre>
+                </div>
+            </div>
+            
+            <h3>Class Decorators</h3>
+            <div class="code-block">
+                <div class="code-header">class_decorator.py</div>
+                <div class="code-content">
+<pre><span class="keyword">class</span> <span class="class-name">CountCalls</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="keyword">self</span>, func):
+        <span class="keyword">self</span>.func = func
+        <span class="keyword">self</span>.num_calls = <span class="number">0</span>
+    
+    <span class="keyword">def</span> <span class="function">__call__</span>(<span class="keyword">self</span>, *args, **kwargs):
+        <span class="keyword">self</span>.num_calls += <span class="number">1</span>
+        <span class="keyword">print</span>(<span class="string">f"Call </span>{<span class="keyword">self</span>.num_calls}<span class="string"> of </span>{<span class="keyword">self</span>.func.__name__}<span class="string">"</span>)
+        <span class="keyword">return</span> <span class="keyword">self</span>.func(*args, **kwargs)
+
+<span class="keyword">@CountCalls</span>
+<span class="keyword">def</span> <span class="function">say_hello</span>():
+    <span class="keyword">print</span>(<span class="string">"Hello!"</span>)
+
+say_hello()
+say_hello()</pre>
+                </div>
+            </div>
+            
+            <h3>Built-in Decorators</h3>
+            <p>Python includes several useful decorators in the standard library:</p>
+            <ul>
+                <li><code>@property</code>: Converts a method into a "getter" for a read-only attribute</li>
+                <li><code>@classmethod</code>: Defines a method that operates on the class rather than instances</li>
+                <li><code>@staticmethod</code>: Defines a method that doesn't receive an implicit first argument</li>
+                <li><code>@functools.lru_cache</code>: Memoization decorator that caches function results</li>
+                <li><code>@functools.wraps</code>: Preserves function metadata when decorating</li>
+            </ul>
+            
+            <div class="code-block">
+                <div class="code-header">functools_wraps.py</div>
+                <div class="code-content">
+<pre><span class="keyword">from</span> functools <span class="keyword">import</span> wraps
+
+<span class="keyword">def</span> <span class="function">my_decorator</span>(f):
+    <span class="keyword">@wraps</span>(f)
+    <span class="keyword">def</span> <span class="function">wrapper</span>(*args, **kwargs):
+        <span class="string">"""Wrapper function"""</span>
+        <span class="keyword">print</span>(<span class="string">'Calling decorated function'</span>)
+        <span class="keyword">return</span> f(*args, **kwargs)
+    <span class="keyword">return</span> wrapper
+
+<span class="keyword">@my_decorator</span>
+<span class="keyword">def</span> <span class="function">example</span>():
+    <span class="string">"""Docstring for example"""</span>
+    <span class="keyword">print</span>(<span class="string">'Called example function'</span>)
+
+<span class="keyword">print</span>(example.__name__)  <span class="comments"># Without wraps: 'wrapper', with wraps: 'example'</span>
+<span class="keyword">print</span>(example.__doc__)   <span class="comments"># Without wraps: 'Wrapper function', with wraps: 'Docstring for example'</span></pre>
+                </div>
+            </div>
+            
+            <div class="warning">
+                <strong>Decorator Pitfalls:</strong> Without <code>functools.wraps</code>, decorated functions lose their original name, docstring, and other metadata. Always use <code>@wraps</code> when writing decorators.
+            </div>
+        </section>
+
+        <section id="generators">
+            <h2>Generators and Iterators</h2>
+            <div class="definition">
+                <strong>Generators</strong> are functions that return an iterable generator object. They generate values on the fly using <code>yield</code> rather than storing them all in memory at once.
+            </div>
+            
+            <h3>Basic Generator</h3>
+            <div class="code-block">
+                <div class="code-header">simple_generator.py</div>
+                <div class="code-content">
+<pre><span class="keyword">def</span> <span class="function">countdown</span>(n):
+    <span class="keyword">print</span>(<span class="string">"Starting to count from"</span>, n)
+    <span class="keyword">while</span> n &gt; <span class="number">0</span>:
+        <span class="keyword">yield</span> n
+        n -= <span class="number">1</span>
+    <span class="keyword">print</span>(<span class="string">"Done!"</span>)
+
+<span class="comments"># Create generator object</span>
+gen = countdown(<span class="number">3</span>)
+
+<span class="comments"># Iterate through values</span>
+<span class="keyword">for</span> num <span class="keyword">in</span> gen:
+    <span class="keyword">print</span>(num)</pre>
+                </div>
+            </div>
+            
+            <h3>Generator Expressions</h3>
+            <p>Similar to list comprehensions but create generator objects:</p>
+            <div class="code-block">
+                <div class="code-header">generator_expression.py</div>
+                <div class="code-content">
+<pre><span class="comments"># List comprehension (creates list in memory)</span>
+squares_list = [x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> <span class="builtin">range</span>(<span class="number">1000000</span>)]
+
+<span class="comments"># Generator expression (creates iterator)</span>
+squares_gen = (x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> <span class="builtin">range</span>(<span class="number">1000000</span>))
+
+<span class="keyword">print</span>(<span class="builtin">next</span>(squares_gen))  <span class="comments"># 0</span>
+<span class="keyword">print</span>(<span class="builtin">next</span>(squares_gen))  <span class="comments"># 1</span></pre>
+                </div>
+            </div>
+            
+            <h3>Sending Data to Generators</h3>
+            <div class="code-block">
+                <div class="code-header">generator_send.py</div>
+                <div class="code-content">
+<pre><span class="keyword">def</span> <span class="function">accumulator</span>():
+    total = <span class="number">0</span>
+    <span class="keyword">while</span> <span class="keyword">True</span>:
+        value = <span class="keyword">yield</span> total
+        <span class="keyword">if</span> value <span class="keyword">is</span> <span class="keyword">None</span>: <span class="keyword">break</span>
+        total += value
+
+gen = accumulator()
+<span class="builtin">next</span>(gen)        <span class="comments"># Prime the generator</span>
+<span class="keyword">print</span>(gen.send(<span class="number">1</span>))  <span class="comments"># 1</span>
+<span class="keyword">print</span>(gen.send(<span class="number">2</span>))  <span class="comments"># 3</span>
+<span class="keyword">print</span>(gen.send(<span class="number">3</span>))  <span class="comments"># 6</span></pre>
+                </div>
+            </div>
+            
+            <h3>yield from</h3>
+            <p>The <code>yield from</code> expression allows delegation to a subgenerator:</p>
+            <div class="code-block">
+                <div class="code-header">yield_from.py</div>
+                <div class="code-content">
+<pre><span class="keyword">def</span> <span class="function">countdown</span>(n):
+    <span class="keyword">while</span> n &gt; <span class="number">0</span>:
+        <span class="keyword">yield</span> n
+        n -= <span class="number">1</span>
+
+<span class="keyword">def</span> <span class="function">countup</span>(stop):
+    n = <span class="number">1</span>
+    <span class="keyword">while</span> n &lt;= stop:
+        <span class="keyword">yield</span> n
+        n += <span class="number">1</span>
+
+<span class="keyword">def</span> <span class="function">up_and_down</span>(n):
+    <span class="keyword">yield from</span> countup(n)
+    <span class="keyword">yield from</span> countdown(n)
+
+<span class="keyword">for</span> x <span class="keyword">in</span> up_and_down(<span class="number">3</span>):
+    <span class="keyword">print</span>(x)  <span class="comments"># 1, 2, 3, 3, 2, 1</span></pre>
+                </div>
+            </div>
+            
+            <h3>itertools Module</h3>
+            <p>The <code>itertools</code> module provides many useful iterator building blocks:</p>
+            <div class="code-block">
+                <div class="code-header">itertools_examples.py</div>
+                <div class="code-content">
+<pre><span class="keyword">import</span> itertools
+
+<span class="comments"># Infinite iterators</span>
+count = itertools.count(<span class="number">10</span>, <span class="number">2</span>)  <span class="comments"># 10, 12, 14, ...</span>
+cycle = itertools.cycle(<span class="string">"AB"</span>)   <span class="comments"># A, B, A, B, ...</span>
+repeat = itertools.repeat(<span class="number">5</span>, <span class="number">3</span>)  <span class="comments"># 5, 5, 5</span>
+
+<span class="comments"># Finite iterators</span>
+chain = itertools.chain(<span class="string">"ABC"</span>, <span class="string">"DEF"</span>)  <span class="comments"># A, B, C, D, E, F</span>
+compress = itertools.compress(<span class="string">"ABCDEF"</span>, [<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>])  <span class="comments"># A, C, E, F</span>
+dropwhile = itertools.dropwhile(<span class="keyword">lambda</span> x: x&lt;<span class="number">5</span>, [<span class="number">1</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">4</span>,<span class="number">1</span>])  <span class="comments"># 6, 4, 1</span>
+
+<span class="comments"># Combinatoric iterators</span>
+product = itertools.product(<span class="string">"AB"</span>, repeat=<span class="number">2</span>)  <span class="comments"># AA, AB, BA, BB</span>
+permutations = itertools.permutations(<span class="string">"ABC"</span>, <span class="number">2</span>)  <span class="comments"># AB, AC, BA, BC, CA, CB</span>
+combinations = itertools.combinations(<span class="string">"ABC"</span>, <span class="number">2</span>)  <span class="comments"># AB, AC, BC</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="context-managers">
+            <h2>Context Managers</h2>
+            <div class="definition">
+                <strong>Context managers</strong> allow you to allocate and release resources precisely when you want to. The most common use is with the <code>with</code> statement for file operations.
+            </div>
+            
+            <h3>Using Context Managers</h3>
+            <div class="code-block">
+                <div class="code-header">file_context.py</div>
+                <div class="code-content">
+<pre><span class="comments"># Traditional file handling (need to manually close)</span>
+file = <span class="builtin">open</span>(<span class="string">'example.txt'</span>, <span class="string">'r'</span>)
+content = file.read()
+file.close()
+
+<span class="comments"># Using context manager (automatically closes file)</span>
+<span class="keyword">with</span> <span class="builtin">open</span>(<span class="string">'example.txt'</span>, <span class="string">'r'</span>) <span class="keyword">as</span> file:
+    content = file.read()
+<span class="comments"># File is automatically closed here</span></pre>
+                </div>
+            </div>
+            
+            <h3>Creating Context Managers</h3>
+            <p>There are two ways to create context managers: using a class or the <code>contextlib</code> module.</p>
+            
+            <div class="code-block">
+                <div class="code-header">class_based_context.py</div>
+                <div class="code-content">
+<pre><span class="keyword">class</span> <span class="class-name">File</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="keyword">self</span>, filename, mode):
+        <span class="keyword">self</span>.filename = filename
+        <span class="keyword">self</span>.mode = mode
+        
+    <span class="keyword">def</span> <span class="function">__enter__</span>(<span class="keyword">self</span>):
+        <span class="keyword">self</span>.file = <span class="builtin">open</span>(<span class="keyword">self</span>.filename, <span class="keyword">self</span>.mode)
+        <span class="keyword">return</span> <span class="keyword">self</span>.file
+        
+    <span class="keyword">def</span> <span class="function">__exit__</span>(<span class="keyword">self</span>, exc_type, exc_val, exc_tb):
+        <span class="keyword">self</span>.file.close()
+        <span class="keyword">if</span> exc_type <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>:
+            <span class="keyword">print</span>(<span class="string">"Exception occurred:"</span>, exc_val)
+        <span class="keyword">return</span> <span class="keyword">False</span>  <span class="comments"># Don't suppress exceptions</span>
+
+<span class="keyword">with</span> <span class="builtin">File</span>(<span class="string">'example.txt'</span>, <span class="string">'w'</span>) <span class="keyword">as</span> f:
+    f.write(<span class="string">'Hello, context manager!'</span>)</pre>
+                </div>
+            </div>
+            
+            <div class="code-block">
+                <div class="code-header">contextlib_context.py</div>
+                <div class="code-content">
+<pre><span class="keyword">from</span> contextlib <span class="keyword">import</span> contextmanager
+
+<span class="keyword">@contextmanager</span>
+<span class="keyword">def</span> <span class="function">open_file</span>(path, mode):
+    <span class="keyword">try</span>:
+        file = <span class="builtin">open</span>(path, mode)
+        <span class="keyword">yield</span> file
+    <span class="keyword">finally</span>:
+        file.close()
+
+<span class="keyword">with</span> open_file(<span class="string">'example.txt'</span>, <span class="string">'w'</span>) <span class="keyword">as</span> f:
+    f.write(<span class="string">'Hello, contextlib!'</span>)</pre>
+                </div>
+            </div>
+            
+            <h3>contextlib Utilities</h3>
+            <p>The <code>contextlib</code> module provides several useful utilities:</p>
+            
+            <div class="code-block">
+                <div class="code-header">contextlib_utils.py</div>
+                <div class="code-content">
+<pre><span class="keyword">from</span> contextlib <span class="keyword">import</span> redirect_stdout, suppress, ExitStack
+<span class="keyword">import</span> os
+
+<span class="comments"># redirect_stdout - redirect output to a file</span>
+<span class="keyword">with</span> <span class="builtin">open</span>(<span class="string">'output.txt'</span>, <span class="string">'w'</span>) <span class="keyword">as</span> f, redirect_stdout(f):
+    <span class="keyword">print</span>(<span class="string">'This goes to the file'</span>)
+
+<span class="comments"># suppress - suppress specific exceptions</span>
+<span class="keyword">with</span> suppress(FileNotFoundError):
+    os.remove(<span class="string">'nonexistent.file'</span>)
+
+<span class="comments"># ExitStack - manage multiple context managers</span>
+<span class="keyword">with</span> ExitStack() <span class="keyword">as</span> stack:
+    files = [stack.enter_context(<span class="builtin">open</span>(fname)) <span class="keyword">for</span> fname <span class="keyword">in</span> [<span class="string">'file1.txt'</span>, <span class="string">'file2.txt'</span>]]
+    <span class="comments"># All files will be closed when the block ends</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="exceptions">
+            <h2>Exception Handling</h2>
+            <div class="definition">
+                <strong>Exceptions</strong> are events that occur during program execution that disrupt the normal flow of instructions. Python uses exceptions to handle errors and other exceptional events.
+            </div>
+            
+            <h3>Built-in Exceptions</h3>
+            <p>Python has numerous built-in exceptions organized in a hierarchy:</p>
+            <ul>
+                <li><code>BaseException</code>
+                    <ul>
+                        <li><code>Exception</code>
+                            <ul>
+                                <li><code>ArithmeticError</code> (e.g., <code>ZeroDivisionError</code>)</li>
+                                <li><code>LookupError</code> (e.g., <code>IndexError</code>, <code>KeyError</code>)</li>
+                                <li><code>OSError</code> (e.g., <code>FileNotFoundError</code>)</li>
+                                <li><code>TypeError</code></li>
+                                <li><code>ValueError</code></li>
+                                <li><code>RuntimeError</code></li>
+                            </ul>
+                        </li>
+                        <li><code>KeyboardInterrupt</code></li>
+                        <li><code>SystemExit</code></li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <h3>Handling Exceptions</h3>
+            <div class="code-block">
+                <div class="code-header">exception_handling.py</div>
+                <div class="code-content">
+<pre><span class="keyword">try</span>:
+    <span class="comments"># Code that might raise an exception</span>
+    result = <span class="number">10</span> / <span class="number">0</span>
+<span class="keyword">except</span> ZeroDivisionError:
+    <span class="keyword">print</span>(<span class="string">"You can't divide by zero!"</span>)
+<span class="keyword">except</span> (TypeError, ValueError) <span class="keyword">as</span> e:
+    <span class="keyword">print</span>(<span class="string">f"Type or value error: </span>{e}<span class="string">"</span>)
+<span class="keyword">except</span> Exception <span class="keyword">as</span> e:
+    <span class="keyword">print</span>(<span class="string">f"Unexpected error: </span>{e}<span class="string">"</span>)
+<span class="keyword">else</span>:
+    <span class="keyword">print</span>(<span class="string">"No exceptions occurred"</span>)
+<span class="keyword">finally</span>:
+    <span class="keyword">print</span>(<span class="string">"This always runs"</span>)</pre>
+                </div>
+            </div>
+            
+            <h3>Raising Exceptions</h3>
+            <div class="code-block">
+                <div class="code-header">raising_exceptions.py</div>
+                <div class="code-content">
+<pre><span class="keyword">def</span> <span class="function">validate_age</span>(age):
+    <span class="keyword">if</span> age &lt; <span class="number">0</span>:
+        <span class="keyword">raise</span> <span class="builtin">ValueError</span>(<span class="string">"Age cannot be negative"</span>)
+    <span class="keyword">elif</span> age &lt; <span class="number">18</span>:
+        <span class="keyword">raise</span> <span class="builtin">PermissionError</span>(<span class="string">"Must be 18 or older"</span>)
+    <span class="keyword">else</span>:
+        <span class="keyword">print</span>(<span class="string">"Age is valid"</span>)
+
+<span class="keyword">try</span>:
+    validate_age(-<span class="number">5</span>)
+<span class="keyword">except</span> <span class="builtin">ValueError</span> <span class="keyword">as</span> e:
+    <span class="keyword">print</span>(<span class="string">f"Invalid age: </span>{e}<span class="string">"</span>)</pre>
+                </div>
+            </div>
+            
+            <h3>Custom Exceptions</h3>
+            <div class="code-block">
+                <div class="code-header">custom_exceptions.py</div>
+                <div class="code-content">
+<pre><span class="keyword">class</span> <span class="class-name">InvalidEmailError</span>(<span class="builtin">Exception</span>):
+    <span class="string">"""Raised when an email doesn't match the expected format"""</span>
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="keyword">self</span>, email):
+        <span class="keyword">self</span>.email = email
+        <span class="keyword">self</span>.message = <span class="string">f"</span>{email}<span class="string"> is not a valid email"</span>
+        <span class="builtin">super</span>().<span class="builtin">__init__</span>(<span class="keyword">self</span>.message)
+
+<span class="keyword">def</span> <span class="function">validate_email</span>(email):
+    <span class="keyword">if</span> <span class="string">"@"</span> <span class="keyword">not</span> <span class="keyword">in</span> email:
+        <span class="keyword">raise</span> <span class="builtin">InvalidEmailError</span>(email)
+    <span class="keyword">return</span> <span class="keyword">True</span>
+
+<span class="keyword">try</span>:
+    validate_email(<span class="string">"test.example.com"</span>)
+<span class="keyword">except</span> <span class="builtin">InvalidEmailError</span> <span class="keyword">as</span> e:
+    <span class="keyword">print</span>(e.message)</pre>
+                </div>
+            </div>
+            
+            <h3>Exception Chaining</h3>
+            <div class="code-block">
+                <div class="code-header">exception_chaining.py</div>
+                <div class="code-content">
+<pre><span class="keyword">try</span>:
+    <span class="number">10</span> / <span class="number">0</span>
+<span class="keyword">except</span> ZeroDivisionError <span class="keyword">as</span> e:
+    <span class="keyword">raise</span> <span class="builtin">ValueError</span>(<span class="string">"Invalid operation"</span>) <span class="keyword">from</span> e
+
+<span class="comments"># Output shows both exceptions with "The above exception was the direct cause..."</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="functional">
+            <h2>Functional Programming</h2>
+            <div class="definition">
+                <strong>Functional programming</strong> is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data. Python supports several functional programming concepts.
+            </div>
+            
+            <h3>Lambda Functions</h3>
+            <div class="code-block">
+                <div class="code-header">lambda_functions.py</div>
+                <div class="code-content">
+<pre><span class="comments"># Anonymous functions defined with lambda</span>
+square = <span class="keyword">lambda</span> x: x * x
+<span class="keyword">print</span>(square(<span class="number">5</span>))  <span class="comments"># 25</span>
+
+<span class="comments"># Often used with sorted(), filter(), map()</span>
+names = [<span class="string">'Alice'</span>, <span class="string">'Bob'</span>, <span class="string">'Charlie'</span>, <span class="string">'David'</span>]
+sorted_names = <span class="builtin">sorted</span>(names, key=<span class="keyword">lambda</span> name: <span class="builtin">len</span>(name))
+<span class="keyword">print</span>(sorted_names)  <span class="comments"># ['Bob', 'Alice', 'David', 'Charlie']</span></pre>
+                </div>
+            </div>
+            
+            <h3>map(), filter(), reduce()</h3>
+            <div class="code-block">
+                <div class="code-header">map_filter_reduce.py</div>
+                <div class="code-content">
+<pre><span class="keyword">from</span> functools <span class="keyword">import</span> reduce
+
+numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]
+
+<span class="comments"># map - apply function to each item</span>
+squares = <span class="builtin">map</span>(<span class="keyword">lambda</span> x: x**<span class="number">2</span>, numbers)
+<span class="keyword">print</span>(<span class="builtin">list</span>(squares))  <span class="comments"># [1, 4, 9, 16, 25]</span>
+
+<span class="comments"># filter - select items where function returns True</span>
+evens = <span class="builtin">filter</span>(<span class="keyword">lambda</span> x: x % <span class="number">2</span> == <span class="number">0</span>, numbers)
+<span class="keyword">print</span>(<span class="builtin">list</span>(evens))    <span class="comments"># [2, 4]</span>
+
+<span class="comments"># reduce - apply function cumulatively</span>
+sum = reduce(<span class="keyword">lambda</span> x, y: x + y, numbers)
+<span class="keyword">print</span>(sum)            <span class="comments"># 15</span></pre>
+                </div>
+            </div>
+            
+            <h3>functools Module</h3>
+            <p>The <code>functools</code> module provides higher-order functions and operations on callable objects:</p>
+            <div class="code-block">
+                <div class="code-header">functools_examples.py</div>
+                <div class="code-content">
+<pre><span class="keyword">from</span> functools <span class="keyword">import</span> partial, lru_cache, total_ordering
+
+<span class="comments"># partial - create new function with some arguments pre-filled</span>
+<span class="keyword">def</span> <span class="function">power</span>(base, exponent):
+    <span class="keyword">return</span> base ** exponent
+
+square = partial(power, exponent=<span class="number">2</span>)
+cube = partial(power, exponent=<span class="number">3</span>)
+
+<span class="keyword">print</span>(square(<span class="number">5</span>))  <span class="comments"># 25</span>
+<span class="keyword">print</span>(cube(<span class="number">5</span>))    <span class="comments"># 125</span>
+
+<span class="comments"># lru_cache - memoization decorator</span>
+<span class="keyword">@lru_cache</span>(maxsize=<span class="number">128</span>)
+<span class="keyword">def</span> <span class="function">fibonacci</span>(n):
+    <span class="keyword">if</span> n &lt; <span class="number">2</span>:
+        <span class="keyword">return</span> n
+    <span class="keyword">return</span> fibonacci(n-<span class="number">1</span>) + fibonacci(n-<span class="number">2</span>)
+
+<span class="keyword">print</span>([fibonacci(n) <span class="keyword">for</span> n <span class="keyword">in</span> <span class="builtin">range</span>(<span class="number">10</span>)])  <span class="comments"># [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]</span>
+
+<span class="comments"># total_ordering - fill in missing comparison methods</span>
+<span class="keyword">@total_ordering</span>
+<span class="keyword">class</span> <span class="class-name">Student</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="keyword">self</span>, name, grade):
+        <span class="keyword">self</span>.name = name
+        <span class="keyword">self</span>.grade = grade
+        
+    <span class="keyword">def</span> <span class="function">__eq__</span>(<span class="keyword">self</span>, other):
+        <span class="keyword">return</span> <span class="keyword">self</span>.grade == other.grade
+        
+    <span class="keyword">def</span> <span class="function">__lt__</span>(<span class="keyword">self</span>, other):
+        <span class="keyword">return</span> <span class="keyword">self</span>.grade &lt; other.grade
+
+s1 = <span class="builtin">Student</span>(<span class="string">"Alice"</span>, <span class="number">85</span>)
+s2 = <span class="builtin">Student</span>(<span class="string">"Bob"</span>, <span class="number">75</span>)
+<span class="keyword">print</span>(s1 &gt; s2)  <span class="comments"># True (even though we didn't define __gt__)</span></pre>
+                </div>
+            </div>
+            
+            <h3>operator Module</h3>
+            <p>The <code>operator</code> module provides function equivalents to Python's operators:</p>
+            <div class="code-block">
+                <div class="code-header">operator_module.py</div>
+                <div class="code-content">
+<pre><span class="keyword">from</span> operator <span class="keyword">import</span> itemgetter, attrgetter, methodcaller
+
+<span class="comments"># itemgetter - access items from sequences/dicts</span>
+get_second = itemgetter(<span class="number">1</span>)
+<span class="keyword">print</span>(get_second([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>]))  <span class="comments"># 'b'</span>
+
+<span class="comments"># attrgetter - access object attributes</span>
+<span class="keyword">class</span> <span class="class-name">Person</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="keyword">self</span>, name, age):
+        <span class="keyword">self</span>.name = name
+        <span class="keyword">self</span>.age = age
+
+people = [<span class="builtin">Person</span>(<span class="string">"Alice"</span>, <span class="number">25</span>), <span class="builtin">Person</span>(<span class="string">"Bob"</span>, <span class="number">30</span>)]
+get_name = attrgetter(<span class="string">'name'</span>)
+<span class="keyword">print</span>([get_name(p) <span class="keyword">for</span> p <span class="keyword">in</span> people])  <span class="comments"># ['Alice', 'Bob']</span>
+
+<span class="comments"># methodcaller - call methods by name</span>
+s = <span class="string">"hello world"</span>
+upper = methodcaller(<span class="string">'upper'</span>)
+<span class="keyword">print</span>(upper(s))  <span class="comments"># "HELLO WORLD"</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="collections">
+            <h2>Advanced Collections</h2>
+            <p>Python's <code>collections</code> module provides specialized container datatypes.</p>
+            
+            <h3>defaultdict</h3>
+            <div class="code-block">
+                <div class="code-header">defaultdict_example.py</div>
+                <div class="code-content">
+<pre><span class="keyword">from</span> collections <span class="keyword">import</span> defaultdict
+
+<span class="comments"># Automatically creates keys with default values</span>
+word_counts = defaultdict(<span class="builtin">int</span>)  <span class="comments"># default value is 0</span>
+<span class="keyword">for</span> word <span class="keyword">in</span> [<span class="string">'apple'</span>, <span class="string">'banana'</span>, <span class="string">'apple'</span>, <span class="string">'cherry'</span>]:
+    word_counts[word] += <span class="number">1</span>
+    
+<span class="keyword">print</span>(word_counts)  <span class="comments"># defaultdict(&lt;class 'int'>, {'apple': 2, 'banana': 1, 'cherry': 1})</span>
+
+<span class="comments"># With list as default factory</span>
+student_courses = defaultdict(<span class="builtin">list</span>)
+student_courses[<span class="string">'Alice'</span>].append(<span class="string">'Math'</span>)
+student_courses[<span class="string">'Alice'</span>].append(<span class="string">'Physics'</span>)
+<span class="keyword">print</span>(student_courses[<span class="string">'Bob'</span>])  <span class="comments"># [] (empty list created automatically)</span></pre>
+                </div>
+            </div>
+            
+            <h3>Counter</h3>
+            <div class="code-block">
+                <div class="code-header">counter_example.py</div>
+                <div class="code-content">
+<pre><span class="keyword">from</span> collections <span class="keyword">import</span> Counter
+
+words = [<span class="string">'apple'</span>, <span class="string">'banana'</span>, <span class="string">'apple'</span>, <span class="string">'cherry'</span>, <span class="string">'banana'</span>, <span class="string">'apple'</span>]
+word_counts = <span class="builtin">Counter</span>(words)
+
+<span class="keyword">print</span>(word_counts)          <span class="comments"># Counter({'apple': 3, 'banana': 2, 'cherry': 1})</span>
+<span class="keyword">print</span>(word_counts.most_common(<span class="number">2</span>))  <span class="comments"># [('apple', 3), ('banana', 2)]</span>
+
+<span class="comments"># Update counter</span>
+more_words = [<span class="string">'apple'</span>, <span class="string">'orange'</span>, <span class="string">'orange'</span>]
+word_counts.update(more_words)
+<span class="keyword">print</span>(word_counts[<span class="string">'orange'</span>])  <span class="comments"># 2</span>
+
+<span class="comments"># Arithmetic operations</span>
+c1 = <span class="builtin">Counter</span>(a=<span class="number">3</span>, b=<span class="number">1</span>)
+c2 = <span class="builtin">Counter</span>(a=<span class="number">1</span>, b=<span class="number">2</span>)
+<span class="keyword">print</span>(c1 + c2)  <span class="comments"># Counter({'a': 4, 'b': 3})</span>
+<span class="keyword">print</span>(c1 - c2)  <span class="comments"># Counter({'a': 2})</span></pre>
+                </div>
+            </div>
+            
+            <h3>namedtuple</h3>
+            <div class="code-block">
+                <div class="code-header">namedtuple_example.py</div>
+                <div class="code-content">
+<pre><span class="keyword">from</span> collections <span class="keyword">import</span> namedtuple
+
+<span class="comments"># Create a new subclass of tuple with named fields</span>
+Point = namedtuple(<span class="string">'Point'</span>, [<span class="string">'x'</span>, <span class="string">'y'</span>])
+p = Point(<span class="number">11</span>, y=<span class="number">22</span>)
+
+<span class="keyword">print</span>(p.x + p.y)  <span class="comments"># 33</span>
+<span class="keyword">print</span>(p[<span class="number">0</span>] + p[<span class="number">1</span>])  <span class="comments"># 33 (still works like a regular tuple)</span>
+
+<span class="comments"># _replace creates a new instance</span>
+p = p._replace(x=<span class="number">10</span>)
+<span class="keyword">print</span>(p)  <span class="comments"># Point(x=10, y=22)</span>
+
+<span class="comments"># Convert to dictionary</span>
+<span class="keyword">print</span>(p._asdict())  <span class="comments"># {'x': 10, 'y': 22}</span></pre>
+                </div>
+            </div>
+            
+            <h3>deque</h3>
+            <div class="code-block">
+                <div class="code-header">deque_example.py</div>
+                <div class="code-content">
+<pre><span class="keyword">from</span> collections <span class="keyword">import</span> deque
+
+<span class="comments"># Double-ended queue - fast appends and pops from both ends</span>
+d = deque(<span class="string">'ghi'</span>)           <span class="comments"># deque(['g', 'h', 'i'])</span>
+d.append(<span class="string">'j'</span>)            <span class="comments"># deque(['g', 'h', 'i', 'j'])</span>
+d.appendleft(<span class="string">'f'</span>)        <span class="comments"># deque(['f', 'g', 'h', 'i', 'j'])</span>
+<span class="keyword">print</span>(d.pop())          <span class="comments"># 'j'</span>
+<span class="keyword">print</span>(d.popleft())      <span class="comments"># 'f'</span>
+<span class="keyword">print</span>(<span class="builtin">list</span>(d))         <span class="comments"># ['g', 'h', 'i']</span>
+
+<span class="comments"># Rotation</span>
+d.rotate(<span class="number">1</span>)             <span class="comments"># deque(['i', 'g', 'h'])</span>
+d.rotate(-<span class="number">1</span>)            <span class="comments"># deque(['g', 'h', 'i'])</span>
+
+<span class="comments"># Max length (bounded deque)</span>
+d = deque(<span class="builtin">maxlen</span>=<span class="number">3</span>)
+d.extend(<span class="string">'abc'</span>)          <span class="comments"># deque(['a', 'b', 'c'], maxlen=3)</span>
+d.append(<span class="string">'d'</span>)           <span class="comments"># deque(['b', 'c', 'd'], maxlen=3) - 'a' is automatically removed</span></pre>
+                </div>
+            </div>
+            
+            <h3>ChainMap</h3>
+            <div class="code-block">
+                <div class="code-header">chainmap_example.py</div>
+                <div class="code-content">
+<pre><span class="keyword">from</span> collections <span class="keyword">import</span> ChainMap
+
+<span class="comments"># Combine multiple dictionaries into a single mapping</span>
+dict1 = {<span class="string">'a'</span>: <span class="number">1</span>, <span class="string">'b'</span>: <span class="number">2</span>}
+dict2 = {<span class="string">'b'</span>: <span class="number">3</span>, <span class="string">'c'</span>: <span class="number">4</span>}
+chain = ChainMap(dict1, dict2)
+
+<span class="keyword">print</span>(chain[<span class="string">'a'</span>])  <span class="comments"># 1 (from dict1)</span>
+<span class="keyword">print</span>(chain[<span class="string">'b'</span>])  <span class="comments"># 2 (from dict1 - first match)</span>
+<span class="keyword">print</span>(chain[<span class="string">'c'</span>])  <span class="comments"># 4 (from dict2)</span>
+
+<span class="comments"># Updates affect the first mapping</span>
+chain[<span class="string">'c'</span>] = <span class="number">5</span>  <span class="comments"># Updates dict1</span>
+<span class="keyword">print</span>(dict1)    <span class="comments"># {'a': 1, 'b': 2, 'c': 5}</span>
+<span class="keyword">print</span>(dict2)    <span class="comments"># {'b': 3, 'c': 4} (unchanged)</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="modules">
+            <h2>Modules and Packages</h2>
+            <div class="definition">
+                <strong>Modules</strong> are Python files containing definitions and statements. <strong>Packages</strong> are directories containing multiple modules and an <code>__init__.py</code> file.
+            </div>
+            
+            <h3>Creating and Using Modules</h3>
+            <div class="code-block">
+                <div class="code-header">mymodule.py</div>
+                <div class="code-content">
+<pre><span class="string">"""This is a docstring for the module"""</span>
+
+<span class="keyword">def</span> <span class="function">hello</span>():
+    <span class="keyword">print</span>(<span class="string">"Hello from mymodule!"</span>)
+    
+version = <span class="string">"1.0"</span></pre>
+                </div>
+            </div>
+            
+            <div class="code-block">
+                <div class="code-header">main.py</div>
+                <div class="code-content">
+<pre><span class="keyword">import</span> mymodule
+
+mymodule.hello()
+<span class="keyword">print</span>(mymodule.version)
+
+<span class="comments"># Alternative imports</span>
+<span class="keyword">from</span> mymodule <span class="keyword">import</span> hello, version
+hello()
+<span class="keyword">print</span>(version)
+
+<span class="comments"># Import with alias</span>
+<span class="keyword">import</span> mymodule <span class="keyword">as</span> mm
+mm.hello()
+
+<span class="comments"># Import all names (not recommended)</span>
+<span class="keyword">from</span> mymodule <span class="keyword">import</span> *
+hello()</pre>
+                </div>
+            </div>
+            
+            <h3>Package Structure</h3>
+            <div class="code-block">
+                <div class="code-header">Package directory structure</div>
+                <div class="code-content">
+<pre>mypackage/
+    __init__.py         <span class="comments"># Package initialization</span>
+    module1.py          <span class="comments"># Module 1</span>
+    module2.py          <span class="comments"># Module 2</span>
+    subpackage/
+        __init__.py     <span class="comments"># Subpackage initialization</span>
+        module3.py      <span class="comments"># Module 3</span></pre>
+                </div>
+            </div>
+            
+            <h3>__init__.py</h3>
+            <p>The <code>__init__.py</code> file can be empty or can contain initialization code for the package:</p>
+            <div class="code-block">
+                <div class="code-header">mypackage/__init__.py</div>
+                <div class="code-content">
+<pre><span class="string">"""This is the mypackage initialization module"""</span>
+
+<span class="keyword">from</span> .module1 <span class="keyword">import</span> func1  <span class="comments"># Make func1 available at package level</span>
+<span class="keyword">from</span> .module2 <span class="keyword">import</span> func2
+
+__all__ = [<span class="string">'func1'</span>, <span class="string">'func2'</span>]  <span class="comments"># Controls what 'from mypackage import *' imports</span>
+
+version = <span class="string">'1.0'</span></pre>
+                </div>
+            </div>
+            
+            <h3>Relative Imports</h3>
+            <div class="code-block">
+                <div class="code-header">Relative imports in subpackage/module3.py</div>
+                <div class="code-content">
+<pre><span class="keyword">from</span> .. <span class="keyword">import</span> module1      <span class="comments"># Import from parent package</span>
+<span class="keyword">from</span> ..module2 <span class="keyword">import</span> func2  <span class="comments"># Import from sibling module</span></pre>
+                </div>
+            </div>
+            
+            <h3>Executing Modules as Scripts</h3>
+            <div class="code-block">
+                <div class="code-header">mymodule.py with main block</div>
+                <div class="code-content">
+<pre><span class="keyword">def</span> <span class="function">hello</span>():
+    <span class="keyword">print</span>(<span class="string">"Hello from mymodule!"</span>)
+    
+<span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:
+    <span class="comments"># Code here will only run when the module is executed directly</span>
+    <span class="keyword">print</span>(<span class="string">"Running as main program"</span>)
+    hello()</pre>
+                </div>
+            </div>
+            
+            <div class="note">
+                <strong>__name__ variable:</strong> When a module is run directly, <code>__name__</code> is set to <code>"__main__"</code>. When imported, it's set to the module's name.
+            </div>
+            
+            <h3>Python Path and Module Search</h3>
+            <p>Python searches for modules in:</p>
+            <ol>
+                <li>The directory containing the input script</li>
+                <li><code>PYTHONPATH</code> environment variable directories</li>
+                <li>The installation-dependent default path</li>
+            </ol>
+            
+            <div class="code-block">
+                <div class="code-header">sys_path.py</div>
+                <div class="code-content">
+<pre><span class="keyword">import</span> sys
+<span class="keyword">print</span>(sys.path)  <span class="comments"># List of directories Python searches for modules</span>
+
+<span class="comments"># Add a directory to the search path</span>
+sys.path.append(<span class="string">'/path/to/my/modules'</span>)</pre>
+                </div>
+            </div>
+            
+            <h3>Installing Packages</h3>
+            <p>Third-party packages can be installed using pip:</p>
+            <div class="code-block">
+                <div class="code-header">Terminal commands</div>
+                <div class="code-content">
+<pre><span class="comments"># Install a package</span>
+pip install package-name
+
+<span class="comments"># Install specific version</span>
+pip install package-name==1.0.0
+
+<span class="comments"># Install from requirements file</span>
+pip install -r requirements.txt
+
+<span class="comments"># Install in development mode (editable)</span>
+pip install -e .</pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="advanced-tips">
+            <h2>Advanced Python Tips</h2>
+            
+            <h3>Underscore Conventions</h3>
+            <ul>
+                <li><code>_single_leading_underscore</code>: "Internal use" indicator (not imported by <code>from module import *</code>)</li>
+                <li><code>single_trailing_underscore_</code>: Used to avoid conflicts with Python keywords (<code>class_</code>)</li>
+                <li><code>__double_leading_underscore</code>: Name mangling (inside class, changes to <code>_Class__name</code>)</li>
+                <li><code>__double_leading_and_trailing_underscore__</code>: "Magic" methods (e.g., <code>__init__</code>)</li>
+            </ul>
+            
+            <h3>String Formatting (Advanced)</h3>
+            <div class="code-block">
+                <div class="code-header">string_formatting.py</div>
+                <div class="code-content">
+<pre>person = {<span class="string">'name'</span>: <span class="string">'Alice'</span>, <span class="string">'age'</span>: <span class="number">25</span>}
+
+<span class="comments"># f-strings with expressions</span>
+<span class="keyword">print</span>(<span class="string">f"Next year </span>{person[<span class="string">'name'</span>]}<span class="string"> will be </span>{person[<span class="string">'age'</span>] + <span class="number">1</span>}<span class="string">"</span>)
+
+<span class="comments"># Format specifiers</span>
+<span class="keyword">print</span>(<span class="string">f"Value: </span>{<span class="number">3.14159</span>:<span class="number">.2</span>f}<span class="string">"</span>)  <span class="comments"># "Value: 3.14"</span>
+<span class="keyword">print</span>(<span class="string">f"Hex: </span>{<span class="number">255</span>:<span class="number">02</span>X}<span class="string">"</span>)    <span class="comments"># "Hex: FF"</span>
+
+<span class="comments"># Nested formatting</span>
+width = <span class="number">10</span>
+precision = <span class="number">4</span>
+value = <span class="number">3.14159</span>
+<span class="keyword">print</span>(<span class="string">f"result: </span>{value:{width}.{precision}}<span class="string">"</span>)  <span class="comments"># "result:      3.142"</span></pre>
+                </div>
+            </div>
+            
+            <h3>Extended Iterable Unpacking</h3>
+            <div class="code-block">
+                <div class="code-header">iterable_unpacking.py</div>
+                <div class="code-content">
+<pre><span class="comments"># Basic unpacking</span>
+a, b, c = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]
+
+<span class="comments"># Extended unpacking (Python 3+)</span>
+first, *middle, last = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]
+<span class="keyword">print</span>(first)   <span class="comments"># 1</span>
+<span class="keyword">print</span>(middle)  <span class="comments"># [2, 3, 4]</span>
+<span class="keyword">print</span>(last)    <span class="comments"># 5</span>
+
+<span class="comments"># Ignoring parts</span>
+a, *_ = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]  <span class="comments"># a = 1, ignore the rest</span>
+*_, b = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]  <span class="comments"># b = 4, ignore the rest</span>
+
+<span class="comments"># Nested unpacking</span>
+metro_areas = [
+    (<span class="string">'Tokyo'</span>, <span class="string">'JP'</span>, <span class="number">36.933</span>, (<span class="number">35.689722</span>, <span class="number">139.691667</span>)),
+    (<span class="string">'Delhi NCR'</span>, <span class="string">'IN'</span>, <span class="number">21.935</span>, (<span class="number">28.613889</span>, <span class="number">77.208889</span>)),
+]
+
+<span class="keyword">for</span> name, _, _, (lat, lon) <span class="keyword">in</span> metro_areas:
+    <span class="keyword">print</span>(<span class="string">f"</span>{name}<span class="string">: </span>{lat}<span class="string">, </span>{lon}<span class="string">"</span>)</pre>
+                </div>
+            </div>
+            
+            <h3>Data Classes (Python 3.7+)</h3>
+            <div class="code-block">
+                <div class="code-header">dataclasses.py</div>
+                <div class="code-content">
+<pre><span class="keyword">from</span> dataclasses <span class="keyword">import</span> dataclass
+
+<span class="keyword">@dataclass</span>
+<span class="keyword">class</span> <span class="class-name">Point</span>:
+    x: <span class="builtin">float</span>
+    y: <span class="builtin">float</span>
+    z: <span class="builtin">float</span> = <span class="number">0.0</span>  <span class="comments"># Default value</span>
+    
+    <span class="keyword">def</span> <span class="function">distance</span>(<span class="keyword">self</span>) -&gt; <span class="builtin">float</span>:
+        <span class="keyword">return</span> (self.x**<span class="number">2</span> + self.y**<span class="number">2</span> + self.z**<span class="number">2</span>) ** <span class="number">0.5</span>
+
+<span class="comments"># Automatically gets __init__, __repr__, __eq__, etc.</span>
+p = <span class="builtin">Point</span>(<span class="number">1.0</span>, <span class="number">2.0</span>)
+<span class="keyword">print</span>(p)  <span class="comments"># Point(x=1.0, y=2.0, z=0.0)</span></pre>
+                </div>
+            </div>
+            
+            <h3>Type Hints (Python 3.5+)</h3>
+            <div class="code-block">
+                <div class="code-header">type_hints.py</div>
+                <div class="code-content">
+<pre><span class="keyword">from</span> typing <span class="keyword">import</span> List, Dict, Tuple, Optional, Union, Callable
+
+<span class="keyword">def</span> <span class="function">greet</span>(name: <span class="builtin">str</span>) -&gt; <span class="builtin">str</span>:
+    <span class="keyword">return</span> <span class="string">f"Hello, </span>{name}<span class="string">"</span>
+
+<span class="keyword">def</span> <span class="function">process_items</span>(
+    items: List[<span class="builtin">str</span>],
+    prices: Dict[<span class="builtin">str</span>, <span class="builtin">float</span>],
+    item_tuples: Tuple[<span class="builtin">str</span>, <span class="builtin">str</span>, <span class="builtin">int</span>],
+    item: Optional[<span class="builtin">str</span>] = <span class="keyword">None</span>
+) -&gt; Union[<span class="builtin">str</span>, <span class="builtin">int</span>]:
+    <span class="keyword">return</span> items[<span class="number">0</span>]
+
+<span class="keyword">def</span> <span class="function">apply_func</span>(func: Callable[[<span class="builtin">int</span>, <span class="builtin">int</span>], <span class="builtin">int</span>], x: <span class="builtin">int</span>, y: <span class="builtin">int</span>) -&gt; <span class="builtin">int</span>:
+    <span class="keyword">return</span> func(x, y)</pre>
+                </div>
+            </div>
+            
+            <h3>Walrus Operator (Python 3.8+)</h3>
+            <div class="code-block">
+                <div class="code-header">walrus_operator.py</div>
+                <div class="code-content">
+<pre><span class="comments"># Assign and return a value in the same expression</span>
+<span class="keyword">if</span> (n := <span class="builtin">len</span>(<span class="string">"hello"</span>)) &gt; <span class="number">4</span>:
+    <span class="keyword">print</span>(<span class="string">f"Length is </span>{n}<span class="string">"</span>)  <span class="comments"># Length is 5</span>
+
+<span class="comments"># In while loops</span>
+<span class="keyword">while</span> (line := <span class="builtin">input</span>()) != <span class="string">"quit"</span>:
+    <span class="keyword">print</span>(<span class="string">f"You entered: </span>{line}<span class="string">"</span>)
+
+<span class="comments"># In list comprehensions</span>
+results = [y <span class="keyword">for</span> x <span class="keyword">in</span> <span class="builtin">range</span>(<span class="number">10</span>) <span class="keyword">if</span> (y := x**<span class="number">2</span>) &lt; <span class="number">25</span>]
+<span class="keyword">print</span>(results)  <span class="comments"># [0, 1, 4, 9, 16]</span></pre>
+                </div>
+            </div>
+            
+            <h3>Structural Pattern Matching (Python 3.10+)</h3>
+            <div class="code-block">
+                <div class="code-header">pattern_matching.py</div>
+                <div class="code-content">
+<pre><span class="keyword">def</span> <span class="function">http_error</span>(status):
+    <span class="keyword">match</span> status:
+        <span class="keyword">case</span> <span class="number">400</span>:
+            <span class="keyword">return</span> <span class="string">"Bad request"</span>
+        <span class="keyword">case</span> <span class="number">404</span>:
+            <span class="keyword">return</span> <span class="string">"Not found"</span>
+        <span class="keyword">case</span> <span class="number">418</span>:
+            <span class="keyword">return</span> <span class="string">"I'm a teapot"</span>
+        <span class="keyword">case</span> _:
+            <span class="keyword">return</span> <span class="string">"Something's wrong with the internet"</span>
+
+<span class="comments"># More complex patterns</span>
+<span class="keyword">def</span> <span class="function">match_point</span>(point):
+    <span class="keyword">match</span> point:
+        <span class="keyword">case</span> (<span class="number">0</span>, <span class="number">0</span>):
+            <span class="keyword">print</span>(<span class="string">"Origin"</span>)
+        <span class="keyword">case</span> (<span class="number">0</span>, y):
+            <span class="keyword">print</span>(<span class="string">f"Y=</span>{y}<span class="string">"</span>)
+        <span class="keyword">case</span> (x, <span class="number">0</span>):
+            <span class="keyword">print</span>(<span class="string">f"X=</span>{x}<span class="string">"</span>)
+        <span class="keyword">case</span> (x, y):
+            <span class="keyword">print</span>(<span class="string">f"X=</span>{x}<span class="string">, Y=</span>{y}<span class="string">"</span>)
+        <span class="keyword">case</span> _:
+            <span class="keyword">raise</span> <span class="builtin">ValueError</span>(<span class="string">"Not a point"</span>)</pre>
+                </div>
+            </div>
+        </section>
+        
+        <section id="best-practices">
+            <h2>Python Best Practices</h2>
+            <p>Follow these guidelines to write clean, maintainable Python code:</p>
+            
+            <h3>Code Style (PEP 8)</h3>
+            <ul>
+                <li>Use 4 spaces per indentation level (no tabs)</li>
+                <li>Limit lines to 79 characters (72 for docstrings)</li>
+                <li>Use blank lines to separate functions and classes</li>
+                <li>Use spaces around operators and after commas</li>
+                <li>Follow naming conventions (snake_case for variables/functions)</li>
+                <li>Write descriptive names (avoid single-letter names except in loops)</li>
+            </ul>
+            
+            <h3>Error Handling</h3>
+            <p>Use try-except blocks to handle potential errors gracefully:</p>
+            <div class="code-block">
+                <div class="code-header">error_handling.py</div>
+                <div class="code-content">
+<pre><span class="keyword">try</span>:
+    age = <span class="builtin">int</span>(<span class="builtin">input</span>(<span class="string">"Enter your age: "</span>))
+    <span class="keyword">print</span>(<span class="string">f"You are {age} years old"</span>)
+<span class="keyword">except</span> ValueError:
+    <span class="keyword">print</span>(<span class="string">"Please enter a valid number"</span>)
+<span class="keyword">except</span> Exception <span class="keyword">as</span> e:
+    <span class="keyword">print</span>(<span class="string">f"An error occurred: {e}"</span>)</pre>
+                </div>
+            </div>
+            
+            <h3>Writing Maintainable Code</h3>
+            <ul>
+                <li>Keep functions small and focused (single responsibility principle)</li>
+                <li>Use comments to explain why, not what (code should be self-documenting)</li>
+                <li>Write unit tests for your functions</li>
+                <li>Use version control (like Git)</li>
+                <li>Break complex problems into smaller, manageable functions</li>
+            </ul>
+            
+            <div class="note">
+                <strong>Zen of Python:</strong> Run <code>import this</code> in Python to see the guiding principles of Python design.
+            </div>
+            </section>
+      </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="section-title">
+        <h2 id="contact-heading">Contact Us</h2>
+        <p>Ready to build your next digital project with us?</p>
+      </div>
+      <div class="contact">
+        <div class="contact-links">
+          <a href="mailto:44mr.invisible@gmail.com" class="contact-link ripple" aria-label="Email us">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            44mr.invisible@gmail.com
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <p>&copy; 2025 Nerds Assemble Python fundamentals. All rights reserved.</p>
+  </footer>
+
+  <script>
+    $(document).ready(function() {
+      // Set page title for screen readers
+      document.title = "Python Fundamentals | Complete Beginner's Guide - Nerds Assemble";
+      
+      // Ripple Effect
+      $('.ripple').on('click', function(e) {
+        const $this = $(this);
+        const offset = $this.offset();
+        const x = e.pageX - offset.left;
+        const y = e.pageY - offset.top;
+        
+        const $ink = $this.find('.ink');
+        if ($ink.length === 0) {
+          $this.prepend('<span class="ink" aria-hidden="true"></span>');
+        }
+        
+        const $inkNew = $this.find('.ink');
+        $inkNew.removeClass('animate');
+        
+        const diameter = Math.max($this.outerWidth(), $this.outerHeight());
+        const radius = diameter / 2;
+        
+        $inkNew.css({
+          width: diameter,
+          height: diameter,
+          left: x - radius,
+          top: y - radius
+        }).addClass('animate');
+      });
+      
+      // Mobile Menu Toggle with ARIA
+      $('#menuToggle').on('click', function() {
+        const isExpanded = $(this).attr('aria-expanded') === 'true';
+        $(this).attr('aria-expanded', !isExpanded);
+        $('.navpanel').attr('aria-hidden', isExpanded);
+        
+        $(this).toggleClass('active');
+        $('.navpanel').toggleClass('active');
+        if ($(this).hasClass('active')) {
+          $(this).html('close');
+          // Trap focus in mobile menu
+          $('.navpanel').find('button').first().focus();
+        } else {
+          $(this).html('menu');
+        }
+      });
+      
+      // Close mobile menu when clicking a link
+      $('.navpanel-btn, .nav-links a').on('click', function() {
+        if ($(window).width() <= 768) {
+          $('#menuToggle').removeClass('active').html('menu').attr('aria-expanded', 'false');
+          $('.navpanel').removeClass('active').attr('aria-hidden', 'true');
+        }
+      });
+      
+      // Close mobile menu on escape key
+      $(document).on('keydown', function(e) {
+        if (e.key === 'Escape' && $('.navpanel').hasClass('active')) {
+          $('#menuToggle').click();
+        }
+      });
+      
+      // Navbar scroll effect
+      let lastScrollTop = 0;
+      $(window).on('scroll', function() {
+        const scrollTop = $(window).scrollTop();
+        
+        // Show/hide navbar on scroll
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+          $('nav').css('transform', 'translateY(-100%)');
+        } else {
+          $('nav').css('transform', 'translateY(0)');
+        }
+        
+        lastScrollTop = scrollTop;
+        
+        // Shadow effect
+        if (scrollTop > 50) {
+          $('nav').css('box-shadow', '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)');
+        } else {
+          $('nav').css('box-shadow', '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)');
+        }
+      });
+      
+      // Smooth scrolling for all links
+      $('a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = $(this).attr('href');
+        if (targetId === '#') return;
+        
+        const targetElement = $(targetId);
+        if (targetElement.length) {
+          const headerHeight = $('nav').outerHeight();
+          $('html, body').animate({
+            scrollTop: targetElement.offset().top - headerHeight
+          }, 800, 'swing');
+          
+          // Update URL without jumping
+          if (history.pushState) {
+            history.pushState(null, null, targetId);
+          }
+          
+          // Focus on the target for accessibility
+          targetElement.attr('tabindex', '-1').focus().removeAttr('tabindex');
+        }
+      });
+      
+      // Lazy load images (if any)
+      $('img[data-src]').each(function() {
+        $(this).attr('src', $(this).data('src'));
+      });
+      
+      // Add keyboard navigation to cards
+      $('.card').attr('tabindex', '0').on('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          $(this).click();
+        }
+      });
+      
+      // Handle reduced motion preference
+      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (mediaQuery.matches) {
+        $('.floating').css('animation', 'none');
+      }
+      
+      // Service Worker registration for PWA (optional)
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js').catch(function(error) {
+            console.log('ServiceWorker registration failed: ', error);
+          });
+        });
+      }
+    });
+    
+    // Load performance metrics
+    window.addEventListener('load', function() {
+      // Log performance metrics
+      setTimeout(function() {
+        const perfData = window.performance.timing;
+        const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+        console.log('Page load time:', pageLoadTime, 'ms');
+        
+        // Send to analytics (example)
+        if (pageLoadTime < 2000) {
+          console.log('Good performance');
+        }
+      }, 0);
+    });
+  </script>
+
+</body>
+</html>
