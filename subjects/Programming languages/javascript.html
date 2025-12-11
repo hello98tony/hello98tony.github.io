@@ -1,0 +1,3063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKVRN3GREN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKVRN3GREN');
+</script>
+    
+
+  <!-- ====== SEO OPTIMIZATION ====== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="description" content="Complete JavaScript fundamentals guide for beginners. Learn JS basics, variables, functions, DOM manipulation, ES6+ features, and web development best practices from Nerds Assemble.">
+  <meta name="keywords" content="JavaScript tutorial, JS basics, web development, frontend development, JavaScript ES6, programming, DOM manipulation, web APIs">
+  <meta name="author" content="Nerds Assemble">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nerdsassemble.com/javascript-fundamentals">
+  <meta property="og:title" content="JavaScript Fundamentals | Complete Beginner's Guide">
+  <meta property="og:description" content="Learn JavaScript from scratch. Comprehensive guide covering variables, functions, DOM, ES6+, async programming and web development best practices.">
+  <meta property="og:image" content="https://nerdsassemble.com/images/javascript-og-image.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://nerdsassemble.com/javascript-fundamentals">
+  <meta property="twitter:title" content="JavaScript Fundamentals | Complete Beginner's Guide">
+  <meta property="twitter:description" content="Learn JavaScript from scratch. Comprehensive guide covering variables, functions, DOM, ES6+, async programming and web development best practices.">
+  <meta property="twitter:image" content="https://nerdsassemble.com/images/javascript-og-image.jpg">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "JavaScript Fundamentals: Complete Beginner's Guide",
+    "description": "Complete JavaScript tutorial for beginners covering all fundamentals of web programming",
+    "provider": {
+      "@type": "Organization",
+      "name": "Nerds Assemble",
+      "sameAs": "https://nerdsassemble.com"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "JavaScript, Web Programming, Frontend Development, DOM Manipulation"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+  
+  <title>JavaScript Fundamentals | Complete Beginner's Guide - Nerds Assemble</title>
+  
+  <!-- Preload critical resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Titillium+Web:wght@200;400;600&family=Black+Ops+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/planet-universe-svgrepo-com.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/planet-universe-svgrepo-com.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/planet-universe-svgrepo-com.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/planet-universe-svgrepo-com.svg">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://nerdsassemble.com/javascript-fundamentals">
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+<style>
+    :root {
+      --primary: #f0db4f;
+      --primary-dark: #f0d000;
+      --secondary: #323330;
+      --accent: #61dafb;
+      --dark: #0a0a0a;
+      --dark-light: #111;
+      --gray: #aaa;
+      --light: #fff;
+      --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      --shadow: 0 10px 30px -15px rgba(240, 219, 79, 0.3);
+      --nav-height: 70px;
+      --content-width: min(1200px, 95vw);
+      --border-radius: 10px;
+      --code-bg: #1e1e1e;
+      --keyword: #569cd6;
+      --function: #dcdcaa;
+      --string: #ce9178;
+      --number: #b5cea8;
+      --comment: #6a9955;
+      --variable: #9cdcfe;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      border: none;
+      outline: none;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--dark);
+      color: var(--light);
+      line-height: 1.6;
+      overflow-x: hidden;
+      padding-top: var(--nav-height);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Skip to content for accessibility */
+    .skip-to-content {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--primary);
+      color: var(--dark);
+      padding: 8px 16px;
+      z-index: 9999;
+      text-decoration: none;
+      transition: top 0.3s;
+    }
+    
+    .skip-to-content:focus {
+      top: 0;
+    }
+
+    /* ===== IMPROVED SCROLLBAR ===== */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--dark-light);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--primary-dark);
+    }
+
+    /* ===== IMPROVED NAVBAR ===== */
+    nav {
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      position: fixed;
+      top: 0;
+      height: var(--nav-height);
+      width: 100%;
+      background: rgba(17, 17, 17, 0.98);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 clamp(1rem, 3vw, 2rem);
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      font-family: 'Black Ops One', sans-serif;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      letter-spacing: 1px;
+      color: var(--primary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(0.5rem, 2vw, 1.5rem);
+    }
+
+    .nav-links a {
+      color: var(--gray);
+      text-decoration: none;
+      font-family: 'Titillium Web', sans-serif;
+      font-weight: 600;
+      font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+      position: relative;
+      transition: var(--transition);
+      padding: 4px 0;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* ===== IMPROVED MOBILE MENU ===== */
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      min-height: 44px;
+      min-width: 44px;
+      border-radius: 50%;
+      background: transparent;
+      color: var(--gray);
+      cursor: pointer;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      z-index: 1001;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menu-toggle:hover {
+      color: var(--accent);
+    }
+
+    /* ===== IMPROVED SIDE PANEL ===== */
+    .navpanel {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: min(300px, 85vw);
+      height: 100vh;
+      background: rgba(17, 17, 17, 0.98);
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 80px 0;
+      transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      z-index: 999;
+      backdrop-filter: blur(10px);
+    }
+
+    .navpanel.active {
+      right: 0;
+    }
+
+    .navpanel-btn {
+      width: 50px;
+      height: 50px;
+      min-width: 50px;
+      min-height: 50px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.3);
+      color: var(--gray);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(240, 219, 79, 0.1);
+    }
+
+    .navpanel-btn:hover {
+      color: var(--primary);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(240, 219, 79, 0.2);
+    }
+
+    .navpanel-btn i {
+      font-size: 1.2rem;
+    }
+
+    /* ===== IMPROVED RIPPLE EFFECT ===== */
+    .ripple {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ink {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      transform: scale(0);
+      opacity: 1;
+      pointer-events: none;
+    }
+
+    .animate {
+      animation: ripple 0.6s linear;
+    }
+
+    @keyframes ripple {
+      100% {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+
+    /* ===== IMPROVED BUTTONS ===== */
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: var(--dark);
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      min-height: 44px;
+      min-width: 44px;
+      text-align: center;
+    }
+
+    .btn:hover,
+    .btn:focus {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 20px rgba(240, 219, 79, 0.2);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .btn-outline:hover,
+    .btn-outline:focus {
+      background: var(--primary);
+      color: var(--dark);
+    }
+
+    /* ===== IMPROVED HERO SECTION ===== */
+    .hero {
+      text-align: center;
+      padding: clamp(4rem, 10vw, 8rem) clamp(1rem, 3vw, 2rem);
+      position: relative;
+      overflow: hidden;
+      min-height: calc(100vh - var(--nav-height));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 50%, rgba(240, 219, 79, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+      z-index: -1;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 6vw, 4.5rem);
+      margin-bottom: clamp(1rem, 2vw, 1.5rem);
+      background: linear-gradient(to right, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1.2;
+      animation: float 6s ease-in-out infinite;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 1.5vw, 1.3rem);
+      color: var(--gray);
+      max-width: min(700px, 90vw);
+      margin: 0 auto clamp(1.5rem, 3vw, 2rem);
+    }
+
+    /* ===== IMPROVED SECTIONS ===== */
+    main {
+      flex: 1;
+      width: 100%;
+    }
+
+    section {
+      padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 3vw, 2rem);
+      max-width: var(--content-width);
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      margin-bottom: clamp(2rem, 4vw, 3.5rem);
+      text-align: center;
+      background: linear-gradient(to right, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      font-weight: 700;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(80px, 20vw);
+      height: 4px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: clamp(2rem, 4vw, 4rem);
+    }
+
+    /* ===== IMPROVED CONTENT CARDS ===== */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+      gap: clamp(1rem, 2vw, 1.5rem);
+      width: 100%;
+    }
+
+    .card {
+      background: var(--dark-light);
+      border: 1px solid rgba(240, 219, 79, 0.1);
+      border-radius: var(--border-radius);
+      padding: clamp(1.5rem, 3vw, 2rem);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      height: 100%;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(240, 219, 79, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
+      z-index: -1;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(240, 219, 79, 0.1);
+      border-color: var(--primary);
+    }
+
+    .card i {
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      color: var(--primary);
+      margin-bottom: clamp(1rem, 2vw, 1.5rem);
+    }
+
+    .card h3 {
+      margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+      color: var(--primary);
+      font-size: clamp(1.2rem, 2vw, 1.5rem);
+    }
+
+    .card p {
+      color: var(--gray);
+      margin-bottom: clamp(1rem, 2vw, 1.5rem);
+      font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+    }
+
+    /* ===== JAVASCRIPT-SPECIFIC CODE BLOCKS ===== */
+    .code-block {
+      background: var(--code-bg);
+      border-radius: var(--border-radius);
+      overflow-x: auto;
+      margin: clamp(1rem, 2vw, 1.5rem) 0;
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-size: clamp(0.85rem, 1vw, 0.95rem);
+      line-height: 1.5;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    .code-header {
+      background: #3a3a3a;
+      color: #ccc;
+      padding: clamp(0.5rem, 1vw, 0.7rem) clamp(0.75rem, 1.5vw, 1rem);
+      border-top-left-radius: var(--border-radius);
+      border-top-right-radius: var(--border-radius);
+      font-size: clamp(0.75rem, 1vw, 0.85rem);
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+    
+    .code-content {
+      padding: clamp(0.75rem, 1.5vw, 1rem);
+      background: var(--code-bg);
+    }
+
+    .code-content pre {
+      margin: 0;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    /* JavaScript Syntax Highlighting */
+    .js-keyword {
+      color: var(--keyword);
+    }
+    
+    .js-function {
+      color: var(--function);
+    }
+    
+    .js-string {
+      color: var(--string);
+    }
+    
+    .js-number {
+      color: var(--number);
+    }
+    
+    .js-comment {
+      color: var(--comment);
+    }
+    
+    .js-variable {
+      color: var(--variable);
+    }
+    
+    .js-operator {
+      color: #d4d4d4;
+    }
+    
+    .js-object {
+      color: #9cdcfe;
+    }
+
+    /* ===== JAVASCRIPT VISUAL EXAMPLES ===== */
+    .visual-example {
+      background: var(--dark-light);
+      border-radius: var(--border-radius);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .example-box {
+      width: 100px;
+      height: 100px;
+      background: var(--primary);
+      margin: 1rem auto;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--dark);
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .example-box:hover {
+      transform: scale(1.1);
+    }
+
+    .js-output {
+      background: var(--secondary);
+      padding: 1rem;
+      border-radius: 5px;
+      margin: 1rem 0;
+      font-family: 'Fira Code', monospace;
+      border-left: 4px solid var(--primary);
+    }
+
+    .interactive-area {
+      background: rgba(50, 51, 48, 0.3);
+      padding: 1.5rem;
+      border-radius: var(--border-radius);
+      margin: 1.5rem 0;
+    }
+
+    .demo-button {
+      background: var(--primary);
+      color: var(--dark);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: var(--transition);
+      margin: 5px;
+    }
+
+    .demo-button:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    /* ===== IMPROVED TYPOGRAPHY ===== */
+    h3 {
+      color: var(--accent);
+      margin-top: clamp(1.2rem, 2vw, 1.8rem);
+      font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+      line-height: 1.7;
+      font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+    }
+
+    ul, ol {
+      margin-bottom: clamp(1rem, 2vw, 1.5rem);
+      padding-left: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    li {
+      margin-bottom: clamp(0.5rem, 1vw, 0.7rem);
+      line-height: 1.6;
+    }
+
+    code {
+      background: rgba(240, 219, 79, 0.1);
+      padding: 0.1rem 0.4rem;
+      border-radius: 3px;
+      font-family: 'Fira Code', 'Courier New', monospace;
+      color: var(--primary);
+      font-size: clamp(0.85rem, 1vw, 0.95rem);
+      word-break: break-word;
+    }
+
+    /* ===== IMPROVED UTILITY CLASSES ===== */
+    .note, .warning, .definition {
+      border-left: 4px solid var(--accent);
+      padding: clamp(1rem, 2vw, 1.2rem);
+      margin: clamp(1rem, 2vw, 1.5rem) 0;
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+      background: rgba(240, 219, 79, 0.05);
+    }
+
+    .warning {
+      border-left-color: #ff9800;
+    }
+
+    .definition {
+      border: 1px solid rgba(219, 231, 245, 0.1);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .definition strong {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* ===== IMPROVED CONTACT SECTION ===== */
+    .contact {
+      text-align: center;
+      padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 2vw, 2rem);
+    }
+
+    .contact p {
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      color: var(--gray);
+      max-width: min(700px, 90vw);
+      margin: 0 auto clamp(2rem, 4vw, 3rem);
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: clamp(0.75rem, 1.5vw, 1rem);
+      margin-bottom: clamp(2rem, 4vw, 3rem);
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+      transition: var(--transition);
+      padding: clamp(0.5rem, 1vw, 0.75rem) clamp(1rem, 2vw, 1.5rem);
+      border: 1px solid var(--primary);
+      border-radius: 30px;
+      min-height: 44px;
+    }
+
+    .contact-link:hover,
+    .contact-link:focus {
+      background: var(--primary);
+      color: var(--dark);
+      transform: translateY(-3px);
+    }
+
+    .contact-link i {
+      font-size: clamp(1rem, 1.5vw, 1.3rem);
+    }
+
+    /* ===== IMPROVED FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: clamp(1.5rem, 3vw, 2rem) clamp(1rem, 2vw, 1.5rem);
+      background: var(--dark-light);
+      border-top: 1px solid rgba(240, 219, 79, 0.2);
+      color: var(--gray);
+      font-size: clamp(0.8rem, 1vw, 0.9rem);
+      margin-top: auto;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes typewriter {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .pulse {
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    /* ===== IMPROVED RESPONSIVE DESIGN ===== */
+    @media (max-width: 1100px) {
+      :root {
+        --nav-height: 60px;
+      }
+      
+      .hero h1 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+      }
+      
+      h2 {
+        font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+      }
+      
+      .card {
+        padding: 1.25rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .menu-toggle {
+        display: flex;
+      }
+      
+      .hero h1 {
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+      }
+      
+      h2 {
+        font-size: clamp(1.4rem, 3vw, 2rem);
+      }
+      
+      .hero-btns {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      
+      .btn {
+        width: 100%;
+        max-width: 250px;
+        padding: 12px 20px;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .code-block {
+        font-size: 0.8rem;
+      }
+      
+      .navpanel {
+        width: min(250px, 80vw);
+      }
+      
+      .contact-link {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --nav-height: 56px;
+      }
+      
+      .hero h1 {
+        font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      }
+      
+      .hero p {
+        font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+      }
+      
+      section {
+        padding: clamp(2rem, 4vw, 3rem) clamp(0.75rem, 2vw, 1rem);
+      }
+      
+      .card {
+        padding: 1.25rem 1rem;
+      }
+      
+      .code-block {
+        font-size: 0.75rem;
+      }
+      
+      .navpanel {
+        width: 100vw;
+      }
+      
+      footer {
+        padding: 1.25rem 1rem;
+      }
+    }
+
+    /* ===== PRINT STYLES ===== */
+    @media print {
+      nav, .menu-toggle, .navpanel, .btn, .contact-links, .visual-example, .js-output, .interactive-area {
+        display: none !important;
+      }
+      
+      body {
+        padding-top: 0;
+        background: white;
+        color: black;
+      }
+      
+      .hero h1 {
+        color: black;
+        background: none;
+        -webkit-text-fill-color: black;
+      }
+      
+      .card {
+        border: 1px solid #ddd;
+        page-break-inside: avoid;
+      }
+      
+      .code-block {
+        background: #f5f5f5;
+        color: #333;
+      }
+      
+      a {
+        color: black;
+        text-decoration: underline;
+      }
+    }
+
+    /* ===== HIGH CONTRAST MODE SUPPORT ===== */
+    @media (prefers-contrast: high) {
+      :root {
+        --primary: #ffff00;
+        --accent: #00ffff;
+      }
+      
+      .card {
+        border: 2px solid var(--primary);
+      }
+      
+      .btn {
+        border: 2px solid var(--primary);
+      }
+    }
+
+    /* ===== REDUCED MOTION ===== */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      
+      .floating, .pulse {
+        animation: none;
+      }
+      
+      .example-box:hover {
+        transform: none;
+      }
+    }
+</style>
+</head>
+<body>
+ 
+  <nav role="navigation" aria-label="Main navigation">
+    <div class="logo ripple" role="banner">Nerds Assemble</div>
+    
+    <div class="nav-links" role="menu">
+      <a href="../../index.html" class="ripple" role="menuitem">Home</a>
+      <a href="#services" class="ripple" role="menuitem">Services</a>
+      <a href="#contact" class="ripple" role="menuitem">Contact</a>
+      <a href="../../challenges/home-challenge.html" class="ripple" role="menuitem">CreativeKids Challenge</a>
+    </div>
+  </nav>
+  
+  <main id="main-content">
+    <section id="home" class="hero" role="banner">
+      <h1 class="floating">JavaScript Fundamentals</h1>
+      <p>Master the language of the web with our complete JavaScript guide for beginners</p>
+      <a href="#introduction" class="btn ripple" aria-label="Start learning JavaScript">Start Learning</a>
+    </section>
+    
+    <section id="services" aria-labelledby="services-heading">
+      <div class="services">
+        <div class="card ripple" role="article" aria-labelledby="introduction-heading">
+          <section id="introduction">
+            <h2>Introduction to JavaScript</h2>
+            <div class="definition">
+                <strong>JavaScript</strong> is a versatile, high-level programming language that makes web pages interactive. It's one of the three core technologies of web development, alongside HTML and CSS.
+            </div>
+            
+            <h3>What is JavaScript?</h3>
+            <p>JavaScript provides:</p>
+            <ul>
+                <li><strong>Interactivity:</strong> Respond to user actions</li>
+                <li><strong>Dynamic Content:</strong> Update content without page reloads</li>
+                <li><strong>Browser APIs:</strong> Access browser features and hardware</li>
+                <li><strong>Server-Side:</strong> Node.js enables backend development</li>
+                <li><strong>Frameworks:</strong> React, Angular, Vue for complex applications</li>
+            </ul>
+            
+            <div class="note">
+                <strong>ES6+ (ECMAScript 2015+):</strong> Modern JavaScript includes arrow functions, classes, modules, promises, and many other improvements.
+            </div>
+            
+            <h3>JavaScript in the Browser</h3>
+            <p>Adding JavaScript to HTML:</p>
+            
+            <div class="code-block">
+                <div class="code-header">index.html</div>
+                <div class="code-content">
+<pre><span class="html-tag">&lt;!DOCTYPE html&gt;</span>
+<span class="html-tag">&lt;html</span> <span class="html-attribute">lang</span>=<span class="html-value">"en"</span><span class="html-tag">&gt;</span>
+<span class="html-tag">&lt;head&gt;</span>
+    <span class="html-tag">&lt;meta</span> <span class="html-attribute">charset</span>=<span class="html-value">"UTF-8"</span><span class="html-tag">&gt;</span>
+    <span class="html-tag">&lt;title&gt;</span>JavaScript Example<span class="html-tag">&lt;/title&gt;</span>
+    <span class="html-comment">&lt;!-- External JavaScript --&gt;</span>
+    <span class="html-tag">&lt;script</span> <span class="html-attribute">src</span>=<span class="html-value">"script.js"</span> <span class="html-attribute">defer</span><span class="html-tag">&gt;</span><span class="html-tag">&lt;/script&gt;</span>
+<span class="html-tag">&lt;/head&gt;</span>
+<span class="html-tag">&lt;body&gt;</span>
+    <span class="html-tag">&lt;h1</span> <span class="html-attribute">id</span>=<span class="html-value">"title"</span><span class="html-tag">&gt;</span>Hello JavaScript!<span class="html-tag">&lt;/h1&gt;</span>
+    
+    <span class="html-comment">&lt;!-- Inline JavaScript --&gt;</span>
+    <span class="html-tag">&lt;script&gt;</span>
+        <span class="js-comment">// Simple JavaScript code</span>
+        <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">'JavaScript is loaded!'</span>);
+    <span class="html-tag">&lt;/script&gt;</span>
+<span class="html-tag">&lt;/body&gt;</span>
+<span class="html-tag">&lt;/html&gt;</span></pre>
+                </div>
+            </div>
+            
+            <h3>Your First JavaScript Program</h3>
+            <div class="code-block">
+                <div class="code-header">first-program.js</div>
+                <div class="code-content">
+<pre><span class="js-comment">// This is a single-line comment</span>
+
+<span class="js-comment">/*
+   This is a multi-line comment
+   JavaScript code goes here
+*/</span>
+
+<span class="js-comment">// Output to console</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">'Hello, World!'</span>);
+
+<span class="js-comment">// Alert dialog</span>
+<span class="js-variable">alert</span>(<span class="js-string">'Welcome to JavaScript!'</span>);
+
+<span class="js-comment">// Writing to HTML document</span>
+<span class="js-variable">document</span>.<span class="js-function">write</span>(<span class="js-string">'&lt;p&gt;This is JavaScript&lt;/p&gt;'</span>);</pre>
+                </div>
+            </div>
+            
+            <div class="interactive-area">
+                <h4>Try It Live:</h4>
+                <button class="demo-button" onclick="alert('Hello from JavaScript!')">Show Alert</button>
+                <button class="demo-button" onclick="document.getElementById('demo-output').textContent = 'You clicked the button!'">Update Text</button>
+                <button class="demo-button" onclick="console.log('Check the console!')">Log to Console</button>
+                <div id="demo-output" class="js-output">Output will appear here...</div>
+            </div>
+        </section>
+
+        <section id="variables-datatypes">
+            <h2>Variables and Data Types</h2>
+            
+            <h3>Declaring Variables</h3>
+            <div class="code-block">
+                <div class="code-header">variables.js</div>
+                <div class="code-content">
+<pre><span class="js-comment">// ES5: var (function-scoped)</span>
+<span class="js-keyword">var</span> oldWay = <span class="js-string">"I'm old school"</span>;
+
+<span class="js-comment">// ES6+: let (block-scoped, can be reassigned)</span>
+<span class="js-keyword">let</span> name = <span class="js-string">"John"</span>;
+name = <span class="js-string">"Jane"</span>; <span class="js-comment">// Reassignment allowed</span>
+
+<span class="js-comment">// ES6+: const (block-scoped, cannot be reassigned)</span>
+<span class="js-keyword">const</span> pi = <span class="js-number">3.14159</span>;
+<span class="js-comment">// pi = 3.14; // Error: Assignment to constant variable</span>
+
+<span class="js-comment">// Variable naming conventions</span>
+<span class="js-keyword">let</span> userName = <span class="js-string">"john_doe"</span>; <span class="js-comment">// camelCase</span>
+<span class="js-keyword">const</span> MAX_SIZE = <span class="js-number">100</span>; <span class="js-comment">// UPPER_SNAKE_CASE for constants</span>
+<span class="js-keyword">let</span> $price = <span class="js-number">9.99</span>; <span class="js-comment">// $ and _ are allowed</span>
+<span class="js-keyword">let</span> _private = <span class="js-string">"hidden"</span>;
+
+<span class="js-comment">// Multiple variables</span>
+<span class="js-keyword">let</span> a = <span class="js-number">1</span>, b = <span class="js-number">2</span>, c = <span class="js-number">3</span>;</pre>
+                </div>
+            </div>
+            
+            <h3>Data Types</h3>
+            <div class="code-block">
+                <div class="code-header">datatypes.js</div>
+                <div class="code-content">
+<pre><span class="js-comment">// Primitive Data Types</span>
+
+<span class="js-comment">// 1. String</span>
+<span class="js-keyword">let</span> message = <span class="js-string">"Hello World"</span>;
+<span class="js-keyword">let</span> singleQuote = <span class="js-string">'Single quotes work too'</span>;
+<span class="js-keyword">let</span> backticks = <span class="js-string">`Template literals ${message}`</span>;
+
+<span class="js-comment">// 2. Number</span>
+<span class="js-keyword">let</span> integer = <span class="js-number">42</span>;
+<span class="js-keyword">let</span> float = <span class="js-number">3.14</span>;
+<span class="js-keyword">let</span> infinity = <span class="js-keyword">Infinity</span>;
+<span class="js-keyword">let</span> notANumber = <span class="js-keyword">NaN</span>;
+
+<span class="js-comment">// 3. Boolean</span>
+<span class="js-keyword">let</span> isTrue = <span class="js-keyword">true</span>;
+<span class="js-keyword">let</span> isFalse = <span class="js-keyword">false</span>;
+
+<span class="js-comment">// 4. Undefined</span>
+<span class="js-keyword">let</span> notDefined;
+<span class="js-variable">console</span>.<span class="js-function">log</span>(notDefined); <span class="js-comment">// undefined</span>
+
+<span class="js-comment">// 5. Null</span>
+<span class="js-keyword">let</span> emptyValue = <span class="js-keyword">null</span>;
+
+<span class="js-comment">// 6. Symbol (ES6)</span>
+<span class="js-keyword">let</span> sym = <span class="js-function">Symbol</span>(<span class="js-string">'unique'</span>);
+
+<span class="js-comment">// 7. BigInt (ES2020)</span>
+<span class="js-keyword">let</span> bigNumber = <span class="js-number">9007199254740991</span><span class="js-variable">n</span>;
+
+<span class="js-comment">// Reference Data Types</span>
+
+<span class="js-comment">// Object</span>
+<span class="js-keyword">let</span> person = {
+  name: <span class="js-string">"John"</span>,
+  age: <span class="js-number">30</span>,
+  isStudent: <span class="js-keyword">false</span>
+};
+
+<span class="js-comment">// Array</span>
+<span class="js-keyword">let</span> colors = [<span class="js-string">"red"</span>, <span class="js-string">"green"</span>, <span class="js-string">"blue"</span>];
+
+<span class="js-comment">// Function</span>
+<span class="js-keyword">function</span> <span class="js-function">greet</span>() {
+  <span class="js-keyword">return</span> <span class="js-string">"Hello!"</span>;
+}</pre>
+                </div>
+            </div>
+            
+            <h3>Type Checking and Conversion</h3>
+            <div class="code-block">
+                <div class="code-header">type-conversion.js</div>
+                <div class="code-content">
+<pre><span class="js-comment">// Type checking</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-keyword">typeof</span> <span class="js-string">"hello"</span>); <span class="js-comment">// "string"</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-keyword">typeof</span> <span class="js-number">42</span>); <span class="js-comment">// "number"</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-keyword">typeof</span> <span class="js-keyword">true</span>); <span class="js-comment">// "boolean"</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-keyword">typeof</span> {}); <span class="js-comment">// "object"</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-keyword">typeof</span> []); <span class="js-comment">// "object" (arrays are objects)</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-keyword">typeof</span> <span class="js-keyword">null</span>); <span class="js-comment">// "object" (historical bug)</span>
+
+<span class="js-comment">// Type conversion</span>
+
+<span class="js-comment">// String conversion</span>
+<span class="js-keyword">let</span> num = <span class="js-number">123</span>;
+<span class="js-keyword">let</span> str = <span class="js-function">String</span>(num); <span class="js-comment">// "123"</span>
+<span class="js-keyword">let</span> str2 = num.<span class="js-function">toString</span>(); <span class="js-comment">// "123"</span>
+<span class="js-keyword">let</span> str3 = num + <span class="js-string">""</span>; <span class="js-comment">// "123" (implicit)</span>
+
+<span class="js-comment">// Number conversion</span>
+<span class="js-keyword">let</span> strNum = <span class="js-string">"123"</span>;
+<span class="js-keyword">let</span> converted = <span class="js-function">Number</span>(strNum); <span class="js-comment">// 123</span>
+<span class="js-keyword">let</span> int = <span class="js-function">parseInt</span>(<span class="js-string">"123px"</span>); <span class="js-comment">// 123</span>
+<span class="js-keyword">let</span> float = <span class="js-function">parseFloat</span>(<span class="js-string">"12.34"</span>); <span class="js-comment">// 12.34</span>
+<span class="js-keyword">let</span> unary = +<span class="js-string">"123"</span>; <span class="js-comment">// 123</span>
+
+<span class="js-comment">// Boolean conversion</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-keyword">Boolean</span>(<span class="js-number">1</span>)); <span class="js-comment">// true</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-keyword">Boolean</span>(<span class="js-number">0</span>)); <span class="js-comment">// false</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-keyword">Boolean</span>(<span class="js-string">""</span>)); <span class="js-comment">// false</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-keyword">Boolean</span>(<span class="js-string">"hello"</span>)); <span class="js-comment">// true</span></pre>
+                </div>
+            </div>
+            
+            <div class="interactive-area">
+                <h4>Variable Demo:</h4>
+                <div class="js-output" id="var-demo">
+                    Click buttons to see variable operations
+                </div>
+                <button class="demo-button" onclick="
+                    let demoNum = 10;
+                    demoNum += 5;
+                    document.getElementById('var-demo').textContent = '10 + 5 = ' + demoNum;
+                ">Number Operation</button>
+                <button class="demo-button" onclick="
+                    let demoStr = 'Hello';
+                    demoStr += ' World!';
+                    document.getElementById('var-demo').textContent = demoStr;
+                ">String Concatenation</button>
+                <button class="demo-button" onclick="
+                    const demoBool = true;
+                    document.getElementById('var-demo').textContent = 'Boolean value: ' + demoBool + ' (type: ' + typeof demoBool + ')';
+                ">Boolean Type</button>
+            </div>
+        </section>
+
+        <section id="operators">
+            <h2>Operators</h2>
+            
+            <h3>Arithmetic Operators</h3>
+            <div class="code-block">
+                <div class="code-header">arithmetic.js</div>
+                <div class="code-content">
+<pre><span class="js-keyword">let</span> a = <span class="js-number">10</span>, b = <span class="js-number">3</span>;
+
+<span class="js-comment">// Addition</span>
+<span class="js-keyword">let</span> sum = a + b; <span class="js-comment">// 13</span>
+
+<span class="js-comment">// Subtraction</span>
+<span class="js-keyword">let</span> difference = a - b; <span class="js-comment">// 7</span>
+
+<span class="js-comment">// Multiplication</span>
+<span class="js-keyword">let</span> product = a * b; <span class="js-comment">// 30</span>
+
+<span class="js-comment">// Division</span>
+<span class="js-keyword">let</span> quotient = a / b; <span class="js-comment">// 3.333...</span>
+
+<span class="js-comment">// Remainder (Modulus)</span>
+<span class="js-keyword">let</span> remainder = a % b; <span class="js-comment">// 1</span>
+
+<span class="js-comment">// Exponentiation (ES2016)</span>
+<span class="js-keyword">let</span> power = a ** b; <span class="js-comment">// 1000 (10³)</span>
+
+<span class="js-comment">// Increment</span>
+a++; <span class="js-comment">// a becomes 11 (post-increment)</span>
+++a; <span class="js-comment">// a becomes 12 (pre-increment)</span>
+
+<span class="js-comment">// Decrement</span>
+b--; <span class="js-comment">// b becomes 2 (post-decrement)</span>
+--b; <span class="js-comment">// b becomes 1 (pre-decrement)</span>
+
+<span class="js-comment">// String concatenation with +</span>
+<span class="js-keyword">let</span> firstName = <span class="js-string">"John"</span>;
+<span class="js-keyword">let</span> lastName = <span class="js-string">"Doe"</span>;
+<span class="js-keyword">let</span> fullName = firstName + <span class="js-string">" "</span> + lastName; <span class="js-comment">// "John Doe"</span></pre>
+                </div>
+            </div>
+            
+            <h3>Assignment Operators</h3>
+            <div class="code-block">
+                <div class="code-header">assignment.js</div>
+                <div class="code-content">
+<pre><span class="js-keyword">let</span> x = <span class="js-number">10</span>;
+
+<span class="js-comment">// Basic assignment</span>
+x = <span class="js-number">5</span>; <span class="js-comment">// x is now 5</span>
+
+<span class="js-comment">// Addition assignment</span>
+x += <span class="js-number">3</span>; <span class="js-comment">// x = x + 3 (x becomes 8)</span>
+
+<span class="js-comment">// Subtraction assignment</span>
+x -= <span class="js-number">2</span>; <span class="js-comment">// x = x - 2 (x becomes 6)</span>
+
+<span class="js-comment">// Multiplication assignment</span>
+x *= <span class="js-number">4</span>; <span class="js-comment">// x = x * 4 (x becomes 24)</span>
+
+<span class="js-comment">// Division assignment</span>
+x /= <span class="js-number">3</span>; <span class="js-comment">// x = x / 3 (x becomes 8)</span>
+
+<span class="js-comment">// Remainder assignment</span>
+x %= <span class="js-number">5</span>; <span class="js-comment">// x = x % 5 (x becomes 3)</span>
+
+<span class="js-comment">// Exponentiation assignment</span>
+x **= <span class="js-number">2</span>; <span class="js-comment">// x = x ** 2 (x becomes 9)</span>
+
+<span class="js-comment">// String concatenation assignment</span>
+<span class="js-keyword">let</span> text = <span class="js-string">"Hello"</span>;
+text += <span class="js-string">" World"</span>; <span class="js-comment">// text becomes "Hello World"</span></pre>
+                </div>
+            </div>
+            
+            <h3>Comparison Operators</h3>
+            <div class="code-block">
+                <div class="code-header">comparison.js</div>
+                <div class="code-content">
+<pre><span class="js-keyword">let</span> a = <span class="js-number">5</span>, b = <span class="js-number">10</span>, c = <span class="js-string">"5"</span>;
+
+<span class="js-comment">// Equality (loose equality, converts types)</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(a == c); <span class="js-comment">// true (5 == "5")</span>
+
+<span class="js-comment">// Inequality (loose)</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(a != b); <span class="js-comment">// true</span>
+
+<span class="js-comment">// Strict equality (no type conversion)</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(a === c); <span class="js-comment">// false (5 !== "5")</span>
+
+<span class="js-comment">// Strict inequality</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(a !== c); <span class="js-comment">// true</span>
+
+<span class="js-comment">// Greater than</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(b > a); <span class="js-comment">// true</span>
+
+<span class="js-comment">// Less than</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(a < b); <span class="js-comment">// true</span>
+
+<span class="js-comment">// Greater than or equal to</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(a >= <span class="js-number">5</span>); <span class="js-comment">// true</span>
+
+<span class="js-comment">// Less than or equal to</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(a <= <span class="js-number">4</span>); <span class="js-comment">// false</span>
+
+<span class="js-comment">// Special cases</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-keyword">null</span> == <span class="js-keyword">undefined</span>); <span class="js-comment">// true</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-keyword">null</span> === <span class="js-keyword">undefined</span>); <span class="js-comment">// false</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-keyword">NaN</span> == <span class="js-keyword">NaN</span>); <span class="js-comment">// false (special case)</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-keyword">Object</span>.<span class="js-function">is</span>(<span class="js-keyword">NaN</span>, <span class="js-keyword">NaN</span>)); <span class="js-comment">// true</span></pre>
+                </div>
+            </div>
+            
+            <h3>Logical Operators</h3>
+            <div class="code-block">
+                <div class="code-header">logical.js</div>
+                <div class="code-content">
+<pre><span class="js-keyword">let</span> a = <span class="js-keyword">true</span>, b = <span class="js-keyword">false</span>, c = <span class="js-keyword">true</span>;
+
+<span class="js-comment">// Logical AND (&&)</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(a && c); <span class="js-comment">// true (both true)</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(a && b); <span class="js-comment">// false (one false)</span>
+
+<span class="js-comment">// Logical OR (||)</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(a || b); <span class="js-comment">// true (one true)</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(b || b); <span class="js-comment">// false (both false)</span>
+
+<span class="js-comment">// Logical NOT (!)</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(!a); <span class="js-comment">// false</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(!b); <span class="js-comment">// true</span>
+
+<span class="js-comment">// Double NOT (!!) - converts to boolean</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(!!<span class="js-string">"hello"</span>); <span class="js-comment">// true</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(!!<span class="js-number">0</span>); <span class="js-comment">// false</span>
+
+<span class="js-comment">// Short-circuit evaluation</span>
+<span class="js-keyword">let</span> result = a && <span class="js-string">"Both true"</span>; <span class="js-comment">// "Both true"</span>
+<span class="js-keyword">let</span> defaultName = <span class="js-keyword">null</span> || <span class="js-string">"Guest"</span>; <span class="js-comment">// "Guest"</span>
+
+<span class="js-comment">// Nullish coalescing operator (??) - ES2020</span>
+<span class="js-keyword">let</span> value = <span class="js-keyword">null</span> ?? <span class="js-string">"default"</span>; <span class="js-comment">// "default"</span>
+<span class="js-keyword">let</span> value2 = <span class="js-number">0</span> ?? <span class="js-string">"default"</span>; <span class="js-comment">// 0 (only null/undefined trigger default)</span>
+
+<span class="js-comment">// Optional chaining (?.) - ES2020</span>
+<span class="js-keyword">let</span> user = {
+  profile: {
+    name: <span class="js-string">"John"</span>
+  }
+};
+<span class="js-variable">console</span>.<span class="js-function">log</span>(user?.profile?.name); <span class="js-comment">// "John"</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(user?.address?.city); <span class="js-comment">// undefined (no error)</span></pre>
+                </div>
+            </div>
+            
+            <div class="interactive-area">
+                <h4>Operator Demo:</h4>
+                <div class="js-output" id="op-demo">
+                    Operator results will appear here
+                </div>
+                <button class="demo-button" onclick="
+                    let x = 10, y = 3;
+                    let result = `10 + 3 = ${x + y}\n10 - 3 = ${x - y}\n10 * 3 = ${x * y}\n10 / 3 = ${(x / y).toFixed(2)}\n10 % 3 = ${x % y}`;
+                    document.getElementById('op-demo').textContent = result;
+                ">Arithmetic</button>
+                <button class="demo-button" onclick="
+                    let a = 5, b = '5';
+                    let result = `5 == '5': ${a == b}\n5 === '5': ${a === b}\n5 != '5': ${a != b}\n5 !== '5': ${a !== b}`;
+                    document.getElementById('op-demo').textContent = result;
+                ">Comparison</button>
+                <button class="demo-button" onclick="
+                    let p = true, q = false;
+                    let result = `true && false: ${p && q}\ntrue || false: ${p || q}\n!true: ${!p}\n!false: ${!q}`;
+                    document.getElementById('op-demo').textContent = result;
+                ">Logical</button>
+            </div>
+        </section>
+
+        <section id="control-flow">
+            <h2>Control Flow</h2>
+            
+            <h3>Conditional Statements</h3>
+            <div class="code-block">
+                <div class="code-header">conditionals.js</div>
+                <div class="code-content">
+<pre><span class="js-comment">// if statement</span>
+<span class="js-keyword">let</span> age = <span class="js-number">18</span>;
+
+<span class="js-keyword">if</span> (age >= <span class="js-number">18</span>) {
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"You are an adult"</span>);
+}
+
+<span class="js-comment">// if...else statement</span>
+<span class="js-keyword">let</span> temperature = <span class="js-number">25</span>;
+
+<span class="js-keyword">if</span> (temperature > <span class="js-number">30</span>) {
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"It's hot outside"</span>);
+} <span class="js-keyword">else</span> {
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"The weather is pleasant"</span>);
+}
+
+<span class="js-comment">// if...else if...else</span>
+<span class="js-keyword">let</span> score = <span class="js-number">85</span>;
+<span class="js-keyword">let</span> grade;
+
+<span class="js-keyword">if</span> (score >= <span class="js-number">90</span>) {
+  grade = <span class="js-string">"A"</span>;
+} <span class="js-keyword">else</span> <span class="js-keyword">if</span> (score >= <span class="js-number">80</span>) {
+  grade = <span class="js-string">"B"</span>;
+} <span class="js-keyword">else</span> <span class="js-keyword">if</span> (score >= <span class="js-number">70</span>) {
+  grade = <span class="js-string">"C"</span>;
+} <span class="js-keyword">else</span> <span class="js-keyword">if</span> (score >= <span class="js-number">60</span>) {
+  grade = <span class="js-string">"D"</span>;
+} <span class="js-keyword">else</span> {
+  grade = <span class="js-string">"F"</span>;
+}
+
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">`Your grade is: </span><span class="js-variable">${grade}</span><span class="js-string">`</span>);
+
+<span class="js-comment">// Ternary operator (conditional operator)</span>
+<span class="js-keyword">let</span> isMember = <span class="js-keyword">true</span>;
+<span class="js-keyword">let</span> discount = isMember ? <span class="js-number">0.1</span> : <span class="js-number">0</span>; <span class="js-comment">// 10% discount for members</span>
+
+<span class="js-comment">// Nested ternary (avoid for complex logic)</span>
+<span class="js-keyword">let</span> speed = <span class="js-number">75</span>;
+<span class="js-keyword">let</span> message = speed > <span class="js-number">100</span> ? <span class="js-string">"Too fast"</span> : 
+                speed > <span class="js-number">80</span> ? <span class="js-string">"Fast"</span> : 
+                speed > <span class="js-number">60</span> ? <span class="js-string">"Moderate"</span> : 
+                <span class="js-string">"Slow"</span>;
+
+<span class="js-comment">// switch statement</span>
+<span class="js-keyword">let</span> day = <span class="js-string">"Monday"</span>;
+<span class="js-keyword">let</span> dayType;
+
+<span class="js-keyword">switch</span> (day) {
+  <span class="js-keyword">case</span> <span class="js-string">"Monday"</span>:
+  <span class="js-keyword">case</span> <span class="js-string">"Tuesday"</span>:
+  <span class="js-keyword">case</span> <span class="js-string">"Wednesday"</span>:
+  <span class="js-keyword">case</span> <span class="js-string">"Thursday"</span>:
+  <span class="js-keyword">case</span> <span class="js-string">"Friday"</span>:
+    dayType = <span class="js-string">"Weekday"</span>;
+    <span class="js-keyword">break</span>;
+  <span class="js-keyword">case</span> <span class="js-string">"Saturday"</span>:
+  <span class="js-keyword">case</span> <span class="js-string">"Sunday"</span>:
+    dayType = <span class="js-string">"Weekend"</span>;
+    <span class="js-keyword">break</span>;
+  <span class="js-keyword">default</span>:
+    dayType = <span class="js-string">"Invalid day"</span>;
+}
+
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">`</span><span class="js-variable">${day}</span><span class="js-string"> is a </span><span class="js-variable">${dayType}</span><span class="js-string">`</span>);</pre>
+                </div>
+            </div>
+            
+            <h3>Loops</h3>
+            <div class="code-block">
+                <div class="code-header">loops.js</div>
+                <div class="code-content">
+<pre><span class="js-comment">// for loop</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"Counting from 1 to 5:"</span>);
+<span class="js-keyword">for</span> (<span class="js-keyword">let</span> i = <span class="js-number">1</span>; i <= <span class="js-number">5</span>; i++) {
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(i);
+}
+
+<span class="js-comment">// for loop with array</span>
+<span class="js-keyword">let</span> fruits = [<span class="js-string">"Apple"</span>, <span class="js-string">"Banana"</span>, <span class="js-string">"Cherry"</span>];
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"Fruits:"</span>);
+<span class="js-keyword">for</span> (<span class="js-keyword">let</span> i = <span class="js-number">0</span>; i < fruits.<span class="js-variable">length</span>; i++) {
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">`</span><span class="js-variable">${i + 1}</span><span class="js-string">. </span><span class="js-variable">${fruits[i]}</span><span class="js-string">`</span>);
+}
+
+<span class="js-comment">// while loop</span>
+<span class="js-keyword">let</span> count = <span class="js-number">1</span>;
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"While loop:"</span>);
+<span class="js-keyword">while</span> (count <= <span class="js-number">3</span>) {
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">`Count: </span><span class="js-variable">${count}</span><span class="js-string">`</span>);
+  count++;
+}
+
+<span class="js-comment">// do...while loop (executes at least once)</span>
+<span class="js-keyword">let</span> number = <span class="js-number">10</span>;
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"Do...while loop:"</span>);
+<span class="js-keyword">do</span> {
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">`Number: </span><span class="js-variable">${number}</span><span class="js-string">`</span>);
+  number++;
+} <span class="js-keyword">while</span> (number < <span class="js-number">10</span>); <span class="js-comment">// Condition false initially</span>
+
+<span class="js-comment">// for...of loop (ES6) - for arrays, strings</span>
+<span class="js-keyword">let</span> colors = [<span class="js-string">"red"</span>, <span class="js-string">"green"</span>, <span class="js-string">"blue"</span>];
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"For...of loop:"</span>);
+<span class="js-keyword">for</span> (<span class="js-keyword">let</span> color <span class="js-keyword">of</span> colors) {
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(color);
+}
+
+<span class="js-comment">// for...in loop - for object properties</span>
+<span class="js-keyword">let</span> person = { name: <span class="js-string">"John"</span>, age: <span class="js-number">30</span>, city: <span class="js-string">"New York"</span> };
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"For...in loop:"</span>);
+<span class="js-keyword">for</span> (<span class="js-keyword">let</span> key <span class="js-keyword">in</span> person) {
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">`</span><span class="js-variable">${key}</span><span class="js-string">: </span><span class="js-variable">${person[key]}</span><span class="js-string">`</span>);
+}
+
+<span class="js-comment">// Loop control statements</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"Break and continue:"</span>);
+<span class="js-keyword">for</span> (<span class="js-keyword">let</span> i = <span class="js-number">1</span>; i <= <span class="js-number">10</span>; i++) {
+  <span class="js-keyword">if</span> (i === <span class="js-number">5</span>) {
+    <span class="js-keyword">continue</span>; <span class="js-comment">// Skip 5</span>
+  }
+  <span class="js-keyword">if</span> (i === <span class="js-number">8</span>) {
+    <span class="js-keyword">break</span>; <span class="js-comment">// Stop at 8</span>
+  }
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(i); <span class="js-comment">// Prints 1,2,3,4,6,7</span>
+}</pre>
+                </div>
+            </div>
+            
+            <h3>Error Handling</h3>
+            <div class="code-block">
+                <div class="code-header">error-handling.js</div>
+                <div class="code-content">
+<pre><span class="js-comment">// try...catch statement</span>
+<span class="js-keyword">try</span> {
+  <span class="js-comment">// Code that might throw an error</span>
+  <span class="js-keyword">let</span> result = riskyOperation();
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"Result:"</span>, result);
+} <span class="js-keyword">catch</span> (error) {
+  <span class="js-comment">// Handle the error</span>
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"An error occurred:"</span>, error.<span class="js-variable">message</span>);
+} <span class="js-keyword">finally</span> {
+  <span class="js-comment">// This always executes</span>
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"Cleanup complete"</span>);
+}
+
+<span class="js-comment">// Throwing custom errors</span>
+<span class="js-keyword">function</span> <span class="js-function">divide</span>(a, b) {
+  <span class="js-keyword">if</span> (b === <span class="js-number">0</span>) {
+    <span class="js-keyword">throw</span> <span class="js-keyword">new</span> <span class="js-function">Error</span>(<span class="js-string">"Division by zero is not allowed"</span>);
+  }
+  <span class="js-keyword">return</span> a / b;
+}
+
+<span class="js-keyword">try</span> {
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-function">divide</span>(<span class="js-number">10</span>, <span class="js-number">2</span>)); <span class="js-comment">// 5</span>
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-function">divide</span>(<span class="js-number">10</span>, <span class="js-number">0</span>)); <span class="js-comment">// Throws error</span>
+} <span class="js-keyword">catch</span> (error) {
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"Error:"</span>, error.<span class="js-variable">message</span>);
+}
+
+<span class="js-comment">// Error types</span>
+<span class="js-keyword">try</span> {
+  <span class="js-comment">// ReferenceError</span>
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(undefinedVariable);
+} <span class="js-keyword">catch</span> (error) {
+  <span class="js-keyword">if</span> (error <span class="js-keyword">instanceof</span> <span class="js-variable">ReferenceError</span>) {
+    <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"ReferenceError:"</span>, error.<span class="js-variable">message</span>);
+  }
+}
+
+<span class="js-comment">// Custom error classes (ES6)</span>
+<span class="js-keyword">class</span> <span class="js-variable">ValidationError</span> <span class="js-keyword">extends</span> <span class="js-variable">Error</span> {
+  <span class="js-function">constructor</span>(message) {
+    <span class="js-keyword">super</span>(message);
+    <span class="js-keyword">this</span>.<span class="js-variable">name</span> = <span class="js-string">"ValidationError"</span>;
+  }
+}
+
+<span class="js-keyword">try</span> {
+  <span class="js-keyword">throw</span> <span class="js-keyword">new</span> <span class="js-function">ValidationError</span>(<span class="js-string">"Invalid input"</span>);
+} <span class="js-keyword">catch</span> (error) {
+  <span class="js-keyword">if</span> (error <span class="js-keyword">instanceof</span> <span class="js-variable">ValidationError</span>) {
+    <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"Custom error caught:"</span>, error.<span class="js-variable">message</span>);
+  }
+}</pre>
+                </div>
+            </div>
+            
+            <div class="interactive-area">
+                <h4>Control Flow Demo:</h4>
+                <div class="js-output" id="cf-demo">
+                    Click buttons to test control flow
+                </div>
+                <button class="demo-button" onclick="
+                    let hour = new Date().getHours();
+                    let greeting;
+                    if (hour < 12) greeting = 'Good morning!';
+                    else if (hour < 18) greeting = 'Good afternoon!';
+                    else greeting = 'Good evening!';
+                    document.getElementById('cf-demo').textContent = `Current hour: ${hour}. ${greeting}`;
+                ">If/Else</button>
+                <button class="demo-button" onclick="
+                    let output = '';
+                    for (let i = 1; i <= 5; i++) {
+                        output += `Loop iteration ${i}\n`;
+                    }
+                    document.getElementById('cf-demo').textContent = output;
+                ">For Loop</button>
+                <button class="demo-button" onclick="
+                    try {
+                        let x = y + 1; // y is not defined
+                    } catch (error) {
+                        document.getElementById('cf-demo').textContent = `Error caught: ${error.name}: ${error.message}`;
+                    }
+                ">Try/Catch</button>
+            </div>
+        </section>
+
+        <section id="functions">
+            <h2>Functions</h2>
+            
+            <h3>Function Declarations</h3>
+            <div class="code-block">
+                <div class="code-header">functions.js</div>
+                <div class="code-content">
+<pre><span class="js-comment">// Function declaration (hoisted)</span>
+<span class="js-keyword">function</span> <span class="js-function">greet</span>(name) {
+  <span class="js-keyword">return</span> <span class="js-string">`Hello, </span><span class="js-variable">${name}</span><span class="js-string">!`</span>;
+}
+
+<span class="js-comment">// Function expression (not hoisted)</span>
+<span class="js-keyword">const</span> <span class="js-function">multiply</span> = <span class="js-keyword">function</span>(a, b) {
+  <span class="js-keyword">return</span> a * b;
+};
+
+<span class="js-comment">// Arrow function (ES6)</span>
+<span class="js-keyword">const</span> <span class="js-function">add</span> = (a, b) => {
+  <span class="js-keyword">return</span> a + b;
+};
+
+<span class="js-comment">// Arrow function with implicit return</span>
+<span class="js-keyword">const</span> <span class="js-function">square</span> = x => x * x;
+
+<span class="js-comment">// Arrow function with no parameters</span>
+<span class="js-keyword">const</span> <span class="js-function">sayHello</span> = () => <span class="js-string">"Hello World!"</span>;
+
+<span class="js-comment">// Calling functions</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-function">greet</span>(<span class="js-string">"Alice"</span>)); <span class="js-comment">// "Hello, Alice!"</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-function">multiply</span>(<span class="js-number">4</span>, <span class="js-number">5</span>)); <span class="js-comment">// 20</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-function">add</span>(<span class="js-number">10</span>, <span class="js-number">20</span>)); <span class="js-comment">// 30</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-function">square</span>(<span class="js-number">6</span>)); <span class="js-comment">// 36</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-function">sayHello</span>()); <span class="js-comment">// "Hello World!"</span>
+
+<span class="js-comment">// Default parameters (ES6)</span>
+<span class="js-keyword">function</span> <span class="js-function">createUser</span>(name, age = <span class="js-number">18</span>, isActive = <span class="js-keyword">true</span>) {
+  <span class="js-keyword">return</span> {
+    name,
+    age,
+    isActive
+  };
+}
+
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-function">createUser</span>(<span class="js-string">"John"</span>)); <span class="js-comment">// Uses default age and isActive</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-function">createUser</span>(<span class="js-string">"Jane"</span>, <span class="js-number">25</span>)); <span class="js-comment">// Uses default isActive only</span>
+
+<span class="js-comment">// Rest parameters (ES6)</span>
+<span class="js-keyword">function</span> <span class="js-function">sum</span>(...numbers) {
+  <span class="js-keyword">return</span> numbers.<span class="js-function">reduce</span>((total, num) => total + num, <span class="js-number">0</span>);
+}
+
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-function">sum</span>(<span class="js-number">1</span>, <span class="js-number">2</span>, <span class="js-number">3</span>)); <span class="js-comment">// 6</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-function">sum</span>(<span class="js-number">1</span>, <span class="js-number">2</span>, <span class="js-number">3</span>, <span class="js-number">4</span>, <span class="js-number">5</span>)); <span class="js-comment">// 15</span>
+
+<span class="js-comment">// Function returning a function</span>
+<span class="js-keyword">function</span> <span class="js-function">multiplier</span>(factor) {
+  <span class="js-keyword">return</span> <span class="js-keyword">function</span>(number) {
+    <span class="js-keyword">return</span> number * factor;
+  };
+}
+
+<span class="js-keyword">const</span> double = <span class="js-function">multiplier</span>(<span class="js-number">2</span>);
+<span class="js-keyword">const</span> triple = <span class="js-function">multiplier</span>(<span class="js-number">3</span>);
+
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-function">double</span>(<span class="js-number">5</span>)); <span class="js-comment">// 10</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-function">triple</span>(<span class="js-number">5</span>)); <span class="js-comment">// 15</span></pre>
+                </div>
+            </div>
+            
+            <h3>Scope and Closures</h3>
+            <div class="code-block">
+                <div class="code-header">scope-closures.js</div>
+                <div class="code-content">
+<pre><span class="js-comment">// Global scope</span>
+<span class="js-keyword">let</span> globalVar = <span class="js-string">"I'm global"</span>;
+
+<span class="js-keyword">function</span> <span class="js-function">testScope</span>() {
+  <span class="js-comment">// Function scope</span>
+  <span class="js-keyword">let</span> functionVar = <span class="js-string">"I'm in function scope"</span>;
+  
+  <span class="js-keyword">if</span> (<span class="js-keyword">true</span>) {
+    <span class="js-comment">// Block scope (ES6 let/const)</span>
+    <span class="js-keyword">let</span> blockVar = <span class="js-string">"I'm in block scope"</span>;
+    <span class="js-keyword">var</span> oldVar = <span class="js-string">"I'm function-scoped (var)"</span>; <span class="js-comment">// Not block-scoped!</span>
+    
+    <span class="js-variable">console</span>.<span class="js-function">log</span>(globalVar); <span class="js-comment">// Accessible</span>
+    <span class="js-variable">console</span>.<span class="js-function">log</span>(functionVar); <span class="js-comment">// Accessible</span>
+    <span class="js-variable">console</span>.<span class="js-function">log</span>(blockVar); <span class="js-comment">// Accessible</span>
+  }
+  
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(oldVar); <span class="js-comment">// Still accessible (var is function-scoped)</span>
+  <span class="js-comment">// console.log(blockVar); // Error: blockVar is not defined (outside block)</span>
+}
+
+<span class="js-function">testScope</span>();
+<span class="js-comment">// console.log(functionVar); // Error: functionVar is not defined (outside function)</span>
+
+<span class="js-comment">// Closures</span>
+<span class="js-keyword">function</span> <span class="js-function">outerFunction</span>() {
+  <span class="js-keyword">let</span> outerVar = <span class="js-string">"I'm from outer function"</span>;
+  
+  <span class="js-keyword">function</span> <span class="js-function">innerFunction</span>() {
+    <span class="js-variable">console</span>.<span class="js-function">log</span>(outerVar); <span class="js-comment">// Can access outerVar</span>
+  }
+  
+  <span class="js-keyword">return</span> innerFunction;
+}
+
+<span class="js-keyword">const</span> closureExample = <span class="js-function">outerFunction</span>();
+<span class="js-function">closureExample</span>(); <span class="js-comment">// "I'm from outer function" - closure preserved outerVar</span>
+
+<span class="js-comment">// Practical closure example: Counter</span>
+<span class="js-keyword">function</span> <span class="js-function">createCounter</span>() {
+  <span class="js-keyword">let</span> count = <span class="js-number">0</span>;
+  
+  <span class="js-keyword">return</span> {
+    increment: <span class="js-keyword">function</span>() {
+      count++;
+      <span class="js-keyword">return</span> count;
+    },
+    decrement: <span class="js-keyword">function</span>() {
+      count--;
+      <span class="js-keyword">return</span> count;
+    },
+    getCount: <span class="js-keyword">function</span>() {
+      <span class="js-keyword">return</span> count;
+    }
+  };
+}
+
+<span class="js-keyword">const</span> counter = <span class="js-function">createCounter</span>();
+<span class="js-variable">console</span>.<span class="js-function">log</span>(counter.<span class="js-function">increment</span>()); <span class="js-comment">// 1</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(counter.<span class="js-function">increment</span>()); <span class="js-comment">// 2</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(counter.<span class="js-function">decrement</span>()); <span class="js-comment">// 1</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(counter.<span class="js-function">getCount</span>()); <span class="js-comment">// 1</span></pre>
+                </div>
+            </div>
+            
+            <h3>Higher-Order Functions</h3>
+            <div class="code-block">
+                <div class="code-header">higher-order.js</div>
+                <div class="code-content">
+<pre><span class="js-comment">// Functions as arguments</span>
+<span class="js-keyword">function</span> <span class="js-function">applyOperation</span>(a, b, operation) {
+  <span class="js-keyword">return</span> <span class="js-function">operation</span>(a, b);
+}
+
+<span class="js-keyword">const</span> <span class="js-function">add</span> = (x, y) => x + y;
+<span class="js-keyword">const</span> <span class="js-function">multiply</span> = (x, y) => x * y;
+
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-function">applyOperation</span>(<span class="js-number">5</span>, <span class="js-number">3</span>, add)); <span class="js-comment">// 8</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-function">applyOperation</span>(<span class="js-number">5</span>, <span class="js-number">3</span>, multiply)); <span class="js-comment">// 15</span>
+
+<span class="js-comment">// Array higher-order functions</span>
+<span class="js-keyword">const</span> numbers = [<span class="js-number">1</span>, <span class="js-number">2</span>, <span class="js-number">3</span>, <span class="js-number">4</span>, <span class="js-number">5</span>];
+
+<span class="js-comment">// map: Transform each element</span>
+<span class="js-keyword">const</span> squares = numbers.<span class="js-function">map</span>(num => num * num);
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"Squares:"</span>, squares); <span class="js-comment">// [1, 4, 9, 16, 25]</span>
+
+<span class="js-comment">// filter: Select elements that pass a test</span>
+<span class="js-keyword">const</span> evens = numbers.<span class="js-function">filter</span>(num => num % <span class="js-number">2</span> === <span class="js-number">0</span>);
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"Evens:"</span>, evens); <span class="js-comment">// [2, 4]</span>
+
+<span class="js-comment">// reduce: Combine elements into a single value</span>
+<span class="js-keyword">const</span> sum = numbers.<span class="js-function">reduce</span>((total, num) => total + num, <span class="js-number">0</span>);
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"Sum:"</span>, sum); <span class="js-comment">// 15</span>
+
+<span class="js-comment">// forEach: Execute function for each element</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"Each number:"</span>);
+numbers.<span class="js-function">forEach</span>((num, index) => {
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">`Index </span><span class="js-variable">${index}</span><span class="js-string">: </span><span class="js-variable">${num}</span><span class="js-string">`</span>);
+});
+
+<span class="js-comment">// find: Find first element that passes test</span>
+<span class="js-keyword">const</span> firstEven = numbers.<span class="js-function">find</span>(num => num % <span class="js-number">2</span> === <span class="js-number">0</span>);
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"First even:"</span>, firstEven); <span class="js-comment">// 2</span>
+
+<span class="js-comment">// some: Check if at least one element passes test</span>
+<span class="js-keyword">const</span> hasEven = numbers.<span class="js-function">some</span>(num => num % <span class="js-number">2</span> === <span class="js-number">0</span>);
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"Has even?"</span>, hasEven); <span class="js-comment">// true</span>
+
+<span class="js-comment">// every: Check if all elements pass test</span>
+<span class="js-keyword">const</span> allPositive = numbers.<span class="js-function">every</span>(num => num > <span class="js-number">0</span>);
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"All positive?"</span>, allPositive); <span class="js-comment">// true</span></pre>
+                </div>
+            </div>
+            
+            <div class="interactive-area">
+                <h4>Function Demo:</h4>
+                <div class="js-output" id="func-demo">
+                    Function results will appear here
+                </div>
+                <button class="demo-button" onclick="
+                    function calculateArea(width, height) {
+                        return width * height;
+                    }
+                    document.getElementById('func-demo').textContent = 
+                        `Rectangle area (5x3): ${calculateArea(5, 3)}`;
+                ">Regular Function</button>
+                <button class="demo-button" onclick="
+                    const calculateCircleArea = (radius) => Math.PI * radius * radius;
+                    document.getElementById('func-demo').textContent = 
+                        `Circle area (radius 3): ${calculateCircleArea(3).toFixed(2)}`;
+                ">Arrow Function</button>
+                <button class="demo-button" onclick="
+                    const numbers = [1, 2, 3, 4, 5];
+                    const doubled = numbers.map(n => n * 2);
+                    document.getElementById('func-demo').textContent = 
+                        `Original: [${numbers}]\nDoubled: [${doubled}]`;
+                ">Array Map</button>
+            </div>
+        </section>
+
+        <section id="objects-arrays">
+            <h2>Objects and Arrays</h2>
+            
+            <h3>Objects</h3>
+            <div class="code-block">
+                <div class="code-header">objects.js</div>
+                <div class="code-content">
+<pre><span class="js-comment">// Object literal</span>
+<span class="js-keyword">let</span> person = {
+  <span class="js-comment">// Properties</span>
+  firstName: <span class="js-string">"John"</span>,
+  lastName: <span class="js-string">"Doe"</span>,
+  age: <span class="js-number">30</span>,
+  isStudent: <span class="js-keyword">false</span>,
+  
+  <span class="js-comment">// Method (function as property)</span>
+  <span class="js-function">getFullName</span>: <span class="js-keyword">function</span>() {
+    <span class="js-keyword">return</span> <span class="js-keyword">this</span>.<span class="js-variable">firstName</span> + <span class="js-string">" "</span> + <span class="js-keyword">this</span>.<span class="js-variable">lastName</span>;
+  },
+  
+  <span class="js-comment">// ES6 method shorthand</span>
+  <span class="js-function">greet</span>() {
+    <span class="js-keyword">return</span> <span class="js-string">`Hello, my name is </span><span class="js-variable">${this.firstName}</span><span class="js-string">`</span>;
+  }
+};
+
+<span class="js-comment">// Accessing properties</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(person.firstName); <span class="js-comment">// Dot notation</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(person[<span class="js-string">"lastName"</span>]); <span class="js-comment">// Bracket notation</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(person.<span class="js-function">getFullName</span>()); <span class="js-comment">// Calling method</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(person.<span class="js-function">greet</span>()); <span class="js-comment">// ES6 method</span>
+
+<span class="js-comment">// Modifying properties</span>
+person.age = <span class="js-number">31</span>;
+person[<span class="js-string">"isStudent"</span>] = <span class="js-keyword">true</span>;
+
+<span class="js-comment">// Adding new properties</span>
+person.email = <span class="js-string">"john@example.com"</span>;
+person[<span class="js-string">"phone"</span>] = <span class="js-string">"123-456-7890"</span>;
+
+<span class="js-comment">// Deleting properties</span>
+<span class="js-keyword">delete</span> person.phone;
+
+<span class="js-comment">// Checking if property exists</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"firstName"</span> <span class="js-keyword">in</span> person); <span class="js-comment">// true</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(person.<span class="js-variable">hasOwnProperty</span>(<span class="js-string">"email"</span>)); <span class="js-comment">// true</span>
+
+<span class="js-comment">// Object.keys(), Object.values(), Object.entries()</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-keyword">Object</span>.<span class="js-function">keys</span>(person)); <span class="js-comment">// ["firstName", "lastName", ...]</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-keyword">Object</span>.<span class="js-function">values</span>(person)); <span class="js-comment">// ["John", "Doe", ...]</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-keyword">Object</span>.<span class="js-function">entries</span>(person)); <span class="js-comment">// [["firstName", "John"], ...]</span>
+
+<span class="js-comment">// Object destructuring (ES6)</span>
+<span class="js-keyword">const</span> { firstName, age } = person;
+<span class="js-variable">console</span>.<span class="js-function">log</span>(firstName, age); <span class="js-comment">// John 31</span>
+
+<span class="js-comment">// Object destructuring with renaming</span>
+<span class="js-keyword">const</span> { firstName: fName, lastName: lName } = person;
+<span class="js-variable">console</span>.<span class="js-function">log</span>(fName, lName); <span class="js-comment">// John Doe</span>
+
+<span class="js-comment">// Object spread operator (ES2018)</span>
+<span class="js-keyword">const</span> personCopy = { ...person };
+<span class="js-keyword">const</span> updatedPerson = { ...person, age: <span class="js-number">32</span>, city: <span class="js-string">"New York"</span> };
+
+<span class="js-comment">// Object methods with 'this'</span>
+<span class="js-keyword">const</span> calculator = {
+  value: <span class="js-number">0</span>,
+  
+  <span class="js-function">add</span>(num) {
+    <span class="js-keyword">this</span>.<span class="js-variable">value</span> += num;
+    <span class="js-keyword">return</span> <span class="js-keyword">this</span>; <span class="js-comment">// For method chaining</span>
+  },
+  
+  <span class="js-function">subtract</span>(num) {
+    <span class="js-keyword">this</span>.<span class="js-variable">value</span> -= num;
+    <span class="js-keyword">return</span> <span class="js-keyword">this</span>;
+  },
+  
+  <span class="js-function">getValue</span>() {
+    <span class="js-keyword">return</span> <span class="js-keyword">this</span>.<span class="js-variable">value</span>;
+  }
+};
+
+<span class="js-variable">console</span>.<span class="js-function">log</span>(
+  calculator.<span class="js-function">add</span>(<span class="js-number">10</span>).<span class="js-function">subtract</span>(<span class="js-number">3</span>).<span class="js-function">getValue</span>()
+); <span class="js-comment">// 7</span></pre>
+                </div>
+            </div>
+            
+            <h3>Arrays</h3>
+            <div class="code-block">
+                <div class="code-header">arrays.js</div>
+                <div class="code-content">
+<pre><span class="js-comment">// Creating arrays</span>
+<span class="js-keyword">let</span> emptyArray = [];
+<span class="js-keyword">let</span> numbers = [<span class="js-number">1</span>, <span class="js-number">2</span>, <span class="js-number">3</span>, <span class="js-number">4</span>, <span class="js-number">5</span>];
+<span class="js-keyword">let</span> mixed = [<span class="js-string">"hello"</span>, <span class="js-number">42</span>, <span class="js-keyword">true</span>, { name: <span class="js-string">"John"</span> }];
+<span class="js-keyword">let</span> created = <span class="js-keyword">new</span> <span class="js-function">Array</span>(<span class="js-number">5</span>); <span class="js-comment">// Creates array with 5 empty slots</span>
+<span class="js-keyword">let</span> fromString = <span class="js-string">"Hello"</span>.<span class="js-function">split</span>(<span class="js-string">""</span>); <span class="js-comment">// ["H", "e", "l", "l", "o"]</span>
+
+<span class="js-comment">// Accessing elements</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(numbers[<span class="js-number">0</span>]); <span class="js-comment">// First element: 1</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(numbers[numbers.<span class="js-variable">length</span> - <span class="js-number">1</span>]); <span class="js-comment">// Last element: 5</span>
+
+<span class="js-comment">// Modifying arrays</span>
+numbers[<span class="js-number">2</span>] = <span class="js-number">99</span>; <span class="js-comment">// Change element at index 2</span>
+numbers[<span class="js-number">5</span>] = <span class="js-number">6</span>; <span class="js-comment">// Add new element (length becomes 6)</span>
+
+<span class="js-comment">// Array methods - Adding/removing elements</span>
+<span class="js-keyword">let</span> fruits = [<span class="js-string">"apple"</span>, <span class="js-string">"banana"</span>];
+
+<span class="js-comment">// push: Add to end</span>
+fruits.<span class="js-function">push</span>(<span class="js-string">"orange"</span>); <span class="js-comment">// ["apple", "banana", "orange"]</span>
+
+<span class="js-comment">// pop: Remove from end</span>
+<span class="js-keyword">let</span> lastFruit = fruits.<span class="js-function">pop</span>(); <span class="js-comment">// "orange", fruits = ["apple", "banana"]</span>
+
+<span class="js-comment">// unshift: Add to beginning</span>
+fruits.<span class="js-function">unshift</span>(<span class="js-string">"strawberry"</span>); <span class="js-comment">// ["strawberry", "apple", "banana"]</span>
+
+<span class="js-comment">// shift: Remove from beginning</span>
+<span class="js-keyword">let</span> firstFruit = fruits.<span class="js-function">shift</span>(); <span class="js-comment">// "strawberry", fruits = ["apple", "banana"]</span>
+
+<span class="js-comment">// splice: Add/remove at any position</span>
+fruits.<span class="js-function">splice</span>(<span class="js-number">1</span>, <span class="js-number">0</span>, <span class="js-string">"mango"</span>, <span class="js-string">"kiwi"</span>); <span class="js-comment">// Add at index 1: ["apple", "mango", "kiwi", "banana"]</span>
+fruits.<span class="js-function">splice</span>(<span class="js-number">2</span>, <span class="js-number">1</span>); <span class="js-comment">// Remove 1 element at index 2: ["apple", "mango", "banana"]</span>
+
+<span class="js-comment">// slice: Copy portion of array</span>
+<span class="js-keyword">let</span> someFruits = fruits.<span class="js-function">slice</span>(<span class="js-number">1</span>, <span class="js-number">3</span>); <span class="js-comment">// ["mango", "banana"] (original unchanged)</span>
+
+<span class="js-comment">// concat: Combine arrays</span>
+<span class="js-keyword">let</span> moreFruits = fruits.<span class="js-function">concat</span>([<span class="js-string">"grape"</span>, <span class="js-string">"pineapple"</span>]);
+
+<span class="js-comment">// Array searching</span>
+<span class="js-keyword">let</span> scores = [<span class="js-number">85</span>, <span class="js-number">92</span>, <span class="js-number">78</span>, <span class="js-number">90</span>, <span class="js-number">92</span>];
+
+<span class="js-variable">console</span>.<span class="js-function">log</span>(scores.<span class="js-function">indexOf</span>(<span class="js-number">92</span>)); <span class="js-comment">// 1 (first occurrence)</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(scores.<span class="js-function">lastIndexOf</span>(<span class="js-number">92</span>)); <span class="js-comment">// 4 (last occurrence)</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(scores.<span class="js-function">includes</span>(<span class="js-number">90</span>)); <span class="js-comment">// true</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(scores.<span class="js-function">find</span>(score => score > <span class="js-number">90</span>)); <span class="js-comment">// 92</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(scores.<span class="js-function">findIndex</span>(score => score > <span class="js-number">90</span>)); <span class="js-comment">// 1</span>
+
+<span class="js-comment">// Array transformation</span>
+<span class="js-keyword">let</span> doubled = scores.<span class="js-function">map</span>(score => score * <span class="js-number">2</span>);
+<span class="js-keyword">let</span> highScores = scores.<span class="js-function">filter</span>(score => score >= <span class="js-number">90</span>);
+<span class="js-keyword">let</span> totalScore = scores.<span class="js-function">reduce</span>((sum, score) => sum + score, <span class="js-number">0</span>);
+<span class="js-keyword">let</span> sorted = [...scores].<span class="js-function">sort</span>((a, b) => a - b); <span class="js-comment">// Ascending</span>
+<span class="js-keyword">let</span> reversed = [...scores].<span class="js-function">reverse</span>();
+
+<span class="js-comment">// Array destructuring (ES6)</span>
+<span class="js-keyword">let</span> [first, second, ...rest] = scores;
+<span class="js-variable">console</span>.<span class="js-function">log</span>(first, second, rest); <span class="js-comment">// 85, 92, [78, 90, 92]</span>
+
+<span class="js-comment">// Spread operator with arrays</span>
+<span class="js-keyword">let</span> newScores = [...scores, <span class="js-number">95</span>, <span class="js-number">100</span>];
+<span class="js-keyword">let</span> merged = [...scores, ...doubled];
+
+<span class="js-comment">// Multidimensional arrays</span>
+<span class="js-keyword">let</span> matrix = [
+  [<span class="js-number">1</span>, <span class="js-number">2</span>, <span class="js-number">3</span>],
+  [<span class="js-number">4</span>, <span class="js-number">5</span>, <span class="js-number">6</span>],
+  [<span class="js-number">7</span>, <span class="js-number">8</span>, <span class="js-number">9</span>]
+];
+
+<span class="js-variable">console</span>.<span class="js-function">log</span>(matrix[<span class="js-number">1</span>][<span class="js-number">2</span>]); <span class="js-comment">// 6</span></pre>
+                </div>
+            </div>
+            
+            <div class="interactive-area">
+                <h4>Objects & Arrays Demo:</h4>
+                <div class="js-output" id="oa-demo">
+                    Results will appear here
+                </div>
+                <button class="demo-button" onclick="
+                    const book = {
+                        title: 'JavaScript Guide',
+                        author: 'John Doe',
+                        year: 2023,
+                        getInfo() {
+                            return `${this.title} by ${this.author} (${this.year})`;
+                        }
+                    };
+                    document.getElementById('oa-demo').textContent = book.getInfo();
+                ">Object Method</button>
+                <button class="demo-button" onclick="
+                    const numbers = [5, 2, 8, 1, 9];
+                    const sorted = [...numbers].sort((a, b) => a - b);
+                    const filtered = numbers.filter(n => n > 5);
+                    document.getElementById('oa-demo').textContent = 
+                        `Original: [${numbers}]\nSorted: [${sorted}]\nNumbers > 5: [${filtered}]`;
+                ">Array Methods</button>
+                <button class="demo-button" onclick="
+                    const person = { name: 'Alice', age: 25, city: 'London' };
+                    const { name, city } = person;
+                    const updated = { ...person, age: 26, country: 'UK' };
+                    document.getElementById('oa-demo').textContent = 
+                        `Destructured: ${name} from ${city}\nUpdated: ${JSON.stringify(updated, null, 2)}`;
+                ">Destructuring & Spread</button>
+            </div>
+        </section>
+
+        <section id="es6-features">
+            <h2>ES6+ Modern Features</h2>
+            
+            <h3>Template Literals</h3>
+            <div class="code-block">
+                <div class="code-header">template-literals.js</div>
+                <div class="code-content">
+<pre><span class="js-comment">// Basic template literals</span>
+<span class="js-keyword">let</span> name = <span class="js-string">"John"</span>;
+<span class="js-keyword">let</span> age = <span class="js-number">30</span>;
+
+<span class="js-keyword">let</span> message = <span class="js-string">`Hello, my name is </span><span class="js-variable">${name}</span><span class="js-string"> and I am </span><span class="js-variable">${age}</span><span class="js-string"> years old.`</span>;
+<span class="js-variable">console</span>.<span class="js-function">log</span>(message);
+
+<span class="js-comment">// Multi-line strings</span>
+<span class="js-keyword">let</span> multiLine = <span class="js-string">`This is a string
+that spans multiple
+lines without needing
+escape characters.`</span>;
+
+<span class="js-comment">// Expressions in template literals</span>
+<span class="js-keyword">let</span> a = <span class="js-number">5</span>, b = <span class="js-number">10</span>;
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">`</span><span class="js-variable">${a}</span><span class="js-string"> + </span><span class="js-variable">${b}</span><span class="js-string"> = </span><span class="js-variable">${a + b}</span><span class="js-string">`</span>);
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">`Is </span><span class="js-variable">${a}</span><span class="js-string"> greater than </span><span class="js-variable">${b}</span><span class="js-string">? </span><span class="js-variable">${a > b ? 'Yes' : 'No'}</span><span class="js-string">`</span>);
+
+<span class="js-comment">// Tagged templates</span>
+<span class="js-keyword">function</span> <span class="js-function">highlight</span>(strings, ...values) {
+  <span class="js-keyword">let</span> result = <span class="js-string">""</span>;
+  strings.<span class="js-function">forEach</span>((string, i) => {
+    result += string;
+    <span class="js-keyword">if</span> (i < values.<span class="js-variable">length</span>) {
+      result += <span class="js-string">`&lt;strong&gt;</span><span class="js-variable">${values[i]}</span><span class="js-string">&lt;/strong&gt;`</span>;
+    }
+  });
+  <span class="js-keyword">return</span> result;
+}
+
+<span class="js-keyword">let</span> userName = <span class="js-string">"Alice"</span>;
+<span class="js-keyword">let</span> score = <span class="js-number">95</span>;
+<span class="js-keyword">let</span> highlighted = <span class="js-function">highlight</span><span class="js-string">`Player </span><span class="js-variable">${userName}</span><span class="js-string"> scored </span><span class="js-variable">${score}</span><span class="js-string"> points.`</span>;
+<span class="js-variable">console</span>.<span class="js-function">log</span>(highlighted);</pre>
+                </div>
+            </div>
+            
+            <h3>Destructuring Assignment</h3>
+            <div class="code-block">
+                <div class="code-header">destructuring.js</div>
+                <div class="code-content">
+<pre><span class="js-comment">// Array destructuring</span>
+<span class="js-keyword">let</span> colors = [<span class="js-string">"red"</span>, <span class="js-string">"green"</span>, <span class="js-string">"blue"</span>, <span class="js-string">"yellow"</span>];
+
+<span class="js-comment">// Basic destructuring</span>
+<span class="js-keyword">let</span> [firstColor, secondColor] = colors;
+<span class="js-variable">console</span>.<span class="js-function">log</span>(firstColor, secondColor); <span class="js-comment">// red green</span>
+
+<span class="js-comment">// Skipping elements</span>
+<span class="js-keyword">let</span> [,, thirdColor] = colors;
+<span class="js-variable">console</span>.<span class="js-function">log</span>(thirdColor); <span class="js-comment">// blue</span>
+
+<span class="js-comment">// Rest operator with destructuring</span>
+<span class="js-keyword">let</span> [primary, ...otherColors] = colors;
+<span class="js-variable">console</span>.<span class="js-function">log</span>(primary, otherColors); <span class="js-comment">// red ["green", "blue", "yellow"]</span>
+
+<span class="js-comment">// Default values</span>
+<span class="js-keyword">let</span> [a, b, c, d, e = <span class="js-string">"purple"</span>] = colors;
+<span class="js-variable">console</span>.<span class="js-function">log</span>(e); <span class="js-comment">// purple (default value used)</span>
+
+<span class="js-comment">// Swapping variables</span>
+<span class="js-keyword">let</span> x = <span class="js-number">1</span>, y = <span class="js-number">2</span>;
+[x, y] = [y, x];
+<span class="js-variable">console</span>.<span class="js-function">log</span>(x, y); <span class="js-comment">// 2 1</span>
+
+<span class="js-comment">// Object destructuring</span>
+<span class="js-keyword">let</span> user = {
+  username: <span class="js-string">"jsmith"</span>,
+  email: <span class="js-string">"jsmith@example.com"</span>,
+  age: <span class="js-number">28</span>,
+  city: <span class="js-string">"New York"</span>,
+  country: <span class="js-string">"USA"</span>
+};
+
+<span class="js-comment">// Basic object destructuring</span>
+<span class="js-keyword">let</span> { username, email } = user;
+<span class="js-variable">console</span>.<span class="js-function">log</span>(username, email); <span class="js-comment">// jsmith jsmith@example.com</span>
+
+<span class="js-comment">// Renaming variables</span>
+<span class="js-keyword">let</span> { username: userName, email: userEmail } = user;
+<span class="js-variable">console</span>.<span classjs-function">log</span>(userName, userEmail);
+
+<span class="js-comment">// Default values</span>
+<span class="js-keyword">let</span> { username, isAdmin = <span class="js-keyword">false</span> } = user;
+<span class="js-variable">console</span>.<span class="js-function">log</span>(isAdmin); <span class="js-comment">// false (default value)</span>
+
+<span class="js-comment">// Nested destructuring</span>
+<span class="js-keyword">let</span> company = {
+  name: <span class="js-string">"TechCorp"</span>,
+  address: {
+    street: <span class="js-string">"123 Main St"</span>,
+    city: <span class="js-string">"San Francisco"</span>,
+    zip: <span class="js-string">"94105"</span>
+  }
+};
+
+<span class="js-keyword">let</span> {
+  name,
+  address: { city, zip }
+} = company;
+
+<span class="js-variable">console</span>.<span class="js-function">log</span>(name, city, zip); <span class="js-comment">// TechCorp San Francisco 94105</span>
+
+<span class="js-comment">// Destructuring function parameters</span>
+<span class="js-keyword">function</span> <span class="js-function">displayUser</span>({ username, email, age = <span class="js-number">18</span> }) {
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">`</span><span class="js-variable">${username}</span><span class="js-string"> (</span><span class="js-variable">${email}</span><span class="js-string">), Age: </span><span class="js-variable">${age}</span><span class="js-string">`</span>);
+}
+
+<span class="js-function">displayUser</span>(user);</pre>
+                </div>
+            </div>
+            
+            <h3>Classes and Modules</h3>
+            <div class="code-block">
+                <div class="code-header">classes-modules.js</div>
+                <div class="code-content">
+<pre><span class="js-comment">// ES6 Classes</span>
+<span class="js-keyword">class</span> <span class="js-variable">Person</span> {
+  <span class="js-comment">// Constructor</span>
+  <span class="js-function">constructor</span>(name, age) {
+    <span class="js-keyword">this</span>.<span class="js-variable">name</span> = name;
+    <span class="js-keyword">this</span>.<span class="js-variable">age</span> = age;
+  }
+  
+  <span class="js-comment">// Instance method</span>
+  <span class="js-function">greet</span>() {
+    <span class="js-keyword">return</span> <span class="js-string">`Hello, my name is </span><span class="js-variable">${this.name}</span><span class="js-string">`</span>;
+  }
+  
+  <span class="js-comment">// Static method</span>
+  <span class="js-keyword">static</span> <span class="js-function">speciesInfo</span>() {
+    <span class="js-keyword">return</span> <span class="js-string">"Humans are Homo sapiens"</span>;
+  }
+  
+  <span class="js-comment">// Getter</span>
+  <span class="js-keyword">get</span> <span class="js-function">description</span>() {
+    <span class="js-keyword">return</span> <span class="js-string">`</span><span class="js-variable">${this.name}</span><span class="js-string"> is </span><span class="js-variable">${this.age}</span><span class="js-string"> years old`</span>;
+  }
+  
+  <span class="js-comment">// Setter</span>
+  <span class="js-keyword">set</span> <span class="js-function">newAge</span>(age) {
+    <span class="js-keyword">if</span> (age > <span class="js-number">0</span>) {
+      <span class="js-keyword">this</span>.<span class="js-variable">age</span> = age;
+    } <span class="js-keyword">else</span> {
+      <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"Age must be positive"</span>);
+    }
+  }
+}
+
+<span class="js-comment">// Creating instances</span>
+<span class="js-keyword">const</span> person1 = <span class="js-keyword">new</span> <span class="js-function">Person</span>(<span class="js-string">"Alice"</span>, <span class="js-number">25</span>);
+<span class="js-keyword">const</span> person2 = <span class="js-keyword">new</span> <span class="js-function">Person</span>(<span class="js-string">"Bob"</span>, <span class="js-number">30</span>);
+
+<span class="js-variable">console</span>.<span class="js-function">log</span>(person1.<span class="js-function">greet</span>()); <span class="js-comment">// Hello, my name is Alice</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-variable">Person</span>.<span class="js-function">speciesInfo</span>()); <span class="js-comment">// Static method call</span>
+<span class="js-variable">console</span>.<span class="js-function">log</span>(person1.description); <span class="js-comment">// Getter</span>
+person1.newAge = <span class="js-number">26</span>; <span class="js-comment">// Setter</span>
+
+<span class="js-comment">// Inheritance</span>
+<span class="js-keyword">class</span> <span class="js-variable">Student</span> <span class="js-keyword">extends</span> <span class="js-variable">Person</span> {
+  <span class="js-function">constructor</span>(name, age, major) {
+    <span class="js-keyword">super</span>(name, age); <span class="js-comment">// Call parent constructor</span>
+    <span class="js-keyword">this</span>.<span class="js-variable">major</span> = major;
+  }
+  
+  <span class="js-function">study</span>() {
+    <span class="js-keyword">return</span> <span class="js-string">`</span><span class="js-variable">${this.name}</span><span class="js-string"> is studying </span><span class="js-variable">${this.major}</span><span class="js-string">`</span>;
+  }
+  
+  <span class="js-comment">// Override parent method</span>
+  <span class="js-function">greet</span>() {
+    <span class="js-keyword">return</span> <span class="js-keyword">super</span>.<span class="js-function">greet</span>() + <span class="js-string">" and I'm a student"</span>;
+  }
+}
+
+<span class="js-keyword">const</span> student = <span class="js-keyword">new</span> <span class="js-function">Student</span>(<span class="js-string">"Charlie"</span>, <span class="js-number">20</span>, <span class="js-string">"Computer Science"</span>);
+<span class="js-variable">console</span>.<span class="js-function">log</span>(student.<span class="js-function">greet</span>());
+<span class="js-variable">console</span>.<span class="js-function">log</span>(student.<span class="js-function">study</span>());
+
+<span class="js-comment">// ES6 Modules</span>
+<span class="js-comment">// File: math.js</span>
+<span class="js-comment">// export const PI = 3.14159;</span>
+<span class="js-comment">// export function add(a, b) { return a + b; }</span>
+<span class="js-comment">// export function multiply(a, b) { return a * b; }</span>
+
+<span class="js-comment">// File: main.js</span>
+<span class="js-comment">// import { PI, add, multiply } from './math.js';</span>
+<span class="js-comment">// import * as math from './math.js'; // Import all as math object</span>
+<span class="js-comment">// import { add as sum } from './math.js'; // Renamed import</span>
+
+<span class="js-comment">// Default exports</span>
+<span class="js-comment">// File: calculator.js</span>
+<span class="js-comment">// export default class Calculator { ... }</span>
+
+<span class="js-comment">// File: main.js</span>
+<span class="js-comment">// import Calculator from './calculator.js';</span></pre>
+                </div>
+            </div>
+            
+            <h3>Promises and Async/Await</h3>
+            <div class="code-block">
+                <div class="code-header">async-await.js</div>
+                <div class="code-content">
+<pre><span class="js-comment">// Creating a Promise</span>
+<span class="js-keyword">const</span> promise = <span class="js-keyword">new</span> <span class="js-function">Promise</span>((resolve, reject) => {
+  <span class="js-comment">// Simulate async operation</span>
+  <span class="js-keyword">setTimeout</span>(() => {
+    <span class="js-keyword">const</span> success = <span class="js-keyword">Math</span>.<span class="js-function">random</span>() > <span class="js-number">0.5</span>;
+    
+    <span class="js-keyword">if</span> (success) {
+      <span class="js-function">resolve</span>(<span class="js-string">"Operation successful!"</span>);
+    } <span class="js-keyword">else</span> {
+      <span class="js-function">reject</span>(<span class="js-keyword">new</span> <span class="js-function">Error</span>(<span class="js-string">"Operation failed"</span>));
+    }
+  }, <span class="js-number">1000</span>);
+});
+
+<span class="js-comment">// Using Promises with .then() and .catch()</span>
+promise
+  .<span class="js-function">then</span>(result => {
+    <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"Success:"</span>, result);
+  })
+  .<span class="js-function">catch</span>(error => {
+    <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"Error:"</span>, error.<span class="js-variable">message</span>);
+  })
+  .<span class="js-function">finally</span>(() => {
+    <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"Operation completed"</span>);
+  });
+
+<span class="js-comment">// Promise.all() - Wait for all promises</span>
+<span class="js-keyword">const</span> promise1 = <span class="js-function">Promise</span>.<span class="js-function">resolve</span>(<span class="js-number">3</span>);
+<span class="js-keyword">const</span> promise2 = <span class="js-number">42</span>;
+<span class="js-keyword">const</span> promise3 = <span class="js-keyword">new</span> <span class="js-function">Promise</span>((resolve, reject) => {
+  <span class="js-keyword">setTimeout</span>(resolve, <span class="js-number">100</span>, <span class="js-string">"foo"</span>);
+});
+
+<span class="js-function">Promise</span>.<span class="js-function">all</span>([promise1, promise2, promise3])
+  .<span class="js-function">then</span>(values => {
+    <span class="js-variable">console</span>.<span class="js-function">log</span>(values); <span class="js-comment">// [3, 42, "foo"]</span>
+  });
+
+<span class="js-comment">// Promise.race() - First promise to settle wins</span>
+<span class="js-keyword">const</span> fastPromise = <span class="js-keyword">new</span> <span class="js-function">Promise</span>(resolve => 
+  <span class="js-keyword">setTimeout</span>(resolve, <span class="js-number">500</span>, <span class="js-string">"Fast"</span>)
+);
+<span class="js-keyword">const</span> slowPromise = <span class="js-keyword">new</span> <span class="js-function">Promise</span>(resolve => 
+  <span class="js-keyword">setTimeout</span>(resolve, <span class="js-number">1000</span>, <span class="js-string">"Slow"</span>)
+);
+
+<span class="js-function">Promise</span>.<span class="js-function">race</span>([fastPromise, slowPromise])
+  .<span class="js-function">then</span>(value => {
+    <span class="js-variable">console</span>.<span class="js-function">log</span>(value); <span class="js-comment">// "Fast"</span>
+  });
+
+<span class="js-comment">// Async/await (ES2017)</span>
+<span class="js-keyword">async</span> <span class="js-keyword">function</span> <span class="js-function">fetchData</span>() {
+  <span class="js-keyword">try</span> {
+    <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"Fetching data..."</span>);
+    
+    <span class="js-comment">// Simulate API call</span>
+    <span class="js-keyword">const</span> data = <span class="js-keyword">await</span> <span class="js-keyword">new</span> <span class="js-function">Promise</span>(resolve => {
+      <span class="js-keyword">setTimeout</span>(() => {
+        <span class="js-function">resolve</span>({
+          userId: <span class="js-number">1</span>,
+          id: <span class="js-number">1</span>,
+          title: <span class="js-string">"Learn JavaScript"</span>,
+          completed: <span class="js-keyword">false</span>
+        });
+      }, <span class="js-number">1000</span>);
+    });
+    
+    <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"Data received:"</span>, data);
+    <span class="js-keyword">return</span> data;
+    
+  } <span class="js-keyword">catch</span> (error) {
+    <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"Error fetching data:"</span>, error);
+    <span class="js-keyword">throw</span> error;
+  }
+}
+
+<span class="js-comment">// Using async function</span>
+<span class="js-function">fetchData</span>()
+  .<span class="js-function">then</span>(data => {
+    <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"Processing:"</span>, data.<span class="js-variable">title</span>);
+  })
+  .<span class="js-function">catch</span>(error => {
+    <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">"Failed to process:"</span>, error);
+  });
+
+<span class="js-comment">// Async function with multiple awaits</span>
+<span class="js-keyword">async</span> <span class="js-keyword">function</span> <span class="js-function">getMultipleData</span>() {
+  <span class="js-keyword">const</span> [data1, data2] = <span class="js-keyword">await</span> <span class="js-function">Promise</span>.<span class="js-function">all</span>([
+    <span class="js-function">fetchData</span>(),
+    <span class="js-function">fetchData</span>()
+  ]);
+  
+  <span class="js-keyword">return</span> { data1, data2 };
+}
+
+<span class="js-comment">// Top-level await (ES2022)</span>
+<span class="js-comment">// In modules only:</span>
+<span class="js-comment">// const data = await fetchData();</span>
+<span class="js-comment">// console.log(data);</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="dom-manipulation">
+            <h2>DOM Manipulation</h2>
+            
+            <h3>Selecting Elements</h3>
+            <div class="code-block">
+                <div class="code-header">dom-selection.js</div>
+                <div class="code-content">
+<pre><span class="js-comment">// Get element by ID</span>
+<span class="js-keyword">const</span> header = <span class="js-variable">document</span>.<span class="js-function">getElementById</span>(<span class="js-string">'header'</span>);
+
+<span class="js-comment">// Get elements by class name (returns HTMLCollection)</span>
+<span class="js-keyword">const</span> buttons = <span class="js-variable">document</span>.<span class="js-function">getElementsByClassName</span>(<span class="js-string">'btn'</span>);
+
+<span class="js-comment">// Get elements by tag name (returns HTMLCollection)</span>
+<span class="js-keyword">const</span> paragraphs = <span class="js-variable">document</span>.<span class="js-function">getElementsByTagName</span>(<span class="js-string">'p'</span>);
+
+<span class="js-comment">// Query selector (first matching element)</span>
+<span class="js-keyword">const</span> firstButton = <span class="js-variable">document</span>.<span class="js-function">querySelector</span>(<span class="js-string">'.btn'</span>);
+<span class="js-keyword">const</span> mainHeader = <span class="js-variable">document</span>.<span class="js-function">querySelector</span>(<span class="js-string">'h1#main'</span>);
+
+<span class="js-comment">// Query selector all (NodeList)</span>
+<span class="js-keyword">const</span> allButtons = <span class="js-variable">document</span>.<span class="js-function">querySelectorAll</span>(<span class="js-string">'.btn'</span>);
+<span class="js-keyword">const</span> listItems = <span class="js-variable">document</span>.<span class="js-function">querySelectorAll</span>(<span class="js-string">'ul li'</span>);
+
+<span class="js-comment">// Special selections</span>
+<span class="js-keyword">const</span> body = <span class="js-variable">document</span>.<span class="js-variable">body</span>;
+<span class="js-keyword">const</span> html = <span class="js-variable">document</span>.<span class="js-variable">documentElement</span>;
+<span class="js-keyword">const</span> head = <span class="js-variable">document</span>.<span class="js-variable">head</span>;
+<span class="js-keyword">const</span> title = <span class="js-variable">document</span>.<span class="js-variable">title</span>; <span class="js-comment">// String, not element</span>
+
+<span class="js-comment">// Traversing the DOM</span>
+<span class="js-keyword">const</span> parent = element.<span class="js-variable">parentElement</span>;
+<span class="js-keyword">const</span> children = element.<span class="js-variable">children</span>; <span class="js-comment">// HTMLCollection of child elements</span>
+<span class="js-keyword">const</span> firstChild = element.<span class="js-variable">firstElementChild</span>;
+<span class="js-keyword">const</span> lastChild = element.<span class="js-variable">lastElementChild</span>;
+<span class="js-keyword">const</span> nextSibling = element.<span class="js-variable">nextElementSibling</span>;
+<span class="js-keyword">const</span> previousSibling = element.<span class="js-variable">previousElementSibling</span>;
+
+<span class="js-comment">// Checking element relationships</span>
+<span class="js-keyword">const</span> contains = parent.<span class="js-function">contains</span>(child); <span class="js-comment">// true/false</span>
+<span class="js-keyword">const</span> matches = element.<span class="js-function">matches</span>(<span class="js-string">'.selector'</span>); <span class="js-comment">// true/false</span></pre>
+                </div>
+            </div>
+            
+            <h3>Modifying Elements</h3>
+            <div class="code-block">
+                <div class="code-header">dom-modification.js</div>
+                <div class="code-content">
+<pre><span class="js-comment">// Creating elements</span>
+<span class="js-keyword">const</span> newDiv = <span class="js-variable">document</span>.<span class="js-function">createElement</span>(<span class="js-string">'div'</span>);
+<span class="js-keyword">const</span> newParagraph = <span class="js-variable">document</span>.<span class="js-function">createElement</span>(<span class="js-string">'p'</span>);
+<span class="js-keyword">const</span> textNode = <span class="js-variable">document</span>.<span class="js-function">createTextNode</span>(<span class="js-string">'Hello World'</span>);
+
+<span class="js-comment">// Setting attributes</span>
+newDiv.<span class="js-function">setAttribute</span>(<span class="js-string">'id'</span>, <span class="js-string">'myDiv'</span>);
+newDiv.<span class="js-function">setAttribute</span>(<span class="js-string">'class'</span>, <span class="js-string">'container highlight'</span>);
+newDiv.<span class="js-variable">id</span> = <span class="js-string">'newId'</span>; <span class="js-comment">// Alternative syntax</span>
+newDiv.<span class="js-variable">className</span> = <span class="js-string">'newClass'</span>;
+newDiv.<span class="js-variable">classList</span>.<span class="js-function">add</span>(<span class="js-string">'active'</span>);
+newDiv.<span class="js-variable">classList</span>.<span class="js-function">remove</span>(<span class="js-string">'highlight'</span>);
+newDiv.<span class="js-variable">classList</span>.<span class="js-function">toggle</span>(<span class="js-string">'hidden'</span>);
+<span class="js-keyword">const</span> hasClass = newDiv.<span class="js-variable">classList</span>.<span class="js-function">contains</span>(<span class="js-string">'active'</span>);
+
+<span class="js-comment">// Setting styles</span>
+newDiv.<span class="js-variable">style</span>.<span class="js-variable">backgroundColor</span> = <span class="js-string">'blue'</span>;
+newDiv.<span class="js-variable">style</span>.<span class="js-variable">color</span> = <span class="js-string">'white'</span>;
+newDiv.<span class="js-variable">style</span>.<span class="js-variable">padding</span> = <span class="js-string">'20px'</span>;
+newDiv.<span class="js-variable">style</span>.<span class="js-variable">borderRadius</span> = <span class="js-string">'5px'</span>;
+
+<span class="js-comment">// Setting content</span>
+newDiv.<span class="js-variable">textContent</span> = <span class="js-string">'Text content only'</span>; <span class="js-comment">// Safer, faster</span>
+newDiv.<span class="js-variable">innerText</span> = <span class="js-string">'Inner text (CSS aware)'</span>; <span class="js-comment">// Slower, CSS aware</span>
+newDiv.<span class="js-variable">innerHTML</span> = <span class="js-string">'&lt;strong&gt;HTML content&lt;/strong&gt;'</span>; <span class="js-comment">// Parses HTML</span>
+
+<span class="js-comment">// Appending elements</span>
+newDiv.<span class="js-function">appendChild</span>(textNode);
+newDiv.<span class="js-function">appendChild</span>(newParagraph);
+
+<span class="js-comment">// Modern append methods</span>
+newDiv.<span class="js-function">append</span>(<span class="js-string">'Text node'</span>, anotherElement); <span class="js-comment">// Append nodes/text</span>
+newDiv.<span class="js-function">prepend</span>(firstChild); <span class="js-comment">// Insert as first child</span>
+newDiv.<span class="js-function">before</span>(siblingElement); <span class="js-comment">// Insert before element</span>
+newDiv.<span class="js-function">after</span>(siblingElement); <span class="js-comment">// Insert after element</span>
+newDiv.<span class="js-function">replaceWith</span>(newElement); <span class="js-comment">// Replace element</span>
+
+<span class="js-comment">// Inserting adjacent HTML</span>
+element.<span class="js-function">insertAdjacentHTML</span>(<span class="js-string">'beforebegin'</span>, <span class="js-string">'&lt;div&gt;Before&lt;/div&gt;'</span>);
+element.<span class="js-function">insertAdjacentHTML</span>(<span class="js-string">'afterbegin'</span>, <span class="js-string">'&lt;div&gt;After begin&lt;/div&gt;'</span>);
+element.<span class="js-function">insertAdjacentHTML</span>(<span class="js-string">'beforeend'</span>, <span class="js-string">'&lt;div&gt;Before end&lt;/div&gt;'</span>);
+element.<span class="js-function">insertAdjacentHTML</span>(<span class="js-string">'afterend'</span>, <span class="js-string">'&lt;div&gt;After end&lt;/div&gt;'</span>);
+
+<span class="js-comment">// Removing elements</span>
+element.<span class="js-function">remove</span>(); <span class="js-comment">// Remove element itself</span>
+parent.<span class="js-function">removeChild</span>(child); <span class="js-comment">// Older method</span>
+
+<span class="js-comment">// Cloning elements</span>
+<span class="js-keyword">const</span> clone = element.<span class="js-function">cloneNode</span>(<span class="js-keyword">true</span>); <span class="js-comment">// Deep clone (with children)</span>
+<span class="js-keyword">const</span> shallowClone = element.<span class="js-function">cloneNode</span>(<span class="js-keyword">false</span>); <span class="js-comment">// Shallow clone</span></pre>
+                </div>
+            </div>
+            
+            <h3>Event Handling</h3>
+            <div class="interactive-area">
+                <h4>Event Demo:</h4>
+                <div class="example-box" id="event-demo-box">
+                    Click Me!
+                </div>
+                <div class="js-output" id="event-output">
+                    Event details will appear here
+                </div>
+                <button class="demo-button" id="click-btn">Test Click Event</button>
+                <button class="demo-button" id="hover-btn">Test Mouse Events</button>
+                <button class="demo-button" id="key-btn">Test Keyboard Events</button>
+            </div>
+            
+            <div class="code-block">
+                <div class="code-header">events.js</div>
+                <div class="code-content">
+<pre><span class="js-comment">// Adding event listeners</span>
+<span class="js-keyword">const</span> button = <span class="js-variable">document</span>.<span class="js-function">querySelector</span>(<span class="js-string">'#myButton'</span>);
+
+<span class="js-comment">// Method 1: addEventListener (recommended)</span>
+button.<span class="js-function">addEventListener</span>(<span class="js-string">'click'</span>, <span class="js-keyword">function</span>(event) {
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">'Button clicked!'</span>, event);
+});
+
+<span class="js-comment">// Method 2: Inline event handler (in HTML)</span>
+<span class="js-comment">&lt;!-- &lt;button onclick="handleClick()"&gt;Click&lt;/button&gt; --&gt;</span>
+
+<span class="js-comment">// Method 3: DOM property</span>
+button.<span class="js-variable">onclick</span> = <span class="js-keyword">function</span>(event) {
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">'Button clicked!'</span>);
+};
+
+<span class="js-comment">// Event object properties</span>
+<span class="js-keyword">function</span> <span class="js-function">handleEvent</span>(event) {
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">'Event type:'</span>, event.<span class="js-variable">type</span>);
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">'Target element:'</span>, event.<span class="js-variable">target</span>);
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">'Current target:'</span>, event.<span class="js-variable">currentTarget</span>);
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">'Mouse position:'</span>, event.<span class="js-variable">clientX</span>, event.<span class="js-variable">clientY</span>);
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">'Key pressed:'</span>, event.<span class="js-variable">key</span>);
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">'Prevent default available:'</span>, event.<span class="js-variable">preventDefault</span>);
+}
+
+<span class="js-comment">// Common event types</span>
+element.<span class="js-function">addEventListener</span>(<span class="js-string">'click'</span>, handleClick);
+element.<span class="js-function">addEventListener</span>(<span class="js-string">'dblclick'</span>, handleDoubleClick);
+element.<span class="js-function">addEventListener</span>(<span class="js-string">'mouseenter'</span>, handleMouseEnter);
+element.<span class="js-function">addEventListener</span>(<span class="js-string">'mouseleave'</span>, handleMouseLeave);
+element.<span class="js-function">addEventListener</span>(<span class="js-string">'mousemove'</span>, handleMouseMove);
+element.<span class="js-function">addEventListener</span>(<span class="js-string">'keydown'</span>, handleKeyDown);
+element.<span class="js-function">addEventListener</span>(<span class="js-string">'keyup'</span>, handleKeyUp);
+element.<span class="js-function">addEventListener</span>(<span class="js-string">'focus'</span>, handleFocus);
+element.<span class="js-function">addEventListener</span>(<span class="js-string">'blur'</span>, handleBlur);
+element.<span class="js-function">addEventListener</span>(<span class="js-string">'submit'</span>, handleSubmit);
+element.<span class="js-function">addEventListener</span>(<span class="js-string">'change'</span>, handleChange);
+element.<span class="js-function">addEventListener</span>(<span class="js-string">'input'</span>, handleInput);
+
+<span class="js-comment">// Event propagation: bubbling and capturing</span>
+<span class="js-variable">document</span>.<span class="js-variable">body</span>.<span class="js-function">addEventListener</span>(<span class="js-string">'click'</span>, <span class="js-keyword">function</span>(event) {
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">'Body clicked (bubbling phase)'</span>);
+}, <span class="js-keyword">false</span>); <span class="js-comment">// false = bubbling phase (default)</span>
+
+<span class="js-variable">document</span>.<span class="js-variable">body</span>.<span class="js-function">addEventListener</span>(<span class="js-string">'click'</span>, <span class="js-keyword">function</span>(event) {
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">'Body clicked (capturing phase)'</span>);
+}, <span class="js-keyword">true</span>); <span class="js-comment">// true = capturing phase</span>
+
+<span class="js-comment">// Stopping propagation</span>
+button.<span class="js-function">addEventListener</span>(<span class="js-string">'click'</span>, <span class="js-keyword">function</span>(event) {
+  event.<span class="js-function">stopPropagation</span>(); <span class="js-comment">// Stop bubbling up</span>
+  event.<span class="js-function">stopImmediatePropagation</span>(); <span class="js-comment">// Stop all handlers</span>
+});
+
+<span class="js-comment">// Preventing default behavior</span>
+form.<span class="js-function">addEventListener</span>(<span class="js-string">'submit'</span>, <span class="js-keyword">function</span>(event) {
+  event.<span class="js-function">preventDefault</span>(); <span class="js-comment">// Prevent form submission</span>
+  <span class="js-comment">// Custom form handling</span>
+});
+
+<span class="js-comment">// Event delegation</span>
+<span class="js-keyword">const</span> list = <span class="js-variable">document</span>.<span class="js-function">querySelector</span>(<span class="js-string">'#myList'</span>);
+
+list.<span class="js-function">addEventListener</span>(<span class="js-string">'click'</span>, <span class="js-keyword">function</span>(event) {
+  <span class="js-keyword">if</span> (event.<span class="js-variable">target</span>.<span class="js-variable">tagName</span> === <span class="js-string">'LI'</span>) {
+    <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">'List item clicked:'</span>, event.<span class="js-variable">target</span>.<span class="js-variable">textContent</span>);
+  }
+});
+
+<span class="js-comment">// Removing event listeners</span>
+<span class="js-keyword">function</span> <span class="js-function">handleClick</span>() {
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">'Clicked!'</span>);
+}
+
+button.<span class="js-function">addEventListener</span>(<span class="js-string">'click'</span>, handleClick);
+button.<span class="js-function">removeEventListener</span>(<span class="js-string">'click'</span>, handleClick);
+
+<span class="js-comment">// Custom events</span>
+<span class="js-keyword">const</span> customEvent = <span class="js-keyword">new</span> <span class="js-function">CustomEvent</span>(<span class="js-string">'myEvent'</span>, {
+  detail: { message: <span class="js-string">'Hello from custom event!'</span> },
+  bubbles: <span class="js-keyword">true</span>,
+  cancelable: <span class="js-keyword">true</span>
+});
+
+element.<span class="js-function">dispatchEvent</span>(customEvent);
+
+element.<span class="js-function">addEventListener</span>(<span class="js-string">'myEvent'</span>, <span class="js-keyword">function</span>(event) {
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">'Custom event received:'</span>, event.<span class="js-variable">detail</span>.<span class="js-variable">message</span>);
+});</pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="best-practices">
+            <h2>JavaScript Best Practices</h2>
+            
+            <h3>Code Quality</h3>
+            <div class="code-block">
+                <div class="code-header">best-practices.js</div>
+                <div class="code-content">
+<pre><span class="js-comment">// 1. Use const by default, let when needed, avoid var</span>
+<span class="js-keyword">const</span> PI = <span class="js-number">3.14159</span>; <span class="js-comment">// Use const for values that don't change</span>
+<span class="js-keyword">let</span> counter = <span class="js-number">0</span>; <span class="js-comment">// Use let for values that change</span>
+<span class="js-comment">// Avoid var due to function scope issues</span>
+
+<span class="js-comment">// 2. Use strict equality (=== and !==) over loose equality</span>
+<span class="js-keyword">if</span> (value === <span class="js-string">'test'</span>) { } <span class="js-comment">// Good</span>
+<span class="js-keyword">if</span> (value == <span class="js-string">'test'</span>) { } <span class="js-comment">// Avoid</span>
+
+<span class="js-comment">// 3. Use template literals for string concatenation</span>
+<span class="js-keyword">const</span> greeting = <span class="js-string">`Hello, </span><span class="js-variable">${name}</span><span class="js-string">!`</span>; <span class="js-comment">// Good</span>
+<span class="js-keyword">const</span> oldGreeting = <span class="js-string">'Hello, '</span> + name + <span class="js-string">'!'</span>; <span class="js-comment">// Avoid</span>
+
+<span class="js-comment">// 4. Use arrow functions for concise syntax</span>
+<span class="js-keyword">const</span> <span class="js-function">add</span> = (a, b) => a + b; <span class="js-comment">// Good</span>
+<span class="js-keyword">function</span> <span class="js-function">add</span>(a, b) { <span class="js-keyword">return</span> a + b; } <span class="js-comment">// Also fine</span>
+
+<span class="js-comment">// 5. Use destructuring for cleaner code</span>
+<span class="js-keyword">const</span> { firstName, lastName } = user; <span class="js-comment">// Good</span>
+<span class="js-keyword">const</span> firstName = user.firstName; <span class="js-comment">// Verbose</span>
+
+<span class="js-comment">// 6. Use default parameters</span>
+<span class="js-keyword">function</span> <span class="js-function">greet</span>(name = <span class="js-string">'Guest'</span>) { } <span class="js-comment">// Good</span>
+<span class="js-keyword">function</span> <span class="js-function">greet</span>(name) {
+  name = name || <span class="js-string">'Guest'</span>; <span class="js-comment">// Older pattern</span>
+}
+
+<span class="js-comment">// 7. Use async/await over promise chains when possible</span>
+<span class="js-keyword">async</span> <span class="js-keyword">function</span> <span class="js-function">fetchData</span>() {
+  <span class="js-keyword">const</span> data = <span class="js-keyword">await</span> <span class="js-function">apiCall</span>();
+  <span class="js-keyword">return</span> data;
+} <span class="js-comment">// Good</span>
+
+<span class="js-function">fetchData</span>()
+  .<span class="js-function">then</span>(data => { })
+  .<span class="js-function">catch</span>(error => { }); <span class="js-comment">// Also fine</span>
+
+<span class="js-comment">// 8. Avoid global variables</span>
+(<span class="js-keyword">function</span>() {
+  <span class="js-comment">// Your code here - creates local scope</span>
+})(); <span class="js-comment">// IIFE pattern</span>
+
+<span class="js-comment">// 9. Use meaningful variable names</span>
+<span class="js-keyword">const</span> userAge = <span class="js-number">25</span>; <span class="js-comment">// Good</span>
+<span class="js-keyword">const</span> a = <span class="js-number">25</span>; <span class="js-comment">// Avoid</span>
+
+<span class="js-comment">// 10. Handle errors gracefully</span>
+<span class="js-keyword">try</span> {
+  <span class="js-comment">// Risky operation</span>
+} <span class="js-keyword">catch</span> (error) {
+  <span class="js-variable">console</span>.<span class="js-function">error</span>(<span class="js-string">'Operation failed:'</span>, error);
+  <span class="js-comment">// Provide fallback or inform user</span>
+}
+
+<span class="js-comment">// 11. Use modular code</span>
+<span class="js-comment">// Break large functions into smaller ones</span>
+<span class="js-keyword">function</span> <span class="js-function">processUser</span>(user) {
+  <span class="js-keyword">const</span> validated = <span class="js-function">validateUser</span>(user);
+  <span class="js-keyword">const</span> formatted = <span class="js-function">formatUser</span>(validated);
+  <span class="js-keyword">return</span> <span class="js-function">saveUser</span>(formatted);
+}
+
+<span class="js-comment">// 12. Comment your code wisely</span>
+<span class="js-comment">/**
+ * Calculates the area of a circle
+ * @param {number} radius - The radius of the circle
+ * @returns {number} The area of the circle
+ */</span>
+<span class="js-keyword">function</span> <span class="js-function">calculateCircleArea</span>(radius) {
+  <span class="js-keyword">return</span> <span class="js-keyword">Math</span>.<span class="js-variable">PI</span> * radius * radius;
+}</pre>
+                </div>
+            </div>
+            
+            <h3>Performance Tips</h3>
+            <div class="code-block">
+                <div class="code-header">performance.js</div>
+                <div class="code-content">
+<pre><span class="js-comment">// 1. Cache DOM queries</span>
+<span class="js-keyword">const</span> button = <span class="js-variable">document</span>.<span class="js-function">getElementById</span>(<span class="js-string">'myButton'</span>); <span class="js-comment">// Cache once</span>
+<span class="js-comment">// Use 'button' variable instead of querying repeatedly</span>
+
+<span class="js-comment">// 2. Debounce frequent events</span>
+<span class="js-keyword">function</span> <span class="js-function">debounce</span>(func, delay) {
+  <span class="js-keyword">let</span> timeoutId;
+  <span class="js-keyword">return</span> <span class="js-keyword">function</span>(...args) {
+    <span class="js-keyword">clearTimeout</span>(timeoutId);
+    timeoutId = <span class="js-keyword">setTimeout</span>(() => <span class="js-function">func</span>.<span class="js-function">apply</span>(<span class="js-keyword">this</span>, args), delay);
+  };
+}
+
+window.<span class="js-function">addEventListener</span>(<span class="js-string">'resize'</span>, <span class="js-function">debounce</span>(handleResize, <span class="js-number">250</span>));
+
+<span class="js-comment">// 3. Throttle expensive operations</span>
+<span class="js-keyword">function</span> <span class="js-function">throttle</span>(func, limit) {
+  <span class="js-keyword">let</span> inThrottle;
+  <span class="js-keyword">return</span> <span class="js-keyword">function</span>(...args) {
+    <span class="js-keyword">if</span> (!inThrottle) {
+      <span class="js-function">func</span>.<span class="js-function">apply</span>(<span class="js-keyword">this</span>, args);
+      inThrottle = <span class="js-keyword">true</span>;
+      <span class="js-keyword">setTimeout</span>(() => inThrottle = <span class="js-keyword">false</span>, limit);
+    }
+  };
+}
+
+<span class="js-comment">// 4. Use event delegation for dynamic content</span>
+<span class="js-variable">document</span>.<span class="js-variable">body</span>.<span class="js-function">addEventListener</span>(<span class="js-string">'click'</span>, <span class="js-keyword">function</span>(event) {
+  <span class="js-keyword">if</span> (event.<span class="js-variable">target</span>.<span class="js-variable">classList</span>.<span class="js-function">contains</span>(<span class="js-string">'dynamic-button'</span>)) {
+    <span class="js-comment">// Handle click</span>
+  }
+});
+
+<span class="js-comment">// 5. Avoid unnecessary reflows and repaints</span>
+<span class="js-comment">// Batch DOM changes</span>
+<span class="js-keyword">const</span> fragment = <span class="js-variable">document</span>.<span class="js-function">createDocumentFragment</span>();
+<span class="js-keyword">for</span> (<span class="js-keyword">let</span> i = <span class="js-number">0</span>; i < <span class="js-number">100</span>; i++) {
+  <span class="js-keyword">const</span> li = <span class="js-variable">document</span>.<span class="js-function">createElement</span>(<span class="js-string">'li'</span>);
+  li.<span class="js-variable">textContent</span> = <span class="js-string">`Item </span><span class="js-variable">${i}</span><span class="js-string">`</span>;
+  fragment.<span class="js-function">appendChild</span>(li);
+}
+list.<span class="js-function">appendChild</span>(fragment); <span class="js-comment">// Single reflow</span>
+
+<span class="js-comment">// 6. Use Web Workers for heavy computations</span>
+<span class="js-comment">// main.js</span>
+<span class="js-keyword">const</span> worker = <span class="js-keyword">new</span> <span class="js-function">Worker</span>(<span class="js-string">'worker.js'</span>);
+worker.<span class="js-variable">onmessage</span> = <span class="js-keyword">function</span>(event) {
+  <span class="js-variable">console</span>.<span class="js-function">log</span>(<span class="js-string">'Result:'</span>, event.<span class="js-variable">data</span>);
+};
+worker.<span class="js-function">postMessage</span>(<span class="js-string">'Start calculation'</span>);
+
+<span class="js-comment">// 7. Lazy load resources</span>
+<span class="js-keyword">const</span> image = <span class="js-variable">document</span>.<span class="js-function">querySelector</span>(<span class="js-string">'img[data-src]'</span>);
+<span class="js-keyword">const</span> observer = <span class="js-keyword">new</span> <span class="js-function">IntersectionObserver</span>((entries) => {
+  entries.<span class="js-function">forEach</span>(entry => {
+    <span class="js-keyword">if</span> (entry.<span class="js-variable">isIntersecting</span>) {
+      <span class="js-keyword">const</span> img = entry.<span class="js-variable">target</span>;
+      img.<span class="js-variable">src</span> = img.<span class="js-variable">dataset</span>.<span class="js-variable">src</span>;
+      observer.<span class="js-function">unobserve</span>(img);
+    }
+  });
+});
+observer.<span class="js-function">observe</span>(image);
+
+<span class="js-comment">// 8. Use requestAnimationFrame for animations</span>
+<span class="js-keyword">function</span> <span class="js-function">animate</span>() {
+  <span class="js-comment">// Update animation</span>
+  <span class="js-keyword">requestAnimationFrame</span>(animate);
+}
+<span class="js-function">requestAnimationFrame</span>(animate);</pre>
+                </div>
+            </div>
+            
+            <h3>Security Considerations</h3>
+            <div class="code-block">
+                <div class="code-header">security.js</div>
+                <div class="code-content">
+<pre><span class="js-comment">// 1. Sanitize user input</span>
+<span class="js-keyword">function</span> <span class="js-function">sanitizeInput</span>(input) {
+  <span class="js-comment">// Remove HTML tags</span>
+  <span class="js-keyword">return</span> input.<span class="js-function">replace</span>(<span class="js-regexp">/&lt;[^&gt;]*&gt;/g</span>, <span class="js-string">''</span>);
+}
+
+<span class="js-comment">// 2. Use textContent instead of innerHTML when possible</span>
+element.<span class="js-variable">textContent</span> = userInput; <span class="js-comment">// Safe</span>
+<span class="js-comment">// element.innerHTML = userInput; // Dangerous!</span>
+
+<span class="js-comment">// 3. Use Content Security Policy (CSP) headers</span>
+<span class="js-comment">// In HTML: &lt;meta http-equiv="Content-Security-Policy" content="default-src 'self'"&gt;</span>
+
+<span class="js-comment">// 4. Validate on both client and server sides</span>
+<span class="js-keyword">function</span> <span class="js-function">validateEmail</span>(email) {
+  <span class="js-keyword">const</span> regex = <span class="js-regexp">/^[^\s@]+@[^\s@]+\.[^\s@]+$/</span>;
+  <span class="js-keyword">return</span> regex.<span class="js-function">test</span>(email);
+}
+
+<span class="js-comment">// 5. Use HTTPS for all communications</span>
+<span class="js-keyword">fetch</span>(<span class="js-string">'https://api.example.com/data'</span>) <span class="js-comment">// Always use HTTPS</span>
+
+<span class="js-comment">// 6. Implement CORS properly</span>
+<span class="js-comment">// Server should set appropriate CORS headers</span>
+
+<span class="js-comment">// 7. Store sensitive data securely</span>
+<span class="js-comment">// Never store passwords or tokens in localStorage</span>
+<span class="js-comment">// Use HTTP-only cookies for sensitive data</span>
+
+<span class="js-comment">// 8. Use parameterized queries for database operations</span>
+<span class="js-comment">// Prevents SQL injection</span>
+
+<span class="js-comment">// 9. Implement rate limiting</span>
+<span class="js-keyword">const</span> rateLimit = {};
+<span class="js-keyword">function</span> <span class="js-function">isRateLimited</span>(ip) {
+  <span class="js-keyword">const</span> now = <span class="js-keyword">Date</span>.<span class="js-function">now</span>();
+  <span class="js-keyword">if</span> (!rateLimit[ip]) {
+    rateLimit[ip] = [];
+  }
+  
+  <span class="js-comment">// Remove old entries (last minute)</span>
+  rateLimit[ip] = rateLimit[ip].<span class="js-function">filter</span>(time => now - time < <span class="js-number">60000</span>);
+  
+  <span class="js-keyword">if</span> (rateLimit[ip].<span class="js-variable">length</span> >= <span class="js-number">10</span>) { <span class="js-comment">// 10 requests per minute</span>
+    <span class="js-keyword">return</span> <span class="js-keyword">true</span>;
+  }
+  
+  rateLimit[ip].<span class="js-function">push</span>(now);
+  <span class="js-keyword">return</span> <span class="js-keyword">false</span>;
+}</pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="tools-resources">
+            <h2>JavaScript Tools and Resources</h2>
+            
+            <h3>Development Tools</h3>
+            <ul>
+                <li><strong>Browser DevTools:</strong> Chrome/Firefox Developer Tools for debugging</li>
+                <li><strong>Node.js:</strong> JavaScript runtime for server-side development</li>
+                <li><strong>npm/yarn:</strong> Package managers for JavaScript libraries</li>
+                <li><strong>Webpack/Vite:</strong> Module bundlers and build tools</li>
+                <li><strong>ESLint/Prettier:</strong> Code linting and formatting</li>
+                <li><strong>Jest/Mocha:</strong> Testing frameworks</li>
+            </ul>
+            
+            <h3>Learning Resources</h3>
+            <ul>
+                <li><strong>MDN Web Docs:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">Complete JavaScript Reference</a></li>
+                <li><strong>JavaScript.info:</strong> <a href="https://javascript.info/" target="_blank" rel="noopener noreferrer">Modern JavaScript Tutorial</a></li>
+                <li><strong>FreeCodeCamp:</strong> <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/" target="_blank" rel="noopener noreferrer">JavaScript Algorithms Certification</a></li>
+                <li><strong>Eloquent JavaScript:</strong> <a href="https://eloquentjavascript.net/" target="_blank" rel="noopener noreferrer">Free Online Book</a></li>
+                <li><strong>Frontend Masters:</strong> <a href="https://frontendmasters.com/courses/javascript/" target="_blank" rel="noopener noreferrer">Deep Dive Courses</a></li>
+            </ul>
+            
+            <h3>Practice Platforms</h3>
+            <ul>
+                <li><strong>CodePen/JSFiddle:</strong> Live JavaScript playgrounds</li>
+                <li><strong>LeetCode/HackerRank:</strong> Algorithm challenges</li>
+                <li><strong>Codewars:</strong> Coding katas and challenges</li>
+                <li><strong>Frontend Mentor:</strong> Real-world projects</li>
+                <li><strong>Scrimba:</strong> Interactive coding courses</li>
+            </ul>
+            
+            <h3>Next Steps After Fundamentals</h3>
+            <ul>
+                <li><strong>Frameworks/Libraries:</strong> React, Vue, Angular, Svelte</li>
+                <li><strong>Backend Development:</strong> Node.js, Express, databases</li>
+                <li><strong>TypeScript:</strong> Typed superset of JavaScript</li>
+                <li><strong>Testing:</strong> Unit testing, integration testing, E2E testing</li>
+                <li><strong>Tooling:</strong> Build tools, package managers, CI/CD</li>
+                <li><strong>Advanced Concepts:</strong> Design patterns, performance optimization, security</li>
+            </ul>
+            
+            <div class="note">
+                <strong>Keep Learning:</strong> JavaScript evolves rapidly. Follow TC39 (JavaScript standards committee), read release notes for browsers and Node.js, and stay active in the JavaScript community through blogs, podcasts, and conferences.
+            </div>
+        </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="section-title">
+        <h2 id="contact-heading">Contact Us</h2>
+        <p>Ready to build interactive web applications with JavaScript?</p>
+      </div>
+      <div class="contact">
+        <div class="contact-links">
+          <a href="mailto:44mr.invisible@gmail.com" class="contact-link ripple" aria-label="Email us">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            44mr.invisible@gmail.com
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <p>&copy; 2025 Nerds Assemble JavaScript fundamentals. All rights reserved.</p>
+  </footer>
+
+  <script>
+    $(document).ready(function() {
+      // Set page title for screen readers
+      document.title = "JavaScript Fundamentals | Complete Beginner's Guide - Nerds Assemble";
+      
+      // Ripple Effect
+      $('.ripple').on('click', function(e) {
+        const $this = $(this);
+        const offset = $this.offset();
+        const x = e.pageX - offset.left;
+        const y = e.pageY - offset.top;
+        
+        const $ink = $this.find('.ink');
+        if ($ink.length === 0) {
+          $this.prepend('<span class="ink" aria-hidden="true"></span>');
+        }
+        
+        const $inkNew = $this.find('.ink');
+        $inkNew.removeClass('animate');
+        
+        const diameter = Math.max($this.outerWidth(), $this.outerHeight());
+        const radius = diameter / 2;
+        
+        $inkNew.css({
+          width: diameter,
+          height: diameter,
+          left: x - radius,
+          top: y - radius
+        }).addClass('animate');
+      });
+      
+      // Mobile Menu Toggle with ARIA
+      $('#menuToggle').on('click', function() {
+        const isExpanded = $(this).attr('aria-expanded') === 'true';
+        $(this).attr('aria-expanded', !isExpanded);
+        $('.navpanel').attr('aria-hidden', isExpanded);
+        
+        $(this).toggleClass('active');
+        $('.navpanel').toggleClass('active');
+        if ($(this).hasClass('active')) {
+          $(this).html('close');
+          // Trap focus in mobile menu
+          $('.navpanel').find('button').first().focus();
+        } else {
+          $(this).html('menu');
+        }
+      });
+      
+      // Close mobile menu when clicking a link
+      $('.navpanel-btn, .nav-links a').on('click', function() {
+        if ($(window).width() <= 768) {
+          $('#menuToggle').removeClass('active').html('menu').attr('aria-expanded', 'false');
+          $('.navpanel').removeClass('active').attr('aria-hidden', 'true');
+        }
+      });
+      
+      // Close mobile menu on escape key
+      $(document).on('keydown', function(e) {
+        if (e.key === 'Escape' && $('.navpanel').hasClass('active')) {
+          $('#menuToggle').click();
+        }
+      });
+      
+      // Navbar scroll effect
+      let lastScrollTop = 0;
+      $(window).on('scroll', function() {
+        const scrollTop = $(window).scrollTop();
+        
+        // Show/hide navbar on scroll
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+          $('nav').css('transform', 'translateY(-100%)');
+        } else {
+          $('nav').css('transform', 'translateY(0)');
+        }
+        
+        lastScrollTop = scrollTop;
+        
+        // Shadow effect
+        if (scrollTop > 50) {
+          $('nav').css('box-shadow', '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)');
+        } else {
+          $('nav').css('box-shadow', '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)');
+        }
+      });
+      
+      // Smooth scrolling for all links
+      $('a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = $(this).attr('href');
+        if (targetId === '#') return;
+        
+        const targetElement = $(targetId);
+        if (targetElement.length) {
+          const headerHeight = $('nav').outerHeight();
+          $('html, body').animate({
+            scrollTop: targetElement.offset().top - headerHeight
+          }, 800, 'swing');
+          
+          // Update URL without jumping
+          if (history.pushState) {
+            history.pushState(null, null, targetId);
+          }
+          
+          // Focus on the target for accessibility
+          targetElement.attr('tabindex', '-1').focus().removeAttr('tabindex');
+        }
+      });
+      
+      // Interactive JavaScript examples
+      $('.example-box').hover(
+        function() {
+          $(this).css({
+            'transform': 'scale(1.1) rotate(5deg)',
+            'box-shadow': '0 10px 20px rgba(0,0,0,0.3)'
+          });
+        },
+        function() {
+          $(this).css({
+            'transform': 'scale(1) rotate(0)',
+            'box-shadow': 'none'
+          });
+        }
+      );
+      
+      // Interactive demos for operators section
+      $('#op-demo').text('Click buttons to see operator examples');
+      
+      // Interactive demos for control flow section
+      $('#cf-demo').text('Click buttons to test control flow');
+      
+      // Interactive demos for functions section
+      $('#func-demo').text('Click buttons to see function examples');
+      
+      // Interactive demos for objects & arrays section
+      $('#oa-demo').text('Click buttons to see object and array operations');
+      
+      // Event handling demos
+      const eventBox = document.getElementById('event-demo-box');
+      const eventOutput = document.getElementById('event-output');
+      
+      if (eventBox) {
+        eventBox.addEventListener('click', function(e) {
+          eventOutput.textContent = `Click event at (${e.clientX}, ${e.clientY})`;
+          this.style.backgroundColor = getRandomColor();
+        });
+        
+        eventBox.addEventListener('mouseenter', function() {
+          this.style.transform = 'scale(1.1)';
+        });
+        
+        eventBox.addEventListener('mouseleave', function() {
+          this.style.transform = 'scale(1)';
+        });
+      }
+      
+      // Event buttons
+      $('#click-btn').on('click', function() {
+        eventOutput.textContent = 'Button clicked! Testing event handling.';
+      });
+      
+      $('#hover-btn').on({
+        mouseenter: function() {
+          eventOutput.textContent = 'Mouse entered button';
+          $(this).css('background-color', '#4ecdc4');
+        },
+        mouseleave: function() {
+          eventOutput.textContent = 'Mouse left button';
+          $(this).css('background-color', '');
+        }
+      });
+      
+      // Keyboard events
+      $(document).on('keydown', function(e) {
+        if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+          eventOutput.textContent = `Key pressed: ${e.key} (Code: ${e.code})`;
+        }
+      });
+      
+      // Helper function for random colors
+      function getRandomColor() {
+        const colors = ['#f0db4f', '#4ecdc4', '#ff6b6b', '#61dafb', '#9b59b6'];
+        return colors[Math.floor(Math.random() * colors.length)];
+      }
+      
+      
+      // Add keyboard navigation to cards
+      $('.card').attr('tabindex', '0').on('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          $(this).click();
+        }
+      });
+      
+      // Handle reduced motion preference
+      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (mediaQuery.matches) {
+        $('.floating, .pulse').css('animation', 'none');
+        $('.example-box').off('hover');
+        eventBox.removeEventListener('mouseenter', () => {});
+        eventBox.removeEventListener('mouseleave', () => {});
+      }
+      
+      // Service Worker registration for PWA (optional)
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js').catch(function(error) {
+            console.log('ServiceWorker registration failed: ', error);
+          });
+        });
+      }
+    });
+    
+    // Load performance metrics
+    window.addEventListener('load', function() {
+      // Log performance metrics
+      setTimeout(function() {
+        const perfData = window.performance.timing;
+        const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+        console.log('JavaScript Fundamentals page load time:', pageLoadTime, 'ms');
+        
+        // Send to analytics (example)
+        if (pageLoadTime < 2000) {
+          console.log('Excellent performance for JavaScript page');
+        }
+        
+        // Demonstrate some JavaScript features
+        console.log('%cJavaScript Fundamentals Loaded!', 
+          'color: #f0db4f; font-size: 18px; font-weight: bold;');
+        console.log('%cTry the interactive examples on the page!', 
+          'color: #61dafb; font-size: 14px;');
+      }, 0);
+    });
+  </script>
+
+</body>
+</html>
