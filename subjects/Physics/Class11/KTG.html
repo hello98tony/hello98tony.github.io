@@ -1,0 +1,2200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKVRN3GREN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKVRN3GREN');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinetic Theory of Gases | Class 11 Physics | JEE & NEET Preparation</title>
+    <meta name="description" content="Master Kinetic Theory of Gases for Class 11 Physics. Complete guide for JEE & NEET aspirants covering gas laws, molecular motion, degrees of freedom, Maxwell distribution, and mean free path.">
+    <meta name="keywords" content="Kinetic Theory of Gases, Physics Class 11, JEE preparation, NEET physics, Gas Laws, Molecular Motion, Degrees of Freedom, Maxwell Distribution, Mean Free Path, Ideal Gas Equation, RMS Speed">
+    <meta name="author" content="Nerds Assemble">
+    <meta name="robots" content="index, follow">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Kinetic Theory of Gases | Class 11 Physics">
+    <meta property="og:description" content="Complete guide to Kinetic Theory for JEE & NEET aspirants">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nerdsassemble.com/kinetic-theory">
+    
+    <!-- Structured Data for Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Kinetic Theory of Gases - Class 11 Physics",
+        "description": "Complete guide to Kinetic Theory with gas laws, molecular motion, and Maxwell distribution for JEE & NEET",
+        "educationalLevel": "High School",
+        "learningResourceType": "Educational Course",
+        "author": {
+            "@type": "Organization",
+            "name": "Nerds Assemble"
+        },
+        "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": "Student",
+            "audienceType": ["JEE Aspirants", "NEET Aspirants"]
+        }
+    }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Pacifico&family=Dancing+Script:wght@700&family=Abril+Fatface&family=Playfair+Display:wght@700&family=Raleway:wght@300;800&family=Quicksand:wght@500&family=Poiret+One&family=Amatic+SC:wght@700&family=Caveat:wght@700&family=Kaushan+Script&family=Libre+Baskerville&family=Merriweather&family=Nunito:wght@800&family=Oswald:wght@500&family=Roboto+Slab:wght@700&family=Sacramento&family=Tangerine:wght@700&family=Yeseva+One&family=Electrolize&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+     <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/planet-universe-svgrepo-com.svg">
+    
+    <style>
+        /* Kinetic Theory of Gases - Nerds Assemble CSS */
+        :root {
+            --kinetic-primary: #00BCD4;
+            --kinetic-secondary: #0097A7;
+            --kinetic-tertiary: #4CAF50;
+            --kinetic-accent: #FF9800;
+            --kinetic-bg: #0a0a20;
+            --kinetic-text: #ffffff;
+            --kinetic-highlight: #FFD700;
+            --kinetic-nav-bg: rgba(10, 5, 30, 0.95);
+            --kinetic-gradient: linear-gradient(45deg, #00BCD4, #0097A7);
+            --motion-gradient: linear-gradient(45deg, #4CAF50, #8BC34A);
+            --distribution-gradient: linear-gradient(45deg, #FF9800, #FF5722);
+            --gas-laws-gradient: linear-gradient(45deg, #9C27B0, #E91E63);
+        }
+
+        /* Base Styles & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--kinetic-bg);
+            color: var(--kinetic-text);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overscroll-behavior-y: contain;
+            -webkit-overflow-scrolling: touch;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(0, 188, 212, 0.15) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(76, 175, 80, 0.15) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(255, 152, 0, 0.1) 0%, transparent 30%),
+                linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+            background: linear-gradient(45deg, var(--kinetic-primary), var(--kinetic-secondary), var(--kinetic-tertiary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--kinetic-highlight);
+            margin: 2rem 0 1.5rem;
+            font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--kinetic-primary), transparent);
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-family: 'Roboto Slab', serif;
+            color: var(--kinetic-secondary);
+            margin: 1.5rem 0 1rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+        }
+
+        p {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+        }
+
+        /* Layout Components */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            flex: 1;
+            padding: 0 1rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Raleway', sans-serif;
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+            color: var(--kinetic-secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--kinetic-nav-bg);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            transform: translateZ(0);
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            color: var(--kinetic-highlight);
+            font-size: 1.6rem;
+        }
+
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--kinetic-primary), var(--kinetic-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.4rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        .nav-links a {
+            color: var(--kinetic-text);
+            text-decoration: none;
+            font-family: 'Electrolize', sans-serif;
+            font-size: 0.95rem;
+            transition: color 0.2s ease-out;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--kinetic-highlight);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--kinetic-highlight);
+            transition: width 0.2s ease-out;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--kinetic-text);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* Content Panels */
+        .info-panel {
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
+            padding: 1.8rem;
+            margin: 1.8rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: translateZ(0);
+            will-change: transform, opacity;
+        }
+
+        /* Special Content Blocks */
+        .important {
+            background: rgba(0, 188, 212, 0.1);
+            border-left: 4px solid var(--kinetic-primary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(0, 188, 212, 0.1);
+        }
+
+        .definition {
+            background: rgba(255, 215, 0, 0.1);
+            border-left: 4px solid var(--kinetic-highlight);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.1);
+        }
+
+        .formula {
+            font-family: 'Audiowide', cursive;
+            color: var(--kinetic-highlight);
+            margin: 1.2rem 0;
+            padding: 1.2rem;
+            background: rgba(0, 188, 212, 0.1);
+            border-radius: 8px;
+            border: 1px dashed var(--kinetic-highlight);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.1rem;
+        }
+
+        .example {
+            background: rgba(76, 175, 80, 0.1);
+            border-left: 4px solid var(--kinetic-tertiary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: var(--kinetic-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Lists & Tables */
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 1.8rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background-color: rgba(0, 188, 212, 0.2);
+            font-family: 'Electrolize', sans-serif;
+            color: var(--kinetic-highlight);
+            font-size: 0.95rem;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+
+        tr:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* Concept Cards */
+        .concept-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .concept-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 188, 212, 0.2);
+        }
+
+        .concept-card.postulates {
+            border-top: 4px solid var(--kinetic-primary);
+        }
+
+        .concept-card.gas-laws {
+            border-top: 4px solid var(--kinetic-accent);
+        }
+
+        .concept-card.molecular-motion {
+            border-top: 4px solid var(--kinetic-tertiary);
+        }
+
+        .concept-card.distribution {
+            border-top: 4px solid #9C27B0;
+        }
+
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title.postulates { color: var(--kinetic-primary); }
+        .card-title.gas-laws { color: var(--kinetic-accent); }
+        .card-title.molecular-motion { color: var(--kinetic-tertiary); }
+        .card-title.distribution { color: #9C27B0; }
+
+        /* Kinetic Visualization */
+        .kinetic-container {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kinetic-demo {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            margin: 1rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .gas-container {
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            top: 5%;
+            left: 5%;
+            border: 2px solid var(--kinetic-secondary);
+            border-radius: 10px;
+        }
+
+        .molecule {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--kinetic-primary);
+            box-shadow: 0 0 10px var(--kinetic-primary);
+            will-change: transform;
+        }
+
+        .velocity-vector {
+            position: absolute;
+            height: 2px;
+            background: var(--kinetic-highlight);
+            transform-origin: left center;
+        }
+
+        /* Molecular Motion Animation */
+        .motion-animation {
+            height: 150px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .speed-distribution {
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            bottom: 10%;
+            left: 10%;
+            border-left: 2px solid var(--kinetic-highlight);
+            border-bottom: 2px solid var(--kinetic-highlight);
+        }
+
+        .distribution-curve {
+            position: absolute;
+            height: 2px;
+            background: var(--kinetic-primary);
+            border-radius: 2px;
+            transform-origin: left center;
+        }
+
+        /* Equation Cards */
+        .equation-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .equation-card {
+            background: rgba(255, 152, 0, 0.1);
+            border-radius: 10px;
+            padding: 1.2rem;
+            text-align: center;
+            border: 1px solid rgba(255, 152, 0, 0.3);
+        }
+
+        .equation {
+            font-family: 'Audiowide', cursive;
+            color: var(--kinetic-accent);
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+
+        /* Problem Solving Section */
+        .problem-solving {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .problem-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--kinetic-primary);
+        }
+
+        .problem-title {
+            color: var(--kinetic-primary);
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            margin: 2rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--kinetic-nav-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .footer-column h3 {
+            color: var(--kinetic-highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--kinetic-text);
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            transition: color 0.2s ease-out;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--kinetic-highlight);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--kinetic-text);
+            font-size: 1.1rem;
+            transition: color 0.2s ease-out;
+        }
+
+        .social-links a:hover {
+            color: var(--kinetic-highlight);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 1.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Quicksand', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 45px;
+            height: 45px;
+            background: var(--kinetic-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease-out;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3);
+            transform: translateZ(0);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--kinetic-highlight);
+            transform: translateY(-5px);
+        }
+
+        /* JEE/NEET Specific Styling */
+        .exam-highlight {
+            background: rgba(255, 235, 0, 0.1);
+            border: 2px solid var(--kinetic-highlight);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .exam-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--kinetic-highlight);
+            color: var(--kinetic-bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes molecule-move {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(100px, 50px); }
+            50% { transform: translate(50px, 100px); }
+            75% { transform: translate(-50px, 50px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        @keyframes random-move {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(var(--tx), var(--ty)) rotate(var(--rot)); }
+        }
+
+        @keyframes distribution-pulse {
+            0%, 100% { transform: scaleY(1); opacity: 0.8; }
+            50% { transform: scaleY(1.2); opacity: 1; }
+        }
+
+        @keyframes collision {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(0.8); }
+        }
+
+        .molecule-move {
+            animation: molecule-move 5s infinite linear;
+        }
+
+        .random-move {
+            animation: random-move 2s infinite alternate;
+        }
+
+        .distribution-pulse {
+            animation: distribution-pulse 3s infinite;
+        }
+
+        .collision {
+            animation: collision 0.5s;
+        }
+
+        /* Swiper Carousel */
+        .swiper-container {
+            width: 100%;
+            height: auto;
+            min-height: 180px;
+            margin: 2.5rem 0;
+            will-change: transform;
+        }
+
+        .swiper-slide {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+            font-family: 'Electrolize', sans-serif;
+            padding: 1.2rem;
+            box-sizing: border-box;
+            text-align: center;
+            min-height: 180px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .swiper-title {
+            font-family: 'Audiowide', cursive;
+            color: var(--kinetic-highlight);
+            margin-bottom: 0.5rem;
+            font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+        }
+
+        .swiper-text {
+            font-family: 'Quicksand', sans-serif;
+            font-size: clamp(0.85rem, 1.1vw, 1rem);
+        }
+
+        /* Particles Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            will-change: transform;
+            opacity: 0.3;
+        }
+
+        /* Gas Molecules */
+        .gas-molecule {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            will-change: transform;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                margin-top: 1rem;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.75rem 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .container {
+                width: 95%;
+                padding: 0;
+            }
+
+            .concept-cards, .problem-solving {
+                grid-template-columns: 1fr;
+            }
+
+            .equation-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-panel {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    <div class="gas-molecules" id="gasMolecules"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-atom"></i></span>
+                <span class="logo-text">Nerds Assemble</span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#postulates">Basic Postulates</a></li>
+                    <li><a href="#gas-laws">Gas Laws</a></li>
+                    <li><a href="#pressure">Pressure & Energy</a></li>
+                    <li><a href="#distribution">Speed Distribution</a></li>
+                    <li><a href="#degrees">Degrees of Freedom</a></li>
+                    <li><a href="#problems">Problems</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="page-header" data-aos="fade-down">
+            <h1>Kinetic Theory of Gases</h1>
+            <p class="subtitle">Class 11 Physics | JEE & NEET Preparation Guide</p>
+            <p>Understanding gases at the molecular level - from random motion to macroscopic properties</p>
+            
+            <!-- Molecular Motion Animation -->
+            <div class="kinetic-container">
+                <div class="kinetic-demo" id="molecularMotion">
+                    <div class="gas-container"></div>
+                    <!-- Molecules will be added by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="info-panel" id="introduction" data-aos="fade-up">
+            <h2>Introduction to Kinetic Theory</h2>
+            <p>The kinetic theory of gases explains the macroscopic properties of gases (pressure, temperature, volume) in terms of the microscopic motion of their constituent molecules.</p>
+
+            <div class="definition">
+                <p><strong>Ideal Gas:</strong> A theoretical gas that follows the ideal gas equation exactly. Assumes: point molecules, no intermolecular forces, elastic collisions.</p>
+                <div class="formula">PV = nRT</div>
+                <p>Where P = pressure, V = volume, n = number of moles, R = gas constant, T = absolute temperature</p>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card postulates" data-aos="flip-left">
+                    <div class="card-title postulates"><i class="fas fa-list-check"></i> Basic Postulates</div>
+                    <p>Fundamental assumptions about gas molecules: point masses, random motion, elastic collisions, no forces except during collisions.</p>
+                    <div class="formula">P = (1/3)ρv²</div>
+                    <div class="formula">v_rms = √(3RT/M)</div>
+                </div>
+
+                <div class="concept-card gas-laws" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-title gas-laws"><i class="fas fa-chart-bar"></i> Gas Laws</div>
+                    <p>Boyle's, Charles', Gay-Lussac's, Avogadro's laws derived from kinetic theory. All combined in ideal gas equation.</p>
+                    <div class="formula">PV = constant (Boyle)</div>
+                    <div class="formula">V/T = constant (Charles)</div>
+                </div>
+
+                <div class="concept-card molecular-motion" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card-title molecular-motion"><i class="fas fa-running"></i> Molecular Motion</div>
+                    <p>Molecules in constant random motion with different speeds. RMS, average, most probable speeds related differently.</p>
+                    <div class="formula">v_rms > v_avg > v_mp</div>
+                    <div class="formula">KE_avg = (3/2)kT</div>
+                </div>
+            </div>
+
+            <h3>Real vs Ideal Gases</h3>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Ideal Gas</th>
+                    <th>Real Gas</th>
+                    <th>Conditions for Ideal Behavior</th>
+                </tr>
+                <tr>
+                    <td>Molecular Volume</td>
+                    <td>Negligible</td>
+                    <td>Finite</td>
+                    <td>Low pressure, high temperature</td>
+                </tr>
+                <tr>
+                    <td>Intermolecular Forces</td>
+                    <td>None</td>
+                    <td>Present</td>
+                    <td>Low pressure, high temperature</td>
+                </tr>
+                <tr>
+                    <td>Equation of State</td>
+                    <td>PV = nRT</td>
+                    <td>(P + a/V²)(V - b) = RT</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Compressibility Factor (Z)</td>
+                    <td>Z = 1</td>
+                    <td>Z ≠ 1</td>
+                    <td>Z → 1 at low P, high T</td>
+                </tr>
+                <tr>
+                    <td>Liquefaction</td>
+                    <td>Never</td>
+                    <td>Possible</td>
+                    <td>-</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Basic Postulates Section -->
+        <section class="info-panel" id="postulates" data-aos="fade-up">
+            <h2>Basic Postulates of Kinetic Theory</h2>
+            <p>The kinetic theory is based on several fundamental assumptions about the nature of gases.</p>
+
+            <div class="definition">
+                <p><strong>Postulate 1:</strong> A gas consists of a large number of identical molecules that are in random motion with various speeds.</p>
+                <p><strong>Postulate 2:</strong> The molecules are point masses with negligible volume compared to the container volume.</p>
+                <p><strong>Postulate 3:</strong> The molecules exert no forces on each other except during collisions (which are elastic).</p>
+                <p><strong>Postulate 4:</strong> Collisions with walls are elastic and instantaneous.</p>
+                <p><strong>Postulate 5:</strong> Newton's laws of motion apply to molecular motion.</p>
+            </div>
+
+            <h3>Derivation of Pressure Formula</h3>
+            <div class="important">
+                <p><strong>Pressure from Molecular Collisions:</strong></p>
+                <ol>
+                    <li>Consider a molecule with velocity v hitting wall perpendicularly</li>
+                    <li>Change in momentum per collision = 2mv</li>
+                    <li>Number of collisions per second = v/2L (for cube of side L)</li>
+                    <li>Force on wall = rate of change of momentum</li>
+                    <li>For N molecules with average v²: P = (1/3)(Nm/V)v²</li>
+                </ol>
+                <div class="formula">P = (1/3)ρv² = (1/3)(Nm/V)v²</div>
+                <p>Where ρ = density, m = molecular mass, N = number of molecules, V = volume</p>
+            </div>
+
+            <h3>Interpretation of Temperature</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Average Kinetic Energy</div>
+                    <p>From pressure formula and ideal gas equation:</p>
+                    <div class="formula">(1/2)mv²_avg = (3/2)kT</div>
+                    <p>Where k = Boltzmann constant = R/N_A</p>
+                    <p>k = 1.38 × 10⁻²³ J/K</p>
+                    <p>Temperature is measure of average translational KE</p>
+                    <p>For ideal gas: T ∝ average KE</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">RMS Speed</div>
+                    <p>Root Mean Square speed:</p>
+                    <div class="formula">v_rms = √(v²_avg) = √(3kT/m)</div>
+                    <p>For one mole: v_rms = √(3RT/M)</p>
+                    <p>Where M = molar mass</p>
+                    <p>v_rms ∝ √T, v_rms ∝ 1/√M</p>
+                    <p>At same T, lighter gases move faster</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Internal Energy</div>
+                    <p>For ideal monatomic gas:</p>
+                    <div class="formula">U = (3/2)NkT = (3/2)nRT</div>
+                    <p>Only translational kinetic energy</p>
+                    <p>For diatomic/polyatomic: include rotational, vibrational energy</p>
+                    <p>U depends only on T for ideal gas</p>
+                    <p>ΔU = nC_vΔT</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Van der Waals Equation</h4>
+                <p>Correction to ideal gas equation for real gases:</p>
+                <div class="formula">(P + a/V²)(V - b) = RT</div>
+                <p>Where:<br>
+                a = correction for intermolecular forces<br>
+                b = correction for molecular volume</p>
+                <p><strong>Critical constants:</strong><br>
+                V_c = 3b, P_c = a/(27b²), T_c = 8a/(27Rb)</p>
+                <p>Reduced equation: (P_r + 3/V_r²)(3V_r - 1) = 8T_r</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Pressure Calculation</div>
+                <p>Calculate pressure exerted by 10²³ oxygen molecules (m = 5.3×10⁻²⁶ kg) in 1 m³ container with rms speed 500 m/s.</p>
+                <p><strong>Solution:</strong></p>
+                <p>Using pressure formula: P = (1/3)(Nm/V)v_rms²</p>
+                <p>P = (1/3) × (10²³ × 5.3×10⁻²⁶ / 1) × (500)²</p>
+                <p>= (1/3) × (5.3×10⁻³) × 2.5×10⁵</p>
+                <p>= (1/3) × 1325 = 441.7 Pa</p>
+                <p><em>Pressure is directly proportional to number of molecules and square of speed.</em></p>
+            </div>
+        </section>
+
+        <!-- Gas Laws Section -->
+        <section class="info-panel" id="gas-laws" data-aos="fade-up">
+            <h2>Gas Laws from Kinetic Theory</h2>
+            <p>All gas laws can be derived from the kinetic theory and the ideal gas equation.</p>
+
+            <div class="definition">
+                <p><strong>Ideal Gas Equation:</strong> The fundamental equation combining all gas laws.</p>
+                <div class="formula">PV = nRT</div>
+                <p>Where R = 8.314 J/mol·K = 0.0821 L·atm/mol·K = 2 cal/mol·K</p>
+            </div>
+
+            <h3>Fundamental Gas Laws</h3>
+            <table>
+                <tr>
+                    <th>Law</th>
+                    <th>Statement</th>
+                    <th>Mathematical Form</th>
+                    <th>Kinetic Theory Derivation</th>
+                    <th>Graph</th>
+                </tr>
+                <tr>
+                    <td>Boyle's Law</td>
+                    <td>At constant T, P ∝ 1/V</td>
+                    <td>PV = constant</td>
+                    <td>P = (1/3)ρv², with v² ∝ T constant</td>
+                    <td>Hyperbola in PV diagram</td>
+                </tr>
+                <tr>
+                    <td>Charles' Law</td>
+                    <td>At constant P, V ∝ T</td>
+                    <td>V/T = constant</td>
+                    <td>v² ∝ T, so V must ∝ T to keep P constant</td>
+                    <td>Straight line through origin in VT graph</td>
+                </tr>
+                <tr>
+                    <td>Gay-Lussac's Law</td>
+                    <td>At constant V, P ∝ T</td>
+                    <td>P/T = constant</td>
+                    <td>Direct from P = (1/3)ρv² with v² ∝ T</td>
+                    <td>Straight line through origin in PT graph</td>
+                </tr>
+                <tr>
+                    <td>Avogadro's Law</td>
+                    <td>At same T and P, equal volumes contain equal molecules</td>
+                    <td>V ∝ n</td>
+                    <td>From P = (1/3)(Nm/V)v², with v² ∝ T constant</td>
+                    <td>Linear V vs n</td>
+                </tr>
+                <tr>
+                    <td>Dalton's Law</td>
+                    <td>Total pressure = sum of partial pressures</td>
+                    <td>P_total = ∑P_i</td>
+                    <td>Molecules don't interact, pressures add</td>
+                    <td>-</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Combined Gas Law:</strong></p>
+                <div class="formula">P₁V₁/T₁ = P₂V₂/T₂</div>
+                <p><strong>Standard Conditions:</strong></p>
+                <ul>
+                    <li><strong>STP (Standard Temperature & Pressure):</strong> 0°C = 273K, 1 atm = 1.013×10⁵ Pa</li>
+                    <li><strong>Molar volume at STP:</strong> 22.4 L = 0.0224 m³</li>
+                    <li><strong>NTP (Normal Temperature & Pressure):</strong> 20°C = 293K, 1 atm</li>
+                    <li><strong>SATP (Standard Ambient):</strong> 25°C = 298K, 1 bar = 10⁵ Pa</li>
+                </ul>
+            </div>
+
+            <h3>Graphical Representations</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Isotherms (PV diagram)</div>
+                    <p>Boyle's law: PV = constant</p>
+                    <p>Hyperbolic curves</p>
+                    <p>Higher T → curve further from origin</p>
+                    <p>Slope: dP/dV = -P/V</p>
+                    <p>Area under curve = work done</p>
+                    <p>Isothermal process: T constant</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Isobars (VT diagram)</div>
+                    <p>Charles' law: V/T = constant</td>
+                    <p>Straight lines through origin</p>
+                    <p>Slope = V/T = nR/P</p>
+                    <p>Higher P → smaller slope</p>
+                    <p>Absolute zero: -273.15°C = 0K</p>
+                    <p>Volume → 0 as T → 0K</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Isochors (PT diagram)</div>
+                    <p>Gay-Lussac's law: P/T = constant</p>
+                    <p>Straight lines through origin</p>
+                    <p>Slope = P/T = nR/V</p>
+                    <p>Larger V → smaller slope</p>
+                    <p>Pressure → 0 as T → 0K</p>
+                    <p>Constant volume process</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">NEET IMPORTANT</div>
+                <h4>Gas Law Problems Strategy</h4>
+                <p><strong>Step 1:</strong> Identify constant parameters (P, V, T, n)</p>
+                <p><strong>Step 2:</strong> Write initial and final states</p>
+                <p><strong>Step 3:</strong> Apply appropriate gas law or combined law</p>
+                <p><strong>Step 4:</strong> Convert to consistent units (K for T, same P units)</p>
+                <p><strong>Step 5:</strong> Solve for unknown</p>
+                <p><strong>Step 6:</strong> Check answer is reasonable</p>
+                <div class="formula">P₁V₁/T₁ = P₂V₂/T₂ (when n constant)</div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Combined Gas Law</div>
+                <p>A gas at 27°C and 2 atm occupies 3 L. What volume at 127°C and 4 atm?</p>
+                <p><strong>Solution:</strong></p>
+                <p>T₁ = 27 + 273 = 300K, P₁ = 2 atm, V₁ = 3 L</p>
+                <p>T₂ = 127 + 273 = 400K, P₂ = 4 atm, V₂ = ?</p>
+                <p>Using combined gas law: P₁V₁/T₁ = P₂V₂/T₂</p>
+                <p>V₂ = (P₁V₁T₂)/(P₂T₁) = (2×3×400)/(4×300) = 2400/1200 = 2 L</p>
+                <p><em>Volume decreases despite temperature increase due to greater pressure increase.</em></p>
+            </div>
+        </section>
+
+        <!-- Pressure & Energy Section -->
+        <section class="info-panel" id="pressure" data-aos="fade-up">
+            <h2>Pressure, Energy & Molecular Speeds</h2>
+            <p>Understanding how microscopic molecular motion relates to macroscopic pressure and energy.</p>
+
+            <div class="definition">
+                <p><strong>Pressure Formula (Derived):</strong></p>
+                <div class="formula">P = (1/3)ρv² = (1/3)(Nm/V)v²</div>
+                <p>Comparing with ideal gas equation PV = NkT:</p>
+                <div class="formula">(1/2)mv² = (3/2)kT</div>
+                <p>Average translational kinetic energy per molecule = (3/2)kT</p>
+            </div>
+
+            <h3>Different Molecular Speeds</h3>
+            <div class="motion-animation">
+                <div class="speed-distribution"></div>
+                <!-- Distribution curve will be created by JavaScript -->
+            </div>
+
+            <table>
+                <tr>
+                    <th>Speed Type</th>
+                    <th>Formula</th>
+                    <th>Relation</th>
+                    <th>Physical Significance</th>
+                    <th>For O₂ at 300K</th>
+                </tr>
+                <tr>
+                    <td>Most Probable (v_p)</td>
+                    <td>√(2kT/m) = √(2RT/M)</td>
+                    <td>Speed at distribution peak</td>
+                    <td>Maximum molecules have this speed</td>
+                    <td>395 m/s</td>
+                </tr>
+                <tr>
+                    <td>Average Speed (v_avg)</td>
+                    <td>√(8kT/πm) = √(8RT/πM)</td>
+                    <td>Arithmetic mean of speeds</td>
+                    <td>Used in mean free path calculations</td>
+                    <td>445 m/s</td>
+                </tr>
+                <tr>
+                    <td>RMS Speed (v_rms)</td>
+                    <td>√(3kT/m) = √(3RT/M)</td>
+                    <td>Root mean square speed</td>
+                    <td>Related to kinetic energy</td>
+                    <td>483 m/s</td>
+                </tr>
+                <tr>
+                    <td>Relation</td>
+                    <td colspan="4">v_p : v_avg : v_rms = 1 : 1.128 : 1.225 = √2 : √(8/π) : √3</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Key Relationships:</strong></p>
+                <ul>
+                    <li>v_rms ∝ √T (at constant molecular mass)</li>
+                    <li>v_rms ∝ 1/√M (at constant temperature)</li>
+                    <li>KE_avg = (1/2)mv²_rms = (3/2)kT</li>
+                    <li>For mixture: v_rms(mixture) = √(3RT/M_mix) where M_mix = average molar mass</li>
+                    <li>At same T: lighter gas molecules move faster</li>
+                    <li>To have same v_rms: T ∝ M (higher T needed for heavier gas)</li>
+                </ul>
+            </div>
+
+            <h3>Energy Distribution in Gases</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Translational Energy</div>
+                    <p>Energy due to translational motion</p>
+                    <div class="formula">KE_trans = (3/2)kT per molecule</div>
+                    <p>For n moles: U_trans = (3/2)nRT</p>
+                    <p>Monatomic gases: only translational</p>
+                    <p>Degrees of freedom: 3 (x, y, z directions)</p>
+                    <p>Contribution: (1/2)kT per degree</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Rotational Energy</div>
+                    <p>Energy due to rotational motion</p>
+                    <p>Monatomic: negligible (point masses)</p>
+                    <p>Diatomic: 2 rotational degrees</p>
+                    <div class="formula">KE_rot = (2/2)kT = kT per molecule</div>
+                    <p>Linear molecules: 2 rotational degrees</p>
+                    <p>Nonlinear: 3 rotational degrees</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Vibrational Energy</div>
+                    <p>Energy due to molecular vibrations</p>
+                    <p>Active at high temperatures</p>
+                    <p>Each vibrational mode: 2 degrees (KE + PE)</p>
+                    <div class="formula">Energy = 2 × (1/2)kT = kT per mode</div>
+                    <p>Diatomic: 1 vibrational mode at high T</p>
+                    <p>Polyatomic: multiple vibrational modes</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Law of Equipartition of Energy</h4>
+                <p>In thermal equilibrium, energy is equally distributed among all degrees of freedom.</p>
+                <div class="formula">Energy per degree of freedom = (1/2)kT</div>
+                <p><strong>For ideal gas:</strong></p>
+                <ul>
+                    <li>Translational: 3 degrees → (3/2)kT</li>
+                    <li>Rotational: depends on molecule shape</li>
+                    <li>Vibrational: active at high T, each mode: kT (2 degrees)</li>
+                </ul>
+                <p>Total energy = (f/2)kT per molecule, where f = total degrees of freedom</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: RMS Speed Comparison</div>
+                <p>Compare rms speeds of H₂ and O₂ at same temperature. (M_H₂ = 2 g/mol, M_O₂ = 32 g/mol)</p>
+                <p><strong>Solution:</strong></p>
+                <p>v_rms = √(3RT/M)</p>
+                <p>v_H₂/v_O₂ = √(M_O₂/M_H₂) = √(32/2) = √16 = 4</p>
+                <p>Hydrogen molecules move 4 times faster than oxygen at same temperature</p>
+                <p>At 300K: v_H₂ ≈ 1920 m/s, v_O₂ ≈ 480 m/s</p>
+                <p><em>Lighter gases have higher molecular speeds at same temperature.</em></p>
+            </div>
+        </section>
+
+        <!-- Speed Distribution Section -->
+        <section class="info-panel" id="distribution" data-aos="fade-up">
+            <h2>Maxwell-Boltzmann Distribution</h2>
+            <p>The distribution of molecular speeds in a gas at thermal equilibrium follows Maxwell-Boltzmann statistics.</p>
+
+            <div class="definition">
+                <p><strong>Maxwell-Boltzmann Distribution Law:</strong> The probability that a molecule has speed between v and v+dv is:</p>
+                <div class="formula">f(v)dv = 4π(m/2πkT)^(3/2) v² e^(-mv²/2kT) dv</div>
+                <p>Where f(v) is the probability density function</p>
+            </div>
+
+            <h3>Characteristics of Distribution</h3>
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>Description</th>
+                    <th>Mathematical Expression</th>
+                    <th>Significance</th>
+                </tr>
+                <tr>
+                    <td>Asymmetric</td>
+                    <td>Not symmetric about peak</td>
+                    <td>f(v) ≠ f(-v)</td>
+                    <td>More molecules have speeds > v_p than < v_p</td>
+                </tr>
+                <tr>
+                    <td>Starts at zero</td>
+                    <td>f(0) = 0</td>
+                    <td>No molecules at rest</td>
+                    <td>All molecules in motion at T > 0</td>
+                </tr>
+                <tr>
+                    <td>Goes to zero</td>
+                    <td>f(∞) = 0</td>
+                    <td>No infinite speed molecules</td>
+                    <td>Energy conservation limit</td>
+                </tr>
+                <tr>
+                    <td>Temperature effect</td>
+                    <td>Distribution broadens with T</td>
+                    <td>v_p ∝ √T</td>
+                    <td>More high-speed molecules at higher T</td>
+                </tr>
+                <tr>
+                    <td>Mass effect</td>
+                    <td>Lighter gases have broader distribution</td>
+                    <td>v_p ∝ 1/√m</td>
+                    <td>Hydrogen distributes more widely than oxygen</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Properties of Maxwell-Boltzmann Distribution:</strong></p>
+                <ul>
+                    <li><strong>Normalization:</strong> ∫₀^∞ f(v)dv = 1 (total probability = 1)</li>
+                    <li><strong>Most probable speed:</strong> v_p = √(2kT/m) where df/dv = 0</li>
+                    <li><strong>Average speed:</strong> v_avg = ∫₀^∞ v f(v)dv = √(8kT/πm)</li>
+                    <li><strong>RMS speed:</strong> v_rms = √(∫₀^∞ v² f(v)dv) = √(3kT/m)</li>
+                    <li><strong>Width:</strong> Δv = v_rms - v_p ≈ 0.225 v_rms</li>
+                    <li><strong>Fraction above a speed:</strong> ∫_{v₀}^∞ f(v)dv (calculus needed)</li>
+                </ul>
+            </div>
+
+            <h3>Experimental Verification</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Stern's Experiment</div>
+                    <p>Direct measurement of molecular speeds</p>
+                    <p>Rotating drum with slit</p>
+                    <p>Molecules deposit at positions proportional to speed</p>
+                    <p>Distribution obtained from deposit density</p>
+                    <p>Confirmed Maxwell's distribution</p>
+                    <p>First direct experimental proof</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Zartman-Ko Experiment</div>
+                    <p>Improved version of Stern's experiment</p>
+                    <p>Multiple slits for better collimation</p>
+                    <p>More accurate speed measurement</p>
+                    <p>Used for various gases</p>
+                    <p>Verified v_rms ∝ 1/√M</p>
+                    <p>Classic physics experiment</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Modern Methods</div>
+                    <p>Time-of-flight mass spectrometry</p>
+                    <p>Laser Doppler velocimetry</p>
+                    <p>Molecular beam techniques</p>
+                    <p>Computer simulations (Monte Carlo)</p>
+                    <p>High precision verification</p>
+                    <p>Used in research labs</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">NEET IMPORTANT</div>
+                <h4>Distribution at Different Temperatures</h4>
+                <p><strong>Effect of increasing T:</strong></p>
+                <ul>
+                    <li>Peak shifts right: v_p increases as √T</li>
+                    <li>Peak height decreases: distribution broadens</li>
+                    <li>Area under curve remains 1 (normalization)</li>
+                    <li>More molecules have high speeds</li>
+                    <li>Fewer molecules have low speeds</li>
+                </ul>
+                <p><strong>Effect of molecular mass:</strong></p>
+                <ul>
+                    <li>Heavier gas: narrower distribution</li>
+                    <li>Lighter gas: broader distribution</li>
+                    <li>At same T: v_p ∝ 1/√m</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Fraction of Fast Molecules</div>
+                <p>Estimate fraction of nitrogen molecules at 300K with speeds exceeding 800 m/s. (M = 28 g/mol, v_rms = 517 m/s)</p>
+                <p><strong>Approximation:</strong> v/v_rms = 800/517 ≈ 1.55</p>
+                <p>From Maxwell distribution tables: fraction ≈ 0.08</p>
+                <p>About 8% of molecules have speeds > 800 m/s</p>
+                <p><em>Significant fraction have speeds much higher than average.</em></p>
+                <p><strong>Exact calculation:</strong> Requires integration of Maxwell distribution</p>
+            </div>
+        </section>
+
+        <!-- Degrees of Freedom Section -->
+        <section class="info-panel" id="degrees" data-aos="fade-up">
+            <h2>Degrees of Freedom & Specific Heats</h2>
+            <p>Degrees of freedom determine how energy is distributed in a molecule and affect specific heats.</p>
+
+            <div class="definition">
+                <p><strong>Degrees of Freedom:</strong> Number of independent ways a molecule can store energy. Includes translational, rotational, and vibrational motions.</p>
+                <div class="formula">Law of Equipartition: Energy per degree = (1/2)kT</div>
+            </div>
+
+            <h3>Degrees of Freedom for Different Molecules</h3>
+            <table>
+                <tr>
+                    <th>Molecule Type</th>
+                    <th>Example</th>
+                    <th>Translational</th>
+                    <th>Rotational</th>
+                    <th>Vibrational*</th>
+                    <th>Total (f)</th>
+                    <th>C_v (per mole)</th>
+                    <th>γ = C_p/C_v</th>
+                </tr>
+                <tr>
+                    <td>Monatomic</td>
+                    <td>He, Ne, Ar</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>(3/2)R ≈ 12.47 J/mol·K</td>
+                    <td>5/3 ≈ 1.67</td>
+                </tr>
+                <tr>
+                    <td>Diatomic (rigid)</td>
+                    <td>H₂, N₂, O₂ (at room T)</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>(5/2)R ≈ 20.79 J/mol·K</td>
+                    <td>7/5 = 1.4</td>
+                </tr>
+                <tr>
+                    <td>Diatomic (vibrating)</td>
+                    <td>High temperature</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>2 (1 mode)</td>
+                    <td>7</td>
+                    <td>(7/2)R ≈ 29.10 J/mol·K</td>
+                    <td>9/7 ≈ 1.29</td>
+                </tr>
+                <tr>
+                    <td>Linear Polyatomic</td>
+                    <td>CO₂ (vibrational inactive)</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>(5/2)R ≈ 20.79 J/mol·K</td>
+                    <td>7/5 = 1.4</td>
+                </tr>
+                <tr>
+                    <td>Nonlinear Polyatomic</td>
+                    <td>H₂O, CH₄</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>6</td>
+                    <td>3R ≈ 24.94 J/mol·K</td>
+                    <td>4/3 ≈ 1.33</td>
+                </tr>
+            </table>
+            <p>*Vibrational degrees activated at high temperatures (>1000K for most gases)</p>
+
+            <div class="important">
+                <p><strong>Specific Heat Relations:</strong></p>
+                <div class="formula">C_v = (f/2)R (molar specific heat at constant volume)</div>
+                <div class="formula">C_p = C_v + R (Mayer's relation)</div>
+                <div class="formula">γ = C_p/C_v = 1 + 2/f</div>
+                <p><strong>For ideal gas:</strong></p>
+                <ul>
+                    <li>Monatomic: f=3, γ=5/3≈1.67</li>
+                    <li>Diatomic: f=5, γ=7/5=1.4</li>
+                    <li>Polyatomic: f=6, γ=4/3≈1.33</li>
+                </ul>
+            </div>
+
+            <h3>Mean Free Path & Collisions</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Mean Free Path (λ)</div>
+                    <p>Average distance between collisions</p>
+                    <div class="formula">λ = 1/(√2 π d² n)</div>
+                    <p>Where d = molecular diameter, n = number density</p>
+                    <p>Using ideal gas: λ = kT/(√2 π d² P)</p>
+                    <p>At STP for air: λ ≈ 6×10⁻⁸ m</p>
+                    <p>λ ∝ T, λ ∝ 1/P</p>
+                    <p>Longer mean free path at low pressure, high temperature</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Collision Frequency (Z)</div>
+                    <p>Number of collisions per second</p>
+                    <div class="formula">Z = v_avg/λ = √2 π d² n v_avg</div>
+                    <p>Using v_avg = √(8kT/πm)</p>
+                    <p>At STP for air: Z ≈ 10⁹ collisions/s</p>
+                    <p>Z ∝ √T, Z ∝ P</p>
+                    <p>More collisions at high pressure</p>
+                    <p>Collision cross-section: σ = πd²</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Transport Properties</div>
+                    <p><strong>Viscosity (η):</strong> η = (1/3)ρv_avgλ ∝ √T</p>
+                    <p>Gas viscosity increases with T (unlike liquids)</p>
+                    <p><strong>Thermal conductivity (k):</strong> k = (1/3)ρv_avgλC_v ∝ √T</p>
+                    <p><strong>Diffusion coefficient (D):</strong> D = (1/3)v_avgλ ∝ T^(3/2)/P</p>
+                    <p>All depend on mean free path</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Specific Heat Temperature Dependence</h4>
+                <p>Degrees of freedom activated at different temperatures:</p>
+                <ol>
+                    <li><strong>Very low T (< 50K):</strong> Only translational (f=3, C_v=3R/2)</li>
+                    <li><strong>Low T (~50-250K):</strong> + rotational (f=5, C_v=5R/2 for diatomic)</li>
+                    <li><strong>Room T (250-1000K):</strong> Full rotation, no vibration</li>
+                    <li><strong>High T (>1000K):</strong> + vibrational modes activated</li>
+                </ol>
+                <p>Quantum mechanics explains step-like increase in C_v with T</p>
+                <p>Classical equipartition valid only at high enough T</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Mean Free Path Calculation</div>
+                <p>Calculate mean free path of nitrogen at STP. d = 3.7×10⁻¹⁰ m, T = 273K, P = 1.01×10⁵ Pa.</p>
+                <p><strong>Solution:</strong></p>
+                <p>Using λ = kT/(√2 π d² P)</p>
+                <p>k = 1.38×10⁻²³ J/K</p>
+                <p>λ = (1.38×10⁻²³ × 273)/(√2 × π × (3.7×10⁻¹⁰)² × 1.01×10⁵)</p>
+                <p>= (3.77×10⁻²¹)/(1.414 × 3.14 × 1.37×10⁻¹⁹ × 1.01×10⁵)</p>
+                <p>= (3.77×10⁻²¹)/(6.16×10⁻¹⁴) = 6.12×10⁻⁸ m</p>
+                <p><em>Nitrogen molecules travel about 60 nm between collisions at STP.</em></p>
+            </div>
+        </section>
+
+        <!-- Problem Solving Section -->
+        <section class="info-panel" id="problems" data-aos="fade-up">
+            <h2>Problem Solving Strategies</h2>
+            <p>Systematic approach to solve kinetic theory problems in JEE and NEET.</p>
+
+            <div class="problem-solving">
+                <div class="problem-box">
+                    <div class="problem-title">Type 1: Molecular Speed Problems</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify which speed (v_rms, v_avg, v_p) is needed</li>
+                        <li>Use appropriate formula</li>
+                        <li>Convert to SI units (kg for m, K for T)</li>
+                        <li>For comparison: use ratios to avoid calculations</li>
+                        <li>Check: v_rms > v_avg > v_p</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> v_rms = √(3RT/M), remember molar mass in kg/mol</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 2: Energy & Temperature</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>For translational KE: use (3/2)kT per molecule</li>
+                        <li>For n moles: U = (f/2)nRT</li>
+                        <li>Identify degrees of freedom (f)</li>
+                        <li>Use equipartition: (1/2)kT per degree</li>
+                        <li>For internal energy change: ΔU = nC_vΔT</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Monatomic: f=3, diatomic: f=5, polyatomic: f=6 (room T)</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 3: Gas Law Problems</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Write given quantities with units</li>
+                        <li>Identify constant parameter (P, V, T, n)</li>
+                        <li>Use appropriate gas law</li>
+                        <li>Temperature must be in Kelvin</li>
+                        <li>Check if ideal gas equation applies</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> PV = nRT, R = 8.314 J/mol·K = 0.0821 L·atm/mol·K</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE/NEET TIP</div>
+                <h4>Common Problem Patterns</h4>
+                <p><strong>1. Speed comparison:</strong> v_rms₁/v_rms₂ = √(T₁M₂/T₂M₁)</p>
+                <p><strong>2. Energy calculation:</strong> KE_total = (f/2)nRT = (f/2)PV</p>
+                <p><strong>3. Pressure from kinetic theory:</strong> P = (1/3)ρv_rms²</p>
+                <p><strong>4. Mean free path:</strong> λ = kT/(√2 π d² P) ∝ T/P</p>
+                <p><strong>5. Specific heats:</strong> C_v = (f/2)R, C_p = C_v + R, γ = 1 + 2/f</p>
+                <p><strong>6. Gas mixtures:</strong> Use average molar mass, Dalton's law</p>
+            </div>
+
+            <h3>Quick Formula Reference</h3>
+            <div class="equation-cards">
+                <div class="equation-card">
+                    <div class="formula">PV = nRT</div>
+                    <div class="formula">P = (1/3)ρv_rms²</div>
+                    <div class="formula">v_rms = √(3RT/M)</div>
+                </div>
+                <div class="equation-card">
+                    <div class="formula">KE_avg = (3/2)kT</div>
+                    <div class="formula">U = (f/2)nRT</div>
+                    <div class="formula">C_v = (f/2)R</div>
+                </div>
+                <div class="equation-card">
+                    <div class="formula">λ = kT/(√2 π d² P)</div>
+                    <div class="formula">v_p : v_avg : v_rms</div>
+                    <div class="formula">= 1 : 1.128 : 1.225</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Facts Carousel -->
+        <div class="swiper-container" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">IDEAL GAS EQUATION</div>
+                        <div class="swiper-text">PV = nRT. R = 8.314 J/mol·K. At STP: 1 mol occupies 22.4 L.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">PRESSURE FORMULA</div>
+                        <div class="swiper-text">P = (1/3)ρv_rms². Pressure from molecular collisions with walls.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">MOLECULAR SPEEDS</div>
+                        <div class="swiper-text">v_rms = √(3RT/M), v_avg = √(8RT/πM), v_p = √(2RT/M). v_rms > v_avg > v_p.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">KINETIC ENERGY</div>
+                        <div class="swiper-text">KE_avg = (3/2)kT per molecule. Temperature measures average translational KE.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">DEGREES OF FREEDOM</div>
+                        <div class="swiper-text">Monatomic: f=3, diatomic: f=5, polyatomic: f=6. Energy = (1/2)kT per degree.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">MEAN FREE PATH</div>
+                        <div class="swiper-text">λ = kT/(√2 π d² P). Average distance between collisions. ∝ T, ∝ 1/P.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">SPECIFIC HEATS</div>
+                        <div class="swiper-text">C_v = (f/2)R, C_p = C_v + R, γ = C_p/C_v = 1 + 2/f. Monatomic: γ=5/3≈1.67.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">MAXWELL DISTRIBUTION</div>
+                        <div class="swiper-text">Speed distribution f(v) ∝ v² e^(-mv²/2kT). Asymmetric, depends on T and m.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- Summary Section -->
+        <section class="info-panel" data-aos="fade-up">
+            <h2>Chapter Summary & Key Points</h2>
+            
+            <h3>Essential Formulas</h3>
+            <div class="concept-cards">
+                <div class="concept-card postulates">
+                    <div class="card-title postulates">Fundamental Equations</div>
+                    <div class="formula">PV = nRT</div>
+                    <div class="formula">P = (1/3)ρv_rms²</div>
+                    <div class="formula">v_rms = √(3RT/M)</div>
+                </div>
+
+                <div class="concept-card gas-laws">
+                    <div class="card-title gas-laws">Energy & Speeds</div>
+                    <div class="formula">KE_avg = (3/2)kT</div>
+                    <div class="formula">U = (f/2)nRT</div>
+                    <div class="formula">v_p : v_avg : v_rms</div>
+                </div>
+
+                <div class="concept-card distribution">
+                    <div class="card-title distribution">Transport Properties</div>
+                    <div class="formula">λ = kT/(√2 π d² P)</div>
+                    <div class="formula">C_v = (f/2)R</div>
+                    <div class="formula">γ = 1 + 2/f</div>
+                </div>
+            </div>
+
+            <h3>Important Points for JEE/NEET</h3>
+            <ul>
+                <li>Kinetic theory explains gas properties in terms of molecular motion</li>
+                <li>Pressure results from molecular collisions with container walls</li>
+                <li>Temperature is proportional to average translational kinetic energy</li>
+                <li>RMS speed: v_rms = √(3RT/M), increases with T, decreases with M</li>
+                <li>Maxwell-Boltzmann distribution describes speed distribution</li>
+                <li>Degrees of freedom: monatomic=3, diatomic=5, polyatomic=6 (at room T)</li>
+                <li>Law of equipartition: Energy = (1/2)kT per degree of freedom</li>
+                <li>Mean free path: average distance between collisions, λ ∝ T/P</li>
+                <li>Specific heats: C_v = (f/2)R, C_p = C_v + R, γ = C_p/C_v = 1 + 2/f</li>
+            </ul>
+
+            <div class="important">
+                <p><strong>Common Mistakes to Avoid:</strong></p>
+                <ul>
+                    <li>Using Celsius instead of Kelvin in gas law calculations</li>
+                    <li>Confusing v_rms, v_avg, and v_mp (remember: v_rms > v_avg > v_mp)</li>
+                    <li>Forgetting to convert molar mass to kg/mol in speed calculations</li>
+                    <li>Applying ideal gas equation to real gases without corrections</li>
+                    <li>Wrong degrees of freedom assignment for different molecules</li>
+                    <li>Mixing up specific heat formulas for different processes</li>
+                    <li>Forgetting that mean free path depends on both T and P</li>
+                    <li>Assuming all molecules have the same speed (they don't!)</li>
+                </ul>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">LAST MINUTE REVISION</div>
+                <h4>Must Remember Values</h4>
+                <p><strong>Gas constant:</strong> R = 8.314 J/mol·K = 0.0821 L·atm/mol·K = 2 cal/mol·K</p>
+                <p><strong>Boltzmann constant:</strong> k = 1.38×10⁻²³ J/K = R/N_A</p>
+                <p><strong>Avogadro's number:</strong> N_A = 6.022×10²³ mol⁻¹</p>
+                <p><strong>Molar volume at STP:</strong> 22.4 L = 0.0224 m³</p>
+                <p><strong>γ values:</strong> Monatomic = 5/3 ≈ 1.67, Diatomic = 7/5 = 1.4, Polyatomic ≈ 4/3 ≈ 1.33</p>
+                <p><strong>Speed ratios:</strong> v_p : v_avg : v_rms = 1 : 1.128 : 1.225 = √2 : √(8/π) : √3</p>
+                <p><strong>Common molecular diameters:</strong> H₂: 2.9Å, N₂: 3.7Å, O₂: 3.6Å, He: 2.2Å</p>
+                <p><strong>Mean free path at STP:</strong> ~60 nm for air molecules</p>
+                <p><strong>Collision frequency at STP:</strong> ~10⁹ collisions per second</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Nerds Assemble</h3>
+                <p>Master Kinetic Theory of Gases for JEE & NEET. Comprehensive physics resource with detailed explanations and problem-solving strategies.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#postulates">Basic Postulates</a></li>
+                    <li><a href="#gas-laws">Gas Laws</a></li>
+                    <li><a href="#pressure">Pressure & Energy</a></li>
+                    <li><a href="#distribution">Speed Distribution</a></li>
+                    <li><a href="#degrees">Degrees of Freedom</a></li>
+                    <li><a href="#problems">Problem Solving</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact & Resources</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> 44mr.invisible@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Nerds Assemble. All rights reserved. | Designed for JEE & NEET Aspirants | Kinetic Theory of Gases | SEO Optimized for Google</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Kinetic Theory of Gases - JavaScript
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ?
+                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+            }
+
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+
+            function handleScroll() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('active');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                }
+            }
+
+            // Debounced scroll event
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(handleScroll, 50);
+            }, { passive: true });
+
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: window.innerWidth < 768 ? 100 : 120,
+                    easing: 'ease-out-quad'
+                });
+            }
+
+            // Initialize Swiper
+            if (typeof Swiper !== 'undefined') {
+                const swiper = new Swiper('.swiper-container', {
+                    loop: true,
+                    autoplay: {
+                        delay: 3500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 25
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        }
+                    }
+                });
+            }
+
+            // Smooth Scroll for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        if (mainNav && mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                });
+            });
+
+            // Back to Top Button Click
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Create Molecular Motion Visualization
+            createMolecularMotion();
+            
+            // Create Distribution Curve
+            createDistributionCurve();
+            
+            // Create Gas Molecules
+            createGasMolecules();
+            
+            // Create Particles
+            createParticles();
+            
+            // Setup interactive molecules
+            setupInteractiveMolecules();
+        });
+
+        // Create Molecular Motion Visualization
+        function createMolecularMotion() {
+            const kineticDemo = document.getElementById('molecularMotion');
+            if (!kineticDemo) return;
+
+            const gasContainer = kineticDemo.querySelector('.gas-container');
+            
+            // Create molecules with different properties
+            const moleculeCount = 15;
+            const molecules = [];
+            
+            for (let i = 0; i < moleculeCount; i++) {
+                const molecule = document.createElement('div');
+                molecule.className = 'molecule';
+                
+                // Different sizes for different "molecules"
+                const size = Math.random() * 10 + 5;
+                const initialX = Math.random() * 80 + 5;
+                const initialY = Math.random() * 80 + 5;
+                const speed = Math.random() * 2 + 1;
+                
+                molecule.style.width = `${size}px`;
+                molecule.style.height = `${size}px`;
+                molecule.style.left = `${initialX}%`;
+                molecule.style.top = `${initialY}%`;
+                molecule.style.background = i % 3 === 0 ? 'var(--kinetic-primary)' : 
+                                           i % 3 === 1 ? 'var(--kinetic-tertiary)' : 
+                                           'var(--kinetic-accent)';
+                
+                // Add velocity vector
+                const vector = document.createElement('div');
+                vector.className = 'velocity-vector';
+                vector.style.left = `${initialX}%`;
+                vector.style.top = `${initialY}%`;
+                vector.style.width = `${speed * 20}px`;
+                vector.style.transform = `rotate(${Math.random() * 360}deg)`;
+                
+                kineticDemo.appendChild(molecule);
+                kineticDemo.appendChild(vector);
+                
+                molecules.push({
+                    element: molecule,
+                    vector: vector,
+                    x: initialX,
+                    y: initialY,
+                    vx: (Math.random() - 0.5) * speed,
+                    vy: (Math.random() - 0.5) * speed,
+                    size: size
+                });
+            }
+            
+            // Animate molecules
+            function animateMolecules() {
+                molecules.forEach(mol => {
+                    // Update position
+                    mol.x += mol.vx;
+                    mol.y += mol.vy;
+                    
+                    // Boundary collision
+                    if (mol.x < 5 || mol.x > 85) {
+                        mol.vx *= -1;
+                        mol.x = mol.x < 5 ? 5 : 85;
+                        mol.element.classList.add('collision');
+                        setTimeout(() => mol.element.classList.remove('collision'), 500);
+                    }
+                    if (mol.y < 5 || mol.y > 85) {
+                        mol.vy *= -1;
+                        mol.y = mol.y < 5 ? 5 : 85;
+                        mol.element.classList.add('collision');
+                        setTimeout(() => mol.element.classList.remove('collision'), 500);
+                    }
+                    
+                    // Update element position
+                    mol.element.style.left = `${mol.x}%`;
+                    mol.element.style.top = `${mol.y}%`;
+                    
+                    // Update vector
+                    mol.vector.style.left = `${mol.x}%`;
+                    mol.vector.style.top = `${mol.y}%`;
+                    const angle = Math.atan2(mol.vy, mol.vx) * 180 / Math.PI;
+                    mol.vector.style.transform = `rotate(${angle}deg)`;
+                    const speed = Math.sqrt(mol.vx * mol.vx + mol.vy * mol.vy);
+                    mol.vector.style.width = `${speed * 20}px`;
+                });
+                
+                requestAnimationFrame(animateMolecules);
+            }
+            
+            animateMolecules();
+        }
+
+        // Create Distribution Curve
+        function createDistributionCurve() {
+            const speedDistribution = document.querySelector('.speed-distribution');
+            if (!speedDistribution) return;
+
+            // Create Maxwell-Boltzmann-like distribution curve
+            const points = 20;
+            for (let i = 0; i < points; i++) {
+                const x = (i / points) * 100;
+                // Maxwell-Boltzmann distribution shape: f(v) ∝ v² e^(-v²)
+                const v = i / 10;
+                const height = 30 * v * v * Math.exp(-v * v);
+                
+                const bar = document.createElement('div');
+                bar.className = 'distribution-curve';
+                bar.style.left = `${x}%`;
+                bar.style.bottom = '0';
+                bar.style.width = `${100/points}%`;
+                bar.style.height = `${height}%`;
+                bar.style.opacity = 0.7;
+                bar.style.animationDelay = `${i * 0.1}s`;
+                
+                speedDistribution.appendChild(bar);
+            }
+            
+            // Add labels
+            const vpLabel = document.createElement('div');
+            vpLabel.textContent = 'v_p';
+            vpLabel.style.position = 'absolute';
+            vpLabel.style.left = '40%';
+            vpLabel.style.bottom = '5%';
+            vpLabel.style.color = 'var(--kinetic-highlight)';
+            vpLabel.style.fontFamily = 'Electrolize, sans-serif';
+            vpLabel.style.fontSize = '0.7rem';
+            speedDistribution.appendChild(vpLabel);
+            
+            const vrmsLabel = document.createElement('div');
+            vrmsLabel.textContent = 'v_rms';
+            vrmsLabel.style.position = 'absolute';
+            vrmsLabel.style.left = '60%';
+            vrmsLabel.style.bottom = '10%';
+            vrmsLabel.style.color = 'var(--kinetic-highlight)';
+            vrmsLabel.style.fontFamily = 'Electrolize, sans-serif';
+            vrmsLabel.style.fontSize = '0.7rem';
+            speedDistribution.appendChild(vrmsLabel);
+        }
+
+        // Create Gas Molecules Function
+        function createGasMolecules() {
+            const gasMoleculesContainer = document.getElementById('gasMolecules');
+            if (!gasMoleculesContainer) return;
+
+            const moleculeCount = window.innerWidth < 768 ? 20 : 40;
+            
+            for (let i = 0; i < moleculeCount; i++) {
+                const molecule = document.createElement('div');
+                molecule.classList.add('gas-molecule');
+
+                const size = Math.random() * 8 + 3;
+                const posX = Math.random() * window.innerWidth;
+                const posY = Math.random() * window.innerHeight;
+                const duration = Math.random() * 4 + 2;
+                const delay = Math.random() * 2;
+                const tx = (Math.random() - 0.5) * 100;
+                const ty = (Math.random() - 0.5) * 100;
+                const rot = Math.random() * 360;
+                const color = Math.random() > 0.5 ? 'rgba(0, 188, 212, 0.5)' : 'rgba(76, 175, 80, 0.5)';
+
+                molecule.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}px;
+                    top: ${posY}px;
+                    opacity: ${Math.random() * 0.4 + 0.2};
+                    background: radial-gradient(circle at 30% 30%, ${color}, transparent);
+                    box-shadow: 0 0 10px ${color};
+                    --tx: ${tx}px;
+                    --ty: ${ty}px;
+                    --rot: ${rot}deg;
+                `;
+
+                // Add random movement animation
+                molecule.style.animation = `random-move ${duration}s ease-in-out ${delay}s infinite alternate`;
+                
+                gasMoleculesContainer.appendChild(molecule);
+            }
+        }
+
+        // Create Particles Function
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
+
+            const particleCount = window.innerWidth < 768 ? 20 : 30;
+            particlesContainer.innerHTML = '';
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                const size = Math.random() * 3 + 1;
+                const posX = Math.random() * window.innerWidth;
+                const posY = Math.random() * window.innerHeight;
+                const duration = Math.random() * 15 + 10;
+                const delay = Math.random() * 5;
+                const color = Math.random() > 0.5 ? 'rgba(0, 188, 212, 0.3)' : 'rgba(0, 151, 167, 0.3)';
+
+                particle.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}px;
+                    top: ${posY}px;
+                    opacity: ${Math.random() * 0.3 + 0.1};
+                    animation: float ${duration}s ease-in-out ${delay}s infinite;
+                    background: ${color};
+                `;
+
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Setup interactive molecules
+        function setupInteractiveMolecules() {
+            const molecules = document.querySelectorAll('.molecule');
+            molecules.forEach(molecule => {
+                molecule.addEventListener('click', function() {
+                    this.style.boxShadow = '0 0 20px var(--kinetic-highlight)';
+                    this.style.transform = 'scale(1.5)';
+                    
+                    setTimeout(() => {
+                        this.style.boxShadow = '0 0 10px var(--kinetic-primary)';
+                        this.style.transform = 'scale(1)';
+                    }, 500);
+                });
+            });
+        }
+
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                createParticles();
+                createGasMolecules();
+            }, 250);
+        });
+    </script>
+</body>
+</html>
