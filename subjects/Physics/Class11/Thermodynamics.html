@@ -1,0 +1,2128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKVRN3GREN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKVRN3GREN');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermodynamics | Class 11 Physics | JEE & NEET Preparation</title>
+    <meta name="description" content="Master Thermodynamics for Class 11 Physics. Complete guide for JEE & NEET aspirants covering laws of thermodynamics, heat engines, entropy, Carnot cycle, and thermodynamic processes.">
+    <meta name="keywords" content="Thermodynamics, Physics Class 11, JEE preparation, NEET physics, Laws of Thermodynamics, Heat Engines, Entropy, Carnot Cycle, Thermodynamic Processes, Internal Energy, Enthalpy">
+    <meta name="author" content="Nerds Assemble">
+    <meta name="robots" content="index, follow">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Thermodynamics | Class 11 Physics">
+    <meta property="og:description" content="Complete guide to Thermodynamics for JEE & NEET aspirants">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nerdsassemble.com/thermodynamics">
+    
+    <!-- Structured Data for Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Thermodynamics - Class 11 Physics",
+        "description": "Complete guide to Thermodynamics with laws, heat engines, entropy, and Carnot cycle for JEE & NEET",
+        "educationalLevel": "High School",
+        "learningResourceType": "Educational Course",
+        "author": {
+            "@type": "Organization",
+            "name": "Nerds Assemble"
+        },
+        "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": "Student",
+            "audienceType": ["JEE Aspirants", "NEET Aspirants"]
+        }
+    }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Pacifico&family=Dancing+Script:wght@700&family=Abril+Fatface&family=Playfair+Display:wght@700&family=Raleway:wght@300;800&family=Quicksand:wght@500&family=Poiret+One&family=Amatic+SC:wght@700&family=Caveat:wght@700&family=Kaushan+Script&family=Libre+Baskerville&family=Merriweather&family=Nunito:wght@800&family=Oswald:wght@500&family=Roboto+Slab:wght@700&family=Sacramento&family=Tangerine:wght@700&family=Yeseva+One&family=Electrolize&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+     <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/planet-universe-svgrepo-com.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/planet-universe-svgrepo-com.svg">
+    
+    <style>
+        /* Thermodynamics - Nerds Assemble CSS */
+        :root {
+            --thermo-primary: #E91E63;
+            --thermo-secondary: #9C27B0;
+            --thermo-tertiary: #2196F3;
+            --thermo-accent: #FF9800;
+            --thermo-bg: #0a0a20;
+            --thermo-text: #ffffff;
+            --thermo-highlight: #FFD700;
+            --thermo-nav-bg: rgba(10, 5, 30, 0.95);
+            --thermo-gradient: linear-gradient(45deg, #E91E63, #9C27B0);
+            --first-law-gradient: linear-gradient(45deg, #2196F3, #00BCD4);
+            --second-law-gradient: linear-gradient(45deg, #FF9800, #FF5722);
+            --carnot-gradient: linear-gradient(45deg, #4CAF50, #8BC34A);
+        }
+
+        /* Base Styles & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--thermo-bg);
+            color: var(--thermo-text);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overscroll-behavior-y: contain;
+            -webkit-overflow-scrolling: touch;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(233, 30, 99, 0.15) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(33, 150, 243, 0.15) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(255, 152, 0, 0.1) 0%, transparent 30%),
+                linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+            background: linear-gradient(45deg, var(--thermo-primary), var(--thermo-secondary), var(--thermo-tertiary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(233, 30, 99, 0.5);
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--thermo-highlight);
+            margin: 2rem 0 1.5rem;
+            font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--thermo-primary), transparent);
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-family: 'Roboto Slab', serif;
+            color: var(--thermo-secondary);
+            margin: 1.5rem 0 1rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+        }
+
+        p {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+        }
+
+        /* Layout Components */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            flex: 1;
+            padding: 0 1rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Raleway', sans-serif;
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+            color: var(--thermo-secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--thermo-nav-bg);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            transform: translateZ(0);
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            color: var(--thermo-highlight);
+            font-size: 1.6rem;
+        }
+
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--thermo-primary), var(--thermo-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.4rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        .nav-links a {
+            color: var(--thermo-text);
+            text-decoration: none;
+            font-family: 'Electrolize', sans-serif;
+            font-size: 0.95rem;
+            transition: color 0.2s ease-out;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--thermo-highlight);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--thermo-highlight);
+            transition: width 0.2s ease-out;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--thermo-text);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* Content Panels */
+        .info-panel {
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
+            padding: 1.8rem;
+            margin: 1.8rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: translateZ(0);
+            will-change: transform, opacity;
+        }
+
+        /* Special Content Blocks */
+        .important {
+            background: rgba(233, 30, 99, 0.1);
+            border-left: 4px solid var(--thermo-primary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(233, 30, 99, 0.1);
+        }
+
+        .definition {
+            background: rgba(255, 215, 0, 0.1);
+            border-left: 4px solid var(--thermo-highlight);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.1);
+        }
+
+        .formula {
+            font-family: 'Audiowide', cursive;
+            color: var(--thermo-highlight);
+            margin: 1.2rem 0;
+            padding: 1.2rem;
+            background: rgba(233, 30, 99, 0.1);
+            border-radius: 8px;
+            border: 1px dashed var(--thermo-highlight);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.1rem;
+        }
+
+        .example {
+            background: rgba(76, 175, 80, 0.1);
+            border-left: 4px solid var(--thermo-tertiary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: var(--thermo-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Lists & Tables */
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 1.8rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background-color: rgba(233, 30, 99, 0.2);
+            font-family: 'Electrolize', sans-serif;
+            color: var(--thermo-highlight);
+            font-size: 0.95rem;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+
+        tr:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* Concept Cards */
+        .concept-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .concept-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(233, 30, 99, 0.2);
+        }
+
+        .concept-card.first-law {
+            border-top: 4px solid var(--thermo-tertiary);
+        }
+
+        .concept-card.second-law {
+            border-top: 4px solid var(--thermo-accent);
+        }
+
+        .concept-card.processes {
+            border-top: 4px solid var(--thermo-primary);
+        }
+
+        .concept-card.engines {
+            border-top: 4px solid var(--thermo-secondary);
+        }
+
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title.first-law { color: var(--thermo-tertiary); }
+        .card-title.second-law { color: var(--thermo-accent); }
+        .card-title.processes { color: var(--thermo-primary); }
+        .card-title.engines { color: var(--thermo-secondary); }
+
+        /* Thermodynamic Visualization */
+        .thermo-container {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .thermo-demo {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            margin: 1rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .pv-graph {
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            top: 10%;
+            left: 10%;
+            border-left: 2px solid var(--thermo-highlight);
+            border-bottom: 2px solid var(--thermo-highlight);
+        }
+
+        .thermo-process {
+            position: absolute;
+            background: transparent;
+            border: 2px solid;
+            border-radius: 3px;
+        }
+
+        .process-label {
+            position: absolute;
+            color: var(--thermo-text);
+            font-family: 'Electrolize', sans-serif;
+            font-size: 0.8rem;
+        }
+
+        /* Heat Engine Animation */
+        .engine-animation {
+            height: 150px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .engine-piston {
+            width: 40px;
+            height: 60px;
+            background: var(--thermo-primary);
+            border-radius: 5px;
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            transform: translateX(-50%);
+            transition: top 2s ease-in-out;
+            box-shadow: 0 0 20px var(--thermo-primary);
+        }
+
+        .engine-cylinder {
+            width: 60px;
+            height: 100px;
+            border: 2px solid var(--thermo-secondary);
+            border-radius: 5px;
+            position: absolute;
+            left: 50%;
+            top: 15px;
+            transform: translateX(-50%);
+        }
+
+        .heat-flow {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            opacity: 0;
+            animation: heat-flow 2s infinite;
+        }
+
+        /* Equation Cards */
+        .equation-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .equation-card {
+            background: rgba(33, 150, 243, 0.1);
+            border-radius: 10px;
+            padding: 1.2rem;
+            text-align: center;
+            border: 1px solid rgba(33, 150, 243, 0.3);
+        }
+
+        .equation {
+            font-family: 'Audiowide', cursive;
+            color: var(--thermo-tertiary);
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+
+        /* Problem Solving Section */
+        .problem-solving {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .problem-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--thermo-primary);
+        }
+
+        .problem-title {
+            color: var(--thermo-primary);
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            margin: 2rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--thermo-nav-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .footer-column h3 {
+            color: var(--thermo-highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--thermo-text);
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            transition: color 0.2s ease-out;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--thermo-highlight);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--thermo-text);
+            font-size: 1.1rem;
+            transition: color 0.2s ease-out;
+        }
+
+        .social-links a:hover {
+            color: var(--thermo-highlight);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 1.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Quicksand', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 45px;
+            height: 45px;
+            background: var(--thermo-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease-out;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
+            transform: translateZ(0);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--thermo-highlight);
+            transform: translateY(-5px);
+        }
+
+        /* JEE/NEET Specific Styling */
+        .exam-highlight {
+            background: rgba(255, 235, 0, 0.1);
+            border: 2px solid var(--thermo-highlight);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .exam-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--thermo-highlight);
+            color: var(--thermo-bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes heat-flow {
+            0% { opacity: 0; transform: translateY(0); }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { opacity: 0; transform: translateY(-50px); }
+        }
+
+        @keyframes piston-move {
+            0%, 100% { top: 20px; }
+            50% { top: 60px; }
+        }
+
+        @keyframes carnot-cycle {
+            0% { transform: translate(0,0); }
+            25% { transform: translate(100px,0); }
+            50% { transform: translate(100px,-100px); }
+            75% { transform: translate(0,-100px); }
+            100% { transform: translate(0,0); }
+        }
+
+        @keyframes entropy-increase {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .piston-move {
+            animation: piston-move 3s infinite;
+        }
+
+        .carnot-cycle {
+            animation: carnot-cycle 8s infinite linear;
+        }
+
+        .entropy-increase {
+            animation: entropy-increase 2s infinite alternate;
+        }
+
+        /* Swiper Carousel */
+        .swiper-container {
+            width: 100%;
+            height: auto;
+            min-height: 180px;
+            margin: 2.5rem 0;
+            will-change: transform;
+        }
+
+        .swiper-slide {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+            font-family: 'Electrolize', sans-serif;
+            padding: 1.2rem;
+            box-sizing: border-box;
+            text-align: center;
+            min-height: 180px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .swiper-title {
+            font-family: 'Audiowide', cursive;
+            color: var(--thermo-highlight);
+            margin-bottom: 0.5rem;
+            font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+        }
+
+        .swiper-text {
+            font-family: 'Quicksand', sans-serif;
+            font-size: clamp(0.85rem, 1.1vw, 1rem);
+        }
+
+        /* Particles Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            will-change: transform;
+            opacity: 0.3;
+        }
+
+        /* Energy Flow */
+        .energy-flow {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            will-change: transform;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                margin-top: 1rem;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.75rem 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .container {
+                width: 95%;
+                padding: 0;
+            }
+
+            .concept-cards, .problem-solving {
+                grid-template-columns: 1fr;
+            }
+
+            .equation-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-panel {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    <div class="energy-flows" id="energyFlows"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-bolt"></i></span>
+                <span class="logo-text">Nerds Assemble</span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#first-law">First Law</a></li>
+                    <li><a href="#second-law">Second Law</a></li>
+                    <li><a href="#processes">Thermo Processes</a></li>
+                    <li><a href="#heat-engines">Heat Engines</a></li>
+                    <li><a href="#entropy">Entropy</a></li>
+                    <li><a href="#problems">Problems</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="page-header" data-aos="fade-down">
+            <h1>Thermodynamics</h1>
+            <p class="subtitle">Class 11 Physics | JEE & NEET Preparation Guide</p>
+            <p>Master the science of energy transformations - from heat engines to the universe's fate</p>
+            
+            <!-- Engine Animation -->
+            <div class="engine-animation">
+                <div class="engine-cylinder"></div>
+                <div class="engine-piston piston-move"></div>
+                <div class="heat-flow" style="left: 30%; top: 50%; border-width: 0 10px 20px 10px; border-color: transparent transparent #FF9800 transparent; animation-delay: 0s;"></div>
+                <div class="heat-flow" style="right: 30%; top: 30%; border-width: 20px 10px 0 10px; border-color: #E91E63 transparent transparent transparent; animation-delay: 1s;"></div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="info-panel" id="introduction" data-aos="fade-up">
+            <h2>Introduction to Thermodynamics</h2>
+            <p>Thermodynamics is the branch of physics that deals with heat, work, temperature, and their relation to energy, radiation, and physical properties of matter.</p>
+
+            <div class="definition">
+                <p><strong>System:</strong> The part of the universe under study. Can be open, closed, or isolated.</p>
+                <p><strong>Surroundings:</strong> Everything outside the system that can exchange energy with it.</p>
+                <p><strong>Boundary:</strong> The surface separating system from surroundings.</p>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card first-law" data-aos="flip-left">
+                    <div class="card-title first-law"><i class="fas fa-balance-scale"></i> First Law</div>
+                    <p>Energy conservation: ΔU = Q - W. Energy cannot be created or destroyed, only transformed.</p>
+                    <div class="formula">ΔU = Q - W</div>
+                    <div class="formula">Q = ΔU + W</div>
+                </div>
+
+                <div class="concept-card second-law" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-title second-law"><i class="fas fa-arrow-up"></i> Second Law</div>
+                    <p>Entropy always increases. Heat flows spontaneously from hot to cold. Efficiency limits.</p>
+                    <div class="formula">η ≤ 1 - T₂/T₁</div>
+                    <div class="formula">ΔS ≥ Q/T</div>
+                </div>
+
+                <div class="concept-card processes" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card-title processes"><i class="fas fa-chart-line"></i> Processes</div>
+                    <p>Isothermal, adiabatic, isobaric, isochoric. Different PV diagrams, different work calculations.</p>
+                    <div class="formula">W = ∫PdV</div>
+                    <div class="formula">PV = constant</div>
+                </div>
+            </div>
+
+            <h3>Thermodynamic State Variables</h3>
+            <table>
+                <tr>
+                    <th>Variable</th>
+                    <th>Symbol</th>
+                    <th>Definition</th>
+                    <th>SI Unit</th>
+                    <th>Nature</th>
+                </tr>
+                <tr>
+                    <td>Pressure</td>
+                    <td>P</td>
+                    <td>Force per unit area</td>
+                    <td>Pascal (Pa)</td>
+                    <td>Intensive</td>
+                </tr>
+                <tr>
+                    <td>Volume</td>
+                    <td>V</td>
+                    <td>Space occupied</td>
+                    <td>m³</td>
+                    <td>Extensive</td>
+                </tr>
+                <tr>
+                    <td>Temperature</td>
+                    <td>T</td>
+                    <td>Measure of hotness</td>
+                    <td>Kelvin (K)</td>
+                    <td>Intensive</td>
+                </tr>
+                <tr>
+                    <td>Internal Energy</td>
+                    <td>U</td>
+                    <td>Total microscopic energy</td>
+                    <td>Joule (J)</td>
+                    <td>Extensive</td>
+                </tr>
+                <tr>
+                    <td>Entropy</td>
+                    <td>S</td>
+                    <td>Measure of disorder</td>
+                    <td>J/K</td>
+                    <td>Extensive</td>
+                </tr>
+                <tr>
+                    <td>Enthalpy</td>
+                    <td>H</td>
+                    <td>H = U + PV</td>
+                    <td>Joule (J)</td>
+                    <td>Extensive</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- First Law Section -->
+        <section class="info-panel" id="first-law" data-aos="fade-up">
+            <h2>First Law of Thermodynamics</h2>
+            <p>The first law is essentially the principle of conservation of energy applied to thermodynamic systems.</p>
+
+            <div class="definition">
+                <p><strong>Mathematical Statement:</strong> The change in internal energy of a system equals the heat added to the system minus the work done by the system.</p>
+                <div class="formula">ΔU = Q - W</div>
+                <p>Where:<br>
+                ΔU = Change in internal energy<br>
+                Q = Heat added to system<br>
+                W = Work done by system</p>
+            </div>
+
+            <h3>Sign Convention</h3>
+            <table>
+                <tr>
+                    <th>Quantity</th>
+                    <th>Positive Sign</th>
+                    <th>Negative Sign</th>
+                </tr>
+                <tr>
+                    <td>Heat (Q)</td>
+                    <td>Added to system</td>
+                    <td>Released by system</td>
+                </tr>
+                <tr>
+                    <td>Work (W)</td>
+                    <td>Done by system</td>
+                    <td>Done on system</td>
+                </tr>
+                <tr>
+                    <td>ΔU</td>
+                    <td>Increases</td>
+                    <td>Decreases</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Key Concepts:</strong></p>
+                <ul>
+                    <li><strong>Internal Energy (U):</strong> Sum of all microscopic energies (kinetic + potential) of molecules</li>
+                    <li><strong>For ideal gas:</strong> U depends only on temperature (U = f(T) only)</li>
+                    <li><strong>Heat (Q):</strong> Energy transfer due to temperature difference</li>
+                    <li><strong>Work (W):</strong> Energy transfer by mechanical means, W = ∫PdV</li>
+                    <li><strong>Path dependence:</strong> Q and W depend on path, ΔU depends only on initial and final states</li>
+                </ul>
+            </div>
+
+            <h3>Applications of First Law</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Cyclic Process</div>
+                    <p>System returns to initial state</p>
+                    <p>ΔU = 0 (since U is state function)</p>
+                    <div class="formula">Q_net = W_net</div>
+                    <p>Heat absorbed = Work done</p>
+                    <p>PV diagram forms closed loop</p>
+                    <p>Area inside loop = Net work</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Free Expansion</div>
+                    <p>Gas expands into vacuum</p>
+                    <p>No external pressure: W = 0</p>
+                    <p>No heat exchange: Q = 0</p>
+                    <div class="formula">ΔU = 0</div>
+                    <p>For ideal gas: ΔT = 0 (isothermal)</p>
+                    <p>Irreversible process</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Enthalpy (H)</div>
+                    <p>Useful for constant pressure processes</p>
+                    <div class="formula">H = U + PV</div>
+                    <p>At constant pressure: ΔH = Q_p</p>
+                    <p>For chemical reactions, phase changes</p>
+                    <p>For ideal gas: H = U + nRT</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Work Calculation in Different Processes</h4>
+                <p><strong>General:</strong> W = ∫PdV</p>
+                <p><strong>Constant pressure:</strong> W = PΔV</p>
+                <p><strong>Constant volume:</strong> W = 0</p>
+                <p><strong>Isothermal (ideal gas):</strong> W = nRT ln(V₂/V₁) = nRT ln(P₁/P₂)</p>
+                <p><strong>Adiabatic (ideal gas):</strong> W = (P₁V₁ - P₂V₂)/(γ-1) = nR(T₁ - T₂)/(γ-1)</p>
+                <p>For monatomic gas: γ = 5/3, for diatomic: γ = 7/5</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: First Law Application</div>
+                <p>A gas absorbs 200 J of heat and expands, doing 150 J of work. What is change in internal energy?</p>
+                <p><strong>Solution:</strong></p>
+                <p>Q = +200 J (heat absorbed, positive)<br>
+                W = +150 J (work done by gas, positive)</p>
+                <p>ΔU = Q - W = 200 - 150 = 50 J</p>
+                <p>Internal energy increases by 50 J</p>
+                <p><em>The remaining 150 J of heat energy is converted to work.</em></p>
+            </div>
+        </section>
+
+        <!-- Second Law Section -->
+        <section class="info-panel" id="second-law" data-aos="fade-up">
+            <h2>Second Law of Thermodynamics</h2>
+            <p>The second law introduces the concept of entropy and establishes the direction of spontaneous processes.</p>
+
+            <div class="definition">
+                <p><strong>Kelvin-Planck Statement:</strong> It is impossible to construct a heat engine that operates in a cycle and converts all heat absorbed from a hot reservoir into work without rejecting some heat to a cold reservoir.</p>
+                <p><strong>Clausius Statement:</strong> Heat cannot spontaneously flow from a colder body to a hotter body without external work being done.</p>
+            </div>
+
+            <h3>Different Statements - Same Meaning</h3>
+            <table>
+                <tr>
+                    <th>Statement By</th>
+                    <th>Formulation</th>
+                    <th>Implication</th>
+                </tr>
+                <tr>
+                    <td>Kelvin-Planck</td>
+                    <td>No 100% efficient heat engine</td>
+                    <td>η < 100%, must reject heat</td>
+                </tr>
+                <tr>
+                    <td>Clausius</td>
+                    <td>Heat flows hot → cold naturally</td>
+                    <td>Refrigerators need work input</td>
+                </tr>
+                <tr>
+                    <td>Carnot</td>
+                    <td>η ≤ 1 - T₂/T₁</td>
+                    <td>Maximum efficiency depends on temperatures</td>
+                </tr>
+                <tr>
+                    <td>Entropy</td>
+                    <td>ΔS_universe ≥ 0</td>
+                    <td>Total entropy never decreases</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Carnot's Theorem:</strong></p>
+                <ul>
+                    <li>No engine operating between two reservoirs can be more efficient than a Carnot engine</li>
+                    <li>All reversible engines operating between same reservoirs have same efficiency</li>
+                    <div class="formula">η_max = 1 - T₂/T₁</div>
+                    <li>Where T₁ and T₂ are absolute temperatures of hot and cold reservoirs</li>
+                    <li>Practical implication: Higher T₁, lower T₂ → higher efficiency</li>
+                </ul>
+            </div>
+
+            <h3>Heat Engines vs Refrigerators</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Heat Engine</div>
+                    <p>Converts heat to work</p>
+                    <div class="formula">η = W/Q₁ = 1 - Q₂/Q₁</div>
+                    <p>Q₁ = Heat from hot reservoir</p>
+                    <p>Q₂ = Heat to cold reservoir</p>
+                    <p>W = Q₁ - Q₂</p>
+                    <p>Efficiency η < 1</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Refrigerator</div>
+                    <p>Pumps heat from cold to hot</p>
+                    <div class="formula">K = Q₂/W = Q₂/(Q₁ - Q₂)</div>
+                    <p>Q₂ = Heat from cold reservoir</p>
+                    <p>Q₁ = Heat to hot reservoir</p>
+                    <p>W = Q₁ - Q₂ (work input)</p>
+                    <p>Coefficient of performance K > 0</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Heat Pump</div>
+                    <p>Heats room by extracting heat from outside</p>
+                    <div class="formula">K' = Q₁/W = Q₁/(Q₁ - Q₂)</div>
+                    <p>Similar to refrigerator but different purpose</p>
+                    <p>K' = 1 + K (always > 1)</p>
+                    <p>More efficient than electric heater</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">NEET IMPORTANT</div>
+                <h4>Practical Efficiency Limits</h4>
+                <p><strong>Steam engine:</strong> T₁ ≈ 550K, T₂ ≈ 300K</p>
+                <div class="formula">η_max = 1 - 300/550 = 1 - 0.545 = 0.455 = 45.5%</div>
+                <p><strong>Actual efficiency:</strong> About 30-35% (due to friction, heat losses)</p>
+                <p><strong>Internal combustion:</strong> T₁ ≈ 2500K, T₂ ≈ 300K</p>
+                <div class="formula">η_max = 1 - 300/2500 = 1 - 0.12 = 0.88 = 88%</div>
+                <p><strong>Actual:</strong> About 25-30% (gasoline), 40% (diesel)</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Carnot Efficiency</div>
+                <p>A Carnot engine operates between 500K and 300K. If it absorbs 1000J from hot reservoir, find work output and heat rejected.</p>
+                <p><strong>Solution:</strong></p>
+                <p>Efficiency: η = 1 - T₂/T₁ = 1 - 300/500 = 1 - 0.6 = 0.4 = 40%</p>
+                <p>Work output: W = η × Q₁ = 0.4 × 1000 = 400J</p>
+                <p>Heat rejected: Q₂ = Q₁ - W = 1000 - 400 = 600J</p>
+                <p>Or: Q₂/Q₁ = T₂/T₁ = 300/500 = 0.6, so Q₂ = 0.6 × 1000 = 600J</p>
+                <p><em>40% efficiency means 400J work from 1000J heat input.</em></p>
+            </div>
+        </section>
+
+        <!-- Thermodynamic Processes Section -->
+        <section class="info-panel" id="processes" data-aos="fade-up">
+            <h2>Thermodynamic Processes</h2>
+            <p>A thermodynamic process is the path of transformation between equilibrium states of a system.</p>
+
+            <div class="definition">
+                <p><strong>Reversible Process:</strong> Infinitely slow process where system remains in equilibrium throughout. Can be reversed without leaving any trace on surroundings.</p>
+                <p><strong>Irreversible Process:</strong> Rapid process with finite differences, cannot be reversed without changing surroundings.</p>
+            </div>
+
+            <h3>Basic Thermodynamic Processes</h3>
+            <div class="thermo-container">
+                <div class="thermo-demo">
+                    <div class="pv-graph"></div>
+                    <div class="thermo-process" style="width: 100px; height: 60px; left: 50px; top: 80px; border-color: var(--thermo-tertiary);"></div>
+                    <div class="thermo-process" style="width: 60px; height: 100px; left: 150px; top: 40px; border-color: var(--thermo-primary);"></div>
+                    <div class="thermo-process" style="width: 100px; height: 100px; left: 250px; top: 40px; border-color: var(--thermo-accent); border-radius: 50%;"></div>
+                    <div class="process-label" style="left: 70px; top: 150px;">Isobaric</div>
+                    <div class="process-label" style="left: 170px; top: 150px;">Isochoric</div>
+                    <div class="process-label" style="left: 270px; top: 150px;">Isothermal</div>
+                </div>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Process</th>
+                    <th>Condition</th>
+                    <th>Work (W)</th>
+                    <th>Heat (Q)</th>
+                    <th>ΔU</th>
+                    <th>PV Relation</th>
+                </tr>
+                <tr>
+                    <td>Isothermal</td>
+                    <td>T = constant</td>
+                    <td>nRT ln(V₂/V₁)</td>
+                    <td>W</td>
+                    <td>0</td>
+                    <td>PV = constant</td>
+                </tr>
+                <tr>
+                    <td>Adiabatic</td>
+                    <td>Q = 0</td>
+                    <td>(P₁V₁-P₂V₂)/(γ-1)</td>
+                    <td>0</td>
+                    <td>-W</td>
+                    <td>PV^γ = constant</td>
+                </tr>
+                <tr>
+                    <td>Isobaric</td>
+                    <td>P = constant</td>
+                    <td>PΔV</td>
+                    <td>nC_pΔT</td>
+                    <td>nC_vΔT</td>
+                    <td>V/T = constant</td>
+                </tr>
+                <tr>
+                    <td>Isochoric</td>
+                    <td>V = constant</td>
+                    <td>0</td>
+                    <td>nC_vΔT</td>
+                    <td>Q</td>
+                    <td>P/T = constant</td>
+                </tr>
+                <tr>
+                    <td>Cyclic</td>
+                    <td>Returns to start</td>
+                    <td>Area in PV diagram</td>
+                    <td>W</td>
+                    <td>0</td>
+                    <td>-</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Specific Heats for Ideal Gas:</strong></p>
+                <div class="formula">C_v = (f/2)R, C_p = C_v + R, γ = C_p/C_v = 1 + 2/f</div>
+                <p>Where f = degrees of freedom</p>
+                <ul>
+                    <li><strong>Monatomic (He, Ne, Ar):</strong> f = 3, C_v = (3/2)R, C_p = (5/2)R, γ = 5/3 ≈ 1.67</li>
+                    <li><strong>Diatomic (H₂, N₂, O₂):</strong> f = 5, C_v = (5/2)R, C_p = (7/2)R, γ = 7/5 = 1.4</li>
+                    <li><strong>Polyatomic (CO₂, CH₄):</strong> f = 6, C_v = 3R, C_p = 4R, γ = 4/3 ≈ 1.33</li>
+                </ul>
+            </div>
+
+            <h3>Work in PV Diagrams</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Work Calculation</div>
+                    <p>Work = Area under PV curve</p>
+                    <div class="formula">W = ∫PdV</div>
+                    <p><strong>Expansion:</strong> W > 0 (system does work)</p>
+                    <p><strong>Compression:</strong> W < 0 (work done on system)</p>
+                    <p>Clockwise cycle: Net work done by system</p>
+                    <p>Counterclockwise: Net work done on system</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Slopes in PV Diagram</div>
+                    <p><strong>Isothermal:</strong> P ∝ 1/V, hyperbolic curve</p>
+                    <p><strong>Adiabatic:</strong> P ∝ 1/V^γ, steeper than isothermal</p>
+                    <p><strong>Isobaric:</strong> Horizontal line (P constant)</p>
+                    <p><strong>Isochoric:</strong> Vertical line (V constant)</p>
+                    <p>Adiabatic slope = γ × Isothermal slope</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Polytropic Process</div>
+                    <p>General process: PV^n = constant</p>
+                    <p>n = 0: Isobaric (P constant)</p>
+                    <p>n = 1: Isothermal (T constant)</p>
+                    <p>n = γ: Adiabatic (Q = 0)</p>
+                    <p>n = ∞: Isochoric (V constant)</p>
+                    <p>Work: W = (P₁V₁ - P₂V₂)/(n-1)</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Adiabatic Relations</h4>
+                <p>For adiabatic process (Q = 0) with ideal gas:</p>
+                <div class="formula">PV^γ = constant</div>
+                <div class="formula">TV^(γ-1) = constant</div>
+                <div class="formula">P^(1-γ)T^γ = constant</div>
+                <p>Where γ = C_p/C_v</p>
+                <p>Temperature change: T₂/T₁ = (V₁/V₂)^(γ-1) = (P₂/P₁)^((γ-1)/γ)</p>
+                <p>During adiabatic expansion: T decreases, during compression: T increases</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Adiabatic Compression</div>
+                <p>One mole of diatomic gas (γ = 1.4) at 300K is compressed adiabatically to half its volume. Find final temperature.</p>
+                <p><strong>Solution:</strong></p>
+                <p>Adiabatic relation: TV^(γ-1) = constant</p>
+                <p>T₁V₁^(γ-1) = T₂V₂^(γ-1)</p>
+                <p>T₂ = T₁(V₁/V₂)^(γ-1) = 300 × (2)^(0.4)</p>
+                <p>2^0.4 = e^(0.4 ln2) = e^(0.4×0.693) = e^0.277 = 1.319</p>
+                <p>T₂ = 300 × 1.319 = 395.7K</p>
+                <p><em>Temperature increases from 300K to 396K during adiabatic compression.</em></p>
+            </div>
+        </section>
+
+        <!-- Heat Engines Section -->
+        <section class="info-panel" id="heat-engines" data-aos="fade-up">
+            <h2>Heat Engines & Refrigerators</h2>
+            <p>Devices that convert between heat and work based on thermodynamic principles.</p>
+
+            <div class="definition">
+                <p><strong>Carnot Engine:</strong> Ideal reversible heat engine operating between two reservoirs. Consists of two isothermal and two adiabatic processes. Maximum possible efficiency.</p>
+            </div>
+
+            <h3>Carnot Cycle (Ideal Gas)</h3>
+            <table>
+                <tr>
+                    <th>Process</th>
+                    <th>Type</th>
+                    <th>Heat Exchange</th>
+                    <th>Work Done</th>
+                    <th>ΔU</th>
+                </tr>
+                <tr>
+                    <td>1→2: Isothermal expansion</td>
+                    <td>Reversible, T₁ constant</td>
+                    <td>Q₁ = nRT₁ ln(V₂/V₁) > 0</td>
+                    <td>W₁ = Q₁ > 0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>2→3: Adiabatic expansion</td>
+                    <td>Reversible, Q = 0</td>
+                    <td>0</td>
+                    <td>W₂ = nC_v(T₁ - T₂) > 0</td>
+                    <td>-W₂</td>
+                </tr>
+                <tr>
+                    <td>3→4: Isothermal compression</td>
+                    <td>Reversible, T₂ constant</td>
+                    <td>Q₂ = nRT₂ ln(V₄/V₃) < 0</td>
+                    <td>W₃ = Q₂ < 0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>4→1: Adiabatic compression</td>
+                    <td>Reversible, Q = 0</td>
+                    <td>0</td>
+                    <td>W₄ = nC_v(T₂ - T₁) < 0</td>
+                    <td>-W₄</td>
+                </tr>
+                <tr>
+                    <td>Cycle</td>
+                    <td>Reversible</td>
+                    <td>Q_net = Q₁ + Q₂ = W</td>
+                    <td>W_net = Q₁ - |Q₂|</td>
+                    <td>0</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Efficiency Formulas:</strong></p>
+                <div class="formula">η = W/Q₁ = (Q₁ - Q₂)/Q₁ = 1 - Q₂/Q₁</div>
+                <div class="formula">For Carnot: η_max = 1 - T₂/T₁</div>
+                <div class="formula">For any engine: η ≤ 1 - T₂/T₁</div>
+                <p><strong>Coefficient of Performance:</strong></p>
+                <div class="formula">Refrigerator: K = Q₂/W = Q₂/(Q₁ - Q₂) = T₂/(T₁ - T₂)</div>
+                <div class="formula">Heat pump: K' = Q₁/W = Q₁/(Q₁ - Q₂) = T₁/(T₁ - T₂)</div>
+            </div>
+
+            <h3>Real World Applications</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Internal Combustion</div>
+                    <p>Otto cycle (gasoline):</p>
+                    <p>1-2: Adiabatic compression</p>
+                    <p>2-3: Isochoric heat addition</p>
+                    <p>3-4: Adiabatic expansion</p>
+                    <p>4-1: Isochoric heat rejection</p>
+                    <div class="formula">η_otto = 1 - 1/r^(γ-1)</div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Diesel Engine</div>
+                    <p>Diesel cycle:</p>
+                    <p>1-2: Adiabatic compression</p>
+                    <p>2-3: Isobaric heat addition</p>
+                    <p>3-4: Adiabatic expansion</p>
+                    <p>4-1: Isochoric heat rejection</p>
+                    <p>Higher compression ratio than Otto</p>
+                    <p>Higher efficiency</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Steam Engine</div>
+                    <p>Rankine cycle:</p>
+                    <p>Boiler → Turbine → Condenser → Pump</p>
+                    <p>Phase changes: liquid ↔ vapor</p>
+                    <p>Power plants, steam turbines</p>
+                    <p>Lower temperature limit: ~300K</p>
+                    <p>Practical efficiency ~35%</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">NEET IMPORTANT</div>
+                <h4>Refrigerator Working</h4>
+                <p><strong>Components:</strong> Compressor, condenser, expansion valve, evaporator</p>
+                <p><strong>Working fluid:</strong> Refrigerant (Freon, ammonia)</p>
+                <p><strong>Process:</strong></p>
+                <ol>
+                    <li>Compressor: Adiabatic compression (P↑, T↑)</li>
+                    <li>Condenser: Isobaric heat rejection (gas → liquid)</li>
+                    <li>Expansion valve: Adiabatic throttling (P↓, T↓)</li>
+                    <li>Evaporator: Isobaric heat absorption (liquid → gas)</li>
+                </ol>
+                <p>K = Q_cold/W_input = T_cold/(T_hot - T_cold)</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Refrigerator Performance</div>
+                <p>A refrigerator maintains -3°C inside while room is 27°C. If it removes 1000J from cold chamber, find minimum work input.</p>
+                <p><strong>Solution:</strong></p>
+                <p>T_cold = -3 + 273 = 270K</p>
+                <p>T_hot = 27 + 273 = 300K</p>
+                <p>For ideal (Carnot) refrigerator:</p>
+                <p>K_max = T_cold/(T_hot - T_cold) = 270/(300-270) = 270/30 = 9</p>
+                <p>K = Q_cold/W ⇒ W_min = Q_cold/K_max = 1000/9 = 111.1J</p>
+                <p><em>Minimum 111J work needed to remove 1000J heat from -3°C to 27°C.</em></p>
+            </div>
+        </section>
+
+        <!-- Entropy Section -->
+        <section class="info-panel" id="entropy" data-aos="fade-up">
+            <h2>Entropy & Statistical Thermodynamics</h2>
+            <p>Entropy measures disorder or randomness in a system. It gives thermodynamic processes a direction.</p>
+
+            <div class="definition">
+                <p><strong>Entropy (S):</strong> A measure of the number of specific ways a thermodynamic system may be arranged. It increases in irreversible processes and remains constant in reversible ones.</p>
+                <div class="formula">ΔS = ∫(dQ_rev/T)</div>
+                <p>For finite reversible process: ΔS = Q_rev/T</p>
+            </div>
+
+            <h3>Entropy Changes in Different Processes</h3>
+            <table>
+                <tr>
+                    <th>Process</th>
+                    <th>Entropy Change (ΔS)</th>
+                    <th>Explanation</th>
+                </tr>
+                <tr>
+                    <td>Reversible adiabatic</td>
+                    <td>0</td>
+                    <td>No heat exchange, reversible</td>
+                </tr>
+                <tr>
+                    <td>Reversible isothermal</td>
+                    <td>Q/T</td>
+                    <td>Heat transfer at constant T</td>
+                </tr>
+                <tr>
+                    <td>Ideal gas (V,T change)</td>
+                    <td>nC_v ln(T₂/T₁) + nR ln(V₂/V₁)</td>
+                    <td>From definition integration</td>
+                </tr>
+                <tr>
+                    <td>Ideal gas (P,T change)</td>
+                    <td>nC_p ln(T₂/T₁) - nR ln(P₂/P₁)</td>
+                    <td>Alternative form</td>
+                </tr>
+                <tr>
+                    <td>Phase change at constant T,P</td>
+                    <td>mL/T</td>
+                    <td>L = latent heat</td>
+                </tr>
+                <tr>
+                    <td>Mixing of ideal gases</td>
+                    <td>-nR∑x_i ln(x_i)</td>
+                    <td>x_i = mole fraction</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Second Law in Terms of Entropy:</strong></p>
+                <ul>
+                    <li><strong>For any process:</strong> ΔS_universe ≥ 0</li>
+                    <li><strong>Reversible process:</strong> ΔS_universe = 0</li>
+                    <li><strong>Irreversible process:</strong> ΔS_universe > 0</li>
+                    <li><strong>Isolated system:</strong> ΔS ≥ 0 (entropy never decreases)</li>
+                    <li>Entropy is a state function - depends only on initial and final states</li>
+                    <li>Entropy of universe always increases (arrow of time)</li>
+                </ul>
+            </div>
+
+            <h3>Statistical Interpretation</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Boltzmann's Formula</div>
+                    <p>Microscopic definition of entropy:</p>
+                    <div class="formula">S = k ln W</div>
+                    <p>Where:<br>
+                    k = Boltzmann constant (1.38×10⁻²³ J/K)<br>
+                    W = Number of microstates<br>
+                    ln = natural logarithm</p>
+                    <p>Entropy ∝ logarithm of possible arrangements</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Third Law of Thermodynamics</div>
+                    <p>As temperature approaches absolute zero, entropy approaches a minimum constant value.</p>
+                    <div class="formula">lim_(T→0) S = 0 (for perfect crystal)</div>
+                    <p>At T = 0K, perfect crystal has only one microstate (W=1)</p>
+                    <p>S = k ln 1 = 0</p>
+                    <p>Provides absolute entropy scale</p>
+                    <p>Implies 0K is unattainable</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Maxwell's Demon</div>
+                    <p>Thought experiment: A demon could violate second law</p>
+                    <p>Opens door for fast molecules to one side</p>
+                    <p>Creates temperature difference without work</p>
+                    <p>Resolution: Demon's measurement increases entropy</p>
+                    <p>Information has thermodynamic cost</p>
+                    <p>Landauer's principle: Erasing bit produces heat</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Entropy of Mixing</h4>
+                <p>For mixing of ideal gases at constant T,P:</p>
+                <div class="formula">ΔS_mix = -nR(x_A ln x_A + x_B ln x_B)</div>
+                <p>Where x_A, x_B are mole fractions</p>
+                <p><strong>For equal amounts:</strong> n_A = n_B = n/2</p>
+                <div class="formula">ΔS_mix = nR ln 2</div>
+                <p>Entropy increases when gases mix (irreversible process)</p>
+                <p>Gibbs paradox: Entropy of mixing independent of gas similarity</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Entropy Change in Melting</div>
+                <p>Calculate entropy change when 1kg ice at 0°C melts to water at 0°C. L_f = 3.34×10⁵ J/kg.</p>
+                <p><strong>Solution:</strong></p>
+                <p>Melting occurs at constant T = 0°C = 273K</p>
+                <p>Heat absorbed: Q = mL_f = 1 × 3.34×10⁵ = 3.34×10⁵ J</p>
+                <p>ΔS = Q/T = 3.34×10⁵ / 273 = 1223 J/K</p>
+                <p>Positive ΔS: More disorder in liquid than solid</p>
+                <p><em>Water molecules have more freedom in liquid state.</em></p>
+            </div>
+        </section>
+
+        <!-- Problem Solving Section -->
+        <section class="info-panel" id="problems" data-aos="fade-up">
+            <h2>Problem Solving Strategies</h2>
+            <p>Systematic approach to solve thermodynamics problems in JEE and NEET.</p>
+
+            <div class="problem-solving">
+                <div class="problem-box">
+                    <div class="problem-title">Type 1: First Law Problems</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify: Q (heat), W (work), ΔU (internal energy)</li>
+                        <li>Apply sign convention correctly</li>
+                        <li>Use: ΔU = Q - W</li>
+                        <li>For ideal gas: ΔU = nC_vΔT</li>
+                        <li>For cyclic process: ΔU = 0, Q_net = W_net</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Remember Q and W are path-dependent, ΔU is state function</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 2: Process Problems</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify process type (isothermal, adiabatic, etc.)</li>
+                        <li>Use appropriate equation of state</li>
+                        <li>Calculate work using correct formula</li>
+                        <li>Find ΔU using ΔU = nC_vΔT</li>
+                        <li>Use first law to find Q</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Adiabatic: Q=0, Isothermal: ΔT=0, Isobaric: ΔP=0, Isochoric: ΔV=0</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 3: Engine/Refrigerator</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify Q_hot, Q_cold, W</li>
+                        <li>For engine: η = W/Q_hot = 1 - Q_cold/Q_hot</li>
+                        <li>For refrigerator: K = Q_cold/W</li>
+                        <li>For Carnot: η_max = 1 - T_cold/T_hot</li>
+                        <li>Check if process is reversible</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Temperatures must be in Kelvin for efficiency formulas</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE/NEET TIP</div>
+                <h4>Common Problem Patterns</h4>
+                <p><strong>1. Cyclic processes:</strong> ΔU = 0, net work = area inside PV loop</p>
+                <p><strong>2. Adiabatic processes:</strong> Use PV^γ = constant, TV^(γ-1) = constant</p>
+                <p><strong>3. Mixing of gases:</strong> Final temperature from heat balance, entropy increase</p>
+                <p><strong>4. Polytropic processes:</strong> PV^n = constant, work = (P₁V₁-P₂V₂)/(n-1)</p>
+                <p><strong>5. Phase changes:</strong> Include latent heat, temperature constant during change</p>
+                <p><strong>6. Free expansion:</strong> W=0, Q=0, ΔU=0, for ideal gas: ΔT=0</p>
+            </div>
+
+            <h3>Quick Formula Reference</h3>
+            <div class="equation-cards">
+                <div class="equation-card">
+                    <div class="formula">ΔU = Q - W</div>
+                    <div class="formula">W = ∫PdV</div>
+                    <div class="formula">PV = nRT</div>
+                </div>
+                <div class="equation-card">
+                    <div class="formula">η = 1 - Q₂/Q₁</div>
+                    <div class="formula">η_max = 1 - T₂/T₁</div>
+                    <div class="formula">K = T₂/(T₁-T₂)</div>
+                </div>
+                <div class="equation-card">
+                    <div class="formula">ΔS = ∫dQ_rev/T</div>
+                    <div class="formula">S = k ln W</div>
+                    <div class="formula">PV^γ = constant</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Facts Carousel -->
+        <div class="swiper-container" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">FIRST LAW</div>
+                        <div class="swiper-text">ΔU = Q - W. Energy conservation. Q and W path-dependent, ΔU state function.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">SECOND LAW</div>
+                        <div class="swiper-text">η ≤ 1 - T₂/T₁. Entropy ΔS ≥ 0. No 100% efficient engine, heat flows hot→cold naturally.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">CARNOT ENGINE</div>
+                        <div class="swiper-text">Maximum efficiency η_max = 1 - T₂/T₁. Two isothermal + two adiabatic processes. Reversible.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">THERMO PROCESSES</div>
+                        <div class="swiper-text">Isothermal: T constant. Adiabatic: Q=0. Isobaric: P constant. Isochoric: V constant.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">ENTROPY</div>
+                        <div class="swiper-text">ΔS = ∫dQ_rev/T, S = k ln W. Always increases in irreversible processes. Arrow of time.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">HEAT ENGINES</div>
+                        <div class="swiper-text">η = W/Q_hot. Refrigerator: K = Q_cold/W. Heat pump: K' = Q_hot/W = 1 + K.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">IDEAL GAS</div>
+                        <div class="swiper-text">PV = nRT. U = (f/2)nRT. C_v = (f/2)R, C_p = C_v + R, γ = C_p/C_v = 1 + 2/f.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">WORK CALCULATION</div>
+                        <div class="swiper-text">W = ∫PdV. Isothermal: nRT ln(V₂/V₁). Adiabatic: (P₁V₁-P₂V₂)/(γ-1). Isobaric: PΔV.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- Summary Section -->
+        <section class="info-panel" data-aos="fade-up">
+            <h2>Chapter Summary & Key Points</h2>
+            
+            <h3>Essential Formulas</h3>
+            <div class="concept-cards">
+                <div class="concept-card first-law">
+                    <div class="card-title first-law">First Law</div>
+                    <div class="formula">ΔU = Q - W</div>
+                    <div class="formula">W = ∫PdV</div>
+                    <div class="formula">PV = nRT</div>
+                </div>
+
+                <div class="concept-card second-law">
+                    <div class="card-title second-law">Second Law</div>
+                    <div class="formula">η_max = 1 - T₂/T₁</div>
+                    <div class="formula">K_max = T₂/(T₁-T₂)</div>
+                    <div class="formula">ΔS ≥ ∫dQ/T</div>
+                </div>
+
+                <div class="concept-card processes">
+                    <div class="card-title processes">Process Equations</div>
+                    <div class="formula">Isothermal: PV=constant</div>
+                    <div class="formula">Adiabatic: PV^γ=constant</div>
+                    <div class="formula">TV^(γ-1)=constant</div>
+                </div>
+            </div>
+
+            <h3>Important Points for JEE/NEET</h3>
+            <ul>
+                <li>First law: Energy conservation, ΔU = Q - W with proper sign convention</li>
+                <li>Second law: Efficiency limits, entropy always increases in natural processes</li>
+                <li>Carnot engine: Maximum possible efficiency η_max = 1 - T₂/T₁</li>
+                <li>Work in PV diagram: Area under curve, clockwise cycle = work done by system</li>
+                <li>Internal energy of ideal gas depends only on temperature: U = (f/2)nRT</li>
+                <li>Adiabatic process: Q = 0, PV^γ = constant, steeper than isothermal on PV diagram</li>
+                <li>Entropy: Measure of disorder, ΔS_universe ≥ 0 for all processes</li>
+                <li>Heat engine converts heat to work, refrigerator pumps heat from cold to hot</li>
+            </ul>
+
+            <div class="important">
+                <p><strong>Common Mistakes to Avoid:</strong></p>
+                <ul>
+                    <li>Wrong sign convention for Q and W in first law</li>
+                    <li>Using Celsius instead of Kelvin in efficiency formulas</li>
+                    <li>Confusing adiabatic (Q=0) with isothermal (ΔT=0)</li>
+                    <li>Forgetting that γ differs for monatomic/diatomic gases</li>
+                    <li>Applying ideal gas equation to phase changes</li>
+                    <li>Mixing up work formulas for different processes</li>
+                    <li>Assuming 100% efficiency is possible for real engines</li>
+                    <li>Confusing entropy with energy (entropy measured in J/K, not J)</li>
+                </ul>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">LAST MINUTE REVISION</div>
+                <h4>Must Remember Values</h4>
+                <p><strong>Gas constant:</strong> R = 8.314 J/mol·K = 0.0821 L·atm/mol·K = 2 cal/mol·K</p>
+                <p><strong>Boltzmann constant:</strong> k = 1.38×10⁻²³ J/K = R/N_A</p>
+                <p><strong>Avogadro's number:</strong> N_A = 6.022×10²³ mol⁻¹</p>
+                <p><strong>γ values:</strong> Monatomic = 5/3 ≈ 1.67, Diatomic = 7/5 = 1.4, Polyatomic ≈ 4/3 ≈ 1.33</p>
+                <p><strong>C_v values:</strong> Monatomic = (3/2)R, Diatomic = (5/2)R, Polyatomic = 3R</p>
+                <p><strong>Standard conditions:</strong> STP: 0°C = 273K, 1 atm = 1.013×10⁵ Pa</p>
+                <p><strong>Useful conversions:</strong> 1 L·atm = 101.3 J, 1 cal = 4.184 J</p>
+                <p><strong>Triple point of water:</strong> 273.16K = 0.01°C, 611.73 Pa</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Nerds Assemble</h3>
+                <p>Master Thermodynamics for JEE & NEET. Comprehensive physics resource with detailed explanations and problem-solving strategies.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#first-law">First Law</a></li>
+                    <li><a href="#second-law">Second Law</a></li>
+                    <li><a href="#processes">Thermo Processes</a></li>
+                    <li><a href="#heat-engines">Heat Engines</a></li>
+                    <li><a href="#entropy">Entropy</a></li>
+                    <li><a href="#problems">Problem Solving</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact & Resources</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> 44mr.invisible@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Nerds Assemble. All rights reserved. | Designed for JEE & NEET Aspirants | Thermodynamics | SEO Optimized for Google</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Thermodynamics - JavaScript
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ?
+                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+            }
+
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+
+            function handleScroll() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('active');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                }
+            }
+
+            // Debounced scroll event
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(handleScroll, 50);
+            }, { passive: true });
+
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: window.innerWidth < 768 ? 100 : 120,
+                    easing: 'ease-out-quad'
+                });
+            }
+
+            // Initialize Swiper
+            if (typeof Swiper !== 'undefined') {
+                const swiper = new Swiper('.swiper-container', {
+                    loop: true,
+                    autoplay: {
+                        delay: 3500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 25
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        }
+                    }
+                });
+            }
+
+            // Smooth Scroll for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        if (mainNav && mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                });
+            });
+
+            // Back to Top Button Click
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Create Thermodynamic Visualization
+            createThermoVisualization();
+            
+            // Create Energy Flows
+            createEnergyFlows();
+            
+            // Create Particles
+            createParticles();
+            
+            // Interactive piston animation
+            setupPistonAnimation();
+        });
+
+        // Create Thermodynamic Visualization
+        function createThermoVisualization() {
+            const thermoDemo = document.querySelector('.thermo-demo');
+            if (!thermoDemo) return;
+
+            // Create a simple PV diagram with process curves
+            const pvGraph = thermoDemo.querySelector('.pv-graph');
+            
+            // Add grid lines
+            for (let i = 1; i <= 4; i++) {
+                const vLine = document.createElement('div');
+                vLine.style.position = 'absolute';
+                vLine.style.width = '1px';
+                vLine.style.height = '100%';
+                vLine.style.left = `${i * 20}%`;
+                vLine.style.top = '0';
+                vLine.style.background = 'rgba(255,255,255,0.1)';
+                pvGraph.appendChild(vLine);
+                
+                const hLine = document.createElement('div');
+                hLine.style.position = 'absolute';
+                hLine.style.width = '100%';
+                hLine.style.height = '1px';
+                hLine.style.left = '0';
+                hLine.style.top = `${i * 20}%`;
+                hLine.style.background = 'rgba(255,255,255,0.1)';
+                pvGraph.appendChild(hLine);
+            }
+            
+            // Add axis labels
+            const vLabel = document.createElement('div');
+            vLabel.textContent = 'P';
+            vLabel.style.position = 'absolute';
+            vLabel.style.right = '5px';
+            vLabel.style.top = '5px';
+            vLabel.style.color = 'var(--thermo-highlight)';
+            vLabel.style.fontFamily = 'Electrolize, sans-serif';
+            vLabel.style.fontSize = '0.7rem';
+            pvGraph.appendChild(vLabel);
+            
+            const hLabel = document.createElement('div');
+            hLabel.textContent = 'V';
+            hLabel.style.position = 'absolute';
+            hLabel.style.left = '5px';
+            hLabel.style.bottom = '5px';
+            hLabel.style.color = 'var(--thermo-highlight)';
+            hLabel.style.fontFamily = 'Electrolize, sans-serif';
+            hLabel.style.fontSize = '0.7rem';
+            pvGraph.appendChild(hLabel);
+        }
+
+        // Create Energy Flows Function
+        function createEnergyFlows() {
+            const energyFlowsContainer = document.getElementById('energyFlows');
+            if (!energyFlowsContainer) return;
+
+            const flowCount = window.innerWidth < 768 ? 15 : 25;
+            
+            for (let i = 0; i < flowCount; i++) {
+                const flow = document.createElement('div');
+                flow.classList.add('energy-flow');
+
+                const size = Math.random() * 10 + 5;
+                const posX = Math.random() * window.innerWidth;
+                const posY = Math.random() * window.innerHeight;
+                const duration = Math.random() * 5 + 3;
+                const delay = Math.random() * 2;
+                const color = Math.random() > 0.5 ? 'rgba(233, 30, 99, 0.4)' : 'rgba(33, 150, 243, 0.4)';
+
+                flow.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}px;
+                    top: ${posY}px;
+                    opacity: ${Math.random() * 0.3 + 0.1};
+                    animation: carnot-cycle ${duration}s linear ${delay}s infinite;
+                    background: radial-gradient(circle at 30% 30%, ${color}, transparent);
+                    box-shadow: 0 0 15px ${color};
+                `;
+
+                energyFlowsContainer.appendChild(flow);
+            }
+        }
+
+        // Create Particles Function
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
+
+            const particleCount = window.innerWidth < 768 ? 20 : 30;
+            particlesContainer.innerHTML = '';
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                const size = Math.random() * 3 + 1;
+                const posX = Math.random() * window.innerWidth;
+                const posY = Math.random() * window.innerHeight;
+                const duration = Math.random() * 15 + 10;
+                const delay = Math.random() * 5;
+                const color = Math.random() > 0.5 ? 'rgba(233, 30, 99, 0.3)' : 'rgba(156, 39, 176, 0.3)';
+
+                particle.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}px;
+                    top: ${posY}px;
+                    opacity: ${Math.random() * 0.3 + 0.1};
+                    animation: float ${duration}s ease-in-out ${delay}s infinite;
+                    background: ${color};
+                `;
+
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Setup piston animation
+        function setupPistonAnimation() {
+            const piston = document.querySelector('.engine-piston');
+            if (!piston) return;
+
+            let isAnimating = true;
+            
+            piston.addEventListener('click', function() {
+                if (isAnimating) {
+                    this.style.animationPlayState = 'paused';
+                    isAnimating = false;
+                } else {
+                    this.style.animationPlayState = 'running';
+                    isAnimating = true;
+                }
+            });
+        }
+
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                createParticles();
+                createEnergyFlows();
+            }, 250);
+        });
+
+        // Interactive process visualization
+        const thermoProcesses = document.querySelectorAll('.thermo-process');
+        thermoProcesses.forEach((process, index) => {
+            process.addEventListener('mouseover', function() {
+                this.style.boxShadow = '0 0 15px var(--thermo-highlight)';
+                this.style.transform = 'scale(1.1)';
+            });
+            
+            process.addEventListener('mouseout', function() {
+                this.style.boxShadow = 'none';
+                this.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
