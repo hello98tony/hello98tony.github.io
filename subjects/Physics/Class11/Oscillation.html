@@ -1,0 +1,2258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscillations | Class 11 Physics | JEE & NEET Preparation</title>
+    <meta name="description" content="Master Oscillations for Class 11 Physics. Complete guide for JEE & NEET aspirants covering simple harmonic motion, pendulum, springs, damping, resonance, and wave motion.">
+    <meta name="keywords" content="Oscillations, Physics Class 11, JEE preparation, NEET physics, Simple Harmonic Motion, SHM, Pendulum, Spring Mass System, Damping, Resonance, Waves, Oscillation Energy">
+    <meta name="author" content="Nerds Assemble">
+    <meta name="robots" content="index, follow">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Oscillations | Class 11 Physics">
+    <meta property="og:description" content="Complete guide to Oscillations for JEE & NEET aspirants">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nerdsassemble.com/oscillations">
+    
+    <!-- Structured Data for Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Oscillations - Class 11 Physics",
+        "description": "Complete guide to Oscillations with SHM, pendulum, damping, and resonance for JEE & NEET",
+        "educationalLevel": "High School",
+        "learningResourceType": "Educational Course",
+        "author": {
+            "@type": "Organization",
+            "name": "Nerds Assemble"
+        },
+        "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": "Student",
+            "audienceType": ["JEE Aspirants", "NEET Aspirants"]
+        }
+    }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Pacifico&family=Dancing+Script:wght@700&family=Abril+Fatface&family=Playfair+Display:wght@700&family=Raleway:wght@300;800&family=Quicksand:wght@500&family=Poiret+One&family=Amatic+SC:wght@700&family=Caveat:wght@700&family=Kaushan+Script&family=Libre+Baskerville&family=Merriweather&family=Nunito:wght@800&family=Oswald:wght@500&family=Roboto+Slab:wght@700&family=Sacramento&family=Tangerine:wght@700&family=Yeseva+One&family=Electrolize&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/oscillation.png">
+    
+    <style>
+        /* Oscillations - Nerds Assemble CSS */
+        :root {
+            --osc-primary: #FF4081;
+            --osc-secondary: #E040FB;
+            --osc-tertiary: #536DFE;
+            --osc-accent: #00BCD4;
+            --osc-bg: #0a0a20;
+            --osc-text: #ffffff;
+            --osc-highlight: #FFD700;
+            --osc-nav-bg: rgba(10, 5, 30, 0.95);
+            --osc-gradient: linear-gradient(45deg, #FF4081, #E040FB);
+            --shm-gradient: linear-gradient(45deg, #536DFE, #448AFF);
+            --pendulum-gradient: linear-gradient(45deg, #00BCD4, #0097A7);
+            --damping-gradient: linear-gradient(45deg, #FF9800, #FF5722);
+        }
+
+        /* Base Styles & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--osc-bg);
+            color: var(--osc-text);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overscroll-behavior-y: contain;
+            -webkit-overflow-scrolling: touch;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(255, 64, 129, 0.15) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(83, 109, 254, 0.15) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(0, 188, 212, 0.1) 0%, transparent 30%),
+                linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+            background: linear-gradient(45deg, var(--osc-primary), var(--osc-secondary), var(--osc-tertiary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(255, 64, 129, 0.5);
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--osc-highlight);
+            margin: 2rem 0 1.5rem;
+            font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--osc-primary), transparent);
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-family: 'Roboto Slab', serif;
+            color: var(--osc-secondary);
+            margin: 1.5rem 0 1rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+        }
+
+        p {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+        }
+
+        /* Layout Components */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            flex: 1;
+            padding: 0 1rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Raleway', sans-serif;
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+            color: var(--osc-secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--osc-nav-bg);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            transform: translateZ(0);
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            color: var(--osc-highlight);
+            font-size: 1.6rem;
+        }
+
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--osc-primary), var(--osc-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.4rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        .nav-links a {
+            color: var(--osc-text);
+            text-decoration: none;
+            font-family: 'Electrolize', sans-serif;
+            font-size: 0.95rem;
+            transition: color 0.2s ease-out;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--osc-highlight);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--osc-highlight);
+            transition: width 0.2s ease-out;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--osc-text);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* Content Panels */
+        .info-panel {
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
+            padding: 1.8rem;
+            margin: 1.8rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: translateZ(0);
+            will-change: transform, opacity;
+        }
+
+        /* Special Content Blocks */
+        .important {
+            background: rgba(255, 64, 129, 0.1);
+            border-left: 4px solid var(--osc-primary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(255, 64, 129, 0.1);
+        }
+
+        .definition {
+            background: rgba(255, 215, 0, 0.1);
+            border-left: 4px solid var(--osc-highlight);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.1);
+        }
+
+        .formula {
+            font-family: 'Audiowide', cursive;
+            color: var(--osc-highlight);
+            margin: 1.2rem 0;
+            padding: 1.2rem;
+            background: rgba(255, 64, 129, 0.1);
+            border-radius: 8px;
+            border: 1px dashed var(--osc-highlight);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.1rem;
+        }
+
+        .example {
+            background: rgba(83, 109, 254, 0.1);
+            border-left: 4px solid var(--osc-tertiary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: var(--osc-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Lists & Tables */
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 1.8rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background-color: rgba(255, 64, 129, 0.2);
+            font-family: 'Electrolize', sans-serif;
+            color: var(--osc-highlight);
+            font-size: 0.95rem;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+
+        tr:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* Concept Cards */
+        .concept-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .concept-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(255, 64, 129, 0.2);
+        }
+
+        .concept-card.shm {
+            border-top: 4px solid var(--osc-primary);
+        }
+
+        .concept-card.pendulum {
+            border-top: 4px solid var(--osc-accent);
+        }
+
+        .concept-card.spring {
+            border-top: 4px solid var(--osc-tertiary);
+        }
+
+        .concept-card.damping {
+            border-top: 4px solid #FF9800;
+        }
+
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title.shm { color: var(--osc-primary); }
+        .card-title.pendulum { color: var(--osc-accent); }
+        .card-title.spring { color: var(--osc-tertiary); }
+        .card-title.damping { color: #FF9800; }
+
+        /* Oscillation Visualization */
+        .oscillation-container {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .oscillation-demo {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            margin: 1rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .shm-graph {
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            top: 10%;
+            left: 10%;
+            border-left: 2px solid var(--osc-highlight);
+            border-bottom: 2px solid var(--osc-highlight);
+        }
+
+        .oscillation-curve {
+            position: absolute;
+            background: transparent;
+            border: 2px solid var(--osc-primary);
+            border-radius: 3px;
+        }
+
+        .oscillator {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: var(--osc-primary);
+            border-radius: 50%;
+            box-shadow: 0 0 20px var(--osc-primary);
+            transition: left 0.1s linear;
+        }
+
+        /* Pendulum Animation */
+        .pendulum-animation {
+            height: 200px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pendulum-arm {
+            position: absolute;
+            width: 2px;
+            height: 100px;
+            background: var(--osc-accent);
+            top: 20px;
+            left: 50%;
+            transform-origin: top center;
+            transition: transform 2s ease-in-out;
+        }
+
+        .pendulum-bob {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: var(--osc-primary);
+            border-radius: 50%;
+            top: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 20px var(--osc-primary);
+        }
+
+        .pendulum-pivot {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--osc-highlight);
+            border-radius: 50%;
+            top: 20px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Equation Cards */
+        .equation-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .equation-card {
+            background: rgba(83, 109, 254, 0.1);
+            border-radius: 10px;
+            padding: 1.2rem;
+            text-align: center;
+            border: 1px solid rgba(83, 109, 254, 0.3);
+        }
+
+        .equation {
+            font-family: 'Audiowide', cursive;
+            color: var(--osc-tertiary);
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+
+        /* Problem Solving Section */
+        .problem-solving {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .problem-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--osc-primary);
+        }
+
+        .problem-title {
+            color: var(--osc-primary);
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            margin: 2rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--osc-nav-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .footer-column h3 {
+            color: var(--osc-highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--osc-text);
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            transition: color 0.2s ease-out;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--osc-highlight);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--osc-text);
+            font-size: 1.1rem;
+            transition: color 0.2s ease-out;
+        }
+
+        .social-links a:hover {
+            color: var(--osc-highlight);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 1.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Quicksand', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 45px;
+            height: 45px;
+            background: var(--osc-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease-out;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(255, 64, 129, 0.3);
+            transform: translateZ(0);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--osc-highlight);
+            transform: translateY(-5px);
+        }
+
+        /* JEE/NEET Specific Styling */
+        .exam-highlight {
+            background: rgba(255, 235, 0, 0.1);
+            border: 2px solid var(--osc-highlight);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .exam-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--osc-highlight);
+            color: var(--osc-bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes shm-motion {
+            0% { left: 10%; }
+            25% { left: 50%; }
+            50% { left: 90%; }
+            75% { left: 50%; }
+            100% { left: 10%; }
+        }
+
+        @keyframes pendulum-swing {
+            0%, 100% { transform: rotate(-30deg); }
+            50% { transform: rotate(30deg); }
+        }
+
+        @keyframes spring-oscillate {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(50px); }
+        }
+
+        @keyframes damping-oscillation {
+            0% { transform: scale(1) translateX(0); opacity: 1; }
+            100% { transform: scale(0.5) translateX(100px); opacity: 0.3; }
+        }
+
+        .shm-motion {
+            animation: shm-motion 4s infinite ease-in-out;
+        }
+
+        .pendulum-swing {
+            animation: pendulum-swing 2s infinite ease-in-out;
+        }
+
+        .spring-oscillate {
+            animation: spring-oscillate 1.5s infinite ease-in-out;
+        }
+
+        .damping-oscillation {
+            animation: damping-oscillation 3s infinite alternate;
+        }
+
+        /* Swiper Carousel */
+        .swiper-container {
+            width: 100%;
+            height: auto;
+            min-height: 180px;
+            margin: 2.5rem 0;
+            will-change: transform;
+        }
+
+        .swiper-slide {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+            font-family: 'Electrolize', sans-serif;
+            padding: 1.2rem;
+            box-sizing: border-box;
+            text-align: center;
+            min-height: 180px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .swiper-title {
+            font-family: 'Audiowide', cursive;
+            color: var(--osc-highlight);
+            margin-bottom: 0.5rem;
+            font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+        }
+
+        .swiper-text {
+            font-family: 'Quicksand', sans-serif;
+            font-size: clamp(0.85rem, 1.1vw, 1rem);
+        }
+
+        /* Particles Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            will-change: transform;
+            opacity: 0.3;
+        }
+
+        /* Wave Particles */
+        .wave-particle {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            will-change: transform;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                margin-top: 1rem;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.75rem 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .container {
+                width: 95%;
+                padding: 0;
+            }
+
+            .concept-cards, .problem-solving {
+                grid-template-columns: 1fr;
+            }
+
+            .equation-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-panel {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    <div class="wave-particles" id="waveParticles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-wave-square"></i></span>
+                <span class="logo-text">Nerds Assemble</span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#shm">Simple Harmonic Motion</a></li>
+                    <li><a href="#pendulum">Simple Pendulum</a></li>
+                    <li><a href="#spring">Spring Oscillators</a></li>
+                    <li><a href="#energy">Energy in SHM</a></li>
+                    <li><a href="#damping">Damping & Resonance</a></li>
+                    <li><a href="#problems">Problems</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="page-header" data-aos="fade-down">
+            <h1>Oscillations</h1>
+            <p class="subtitle">Class 11 Physics | JEE & NEET Preparation Guide</p>
+            <p>Master the science of periodic motion - from simple pendulums to complex wave phenomena</p>
+            
+            <!-- Pendulum Animation -->
+            <div class="pendulum-animation">
+                <div class="pendulum-pivot"></div>
+                <div class="pendulum-arm pendulum-swing"></div>
+                <div class="pendulum-bob"></div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="info-panel" id="introduction" data-aos="fade-up">
+            <h2>Introduction to Oscillations</h2>
+            <p>Oscillations are periodic motions that repeat themselves in equal intervals of time. They are fundamental to understanding waves, sound, light, and many physical systems.</p>
+
+            <div class="definition">
+                <p><strong>Periodic Motion:</strong> Motion that repeats itself at regular time intervals.</p>
+                <p><strong>Oscillatory Motion:</strong> To-and-fro motion about a mean position.</p>
+                <p><strong>Simple Harmonic Motion (SHM):</strong> The simplest type of oscillatory motion where restoring force is directly proportional to displacement and directed towards mean position.</p>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card shm" data-aos="flip-left">
+                    <div class="card-title shm"><i class="fas fa-sync-alt"></i> Simple Harmonic Motion</div>
+                    <p>F ∝ -x, a ∝ -x. Sinusoidal motion described by amplitude, frequency, phase.</p>
+                    <div class="formula">x = A sin(ωt + φ)</div>
+                    <div class="formula">a = -ω²x</div>
+                </div>
+
+                <div class="concept-card pendulum" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-title pendulum"><i class="fas fa-weight-hanging"></i> Simple Pendulum</div>
+                    <p>For small angles: T = 2π√(L/g). Independent of mass, depends on length and g.</p>
+                    <div class="formula">T = 2π√(L/g)</div>
+                    <div class="formula">ω = √(g/L)</div>
+                </div>
+
+                <div class="concept-card spring" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card-title spring"><i class="fas fa-expand-alt"></i> Spring-Mass System</div>
+                    <p>T = 2π√(m/k). Series/parallel combinations, effective spring constant.</p>
+                    <div class="formula">T = 2π√(m/k)</div>
+                    <div class="formula">ω = √(k/m)</div>
+                </div>
+            </div>
+
+            <h3>Basic Oscillation Parameters</h3>
+            <table>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Symbol</th>
+                    <th>Definition</th>
+                    <th>SI Unit</th>
+                    <th>Formula/Relation</th>
+                </tr>
+                <tr>
+                    <td>Displacement</td>
+                    <td>x</td>
+                    <td>Distance from mean position</td>
+                    <td>meter (m)</td>
+                    <td>x = A sin(ωt + φ)</td>
+                </tr>
+                <tr>
+                    <td>Amplitude</td>
+                    <td>A</td>
+                    <td>Maximum displacement</td>
+                    <td>meter (m)</td>
+                    <td>Constant for given SHM</td>
+                </tr>
+                <tr>
+                    <td>Time Period</td>
+                    <td>T</td>
+                    <td>Time for one complete cycle</td>
+                    <td>second (s)</td>
+                    <td>T = 2π/ω = 1/ν</td>
+                </tr>
+                <tr>
+                    <td>Frequency</td>
+                    <td>ν or f</td>
+                    <td>Number of cycles per second</td>
+                    <td>Hertz (Hz)</td>
+                    <td>ν = 1/T = ω/2π</td>
+                </tr>
+                <tr>
+                    <td>Angular Frequency</td>
+                    <td>ω</td>
+                    <td>2π × frequency</td>
+                    <td>radian/second</td>
+                    <td>ω = 2πν = 2π/T</td>
+                </tr>
+                <tr>
+                    <td>Phase</td>
+                    <td>φ</td>
+                    <td>Initial angle at t=0</td>
+                    <td>radian</td>
+                    <td>Determines starting position</td>
+                </tr>
+                <tr>
+                    <td>Phase Difference</td>
+                    <td>Δφ</td>
+                    <td>Difference in phase angles</td>
+                    <td>radian</td>
+                    <td>Δφ = φ₂ - φ₁</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- SHM Section -->
+        <section class="info-panel" id="shm" data-aos="fade-up">
+            <h2>Simple Harmonic Motion (SHM)</h2>
+            <p>SHM is characterized by acceleration that is directly proportional to displacement and always directed towards the mean position.</p>
+
+            <div class="definition">
+                <p><strong>Condition for SHM:</strong> F = -kx or a = -ω²x, where ω² = k/m</p>
+                <div class="formula">a = -ω²x</div>
+                <p>The negative sign indicates that acceleration is opposite to displacement (directed towards mean position).</p>
+            </div>
+
+            <h3>SHM Equations</h3>
+            <div class="oscillation-container">
+                <div class="oscillation-demo">
+                    <div class="shm-graph"></div>
+                    <div class="oscillator shm-motion"></div>
+                    <!-- Graph will be created by JavaScript -->
+                </div>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Quantity</th>
+                    <th>Displacement Relation</th>
+                    <th>Velocity Relation</th>
+                    <th>Acceleration Relation</th>
+                </tr>
+                <tr>
+                    <td>General Form</td>
+                    <td>x = A sin(ωt + φ)<br>or x = A cos(ωt + φ)</td>
+                    <td>v = Aω cos(ωt + φ)<br>or v = -Aω sin(ωt + φ)</td>
+                    <td>a = -Aω² sin(ωt + φ)<br>or a = -Aω² cos(ωt + φ)</td>
+                </tr>
+                <tr>
+                    <td>Velocity from Displacement</td>
+                    <td>-</td>
+                    <td>v = ±ω√(A² - x²)</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Acceleration from Displacement</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>a = -ω²x</td>
+                </tr>
+                <tr>
+                    <td>Maximum Values</td>
+                    <td>A (at extremes)</td>
+                    <td>Aω (at mean position)</td>
+                    <td>Aω² (at extremes)</td>
+                </tr>
+                <tr>
+                    <td>Zero Values</td>
+                    <td>0 (at mean position)</td>
+                    <td>0 (at extremes)</td>
+                    <td>0 (at mean position)</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Key Characteristics of SHM:</strong></p>
+                <ul>
+                    <li><strong>Periodic:</strong> Repeats after fixed time interval T</li>
+                    <li><strong>Oscillatory:</strong> To-and-fro motion about mean position</li>
+                    <li><strong>Sinusoidal:</strong> Displacement varies sinusoidally with time</li>
+                    <li><strong>Isochronous:</strong> Time period independent of amplitude (for small oscillations)</li>
+                    <li><strong>Energy Conservation:</strong> Total mechanical energy remains constant</li>
+                    <li><strong>Phase:</strong> Position and direction of motion at given instant</li>
+                </ul>
+            </div>
+
+            <h3>Phase Relationships</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Displacement vs Velocity</div>
+                    <p>Velocity leads displacement by π/2 (90°)</p>
+                    <p>When x = 0 (mean), v = ±Aω (maximum)</p>
+                    <p>When x = ±A (extremes), v = 0</p>
+                    <p>Phase difference: Δφ = π/2</p>
+                    <p>v is derivative of x: v = dx/dt</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Velocity vs Acceleration</div>
+                    <p>Acceleration leads velocity by π/2 (90°)</p>
+                    <p>Acceleration in phase with displacement but opposite direction</p>
+                    <p>Phase difference: Δφ = π/2</p>
+                    <p>a is derivative of v: a = dv/dt</p>
+                    <p>When v = 0, a = ±Aω² (maximum)</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Displacement vs Acceleration</div>
+                    <p>Acceleration opposite to displacement (180° out of phase)</p>
+                    <p>a = -ω²x (always directed towards mean)</p>
+                    <p>Phase difference: Δφ = π</p>
+                    <p>When x = +A, a = -Aω²</p>
+                    <p>When x = -A, a = +Aω²</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>SHM as Projection of Circular Motion</h4>
+                <p>SHM can be represented as projection of uniform circular motion:</p>
+                <div class="formula">x = A cos(ωt + φ) (projection on x-axis)</div>
+                <div class="formula">y = A sin(ωt + φ) (projection on y-axis)</div>
+                <p><strong>Reference circle:</strong> Radius = A, angular speed = ω</p>
+                <p><strong>Phase angle:</strong> φ = initial angular position</p>
+                <p><strong>Phasor diagram:</strong> Rotating vector representation</p>
+                <p>Useful for adding SHMs, analyzing phase differences</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: SHM Parameters</div>
+                <p>A particle executes SHM with amplitude 10 cm and time period 2 s. Find maximum velocity and acceleration.</p>
+                <p><strong>Solution:</strong></p>
+                <p>A = 10 cm = 0.1 m, T = 2 s</p>
+                <p>ω = 2π/T = 2π/2 = π rad/s</p>
+                <p>v_max = Aω = 0.1 × π = 0.314 m/s</p>
+                <p>a_max = Aω² = 0.1 × π² = 0.986 m/s²</p>
+                <p><em>Maximum velocity occurs at mean position, maximum acceleration at extremes.</em></p>
+            </div>
+        </section>
+
+        <!-- Simple Pendulum Section -->
+        <section class="info-panel" id="pendulum" data-aos="fade-up">
+            <h2>Simple Pendulum</h2>
+            <p>A simple pendulum consists of a point mass suspended by a massless, inextensible string from a rigid support.</p>
+
+            <div class="definition">
+                <p><strong>Assumptions for Simple Pendulum:</strong></p>
+                <ul>
+                    <li>Bob is point mass</li>
+                    <li>String is massless and inextensible</li>
+                    <li>Motion is in vertical plane</li>
+                    <li>Amplitude is small (θ < 10°)</li>
+                    <li>No air resistance or friction</li>
+                </ul>
+            </div>
+
+            <h3>Derivation of Time Period</h3>
+            <div class="important">
+                <p><strong>For small angles (θ < 10°):</strong> sinθ ≈ θ (in radians)</p>
+                <p>Restoring force: F = -mg sinθ ≈ -mgθ</p>
+                <p>But θ = x/L, so F = -(mg/L)x</p>
+                <p>Comparing with F = -kx: k = mg/L</p>
+                <p>Time period: T = 2π√(m/k) = 2π√(m/(mg/L))</p>
+                <div class="formula">T = 2π√(L/g)</div>
+                <p>Angular frequency: ω = √(g/L)</p>
+            </div>
+
+            <h3>Pendulum Characteristics</h3>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Simple Pendulum</th>
+                    <th>Physical Pendulum</th>
+                    <th>Torsional Pendulum</th>
+                </tr>
+                <tr>
+                    <td>Definition</td>
+                    <td>Point mass on string</td>
+                    <td>Rigid body oscillating</td>
+                    <td>Disk suspended by wire</td>
+                </tr>
+                <tr>
+                    <td>Time Period</td>
+                    <td>T = 2π√(L/g)</td>
+                    <td>T = 2π√(I/mgd)</td>
+                    <td>T = 2π√(I/C)</td>
+                </tr>
+                <tr>
+                    <td>Amplitude Dependence</td>
+                    <td>Independent (small θ)</td>
+                    <td>Independent (small θ)</td>
+                    <td>Independent (small θ)</td>
+                </tr>
+                <tr>
+                    <td>Mass Dependence</td>
+                    <td>Independent</td>
+                    <td>Depends on mass distribution</td>
+                    <td>Depends on moment of inertia</td>
+                </tr>
+                <tr>
+                    <td>Applications</td>
+                    <td>Clocks, g measurement</td>
+                    <td>Compound pendulum, seismographs</td>
+                    <td>Moment of inertia measurement</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Important Points:</strong></p>
+                <ul>
+                    <li><strong>Isochronous:</strong> Time period independent of amplitude (for small angles)</li>
+                    <li><strong>Independent of mass:</strong> T depends only on L and g</li>
+                    <li><strong>Second's pendulum:</strong> T = 2 s, L = g/π² ≈ 0.994 m ≈ 1 m</li>
+                    <li><strong>Effective g:</strong> In elevator, satellite, etc. changes T</li>
+                    <li><strong>Large amplitudes:</strong> T increases with amplitude, correction: T = T₀[1 + θ²/16 + ...]</li>
+                    <li><strong>g measurement:</strong> g = 4π²L/T² (precise method)</li>
+                </ul>
+            </div>
+
+            <h3>Special Cases & Applications</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Conical Pendulum</div>
+                    <p>Bob moves in horizontal circle</p>
+                    <p>String traces cone</p>
+                    <div class="formula">T = 2π√(L cosθ/g)</div>
+                    <p>θ = angle with vertical</p>
+                    <p>Period depends on θ</p>
+                    <p>Used in amusement rides</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Spring Pendulum</div>
+                    <p>Mass attached to vertical spring</p>
+                    <p>Two restoring forces: spring + gravity</p>
+                    <div class="formula">T = 2π√(m/k)</div>
+                    <p>Same as horizontal spring</p>
+                    <p>Gravity changes equilibrium position only</p>
+                    <p>Effective spring constant</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Pendulum in Accelerating Frame</div>
+                    <p>Elevator, vehicle, etc.</p>
+                    <p>Effective g' = g ± a</p>
+                    <div class="formula">T' = 2π√(L/g')</div>
+                    <p>Upward acceleration: g' = g + a</p>
+                    <p>Downward acceleration: g' = g - a</p>
+                    <p>Free fall: g' = 0, T → ∞ (no oscillation)</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">NEET IMPORTANT</div>
+                <h4>Graphical Method for Pendulum Problems</h4>
+                <p><strong>L vs T² graph:</strong> Straight line through origin</p>
+                <div class="formula">T² = (4π²/g)L</div>
+                <p>Slope = 4π²/g</p>
+                <p>From slope, g = 4π²/slope</p>
+                <p><strong>Length correction:</strong> For accurate L, measure from point of suspension to center of mass</p>
+                <p><strong>Large amplitude correction:</strong> T = T₀(1 + θ²/16) where θ in radians</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Pendulum in Elevator</div>
+                <p>A simple pendulum has period 2 s on Earth's surface. Find its period in an elevator accelerating upward at 2 m/s². (g = 10 m/s²)</p>
+                <p><strong>Solution:</strong></p>
+                <p>Effective acceleration: g' = g + a = 10 + 2 = 12 m/s²</p>
+                <p>T = 2π√(L/g) ⇒ L = gT²/(4π²) = 10×4/(4π²) = 10/π² m</p>
+                <p>New period: T' = 2π√(L/g') = 2π√[(10/π²)/12] = 2π√(10/(12π²))</p>
+                <p>= 2π × √(10)/(π√12) = 2√(10/12) = 2√(5/6) ≈ 1.83 s</p>
+                <p><em>Period decreases when effective g increases.</em></p>
+            </div>
+        </section>
+
+        <!-- Spring Oscillators Section -->
+        <section class="info-panel" id="spring" data-aos="fade-up">
+            <h2>Spring-Mass Systems</h2>
+            <p>Spring-mass systems are common examples of SHM where the restoring force is provided by Hooke's law.</p>
+
+            <div class="definition">
+                <p><strong>Hooke's Law:</strong> F = -kx, where k is spring constant (stiffness) and x is displacement from equilibrium.</p>
+                <div class="formula">T = 2π√(m/k) and ω = √(k/m)</div>
+                <p>For vertical spring: equilibrium position shifts but time period unchanged.</p>
+            </div>
+
+            <h3>Spring Combinations</h3>
+            <table>
+                <tr>
+                    <th>Combination</th>
+                    <th>Effective Spring Constant (k_eff)</th>
+                    <th>Time Period</th>
+                    <th>Energy Distribution</th>
+                    <th>Applications</th>
+                </tr>
+                <tr>
+                    <td>Series</td>
+                    <td>1/k_eff = 1/k₁ + 1/k₂ + ...</td>
+                    <td>T = 2π√(m/k_eff)</td>
+                    <td>Same force, different extensions</td>
+                    <td>Softer suspension, weighing machines</td>
+                </tr>
+                <tr>
+                    <td>Parallel</td>
+                    <td>k_eff = k₁ + k₂ + ...</td>
+                    <td>T = 2π√(m/k_eff)</td>
+                    <td>Same extension, different forces</td>
+                    <td>Stiffer suspension, vehicle springs</td>
+                </tr>
+                <tr>
+                    <td>Two masses, one spring</td>
+                    <td>k_eff = k (same)</td>
+                    <td>T = 2π√(μ/k)<br>μ = m₁m₂/(m₁+m₂)</td>
+                    <td>Reduced mass system</td>
+                    <td>Diatomic molecule vibration</td>
+                </tr>
+                <tr>
+                    <td>Cut spring</td>
+                    <td>k' = nk (n parts)</td>
+                    <td>T' = T/√n</td>
+                    <td>Stiffer when shorter</td>
+                    <td>Spring design</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Spring Constant (k):</strong></p>
+                <ul>
+                    <li>Measure of stiffness: larger k = stiffer spring</li>
+                    <li>SI unit: N/m</li>
+                    <li>For helical spring: k = (Gd⁴)/(8nD³) where G = modulus of rigidity, d = wire diameter, D = coil diameter, n = number of turns</li>
+                    <li>k ∝ 1/L (for same material and cross-section)</li>
+                    <li>Series: k_eff < smallest individual k</li>
+                    <li>Parallel: k_eff > largest individual k</li>
+                </ul>
+            </div>
+
+            <h3>Special Spring Systems</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Vertical Spring</div>
+                    <p>Mass hangs from vertical spring</p>
+                    <p>Equilibrium: mg = kx₀</p>
+                    <p>Extension x₀ = mg/k</p>
+                    <p>Time period same as horizontal: T = 2π√(m/k)</p>
+                    <p>Oscillation about new equilibrium</p>
+                    <p>Energy includes gravitational PE</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Two Springs (Same Side)</div>
+                    <p>Mass between two springs</p>
+                    <p>If both connected to same wall: parallel</p>
+                    <p>If connected to different walls: series</p>
+                    <p>Effective k = k₁ + k₂ (parallel)</p>
+                    <p>T = 2π√(m/(k₁+k₂))</p>
+                    <p>Common in vehicle suspensions</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Springs in Opposite Directions</div>
+                    <p>Mass connected to springs on both sides</p>
+                    <p>Both springs in tension/compression</p>
+                    <p>Effective k = k₁ + k₂</p>
+                    <p>Equilibrium where forces balance</p>
+                    <p>Used in vibration isolation systems</p>
+                    <p>Center of oscillation shifts</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Reduced Mass Concept</h4>
+                <p>For two masses m₁ and m₂ connected by spring:</p>
+                <div class="formula">μ = m₁m₂/(m₁ + m₂) (reduced mass)</div>
+                <div class="formula">T = 2π√(μ/k)</div>
+                <p><strong>Special cases:</strong></p>
+                <ul>
+                    <li>m₁ = m₂ = m: μ = m/2, T = 2π√(m/2k)</li>
+                    <li>m₂ → ∞ (fixed wall): μ = m₁, T = 2π√(m₁/k)</li>
+                    <li>m₁ = m₂ = M: Center of mass remains fixed</li>
+                </ul>
+                <p>Application: Diatomic molecule vibration, coupled oscillators</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Spring Combinations</div>
+                <p>Two springs with k₁ = 100 N/m and k₂ = 200 N/m. Find time period for 1 kg mass when connected: (a) in series, (b) in parallel.</p>
+                <p><strong>Solution:</strong></p>
+                <p>(a) Series: 1/k_eff = 1/100 + 1/200 = 3/200 ⇒ k_eff = 200/3 ≈ 66.67 N/m</p>
+                <p>T = 2π√(m/k_eff) = 2π√(1/66.67) = 2π√(0.015) = 2π × 0.122 = 0.767 s</p>
+                <p>(b) Parallel: k_eff = 100 + 200 = 300 N/m</p>
+                <p>T = 2π√(1/300) = 2π√(0.00333) = 2π × 0.0577 = 0.362 s</p>
+                <p><em>Parallel combination gives stiffer system → shorter period.</em></p>
+            </div>
+        </section>
+
+        <!-- Energy in SHM Section -->
+        <section class="info-panel" id="energy" data-aos="fade-up">
+            <h2>Energy in Simple Harmonic Motion</h2>
+            <p>In SHM, energy continuously converts between kinetic and potential forms, but total mechanical energy remains constant.</p>
+
+            <div class="definition">
+                <p><strong>Total Energy (E):</strong> Sum of kinetic energy (KE) and potential energy (PE). For conservative systems, E remains constant.</p>
+                <div class="formula">E = KE + PE = constant</div>
+                <p>For spring-mass system: PE = (1/2)kx², KE = (1/2)mv²</p>
+            </div>
+
+            <h3>Energy Expressions in SHM</h3>
+            <table>
+                <tr>
+                    <th>Position</th>
+                    <th>Displacement (x)</th>
+                    <th>Velocity (v)</th>
+                    <th>Kinetic Energy (KE)</th>
+                    <th>Potential Energy (PE)</th>
+                    <th>Total Energy (E)</th>
+                </tr>
+                <tr>
+                    <td>Mean Position (x=0)</td>
+                    <td>0</td>
+                    <td>±Aω (max)</td>
+                    <td>(1/2)mω²A² (max)</td>
+                    <td>0 (min)</td>
+                    <td>(1/2)mω²A²</td>
+                </tr>
+                <tr>
+                    <td>Extreme Position (x=±A)</td>
+                    <td>±A</td>
+                    <td>0</td>
+                    <td>0 (min)</td>
+                    <td>(1/2)mω²A² (max)</td>
+                    <td>(1/2)mω²A²</td>
+                </tr>
+                <tr>
+                    <td>Any Position (x)</td>
+                    <td>A sin(ωt+φ)</td>
+                    <td>Aω cos(ωt+φ)</td>
+                    <td>(1/2)mω²(A²-x²)</td>
+                    <td>(1/2)mω²x²</td>
+                    <td>(1/2)mω²A²</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Energy Relations:</strong></p>
+                <div class="formula">E = KE + PE = (1/2)mω²A² = (1/2)kA²</div>
+                <div class="formula">KE = (1/2)mω²(A² - x²) = E - PE</div>
+                <div class="formula">PE = (1/2)mω²x² = (1/2)kx²</div>
+                <p><strong>Average Values over one period:</strong></p>
+                <div class="formula">〈KE〉 = 〈PE〉 = E/2 = (1/4)mω²A²</div>
+                <div class="formula">〈Total Energy〉 = E = (1/2)mω²A²</div>
+                <p>Average KE = Average PE = Half of total energy</p>
+            </div>
+
+            <h3>Energy Distribution Graphs</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">KE vs Displacement</div>
+                    <p>KE = (1/2)mω²(A² - x²)</p>
+                    <p>Parabolic curve (inverted)</p>
+                    <p>Maximum at x=0 (mean)</p>
+                    <p>Zero at x=±A (extremes)</p>
+                    <p>Symmetrical about mean</p>
+                    <p>KE + PE = constant (straight line)</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">PE vs Displacement</div>
+                    <p>PE = (1/2)mω²x²</p>
+                    <p>Parabolic curve (upright)</p>
+                    <p>Minimum at x=0 (mean)</p>
+                    <p>Maximum at x=±A (extremes)</p>
+                    <p>Symmetrical about mean</p>
+                    <p>Always positive (or zero)</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Energy vs Time</div>
+                    <p>KE = (1/2)mω²A² cos²(ωt+φ)</p>
+                    <p>PE = (1/2)mω²A² sin²(ωt+φ)</p>
+                    <p>Both vary sinusoidally</p>
+                    <p>Frequency = 2ω (twice SHM frequency)</p>
+                    <p>KE and PE out of phase</p>
+                    <p>Sum = constant straight line</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">NEET IMPORTANT</div>
+                <h4>Energy Method for SHM</h4>
+                <p>Alternative method to derive SHM equation:</p>
+                <ol>
+                    <li>Write total energy: E = KE + PE = constant</li>
+                    <li>Differentiate with respect to time: dE/dt = 0</li>
+                    <li>For spring: E = (1/2)mv² + (1/2)kx²</li>
+                    <li>dE/dt = mv(dv/dt) + kx(dx/dt) = 0</li>
+                    <li>Since v = dx/dt and a = dv/dt: mva + kxv = 0</li>
+                    <li>Divide by v: ma + kx = 0 ⇒ a = -(k/m)x</li>
+                    <li>Thus ω² = k/m, SHM established</li>
+                </ol>
+                <p>Useful for complex systems where force analysis is difficult</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Energy Calculation</div>
+                <p>A 0.5 kg mass executes SHM with amplitude 0.1 m and frequency 2 Hz. Find total energy and KE when displacement is 0.05 m.</p>
+                <p><strong>Solution:</strong></p>
+                <p>ω = 2πf = 2π×2 = 4π rad/s</p>
+                <p>Total energy: E = (1/2)mω²A² = (1/2)×0.5×(4π)²×(0.1)²</p>
+                <p>= 0.5×0.5×16π²×0.01 = 0.5×0.5×1.579 = 0.395 J</p>
+                <p>KE at x = 0.05 m: KE = (1/2)mω²(A² - x²)</p>
+                <p>= (1/2)×0.5×(4π)²×(0.1² - 0.05²)</p>
+                <p>= 0.5×0.5×16π²×(0.01 - 0.0025) = 0.5×0.5×16π²×0.0075</p>
+                <p>= 0.5×0.5×1.184 = 0.296 J</p>
+                <p><em>At x = A/2, KE = 3/4 of total energy.</em></p>
+            </div>
+        </section>
+
+        <!-- Damping & Resonance Section -->
+        <section class="info-panel" id="damping" data-aos="fade-up">
+            <h2>Damped & Forced Oscillations</h2>
+            <p>Real oscillators experience damping due to resistive forces. When driven by periodic force, resonance can occur.</p>
+
+            <div class="definition">
+                <p><strong>Damped Oscillations:</strong> Oscillations where amplitude decreases with time due to resistive forces (friction, air resistance).</p>
+                <p><strong>Forced Oscillations:</strong> Oscillations driven by external periodic force.</p>
+                <p><strong>Resonance:</strong> Large amplitude response when driving frequency matches natural frequency.</p>
+            </div>
+
+            <h3>Types of Damping</h3>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                    <th>Amplitude Decay</th>
+                    <th>Equation of Motion</th>
+                    <th>Examples</th>
+                </tr>
+                <tr>
+                    <td>Underdamped (Light)</td>
+                    <td>b < 2√(mk)</td>
+                    <td>A(t) = A₀e^(-bt/2m) Oscillatory</td>
+                    <td>x = A₀e^(-γt) sin(ω't+φ)<br>ω' = √(ω₀²-γ²)</td>
+                    <td>Pendulum in air, spring in water</td>
+                </tr>
+                <tr>
+                    <td>Critically Damped</td>
+                    <td>b = 2√(mk)</td>
+                    <td>Fastest return to equilibrium without oscillation</td>
+                    <td>x = (A + Bt)e^(-γt)</td>
+                    <td>Car suspension, door closers</td>
+                </tr>
+                <tr>
+                    <td>Overdamped (Heavy)</td>
+                    <td>b > 2√(mk)</td>
+                    <td>Slow return to equilibrium without oscillation</td>
+                    <td>x = A₁e^(r₁t) + A₂e^(r₂t)<br>r₁,r₂ real & negative</td>
+                    <td>Pendulum in thick oil</td>
+                </tr>
+                <tr>
+                    <td>Undamped</td>
+                    <td>b = 0</td>
+                    <td>Constant amplitude</td>
+                    <td>x = A sin(ω₀t+φ)</td>
+                    <td>Ideal SHM (theoretical)</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Damping Parameters:</strong></p>
+                <ul>
+                    <li><strong>Damping constant (b):</strong> Force = -bv (proportional to velocity)</li>
+                    <li><strong>Damping coefficient (γ):</strong> γ = b/2m</li>
+                    <li><strong>Natural frequency:</strong> ω₀ = √(k/m)</li>
+                    <li><strong>Damped frequency:</strong> ω' = √(ω₀² - γ²)</li>
+                    <li><strong>Quality factor (Q):</strong> Q = ω₀/2γ = measure of sharpness of resonance</li>
+                    <li><strong>Logarithmic decrement:</strong> Λ = ln(A₁/A₂) = γT' (measure of damping)</li>
+                </ul>
+            </div>
+
+            <h3>Resonance Phenomena</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Forced Oscillations</div>
+                    <p>Equation: m(d²x/dt²) + b(dx/dt) + kx = F₀ cos(ωt)</p>
+                    <p>Steady state solution: x = A cos(ωt - δ)</p>
+                    <div class="formula">A = F₀/√[(k-mω²)² + (bω)²]</div>
+                    <p>Phase lag: tanδ = bω/(k-mω²)</p>
+                    <p>Amplitude depends on ω</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Resonance</div>
+                    <p>Maximum amplitude when ω = ω_r</p>
+                    <div class="formula">ω_r = √(ω₀² - 2γ²) (damped)</div>
+                    <p>For light damping: ω_r ≈ ω₀</p>
+                    <p>Resonant amplitude: A_max = F₀/(bω₀)</p>
+                    <p>Sharpness: Δω = 2γ (bandwidth)</p>
+                    <p>Q = ω₀/Δω = ω₀/(2γ)</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Applications & Examples</div>
+                    <p><strong>Useful:</strong> Tuning circuits, MRI, musical instruments</p>
+                    <p><strong>Destructive:</strong> Tacoma Narrows bridge, mechanical failures</p>
+                    <p><strong>Everyday:</strong> Swing pushing, microwave heating</p>
+                    <p><strong>Biological:</strong> Hearing (cochlear resonance)</p>
+                    <p><strong>Atomic:</strong> Electron transitions, NMR</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Sharpness of Resonance</h4>
+                <p><strong>Quality factor (Q):</strong> Measure of resonance sharpness</p>
+                <div class="formula">Q = ω₀/Δω = ω₀/(2γ) = √(mk)/b</div>
+                <p>Where Δω = bandwidth at A_max/√2</p>
+                <p><strong>High Q:</strong> Sharp resonance, low damping (crystal oscillators, Q ~ 10⁴-10⁶)</p>
+                <p><strong>Low Q:</strong> Broad resonance, high damping (shock absorbers, Q ~ 1-10)</p>
+                <p><strong>Power absorption:</strong> P(ω) = (F₀²ω²b)/[(k-mω²)² + (bω)²]</p>
+                <p>Maximum power at ω = ω₀, P_max = F₀²/(2b)</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Damped Oscillation</div>
+                <p>A damped oscillator has mass 0.2 kg, k = 80 N/m, damping constant b = 2 kg/s. Find if it's underdamped, and its damped frequency.</p>
+                <p><strong>Solution:</strong></p>
+                <p>Natural frequency: ω₀ = √(k/m) = √(80/0.2) = √400 = 20 rad/s</p>
+                <p>Critical damping: b_c = 2√(mk) = 2√(0.2×80) = 2√16 = 8 kg/s</p>
+                <p>Since b = 2 < b_c = 8, system is underdamped</p>
+                <p>Damping coefficient: γ = b/2m = 2/(2×0.2) = 5 rad/s</p>
+                <p>Damped frequency: ω' = √(ω₀² - γ²) = √(400 - 25) = √375 = 19.36 rad/s</p>
+                <p><em>Frequency slightly reduced from natural frequency due to damping.</em></p>
+            </div>
+        </section>
+
+        <!-- Problem Solving Section -->
+        <section class="info-panel" id="problems" data-aos="fade-up">
+            <h2>Problem Solving Strategies</h2>
+            <p>Systematic approach to solve oscillation problems in JEE and NEET.</p>
+
+            <div class="problem-solving">
+                <div class="problem-box">
+                    <div class="problem-title">Type 1: SHM Parameters</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify given quantities: A, T, ω, x, v, a</li>
+                        <li>Use relations: ω = 2π/T, v_max = Aω, a_max = Aω²</li>
+                        <li>For specific position: v = ω√(A²-x²), a = -ω²x</li>
+                        <li>Check phase relationships</li>
+                        <li>Use appropriate trigonometric form</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> v leads x by 90°, a leads v by 90°, a opposite to x</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 2: Time Period Calculation</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Find restoring force F or torque τ</li>
+                        <li>Check if F ∝ -x or τ ∝ -θ</li>
+                        <li>Write in form: a = -ω²x or α = -ω²θ</li>
+                        <li>Extract ω, then T = 2π/ω</li>
+                        <li>For pendulum: T = 2π√(L/g)</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> For small oscillations, sinθ ≈ θ, cosθ ≈ 1 - θ²/2</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 3: Energy Problems</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Total energy: E = (1/2)kA² = (1/2)mω²A²</li>
+                        <li>At any x: KE = E - PE, PE = (1/2)kx²</li>
+                        <li>Average values: 〈KE〉 = 〈PE〉 = E/2</li>
+                        <li>For fraction of energy: use ratios</li>
+                        <li>Energy method to derive ω</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> When KE = PE, x = A/√2, v = Aω/√2</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE/NEET TIP</div>
+                <h4>Common Problem Patterns</h4>
+                <p><strong>1. Time period in different situations:</strong> Elevator, liquid, on inclined plane</p>
+                <p><strong>2. Spring combinations:</strong> Series/parallel, cut springs</p>
+                <p><strong>3. Phase problems:</strong> Initial conditions, phase difference</p>
+                <p><strong>4. Two-body oscillations:</strong> Reduced mass concept</p>
+                <p><strong>5. Energy conservation:</strong> Max speed, positions where KE=PE</p>
+                <p><strong>6. Pendulum variations:</strong> Conical, physical, torsional</p>
+                <p><strong>7. Damping:</strong> Amplitude decay, logarithmic decrement</p>
+            </div>
+
+            <h3>Quick Formula Reference</h3>
+            <div class="equation-cards">
+                <div class="equation-card">
+                    <div class="formula">x = A sin(ωt+φ)</div>
+                    <div class="formula">v = ω√(A²-x²)</div>
+                    <div class="formula">a = -ω²x</div>
+                </div>
+                <div class="equation-card">
+                    <div class="formula">T_pendulum = 2π√(L/g)</div>
+                    <div class="formula">T_spring = 2π√(m/k)</div>
+                    <div class="formula">ω = √(k/m)</div>
+                </div>
+                <div class="equation-card">
+                    <div class="formula">E = (1/2)kA²</div>
+                    <div class="formula">KE = (1/2)k(A²-x²)</div>
+                    <div class="formula">PE = (1/2)kx²</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Facts Carousel -->
+        <div class="swiper-container" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">SHM EQUATION</div>
+                        <div class="swiper-text">x = A sin(ωt+φ). a = -ω²x. Condition: restoring force ∝ -displacement.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">SIMPLE PENDULUM</div>
+                        <div class="swiper-text">T = 2π√(L/g). Independent of mass and amplitude (small angles). Isochronous.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">SPRING-MASS SYSTEM</div>
+                        <div class="swiper-text">T = 2π√(m/k). ω = √(k/m). Series: 1/k_eff = Σ1/k_i, parallel: k_eff = Σk_i.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">ENERGY IN SHM</div>
+                        <div class="swiper-text">E = (1/2)kA² constant. KE_max = E at mean, PE_max = E at extremes. 〈KE〉 = 〈PE〉 = E/2.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">PHASE RELATIONS</div>
+                        <div class="swiper-text">v leads x by π/2. a leads v by π/2. a opposite to x (π difference). v = dx/dt, a = dv/dt.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">DAMPED OSCILLATIONS</div>
+                        <div class="swiper-text">A(t) = A₀e^(-γt). Underdamped: oscillates. Critically damped: fastest return. Overdamped: slow return.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">RESONANCE</div>
+                        <div class="swiper-text">Large amplitude when ω_drive ≈ ω_natural. A_max = F₀/(bω₀). Quality factor Q = ω₀/Δω.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">PHYSICAL PENDULUM</div>
+                        <div class="swiper-text">T = 2π√(I/mgd). I = moment of inertia, d = distance to pivot. Simple pendulum: I = mL².</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- Summary Section -->
+        <section class="info-panel" data-aos="fade-up">
+            <h2>Chapter Summary & Key Points</h2>
+            
+            <h3>Essential Formulas</h3>
+            <div class="concept-cards">
+                <div class="concept-card shm">
+                    <div class="card-title shm">SHM Equations</div>
+                    <div class="formula">x = A sin(ωt+φ)</div>
+                    <div class="formula">a = -ω²x</div>
+                    <div class="formula">v = ω√(A²-x²)</div>
+                </div>
+
+                <div class="concept-card pendulum">
+                    <div class="card-title pendulum">Pendulum & Spring</div>
+                    <div class="formula">T = 2π√(L/g)</div>
+                    <div class="formula">T = 2π√(m/k)</div>
+                    <div class="formula">ω = √(k/m)</div>
+                </div>
+
+                <div class="concept-card spring">
+                    <div class="card-title spring">Energy Relations</div>
+                    <div class="formula">E = (1/2)kA²</div>
+                    <div class="formula">KE = (1/2)k(A²-x²)</div>
+                    <div class="formula">PE = (1/2)kx²</div>
+                </div>
+            </div>
+
+            <h3>Important Points for JEE/NEET</h3>
+            <ul>
+                <li>SHM: a ∝ -x, motion is sinusoidal with constant amplitude (undamped)</li>
+                <li>Simple pendulum: T = 2π√(L/g), independent of mass, valid for small θ (<10°)</li>
+                <li>Spring-mass: T = 2π√(m/k), ω = √(k/m), independent of gravity direction</li>
+                <li>Energy in SHM: Total energy constant, KE and PE interconvert, average values equal</li>
+                <li>Phase: v leads x by 90°, a leads v by 90°, a opposite to x (180° out of phase)</li>
+                <li>Damping: Amplitude decays exponentially, underdamped systems oscillate with reduced frequency</li>
+                <li>Resonance: Maximum amplitude when driving frequency matches natural frequency</li>
+                <li>Physical pendulum: T = 2π√(I/mgd), reduces to simple pendulum for point mass</li>
+                <li>Spring combinations: Series - softer, parallel - stiffer</li>
+            </ul>
+
+            <div class="important">
+                <p><strong>Common Mistakes to Avoid:</strong></p>
+                <ul>
+                    <li>Applying pendulum formula for large amplitudes without correction</li>
+                    <li>Confusing angular frequency (ω) with frequency (f): ω = 2πf</li>
+                    <li>Forgetting that spring period in vertical orientation same as horizontal</li>
+                    <li>Mixing up series and parallel spring combinations</li>
+                    <li>Not converting angles to radians in calculations</li>
+                    <li>Assuming velocity is maximum at extreme positions (it's zero!)</li>
+                    <li>Confusing underdamped, critically damped, and overdamped motions</li>
+                    <li>Forgetting phase constant (φ) in displacement equation</li>
+                    <li>Applying reduced mass formula incorrectly for two-body systems</li>
+                </ul>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">LAST MINUTE REVISION</div>
+                <h4>Must Remember Values</h4>
+                <p><strong>g:</strong> 9.8 m/s² ≈ 10 m/s² (for approximation)</p>
+                <p><strong>π:</strong> 3.1416, π² ≈ 9.87, 2π ≈ 6.28</p>
+                <p><strong>Second's pendulum:</strong> T = 2 s, L ≈ 1 m (g/π²)</p>
+                <p><strong>Phase differences:</strong> v-x: 90°, a-v: 90°, a-x: 180°</p>
+                <p><strong>Small angle approximation:</strong> sinθ ≈ θ, cosθ ≈ 1 - θ²/2 (θ in radians)</p>
+                <p><strong>Energy fractions:</strong> When x = A/2: KE = 3E/4, PE = E/4</p>
+                <p><strong>When KE = PE:</strong> x = A/√2 ≈ 0.707A, v = Aω/√2</p>
+                <p><strong>Average values:</strong> 〈KE〉 = 〈PE〉 = E/2 over one period</p>
+                <p><strong>Damping:</strong> Critical damping: b_c = 2√(mk)</p>
+                <p><strong>Quality factor:</strong> Q = ω₀/Δω = √(mk)/b</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Nerds Assemble</h3>
+                <p>Master Oscillations for JEE & NEET. Comprehensive physics resource with detailed explanations and problem-solving strategies.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#shm">Simple Harmonic Motion</a></li>
+                    <li><a href="#pendulum">Simple Pendulum</a></li>
+                    <li><a href="#spring">Spring Oscillators</a></li>
+                    <li><a href="#energy">Energy in SHM</a></li>
+                    <li><a href="#damping">Damping & Resonance</a></li>
+                    <li><a href="#problems">Problem Solving</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact & Resources</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> 44mr.invisible@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Nerds Assemble. All rights reserved. | Designed for JEE & NEET Aspirants | Oscillations </p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Oscillations - JavaScript
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ?
+                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+            }
+
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+
+            function handleScroll() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('active');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                }
+            }
+
+            // Debounced scroll event
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(handleScroll, 50);
+            }, { passive: true });
+
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: window.innerWidth < 768 ? 100 : 120,
+                    easing: 'ease-out-quad'
+                });
+            }
+
+            // Initialize Swiper
+            if (typeof Swiper !== 'undefined') {
+                const swiper = new Swiper('.swiper-container', {
+                    loop: true,
+                    autoplay: {
+                        delay: 3500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 25
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        }
+                    }
+                });
+            }
+
+            // Smooth Scroll for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        if (mainNav && mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                });
+            });
+
+            // Back to Top Button Click
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Create SHM Visualization
+            createSHMVisualization();
+            
+            // Create Wave Particles
+            createWaveParticles();
+            
+            // Create Particles
+            createParticles();
+            
+            // Setup interactive pendulum
+            setupInteractivePendulum();
+            
+            // Setup oscillator animation
+            setupOscillatorAnimation();
+        });
+
+        // Create SHM Visualization
+        function createSHMVisualization() {
+            const oscillationDemo = document.querySelector('.oscillation-demo');
+            if (!oscillationDemo) return;
+
+            const shmGraph = oscillationDemo.querySelector('.shm-graph');
+            
+            // Create sine wave curve
+            const points = 100;
+            let path = '';
+            for (let i = 0; i <= points; i++) {
+                const x = (i / points) * 100;
+                const y = 50 - 40 * Math.sin(2 * Math.PI * i / points);
+                
+                if (i === 0) {
+                    path = `M ${x}% ${y}%`;
+                } else {
+                    path += ` L ${x}% ${y}%`;
+                }
+            }
+            
+            // Create SVG path for smooth curve
+            const svgNS = "http://www.w3.org/2000/svg";
+            const svg = document.createElementNS(svgNS, "svg");
+            svg.setAttribute("width", "100%");
+            svg.setAttribute("height", "100%");
+            svg.setAttribute("viewBox", "0 0 100 100");
+            svg.setAttribute("preserveAspectRatio", "none");
+            
+            const pathElement = document.createElementNS(svgNS, "path");
+            pathElement.setAttribute("d", path);
+            pathElement.setAttribute("fill", "none");
+            pathElement.setAttribute("stroke", "var(--osc-primary)");
+            pathElement.setAttribute("stroke-width", "2");
+            
+            svg.appendChild(pathElement);
+            shmGraph.appendChild(svg);
+            
+            // Add equilibrium line
+            const eqLine = document.createElement('div');
+            eqLine.style.position = 'absolute';
+            eqLine.style.width = '100%';
+            eqLine.style.height = '2px';
+            eqLine.style.top = '50%';
+            eqLine.style.left = '0';
+            eqLine.style.background = 'rgba(255,255,255,0.3)';
+            shmGraph.appendChild(eqLine);
+            
+            // Add amplitude markers
+            const ampLineTop = document.createElement('div');
+            ampLineTop.style.position = 'absolute';
+            ampLineTop.style.width = '100%';
+            ampLineTop.style.height = '1px';
+            ampLineTop.style.top = '10%';
+            ampLineTop.style.left = '0';
+            ampLineTop.style.background = 'rgba(255,255,255,0.2)';
+            ampLineTop.style.borderTop = '1px dashed rgba(255,255,255,0.5)';
+            shmGraph.appendChild(ampLineTop);
+            
+            const ampLineBottom = document.createElement('div');
+            ampLineBottom.style.position = 'absolute';
+            ampLineBottom.style.width = '100%';
+            ampLineBottom.style.height = '1px';
+            ampLineBottom.style.top = '90%';
+            ampLineBottom.style.left = '0';
+            ampLineBottom.style.background = 'rgba(255,255,255,0.2)';
+            ampLineBottom.style.borderTop = '1px dashed rgba(255,255,255,0.5)';
+            shmGraph.appendChild(ampLineBottom);
+            
+            // Add labels
+            const labelA = document.createElement('div');
+            labelA.textContent = '+A';
+            labelA.style.position = 'absolute';
+            labelA.style.right = '5px';
+            labelA.style.top = '8%';
+            labelA.style.color = 'var(--osc-highlight)';
+            labelA.style.fontFamily = 'Electrolize, sans-serif';
+            labelA.style.fontSize = '0.7rem';
+            shmGraph.appendChild(labelA);
+            
+            const labelNegA = document.createElement('div');
+            labelNegA.textContent = '-A';
+            labelNegA.style.position = 'absolute';
+            labelNegA.style.right = '5px';
+            labelNegA.style.top = '88%';
+            labelNegA.style.color = 'var(--osc-highlight)';
+            labelNegA.style.fontFamily = 'Electrolize, sans-serif';
+            labelNegA.style.fontSize = '0.7rem';
+            shmGraph.appendChild(labelNegA);
+            
+            const labelEq = document.createElement('div');
+            labelEq.textContent = '0';
+            labelEq.style.position = 'absolute';
+            labelEq.style.right = '5px';
+            labelEq.style.top = '48%';
+            labelEq.style.color = 'var(--osc-highlight)';
+            labelEq.style.fontFamily = 'Electrolize, sans-serif';
+            labelEq.style.fontSize = '0.7rem';
+            shmGraph.appendChild(labelEq);
+        }
+
+        // Create Wave Particles Function
+        function createWaveParticles() {
+            const waveParticlesContainer = document.getElementById('waveParticles');
+            if (!waveParticlesContainer) return;
+
+            const particleCount = window.innerWidth < 768 ? 30 : 60;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('wave-particle');
+
+                const size = Math.random() * 6 + 2;
+                const posX = Math.random() * window.innerWidth;
+                const posY = Math.random() * window.innerHeight;
+                const duration = Math.random() * 3 + 2;
+                const delay = Math.random() * 2;
+                const color = Math.random() > 0.5 ? 'rgba(255, 64, 129, 0.4)' : 'rgba(83, 109, 254, 0.4)';
+
+                particle.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}px;
+                    top: ${posY}px;
+                    opacity: ${Math.random() * 0.3 + 0.2};
+                    background: radial-gradient(circle at 30% 30%, ${color}, transparent);
+                    box-shadow: 0 0 10px ${color};
+                    animation: spring-oscillate ${duration}s ease-in-out ${delay}s infinite;
+                `;
+
+                waveParticlesContainer.appendChild(particle);
+            }
+        }
+
+        // Create Particles Function
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
+
+            const particleCount = window.innerWidth < 768 ? 20 : 30;
+            particlesContainer.innerHTML = '';
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                const size = Math.random() * 3 + 1;
+                const posX = Math.random() * window.innerWidth;
+                const posY = Math.random() * window.innerHeight;
+                const duration = Math.random() * 15 + 10;
+                const delay = Math.random() * 5;
+                const color = Math.random() > 0.5 ? 'rgba(255, 64, 129, 0.3)' : 'rgba(224, 64, 251, 0.3)';
+
+                particle.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}px;
+                    top: ${posY}px;
+                    opacity: ${Math.random() * 0.3 + 0.1};
+                    animation: float ${duration}s ease-in-out ${delay}s infinite;
+                    background: ${color};
+                `;
+
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Setup interactive pendulum
+        function setupInteractivePendulum() {
+            const pendulumArm = document.querySelector('.pendulum-arm');
+            const pendulumBob = document.querySelector('.pendulum-bob');
+            
+            if (!pendulumArm || !pendulumBob) return;
+            
+            let isSwinging = true;
+            
+            // Click to pause/resume pendulum
+            pendulumBob.addEventListener('click', function() {
+                if (isSwinging) {
+                    pendulumArm.style.animationPlayState = 'paused';
+                    this.style.animationPlayState = 'paused';
+                    isSwinging = false;
+                } else {
+                    pendulumArm.style.animationPlayState = 'running';
+                    this.style.animationPlayState = 'running';
+                    isSwinging = true;
+                }
+            });
+            
+            // Hover effect
+            pendulumBob.addEventListener('mouseenter', function() {
+                this.style.boxShadow = '0 0 30px var(--osc-primary)';
+                this.style.transform = 'translateX(-50%) scale(1.2)';
+            });
+            
+            pendulumBob.addEventListener('mouseleave', function() {
+                this.style.boxShadow = '0 0 20px var(--osc-primary)';
+                this.style.transform = 'translateX(-50%) scale(1)';
+            });
+        }
+
+        // Setup oscillator animation
+        function setupOscillatorAnimation() {
+            const oscillator = document.querySelector('.oscillator');
+            if (!oscillator) return;
+
+            let isMoving = true;
+            
+            oscillator.addEventListener('click', function() {
+                if (isMoving) {
+                    this.style.animationPlayState = 'paused';
+                    isMoving = false;
+                } else {
+                    this.style.animationPlayState = 'running';
+                    isMoving = true;
+                }
+            });
+            
+            // Add velocity indicator
+            const velocityIndicator = document.createElement('div');
+            velocityIndicator.style.position = 'absolute';
+            velocityIndicator.style.width = '0';
+            velocityIndicator.style.height = '2px';
+            velocityIndicator.style.background = 'var(--osc-highlight)';
+            velocityIndicator.style.top = '50%';
+            velocityIndicator.style.left = '50%';
+            velocityIndicator.style.transformOrigin = 'left center';
+            oscillator.parentElement.appendChild(velocityIndicator);
+            
+            // Update velocity indicator
+            setInterval(() => {
+                if (!isMoving) return;
+                
+                // Calculate approximate velocity based on position
+                const oscillatorRect = oscillator.getBoundingClientRect();
+                const containerRect = oscillator.parentElement.getBoundingClientRect();
+                const relativeX = (oscillatorRect.left + oscillatorRect.width/2 - containerRect.left) / containerRect.width;
+                
+                // Velocity is maximum at center, zero at ends
+                const velocity = Math.sin(relativeX * Math.PI * 2) * 30; // Scale factor
+                
+                velocityIndicator.style.left = `${oscillatorRect.left + oscillatorRect.width/2 - containerRect.left}px`;
+                velocityIndicator.style.top = `${oscillatorRect.top + oscillatorRect.height/2 - containerRect.top}px`;
+                velocityIndicator.style.width = `${Math.abs(velocity)}px`;
+                velocityIndicator.style.transform = `rotate(${velocity > 0 ? 0 : 180}deg)`;
+                velocityIndicator.style.opacity = `${Math.abs(velocity)/30}`;
+            }, 100);
+        }
+
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                createParticles();
+                createWaveParticles();
+            }, 250);
+        });
+    </script>
+</body>
+</html>
