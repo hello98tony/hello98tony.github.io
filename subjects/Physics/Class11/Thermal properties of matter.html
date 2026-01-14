@@ -1,0 +1,2004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermal Properties of Matter | Class 11 Physics | JEE & NEET Preparation</title>
+    <meta name="description" content="Master Thermal Properties of Matter for Class 11 Physics. Complete guide for JEE & NEET aspirants covering heat transfer, thermal expansion, calorimetry, kinetic theory, and thermodynamics.">
+    <meta name="keywords" content="Thermal Properties of Matter, Heat Transfer, Physics Class 11, JEE preparation, NEET physics, Thermal Expansion, Calorimetry, Kinetic Theory, Thermodynamics, Specific Heat, Latent Heat">
+    <meta name="author" content="Nerds Assemble">
+    <meta name="robots" content="index, follow">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Thermal Properties of Matter | Class 11 Physics">
+    <meta property="og:description" content="Complete guide to Thermal Physics for JEE & NEET aspirants">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nerdsassemble.com/thermal-physics">
+    
+    <!-- Structured Data for Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Thermal Properties of Matter - Class 11 Physics",
+        "description": "Complete guide to Thermal Physics with heat transfer, expansion, calorimetry, and thermodynamics for JEE & NEET",
+        "educationalLevel": "High School",
+        "learningResourceType": "Educational Course",
+        "author": {
+            "@type": "Organization",
+            "name": "Nerds Assemble"
+        },
+        "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": "Student",
+            "audienceType": ["JEE Aspirants", "NEET Aspirants"]
+        }
+    }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Pacifico&family=Dancing+Script:wght@700&family=Abril+Fatface&family=Playfair+Display:wght@700&family=Raleway:wght@300;800&family=Quicksand:wght@500&family=Poiret+One&family=Amatic+SC:wght@700&family=Caveat:wght@700&family=Kaushan+Script&family=Libre+Baskerville&family=Merriweather&family=Nunito:wght@800&family=Oswald:wght@500&family=Roboto+Slab:wght@700&family=Sacramento&family=Tangerine:wght@700&family=Yeseva+One&family=Electrolize&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/thermometer.png">
+    
+    <style>
+        /* Thermal Properties of Matter - Nerds Assemble CSS */
+        :root {
+            --thermal-primary: #FF5722;
+            --thermal-secondary: #FF9800;
+            --thermal-tertiary: #4CAF50;
+            --thermal-accent: #2196F3;
+            --thermal-bg: #0a0a20;
+            --thermal-text: #ffffff;
+            --thermal-highlight: #FFD700;
+            --thermal-nav-bg: rgba(10, 5, 30, 0.95);
+            --thermal-gradient: linear-gradient(45deg, #FF5722, #FF9800);
+            --conduction-gradient: linear-gradient(45deg, #4CAF50, #8BC34A);
+            --expansion-gradient: linear-gradient(45deg, #2196F3, #00BCD4);
+            --calorimetry-gradient: linear-gradient(45deg, #9C27B0, #E91E63);
+        }
+
+        /* Base Styles & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--thermal-bg);
+            color: var(--thermal-text);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overscroll-behavior-y: contain;
+            -webkit-overflow-scrolling: touch;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(255, 87, 34, 0.15) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(76, 175, 80, 0.15) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(33, 150, 243, 0.1) 0%, transparent 30%),
+                linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+            background: linear-gradient(45deg, var(--thermal-primary), var(--thermal-secondary), var(--thermal-tertiary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(255, 87, 34, 0.5);
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--thermal-highlight);
+            margin: 2rem 0 1.5rem;
+            font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--thermal-primary), transparent);
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-family: 'Roboto Slab', serif;
+            color: var(--thermal-secondary);
+            margin: 1.5rem 0 1rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+        }
+
+        p {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+        }
+
+        /* Layout Components */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            flex: 1;
+            padding: 0 1rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Raleway', sans-serif;
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+            color: var(--thermal-secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--thermal-nav-bg);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            transform: translateZ(0);
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            color: var(--thermal-highlight);
+            font-size: 1.6rem;
+        }
+
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--thermal-primary), var(--thermal-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.4rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        .nav-links a {
+            color: var(--thermal-text);
+            text-decoration: none;
+            font-family: 'Electrolize', sans-serif;
+            font-size: 0.95rem;
+            transition: color 0.2s ease-out;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--thermal-highlight);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--thermal-highlight);
+            transition: width 0.2s ease-out;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--thermal-text);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* Content Panels */
+        .info-panel {
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
+            padding: 1.8rem;
+            margin: 1.8rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: translateZ(0);
+            will-change: transform, opacity;
+        }
+
+        /* Special Content Blocks */
+        .important {
+            background: rgba(255, 87, 34, 0.1);
+            border-left: 4px solid var(--thermal-primary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(255, 87, 34, 0.1);
+        }
+
+        .definition {
+            background: rgba(255, 215, 0, 0.1);
+            border-left: 4px solid var(--thermal-highlight);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.1);
+        }
+
+        .formula {
+            font-family: 'Audiowide', cursive;
+            color: var(--thermal-highlight);
+            margin: 1.2rem 0;
+            padding: 1.2rem;
+            background: rgba(255, 87, 34, 0.1);
+            border-radius: 8px;
+            border: 1px dashed var(--thermal-highlight);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.1rem;
+        }
+
+        .example {
+            background: rgba(76, 175, 80, 0.1);
+            border-left: 4px solid var(--thermal-tertiary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: var(--thermal-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Lists & Tables */
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 1.8rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background-color: rgba(255, 87, 34, 0.2);
+            font-family: 'Electrolize', sans-serif;
+            color: var(--thermal-highlight);
+            font-size: 0.95rem;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+
+        tr:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* Concept Cards */
+        .concept-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .concept-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(255, 87, 34, 0.2);
+        }
+
+        .concept-card.heat-transfer {
+            border-top: 4px solid var(--thermal-primary);
+        }
+
+        .concept-card.thermal-expansion {
+            border-top: 4px solid var(--thermal-accent);
+        }
+
+        .concept-card.calorimetry {
+            border-top: 4px solid var(--thermal-tertiary);
+        }
+
+        .concept-card.kinetic-theory {
+            border-top: 4px solid #9C27B0;
+        }
+
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title.heat-transfer { color: var(--thermal-primary); }
+        .card-title.thermal-expansion { color: var(--thermal-accent); }
+        .card-title.calorimetry { color: var(--thermal-tertiary); }
+        .card-title.kinetic-theory { color: #9C27B0; }
+
+        /* Thermal Visualization */
+        .thermal-container {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .thermal-demo {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            margin: 1rem 0;
+            background: linear-gradient(to right, rgba(33, 150, 243, 0.1), rgba(255, 87, 34, 0.1));
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .temperature-bar {
+            position: absolute;
+            height: 100%;
+            background: linear-gradient(to top, #2196F3, #FF5722);
+            width: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+        }
+
+        .temperature-marker {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: var(--thermal-highlight);
+            left: 0;
+        }
+
+        .temperature-label {
+            position: absolute;
+            right: 10px;
+            color: var(--thermal-text);
+            font-family: 'Electrolize', sans-serif;
+            font-size: 0.8rem;
+        }
+
+        /* Heat Transfer Animation */
+        .heat-transfer-animation {
+            height: 150px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .heat-source {
+            width: 50px;
+            height: 50px;
+            background: var(--thermal-primary);
+            border-radius: 50%;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            box-shadow: 0 0 20px var(--thermal-primary);
+            animation: pulse-heat 2s infinite;
+        }
+
+        .heat-wave {
+            position: absolute;
+            border: 2px solid var(--thermal-secondary);
+            border-radius: 50%;
+            opacity: 0;
+            animation: heat-wave 3s infinite;
+        }
+
+        /* Equation Cards */
+        .equation-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .equation-card {
+            background: rgba(33, 150, 243, 0.1);
+            border-radius: 10px;
+            padding: 1.2rem;
+            text-align: center;
+            border: 1px solid rgba(33, 150, 243, 0.3);
+        }
+
+        .equation {
+            font-family: 'Audiowide', cursive;
+            color: var(--thermal-accent);
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+
+        /* Problem Solving Section */
+        .problem-solving {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .problem-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--thermal-primary);
+        }
+
+        .problem-title {
+            color: var(--thermal-primary);
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            margin: 2rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--thermal-nav-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .footer-column h3 {
+            color: var(--thermal-highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--thermal-text);
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            transition: color 0.2s ease-out;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--thermal-highlight);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--thermal-text);
+            font-size: 1.1rem;
+            transition: color 0.2s ease-out;
+        }
+
+        .social-links a:hover {
+            color: var(--thermal-highlight);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 1.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Quicksand', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 45px;
+            height: 45px;
+            background: var(--thermal-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease-out;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(255, 87, 34, 0.3);
+            transform: translateZ(0);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--thermal-highlight);
+            transform: translateY(-5px);
+        }
+
+        /* JEE/NEET Specific Styling */
+        .exam-highlight {
+            background: rgba(255, 235, 0, 0.1);
+            border: 2px solid var(--thermal-highlight);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .exam-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--thermal-highlight);
+            color: var(--thermal-bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes pulse-heat {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 20px var(--thermal-primary); }
+            50% { transform: scale(1.1); box-shadow: 0 0 40px var(--thermal-primary); }
+        }
+
+        @keyframes heat-wave {
+            0% { transform: scale(0.1); opacity: 1; }
+            100% { transform: scale(3); opacity: 0; }
+        }
+
+        @keyframes molecule-vibrate {
+            0%, 100% { transform: translateX(0) translateY(0); }
+            25% { transform: translateX(5px) translateY(-5px); }
+            50% { transform: translateX(-5px) translateY(5px); }
+            75% { transform: translateX(5px) translateY(5px); }
+        }
+
+        @keyframes temperature-rise {
+            0% { height: 20%; background: #2196F3; }
+            100% { height: 80%; background: #FF5722; }
+        }
+
+        .pulse-heat {
+            animation: pulse-heat 2s infinite;
+        }
+
+        .heat-wave {
+            animation: heat-wave 3s infinite;
+        }
+
+        .molecule-vibrate {
+            animation: molecule-vibrate 1s infinite;
+        }
+
+        .temperature-rise {
+            animation: temperature-rise 4s infinite alternate;
+        }
+
+        /* Swiper Carousel */
+        .swiper-container {
+            width: 100%;
+            height: auto;
+            min-height: 180px;
+            margin: 2.5rem 0;
+            will-change: transform;
+        }
+
+        .swiper-slide {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+            font-family: 'Electrolize', sans-serif;
+            padding: 1.2rem;
+            box-sizing: border-box;
+            text-align: center;
+            min-height: 180px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .swiper-title {
+            font-family: 'Audiowide', cursive;
+            color: var(--thermal-highlight);
+            margin-bottom: 0.5rem;
+            font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+        }
+
+        .swiper-text {
+            font-family: 'Quicksand', sans-serif;
+            font-size: clamp(0.85rem, 1.1vw, 1rem);
+        }
+
+        /* Particles Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            will-change: transform;
+            opacity: 0.3;
+        }
+
+        /* Thermal Molecules */
+        .molecule {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            will-change: transform;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                margin-top: 1rem;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.75rem 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .container {
+                width: 95%;
+                padding: 0;
+            }
+
+            .concept-cards, .problem-solving {
+                grid-template-columns: 1fr;
+            }
+
+            .equation-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-panel {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    <div class="molecules" id="molecules"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-thermometer-half"></i></span>
+                <span class="logo-text">Nerds Assemble</span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#temperature">Temperature & Heat</a></li>
+                    <li><a href="#expansion">Thermal Expansion</a></li>
+                    <li><a href="#calorimetry">Calorimetry</a></li>
+                    <li><a href="#transfer">Heat Transfer</a></li>
+                    <li><a href="#kinetic">Kinetic Theory</a></li>
+                    <li><a href="#problems">Problems</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="page-header" data-aos="fade-down">
+            <h1>Thermal Properties of Matter</h1>
+            <p class="subtitle">Class 11 Physics | JEE & NEET Preparation Guide</p>
+            <p>Master Thermal Physics - Study of heat, temperature, and their relation to energy and work</p>
+            
+            <!-- Thermal Animation -->
+            <div class="heat-transfer-animation">
+                <div class="heat-source pulse-heat"></div>
+                <div class="heat-wave" style="left: 40px; top: 40px; animation-delay: 0s;"></div>
+                <div class="heat-wave" style="left: 40px; top: 40px; animation-delay: 1s;"></div>
+                <div class="heat-wave" style="left: 40px; top: 40px; animation-delay: 2s;"></div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="info-panel" id="introduction" data-aos="fade-up">
+            <h2>Introduction to Thermal Physics</h2>
+            <p>Thermal physics is the study of heat, temperature, and their relation to energy and work. It encompasses thermodynamics, kinetic theory, and statistical mechanics.</p>
+
+            <div class="definition">
+                <p><strong>Temperature:</strong> Measure of average kinetic energy of molecules in a substance. Determines direction of heat flow (hot → cold).</p>
+                <p><strong>Heat:</strong> Energy in transit due to temperature difference. Measured in joules (J).</p>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card heat-transfer" data-aos="flip-left">
+                    <div class="card-title heat-transfer"><i class="fas fa-fire"></i> Heat Transfer</div>
+                    <p>Conduction, convection, radiation - three modes of heat transfer with different mechanisms.</p>
+                    <div class="formula">Q = kAΔT/ℓ</div>
+                    <div class="formula">Q = σeAT⁴</div>
+                </div>
+
+                <div class="concept-card thermal-expansion" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-title thermal-expansion"><i class="fas fa-expand-alt"></i> Thermal Expansion</div>
+                    <p>Increase in dimensions with temperature. Different coefficients for solids, liquids, gases.</p>
+                    <div class="formula">ΔL = αLΔT</div>
+                    <div class="formula">ΔV = γVΔT</div>
+                </div>
+
+                <div class="concept-card calorimetry" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card-title calorimetry"><i class="fas fa-vial"></i> Calorimetry</div>
+                    <p>Measurement of heat transfer. Based on principle of conservation of energy.</p>
+                    <div class="formula">Q = mcΔT</div>
+                    <div class="formula">Q = mL</div>
+                </div>
+            </div>
+
+            <h3>Basic Thermal Quantities</h3>
+            <table>
+                <tr>
+                    <th>Quantity</th>
+                    <th>Definition</th>
+                    <th>Formula</th>
+                    <th>SI Unit</th>
+                </tr>
+                <tr>
+                    <td>Temperature (T)</td>
+                    <td>Measure of hotness/coldness</td>
+                    <td>-</td>
+                    <td>Kelvin (K)</td>
+                </tr>
+                <tr>
+                    <td>Heat (Q)</td>
+                    <td>Energy transfer due to ΔT</td>
+                    <td>Q = mcΔT</td>
+                    <td>Joule (J)</td>
+                </tr>
+                <tr>
+                    <td>Specific Heat (c)</td>
+                    <td>Heat per unit mass per °C</td>
+                    <td>c = Q/(mΔT)</td>
+                    <td>J/kg·K</td>
+                </tr>
+                <tr>
+                    <td>Latent Heat (L)</td>
+                    <td>Heat for phase change</td>
+                    <td>L = Q/m</td>
+                    <td>J/kg</td>
+                </tr>
+                <tr>
+                    <td>Thermal Conductivity (k)</td>
+                    <td>Heat conduction ability</td>
+                    <td>k = Qℓ/(AΔTt)</td>
+                    <td>W/m·K</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Temperature & Heat Section -->
+        <section class="info-panel" id="temperature" data-aos="fade-up">
+            <h2>Temperature & Heat</h2>
+            <p>Temperature and heat are fundamental but distinct concepts in thermal physics.</p>
+
+            <div class="definition">
+                <p><strong>Zeroth Law of Thermodynamics:</strong> If two systems are each in thermal equilibrium with a third system, they are in thermal equilibrium with each other. This establishes temperature as a fundamental property.</p>
+            </div>
+
+            <h3>Temperature Scales</h3>
+            <div class="thermal-container">
+                <div class="thermal-demo">
+                    <div class="temperature-bar temperature-rise"></div>
+                    <div class="temperature-marker" style="top: 20%;">
+                        <div class="temperature-label">0°C / 32°F / 273K</div>
+                    </div>
+                    <div class="temperature-marker" style="top: 50%;">
+                        <div class="temperature-label">25°C / 77°F / 298K</div>
+                    </div>
+                    <div class="temperature-marker" style="top: 80%;">
+                        <div class="temperature-label">100°C / 212°F / 373K</div>
+                    </div>
+                </div>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Scale</th>
+                    <th>Fixed Points</th>
+                    <th>Conversion Formulas</th>
+                    <th>Absolute Zero</th>
+                </tr>
+                <tr>
+                    <td>Celsius (°C)</td>
+                    <td>0°C (ice point), 100°C (steam point)</td>
+                    <td>°C = K - 273.15<br>°C = 5/9(°F - 32)</td>
+                    <td>-273.15°C</td>
+                </tr>
+                <tr>
+                    <td>Fahrenheit (°F)</td>
+                    <td>32°F (ice point), 212°F (steam point)</td>
+                    <td>°F = 9/5°C + 32<br>°F = 9/5(K - 273) + 32</td>
+                    <td>-459.67°F</td>
+                </tr>
+                <tr>
+                    <td>Kelvin (K)</td>
+                    <td>273.15K (ice point), 373.15K (steam point)</td>
+                    <td>K = °C + 273.15<br>K = 5/9(°F - 32) + 273</td>
+                    <td>0K</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Key Differences:</strong></p>
+                <ul>
+                    <li><strong>Temperature:</strong> Intensive property (independent of mass), measures molecular KE</li>
+                    <li><strong>Heat:</strong> Extensive property (depends on mass), energy in transit</li>
+                    <li><strong>Internal Energy:</strong> Total energy (KE + PE) of all molecules</li>
+                    <li><strong>Thermal Equilibrium:</strong> No net heat flow between objects at same temperature</li>
+                </ul>
+            </div>
+
+            <h3>Thermometers & Measurement</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Mercury Thermometer</div>
+                    <p>Based on thermal expansion of mercury</p>
+                    <p>Range: -39°C to 357°C</p>
+                    <p>Advantages: Linear expansion, visible</p>
+                    <p>Disadvantages: Toxic, breakable</p>
+                    <p>Formula: ΔL = αLΔT</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Resistance Thermometer</div>
+                    <p>Based on temperature dependence of resistance</p>
+                    <p>Rt = R₀[1 + α(T - T₀)]</p>
+                    <p>Platinum commonly used</p>
+                    <p>High accuracy, wide range</p>
+                    <p>Used in laboratories</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Thermocouple</div>
+                    <p>Based on Seebeck effect</p>
+                    <p>Two dissimilar metals produce voltage with ΔT</p>
+                    <p>E = α(T₁ - T₂)</p>
+                    <p>Wide range: -200°C to 2000°C</p>
+                    <p>Fast response, rugged</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Ideal Gas Thermometer</h4>
+                <p>Based on ideal gas equation: PV = nRT</p>
+                <p>Constant volume gas thermometer:</p>
+                <div class="formula">T = (273.16K) × (P/Pₜᵣ)</div>
+                <p>Where Pₜᵣ is pressure at triple point of water</p>
+                <p>Most accurate temperature measurement</p>
+                <p>Independent of gas type at low pressure</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Temperature Conversion</div>
+                <p>Convert 37°C (human body temperature) to Fahrenheit and Kelvin.</p>
+                <p><strong>Solution:</strong></p>
+                <p>To Fahrenheit: °F = (9/5 × °C) + 32 = (9/5 × 37) + 32 = 66.6 + 32 = 98.6°F</p>
+                <p>To Kelvin: K = °C + 273.15 = 37 + 273.15 = 310.15K</p>
+                <p><em>Normal body temperature: 37°C = 98.6°F = 310.15K</em></p>
+            </div>
+        </section>
+
+        <!-- Thermal Expansion Section -->
+        <section class="info-panel" id="expansion" data-aos="fade-up">
+            <h2>Thermal Expansion</h2>
+            <p>Most materials expand when heated and contract when cooled, due to increased molecular vibrations.</p>
+
+            <div class="definition">
+                <p><strong>Coefficient of Linear Expansion (α):</strong> Fractional change in length per degree temperature change.</p>
+                <div class="formula">α = ΔL/(LΔT)</div>
+                <p>Where ΔL = change in length, L = original length, ΔT = temperature change</p>
+            </div>
+
+            <h3>Types of Thermal Expansion</h3>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Formula</th>
+                    <th>Coefficient</th>
+                    <th>Applications</th>
+                </tr>
+                <tr>
+                    <td>Linear</td>
+                    <td>ΔL = αLΔT<br>L' = L(1 + αΔT)</td>
+                    <td>α (per °C or K)</td>
+                    <td>Railway tracks, bridges</td>
+                </tr>
+                <tr>
+                    <td>Areal/Superficial</td>
+                    <td>ΔA = βAΔT<br>β = 2α</td>
+                    <td>β = 2α</td>
+                    <td>Metal plates, bimetallic strips</td>
+                </tr>
+                <tr>
+                    <td>Volume (Solids/Liquids)</td>
+                    <td>ΔV = γVΔT<br>γ = 3α</td>
+                    <td>γ = 3α</td>
+                    <td>Thermometers, expansion joints</td>
+                </tr>
+                <tr>
+                    <td>Volume (Gases)</td>
+                    <td>V/T = constant (Charles' Law)</td>
+                    <td>1/273 per °C</td>
+                    <td>Hot air balloons, gas laws</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Anomalous Expansion of Water:</strong></p>
+                <ul>
+                    <li>Water contracts from 0°C to 4°C (density increases)</li>
+                    <li>Water expands from 4°C to 100°C (normal behavior)</li>
+                    <li>Maximum density at 4°C: 1000 kg/m³</li>
+                    <li>Ice less dense than water (floats)</li>
+                    <li>Important for aquatic life in winter</li>
+                </ul>
+            </div>
+
+            <h3>Practical Applications</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Bimetallic Strip</div>
+                    <p>Two metals with different α bonded together</p>
+                    <p>Heating causes bending</p>
+                    <p>Radius of curvature: R = t/[3(α₂ - α₁)ΔT]</p>
+                    <p>Applications: Thermostats, thermometers, circuit breakers</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Expansion Gaps</div>
+                    <p>Gaps left in railway tracks, bridges</p>
+                    <p>Allow for expansion in summer</p>
+                    <p>Gap calculation: ΔL = αLΔT</p>
+                    <p>Example: Steel rail, L = 12m, ΔT = 40°C, α = 1.2×10⁻⁵/°C</p>
+                    <p>ΔL = 1.2×10⁻⁵ × 12 × 40 = 0.00576m ≈ 5.8mm</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Riveting & Shrinking</div>
+                    <p>Hot rivets inserted, contract on cooling</p>
+                    <p>Tight joint created</p>
+                    <p>Metal rims on wooden wheels: Heat rim, place on wheel, cool</p>
+                    <p>Rim contracts for tight fit</p>
+                    <p>Industrial joining technique</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">NEET IMPORTANT</div>
+                <h4>Time Period of Pendulum</h4>
+                <p>For a simple pendulum: T = 2π√(L/g)</p>
+                <p>With temperature change: L' = L(1 + αΔT)</p>
+                <p>New time period: T' = T√(1 + αΔT) ≈ T(1 + αΔT/2)</p>
+                <p>Fractional change: ΔT/T = (1/2)αΔT</p>
+                <p>Clock loses time in summer, gains in winter</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Linear Expansion</div>
+                <p>A steel rod is 2m long at 20°C. Find its length at 120°C. α = 1.2×10⁻⁵/°C.</p>
+                <p><strong>Solution:</strong></p>
+                <p>ΔT = 120 - 20 = 100°C</p>
+                <p>ΔL = αLΔT = 1.2×10⁻⁵ × 2 × 100 = 0.0024m = 2.4mm</p>
+                <p>New length L' = L + ΔL = 2 + 0.0024 = 2.0024m</p>
+                <p>Alternatively: L' = L(1 + αΔT) = 2(1 + 1.2×10⁻⁵×100) = 2(1.0012) = 2.0024m</p>
+            </div>
+        </section>
+
+        <!-- Calorimetry Section -->
+        <section class="info-panel" id="calorimetry" data-aos="fade-up">
+            <h2>Calorimetry & Specific Heat</h2>
+            <p>Calorimetry is the science of measuring heat changes in physical and chemical processes.</p>
+
+            <div class="definition">
+                <p><strong>Principle of Calorimetry:</strong> Heat lost by hot body = Heat gained by cold body (assuming no heat loss to surroundings).</p>
+                <div class="formula">m₁c₁(T₁ - T_f) = m₂c₂(T_f - T₂) + ...</div>
+                <p>Where T_f = final equilibrium temperature</p>
+            </div>
+
+            <h3>Heat Capacity & Specific Heat</h3>
+            <table>
+                <tr>
+                    <th>Quantity</th>
+                    <th>Definition</th>
+                    <th>Formula</th>
+                    <th>Units</th>
+                    <th>Significance</th>
+                </tr>
+                <tr>
+                    <td>Heat Capacity (C)</td>
+                    <td>Heat required to raise temperature by 1°C</td>
+                    <td>C = Q/ΔT</td>
+                    <td>J/°C</td>
+                    <td>Extensive property</td>
+                </tr>
+                <tr>
+                    <td>Specific Heat (c)</td>
+                    <td>Heat per unit mass per °C</td>
+                    <td>c = Q/(mΔT)</td>
+                    <td>J/kg·K</td>
+                    <td>Intensive property</td>
+                </tr>
+                <tr>
+                    <td>Molar Specific Heat</td>
+                    <td>Heat per mole per °C</td>
+                    <td>C_m = Q/(nΔT)</td>
+                    <td>J/mol·K</td>
+                    <td>For gases: C_v, C_p</td>
+                </tr>
+                <tr>
+                    <td>Water Equivalent</td>
+                    <td>Mass of water with same heat capacity</td>
+                    <td>W = mc</td>
+                    <td>kg</td>
+                    <td>Simplifies calculations</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Specific Heat Values (Approximate):</strong></p>
+                <ul>
+                    <li><strong>Water:</strong> 4186 J/kg·K (highest common substance)</li>
+                    <li><strong>Ice:</strong> 2100 J/kg·K</li>
+                    <li><strong>Aluminum:</strong> 900 J/kg·K</li>
+                    <li><strong>Iron:</strong> 450 J/kg·K</li>
+                    <li><strong>Copper:</strong> 385 J/kg·K</li>
+                    <li><strong>Mercury:</strong> 140 J/kg·K</li>
+                    <li><strong>Lead:</strong> 130 J/kg·K (lowest common solid)</li>
+                </ul>
+                <p>Water's high specific heat makes it excellent for cooling systems and climate regulation.</p>
+            </div>
+
+            <h3>Latent Heat & Phase Changes</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Latent Heat of Fusion</div>
+                    <p>Heat for solid ↔ liquid phase change</p>
+                    <div class="formula">Q = mL_f</div>
+                    <p>For water: L_f = 3.34×10⁵ J/kg</p>
+                    <p>Temperature constant during phase change</p>
+                    <p>Melting ice at 0°C requires heat</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Latent Heat of Vaporization</div>
+                    <p>Heat for liquid ↔ vapor phase change</p>
+                    <div class="formula">Q = mL_v</div>
+                    <p>For water: L_v = 22.6×10⁵ J/kg</p>
+                    <p>Much larger than L_f (≈ 7 times)</p>
+                    <p>Boiling water at 100°C requires heat</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Sublimation</div>
+                    <p>Direct solid ↔ vapor phase change</p>
+                    <p>Examples: Dry ice (CO₂), naphthalene</p>
+                    <p>Latent heat of sublimation: L_s = L_f + L_v</p>
+                    <p>Cooling effect used in refrigeration</p>
+                    <p>Freeze drying of food</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Dulong-Petit Law</h4>
+                <p>For solid elements at room temperature:</p>
+                <div class="formula">Molar heat capacity ≈ 3R ≈ 25 J/mol·K</div>
+                <p>Where R = 8.314 J/mol·K (gas constant)</p>
+                <p>Based on classical theory: Each atom has 6 degrees of freedom (3 KE + 3 PE)</p>
+                <p>Energy per mole = 3RT, C_v = dU/dT = 3R</p>
+                <p>Valid at high temperatures, fails at low temperatures</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Calorimetry Problem</div>
+                <p>50g ice at 0°C mixed with 100g water at 40°C. Find final temperature. (L_f = 80 cal/g, c_water = 1 cal/g°C)</p>
+                <p><strong>Solution:</strong></p>
+                <p>Heat required to melt ice: Q₁ = mL_f = 50×80 = 4000 cal</p>
+                <p>Heat available from water cooling to 0°C: Q₂ = mcΔT = 100×1×40 = 4000 cal</p>
+                <p>Since Q₁ = Q₂, all ice melts, final temperature = 0°C</p>
+                <p>Mixture has 150g water at 0°C</p>
+                <p><em>Exactly enough heat to melt ice, none left to raise temperature.</em></p>
+            </div>
+        </section>
+
+        <!-- Heat Transfer Section -->
+        <section class="info-panel" id="transfer" data-aos="fade-up">
+            <h2>Heat Transfer Mechanisms</h2>
+            <p>Heat transfer occurs through three mechanisms: conduction, convection, and radiation.</p>
+
+            <div class="definition">
+                <p><strong>Fourier's Law of Heat Conduction:</strong> Rate of heat flow through a material is proportional to the temperature gradient and cross-sectional area.</p>
+                <div class="formula">dQ/dt = -kA(dT/dx)</div>
+                <p>Where k = thermal conductivity, A = area, dT/dx = temperature gradient</p>
+            </div>
+
+            <h3>Modes of Heat Transfer</h3>
+            <table>
+                <tr>
+                    <th>Mode</th>
+                    <th>Mechanism</th>
+                    <th>Formula</th>
+                    <th>Examples</th>
+                </tr>
+                <tr>
+                    <td>Conduction</td>
+                    <td>Molecular collisions (solids) or electron movement (metals)</td>
+                    <td>Q/t = kAΔT/ℓ</td>
+                    <td>Metal spoon in hot soup, building insulation</td>
+                </tr>
+                <tr>
+                    <td>Convection</td>
+                    <td>Bulk movement of fluid (liquid/gas)</td>
+                    <td>Q/t = hAΔT</td>
+                    <td>Sea breeze, room heaters, boiling water</td>
+                </tr>
+                <tr>
+                    <td>Radiation</td>
+                    <td>Electromagnetic waves, no medium required</td>
+                    <td>Q/t = σeAT⁴</td>
+                    <td>Sunlight, infrared heaters, thermal imaging</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Thermal Conductivity Values (W/m·K):</strong></p>
+                <ul>
+                    <li><strong>Silver:</strong> 429 (best conductor)</li>
+                    <li><strong>Copper:</strong> 401</li>
+                    <li><strong>Aluminum:</strong> 237</li>
+                    <li><strong>Iron:</strong> 80</li>
+                    <li><strong>Glass:</strong> 0.8</li>
+                    <li><strong>Water:</strong> 0.6</li>
+                    <li><strong>Wood:</strong> 0.1</li>
+                    <li><strong>Air:</strong> 0.026 (good insulator)</li>
+                    <li><strong>Styrofoam:</strong> 0.033 (excellent insulator)</li>
+                </ul>
+            </div>
+
+            <h3>Conduction Through Composite Slabs</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Series Combination</div>
+                    <p>Slabs in series (different materials end-to-end)</p>
+                    <div class="formula">Total thermal resistance: R = R₁ + R₂ + ...</div>
+                    <div class="formula">R = ℓ/(kA) for each slab</div>
+                    <p>Heat current same through all slabs</p>
+                    <p>Temperature drops across each slab</p>
+                    <div class="formula">ΔT_total = (Q/t)(R₁ + R₂ + ...)</div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Parallel Combination</div>
+                    <p>Slabs in parallel (side-by-side)</p>
+                    <div class="formula">Total thermal resistance: 1/R = 1/R₁ + 1/R₂ + ...</div>
+                    <p>Temperature difference same across all slabs</p>
+                    <p>Heat currents add: Q/t = (Q/t)₁ + (Q/t)₂ + ...</p>
+                    <p>Equivalent conductivity: k_eq = (k₁A₁ + k₂A₂ + ...)/(A₁ + A₂ + ...)</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Radial Conduction</div>
+                    <p>Through cylindrical or spherical shells</p>
+                    <p>Cylinder: Q/t = 2πkℓ(T₁ - T₂)/ln(r₂/r₁)</p>
+                    <p>Sphere: Q/t = 4πkr₁r₂(T₁ - T₂)/(r₂ - r₁)</p>
+                    <p>Applications: insulated pipes, spherical containers</p>
+                    <p>Critical thickness of insulation for cylinders</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">NEET IMPORTANT</div>
+                <h4>Newton's Law of Cooling</h4>
+                <p>Rate of cooling ∝ temperature difference with surroundings:</p>
+                <div class="formula">dT/dt = -k(T - T_s)</div>
+                <p>Where T = object temperature, T_s = surroundings temperature</p>
+                <p>Integrated form: (T - T_s) = (T₀ - T_s)e^(-kt)</p>
+                <p>Applications: Determining time of death, cooling of hot objects</p>
+                <p>Valid for moderate temperature differences (≈ 30°C)</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Conduction Through Wall</div>
+                <p>A brick wall (k = 0.8 W/m·K) is 20cm thick with area 10m². Inside temperature 25°C, outside 5°C. Find heat loss per hour.</p>
+                <p><strong>Solution:</strong></p>
+                <p>ΔT = 25 - 5 = 20°C, ℓ = 0.2m, A = 10m²</p>
+                <p>Q/t = kAΔT/ℓ = 0.8×10×20/0.2 = 800 W</p>
+                <p>Heat loss in 1 hour = 800 × 3600 = 2.88×10⁶ J</p>
+                <p>In kilowatt-hours: 800 W × 1 h = 0.8 kWh</p>
+                <p><em>Significant heat loss through walls highlights need for insulation.</em></p>
+            </div>
+        </section>
+
+        <!-- Kinetic Theory Section -->
+        <section class="info-panel" id="kinetic" data-aos="fade-up">
+            <h2>Kinetic Theory of Gases</h2>
+            <p>The kinetic theory explains macroscopic properties of gases (pressure, temperature) in terms of microscopic molecular motion.</p>
+
+            <div class="definition">
+                <p><strong>Basic Postulates:</strong></p>
+                <ul>
+                    <li>Gas consists of large number of molecules in random motion</li>
+                    <li>Molecules are point masses with negligible volume</li>
+                    <li>No intermolecular forces except during collisions</li>
+                    <li>Collisions are elastic and instantaneous</li>
+                    <li>Newton's laws apply to molecular motion</li>
+                </ul>
+            </div>
+
+            <h3>Kinetic Theory Formulas</h3>
+            <table>
+                <tr>
+                    <th>Relation</th>
+                    <th>Formula</th>
+                    <th>Explanation</th>
+                </tr>
+                <tr>
+                    <td>Pressure</td>
+                    <td>P = (1/3)ρv² = (1/3)(Nm/V)v²</td>
+                    <td>Pressure due to molecular collisions</td>
+                </tr>
+                <tr>
+                    <td>RMS Speed</td>
+                    <td>v_rms = √(3kT/m) = √(3RT/M)</td>
+                    <td>Root mean square speed of molecules</td>
+                </tr>
+                <tr>
+                    <td>Average KE</td>
+                    <td>(1/2)mv²_avg = (3/2)kT</td>
+                    <td>Average kinetic energy per molecule</td>
+                </tr>
+                <tr>
+                    <td>Internal Energy (monatomic)</td>
+                    <td>U = (3/2)nRT = (3/2)NkT</td>
+                    <td>Total kinetic energy of all molecules</td>
+                </tr>
+                <tr>
+                    <td>Mean Free Path</td>
+                    <td>λ = 1/(√2πd²n)</td>
+                    <td>Average distance between collisions</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Gas Laws from Kinetic Theory:</strong></p>
+                <ul>
+                    <li><strong>Boyle's Law:</strong> P ∝ 1/V (at constant T) - From P = (1/3)ρv², with v constant</li>
+                    <li><strong>Charles' Law:</strong> V ∝ T (at constant P) - From v² ∝ T, so V ∝ T to keep P constant</li>
+                    <li><strong>Gay-Lussac's Law:</strong> P ∝ T (at constant V) - Direct from P = (1/3)ρv² with v² ∝ T</li>
+                    <li><strong>Avogadro's Law:</strong> Equal volumes at same T,P contain equal molecules</li>
+                    <li><strong>Dalton's Law:</strong> Total pressure = sum of partial pressures</li>
+                </ul>
+            </div>
+
+            <h3>Molecular Speed Distributions</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Maxwell-Boltzmann Distribution</div>
+                    <p>Distribution of molecular speeds at given T</p>
+                    <p>Most probable speed: v_p = √(2kT/m)</p>
+                    <p>Average speed: v_avg = √(8kT/πm)</p>
+                    <p>RMS speed: v_rms = √(3kT/m)</p>
+                    <p>Relation: v_p : v_avg : v_rms = 1 : 1.128 : 1.225</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Degrees of Freedom</div>
+                    <p>Number of independent ways energy can be stored</p>
+                    <p>Monatomic gas: f = 3 (translation only)</p>
+                    <p>Diatomic gas: f = 5 (3 translation + 2 rotation)</p>
+                    <p>Polyatomic gas: f = 6 (3 translation + 3 rotation)</p>
+                    <p>Law of equipartition: Energy = (1/2)kT per degree</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Specific Heats of Gases</div>
+                    <p>Molar specific heat at constant volume: C_v = (f/2)R</p>
+                    <p>Molar specific heat at constant pressure: C_p = C_v + R</p>
+                    <p>Ratio γ = C_p/C_v = 1 + 2/f</p>
+                    <p>Monatomic: γ = 5/3 ≈ 1.67</p>
+                    <p>Diatomic: γ = 7/5 = 1.4</p>
+                    <p>Polyatomic: γ = 4/3 ≈ 1.33</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Mean Free Path & Collision Frequency</h4>
+                <p><strong>Mean free path:</strong> λ = kT/(√2πd²P)</p>
+                <p>Where d = molecular diameter, P = pressure</p>
+                <p>At STP: λ ≈ 6×10⁻⁸ m for air molecules</p>
+                <p><strong>Collision frequency:</strong> Z = v_avg/λ</p>
+                <p>At STP: Z ≈ 10⁹ collisions per second</p>
+                <p><strong>Collision cross-section:</strong> σ = πd²</p>
+                <p>Important for reaction rates, diffusion</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: RMS Speed Calculation</div>
+                <p>Calculate RMS speed of oxygen molecules at 27°C. (M = 32g/mol = 0.032kg/mol, R = 8.314 J/mol·K)</p>
+                <p><strong>Solution:</strong></p>
+                <p>T = 27 + 273 = 300K</p>
+                <p>v_rms = √(3RT/M) = √(3×8.314×300/0.032)</p>
+                <p>= √(7482.6/0.032) = √(233831.25) = 483.6 m/s</p>
+                <p><em>Oxygen molecules move at about 1700 km/h at room temperature!</em></p>
+            </div>
+        </section>
+
+        <!-- Problem Solving Section -->
+        <section class="info-panel" id="problems" data-aos="fade-up">
+            <h2>Problem Solving Strategies</h2>
+            <p>Systematic approach to solve thermal physics problems in JEE and NEET.</p>
+
+            <div class="problem-solving">
+                <div class="problem-box">
+                    <div class="problem-title">Type 1: Calorimetry Problems</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify all substances and their masses</li>
+                        <li>Determine initial temperatures and phases</li>
+                        <li>Apply: Heat lost = Heat gained</li>
+                        <li>Include phase changes if applicable</li>
+                        <li>Solve for unknown temperature/mass</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Check if final temperature causes phase changes</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 2: Thermal Expansion</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify type of expansion (linear, area, volume)</li>
+                        <li>Choose correct formula and coefficient</li>
+                        <li>Apply: ΔL = αLΔT, ΔA = βAΔT, ΔV = γVΔT</li>
+                        <li>Consider composite systems (bimetallic strips)</li>
+                        <li>Check units (temperature in Kelvin or Celsius)</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> For area: β = 2α, for volume: γ = 3α</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 3: Heat Transfer</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify mode (conduction, convection, radiation)</li>
+                        <li>Use appropriate formula</li>
+                        <li>For conduction: Q/t = kAΔT/ℓ</li>
+                        <li>For composite walls: use thermal resistances</li>
+                        <li>For radiation: Stefan-Boltzmann law</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Series: R_total = R₁+R₂, Parallel: 1/R_total = 1/R₁+1/R₂</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE/NEET TIP</div>
+                <h4>Common Problem Patterns</h4>
+                <p><strong>1. Mixing problems:</strong> Heat lost by hot = Heat gained by cold</p>
+                <p><strong>2. Phase change problems:</strong> Include latent heat Q = mL</p>
+                <p><strong>3. Linear expansion:</strong> ΔL = αLΔT, pendulum clocks</p>
+                <p><strong>4. Composite conductors:</strong> Series/parallel thermal resistances</p>
+                <p><strong>5. Gas laws:</strong> PV = nRT, combined gas law</p>
+                <p><strong>6. Kinetic theory:</strong> v_rms = √(3RT/M), KE = (3/2)kT</p>
+            </div>
+
+            <h3>Quick Formula Reference</h3>
+            <div class="equation-cards">
+                <div class="equation-card">
+                    <div class="formula">Q = mcΔT</div>
+                    <div class="formula">Q = mL</div>
+                    <div class="formula">ΔL = αLΔT</div>
+                </div>
+                <div class="equation-card">
+                    <div class="formula">Q/t = kAΔT/ℓ</div>
+                    <div class="formula">Q/t = σeAT⁴</div>
+                    <div class="formula">PV = nRT</div>
+                </div>
+                <div class="equation-card">
+                    <div class="formula">v_rms = √(3RT/M)</div>
+                    <div class="formula">U = (f/2)nRT</div>
+                    <div class="formula">C_v = (f/2)R</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Facts Carousel -->
+        <div class="swiper-container" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">HEAT CAPACITY</div>
+                        <div class="swiper-text">Q = mcΔT. Water has highest specific heat (4186 J/kg·K) among common substances.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">LATENT HEAT</div>
+                        <div class="swiper-text">Q = mL. Water: L_f = 3.34×10⁵ J/kg, L_v = 22.6×10⁵ J/kg. Temperature constant during phase change.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">THERMAL EXPANSION</div>
+                        <div class="swiper-text">ΔL = αLΔT, β = 2α, γ = 3α. Water anomalous: contracts 0-4°C, max density at 4°C.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">HEAT CONDUCTION</div>
+                        <div class="swiper-text">Q/t = kAΔT/ℓ. Silver best conductor (429 W/m·K), air good insulator (0.026 W/m·K).</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">RADIATION</div>
+                        <div class="swiper-text">Q/t = σeAT⁴. Stefan's constant σ = 5.67×10⁻⁸ W/m²K⁴. All bodies above 0K emit radiation.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">KINETIC THEORY</div>
+                        <div class="swiper-text">v_rms = √(3RT/M). Average KE = (3/2)kT. Pressure P = (1/3)ρv².</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">GAS LAWS</div>
+                        <div class="swiper-text">PV = nRT. Monatomic: C_v = (3/2)R, γ = 5/3. Diatomic: C_v = (5/2)R, γ = 7/5.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">NEWTON'S COOLING</div>
+                        <div class="swiper-text">dT/dt = -k(T - T_s). Rate of cooling ∝ temperature difference with surroundings.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- Summary Section -->
+        <section class="info-panel" data-aos="fade-up">
+            <h2>Chapter Summary & Key Points</h2>
+            
+            <h3>Essential Formulas</h3>
+            <div class="concept-cards">
+                <div class="concept-card heat-transfer">
+                    <div class="card-title heat-transfer">Heat & Calorimetry</div>
+                    <div class="formula">Q = mcΔT</div>
+                    <div class="formula">Q = mL</div>
+                    <div class="formula">Heat lost = Heat gained</div>
+                </div>
+
+                <div class="concept-card thermal-expansion">
+                    <div class="card-title thermal-expansion">Thermal Expansion</div>
+                    <div class="formula">ΔL = αLΔT</div>
+                    <div class="formula">ΔA = 2αAΔT</div>
+                    <div class="formula">ΔV = 3αVΔT</div>
+                </div>
+
+                <div class="concept-card kinetic-theory">
+                    <div class="card-title kinetic-theory">Kinetic Theory</div>
+                    <div class="formula">PV = nRT</div>
+                    <div class="formula">v_rms = √(3RT/M)</div>
+                    <div class="formula">U = (f/2)nRT</div>
+                </div>
+            </div>
+
+            <h3>Important Points for JEE/NEET</h3>
+            <ul>
+                <li>Heat is energy in transit, temperature measures average molecular KE</li>
+                <li>Specific heat of water is highest (4186 J/kg·K) - regulates climate</li>
+                <li>Water has anomalous expansion: maximum density at 4°C, ice less dense than water</li>
+                <li>During phase change, temperature remains constant despite heat input</li>
+                <li>Heat transfer: conduction (solids), convection (fluids), radiation (EM waves)</li>
+                <li>Thermal conductivity: metals good conductors, gases good insulators</li>
+                <li>Kinetic theory: v_rms ∝ √T, pressure due to molecular collisions</li>
+                <li>Gas laws: PV = nRT, with R = 8.314 J/mol·K</li>
+            </ul>
+
+            <div class="important">
+                <p><strong>Common Mistakes to Avoid:</strong></p>
+                <ul>
+                    <li>Confusing heat (energy) with temperature (intensity)</li>
+                    <li>Forgetting latent heat in calorimetry problems with phase changes</li>
+                    <li>Using wrong expansion coefficient (α, β, γ for linear, area, volume)</li>
+                    <li>Not converting temperature to Kelvin in gas law calculations</li>
+                    <li>Applying ideal gas equation to real gases without correction</li>
+                    <li>Confusing conduction, convection, and radiation mechanisms</li>
+                    <li>Forgetting that radiation doesn't require a medium</li>
+                    <li>Mixing up specific heat values for different materials</li>
+                </ul>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">LAST MINUTE REVISION</div>
+                <h4>Must Remember Values</h4>
+                <p><strong>Specific heat:</strong> Water = 4186 J/kg·K, Ice = 2100, Al = 900, Cu = 385 J/kg·K</p>
+                <p><strong>Latent heat:</strong> Water L_f = 3.34×10⁵ J/kg, L_v = 22.6×10⁵ J/kg</p>
+                <p><strong>Thermal conductivity:</strong> Ag = 429, Cu = 401, Air = 0.026 W/m·K</p>
+                <p><strong>Gas constant:</strong> R = 8.314 J/mol·K = 0.0821 L·atm/mol·K = 2 cal/mol·K</p>
+                <p><strong>Stefan's constant:</strong> σ = 5.67×10⁻⁸ W/m²K⁴</p>
+                <p><strong>Boltzmann constant:</strong> k = 1.38×10⁻²³ J/K</p>
+                <p><strong>Absolute zero:</strong> 0K = -273.15°C = -459.67°F</p>
+                <p><strong>Room temperature:</strong> 25°C = 298K ≈ 300K, 27°C = 300K</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Nerds Assemble</h3>
+                <p>Master Thermal Properties of Matter for JEE & NEET. Comprehensive physics resource with detailed explanations and problem-solving strategies.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#temperature">Temperature & Heat</a></li>
+                    <li><a href="#expansion">Thermal Expansion</a></li>
+                    <li><a href="#calorimetry">Calorimetry</a></li>
+                    <li><a href="#transfer">Heat Transfer</a></li>
+                    <li><a href="#kinetic">Kinetic Theory</a></li>
+                    <li><a href="#problems">Problem Solving</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact & Resources</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> 44mr.invisible@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Nerds Assemble. All rights reserved. | Designed for JEE & NEET Aspirants | Thermal Properties of Matter </p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Thermal Properties of Matter - JavaScript
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ?
+                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+            }
+
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+
+            function handleScroll() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('active');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                }
+            }
+
+            // Debounced scroll event
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(handleScroll, 50);
+            }, { passive: true });
+
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: window.innerWidth < 768 ? 100 : 120,
+                    easing: 'ease-out-quad'
+                });
+            }
+
+            // Initialize Swiper
+            if (typeof Swiper !== 'undefined') {
+                const swiper = new Swiper('.swiper-container', {
+                    loop: true,
+                    autoplay: {
+                        delay: 3500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 25
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        }
+                    }
+                });
+            }
+
+            // Smooth Scroll for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        if (mainNav && mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                });
+            });
+
+            // Back to Top Button Click
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Create Thermal Visualization
+            createThermalVisualization();
+            
+            // Create Molecules
+            createMolecules();
+            
+            // Create Particles
+            createParticles();
+        });
+
+        // Create Thermal Visualization
+        function createThermalVisualization() {
+            const thermalDemo = document.querySelector('.thermal-demo');
+            if (!thermalDemo) return;
+
+            // Add temperature gradient background
+            thermalDemo.style.background = 'linear-gradient(to top, #2196F3, #FF9800, #FF5722)';
+            
+            // Add molecular motion dots
+            for (let i = 0; i < 30; i++) {
+                const molecule = document.createElement('div');
+                molecule.className = 'molecule';
+                molecule.style.width = '4px';
+                molecule.style.height = '4px';
+                molecule.style.background = 'var(--thermal-highlight)';
+                molecule.style.borderRadius = '50%';
+                molecule.style.position = 'absolute';
+                molecule.style.left = `${Math.random() * 100}%`;
+                molecule.style.top = `${Math.random() * 100}%`;
+                molecule.style.animation = 'molecule-vibrate 1s infinite';
+                molecule.style.animationDelay = `${Math.random() * 2}s`;
+                thermalDemo.appendChild(molecule);
+            }
+        }
+
+        // Create Molecules Function
+        function createMolecules() {
+            const moleculesContainer = document.getElementById('molecules');
+            if (!moleculesContainer) return;
+
+            const moleculeCount = window.innerWidth < 768 ? 20 : 40;
+            
+            for (let i = 0; i < moleculeCount; i++) {
+                const molecule = document.createElement('div');
+                molecule.classList.add('molecule');
+
+                const size = Math.random() * 6 + 2;
+                const posX = Math.random() * window.innerWidth;
+                const posY = Math.random() * window.innerHeight;
+                const duration = Math.random() * 3 + 1;
+                const delay = Math.random() * 2;
+                const opacity = Math.random() * 0.4 + 0.1;
+                const color = Math.random() > 0.5 ? 'rgba(255, 87, 34, 0.6)' : 'rgba(33, 150, 243, 0.6)';
+
+                molecule.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}px;
+                    top: ${posY}px;
+                    opacity: ${opacity};
+                    animation: molecule-vibrate ${duration}s ease-in-out ${delay}s infinite;
+                    background: radial-gradient(circle at 30% 30%, ${color}, transparent);
+                    box-shadow: 0 0 10px ${color};
+                `;
+
+                moleculesContainer.appendChild(molecule);
+            }
+        }
+
+        // Create Particles Function
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
+
+            const particleCount = window.innerWidth < 768 ? 20 : 30;
+            particlesContainer.innerHTML = '';
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                const size = Math.random() * 3 + 1;
+                const posX = Math.random() * window.innerWidth;
+                const posY = Math.random() * window.innerHeight;
+                const duration = Math.random() * 15 + 10;
+                const delay = Math.random() * 5;
+                const color = Math.random() > 0.5 ? 'rgba(255, 87, 34, 0.3)' : 'rgba(255, 152, 0, 0.3)';
+
+                particle.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}px;
+                    top: ${posY}px;
+                    opacity: ${Math.random() * 0.3 + 0.1};
+                    animation: float ${duration}s ease-in-out ${delay}s infinite;
+                    background: ${color};
+                `;
+
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                createParticles();
+                createMolecules();
+            }, 250);
+        });
+
+        // Interactive heat source
+        const heatSource = document.querySelector('.heat-source');
+        if (heatSource) {
+            heatSource.addEventListener('click', function() {
+                this.classList.toggle('pulse-heat');
+                if (this.classList.contains('pulse-heat')) {
+                    this.style.boxShadow = '0 0 40px var(--thermal-primary)';
+                } else {
+                    this.style.boxShadow = '0 0 20px var(--thermal-primary)';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
