@@ -138,8 +138,25 @@
             <div class="container">
                 <h2 id="topics-title">Physics Courses</h2>
                 <p class="section-subtitle">Explore fundamental and advanced physics concepts through our structured learning paths.</p>
+                
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <div class="search-bar">
+                        <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                        <input 
+                            type="text" 
+                            id="topicSearch" 
+                            class="search-input" 
+                            placeholder="Search courses by name..." 
+                            aria-label="Search physics courses"
+                        >
+                        <button id="clearSearch" class="clear-search" aria-label="Clear search" style="display: none;">
+                            <i class="fas fa-times" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
                
-                <div class="topics-grid">
+                <div class="topics-grid" id="topicsGrid">
                     <!-- Topic cards remain the same -->
                     
                     <div class="topic-card">
@@ -265,32 +282,11 @@
                             <a href="Class11/Waves.html" class="topic-link" aria-label="Explore Waves course">Explore Course <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
-                    <!-- <div class="topic-card">
-                        <div class="topic-image" style="background-image: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');" aria-label="Classical Mechanics illustration"></div>
-                        <div class="topic-content">
-                            <h3 class="topic-title">Classical Mechanics</h3>
-                            <p class="topic-description">Master Newton's laws, conservation principles, and the motion of particles and rigid bodies.</p>
-                            <a href="#" class="topic-link" aria-label="Explore Classical Mechanics course">Explore Course <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div> -->
-                    
-                    <!-- <div class="topic-card">
-                        <div class="topic-image" style="background-image: url();" aria-label="Quantum Mechanics illustration"></div>
-                        <div class="topic-content">
-                            <h3 class="topic-title">Quantum Mechanics</h3>
-                            <p class="topic-description">Dive into the world of particles and waves, uncertainty principle, and quantum states.</p>
-                            <a href="#" class="topic-link" aria-label="Explore Quantum Mechanics course">Explore Course <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div> -->
-                    
-                    <!-- <div class="topic-card">
-                        <div class="topic-image" style="background-image: url('');" aria-label="Optics & Waves illustration"></div>
-                        <div class="topic-content">
-                            <h3 class="topic-title">Optics & Waves</h3>
-                            <p class="topic-description">Study wave phenomena, interference, diffraction, and the behavior of light.</p>
-                            <a href="#" class="topic-link" aria-label="Explore Optics & Waves course">Explore Course <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div> -->
+                </div>
+                
+                <!-- No results message -->
+                <div id="noResultsMessage" class="no-results-message" style="display: none;">
+                    <p>No courses found matching "<span id="searchTerm"></span>". Try a different search term.</p>
                 </div>
             </div>
         </section>
@@ -306,13 +302,6 @@
                     <div class="animation-card">
                         <div class="animation-preview">
                             <i class="fas fa-bullseye" aria-hidden="true"></i>
-        <!-- Alternatively, consider: 
-             fa-meteor (for falling object)
-             fa-basketball-ball (for sports projectile)
-             fa-rocket (for launched object)
-             fa-arrow-up (for upward motion)
-             fa-chart-line (for trajectory)
-        -->
                         </div>
                         <div class="animation-content">
                             <h3 class="animation-title">Projectile Motion</h3>
@@ -320,24 +309,6 @@
                             <a href="animation/Projectile.html" class="topic-link" aria-label="Try Projectile Motion simulation">Try Simulation <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
-                    
-                    <!-- <div class="animation-card">
-                        <div class="animation-preview">
-                            <i class="fas fa-meteor" aria-hidden="true"></i> -->
-        <!-- Alternatively, consider: 
-             fa-meteor (for falling object)
-             fa-basketball-ball (for sports projectile)
-             fa-rocket (for launched object)
-             fa-arrow-up (for upward motion)
-             fa-chart-line (for trajectory)
-        -->
-                        <!-- </div>
-                        <div class="animation-content">
-                            <h3 class="animation-title">Motion Under Gravity</h3>
-                            <p class="animation-description">Visualize trajectory, and flight time with adjustable launch parameters.</p>
-                            <a href="animation/motion in 1d/one.html" class="topic-link" aria-label="Try Projectile Motion simulation">Try Simulation <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div> -->
                     
                     <div class="animation-card">
                         <div class="animation-preview">
@@ -501,5 +472,78 @@
     <!-- JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="assets/script.js"></script>
+    
+    <script>
+        // Search functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('topicSearch');
+            const clearButton = document.getElementById('clearSearch');
+            const topicCards = document.querySelectorAll('.topic-card');
+            const topicsGrid = document.getElementById('topicsGrid');
+            const noResultsMessage = document.getElementById('noResultsMessage');
+            const searchTermSpan = document.getElementById('searchTerm');
+            
+            // Add ID to the topics grid for easier selection
+            if (topicsGrid) {
+                topicsGrid.id = 'topicsGrid';
+            }
+            
+            // Search function
+            function searchTopics() {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                let hasVisibleCards = false;
+                
+                // Show/hide clear button based on search input
+                if (searchTerm.length > 0) {
+                    clearButton.style.display = 'flex';
+                } else {
+                    clearButton.style.display = 'none';
+                }
+                
+                // Filter cards
+                topicCards.forEach(card => {
+                    const title = card.querySelector('.topic-title').textContent.toLowerCase();
+                    const description = card.querySelector('.topic-description').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                        card.style.display = 'block';
+                        hasVisibleCards = true;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                // Show/hide no results message
+                if (searchTerm.length > 0 && !hasVisibleCards) {
+                    noResultsMessage.style.display = 'block';
+                    searchTermSpan.textContent = searchTerm;
+                } else {
+                    noResultsMessage.style.display = 'none';
+                }
+            }
+            
+            // Event listeners
+            searchInput.addEventListener('input', searchTopics);
+            searchInput.addEventListener('keyup', function(e) {
+                if (e.key === 'Escape') {
+                    searchInput.value = '';
+                    searchTopics();
+                }
+            });
+            
+            clearButton.addEventListener('click', function() {
+                searchInput.value = '';
+                searchTopics();
+                searchInput.focus();
+            });
+            
+            // Make search accessible
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchTopics();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
