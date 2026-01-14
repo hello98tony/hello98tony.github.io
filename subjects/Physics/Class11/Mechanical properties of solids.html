@@ -1,0 +1,1939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion in One Dimension | Class 11 Physics | JEE & NEET Preparation</title>
+    <meta name="description" content="Master Motion in One Dimension for Class 11 Physics. Complete guide for JEE & NEET aspirants with kinematics equations, graphs, projectile motion, and problem-solving strategies.">
+    <meta name="keywords" content="Motion in One Dimension, Physics Class 11, JEE preparation, NEET physics, Kinematics, Equations of Motion, Velocity, Acceleration, Graphs, Relative Motion, Projectile Motion">
+    <meta name="author" content="Nerds Assemble">
+    <meta name="robots" content="index, follow">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Motion in One Dimension | Class 11 Physics">
+    <meta property="og:description" content="Complete guide to Kinematics for JEE & NEET aspirants">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nerdsassemble.com/motion-one-dimension">
+    
+    <!-- Structured Data for Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Motion in One Dimension - Class 11 Physics",
+        "description": "Complete guide to Kinematics with equations, graphs, and problem-solving for JEE & NEET",
+        "educationalLevel": "High School",
+        "learningResourceType": "Educational Course",
+        "author": {
+            "@type": "Organization",
+            "name": "Nerds Assemble"
+        },
+        "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": "Student",
+            "audienceType": ["JEE Aspirants", "NEET Aspirants"]
+        }
+    }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Pacifico&family=Dancing+Script:wght@700&family=Abril+Fatface&family=Playfair+Display:wght@700&family=Raleway:wght@300;800&family=Quicksand:wght@500&family=Poiret+One&family=Amatic+SC:wght@700&family=Caveat:wght@700&family=Kaushan+Script&family=Libre+Baskerville&family=Merriweather&family=Nunito:wght@800&family=Oswald:wght@500&family=Roboto+Slab:wght@700&family=Sacramento&family=Tangerine:wght@700&family=Yeseva+One&family=Electrolize&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/motion.png">
+    
+    <style>
+        /* Motion in One Dimension - Nerds Assemble CSS */
+        :root {
+            --primary: #2196F3;
+            --secondary: #00BCD4;
+            --tertiary: #4CAF50;
+            --accent: #FF5722;
+            --bg: #0a0a20;
+            --text: #ffffff;
+            --highlight: #FFD700;
+            --nav-bg: rgba(10, 5, 30, 0.95);
+            --motion-gradient: linear-gradient(45deg, #2196F3, #00BCD4);
+            --graph-gradient: linear-gradient(45deg, #4CAF50, #8BC34A);
+            --equation-gradient: linear-gradient(45deg, #FF5722, #FF9800);
+        }
+
+        /* Base Styles & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overscroll-behavior-y: contain;
+            -webkit-overflow-scrolling: touch;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(33, 150, 243, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(76, 175, 80, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(255, 87, 34, 0.05) 0%, transparent 30%),
+                linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--tertiary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(33, 150, 243, 0.5);
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--highlight);
+            margin: 2rem 0 1.5rem;
+            font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-family: 'Roboto Slab', serif;
+            color: var(--secondary);
+            margin: 1.5rem 0 1rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+        }
+
+        p {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+        }
+
+        /* Layout Components */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            flex: 1;
+            padding: 0 1rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Raleway', sans-serif;
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            transform: translateZ(0);
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            color: var(--highlight);
+            font-size: 1.6rem;
+        }
+
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.4rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Electrolize', sans-serif;
+            font-size: 0.95rem;
+            transition: color 0.2s ease-out;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--highlight);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--highlight);
+            transition: width 0.2s ease-out;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* Content Panels */
+        .info-panel {
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
+            padding: 1.8rem;
+            margin: 1.8rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: translateZ(0);
+            will-change: transform, opacity;
+        }
+
+        /* Special Content Blocks */
+        .important {
+            background: rgba(33, 150, 243, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(33, 150, 243, 0.1);
+        }
+
+        .definition {
+            background: rgba(255, 215, 0, 0.1);
+            border-left: 4px solid var(--highlight);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.1);
+        }
+
+        .formula {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin: 1.2rem 0;
+            padding: 1.2rem;
+            background: rgba(33, 150, 243, 0.1);
+            border-radius: 8px;
+            border: 1px dashed var(--highlight);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.1rem;
+        }
+
+        .example {
+            background: rgba(76, 175, 80, 0.1);
+            border-left: 4px solid var(--tertiary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Lists & Tables */
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 1.8rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background-color: rgba(33, 150, 243, 0.2);
+            font-family: 'Electrolize', sans-serif;
+            color: var(--highlight);
+            font-size: 0.95rem;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+
+        tr:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* Concept Cards */
+        .concept-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .concept-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(33, 150, 243, 0.2);
+        }
+
+        .concept-card.kinematics {
+            border-top: 4px solid var(--primary);
+        }
+
+        .concept-card.graphs {
+            border-top: 4px solid var(--secondary);
+        }
+
+        .concept-card.equations {
+            border-top: 4px solid var(--tertiary);
+        }
+
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title.kinematics { color: var(--primary); }
+        .card-title.graphs { color: var(--secondary); }
+        .card-title.equations { color: var(--tertiary); }
+
+        /* Graph Visualization */
+        .graph-container {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .graph {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            margin: 1rem 0;
+        }
+
+        .graph-axis {
+            position: absolute;
+            background: rgba(255,255,255,0.3);
+        }
+
+        .graph-line {
+            position: absolute;
+            background: var(--primary);
+            transition: all 0.5s ease;
+        }
+
+        .graph-point {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: var(--highlight);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Motion Animation */
+        .motion-animation {
+            height: 100px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .moving-object {
+            width: 30px;
+            height: 30px;
+            background: var(--primary);
+            border-radius: 50%;
+            position: absolute;
+            top: 35px;
+            left: 20px;
+            box-shadow: 0 0 20px var(--primary);
+            transition: left 2s linear;
+        }
+
+        .velocity-vector {
+            position: absolute;
+            height: 2px;
+            background: var(--secondary);
+            top: 50px;
+            left: 50px;
+            width: 0;
+            transition: width 0.5s ease;
+        }
+
+        /* Equation Cards */
+        .equation-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .equation-card {
+            background: rgba(255,87,34,0.1);
+            border-radius: 10px;
+            padding: 1.2rem;
+            text-align: center;
+            border: 1px solid rgba(255,87,34,0.3);
+        }
+
+        .equation {
+            font-family: 'Audiowide', cursive;
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+
+        /* Problem Solving Section */
+        .problem-solving {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .problem-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary);
+        }
+
+        .problem-title {
+            color: var(--primary);
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            margin: 2rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .footer-column h3 {
+            color: var(--highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            transition: color 0.2s ease-out;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--highlight);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text);
+            font-size: 1.1rem;
+            transition: color 0.2s ease-out;
+        }
+
+        .social-links a:hover {
+            color: var(--highlight);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 1.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Quicksand', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease-out;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
+            transform: translateZ(0);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--highlight);
+            transform: translateY(-5px);
+        }
+
+        /* JEE/NEET Specific Styling */
+        .exam-highlight {
+            background: rgba(255, 235, 0, 0.1);
+            border: 2px solid var(--highlight);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .exam-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--highlight);
+            color: var(--bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes moveRight {
+            0% { left: 20px; }
+            100% { left: calc(100% - 50px); }
+        }
+
+        @keyframes accelerate {
+            0% { left: 20px; width: 30px; }
+            100% { left: calc(100% - 50px); width: 50px; }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        .move-right {
+            animation: moveRight 3s linear infinite;
+        }
+
+        .accelerate {
+            animation: accelerate 3s ease-in infinite;
+        }
+
+        .bounce {
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        /* Swiper Carousel */
+        .swiper-container {
+            width: 100%;
+            height: auto;
+            min-height: 180px;
+            margin: 2.5rem 0;
+            will-change: transform;
+        }
+
+        .swiper-slide {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+            font-family: 'Electrolize', sans-serif;
+            padding: 1.2rem;
+            box-sizing: border-box;
+            text-align: center;
+            min-height: 180px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .swiper-title {
+            font-family: 'Audiowide', cursive;
+            color: var(--highlight);
+            margin-bottom: 0.5rem;
+            font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+        }
+
+        .swiper-text {
+            font-family: 'Quicksand', sans-serif;
+            font-size: clamp(0.85rem, 1.1vw, 1rem);
+        }
+
+        /* Particles Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            will-change: transform;
+            opacity: 0.3;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                margin-top: 1rem;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.75rem 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .container {
+                width: 95%;
+                padding: 0;
+            }
+
+            .concept-cards, .problem-solving {
+                grid-template-columns: 1fr;
+            }
+
+            .equation-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-panel {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-running"></i></span>
+                <span class="logo-text">Nerds Assemble</span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#basics">Basic Concepts</a></li>
+                    <li><a href="#equations">Equations of Motion</a></li>
+                    <li><a href="#graphs">Motion Graphs</a></li>
+                    <li><a href="#relative">Relative Motion</a></li>
+                    <li><a href="#projectile">Projectile Motion</a></li>
+                    <li><a href="#problems">Problems</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="page-header" data-aos="fade-down">
+            <h1>Motion in One Dimension</h1>
+            <p class="subtitle">Class 11 Physics | JEE & NEET Preparation Guide</p>
+            <p>Master Kinematics - The study of motion without considering its causes</p>
+            
+            <!-- Motion Animation -->
+            <div class="motion-animation">
+                <div class="moving-object move-right" id="movingObject"></div>
+                <div class="velocity-vector" id="velocityVector"></div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="info-panel" id="introduction" data-aos="fade-up">
+            <h2>Introduction to Kinematics</h2>
+            <p>Kinematics is the branch of mechanics that describes the motion of objects without considering the forces that cause the motion. One-dimensional motion occurs along a straight line.</p>
+
+            <div class="definition">
+                <p><strong>Key Concept:</strong> Motion can be described using position, displacement, velocity, and acceleration. These quantities can be positive or negative depending on the chosen coordinate system.</p>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card kinematics" data-aos="flip-left">
+                    <div class="card-title kinematics"><i class="fas fa-route"></i> Basic Quantities</div>
+                    <p>Position, Displacement, Distance, Velocity, Acceleration - the fundamental building blocks of kinematics.</p>
+                    <div class="formula">v = Δx/Δt</div>
+                    <div class="formula">a = Δv/Δt</div>
+                </div>
+
+                <div class="concept-card graphs" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-title graphs"><i class="fas fa-chart-line"></i> Graphical Analysis</div>
+                    <p>Position-time, velocity-time, and acceleration-time graphs provide visual understanding of motion.</p>
+                    <div class="formula">Slope = Rate of change</div>
+                    <div class="formula">Area under curve = Quantity</div>
+                </div>
+
+                <div class="concept-card equations" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card-title equations"><i class="fas fa-square-root-alt"></i> Equations of Motion</div>
+                    <p>Three key equations describe motion with constant acceleration along a straight line.</p>
+                    <div class="formula">v = u + at</div>
+                    <div class="formula">s = ut + ½at²</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Basic Concepts Section -->
+        <section class="info-panel" id="basics" data-aos="fade-up">
+            <h2>Basic Concepts & Definitions</h2>
+
+            <h3>Fundamental Quantities</h3>
+            <table>
+                <tr>
+                    <th>Quantity</th>
+                    <th>Definition</th>
+                    <th>Formula</th>
+                    <th>SI Unit</th>
+                    <th>Nature</th>
+                </tr>
+                <tr>
+                    <td>Position (x)</td>
+                    <td>Location of object relative to origin</td>
+                    <td>-</td>
+                    <td>meter (m)</td>
+                    <td>Vector</td>
+                </tr>
+                <tr>
+                    <td>Displacement (Δx)</td>
+                    <td>Change in position (final - initial)</td>
+                    <td>Δx = x_f - x_i</td>
+                    <td>meter (m)</td>
+                    <td>Vector</td>
+                </tr>
+                <tr>
+                    <td>Distance</td>
+                    <td>Total path length traveled</td>
+                    <td>Path length</td>
+                    <td>meter (m)</td>
+                    <td>Scalar</td>
+                </tr>
+                <tr>
+                    <td>Velocity (v)</td>
+                    <td>Rate of change of displacement</td>
+                    <td>v = Δx/Δt</td>
+                    <td>m/s</td>
+                    <td>Vector</td>
+                </tr>
+                <tr>
+                    <td>Speed</td>
+                    <td>Rate of change of distance</td>
+                    <td>Speed = distance/time</td>
+                    <td>m/s</td>
+                    <td>Scalar</td>
+                </tr>
+                <tr>
+                    <td>Acceleration (a)</td>
+                    <td>Rate of change of velocity</td>
+                    <td>a = Δv/Δt</td>
+                    <td>m/s²</td>
+                    <td>Vector</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Key Differences:</strong></p>
+                <ul>
+                    <li><strong>Distance vs Displacement:</strong> Distance is path length (scalar), displacement is shortest distance between points (vector)</li>
+                    <li><strong>Speed vs Velocity:</strong> Speed is rate of covering distance (scalar), velocity is rate of change of displacement (vector)</li>
+                    <li><strong>Average vs Instantaneous:</strong> Average over time interval, instantaneous at specific instant</li>
+                    <li><strong>Positive vs Negative:</strong> In 1D motion, sign indicates direction relative to reference</li>
+                </ul>
+            </div>
+
+            <h3>Types of Motion</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Uniform Motion</div>
+                    <p>Constant velocity (zero acceleration)</p>
+                    <div class="formula">a = 0</div>
+                    <div class="formula">v = constant</div>
+                    <p>Equal displacements in equal times</p>
+                    <p>Straight line in position-time graph</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Uniformly Accelerated Motion</div>
+                    <p>Constant acceleration</p>
+                    <div class="formula">a = constant</div>
+                    <div class="formula">v = u + at</div>
+                    <p>Velocity changes uniformly with time</p>
+                    <p>Straight line in velocity-time graph</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Non-uniform Acceleration</div>
+                    <p>Variable acceleration</p>
+                    <div class="formula">a ≠ constant</div>
+                    <div class="formula">v = ∫a dt</div>
+                    <p>Complex motion patterns</p>
+                    <p>Requires calculus for analysis</p>
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Distance vs Displacement</div>
+                <p>A car travels 5 km east, then 3 km west, then 2 km east. Calculate total distance and displacement.</p>
+                <p><strong>Solution:</strong></p>
+                <p>Distance = 5 + 3 + 2 = 10 km (total path length)</p>
+                <p>Displacement = 5E + 3W + 2E = (5 - 3 + 2)E = 4 km East</p>
+                <p><em>Distance is always positive, displacement can be positive, negative, or zero.</em></p>
+            </div>
+        </section>
+
+        <!-- Equations of Motion Section -->
+        <section class="info-panel" id="equations" data-aos="fade-up">
+            <h2>Equations of Motion</h2>
+            <p>For motion with constant acceleration along a straight line, we have three fundamental equations.</p>
+
+            <div class="definition">
+                <p><strong>Constant Acceleration Assumption:</strong> These equations are valid only when acceleration is constant. They form the foundation for solving most kinematics problems in JEE/NEET.</p>
+            </div>
+
+            <div class="equation-cards">
+                <div class="equation-card">
+                    <h3>First Equation</h3>
+                    <div class="formula">v = u + at</div>
+                    <p>Relates velocity with time</p>
+                    <p>Where:<br>
+                    v = final velocity<br>
+                    u = initial velocity<br>
+                    a = acceleration<br>
+                    t = time</p>
+                </div>
+
+                <div class="equation-card">
+                    <h3>Second Equation</h3>
+                    <div class="formula">s = ut + ½at²</div>
+                    <p>Relates displacement with time</p>
+                    <p>Where:<br>
+                    s = displacement<br>
+                    u = initial velocity<br>
+                    a = acceleration<br>
+                    t = time</p>
+                </div>
+
+                <div class="equation-card">
+                    <h3>Third Equation</h3>
+                    <div class="formula">v² = u² + 2as</div>
+                    <p>Relates velocity with displacement</p>
+                    <p>Where:<br>
+                    v = final velocity<br>
+                    u = initial velocity<br>
+                    a = acceleration<br>
+                    s = displacement</p>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Sign Convention:</strong></p>
+                <ul>
+                    <li>Choose a reference direction as positive</li>
+                    <li>All quantities in that direction are positive</li>
+                    <li>All quantities opposite to that direction are negative</li>
+                    <li>Acceleration due to gravity (g) is usually taken as -9.8 m/s² when upward is positive</li>
+                    <li>Consistency in sign convention is crucial for correct solutions</li>
+                </ul>
+            </div>
+
+            <h3>Special Cases</h3>
+            <table>
+                <tr>
+                    <th>Case</th>
+                    <th>Condition</th>
+                    <th>Simplified Equations</th>
+                </tr>
+                <tr>
+                    <td>Motion from rest</td>
+                    <td>u = 0</td>
+                    <td>v = at, s = ½at², v² = 2as</td>
+                </tr>
+                <tr>
+                    <td>Motion to rest</td>
+                    <td>v = 0</td>
+                    <td>0 = u + at, s = ut + ½at², 0 = u² + 2as</td>
+                </tr>
+                <tr>
+                    <td>Uniform motion</td>
+                    <td>a = 0</td>
+                    <td>v = u, s = ut</td>
+                </tr>
+                <tr>
+                    <td>Free fall (upward positive)</td>
+                    <td>a = -g</td>
+                    <td>v = u - gt, s = ut - ½gt², v² = u² - 2gs</td>
+                </tr>
+                <tr>
+                    <td>Free fall (downward positive)</td>
+                    <td>a = +g</td>
+                    <td>v = u + gt, s = ut + ½gt², v² = u² + 2gs</td>
+                </tr>
+            </table>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Nth Second Concept</h4>
+                <p>Distance traveled in nth second:</p>
+                <div class="formula">s_n = u + a/2(2n - 1)</div>
+                <p>Where s_n = distance traveled during nth second (from t = n-1 to t = n)</p>
+                <p>For free fall from rest: s_n = g/2(2n - 1)</p>
+                <p>Ratios: s_1 : s_2 : s_3 : ... = 1 : 3 : 5 : ... (odd numbers)</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Equations Application</div>
+                <p>A car accelerates uniformly from rest at 2 m/s² for 10 seconds. Find final velocity and distance covered.</p>
+                <p><strong>Solution:</strong></p>
+                <p>Given: u = 0, a = 2 m/s², t = 10 s</p>
+                <p>Using v = u + at: v = 0 + 2×10 = 20 m/s</p>
+                <p>Using s = ut + ½at²: s = 0×10 + ½×2×(10)² = 100 m</p>
+                <p>Using v² = u² + 2as: 20² = 0 + 2×2×s ⇒ s = 400/4 = 100 m (verification)</p>
+            </div>
+        </section>
+
+        <!-- Motion Graphs Section -->
+        <section class="info-panel" id="graphs" data-aos="fade-up">
+            <h2>Graphical Analysis of Motion</h2>
+            <p>Graphs provide visual representation of motion and relationships between kinematic quantities.</p>
+
+            <h3>Position-Time (x-t) Graphs</h3>
+            <table>
+                <tr>
+                    <th>Graph Shape</th>
+                    <th>Interpretation</th>
+                    <th>Slope</th>
+                    <th>Velocity</th>
+                    <th>Acceleration</th>
+                </tr>
+                <tr>
+                    <td>Straight line (sloping)</td>
+                    <td>Uniform motion</td>
+                    <td>Constant</td>
+                    <td>Constant</td>
+                    <td>Zero</td>
+                </tr>
+                <tr>
+                    <td>Curve (upward)</td>
+                    <td>Accelerated motion</td>
+                    <td>Increasing</td>
+                    <td>Increasing</td>
+                    <td>Positive</td>
+                </tr>
+                <tr>
+                    <td>Curve (downward)</td>
+                    <td>Decelerated motion</td>
+                    <td>Decreasing</td>
+                    <td>Decreasing</td>
+                    <td>Negative</td>
+                </tr>
+                <tr>
+                    <td>Horizontal line</td>
+                    <td>Object at rest</td>
+                    <td>Zero</td>
+                    <td>Zero</td>
+                    <td>Zero</td>
+                </tr>
+                <tr>
+                    <td>Parabola</td>
+                    <td>Constant acceleration</td>
+                    <td>Linear</td>
+                    <td>Linear</td>
+                    <td>Constant</td>
+                </tr>
+            </table>
+
+            <h3>Velocity-Time (v-t) Graphs</h3>
+            <table>
+                <tr>
+                    <th>Graph Shape</th>
+                    <th>Interpretation</th>
+                    <th>Slope</th>
+                    <th>Area under curve</th>
+                    <th>Acceleration</th>
+                </tr>
+                <tr>
+                    <td>Horizontal line</td>
+                    <td>Uniform motion</td>
+                    <td>Zero</td>
+                    <td>Displacement</td>
+                    <td>Zero</td>
+                </tr>
+                <tr>
+                    <td>Straight line (sloping)</td>
+                    <td>Constant acceleration</td>
+                    <td>Constant</td>
+                    <td>Displacement</td>
+                    <td>Constant</td>
+                </tr>
+                <tr>
+                    <td>Curve</td>
+                    <td>Variable acceleration</td>
+                    <td>Variable</td>
+                    <td>Displacement</td>
+                    <td>Variable</td>
+                </tr>
+                <tr>
+                    <td>Below time axis</td>
+                    <td>Negative velocity</td>
+                    <td>Acceleration</td>
+                    <td>Negative displacement</td>
+                    <td>From slope</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Graphical Relationships:</strong></p>
+                <ul>
+                    <li><strong>Slope of x-t graph</strong> = Instantaneous velocity</li>
+                    <li><strong>Slope of v-t graph</strong> = Instantaneous acceleration</li>
+                    <li><strong>Area under v-t graph</strong> = Displacement (with sign)</li>
+                    <li><strong>Area under a-t graph</strong> = Change in velocity</li>
+                    <li><strong>Curvature of x-t graph</strong> indicates acceleration</li>
+                    <li><strong>Intercept on velocity axis</strong> = Initial velocity</li>
+                </ul>
+            </div>
+
+            <h3>Graph Interpretation Rules</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">For x-t Graph</div>
+                    <p>• Slope = velocity</p>
+                    <p>• Positive slope → positive velocity</p>
+                    <p>• Negative slope → negative velocity</p>
+                    <p>• Zero slope → at rest</p>
+                    <p>• Changing slope → acceleration</p>
+                    <p>• Maximum/minimum point → v = 0</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">For v-t Graph</div>
+                    <p>• Slope = acceleration</p>
+                    <p>• Area = displacement</p>
+                    <p>• Above axis → positive velocity</p>
+                    <p>• Below axis → negative velocity</p>
+                    <p>• Zero crossing → direction change</p>
+                    <p>• Constant slope → constant acceleration</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">For a-t Graph</div>
+                    <p>• Value = acceleration</p>
+                    <p>• Area = Δv</p>
+                    <p>• Above axis → acceleration</p>
+                    <p>• Below axis → deceleration</p>
+                    <p>• Zero line → constant velocity</p>
+                    <p>• Constant value → constant acceleration</p>
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Graph Analysis</div>
+                <p>From the v-t graph shown, calculate: (a) Acceleration in first 4s, (b) Displacement in first 8s, (c) Average velocity</p>
+                <p><strong>Solution:</strong></p>
+                <p>(a) a = slope = (20-0)/(4-0) = 5 m/s²</p>
+                <p>(b) Displacement = area under curve</p>
+                <p>Area = ½×4×20 + 4×20 + ½×4×20 = 40 + 80 + 40 = 160 m</p>
+                <p>(c) Average velocity = total displacement/total time = 160/12 = 13.33 m/s</p>
+            </div>
+        </section>
+
+        <!-- Relative Motion Section -->
+        <section class="info-panel" id="relative" data-aos="fade-up">
+            <h2>Relative Motion</h2>
+            <p>Motion described relative to a reference frame. Crucial for problems involving multiple moving objects.</p>
+
+            <div class="definition">
+                <p><strong>Relative Velocity:</strong> Velocity of object A as observed from object B. v_AB = v_A - v_B (vector subtraction).</p>
+            </div>
+
+            <h3>Key Concepts</h3>
+            <table>
+                <tr>
+                    <th>Situation</th>
+                    <th>Relative Velocity</th>
+                    <th>Magnitude</th>
+                    <th>Direction</th>
+                </tr>
+                <tr>
+                    <td>Same direction</td>
+                    <td>v_AB = v_A - v_B</td>
+                    <td>Difference of magnitudes</td>
+                    <td>Direction of faster object</td>
+                </tr>
+                <tr>
+                    <td>Opposite directions</td>
+                    <td>v_AB = v_A + v_B</td>
+                    <td>Sum of magnitudes</td>
+                    <td>Direction of v_A</td>
+                </tr>
+                <tr>
+                    <td>Perpendicular</td>
+                    <td>v_AB = √(v_A² + v_B²)</td>
+                    <td>Vector sum magnitude</td>
+                    <td>tan θ = v_B/v_A</td>
+                </tr>
+                <tr>
+                    <td>At angle θ</td>
+                    <td>|v_AB| = √(v_A²+v_B²-2v_Av_Bcosθ)</td>
+                    <td>Law of cosines</td>
+                    <td>Depends on components</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Relative Motion Formulas:</strong></p>
+                <div class="formula">v_AB = v_A - v_B (velocity of A relative to B)</div>
+                <div class="formula">a_AB = a_A - a_B (acceleration of A relative to B)</div>
+                <div class="formula">r_AB = r_A - r_B (position of A relative to B)</div>
+                <p>All are vector quantities - direction matters!</p>
+            </div>
+
+            <h3>Common Relative Motion Problems</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Two Bodies on Same Line</div>
+                    <p>Cars/trains moving on same road/track</p>
+                    <div class="formula">Relative velocity = v₁ - v₂</div>
+                    <p>Time to meet: t = d/(v₁ - v₂)</p>
+                    <p>Separation change rate: v₁ - v₂</p>
+                    <p>Overtaking problems</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">River-Boat Problems</div>
+                    <p>Boat crossing river with current</p>
+                    <div class="formula">v_boat,ground = v_boat,water + v_water,ground</div>
+                    <p>Shortest time vs shortest path</p>
+                    <p>Drift calculation</p>
+                    <p>Swimmer problems similar</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Rain-Man Problems</div>
+                    <p>Rain falling relative to moving person</p>
+                    <div class="formula">v_rain,man = v_rain,ground - v_man,ground</div>
+                    <p>Angle at which rain appears to fall</p>
+                    <p>Umbrella angle calculation</p>
+                    <p>Relative velocity vector diagram</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">NEET IMPORTANT</div>
+                <h4>Minimum Distance Problems</h4>
+                <p>For two objects with constant velocities:</p>
+                <div class="formula">Minimum distance = |(r_AB · v_AB)|/|v_AB|</div>
+                <p>Where r_AB = initial relative position vector</p>
+                <p>v_AB = relative velocity vector</p>
+                <p>Time of closest approach: t = -(r_AB · v_AB)/|v_AB|²</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Relative Velocity</div>
+                <p>Two trains 100 km apart approach each other at 60 km/h and 40 km/h. When will they meet? Where?</p>
+                <p><strong>Solution:</strong></p>
+                <p>Relative velocity = 60 + 40 = 100 km/h (opposite directions)</p>
+                <p>Time to meet = distance/relative velocity = 100/100 = 1 hour</p>
+                <p>Distance from first train: 60 km/h × 1 h = 60 km</p>
+                <p>Distance from second train: 40 km/h × 1 h = 40 km</p>
+                <p>Meeting point is 60 km from first train, 40 km from second train</p>
+            </div>
+        </section>
+
+        <!-- Projectile Motion Section -->
+        <section class="info-panel" id="projectile" data-aos="fade-up">
+            <h2>Projectile Motion</h2>
+            <p>Motion under gravity with initial velocity at an angle to horizontal. Two-dimensional but can be analyzed as two independent 1D motions.</p>
+
+            <div class="definition">
+                <p><strong>Key Insight:</strong> Horizontal and vertical motions are independent. Horizontal: constant velocity. Vertical: constant acceleration (g).</p>
+            </div>
+
+            <h3>Projectile Motion Parameters</h3>
+            <table>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Formula</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Time of flight (T)</td>
+                    <td>T = 2u sinθ/g</td>
+                    <td>Total time in air</td>
+                </tr>
+                <tr>
+                    <td>Maximum height (H)</td>
+                    <td>H = u² sin²θ/(2g)</td>
+                    <td>Peak height reached</td>
+                </tr>
+                <tr>
+                    <td>Horizontal range (R)</td>
+                    <td>R = u² sin2θ/g</td>
+                    <td>Total horizontal distance</td>
+                </tr>
+                <tr>
+                    <td>Equation of path</td>
+                    <td>y = x tanθ - gx²/(2u² cos²θ)</td>
+                    <td>Parabolic trajectory</td>
+                </tr>
+                <tr>
+                    <td>Velocity at time t</td>
+                    <td>v_x = u cosθ, v_y = u sinθ - gt</td>
+                    <td>Components at any time</td>
+                </tr>
+                <tr>
+                    <td>Velocity at height h</td>
+                    <td>v = √(u² - 2gh)</td>
+                    <td>Speed at given height</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Important Results:</strong></p>
+                <ul>
+                    <li>Maximum range at θ = 45°: R_max = u²/g</li>
+                    <li>Same range for complementary angles: θ and (90°-θ)</li>
+                    <li>Time of flight ∝ u sinθ</li>
+                    <li>Maximum height ∝ u² sin²θ</li>
+                    <li>Range ∝ u² sin2θ</li>
+                    <li>At maximum height: v_y = 0, v = v_x = u cosθ</li>
+                    <li>Horizontal component constant: v_x = u cosθ</li>
+                </ul>
+            </div>
+
+            <h3>Special Cases</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Horizontal Projection</div>
+                    <p>θ = 0° from height h</p>
+                    <div class="formula">T = √(2h/g)</div>
+                    <div class="formula">R = u√(2h/g)</div>
+                    <div class="formula">v = √(u² + 2gh)</div>
+                    <p>Used in: bomb dropping, package delivery</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Oblique Projection</div>
+                    <p>θ with horizontal</p>
+                    <div class="formula">T = 2u sinθ/g</div>
+                    <div class="formula">R = u² sin2θ/g</div>
+                    <div class="formula">H = u² sin²θ/(2g)</div>
+                    <p>Used in: sports, artillery</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Projectile from Height</div>
+                    <p>Launched from height H</p>
+                    <div class="formula">T = [u sinθ + √(u² sin²θ + 2gH)]/g</div>
+                    <div class="formula">R = u cosθ × T</div>
+                    <p>More complex trajectory</p>
+                    <p>Used in: cliff problems</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Projectile on Inclined Plane</h4>
+                <p>When projectile lands on inclined plane at angle β:</p>
+                <div class="formula">Range along plane: R' = 2u² cosθ sin(θ-β)/(g cos²β)</div>
+                <div class="formula">Time of flight: T' = 2u sin(θ-β)/(g cosβ)</div>
+                <p>Maximum range when θ = (π/4 + β/2)</p>
+                <p>For β = 0°, reduces to normal projectile</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Projectile Calculation</div>
+                <p>A ball is thrown at 20 m/s at 37° to horizontal. Find max height, time of flight, and range.</p>
+                <p><strong>Given:</strong> sin37° = 0.6, cos37° = 0.8, g = 10 m/s²</p>
+                <p><strong>Solution:</strong></p>
+                <p>Max height: H = u² sin²θ/(2g) = (20² × 0.6²)/(2×10) = 7.2 m</p>
+                <p>Time of flight: T = 2u sinθ/g = (2×20×0.6)/10 = 2.4 s</p>
+                <p>Range: R = u² sin2θ/g = (20² × sin74°)/10 = (400×0.96)/10 = 38.4 m</p>
+            </div>
+        </section>
+
+        <!-- Problem Solving Section -->
+        <section class="info-panel" id="problems" data-aos="fade-up">
+            <h2>Problem Solving Strategies</h2>
+            <p>Systematic approach to solve kinematics problems in JEE and NEET.</p>
+
+            <div class="problem-solving">
+                <div class="problem-box">
+                    <div class="problem-title">Type 1: Basic Equations</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify knowns and unknowns</li>
+                        <li>Choose appropriate equation</li>
+                        <li>Apply sign convention consistently</li>
+                        <li>Solve algebraically</li>
+                        <li>Check units and reasonableness</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> List all given quantities with signs before solving</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 2: Graph Problems</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify graph type (x-t, v-t, a-t)</li>
+                        <li>Extract information from slopes and areas</li>
+                        <li>Use graphical relationships</li>
+                        <li>Convert to equations if needed</li>
+                        <li>Check for key points (intersections, peaks)</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Area under v-t gives displacement (with sign)</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 3: Relative Motion</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Choose reference frame</li>
+                        <li>Write relative velocity equation</li>
+                        <li>Draw vector diagram</li>
+                        <li>Resolve into components if needed</li>
+                        <li>Solve using geometry/trigonometry</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> v_AB = v_A - v_B (vector subtraction)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE/NEET TIP</div>
+                <h4>Common Problem Patterns</h4>
+                <p><strong>1. Meeting/Overtaking:</strong> Set positions equal, solve for time</p>
+                <p><strong>2. Maximum/Minimum:</strong> Use derivative or symmetry</p>
+                <p><strong>3. Two-stage motion:</strong> Solve stage by stage, connect at interface</p>
+                <p><strong>4. Constrained motion:</strong> Use constraint equations</p>
+                <p><strong>5. Non-constant acceleration:</strong> Use calculus (integration)</p>
+            </div>
+
+            <h3>Quick Formula Reference</h3>
+            <div class="equation-cards">
+                <div class="equation-card">
+                    <div class="formula">v = u + at</div>
+                    <div class="formula">s = ut + ½at²</div>
+                    <div class="formula">v² = u² + 2as</div>
+                </div>
+                <div class="equation-card">
+                    <div class="formula">s_n = u + ½a(2n-1)</div>
+                    <div class="formula">v_avg = (u+v)/2</div>
+                    <div class="formula">v_avg = Δs/Δt</div>
+                </div>
+                <div class="equation-card">
+                    <div class="formula">T = 2u sinθ/g</div>
+                    <div class="formula">H = u² sin²θ/(2g)</div>
+                    <div class="formula">R = u² sin2θ/g</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Facts Carousel -->
+        <div class="swiper-container" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">EQUATIONS OF MOTION</div>
+                        <div class="swiper-text">v = u + at, s = ut + ½at², v² = u² + 2as. Valid only for constant acceleration.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">GRAPH INTERPRETATION</div>
+                        <div class="swiper-text">Slope of x-t = velocity. Slope of v-t = acceleration. Area under v-t = displacement.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">RELATIVE VELOCITY</div>
+                        <div class="swiper-text">v_AB = v_A - v_B. For same direction: subtract. For opposite: add magnitudes.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">PROJECTILE MOTION</div>
+                        <div class="swiper-text">T = 2u sinθ/g, H = u² sin²θ/(2g), R = u² sin2θ/g. Max range at 45°.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">FREE FALL</div>
+                        <div class="swiper-text">g = 9.8 m/s² (approx 10 m/s²). v = u + gt, s = ut + ½gt². Independent of mass.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">SIGN CONVENTION</div>
+                        <div class="swiper-text">Choose +ve direction. All quantities in that direction are +ve. Be consistent!</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">NTH SECOND</div>
+                        <div class="swiper-text">s_n = u + a/2(2n-1). Distance in nth second. For free fall: odd number ratios.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">VECTOR NATURE</div>
+                        <div class="swiper-text">Displacement, velocity, acceleration are vectors. Direction matters in 1D too!</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- Summary Section -->
+        <section class="info-panel" data-aos="fade-up">
+            <h2>Chapter Summary & Key Points</h2>
+            
+            <h3>Essential Formulas</h3>
+            <div class="concept-cards">
+                <div class="concept-card kinematics">
+                    <div class="card-title kinematics">Basic Equations</div>
+                    <div class="formula">v = u + at</div>
+                    <div class="formula">s = ut + ½at²</div>
+                    <div class="formula">v² = u² + 2as</div>
+                    <div class="formula">s_n = u + ½a(2n-1)</div>
+                </div>
+
+                <div class="concept-card graphs">
+                    <div class="card-title graphs">Graphical Relations</div>
+                    <div class="formula">Slope(x-t) = v</div>
+                    <div class="formula">Slope(v-t) = a</div>
+                    <div class="formula">Area(v-t) = s</div>
+                    <div class="formula">Area(a-t) = Δv</div>
+                </div>
+
+                <div class="concept-card equations">
+                    <div class="card-title equations">Projectile Motion</div>
+                    <div class="formula">T = 2u sinθ/g</div>
+                    <div class="formula">H = u² sin²θ/(2g)</div>
+                    <div class="formula">R = u² sin2θ/g</div>
+                    <div class="formula">R_max = u²/g</div>
+                </div>
+            </div>
+
+            <h3>Important Points for JEE/NEET</h3>
+            <ul>
+                <li>Motion in straight line with constant acceleration uses three equations</li>
+                <li>Graphs provide visual understanding - slopes and areas have physical meaning</li>
+                <li>Relative motion: v_AB = v_A - v_B (vector subtraction)</li>
+                <li>Projectile motion: horizontal and vertical motions are independent</li>
+                <li>Maximum range at 45°, same range for complementary angles</li>
+                <li>Free fall acceleration g = 9.8 m/s² (use 10 m/s² for approximation)</li>
+                <li>Sign convention must be consistent throughout problem</li>
+                <li>Distance and displacement are different - displacement can be zero with non-zero distance</li>
+            </ul>
+
+            <div class="important">
+                <p><strong>Common Mistakes to Avoid:</strong></p>
+                <ul>
+                    <li>Using equations of motion when acceleration is not constant</li>
+                    <li>Confusing distance with displacement, speed with velocity</li>
+                    <li>Forgetting sign convention or being inconsistent</li>
+                    <li>Not recognizing projectile motion as two independent 1D motions</li>
+                    <li>Miscalculating relative velocity (adding when should subtract or vice versa)</li>
+                    <li>Forgetting that g is negative when upward is positive</li>
+                    <li>Not checking if answer is physically reasonable</li>
+                    <li>Confusing average speed with average velocity</li>
+                </ul>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">LAST MINUTE REVISION</div>
+                <h4>Must Remember Values</h4>
+                <p><strong>g:</strong> 9.8 m/s² (use 10 m/s² for quick calculations)</p>
+                <p><strong>sinθ values:</strong> sin0°=0, sin30°=0.5, sin37°=0.6, sin45°=0.707, sin53°=0.8, sin60°=0.866, sin90°=1</p>
+                <p><strong>cosθ values:</strong> cos0°=1, cos30°=0.866, cos37°=0.8, cos45°=0.707, cos53°=0.6, cos60°=0.5, cos90°=0</p>
+                <p><strong>Conversion:</strong> 1 km/h = 5/18 m/s, 1 m/s = 18/5 km/h</p>
+                <p><strong>Useful:</strong> √2 ≈ 1.414, √3 ≈ 1.732, π ≈ 3.14, π² ≈ 9.87</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Nerds Assemble</h3>
+                <p>Master Motion in One Dimension for JEE & NEET. Comprehensive physics resource with detailed explanations and problem-solving strategies.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#basics">Basic Concepts</a></li>
+                    <li><a href="#equations">Equations of Motion</a></li>
+                    <li><a href="#graphs">Motion Graphs</a></li>
+                    <li><a href="#relative">Relative Motion</a></li>
+                    <li><a href="#projectile">Projectile Motion</a></li>
+                    <li><a href="#problems">Problem Solving</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact & Resources</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> 44mr.invisible@gmail.com</li>
+                    <li><i class="fas fa-book"></i> NCERT Physics Class 11</li>
+                    <li><i class="fas fa-graduation-cap"></i> JEE/NEET Syllabus</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Nerds Assemble. All rights reserved. | Designed for JEE & NEET Aspirants | Motion in One Dimension | SEO Optimized for Google</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Motion in One Dimension - JavaScript
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ?
+                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+            }
+
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+
+            function handleScroll() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('active');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                }
+            }
+
+            // Debounced scroll event
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(handleScroll, 50);
+            }, { passive: true });
+
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: window.innerWidth < 768 ? 100 : 120,
+                    easing: 'ease-out-quad'
+                });
+            }
+
+            // Initialize Swiper
+            if (typeof Swiper !== 'undefined') {
+                const swiper = new Swiper('.swiper-container', {
+                    loop: true,
+                    autoplay: {
+                        delay: 3500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 25
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        }
+                    }
+                });
+            }
+
+            // Smooth Scroll for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        if (mainNav && mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                });
+            });
+
+            // Back to Top Button Click
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Motion Animation Control
+            const movingObject = document.getElementById('movingObject');
+            const velocityVector = document.getElementById('velocityVector');
+            
+            if (movingObject) {
+                let animationState = 0;
+                const animations = ['move-right', 'accelerate', 'bounce'];
+                
+                movingObject.addEventListener('click', function() {
+                    // Remove current animation
+                    animations.forEach(anim => {
+                        movingObject.classList.remove(anim);
+                        velocityVector.style.width = '0';
+                    });
+                    
+                    // Apply next animation
+                    animationState = (animationState + 1) % animations.length;
+                    movingObject.classList.add(animations[animationState]);
+                    
+                    // Update velocity vector visualization
+                    if (animations[animationState] === 'move-right') {
+                        velocityVector.style.width = '100px';
+                        velocityVector.style.background = 'var(--primary)';
+                    } else if (animations[animationState] === 'accelerate') {
+                        velocityVector.style.width = '150px';
+                        velocityVector.style.background = 'var(--accent)';
+                    } else {
+                        velocityVector.style.width = '80px';
+                        velocityVector.style.background = 'var(--tertiary)';
+                    }
+                });
+                
+                // Start with first animation
+                movingObject.classList.add('move-right');
+                velocityVector.style.width = '100px';
+            }
+
+            // Create Particles
+            createParticles();
+            
+            // Interactive Graph Demo
+            createInteractiveGraph();
+        });
+
+        // Create Particles Function
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
+
+            const particleCount = window.innerWidth < 768 ? 20 : 30;
+            particlesContainer.innerHTML = '';
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                const size = Math.random() * 3 + 1;
+                const posX = Math.random() * window.innerWidth;
+                const posY = Math.random() * window.innerHeight;
+                const duration = Math.random() * 15 + 10;
+                const delay = Math.random() * 5;
+
+                particle.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}px;
+                    top: ${posY}px;
+                    opacity: ${Math.random() * 0.3 + 0.1};
+                    animation: float ${duration}s ease-in-out ${delay}s infinite;
+                    background: rgba(33, 150, 243, 0.3);
+                `;
+
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Create Interactive Graph
+        function createInteractiveGraph() {
+            const graphContainer = document.querySelector('.graph-container');
+            if (!graphContainer) return;
+
+            // Create a simple position-time graph
+            const graph = document.createElement('div');
+            graph.className = 'graph';
+            graph.innerHTML = `
+                <div class="graph-axis" style="bottom: 0; left: 10%; width: 2px; height: 80%;"></div>
+                <div class="graph-axis" style="left: 10%; bottom: 0; width: 80%; height: 2px;"></div>
+                <div class="graph-line" style="bottom: 20%; left: 10%; width: 80%; height: 3px; transform: rotate(30deg);"></div>
+                <div class="graph-point" style="left: 30%; bottom: 35%;"></div>
+                <div class="graph-point" style="left: 50%; bottom: 50%;"></div>
+                <div class="graph-point" style="left: 70%; bottom: 65%;"></div>
+            `;
+            
+            // Insert after first paragraph in graph container
+            const firstPara = graphContainer.querySelector('p');
+            if (firstPara) {
+                firstPara.parentNode.insertBefore(graph, firstPara.nextSibling);
+            }
+        }
+
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(createParticles, 250);
+        });
+    </script>
+</body>
+</html>
