@@ -1,0 +1,2037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waves | Class 11 Physics | JEE & NEET Preparation</title>
+    <meta name="description" content="Master Waves for Class 11 Physics. Complete guide for JEE & NEET aspirants covering wave motion, sound waves, Doppler effect, stationary waves, beats, and wave optics basics.">
+    <meta name="keywords" content="Waves, Physics Class 11, JEE preparation, NEET physics, Wave Motion, Sound Waves, Doppler Effect, Stationary Waves, Beats, Wave Optics, Interference, Diffraction">
+    <meta name="author" content="Nerds Assemble">
+    <meta name="robots" content="index, follow">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Waves | Class 11 Physics">
+    <meta property="og:description" content="Complete guide to Waves for JEE & NEET aspirants">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nerdsassemble.com/waves">
+    
+    <!-- Structured Data for Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Waves - Class 11 Physics",
+        "description": "Complete guide to Waves with sound, Doppler effect, stationary waves, and wave optics for JEE & NEET",
+        "educationalLevel": "High School",
+        "learningResourceType": "Educational Course",
+        "author": {
+            "@type": "Organization",
+            "name": "Nerds Assemble"
+        },
+        "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": "Student",
+            "audienceType": ["JEE Aspirants", "NEET Aspirants"]
+        }
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;400;600;700&family=Nunito:wght@400;600;800&family=Roboto+Slab:wght@400;700&family=Electrolize&family=Audiowide&family=Raleway:wght@300;400;600&family=Quicksand:wght@400;500;600&family=Pacifico&family=Dancing+Script:wght@700&family=Abril+Fatface&family=Playfair+Display:wght@700&family=Poiret+One&family=Amatic+SC:wght@700&family=Caveat:wght@700&family=Kaushan+Script&family=Libre+Baskerville&family=Merriweather&family=Oswald:wght@500&family=Sacramento&family=Tangerine:wght@700&family=Yeseva+One&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/sound-wave.png">
+    
+    <style>
+        /* Combined CSS - Waves Physics */
+        :root {
+            --wave-primary: #00BCD4;
+            --wave-secondary: #0097A7;
+            --wave-tertiary: #536DFE;
+            --wave-accent: #E040FB;
+            --wave-bg: #0a0a20;
+            --wave-text: #ffffff;
+            --wave-highlight: #FFD700;
+            --wave-nav-bg: rgba(10, 5, 30, 0.95);
+            --wave-gradient: linear-gradient(45deg, #00BCD4, #0097A7);
+            --sound-gradient: linear-gradient(45deg, #E040FB, #9C27B0);
+            --light-gradient: linear-gradient(45deg, #FF9800, #FF5722);
+            --doppler-gradient: linear-gradient(45deg, #4CAF50, #2E7D32);
+        }
+
+        /* Base Styles & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--wave-bg);
+            color: var(--wave-text);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(0, 188, 212, 0.15) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(83, 109, 254, 0.15) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(224, 64, 251, 0.1) 0%, transparent 30%),
+                linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+            background: linear-gradient(45deg, var(--wave-primary), var(--wave-secondary), var(--wave-tertiary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--wave-highlight);
+            margin: 2rem 0 1.5rem;
+            font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--wave-primary), transparent);
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-family: 'Roboto Slab', serif;
+            color: var(--wave-secondary);
+            margin: 1.5rem 0 1rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+        }
+
+        p {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+        }
+
+        /* Layout Components */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            flex: 1;
+            padding: 0 1rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 1rem;
+            background: linear-gradient(135deg, rgba(0, 188, 212, 0.1), rgba(83, 109, 254, 0.1));
+            border-bottom: 2px solid rgba(0, 188, 212, 0.3);
+            border-radius: 20px;
+        }
+
+        .subtitle {
+            font-family: 'Raleway', sans-serif;
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+            color: var(--wave-highlight);
+            margin-bottom: 1rem;
+        }
+
+        .intro-text {
+            font-family: 'Nunito', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--wave-nav-bg);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            color: var(--wave-highlight);
+            font-size: 1.6rem;
+        }
+
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--wave-primary), var(--wave-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.4rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        .nav-links a {
+            color: var(--wave-text);
+            text-decoration: none;
+            font-family: 'Electrolize', sans-serif;
+            font-size: 0.95rem;
+            transition: color 0.2s ease-out;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--wave-highlight);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--wave-highlight);
+            transition: width 0.2s ease-out;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--wave-text);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* Content Panels */
+        .info-panel {
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
+            padding: 1.8rem;
+            margin: 1.8rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animation Containers */
+        .animation-container {
+            width: 100%;
+            height: 300px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid rgba(0, 188, 212, 0.2);
+        }
+
+        .wave-canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Special Content Blocks */
+        .important {
+            background: rgba(0, 188, 212, 0.1);
+            border-left: 4px solid var(--wave-primary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(0, 188, 212, 0.1);
+        }
+
+        .definition {
+            background: rgba(255, 215, 0, 0.1);
+            border-left: 4px solid var(--wave-highlight);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.1);
+        }
+
+        .formula {
+            font-family: 'Audiowide', cursive;
+            color: var(--wave-highlight);
+            margin: 1.2rem 0;
+            padding: 1.2rem;
+            background: rgba(0, 188, 212, 0.1);
+            border-radius: 8px;
+            border: 1px dashed var(--wave-highlight);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.1rem;
+        }
+
+        .example {
+            background: rgba(83, 109, 254, 0.1);
+            border-left: 4px solid var(--wave-tertiary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: var(--wave-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Lists & Tables */
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 1.8rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background-color: rgba(0, 188, 212, 0.2);
+            font-family: 'Electrolize', sans-serif;
+            color: var(--wave-highlight);
+            font-size: 0.95rem;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+
+        tr:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* Concept Cards */
+        .concept-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .concept-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 188, 212, 0.2);
+        }
+
+        .concept-card.wave {
+            border-top: 4px solid var(--wave-primary);
+        }
+
+        .concept-card.sound {
+            border-top: 4px solid var(--wave-accent);
+        }
+
+        .concept-card.doppler {
+            border-top: 4px solid #4CAF50;
+        }
+
+        .concept-card.stationary {
+            border-top: 4px solid var(--wave-tertiary);
+        }
+
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title.wave { color: var(--wave-primary); }
+        .card-title.sound { color: var(--wave-accent); }
+        .card-title.doppler { color: #4CAF50; }
+        .card-title.stationary { color: var(--wave-tertiary); }
+
+        /* Controls */
+        .controls {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .control-btn {
+            background: linear-gradient(45deg, var(--wave-primary), var(--wave-tertiary));
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Electrolize', sans-serif;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+        }
+
+        .control-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
+            background: linear-gradient(45deg, var(--wave-accent), var(--wave-primary));
+        }
+
+        .control-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Info Box */
+        .info-box {
+            background: rgba(0, 188, 212, 0.1);
+            border-left: 4px solid var(--wave-primary);
+            padding: 1.5rem;
+            border-radius: 0 10px 10px 0;
+            margin-top: 2rem;
+        }
+
+        .info-title {
+            font-family: 'Roboto Slab', serif;
+            color: var(--wave-highlight);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .info-text {
+            font-family: 'Quicksand', sans-serif;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Problem Solving Section */
+        .problem-solving {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .problem-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--wave-primary);
+        }
+
+        .problem-title {
+            color: var(--wave-primary);
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--wave-nav-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .footer-column h3 {
+            color: var(--wave-highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--wave-text);
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            transition: color 0.2s ease-out;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--wave-highlight);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--wave-text);
+            font-size: 1.1rem;
+            transition: color 0.2s ease-out;
+        }
+
+        .social-links a:hover {
+            color: var(--wave-highlight);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 1.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Quicksand', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 45px;
+            height: 45px;
+            background: var(--wave-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease-out;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--wave-highlight);
+            transform: translateY(-5px);
+        }
+
+        /* JEE/NEET Specific Styling */
+        .exam-highlight {
+            background: rgba(255, 235, 0, 0.1);
+            border: 2px solid var(--wave-highlight);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .exam-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--wave-highlight);
+            color: var(--wave-bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* Particles Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.3;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                margin-top: 1rem;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.75rem 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .container {
+                width: 95%;
+                padding: 0;
+            }
+
+            .concept-cards, .problem-solving {
+                grid-template-columns: 1fr;
+            }
+
+            .animation-container {
+                height: 250px;
+            }
+            
+            .controls {
+                justify-content: center;
+            }
+            
+            .control-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-panel {
+                padding: 1rem;
+            }
+        }
+
+        /* Animation Classes */
+        @keyframes particleFloat {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-1000px) rotate(720deg); }
+        }
+
+        .particle-anim {
+            animation: particleFloat 20s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-wave-square"></i></span>
+                <span class="logo-text">Nerds Assemble</span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#progressive-waves">Progressive Waves</a></li>
+                    <li><a href="#standing-waves">Standing Waves</a></li>
+                    <li><a href="#sound-waves">Sound Waves</a></li>
+                    <li><a href="#doppler-effect">Doppler Effect</a></li>
+                    <li><a href="#beats">Beats</a></li>
+                    <li><a href="#problems">Problems</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="page-header">
+            <h1>Waves Physics</h1>
+            <p class="subtitle">Class 11 Physics | JEE & NEET Preparation Guide with Perfect Animations</p>
+            <p class="intro-text">Master the science of wave motion through interactive animations and detailed explanations. From mechanical waves to sound phenomena and wave optics basics - everything you need for JEE & NEET success.</p>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="info-panel" id="introduction">
+            <h2>Introduction to Waves</h2>
+            <p>A wave is a disturbance that travels through space and time, usually with transfer of energy without permanent displacement of particles.</p>
+
+            <div class="definition">
+                <p><strong>Wave:</strong> A disturbance that propagates through a medium or vacuum, transferring energy from one point to another.</p>
+                <p><strong>Medium:</strong> Material through which wave travels (not required for electromagnetic waves).</p>
+                <p><strong>Wave Motion:</strong> Periodic disturbance that travels through space and time.</p>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card wave">
+                    <div class="card-title wave"><i class="fas fa-water"></i> Mechanical Waves</div>
+                    <p>Require material medium. Examples: Sound waves, water waves, seismic waves.</p>
+                    <div class="formula">v = √(T/μ) (string)</div>
+                    <div class="formula">v = √(B/ρ) (fluid)</div>
+                </div>
+
+                <div class="concept-card sound">
+                    <div class="card-title sound"><i class="fas fa-volume-up"></i> Sound Waves</div>
+                    <p>Longitudinal waves in air. Speed in air: v = √(γP/ρ) = √(γRT/M)</p>
+                    <div class="formula">v = 331 + 0.61t m/s</div>
+                    <div class="formula">v ∝ √T (absolute)</div>
+                </div>
+
+                <div class="concept-card doppler">
+                    <div class="card-title doppler"><i class="fas fa-ambulance"></i> Doppler Effect</div>
+                    <p>Change in frequency due to relative motion between source and observer.</p>
+                    <div class="formula">f' = f(v ± v₀)/(v ∓ v_s)</div>
+                    <p>Apparent frequency ≠ actual frequency</p>
+                </div>
+            </div>
+
+            <h3>Wave Classification</h3>
+            <table>
+                <tr>
+                    <th>Basis</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Examples</th>
+                    <th>Equation</th>
+                </tr>
+                <tr>
+                    <td>Medium Required</td>
+                    <td>Mechanical</td>
+                    <td>Requires material medium</td>
+                    <td>Sound, water waves</td>
+                    <td>v = √(elastic property/inertial property)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Electromagnetic</td>
+                    <td>No medium required (vacuum)</td>
+                    <td>Light, radio waves</td>
+                    <td>c = 3×10⁸ m/s in vacuum</td>
+                </tr>
+                <tr>
+                    <td>Vibration Direction</td>
+                    <td>Transverse</td>
+                    <td>Particles vibrate perpendicular to wave direction</td>
+                    <td>Light, string waves</td>
+                    <td>y = A sin(ωt - kx)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Longitudinal</td>
+                    <td>Particles vibrate parallel to wave direction</td>
+                    <td>Sound, spring waves</td>
+                    <td>Pressure variation</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Progressive Waves Section with Animation -->
+        <section class="info-panel" id="progressive-waves">
+            <h2 class="section-title">
+                <i class="fas fa-water"></i>
+                Progressive Wave Motion
+            </h2>
+            <p class="section-description">
+                Progressive waves transfer energy from one point to another without transferring matter. 
+                The particles oscillate about their mean positions while the wave pattern moves forward.
+            </p>
+            
+            <div class="animation-container" id="waveAnimation">
+                <canvas class="wave-canvas" id="waveCanvas"></canvas>
+            </div>
+            
+            <div class="controls">
+                <button class="control-btn" onclick="waveAnimation.toggle()">
+                    <i class="fas fa-play"></i> Toggle Animation
+                </button>
+                <button class="control-btn" onclick="waveAnimation.changeFrequency()">
+                    <i class="fas fa-sliders-h"></i> Change Frequency
+                </button>
+                <button class="control-btn" onclick="waveAnimation.changeAmplitude()">
+                    <i class="fas fa-expand-alt"></i> Change Amplitude
+                </button>
+            </div>
+            
+            <div class="definition">
+                <p><strong>Wave Function:</strong> Mathematical description of wave: y(x,t) = A sin(ωt - kx + φ)</p>
+                <div class="formula">y(x,t) = A sin(ωt - kx + φ)</div>
+                <p>A = amplitude, ω = angular frequency, k = wave number, φ = phase constant</p>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Symbol</th>
+                    <th>Definition</th>
+                    <th>SI Unit</th>
+                    <th>Relations</th>
+                </tr>
+                <tr>
+                    <td>Amplitude</td>
+                    <td>A</td>
+                    <td>Maximum displacement from mean</td>
+                    <td>meter (m)</td>
+                    <td>Determines energy: E ∝ A²</td>
+                </tr>
+                <tr>
+                    <td>Wavelength</td>
+                    <td>λ</td>
+                    <td>Distance between two consecutive points in same phase</td>
+                    <td>meter (m)</td>
+                    <td>Distance for one complete cycle</td>
+                </tr>
+                <tr>
+                    <td>Time Period</td>
+                    <td>T</td>
+                    <td>Time for one complete wave to pass a point</td>
+                    <td>second (s)</td>
+                    <td>T = 1/f = 2π/ω</td>
+                </tr>
+                <tr>
+                    <td>Frequency</td>
+                    <td>f or ν</td>
+                    <td>Number of waves passing a point per second</td>
+                    <td>Hertz (Hz)</td>
+                    <td>f = 1/T = ω/2π</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Wave Equation (1D):</strong> ∂²y/∂t² = v² ∂²y/∂x²</p>
+                <p><strong>Solution:</strong> y(x,t) = f(x - vt) + g(x + vt) (progressive waves)</p>
+                <p><strong>Sinusoidal Solution:</strong> y(x,t) = A sin(ωt ± kx + φ)</p>
+                <p>+ sign: wave traveling in -x direction, - sign: wave traveling in +x direction</p>
+            </div>
+        </section>
+
+        <!-- Standing Waves Section with Animation -->
+        <section class="info-panel" id="standing-waves">
+            <h2 class="section-title">
+                <i class="fas fa-guitar"></i>
+                Standing Waves
+            </h2>
+            <p class="section-description">
+                Standing waves are formed by the superposition of two identical waves traveling in opposite directions. 
+                They have fixed nodes (points of zero amplitude) and antinodes (points of maximum amplitude).
+            </p>
+            
+            <div class="animation-container">
+                <div class="standing-wave-container" id="standingWaveContainer">
+                    <canvas id="standingWaveCanvas"></canvas>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button class="control-btn" onclick="standingWave.toggle()">
+                    <i class="fas fa-play"></i> Toggle Oscillation
+                </button>
+                <button class="control-btn" onclick="standingWave.changeHarmonic()">
+                    <i class="fas fa-wave-square"></i> Change Harmonic
+                </button>
+                <button class="control-btn" onclick="standingWave.toggleNodes()">
+                    <i class="fas fa-circle"></i> Toggle Nodes
+                </button>
+            </div>
+            
+            <div class="definition">
+                <p><strong>Stationary Waves:</strong> Wave pattern resulting from interference of two waves of same frequency and amplitude traveling in opposite directions.</p>
+                <div class="formula">y(x,t) = 2A sin(kx) cos(ωt)</div>
+                <p><strong>Nodes:</strong> Points of zero amplitude (destructive interference)</p>
+                <p><strong>Antinodes:</strong> Points of maximum amplitude (constructive interference)</p>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Aspect</th>
+                    <th>Progressive Wave</th>
+                    <th>Stationary Wave</th>
+                </tr>
+                <tr>
+                    <td>Energy Transfer</td>
+                    <td>Energy transmitted in direction of propagation</td>
+                    <td>No net energy transfer (energy localized)</td>
+                </tr>
+                <tr>
+                    <td>Amplitude</td>
+                    <td>Same for all particles</td>
+                    <td>Varies from 0 (nodes) to 2A (antinodes)</td>
+                </tr>
+                <tr>
+                    <td>Phase</td>
+                    <td>Different phases at different points</td>
+                    <td>Same phase between two nodes, opposite phase between node and antinode</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Stationary Wave Equation:</strong> y(x,t) = 2A sin(kx) cos(ωt)</p>
+                <p><strong>Amplitude variation:</strong> A(x) = 2A |sin(kx)|</p>
+                <p><strong>Nodes:</strong> sin(kx) = 0 ⇒ kx = nπ ⇒ x = nλ/2, n = 0, 1, 2, ...</p>
+                <p><strong>Antinodes:</strong> |sin(kx)| = 1 ⇒ kx = (n + ½)π ⇒ x = (n + ½)λ/2</p>
+            </div>
+        </section>
+
+        <!-- Sound Waves Section with Animation -->
+        <section class="info-panel" id="sound-waves">
+            <h2 class="section-title">
+                <i class="fas fa-volume-up"></i>
+                Sound Waves
+            </h2>
+            <p class="section-description">
+                Sound waves are longitudinal waves consisting of compressions (high pressure) and rarefactions (low pressure). 
+                They require a medium to propagate and travel at different speeds in different media.
+            </p>
+            
+            <div class="animation-container">
+                <div class="sound-wave-container" id="soundWaveContainer">
+                    <canvas id="soundWaveCanvas"></canvas>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button class="control-btn" onclick="soundWave.toggle()">
+                    <i class="fas fa-play"></i> Toggle Animation
+                </button>
+                <button class="control-btn" onclick="soundWave.changeFrequency()">
+                    <i class="fas fa-tachometer-alt"></i> Change Frequency
+                </button>
+                <button class="control-btn" onclick="soundWave.toggleParticles()">
+                    <i class="fas fa-atom"></i> Toggle Particles
+                </button>
+            </div>
+            
+            <div class="definition">
+                <p><strong>Sound Wave:</strong> Longitudinal wave consisting of compressions (high pressure) and rarefactions (low pressure) propagating through a medium.</p>
+                <p><strong>Audible Range:</strong> 20 Hz to 20,000 Hz for humans</p>
+                <p><strong>Infrasonic:</strong> f < 20 Hz, <strong>Ultrasonic:</strong> f > 20,000 Hz</p>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Characteristic</th>
+                    <th>Definition</th>
+                    <th>Depends On</th>
+                    <th>Unit</th>
+                    <th>Formula/Relation</th>
+                </tr>
+                <tr>
+                    <td>Pitch</td>
+                    <td>Subjective perception of frequency</td>
+                    <td>Frequency</td>
+                    <td>-</td>
+                    <td>Higher frequency = higher pitch</td>
+                </tr>
+                <tr>
+                    <td>Loudness</td>
+                    <td>Subjective perception of intensity</td>
+                    <td>Amplitude</td>
+                    <td>decibel (dB)</td>
+                    <td>β = 10 log₁₀(I/I₀), I₀ = 10⁻¹² W/m²</td>
+                </tr>
+                <tr>
+                    <td>Quality/Timbre</td>
+                    <td>Characteristic that distinguishes different sounds of same pitch and loudness</td>
+                    <td>Waveform (harmonics)</td>
+                    <td>-</td>
+                    <td>Depends on number and relative amplitudes of overtones</td>
+                </tr>
+            </table>
+
+            <div class="info-box">
+                <h3 class="info-title">Key Concept</h3>
+                <p class="info-text">
+                    Speed of sound in air: v = 331 + 0.61t m/s<br>
+                    In gases: v = √(γRT/M)<br>
+                    Audible range: 20 Hz - 20,000 Hz<br>
+                    Ultrasound: >20,000 Hz, Infrasound: <20 Hz
+                </p>
+            </div>
+        </section>
+
+        <!-- Doppler Effect Section with Animation -->
+        <section class="info-panel" id="doppler-effect">
+            <h2 class="section-title">
+                <i class="fas fa-ambulance"></i>
+                Doppler Effect
+            </h2>
+            <p class="section-description">
+                The Doppler Effect is the change in frequency observed when there is relative motion between the source of waves and the observer.
+                This causes the familiar change in pitch of a siren as it passes by.
+            </p>
+            
+            <div class="animation-container">
+                <div class="doppler-container" id="dopplerContainer">
+                    <canvas id="dopplerCanvas"></canvas>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button class="control-btn" onclick="dopplerEffect.toggle()">
+                    <i class="fas fa-play"></i> Toggle Animation
+                </button>
+                <button class="control-btn" onclick="dopplerEffect.reverse()">
+                    <i class="fas fa-exchange-alt"></i> Reverse Direction
+                </button>
+                <button class="control-btn" onclick="dopplerEffect.changeSpeed()">
+                    <i class="fas fa-running"></i> Change Speed
+                </button>
+            </div>
+            
+            <div class="definition">
+                <p><strong>Doppler Effect:</strong> Change in frequency (and wavelength) of a wave in relation to an observer moving relative to the source of the wave.</p>
+                <p><strong>Apparent Frequency:</strong> f' = f(v ± v₀)/(v ∓ v_s)</p>
+                <p>where v = speed of wave, v₀ = observer speed, v_s = source speed</p>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Situation</th>
+                    <th>Formula</th>
+                    <th>Explanation</th>
+                    <th>Effect on Frequency</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Source moving toward stationary observer</td>
+                    <td>f' = f v/(v - v_s)</td>
+                    <td>Waves compressed in front</td>
+                    <td>Increase</td>
+                    <td>Ambulance approaching</td>
+                </tr>
+                <tr>
+                    <td>Source moving away from stationary observer</td>
+                    <td>f' = f v/(v + v_s)</td>
+                    <td>Waves stretched behind</td>
+                    <td>Decrease</td>
+                    <td>Ambulance receding</td>
+                </tr>
+                <tr>
+                    <td>Observer moving toward stationary source</td>
+                    <td>f' = f (v + v₀)/v</td>
+                    <td>Observer encounters waves more frequently</td>
+                    <td>Increase</td>
+                    <td>Running toward siren</td>
+                </tr>
+            </table>
+
+            <div class="info-box">
+                <h3 class="info-title">Key Concept</h3>
+                <p class="info-text">
+                    Doppler formula: f' = f(v ± v₀)/(v ∓ vₛ)<br>
+                    + when moving toward, - when moving away<br>
+                    Applies to sound, light (redshift/blueshift), and all waves
+                </p>
+            </div>
+        </section>
+
+        <!-- Beats Section with Animation -->
+        <section class="info-panel" id="beats">
+            <h2 class="section-title">
+                <i class="fas fa-heartbeat"></i>
+                Beats Phenomenon
+            </h2>
+            <p class="section-description">
+                Beats occur when two sound waves of slightly different frequencies interfere with each other. 
+                The result is a periodic variation in amplitude perceived as a pulsating sound.
+            </p>
+            
+            <div class="animation-container">
+                <div class="beats-container" id="beatsContainer">
+                    <canvas id="beatsCanvas"></canvas>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button class="control-btn" onclick="beatsAnimation.toggle()">
+                    <i class="fas fa-play"></i> Toggle Animation
+                </button>
+                <button class="control-btn" onclick="beatsAnimation.changeFrequencies()">
+                    <i class="fas fa-sliders-h"></i> Change Frequencies
+                </button>
+                <button class="control-btn" onclick="beatsAnimation.toggleEnvelope()">
+                    <i class="fas fa-waveform-path"></i> Toggle Envelope
+                </button>
+            </div>
+            
+            <div class="definition">
+                <p><strong>Beats:</strong> Periodic rise and fall in intensity resulting from superposition of two waves of nearly equal frequencies.</p>
+                <div class="formula">y(t) = 2A cos(2πΔf t/2) cos(2πf_avg t)</div>
+                <p>Beat frequency: f_b = |f₁ - f₂|</p>
+                <p>Number of beats per second = difference in frequencies</p>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Symbol</th>
+                    <th>Definition</th>
+                    <th>Formula</th>
+                    <th>Unit</th>
+                </tr>
+                <tr>
+                    <td>Beat Frequency</td>
+                    <td>f_b</td>
+                    <td>Number of beats per second</td>
+                    <td>f_b = |f₁ - f₂|</td>
+                    <td>Hz</td>
+                </tr>
+                <tr>
+                    <td>Beat Period</td>
+                    <td>T_b</td>
+                    <td>Time between successive beats</td>
+                    <td>T_b = 1/f_b</td>
+                    <td>s</td>
+                </tr>
+                <tr>
+                    <td>Average Frequency</td>
+                    <td>f_avg</td>
+                    <td>Average of two frequencies</td>
+                    <td>f_avg = (f₁ + f₂)/2</td>
+                    <td>Hz</td>
+                </tr>
+            </table>
+
+            <div class="info-box">
+                <h3 class="info-title">Key Concept</h3>
+                <p class="info-text">
+                    Beat frequency: f_b = |f₁ - f₂|<br>
+                    Beat period: T_b = 1/f_b<br>
+                    Used in tuning musical instruments and radar speed guns
+                </p>
+            </div>
+        </section>
+
+        <!-- Problem Solving Section -->
+        <section class="info-panel" id="problems">
+            <h2>Problem Solving Strategies</h2>
+            <p>Systematic approach to solve wave problems in JEE and NEET.</p>
+
+            <div class="problem-solving">
+                <div class="problem-box">
+                    <div class="problem-title">Type 1: Wave Parameters</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify given wave function: y(x,t) = A sin(ωt ± kx + φ)</li>
+                        <li>Extract A, ω, k, φ</li>
+                        <li>Calculate: f = ω/2π, T = 1/f, λ = 2π/k, v = ω/k = fλ</li>
+                        <li>Determine direction: -kx → +x direction, +kx → -x direction</li>
+                    </ol>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 2: Stationary Waves</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify boundary conditions (fixed/free ends)</li>
+                        <li>For string fixed at both ends: λ_n = 2L/n, f_n = n(v/2L)</li>
+                        <li>For closed pipe: λ_n = 4L/(2n-1), f_n = (2n-1)(v/4L)</li>
+                        <li>For open pipe: λ_n = 2L/n, f_n = n(v/2L)</li>
+                    </ol>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 3: Doppler Effect</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify source (S), observer (O), medium speed (v)</li>
+                        <li>Use formula: f' = f(v ± v₀)/(v ∓ v_s)</li>
+                        <li>Sign convention: numerator + when O moves toward S</li>
+                        <li>Denominator - when S moves toward O</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary Section -->
+        <section class="info-panel">
+            <h2>Chapter Summary & Key Points</h2>
+            
+            <h3>Essential Formulas</h3>
+            <div class="concept-cards">
+                <div class="concept-card wave">
+                    <div class="card-title wave">Wave Parameters</div>
+                    <div class="formula">y = A sin(ωt - kx)</div>
+                    <div class="formula">v = fλ = ω/k</div>
+                    <div class="formula">k = 2π/λ, ω = 2πf</div>
+                </div>
+
+                <div class="concept-card sound">
+                    <div class="card-title sound">Sound Waves</div>
+                    <div class="formula">v = √(γP/ρ) = √(γRT/M)</div>
+                    <div class="formula">v = 331 + 0.61t m/s</div>
+                    <div class="formula">β = 10 log(I/I₀)</div>
+                </div>
+
+                <div class="concept-card doppler">
+                    <div class="card-title doppler">Doppler & Beats</div>
+                    <div class="formula">f' = f(v ± v₀)/(v ∓ v_s)</div>
+                    <div class="formula">f_b = |f₁ - f₂|</div>
+                </div>
+            </div>
+
+            <h3>Important Points for JEE/NEET</h3>
+            <ul>
+                <li>Wave speed: v = √(T/μ) for string, v = √(γRT/M) for sound in gas</li>
+                <li>Sound in air: v = 331 + 0.61t m/s, v ∝ √T (absolute temperature)</li>
+                <li>Doppler effect: f' = f(v ± v₀)/(v ∓ v_s), approaching: higher f, receding: lower f</li>
+                <li>Stationary waves: Nodes at fixed ends, antinodes at free ends</li>
+                <li>String fixed both ends: f_n = n(v/2L), all harmonics present</li>
+                <li>Pipe closed one end: f_n = (2n-1)(v/4L), only odd harmonics</li>
+                <li>Beats: f_b = |f₁ - f₂|, used for tuning instruments</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Nerds Assemble</h3>
+                <p>Master Waves for JEE & NEET. Comprehensive physics resource with detailed explanations, problem-solving strategies, and interactive animations.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#progressive-waves">Progressive Waves</a></li>
+                    <li><a href="#standing-waves">Standing Waves</a></li>
+                    <li><a href="#sound-waves">Sound Waves</a></li>
+                    <li><a href="#doppler-effect">Doppler Effect</a></li>
+                    <li><a href="#beats">Beats</a></li>
+                    <li><a href="#problems">Problem Solving</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact & Resources</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> 44mr.invisible@gmail.com</li>
+                </ul>
+        <div class="copyright">
+            <p>&copy; 2024 Nerds Assemble. All rights reserved. | Designed for JEE & NEET Aspirants | Waves Physics with Perfect Animations | SEO Optimized</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Combined JavaScript for Waves Physics with Perfect Animations
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ?
+                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+            }
+
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+
+            function handleScroll() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('active');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                }
+            }
+
+            window.addEventListener('scroll', function() {
+                handleScroll();
+            }, { passive: true });
+
+            // Smooth Scroll for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        if (mainNav && mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                });
+            });
+
+            // Back to Top Button Click
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Create Particles Background
+            createParticles();
+        });
+
+        // Progressive Wave Animation
+        class WaveAnimation {
+            constructor(canvasId) {
+                this.canvas = document.getElementById(canvasId);
+                this.ctx = this.canvas.getContext('2d');
+                this.width = this.canvas.width = this.canvas.parentElement.clientWidth;
+                this.height = this.canvas.height = this.canvas.parentElement.clientHeight;
+                
+                this.amplitude = 50;
+                this.frequency = 0.02;
+                this.speed = 0.05;
+                this.time = 0;
+                this.isRunning = true;
+                
+                this.init();
+            }
+
+            init() {
+                this.animate();
+                
+                // Handle resize
+                window.addEventListener('resize', () => {
+                    this.width = this.canvas.width = this.canvas.parentElement.clientWidth;
+                    this.height = this.canvas.height = this.canvas.parentElement.clientHeight;
+                });
+            }
+
+            draw() {
+                // Clear canvas
+                this.ctx.clearRect(0, 0, this.width, this.height);
+                
+                // Draw grid
+                this.ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+                this.ctx.lineWidth = 1;
+                
+                // Draw center line
+                this.ctx.beginPath();
+                this.ctx.moveTo(0, this.height / 2);
+                this.ctx.lineTo(this.width, this.height / 2);
+                this.ctx.stroke();
+                
+                // Draw wave
+                this.ctx.strokeStyle = '#00BCD4';
+                this.ctx.lineWidth = 3;
+                this.ctx.beginPath();
+                
+                const centerY = this.height / 2;
+                const points = 200;
+                
+                for (let i = 0; i <= points; i++) {
+                    const x = (i / points) * this.width;
+                    const y = centerY + this.amplitude * Math.sin(this.frequency * x + this.time);
+                    
+                    if (i === 0) {
+                        this.ctx.moveTo(x, y);
+                    } else {
+                        this.ctx.lineTo(x, y);
+                    }
+                }
+                
+                this.ctx.stroke();
+                
+                // Draw amplitude indicator
+                this.ctx.strokeStyle = '#FFD700';
+                this.ctx.setLineDash([5, 5]);
+                this.ctx.beginPath();
+                this.ctx.moveTo(this.width / 2, centerY - this.amplitude);
+                this.ctx.lineTo(this.width / 2, centerY + this.amplitude);
+                this.ctx.stroke();
+                this.ctx.setLineDash([]);
+                
+                // Draw labels
+                this.ctx.fillStyle = '#FFD700';
+                this.ctx.font = '14px Arial';
+                this.ctx.fillText('A', this.width / 2 + 10, centerY);
+                this.ctx.fillText('λ', this.width / 4, centerY - this.amplitude - 10);
+            }
+
+            animate() {
+                if (!this.isRunning) return;
+                
+                this.time += this.speed;
+                this.draw();
+                requestAnimationFrame(() => this.animate());
+            }
+
+            toggle() {
+                this.isRunning = !this.isRunning;
+                if (this.isRunning) this.animate();
+            }
+
+            changeFrequency() {
+                this.frequency = 0.01 + Math.random() * 0.03;
+            }
+
+            changeAmplitude() {
+                this.amplitude = 30 + Math.random() * 40;
+            }
+        }
+
+        // Standing Wave Animation
+        class StandingWave {
+            constructor(canvasId) {
+                this.canvas = document.getElementById(canvasId);
+                this.ctx = this.canvas.getContext('2d');
+                const container = this.canvas.parentElement;
+                this.width = this.canvas.width = container.clientWidth;
+                this.height = this.canvas.height = container.clientHeight;
+                
+                this.amplitude = 60;
+                this.frequency = 1;
+                this.time = 0;
+                this.isRunning = true;
+                this.harmonic = 1;
+                this.showNodes = true;
+                
+                this.init();
+            }
+
+            init() {
+                this.animate();
+            }
+
+            draw() {
+                this.ctx.clearRect(0, 0, this.width, this.height);
+                
+                // Draw string
+                this.ctx.strokeStyle = '#536DFE';
+                this.ctx.lineWidth = 2;
+                this.ctx.beginPath();
+                this.ctx.moveTo(0, this.height / 2);
+                this.ctx.lineTo(this.width, this.height / 2);
+                this.ctx.stroke();
+                
+                // Draw standing wave
+                this.ctx.strokeStyle = '#E040FB';
+                this.ctx.lineWidth = 4;
+                this.ctx.beginPath();
+                
+                const centerY = this.height / 2;
+                const wavelength = this.width / (2 * this.harmonic);
+                const points = 300;
+                
+                for (let i = 0; i <= points; i++) {
+                    const x = (i / points) * this.width;
+                    const y = centerY + this.amplitude * 
+                                Math.sin((2 * Math.PI * this.harmonic * x) / this.width) * 
+                                Math.cos(this.frequency * this.time);
+                    
+                    if (i === 0) {
+                        this.ctx.moveTo(x, y);
+                    } else {
+                        this.ctx.lineTo(x, y);
+                    }
+                }
+                
+                this.ctx.stroke();
+                
+                // Draw nodes and antinodes
+                if (this.showNodes) {
+                    const nodeCount = this.harmonic + 1;
+                    
+                    // Draw nodes
+                    for (let i = 0; i < nodeCount; i++) {
+                        const x = (i / this.harmonic) * (this.width / 2);
+                        this.ctx.fillStyle = '#FFD700';
+                        this.ctx.beginPath();
+                        this.ctx.arc(x, centerY, 6, 0, Math.PI * 2);
+                        this.ctx.fill();
+                    }
+                    
+                    // Draw antinodes
+                    for (let i = 0; i < this.harmonic; i++) {
+                        const x = ((2 * i + 1) / (2 * this.harmonic)) * this.width;
+                        this.ctx.fillStyle = '#00BCD4';
+                        this.ctx.beginPath();
+                        this.ctx.arc(x, centerY, 8, 0, Math.PI * 2);
+                        this.ctx.fill();
+                    }
+                }
+                
+                // Draw harmonic label
+                this.ctx.fillStyle = '#FFD700';
+                this.ctx.font = '16px Orbitron';
+                this.ctx.fillText(`Harmonic: n = ${this.harmonic}`, 20, 30);
+            }
+
+            animate() {
+                if (!this.isRunning) return;
+                
+                this.time += 0.05;
+                this.draw();
+                requestAnimationFrame(() => this.animate());
+            }
+
+            toggle() {
+                this.isRunning = !this.isRunning;
+                if (this.isRunning) this.animate();
+            }
+
+            changeHarmonic() {
+                this.harmonic = (this.harmonic % 4) + 1;
+                this.amplitude = 80 / this.harmonic;
+            }
+
+            toggleNodes() {
+                this.showNodes = !this.showNodes;
+            }
+        }
+
+        // Sound Wave Animation
+        class SoundWaveAnimation {
+            constructor(canvasId) {
+                this.canvas = document.getElementById(canvasId);
+                this.ctx = this.canvas.getContext('2d');
+                const container = this.canvas.parentElement;
+                this.width = this.canvas.width = container.clientWidth;
+                this.height = this.canvas.height = container.clientHeight;
+                
+                this.frequency = 0.03;
+                this.time = 0;
+                this.isRunning = true;
+                this.showParticles = true;
+                this.particles = [];
+                
+                this.init();
+            }
+
+            init() {
+                // Initialize particles
+                for (let i = 0; i < 50; i++) {
+                    this.particles.push({
+                        x: Math.random() * this.width,
+                        y: this.height / 2,
+                        size: 2 + Math.random() * 3,
+                        speed: 0.5 + Math.random() * 1,
+                        phase: Math.random() * Math.PI * 2
+                    });
+                }
+                
+                this.animate();
+            }
+
+            draw() {
+                this.ctx.clearRect(0, 0, this.width, this.height);
+                
+                // Draw compression and rarefaction zones
+                const zoneWidth = this.width / 8;
+                const centerY = this.height / 2;
+                
+                for (let i = 0; i < 8; i++) {
+                    const x = i * zoneWidth;
+                    const isCompression = i % 2 === 0;
+                    
+                    this.ctx.fillStyle = isCompression ? 
+                        'rgba(224, 64, 251, 0.3)' : 'rgba(0, 188, 212, 0.3)';
+                    this.ctx.fillRect(x, centerY - 50, zoneWidth, 100);
+                    
+                    // Draw label
+                    this.ctx.fillStyle = '#FFFFFF';
+                    this.ctx.font = '12px Arial';
+                    this.ctx.fillText(
+                        isCompression ? 'Compression' : 'Rarefaction',
+                        x + 10, centerY - 60
+                    );
+                }
+                
+                // Draw particles
+                if (this.showParticles) {
+                    this.ctx.fillStyle = '#FFD700';
+                    
+                    this.particles.forEach(particle => {
+                        const displacement = 40 * Math.sin(this.frequency * particle.x + this.time + particle.phase);
+                        particle.y = centerY + displacement;
+                        
+                        this.ctx.beginPath();
+                        this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+                        this.ctx.fill();
+                        
+                        // Move particle
+                        particle.x += particle.speed;
+                        if (particle.x > this.width) particle.x = 0;
+                    });
+                }
+                
+                // Draw direction arrow
+                this.ctx.strokeStyle = '#00BCD4';
+                this.ctx.lineWidth = 3;
+                this.ctx.beginPath();
+                this.ctx.moveTo(this.width - 50, centerY);
+                this.ctx.lineTo(this.width - 20, centerY);
+                this.ctx.moveTo(this.width - 30, centerY - 10);
+                this.ctx.lineTo(this.width - 20, centerY);
+                this.ctx.lineTo(this.width - 30, centerY + 10);
+                this.ctx.stroke();
+                
+                this.ctx.fillStyle = '#00BCD4';
+                this.ctx.font = '14px Arial';
+                this.ctx.fillText('Wave Direction', this.width - 150, centerY - 20);
+            }
+
+            animate() {
+                if (!this.isRunning) return;
+                
+                this.time += 0.05;
+                this.draw();
+                requestAnimationFrame(() => this.animate());
+            }
+
+            toggle() {
+                this.isRunning = !this.isRunning;
+                if (this.isRunning) this.animate();
+            }
+
+            changeFrequency() {
+                this.frequency = 0.02 + Math.random() * 0.02;
+            }
+
+            toggleParticles() {
+                this.showParticles = !this.showParticles;
+            }
+        }
+
+        // Doppler Effect Animation
+        class DopplerEffect {
+            constructor(canvasId) {
+                this.canvas = document.getElementById(canvasId);
+                this.ctx = this.canvas.getContext('2d');
+                const container = this.canvas.parentElement;
+                this.width = this.canvas.width = container.clientWidth;
+                this.height = this.canvas.height = container.clientHeight;
+                
+                this.sourceX = 100;
+                this.sourceSpeed = 2;
+                this.direction = 1;
+                this.waves = [];
+                this.waveCount = 0;
+                this.isRunning = true;
+                
+                this.init();
+            }
+
+            init() {
+                this.animate();
+                
+                // Create waves periodically
+                setInterval(() => {
+                    if (this.isRunning) {
+                        this.waves.push({
+                            x: this.sourceX,
+                            y: this.height / 2,
+                            radius: 10,
+                            alpha: 1,
+                            color: this.direction > 0 ? '#00BCD4' : '#E040FB'
+                        });
+                    }
+                }, 300);
+            }
+
+            draw() {
+                this.ctx.clearRect(0, 0, this.width, this.height);
+                
+                // Draw observer
+                this.ctx.fillStyle = '#FFD700';
+                this.ctx.beginPath();
+                this.ctx.arc(this.width - 100, this.height / 2, 20, 0, Math.PI * 2);
+                this.ctx.fill();
+                
+                this.ctx.fillStyle = '#000';
+                this.ctx.font = '12px Arial';
+                this.ctx.fillText('Observer', this.width - 120, this.height / 2 - 30);
+                
+                // Draw moving source
+                this.ctx.fillStyle = '#E040FB';
+                this.ctx.beginPath();
+                this.ctx.arc(this.sourceX, this.height / 2, 15, 0, Math.PI * 2);
+                this.ctx.fill();
+                
+                // Draw waves
+                this.waves.forEach((wave, index) => {
+                    this.ctx.strokeStyle = wave.color;
+                    this.ctx.globalAlpha = wave.alpha;
+                    this.ctx.lineWidth = 2;
+                    this.ctx.beginPath();
+                    this.ctx.arc(wave.x, wave.y, wave.radius, 0, Math.PI * 2);
+                    this.ctx.stroke();
+                    
+                    // Expand wave
+                    wave.radius += 3;
+                    wave.alpha -= 0.02;
+                    
+                    // Remove old waves
+                    if (wave.alpha <= 0) {
+                        this.waves.splice(index, 1);
+                    }
+                });
+                
+                this.ctx.globalAlpha = 1;
+                
+                // Update source position
+                this.sourceX += this.sourceSpeed * this.direction;
+                
+                // Reverse direction at edges
+                if (this.sourceX > this.width - 50 || this.sourceX < 50) {
+                    this.direction *= -1;
+                }
+                
+                // Draw frequency labels
+                this.ctx.fillStyle = '#FFFFFF';
+                this.ctx.font = '14px Arial';
+                if (this.direction > 0) {
+                    this.ctx.fillText('Higher Frequency (Approaching)', 20, 30);
+                    this.ctx.fillText('Lower Frequency (Receding)', this.width - 200, 30);
+                } else {
+                    this.ctx.fillText('Lower Frequency (Receding)', 20, 30);
+                    this.ctx.fillText('Higher Frequency (Approaching)', this.width - 200, 30);
+                }
+            }
+
+            animate() {
+                if (!this.isRunning) return;
+                
+                this.draw();
+                requestAnimationFrame(() => this.animate());
+            }
+
+            toggle() {
+                this.isRunning = !this.isRunning;
+                if (this.isRunning) this.animate();
+            }
+
+            reverse() {
+                this.direction *= -1;
+            }
+
+            changeSpeed() {
+                this.sourceSpeed = 1 + Math.random() * 3;
+            }
+        }
+
+        // Beats Animation
+        class BeatsAnimation {
+            constructor(canvasId) {
+                this.canvas = document.getElementById(canvasId);
+                this.ctx = this.canvas.getContext('2d');
+                const container = this.canvas.parentElement;
+                this.width = this.canvas.width = container.clientWidth;
+                this.height = this.canvas.height = container.clientHeight;
+                
+                this.f1 = 0.05;
+                this.f2 = 0.055;
+                this.time = 0;
+                this.isRunning = true;
+                this.showEnvelope = true;
+                
+                this.init();
+            }
+
+            init() {
+                this.animate();
+            }
+
+            draw() {
+                this.ctx.clearRect(0, 0, this.width, this.height);
+                
+                // Draw grid
+                this.ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+                this.ctx.lineWidth = 1;
+                
+                // Vertical lines
+                for (let x = 0; x < this.width; x += 50) {
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(x, 0);
+                    this.ctx.lineTo(x, this.height);
+                    this.ctx.stroke();
+                }
+                
+                // Center line
+                this.ctx.strokeStyle = 'rgba(255, 215, 0, 0.3)';
+                this.ctx.beginPath();
+                this.ctx.moveTo(0, this.height / 2);
+                this.ctx.lineTo(this.width, this.height / 2);
+                this.ctx.stroke();
+                
+                // Draw beats waveform
+                this.ctx.strokeStyle = '#E040FB';
+                this.ctx.lineWidth = 3;
+                this.ctx.beginPath();
+                
+                const centerY = this.height / 2;
+                const amplitude = this.height / 3;
+                
+                for (let x = 0; x < this.width; x++) {
+                    const t = (x / this.width) * 20 + this.time;
+                    // Superposition of two waves
+                    const y = centerY + amplitude * 
+                                (Math.sin(this.f1 * t) + Math.sin(this.f2 * t)) / 2;
+                    
+                    if (x === 0) {
+                        this.ctx.moveTo(x, y);
+                    } else {
+                        this.ctx.lineTo(x, y);
+                    }
+                }
+                
+                this.ctx.stroke();
+                
+                // Draw envelope if enabled
+                if (this.showEnvelope) {
+                    this.ctx.strokeStyle = '#00BCD4';
+                    this.ctx.lineWidth = 2;
+                    this.ctx.setLineDash([5, 5]);
+                    this.ctx.beginPath();
+                    
+                    const beatFreq = Math.abs(this.f1 - this.f2);
+                    
+                    for (let x = 0; x < this.width; x++) {
+                        const t = (x / this.width) * 20 + this.time;
+                        const envelope = 2 * Math.cos(beatFreq * t / 2);
+                        const y = centerY + amplitude * envelope;
+                        
+                        if (x === 0) {
+                            this.ctx.moveTo(x, y);
+                        } else {
+                            this.ctx.lineTo(x, y);
+                        }
+                    }
+                    
+                    this.ctx.stroke();
+                    this.ctx.setLineDash([]);
+                }
+                
+                // Draw info
+                this.ctx.fillStyle = '#FFD700';
+                this.ctx.font = '14px Orbitron';
+                const beatFreq = Math.abs(this.f1 - this.f2).toFixed(4);
+                this.ctx.fillText(`Beat Frequency: f_b = |${this.f1.toFixed(3)} - ${this.f2.toFixed(3)}| = ${beatFreq} Hz`, 20, 30);
+                this.ctx.fillText(`Beat Period: T_b = 1/f_b = ${(1/beatFreq).toFixed(2)} s`, 20, 50);
+            }
+
+            animate() {
+                if (!this.isRunning) return;
+                
+                this.time += 0.05;
+                this.draw();
+                requestAnimationFrame(() => this.animate());
+            }
+
+            toggle() {
+                this.isRunning = !this.isRunning;
+                if (this.isRunning) this.animate();
+            }
+
+            changeFrequencies() {
+                this.f1 = 0.04 + Math.random() * 0.02;
+                this.f2 = this.f1 + 0.005 + Math.random() * 0.01;
+            }
+
+            toggleEnvelope() {
+                this.showEnvelope = !this.showEnvelope;
+            }
+        }
+
+        // Create Particles Function
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
+
+            const particleCount = window.innerWidth < 768 ? 20 : 40;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle', 'particle-anim');
+
+                const size = Math.random() * 4 + 1;
+                const posX = Math.random() * window.innerWidth;
+                const duration = Math.random() * 15 + 10;
+                const delay = Math.random() * 5;
+                const color = Math.random() > 0.5 ? 'rgba(0, 188, 212, 0.3)' : 'rgba(224, 64, 251, 0.3)';
+
+                particle.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}px;
+                    top: 100%;
+                    opacity: ${Math.random() * 0.3 + 0.1};
+                    animation-duration: ${duration}s;
+                    animation-delay: ${delay}s;
+                    background: ${color};
+                    border-radius: 50%;
+                `;
+
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Initialize all animations when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            // Create animation instances
+            window.waveAnimation = new WaveAnimation('waveCanvas');
+            window.standingWave = new StandingWave('standingWaveCanvas');
+            window.soundWave = new SoundWaveAnimation('soundWaveCanvas');
+            window.dopplerEffect = new DopplerEffect('dopplerCanvas');
+            window.beatsAnimation = new BeatsAnimation('beatsCanvas');
+            
+            console.log('All animations initialized successfully!');
+        });
+
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                // Recreate particles on resize
+                const particlesContainer = document.getElementById('particles');
+                if (particlesContainer) {
+                    particlesContainer.innerHTML = '';
+                    createParticles();
+                }
+            }, 250);
+        });
+    </script>
+</body>
+</html>
