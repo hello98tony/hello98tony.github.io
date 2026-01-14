@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanical Properties of Fluids | Class 11 Physics | JEE & NEET Preparation</title>
+    <meta name="description" content="Master Mechanical Properties of Fluids for Class 11 Physics. Complete guide for JEE & NEET aspirants covering pressure, viscosity, surface tension, Bernoulli's theorem, and fluid dynamics.">
+    <meta name="keywords" content="Mechanical Properties of Fluids, Fluid Mechanics, Physics Class 11, JEE preparation, NEET physics, Pressure, Viscosity, Surface Tension, Bernoulli's Theorem, Hydrostatics, Fluid Dynamics">
+    <meta name="author" content="Nerds Assemble">
+    <meta name="robots" content="index, follow">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Mechanical Properties of Fluids | Class 11 Physics">
+    <meta property="og:description" content="Complete guide to Fluid Mechanics for JEE & NEET aspirants">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nerdsassemble.com/fluid-mechanics">
+    
+    <!-- Structured Data for Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Mechanical Properties of Fluids - Class 11 Physics",
+        "description": "Complete guide to Fluid Mechanics with pressure, viscosity, surface tension, and Bernoulli's theorem for JEE & NEET",
+        "educationalLevel": "High School",
+        "learningResourceType": "Educational Course",
+        "author": {
+            "@type": "Organization",
+            "name": "Nerds Assemble"
+        },
+        "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": "Student",
+            "audienceType": ["JEE Aspirants", "NEET Aspirants"]
+        }
+    }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;700&family=Pacifico&family=Dancing+Script:wght@700&family=Abril+Fatface&family=Playfair+Display:wght@700&family=Raleway:wght@300;800&family=Quicksand:wght@500&family=Poiret+One&family=Amatic+SC:wght@700&family=Caveat:wght@700&family=Kaushan+Script&family=Libre+Baskerville&family=Merriweather&family=Nunito:wght@800&family=Oswald:wght@500&family=Roboto+Slab:wght@700&family=Sacramento&family=Tangerine:wght@700&family=Yeseva+One&family=Electrolize&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/water.png">
+    
+    <style>
+        /* Mechanical Properties of Fluids - Nerds Assemble CSS */
+        :root {
+            --fluid-primary: #2196F3;
+            --fluid-secondary: #00BCD4;
+            --fluid-tertiary: #4CAF50;
+            --fluid-accent: #FF5722;
+            --fluid-bg: #0a0a20;
+            --fluid-text: #ffffff;
+            --fluid-highlight: #FFD700;
+            --fluid-nav-bg: rgba(10, 5, 30, 0.95);
+            --fluid-gradient: linear-gradient(45deg, #2196F3, #00BCD4);
+            --viscosity-gradient: linear-gradient(45deg, #4CAF50, #8BC34A);
+            --pressure-gradient: linear-gradient(45deg, #FF5722, #FF9800);
+            --surface-tension-gradient: linear-gradient(45deg, #9C27B0, #E91E63);
+        }
+
+        /* Base Styles & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--fluid-bg);
+            color: var(--fluid-text);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overscroll-behavior-y: contain;
+            -webkit-overflow-scrolling: touch;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(33, 150, 243, 0.15) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(76, 175, 80, 0.15) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(255, 87, 34, 0.1) 0%, transparent 30%),
+                linear-gradient(to bottom, rgba(10, 10, 32, 0.9), rgba(5, 5, 15, 0.95));
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+            background: linear-gradient(45deg, var(--fluid-primary), var(--fluid-secondary), var(--fluid-tertiary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(33, 150, 243, 0.5);
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--fluid-highlight);
+            margin: 2rem 0 1.5rem;
+            font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--fluid-primary), transparent);
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-family: 'Roboto Slab', serif;
+            color: var(--fluid-secondary);
+            margin: 1.5rem 0 1rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+        }
+
+        p {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+        }
+
+        /* Layout Components */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            flex: 1;
+            padding: 0 1rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Raleway', sans-serif;
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+            color: var(--fluid-secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--fluid-nav-bg);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            transform: translateZ(0);
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            color: var(--fluid-highlight);
+            font-size: 1.6rem;
+        }
+
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--fluid-primary), var(--fluid-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.4rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        .nav-links a {
+            color: var(--fluid-text);
+            text-decoration: none;
+            font-family: 'Electrolize', sans-serif;
+            font-size: 0.95rem;
+            transition: color 0.2s ease-out;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--fluid-highlight);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--fluid-highlight);
+            transition: width 0.2s ease-out;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--fluid-text);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* Content Panels */
+        .info-panel {
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
+            padding: 1.8rem;
+            margin: 1.8rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: translateZ(0);
+            will-change: transform, opacity;
+        }
+
+        /* Special Content Blocks */
+        .important {
+            background: rgba(33, 150, 243, 0.1);
+            border-left: 4px solid var(--fluid-primary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(33, 150, 243, 0.1);
+        }
+
+        .definition {
+            background: rgba(255, 215, 0, 0.1);
+            border-left: 4px solid var(--fluid-highlight);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.1);
+        }
+
+        .formula {
+            font-family: 'Audiowide', cursive;
+            color: var(--fluid-highlight);
+            margin: 1.2rem 0;
+            padding: 1.2rem;
+            background: rgba(33, 150, 243, 0.1);
+            border-radius: 8px;
+            border: 1px dashed var(--fluid-highlight);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.1rem;
+        }
+
+        .example {
+            background: rgba(76, 175, 80, 0.1);
+            border-left: 4px solid var(--fluid-tertiary);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: var(--fluid-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Lists & Tables */
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 1.8rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background-color: rgba(33, 150, 243, 0.2);
+            font-family: 'Electrolize', sans-serif;
+            color: var(--fluid-highlight);
+            font-size: 0.95rem;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+
+        tr:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* Concept Cards */
+        .concept-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .concept-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(33, 150, 243, 0.2);
+        }
+
+        .concept-card.hydrostatics {
+            border-top: 4px solid var(--fluid-primary);
+        }
+
+        .concept-card.viscosity {
+            border-top: 4px solid var(--fluid-tertiary);
+        }
+
+        .concept-card.surface-tension {
+            border-top: 4px solid #9C27B0;
+        }
+
+        .concept-card.fluid-dynamics {
+            border-top: 4px solid var(--fluid-accent);
+        }
+
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title.hydrostatics { color: var(--fluid-primary); }
+        .card-title.viscosity { color: var(--fluid-tertiary); }
+        .card-title.surface-tension { color: #9C27B0; }
+        .card-title.fluid-dynamics { color: var(--fluid-accent); }
+
+        /* Fluid Visualization */
+        .fluid-container {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fluid-demo {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            margin: 1rem 0;
+            background: rgba(33, 150, 243, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .fluid-layer {
+            position: absolute;
+            width: 100%;
+            background: linear-gradient(to bottom, transparent, rgba(33, 150, 243, 0.3));
+            border-radius: 50% 50% 0 0;
+        }
+
+        .fluid-particle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: var(--fluid-highlight);
+            border-radius: 50%;
+            animation: float 3s infinite ease-in-out;
+        }
+
+        /* Fluid Animation */
+        .flow-animation {
+            height: 100px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .flowing-fluid {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .flow-line {
+            position: absolute;
+            height: 2px;
+            background: var(--fluid-primary);
+            top: 50%;
+            opacity: 0.6;
+            animation: flow 3s linear infinite;
+        }
+
+        /* Equation Cards */
+        .equation-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .equation-card {
+            background: rgba(255,87,34,0.1);
+            border-radius: 10px;
+            padding: 1.2rem;
+            text-align: center;
+            border: 1px solid rgba(255,87,34,0.3);
+        }
+
+        .equation {
+            font-family: 'Audiowide', cursive;
+            color: var(--fluid-accent);
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+
+        /* Problem Solving Section */
+        .problem-solving {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .problem-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--fluid-primary);
+        }
+
+        .problem-title {
+            color: var(--fluid-primary);
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            margin: 2rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--fluid-nav-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .footer-column h3 {
+            color: var(--fluid-highlight);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--fluid-text);
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            transition: color 0.2s ease-out;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--fluid-highlight);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--fluid-text);
+            font-size: 1.1rem;
+            transition: color 0.2s ease-out;
+        }
+
+        .social-links a:hover {
+            color: var(--fluid-highlight);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 1.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Quicksand', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 45px;
+            height: 45px;
+            background: var(--fluid-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease-out;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
+            transform: translateZ(0);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--fluid-highlight);
+            transform: translateY(-5px);
+        }
+
+        /* JEE/NEET Specific Styling */
+        .exam-highlight {
+            background: rgba(255, 235, 0, 0.1);
+            border: 2px solid var(--fluid-highlight);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .exam-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--fluid-highlight);
+            color: var(--fluid-bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        @keyframes flow {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        @keyframes bubble-rise {
+            0% { bottom: 0; opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { bottom: 100%; opacity: 0; }
+        }
+
+        @keyframes wave {
+            0% { transform: translateX(0) translateY(0); }
+            50% { transform: translateX(-10px) translateY(-5px); }
+            100% { transform: translateX(0) translateY(0); }
+        }
+
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .flow {
+            animation: flow 2s linear infinite;
+        }
+
+        .bubble-rise {
+            animation: bubble-rise 4s linear infinite;
+        }
+
+        .wave {
+            animation: wave 3s ease-in-out infinite;
+        }
+
+        /* Swiper Carousel */
+        .swiper-container {
+            width: 100%;
+            height: auto;
+            min-height: 180px;
+            margin: 2.5rem 0;
+            will-change: transform;
+        }
+
+        .swiper-slide {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+            font-family: 'Electrolize', sans-serif;
+            padding: 1.2rem;
+            box-sizing: border-box;
+            text-align: center;
+            min-height: 180px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .swiper-title {
+            font-family: 'Audiowide', cursive;
+            color: var(--fluid-highlight);
+            margin-bottom: 0.5rem;
+            font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+        }
+
+        .swiper-text {
+            font-family: 'Quicksand', sans-serif;
+            font-size: clamp(0.85rem, 1.1vw, 1rem);
+        }
+
+        /* Particles Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            will-change: transform;
+            opacity: 0.3;
+        }
+
+        /* Fluid Bubbles */
+        .bubble {
+            position: absolute;
+            background: rgba(33, 150, 243, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+            will-change: transform;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                margin-top: 1rem;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.75rem 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .container {
+                width: 95%;
+                padding: 0;
+            }
+
+            .concept-cards, .problem-solving {
+                grid-template-columns: 1fr;
+            }
+
+            .equation-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-panel {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    <div class="bubbles" id="bubbles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-water"></i></span>
+                <span class="logo-text">Nerds Assemble</span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#pressure">Pressure & Hydrostatics</a></li>
+                    <li><a href="#viscosity">Viscosity</a></li>
+                    <li><a href="#surface-tension">Surface Tension</a></li>
+                    <li><a href="#bernoulli">Bernoulli's Theorem</a></li>
+                    <li><a href="#applications">Applications</a></li>
+                    <li><a href="#problems">Problems</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="page-header" data-aos="fade-down">
+            <h1>Mechanical Properties of Fluids</h1>
+            <p class="subtitle">Class 11 Physics | JEE & NEET Preparation Guide</p>
+            <p>Master Fluid Mechanics - Study of fluids at rest and in motion</p>
+            
+            <!-- Fluid Animation -->
+            <div class="flow-animation">
+                <div class="flowing-fluid">
+                    <div class="flow-line" style="width: 30%; top: 20%; animation-delay: 0s;"></div>
+                    <div class="flow-line" style="width: 40%; top: 40%; animation-delay: 0.5s;"></div>
+                    <div class="flow-line" style="width: 35%; top: 60%; animation-delay: 1s;"></div>
+                    <div class="flow-line" style="width: 45%; top: 80%; animation-delay: 1.5s;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="info-panel" id="introduction" data-aos="fade-up">
+            <h2>Introduction to Fluid Mechanics</h2>
+            <p>Fluid mechanics is the branch of physics that studies fluids (liquids and gases) and the forces on them. It has two main branches: fluid statics (fluids at rest) and fluid dynamics (fluids in motion).</p>
+
+            <div class="definition">
+                <p><strong>Fluid:</strong> A substance that deforms continuously under the application of shear stress, no matter how small. Both liquids and gases are fluids.</p>
+            </div>
+
+            <div class="concept-cards">
+                <div class="concept-card hydrostatics" data-aos="flip-left">
+                    <div class="card-title hydrostatics"><i class="fas fa-weight-hanging"></i> Fluid Statics</div>
+                    <p>Study of fluids at rest. Deals with pressure, buoyancy, and hydrostatic equilibrium.</p>
+                    <div class="formula">P = F/A</div>
+                    <div class="formula">P = ρgh</div>
+                </div>
+
+                <div class="concept-card viscosity" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-title viscosity"><i class="fas fa-tint"></i> Viscosity</div>
+                    <p>Internal friction of a fluid. Resistance to flow. Depends on temperature and nature of fluid.</p>
+                    <div class="formula">F = ηA(dv/dx)</div>
+                    <div class="formula">η = (πPr⁴)/(8Vl)</div>
+                </div>
+
+                <div class="concept-card surface-tension" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card-title surface-tension"><i class="fas fa-circle"></i> Surface Tension</div>
+                    <p>Tendency of liquid surfaces to shrink into minimum surface area. Caused by cohesive forces.</p>
+                    <div class="formula">T = F/l</div>
+                    <div class="formula">P = 2T/R</div>
+                </div>
+            </div>
+
+            <h3>Basic Properties of Fluids</h3>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Definition</th>
+                    <th>SI Unit</th>
+                    <th>Important Points</th>
+                </tr>
+                <tr>
+                    <td>Density (ρ)</td>
+                    <td>Mass per unit volume</td>
+                    <td>kg/m³</td>
+                    <td>ρ = m/V; Water: 1000 kg/m³</td>
+                </tr>
+                <tr>
+                    <td>Pressure (P)</td>
+                    <td>Force per unit area</td>
+                    <td>Pascal (Pa)</td>
+                    <td>P = F/A; 1 Pa = 1 N/m²</td>
+                </tr>
+                <tr>
+                    <td>Viscosity (η)</td>
+                    <td>Internal friction/resistance to flow</td>
+                    <td>Pa·s or Poise</td>
+                    <td>η decreases with temperature for liquids</td>
+                </tr>
+                <tr>
+                    <td>Surface Tension (T)</td>
+                    <td>Force per unit length</td>
+                    <td>N/m</td>
+                    <td>Causes capillary action, droplets</td>
+                </tr>
+                <tr>
+                    <td>Compressibility</td>
+                    <td>Volume change with pressure</td>
+                    <td>Pa⁻¹</td>
+                    <td>Liquids: nearly incompressible</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Pressure & Hydrostatics Section -->
+        <section class="info-panel" id="pressure" data-aos="fade-up">
+            <h2>Pressure & Hydrostatics</h2>
+            <p>Fluid statics deals with fluids at rest. The key concept is pressure, which increases with depth.</p>
+
+            <div class="definition">
+                <p><strong>Pressure:</strong> Force per unit area. In fluids, pressure acts equally in all directions at a point.</p>
+                <div class="formula">P = F/A</div>
+            </div>
+
+            <h3>Hydrostatic Pressure</h3>
+            <div class="fluid-container">
+                <div class="fluid-demo" id="pressureDemo">
+                    <!-- Fluid levels will be created by JavaScript -->
+                </div>
+            </div>
+
+            <div class="formula">P = P₀ + ρgh</div>
+            <p>Where:<br>
+            P = Pressure at depth h<br>
+            P₀ = Atmospheric pressure (1.01 × 10⁵ Pa)<br>
+            ρ = Density of fluid<br>
+            g = Acceleration due to gravity (9.8 m/s²)<br>
+            h = Depth below surface</p>
+
+            <div class="important">
+                <p><strong>Pascal's Law:</strong> Pressure applied to an enclosed fluid is transmitted undiminished to every portion of the fluid and to the walls of the containing vessel.</p>
+                <div class="formula">F₁/A₁ = F₂/A₂</div>
+                <p>Applications: Hydraulic lift, hydraulic brakes, hydraulic press.</p>
+            </div>
+
+            <h3>Archimedes' Principle & Buoyancy</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Buoyant Force</div>
+                    <div class="formula">F_B = ρ_f V_f g</div>
+                    <p>Where:<br>
+                    ρ_f = Density of fluid<br>
+                    V_f = Volume of fluid displaced<br>
+                    g = Acceleration due to gravity</p>
+                    <p>Buoyant force = Weight of fluid displaced</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Floatation Conditions</div>
+                    <p><strong>Sinking:</strong> Weight > Buoyant force<br>
+                    <strong>Floating:</strong> Weight = Buoyant force<br>
+                    <strong>Rising:</strong> Weight < Buoyant force</p>
+                    <div class="formula">Fraction submerged = ρ_object/ρ_fluid</div>
+                    <p>For floating body</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Center of Buoyancy</div>
+                    <p>Center of mass of displaced fluid</p>
+                    <p>For stable equilibrium:<br>
+                    Center of buoyancy above center of gravity</p>
+                    <p>Metacentric height determines stability</p>
+                    <p>Important for ship design</p>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Atmospheric Pressure & Barometers</h4>
+                <p><strong>Standard atmospheric pressure:</strong> 1 atm = 1.013 × 10⁵ Pa = 760 mm of Hg</p>
+                <p><strong>Mercury barometer:</strong> P = ρgh where h is height of mercury column</p>
+                <p><strong>Manometers:</strong> U-tube manometer measures pressure difference</p>
+                <div class="formula">P₁ - P₂ = ρg(h₂ - h₁)</div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Hydrostatic Pressure</div>
+                <p>Calculate pressure at depth of 10 m in water. Density of water = 1000 kg/m³, atmospheric pressure = 1.01 × 10⁵ Pa.</p>
+                <p><strong>Solution:</strong></p>
+                <p>P = P₀ + ρgh</p>
+                <p>P = 1.01 × 10⁵ + (1000 × 9.8 × 10)</p>
+                <p>P = 1.01 × 10⁵ + 0.98 × 10⁵ = 1.99 × 10⁵ Pa</p>
+                <p><em>Pressure increases by approximately 1 atm for every 10 m depth in water.</em></p>
+            </div>
+        </section>
+
+        <!-- Viscosity Section -->
+        <section class="info-panel" id="viscosity" data-aos="fade-up">
+            <h2>Viscosity & Fluid Flow</h2>
+            <p>Viscosity is the internal friction of a fluid that opposes relative motion between different layers.</p>
+
+            <div class="definition">
+                <p><strong>Newton's Law of Viscosity:</strong> The viscous force between two layers of fluid is proportional to the velocity gradient and area of contact.</p>
+                <div class="formula">F = -ηA(dv/dx)</div>
+                <p>Where η is coefficient of viscosity, A is area, dv/dx is velocity gradient.</p>
+            </div>
+
+            <h3>Types of Fluid Flow</h3>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Reynolds Number</th>
+                    <th>Examples</th>
+                </tr>
+                <tr>
+                    <td>Streamline/Laminar</td>
+                    <td>Smooth, orderly flow with parallel layers</td>
+                    <td>Re < 2000</td>
+                    <td>Honey flow, slow river</td>
+                </tr>
+                <tr>
+                    <td>Turbulent</td>
+                    <td>Chaotic, irregular flow with eddies</td>
+                    <td>Re > 4000</td>
+                    <td>Fast river, blood in large arteries</td>
+                </tr>
+                <tr>
+                    <td>Transitional</td>
+                    <td>Between laminar and turbulent</td>
+                    <td>2000 < Re < 4000</td>
+                    <td>Moderate pipe flow</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Reynolds Number (Re):</strong> Dimensionless number predicting flow pattern</p>
+                <div class="formula">Re = ρvD/η</div>
+                <p>Where:<br>
+                ρ = Density of fluid<br>
+                v = Velocity of flow<br>
+                D = Characteristic dimension (diameter for pipe)<br>
+                η = Coefficient of viscosity</p>
+                <p>Re < 2000: Laminar flow<br>
+                Re > 4000: Turbulent flow</p>
+            </div>
+
+            <h3>Poiseuille's Equation</h3>
+            <p>For laminar flow through a cylindrical pipe:</p>
+            <div class="formula">V = (πPr⁴)/(8ηl)</div>
+            <p>Where:<br>
+            V = Volume flow rate<br>
+            P = Pressure difference<br>
+            r = Radius of pipe<br>
+            η = Coefficient of viscosity<br>
+            l = Length of pipe</p>
+
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Stoke's Law</div>
+                    <p>Viscous force on a sphere moving in fluid:</p>
+                    <div class="formula">F = 6πηrv</div>
+                    <p>Where:<br>
+                    η = Coefficient of viscosity<br>
+                    r = Radius of sphere<br>
+                    v = Velocity of sphere</p>
+                    <p>Terminal velocity: v_t = 2r²(ρ_s - ρ_f)g/(9η)</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Temperature Dependence</div>
+                    <p><strong>For liquids:</strong> η decreases with temperature<br>
+                    Viscosity ∝ 1/T (approximately)</p>
+                    <p><strong>For gases:</strong> η increases with temperature<br>
+                    Viscosity ∝ √T (approximately)</p>
+                    <p><strong>Reason:</strong> In liquids, intermolecular forces dominate. In gases, molecular collisions dominate.</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Practical Applications</div>
+                    <p><strong>High viscosity:</strong> Lubricants, syrups, paints</p>
+                    <p><strong>Low viscosity:</strong> Water, gasoline, air</p>
+                    <p><strong>Blood viscosity:</strong> ~4× water, important for circulation</p>
+                    <p><strong>Engine oil:</strong> Multi-grade (10W-40) for temperature variations</p>
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Terminal Velocity</div>
+                <p>A steel ball of radius 2 mm and density 7800 kg/m³ falls through water (η = 1×10⁻³ Pa·s, ρ = 1000 kg/m³). Find terminal velocity.</p>
+                <p><strong>Solution:</strong></p>
+                <p>Terminal velocity formula: v_t = 2r²(ρ_s - ρ_f)g/(9η)</p>
+                <p>v_t = 2×(0.002)²×(7800-1000)×9.8/(9×0.001)</p>
+                <p>v_t = 2×4×10⁻⁶×6800×9.8/(9×10⁻³) = 0.059 m/s</p>
+                <p><em>The ball falls slowly due to water viscosity.</em></p>
+            </div>
+        </section>
+
+        <!-- Surface Tension Section -->
+        <section class="info-panel" id="surface-tension" data-aos="fade-up">
+            <h2>Surface Tension & Capillarity</h2>
+            <p>Surface tension is the property of liquid surfaces to behave like stretched elastic membranes.</p>
+
+            <div class="definition">
+                <p><strong>Surface Tension (T):</strong> Force per unit length acting perpendicular to an imaginary line drawn on the liquid surface.</p>
+                <div class="formula">T = F/l</div>
+                <p>SI Unit: N/m (also J/m² as surface energy)</p>
+            </div>
+
+            <h3>Surface Tension Phenomena</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Excess Pressure</div>
+                    <p><strong>Inside droplet:</strong> P_in - P_out = 2T/R</p>
+                    <p><strong>Inside bubble:</strong> P_in - P_out = 4T/R</p>
+                    <p><strong>Inside soap bubble:</strong> 4T/R (two surfaces)</p>
+                    <p>Where R is radius of curvature</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Angle of Contact</div>
+                    <p>Angle between tangent to liquid surface and solid surface</p>
+                    <p><strong>θ < 90°:</strong> Liquid wets surface (water-glass)</p>
+                    <p><strong>θ > 90°:</strong> Liquid doesn't wet (mercury-glass)</p>
+                    <p><strong>θ = 0°:</strong> Complete wetting</p>
+                    <p><strong>θ = 180°:</strong> No wetting (theoretical)</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Capillary Action</div>
+                    <p>Rise or fall of liquid in narrow tube</p>
+                    <div class="formula">h = 2T cosθ/(ρgr)</div>
+                    <p>Where:<br>
+                    h = Capillary rise/fall<br>
+                    T = Surface tension<br>
+                    θ = Angle of contact<br>
+                    ρ = Density<br>
+                    r = Radius of tube</p>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Factors Affecting Surface Tension:</strong></p>
+                <ul>
+                    <li><strong>Temperature:</strong> T decreases with temperature, becomes zero at critical temperature</li>
+                    <li><strong>Impurities:</strong> Highly soluble impurities increase T, sparingly soluble decrease T</li>
+                    <li><strong>Nature of liquid:</strong> Water: 0.072 N/m, Mercury: 0.465 N/m</li>
+                    <li><strong>Surfactants:</strong> Detergents, soaps reduce surface tension dramatically</li>
+                </ul>
+            </div>
+
+            <h3>Applications of Surface Tension</h3>
+            <table>
+                <tr>
+                    <th>Application</th>
+                    <th>Principle</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Spherical droplets</td>
+                    <td>Minimum surface area for given volume</td>
+                    <td>Raindrops, soap bubbles</td>
+                </tr>
+                <tr>
+                    <td>Capillary action</td>
+                    <td>Adhesion > Cohesion causes rise</td>
+                    <td>Plants drawing water, ink in blotting paper</td>
+                </tr>
+                <tr>
+                    <td>Detergents</td>
+                    <td>Reduce surface tension</td>
+                    <td>Cleaning, emulsification</td>
+                </tr>
+                <tr>
+                    <td>Floating needle</td>
+                    <td>Surface tension supports weight</td>
+                    <td>Steel needle on water</td>
+                </tr>
+                <tr>
+                    <td>Medical applications</td>
+                    <td>Surfactants in lungs</td>
+                    <td>Respiratory distress syndrome</td>
+                </tr>
+            </table>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">NEET IMPORTANT</div>
+                <h4>Surface Energy</h4>
+                <p>Work done in increasing surface area by unit amount:</p>
+                <div class="formula">Surface energy = T × ΔA</div>
+                <p>Where T = Surface tension, ΔA = Increase in area</p>
+                <p><strong>Relation:</strong> Surface tension = Surface energy per unit area</p>
+                <p>Dimensions: [MT⁻²], Units: J/m²</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Capillary Rise</div>
+                <p>Water rises to height of 5 cm in a capillary tube. If tube radius is halved, find new height. (Assume θ = 0°)</p>
+                <p><strong>Solution:</strong></p>
+                <p>Capillary rise formula: h = 2T cosθ/(ρgr)</p>
+                <p>h ∝ 1/r (other factors constant)</p>
+                <p>If radius halved: r' = r/2, then h' = 2h</p>
+                <p>New height = 2 × 5 cm = 10 cm</p>
+                <p><em>Capillary rise inversely proportional to tube radius.</em></p>
+            </div>
+        </section>
+
+        <!-- Bernoulli's Theorem Section -->
+        <section class="info-panel" id="bernoulli" data-aos="fade-up">
+            <h2>Bernoulli's Theorem & Fluid Dynamics</h2>
+            <p>Bernoulli's theorem relates pressure, velocity, and elevation for an ideal fluid in steady flow.</p>
+
+            <div class="definition">
+                <p><strong>Bernoulli's Equation:</strong> For steady, incompressible, non-viscous flow along a streamline:</p>
+                <div class="formula">P + ½ρv² + ρgh = constant</div>
+                <p>Where:<br>
+                P = Pressure energy per unit volume<br>
+                ½ρv² = Kinetic energy per unit volume<br>
+                ρgh = Potential energy per unit volume</p>
+            </div>
+
+            <h3>Assumptions of Bernoulli's Theorem</h3>
+            <ul>
+                <li>Fluid is ideal (non-viscous)</li>
+                <li>Flow is steady (velocity at a point constant)</li>
+                <li>Flow is incompressible (density constant)</li>
+                <li>Flow is irrotational (no eddies)</li>
+                <li>No energy loss due to friction</li>
+            </ul>
+
+            <h3>Applications of Bernoulli's Theorem</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Venturimeter</div>
+                    <p>Measures flow rate in pipes</p>
+                    <div class="formula">v₁ = A₂√[2(P₁-P₂)/(ρ(A₁²-A₂²))]</div>
+                    <p>Volume flow rate: Q = A₁v₁</p>
+                    <p>Constriction increases velocity, decreases pressure</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Aerofoil/Lift</div>
+                    <p>Airplane wing design</p>
+                    <p>Curved upper surface: longer path, faster air, lower pressure</p>
+                    <p>Flat lower surface: slower air, higher pressure</p>
+                    <p>Pressure difference creates lift</p>
+                    <div class="formula">Lift ∝ ½ρv²A</div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Atomizer/Spray</div>
+                    <p>Perfume bottle, carburetor</p>
+                    <p>Air blown over tube creates low pressure</p>
+                    <p>Liquid rises due to pressure difference</p>
+                    <p>Breaks into fine droplets</p>
+                    <p>Same principle: Bunsen burner, paint gun</p>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Torricelli's Theorem:</strong> Velocity of efflux from an orifice at depth h:</p>
+                <div class="formula">v = √(2gh)</div>
+                <p>Same as velocity acquired by free fall from height h</p>
+                <p><strong>Range of liquid jet:</strong> R = 2√(h(H-h))</p>
+                <p>Maximum range when orifice at middle: h = H/2, R_max = H</p>
+            </div>
+
+            <h3>Equation of Continuity</h3>
+            <p>For incompressible fluid in steady flow through a pipe:</p>
+            <div class="formula">A₁v₁ = A₂v₂ = constant</div>
+            <p>Where A is cross-sectional area, v is fluid velocity</p>
+            <p>Product Av = volume flow rate (Q)</p>
+            <p>Where cross-section decreases, velocity increases</p>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE ADVANCED</div>
+                <h4>Modified Bernoulli Equation</h4>
+                <p>For real (viscous) fluids with energy loss:</p>
+                <div class="formula">P₁/ρg + v₁²/2g + h₁ = P₂/ρg + v₂²/2g + h₂ + h_L</div>
+                <p>Where h_L = head loss due to friction</p>
+                <p><strong>Darcy-Weisbach equation:</strong> h_L = f(L/D)(v²/2g)</p>
+                <p>Where f = friction factor, L = pipe length, D = diameter</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Bernoulli's Application</div>
+                <p>Water flows through a horizontal pipe with cross-section 0.1 m² at 2 m/s. If pipe narrows to 0.05 m², find pressure difference. (ρ = 1000 kg/m³)</p>
+                <p><strong>Solution:</strong></p>
+                <p>From continuity: A₁v₁ = A₂v₂</p>
+                <p>v₂ = (A₁v₁)/A₂ = (0.1×2)/0.05 = 4 m/s</p>
+                <p>From Bernoulli (horizontal, so h constant):</p>
+                <p>P₁ + ½ρv₁² = P₂ + ½ρv₂²</p>
+                <p>P₁ - P₂ = ½ρ(v₂² - v₁²) = ½×1000×(16-4) = 6000 Pa</p>
+                <p><em>Pressure decreases where velocity increases.</em></p>
+            </div>
+        </section>
+
+        <!-- Applications Section -->
+        <section class="info-panel" id="applications" data-aos="fade-up">
+            <h2>Real-World Applications</h2>
+            <p>Fluid mechanics principles have numerous practical applications in daily life and technology.</p>
+
+            <h3>Medical Applications</h3>
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="card-title">Blood Flow & Pressure</div>
+                    <p>Poiseuille's law: Flow ∝ r⁴ (radius to fourth power)</p>
+                    <p>Small change in artery radius greatly affects flow</p>
+                    <p>Atherosclerosis reduces radius, increases blood pressure</p>
+                    <p>Sphygmomanometer measures blood pressure</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Respiratory System</div>
+                    <p>Surfactants reduce surface tension in alveoli</p>
+                    <p>Prevents collapse during exhalation</p>
+                    <p>Respiratory distress syndrome in premature babies</p>
+                    <p>Bernoulli effect in cough, sneeze</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="card-title">Intravenous Therapy</div>
+                    <p>Height of IV bag controls pressure</p>
+                    <p>P = ρgh provides pressure for flow</p>
+                    <p>Flow rate controlled by clamp (adjusts radius)</p>
+                    <p>Viscosity affects flow rate</p>
+                </div>
+            </div>
+
+            <h3>Engineering Applications</h3>
+            <table>
+                <tr>
+                    <th>Application</th>
+                    <th>Principle Used</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Hydraulic Machines</td>
+                    <td>Pascal's Law</td>
+                    <td>Press, lift, brakes, jacks - force multiplication</td>
+                </tr>
+                <tr>
+                    <td>Aerodynamics</td>
+                    <td>Bernoulli's Theorem</td>
+                    <td>Airplane wings, race cars, spoilers</td>
+                </tr>
+                <tr>
+                    <td>Chemical Industry</td>
+                    <td>Viscosity & Flow</td>
+                    <td>Pipeline design, mixing, pumping</td>
+                </tr>
+                <tr>
+                    <td>Meteorology</td>
+                    <td>Fluid Dynamics</td>
+                    <td>Weather patterns, wind flow, storms</td>
+                </tr>
+                <tr>
+                    <td>Civil Engineering</td>
+                    <td>Hydrostatics</td>
+                    <td>Dam design, water supply, drainage</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                <p><strong>Everyday Examples:</strong></p>
+                <ul>
+                    <li><strong>Shower curtain:</strong> Bernoulli effect pulls curtain inward</li>
+                    <li><strong>Baseball curveball:</strong> Magnus effect due to spin</li>
+                    <li><strong>Teapot effect:</strong> Liquid adheres to spout surface</li>
+                    <li><strong>Walking on mud:</strong> Pressure = weight/area, wide shoes reduce pressure</li>
+                    <li><strong>Syringe:</strong> Pascal's law - small force creates high pressure</li>
+                    <li><strong>Hot air balloon:</strong> Buoyancy - hot air less dense than cold air</li>
+                    <li><strong>Submarine:</strong> Ballast tanks control buoyancy</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Problem Solving Section -->
+        <section class="info-panel" id="problems" data-aos="fade-up">
+            <h2>Problem Solving Strategies</h2>
+            <p>Systematic approach to solve fluid mechanics problems in JEE and NEET.</p>
+
+            <div class="problem-solving">
+                <div class="problem-box">
+                    <div class="problem-title">Type 1: Hydrostatic Problems</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify fluid and its density</li>
+                        <li>Determine depth/height differences</li>
+                        <li>Use P = P₀ + ρgh</li>
+                        <li>Consider Pascal's law if force multiplication</li>
+                        <li>Check units (Pa, atm, mm Hg conversions)</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Pressure depends only on depth, not container shape</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 2: Buoyancy Problems</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Calculate weight of object</li>
+                        <li>Calculate buoyant force = ρ_f V_f g</li>
+                        <li>Apply equilibrium condition</li>
+                        <li>For floating: weight = buoyant force</li>
+                        <li>Find fraction submerged = ρ_object/ρ_fluid</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Buoyant force acts through center of buoyancy</p>
+                    </div>
+                </div>
+
+                <div class="problem-box">
+                    <div class="problem-title">Type 3: Bernoulli Problems</div>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Identify two points along streamline</li>
+                        <li>Write Bernoulli equation: P₁ + ½ρv₁² + ρgh₁ = P₂ + ½ρv₂² + ρgh₂</li>
+                        <li>Use continuity: A₁v₁ = A₂v₂</li>
+                        <li>Solve for unknown</li>
+                        <li>Check assumptions (ideal fluid)</li>
+                    </ol>
+                    <div class="example">
+                        <p><strong>Tip:</strong> Height measured from common reference level</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">JEE/NEET TIP</div>
+                <h4>Common Problem Patterns</h4>
+                <p><strong>1. U-tube problems:</strong> Equal pressure at same horizontal level</p>
+                <p><strong>2. Communicating vessels:</strong> Liquid finds same level</p>
+                <p><strong>3. Manometer problems:</strong> P_A + ρ₁gh₁ = P_B + ρ₂gh₂</p>
+                <p><strong>4. Venturimeter:</strong> Use Bernoulli + continuity</p>
+                <p><strong>5. Capillary tubes:</strong> h = 2T cosθ/(ρgr)</p>
+                <p><strong>6. Terminal velocity:</strong> Weight = Buoyant force + Viscous force</p>
+            </div>
+
+            <h3>Quick Formula Reference</h3>
+            <div class="equation-cards">
+                <div class="equation-card">
+                    <div class="formula">P = P₀ + ρgh</div>
+                    <div class="formula">F_B = ρ_f V_f g</div>
+                    <div class="formula">F₁/A₁ = F₂/A₂</div>
+                </div>
+                <div class="equation-card">
+                    <div class="formula">F = ηA(dv/dx)</div>
+                    <div class="formula">v_t = 2r²(ρ_s-ρ_f)g/(9η)</div>
+                    <div class="formula">V = πPr⁴/(8ηl)</div>
+                </div>
+                <div class="equation-card">
+                    <div class="formula">P + ½ρv² + ρgh = const</div>
+                    <div class="formula">A₁v₁ = A₂v₂</div>
+                    <div class="formula">h = 2T cosθ/(ρgr)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Facts Carousel -->
+        <div class="swiper-container" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">HYDROSTATIC PRESSURE</div>
+                        <div class="swiper-text">P = P₀ + ρgh. Pressure increases with depth, independent of container shape.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">PASCAL'S LAW</div>
+                        <div class="swiper-text">Pressure applied to enclosed fluid transmitted equally throughout. F₁/A₁ = F₂/A₂.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">ARCHIMEDES' PRINCIPLE</div>
+                        <div class="swiper-text">Buoyant force = Weight of fluid displaced. F_B = ρ_f V_f g.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">BERNOULLI'S THEOREM</div>
+                        <div class="swiper-text">P + ½ρv² + ρgh = constant. Pressure decreases where velocity increases.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">SURFACE TENSION</div>
+                        <div class="swiper-text">T = F/l. Causes capillary action, spherical droplets, minimum surface area.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">VISCOUS FORCE</div>
+                        <div class="swiper-text">F = ηA(dv/dx). Viscosity: liquids decrease with T, gases increase with T.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">CONTINUITY EQUATION</div>
+                        <div class="swiper-text">A₁v₁ = A₂v₂. Where area decreases, velocity increases for incompressible flow.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="swiper-title">STOKE'S LAW</div>
+                        <div class="swiper-text">F = 6πηrv. Terminal velocity: v_t = 2r²(ρ_s-ρ_f)g/(9η).</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- Summary Section -->
+        <section class="info-panel" data-aos="fade-up">
+            <h2>Chapter Summary & Key Points</h2>
+            
+            <h3>Essential Formulas</h3>
+            <div class="concept-cards">
+                <div class="concept-card hydrostatics">
+                    <div class="card-title hydrostatics">Hydrostatics</div>
+                    <div class="formula">P = P₀ + ρgh</div>
+                    <div class="formula">F_B = ρ_f V_f g</div>
+                    <div class="formula">F₁/A₁ = F₂/A₂</div>
+                </div>
+
+                <div class="concept-card viscosity">
+                    <div class="card-title viscosity">Viscosity</div>
+                    <div class="formula">F = ηA(dv/dx)</div>
+                    <div class="formula">v_t = 2r²(ρ_s-ρ_f)g/(9η)</div>
+                    <div class="formula">V = πPr⁴/(8ηl)</div>
+                </div>
+
+                <div class="concept-card surface-tension">
+                    <div class="card-title surface-tension">Surface Tension</div>
+                    <div class="formula">T = F/l</div>
+                    <div class="formula">P_excess = 2T/R</div>
+                    <div class="formula">h = 2T cosθ/(ρgr)</div>
+                </div>
+            </div>
+
+            <h3>Important Points for JEE/NEET</h3>
+            <ul>
+                <li>Pressure in fluid acts equally in all directions at a point</li>
+                <li>Buoyant force depends on volume displaced, not weight of object</li>
+                <li>Streamline flow: Re < 2000, Turbulent: Re > 4000</li>
+                <li>Surface tension decreases with temperature, becomes zero at critical temperature</li>
+                <li>Angle of contact: θ < 90° for wetting, θ > 90° for non-wetting</li>
+                <li>Bernoulli's theorem assumes ideal, incompressible, steady, irrotational flow</li>
+                <li>Viscosity of liquids decreases with temperature, gases increases</li>
+                <li>Excess pressure in bubble: 4T/R (soap bubble has two surfaces)</li>
+            </ul>
+
+            <div class="important">
+                <p><strong>Common Mistakes to Avoid:</strong></p>
+                <ul>
+                    <li>Confusing gauge pressure (P - P₀) with absolute pressure</li>
+                    <li>Forgetting that buoyant force acts through center of buoyancy</li>
+                    <li>Applying Bernoulli's theorem to viscous fluids without modification</li>
+                    <li>Using wrong sign for capillary rise/fall (depends on θ)</li>
+                    <li>Confusing surface tension units (N/m = J/m²)</li>
+                    <li>Forgetting temperature dependence of viscosity and surface tension</li>
+                    <li>Not checking Reynolds number before using Poiseuille's equation</li>
+                    <li>Confusing excess pressure formulas for droplet, bubble, soap bubble</li>
+                </ul>
+            </div>
+
+            <div class="exam-highlight">
+                <div class="exam-badge">LAST MINUTE REVISION</div>
+                <h4>Must Remember Values</h4>
+                <p><strong>Density:</strong> Water = 1000 kg/m³, Mercury = 13600 kg/m³, Air = 1.2 kg/m³</p>
+                <p><strong>Surface tension:</strong> Water = 0.072 N/m, Mercury = 0.465 N/m</p>
+                <p><strong>Viscosity:</strong> Water = 1×10⁻³ Pa·s, Air = 1.8×10⁻⁵ Pa·s</p>
+                <p><strong>Atmospheric pressure:</strong> 1 atm = 1.013×10⁵ Pa = 760 mm Hg = 10.3 m water column</p>
+                <p><strong>g:</strong> 9.8 m/s² (use 10 m/s² for approximation)</p>
+                <p><strong>Standard values:</strong> sinθ, cosθ for common angles (0°, 30°, 37°, 45°, 53°, 60°, 90°)</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Nerds Assemble</h3>
+                <p>Master Mechanical Properties of Fluids for JEE & NEET. Comprehensive physics resource with detailed explanations and problem-solving strategies.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#pressure">Pressure & Hydrostatics</a></li>
+                    <li><a href="#viscosity">Viscosity</a></li>
+                    <li><a href="#surface-tension">Surface Tension</a></li>
+                    <li><a href="#bernoulli">Bernoulli's Theorem</a></li>
+                    <li><a href="#applications">Applications</a></li>
+                    <li><a href="#problems">Problem Solving</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact & Resources</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> 44mr.invisible@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Nerds Assemble. All rights reserved. | Designed for JEE & NEET Aspirants | Mechanical Properties of Fluids </p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Mechanical Properties of Fluids - JavaScript
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ?
+                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+            }
+
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+
+            function handleScroll() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('active');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                }
+            }
+
+            // Debounced scroll event
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(handleScroll, 50);
+            }, { passive: true });
+
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: window.innerWidth < 768 ? 100 : 120,
+                    easing: 'ease-out-quad'
+                });
+            }
+
+            // Initialize Swiper
+            if (typeof Swiper !== 'undefined') {
+                const swiper = new Swiper('.swiper-container', {
+                    loop: true,
+                    autoplay: {
+                        delay: 3500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 25
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        }
+                    }
+                });
+            }
+
+            // Smooth Scroll for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        if (mainNav && mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                });
+            });
+
+            // Back to Top Button Click
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Create Fluid Visualization
+            createFluidVisualization();
+            
+            // Create Bubbles
+            createBubbles();
+            
+            // Create Particles
+            createParticles();
+        });
+
+        // Create Fluid Visualization for Pressure Demo
+        function createFluidVisualization() {
+            const pressureDemo = document.getElementById('pressureDemo');
+            if (!pressureDemo) return;
+
+            // Create fluid layers at different depths
+            const depths = [0, 25, 50, 75, 100]; // percentages
+            const pressures = [1, 1.25, 1.5, 1.75, 2]; // relative pressure
+            
+            depths.forEach((depth, index) => {
+                const layer = document.createElement('div');
+                layer.className = 'fluid-layer';
+                layer.style.bottom = `${depth}%`;
+                layer.style.height = `${100-depth}%`;
+                layer.style.opacity = 0.1 + (index * 0.2);
+                pressureDemo.appendChild(layer);
+                
+                // Add particles
+                for (let i = 0; i < 5; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'fluid-particle';
+                    particle.style.left = `${20 + (index * 15) + (i * 5)}%`;
+                    particle.style.bottom = `${depth + 5}%`;
+                    particle.style.animationDelay = `${i * 0.5}s`;
+                    pressureDemo.appendChild(particle);
+                }
+            });
+            
+            // Add depth labels
+            depths.forEach(depth => {
+                const label = document.createElement('div');
+                label.style.position = 'absolute';
+                label.style.right = '10px';
+                label.style.bottom = `${depth}%`;
+                label.style.color = 'var(--fluid-highlight)';
+                label.style.fontFamily = 'Electrolize, sans-serif';
+                label.style.fontSize = '0.8rem';
+                label.textContent = `${depth} cm`;
+                pressureDemo.appendChild(label);
+            });
+        }
+
+        // Create Bubbles Function
+        function createBubbles() {
+            const bubblesContainer = document.getElementById('bubbles');
+            if (!bubblesContainer) return;
+
+            const bubbleCount = window.innerWidth < 768 ? 15 : 25;
+            
+            for (let i = 0; i < bubbleCount; i++) {
+                const bubble = document.createElement('div');
+                bubble.classList.add('bubble');
+
+                const size = Math.random() * 20 + 5;
+                const posX = Math.random() * window.innerWidth;
+                const duration = Math.random() * 10 + 10;
+                const delay = Math.random() * 5;
+                const opacity = Math.random() * 0.2 + 0.05;
+
+                bubble.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}px;
+                    bottom: -${size}px;
+                    opacity: ${opacity};
+                    animation: bubble-rise ${duration}s ease-in ${delay}s infinite;
+                    background: radial-gradient(circle at 30% 30%, rgba(33, 150, 243, 0.3), rgba(33, 150, 243, 0.1));
+                `;
+
+                bubblesContainer.appendChild(bubble);
+            }
+        }
+
+        // Create Particles Function
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
+
+            const particleCount = window.innerWidth < 768 ? 20 : 30;
+            particlesContainer.innerHTML = '';
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                const size = Math.random() * 3 + 1;
+                const posX = Math.random() * window.innerWidth;
+                const posY = Math.random() * window.innerHeight;
+                const duration = Math.random() * 15 + 10;
+                const delay = Math.random() * 5;
+
+                particle.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}px;
+                    top: ${posY}px;
+                    opacity: ${Math.random() * 0.3 + 0.1};
+                    animation: float ${duration}s ease-in-out ${delay}s infinite;
+                    background: rgba(33, 150, 243, 0.3);
+                `;
+
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                createParticles();
+                createBubbles();
+            }, 250);
+        });
+
+        // Interactive flow lines
+        const flowLines = document.querySelectorAll('.flow-line');
+        flowLines.forEach((line, index) => {
+            line.addEventListener('mouseover', function() {
+                this.style.opacity = '1';
+                this.style.background = 'var(--fluid-highlight)';
+            });
+            
+            line.addEventListener('mouseout', function() {
+                this.style.opacity = '0.6';
+                this.style.background = 'var(--fluid-primary)';
+            });
+        });
+    </script>
+</body>
+</html>
