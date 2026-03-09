@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Quick Notes</title>
+
+<style>
+
+:root{
+--bg:#050816;
+--card:#0b1124;
+--text:#e2e8f0;
+--accent:#60a5fa;
+--note:#111827;
+}
+
+body.light{
+--bg:#eef1f7;
+--card:#ffffff;
+--text:#1e293b;
+--accent:#3b82f6;
+--note:#f1f5f9;
+}
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:var(--bg);
+font-family:Arial;
+transition:0.4s;
+color:var(--text);
+}
+
+/* container */
+
+.notes-app{
+width:340px;
+padding:20px;
+border-radius:18px;
+background:var(--card);
+box-shadow:
+0 0 20px var(--accent),
+0 0 60px rgba(96,165,250,0.25);
+}
+
+/* header */
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:15px;
+}
+
+.header h2{
+margin:0;
+font-size:18px;
+}
+
+/* add button */
+
+.add-btn{
+background:var(--accent);
+border:none;
+color:white;
+padding:6px 12px;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* notes container */
+
+.notes{
+display:flex;
+flex-direction:column;
+gap:10px;
+max-height:300px;
+overflow-y:auto;
+}
+
+/* note */
+
+.note{
+background:var(--note);
+border:none;
+border-radius:8px;
+padding:10px;
+min-height:60px;
+resize:none;
+color:var(--text);
+}
+
+/* toggle */
+
+.switch{
+position:absolute;
+top:25px;
+right:25px;
+width:55px;
+height:26px;
+}
+
+.switch input{
+opacity:0;
+width:0;
+height:0;
+}
+
+.slider{
+position:absolute;
+cursor:pointer;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:#ccc;
+transition:.4s;
+border-radius:30px;
+}
+
+.slider:before{
+position:absolute;
+content:"";
+height:20px;
+width:20px;
+left:3px;
+bottom:3px;
+background:white;
+transition:.4s;
+border-radius:50%;
+}
+
+input:checked + .slider{
+background:var(--accent);
+}
+
+input:checked + .slider:before{
+transform:translateX(28px);
+}
+
+</style>
+</head>
+
+<body>
+
+<label class="switch">
+<input type="checkbox" id="modeToggle">
+<span class="slider"></span>
+</label>
+
+<div class="notes-app">
+
+<div class="header">
+<h2>Quick Notes</h2>
+<button class="add-btn" onclick="addNote()">+</button>
+</div>
+
+<div class="notes" id="notes"></div>
+
+</div>
+
+<script>
+
+/* dark/light toggle */
+
+const toggle = document.getElementById("modeToggle");
+
+toggle.addEventListener("change", () => {
+document.body.classList.toggle("light");
+});
+
+/* notes logic */
+
+const notesContainer = document.getElementById("notes");
+
+function saveNotes(){
+
+const notes = [];
+
+document.querySelectorAll(".note").forEach(note=>{
+notes.push(note.value);
+});
+
+localStorage.setItem("quickNotes", JSON.stringify(notes));
+
+}
+
+function loadNotes(){
+
+const saved = JSON.parse(localStorage.getItem("quickNotes")) || [];
+
+saved.forEach(text=>{
+createNote(text);
+});
+
+}
+
+function createNote(text=""){
+
+const textarea = document.createElement("textarea");
+
+textarea.classList.add("note");
+textarea.value = text;
+
+textarea.addEventListener("input", saveNotes);
+
+textarea.addEventListener("dblclick", ()=>{
+textarea.remove();
+saveNotes();
+});
+
+notesContainer.appendChild(textarea);
+
+}
+
+function addNote(){
+createNote();
+}
+
+loadNotes();
+
+</script>
+
+</body>
+</html>
