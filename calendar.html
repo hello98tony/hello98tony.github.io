@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Futuristic Calendar</title>
+
+<style>
+
+:root{
+--bg:#eef1f7;
+--card:#ffffff;
+--text:#1e293b;
+--accent:#3b82f6;
+}
+
+body.dark{
+--bg:#050816;
+--card:#0b1124;
+--text:#e2e8f0;
+--accent:#60a5fa;
+}
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:var(--bg);
+font-family:Arial;
+transition:0.4s;
+}
+
+/* card */
+
+.calendar{
+width:320px;
+padding:20px;
+border-radius:18px;
+background:var(--card);
+box-shadow:
+0 0 25px rgba(0,0,0,0.2),
+inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+body.dark .calendar{
+box-shadow:
+0 0 20px var(--accent),
+0 0 60px rgba(96,165,250,0.3);
+}
+
+/* header */
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:15px;
+color:var(--text);
+font-weight:bold;
+}
+
+button{
+background:var(--accent);
+border:none;
+color:white;
+padding:5px 10px;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* days */
+
+.days{
+display:grid;
+grid-template-columns:repeat(7,1fr);
+gap:6px;
+color:var(--text);
+text-align:center;
+font-size:14px;
+}
+
+.day-name{
+font-weight:bold;
+opacity:0.7;
+}
+
+.date{
+padding:8px;
+border-radius:6px;
+transition:0.2s;
+}
+
+.date:hover{
+background:var(--accent);
+color:white;
+cursor:pointer;
+}
+
+.today{
+background:var(--accent);
+color:white;
+}
+
+/* toggle switch */
+
+.switch{
+position:absolute;
+top:25px;
+right:25px;
+width:55px;
+height:26px;
+}
+
+.switch input{
+opacity:0;
+width:0;
+height:0;
+}
+
+.slider{
+position:absolute;
+cursor:pointer;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:#ccc;
+transition:.4s;
+border-radius:30px;
+}
+
+.slider:before{
+position:absolute;
+content:"";
+height:20px;
+width:20px;
+left:3px;
+bottom:3px;
+background:white;
+transition:.4s;
+border-radius:50%;
+}
+
+input:checked + .slider{
+background:var(--accent);
+}
+
+input:checked + .slider:before{
+transform:translateX(28px);
+}
+
+</style>
+</head>
+
+<body>
+
+<label class="switch">
+<input type="checkbox" id="modeToggle">
+<span class="slider"></span>
+</label>
+
+<div class="calendar">
+
+<div class="header">
+<button onclick="prevMonth()">◀</button>
+<div id="monthYear"></div>
+<button onclick="nextMonth()">▶</button>
+</div>
+
+<div class="days" id="calendarDays"></div>
+
+</div>
+
+<script>
+
+const toggle = document.getElementById("modeToggle");
+toggle.addEventListener("change", () => {
+document.body.classList.toggle("dark");
+});
+
+const daysContainer = document.getElementById("calendarDays");
+const monthYear = document.getElementById("monthYear");
+
+let date = new Date();
+
+function renderCalendar(){
+
+const year = date.getFullYear();
+const month = date.getMonth();
+
+const firstDay = new Date(year, month, 1).getDay();
+const lastDate = new Date(year, month + 1, 0).getDate();
+
+const monthNames = [
+"January","February","March","April","May","June",
+"July","August","September","October","November","December"
+];
+
+monthYear.textContent = monthNames[month] + " " + year;
+
+daysContainer.innerHTML = "";
+
+const dayNames = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+
+dayNames.forEach(d=>{
+const div = document.createElement("div");
+div.textContent = d;
+div.classList.add("day-name");
+daysContainer.appendChild(div);
+});
+
+for(let i=0;i<firstDay;i++){
+const blank = document.createElement("div");
+daysContainer.appendChild(blank);
+}
+
+const today = new Date();
+
+for(let d=1; d<=lastDate; d++){
+
+const div = document.createElement("div");
+div.textContent = d;
+div.classList.add("date");
+
+if(
+d === today.getDate() &&
+month === today.getMonth() &&
+year === today.getFullYear()
+){
+div.classList.add("today");
+}
+
+daysContainer.appendChild(div);
+}
+
+}
+
+function prevMonth(){
+date.setMonth(date.getMonth() - 1);
+renderCalendar();
+}
+
+function nextMonth(){
+date.setMonth(date.getMonth() + 1);
+renderCalendar();
+}
+
+renderCalendar();
+
+</script>
+
+</body>
+</html>
