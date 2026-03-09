@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D physics hub · wave & field</title>
+  <!-- Google Font & Icons (same style) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0b0e14;
+      font-family: 'Inter', sans-serif;
+      color: #eef3fc;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    #particle-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.45;
+    }
+
+    .wrapper {
+      position: relative;
+      z-index: 10;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 2rem 2rem 3rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* header – similar to lab but physics */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0 2rem 0;
+      border-bottom: 1px solid rgba(80, 170, 255, 0.2);
+      margin-bottom: 2.5rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+      font-size: 2rem;
+      letter-spacing: -0.5px;
+    }
+
+    .logo i {
+      font-size: 2.4rem;
+      color: #5fd0ff;
+      filter: drop-shadow(0 0 10px #2fa0ff);
+      animation: gentle-spin 14s infinite linear;
+    }
+
+    @keyframes gentle-spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .back-home {
+      background: rgba(0, 150, 255, 0.1);
+      border: 1px solid #3190e0;
+      border-radius: 40px;
+      padding: 0.55rem 1.6rem;
+      font-size: 1.1rem;
+      color: #bde1ff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: 0.2s;
+    }
+    .back-home:hover {
+      background: #1f4970;
+      border-color: #70ccff;
+      color: white;
+      gap: 14px;
+    }
+
+    /* hero – physics style */
+    .hero {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .hero h1 {
+      font-size: 3.4rem;
+      font-weight: 500;
+      background: linear-gradient(145deg, #ffffff, #b8e2ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.8rem;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      color: #aac3e0;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* cards – each describes an animation, no canvas inside */
+    .cards-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin: 3rem 0 3rem;
+    }
+
+    .phys-card {
+      flex: 1 1 300px;
+      max-width: 350px;
+      background: rgba(18, 30, 45, 0.7);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(70, 160, 255, 0.35);
+      border-radius: 40px;
+      padding: 2.5rem 1.8rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 20px 30px -15px #000000cc;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .phys-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(500px circle at var(--x, 30%) var(--y, 30%), rgba(60, 200, 255, 0.2), transparent 50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+
+    .phys-card:hover::before {
+      opacity: 1;
+    }
+
+    .phys-card:hover {
+      transform: translateY(-10px);
+      border-color: #4dc9ff;
+      box-shadow: 0 30px 45px -15px #000, 0 0 0 1px #3fc0ff80;
+    }
+
+    .card-icon {
+      font-size: 3.5rem;
+      color: #5fc9ff;
+      margin-bottom: 1.5rem;
+    }
+
+    .phys-card h3 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      background: linear-gradient(135deg, #fff, #c0e6ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 1rem;
+    }
+
+    .phys-desc {
+      color: #c0dafc;
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .feature-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 1rem 0 2rem;
+    }
+    .feature-tags span {
+      background: rgba(0, 160, 255, 0.1);
+      border: 1px solid #2580d0;
+      border-radius: 40px;
+      padding: 0.3rem 1.2rem;
+      font-size: 0.9rem;
+      color: #d0ebff;
+    }
+
+    /* explore button – identical to main lab */
+    .explore-btn {
+      background: rgba(0, 150, 255, 0.18);
+      border: 1.5px solid #40c0ff;
+      color: #e0f3ff;
+      padding: 0.9rem 2rem;
+      border-radius: 60px;
+      font-size: 1.4rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      cursor: pointer;
+      transition: 0.25s;
+      backdrop-filter: blur(6px);
+      text-decoration: none;
+      width: fit-content;
+      border: none;
+      outline: 1.5px solid #40c0ff;
+      background: rgba(0, 150, 255, 0.1);
+      margin-top: 0.5rem;
+    }
+
+    .explore-btn i {
+      font-size: 1.6rem;
+      transition: transform 0.2s;
+    }
+
+    .explore-btn:hover {
+      background: rgba(0, 180, 255, 0.3);
+      gap: 18px;
+      padding-right: 2.6rem;
+      outline-color: #90e0ff;
+      box-shadow: 0 0 20px #00ccff80;
+    }
+
+    .explore-btn:hover i {
+      transform: translateX(6px);
+    }
+
+    /* large live preview (kept for atmosphere) – now showing a standalone physics animation */
+    .live-preview-section {
+      margin: 2rem 0 3rem;
+      background: rgba(0, 15, 30, 0.5);
+      backdrop-filter: blur(8px);
+      border-radius: 48px;
+      border: 1px solid #3b90ff40;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2.5rem;
+    }
+    .live-text {
+      flex: 1 1 240px;
+    }
+    .live-text h3 {
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 0.4rem;
+    }
+    .live-text p {
+      color: #adcaf0;
+    }
+    .live-canvas-box {
+      flex: 1 1 320px;
+      height: 210px;
+      border-radius: 30px;
+      background: #09161e;
+      border: 1px solid #2f90e0;
+      overflow: hidden;
+    }
+    #live-physics-canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      text-align: center;
+      color: #6f8fb2;
+      border-top: 1px solid #203a55;
+      padding-top: 2rem;
+    }
+
+    /* animations */
+    .hero, .phys-card, .live-preview-section {
+      animation: fadeUp 0.5s ease-out forwards;
+    }
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(15px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* tilt effect */
+    .phys-card {
+      transition: transform 0.25s, border-color 0.2s, box-shadow 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="particle-canvas"></canvas>
+  <div class="wrapper">
+    <!-- header with back link -->
+    <header class="header">
+      <div class="logo">
+        <i class="fas fa-cube"></i>
+        <span>3D<span style="color: #6fd5ff;">Lab</span> · physics</span>
+      </div>
+      <a href="index.html" class="back-home" onclick="alert('↩️ return to main lab (simulated)');"><i class="fas fa-arrow-left"></i> main lab</a>
+    </header>
+
+    <!-- hero -->
+    <section class="hero">
+      <h1>⚡ physics animations</h1>
+      <p>Each card describes a full‑screen 3D experiment. Click explore to launch.</p>
+    </section>
+
+    <!-- three cards with description + explore button (NO canvas inside) -->
+    <div class="cards-grid">
+      <!-- CARD 1: wave interference -->
+      <div class="phys-card" data-tilt>
+        <div class="card-icon"><i class="fas fa-wave-square"></i></div>
+        <h3>wave interference</h3>
+        <div class="phys-desc">
+          Double‑slit analog with coherent sources. Adjust phase, wavelength, and watch interference patterns evolve in real time 3D.
+        </div>
+        <div class="feature-tags">
+          <span>phase shift</span>
+          <span>two sources</span>
+          <span>standing waves</span>
+        </div>
+        <!-- explore button leads to wave page (demo) -->
+        <button class="explore-btn" onclick="window.location.href='#'; alert('🌊 opening wave interference animation (full page demo)');">
+          explore <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <!-- CARD 2: electric / magnetic field -->
+      <div class="phys-card" data-tilt>
+        <div class="card-icon"><i class="fas fa-magnet"></i></div>
+        <h3>field lines</h3>
+        <div class="phys-desc">
+          Dipole and monopole field visualizations. Interactive vector arrows and moving test charges reveal field structure.
+        </div>
+        <div class="feature-tags">
+          <span>dipole</span>
+          <span>vector field</span>
+          <span>flux</span>
+        </div>
+        <button class="explore-btn" onclick="window.location.href='#'; alert('🧲 opening field lines animation (full page demo)');">
+          explore <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <!-- CARD 3: quantum wave packet -->
+      <div class="phys-card" data-tilt>
+        <div class="card-icon"><i class="fas fa-circle-radiation"></i></div>
+        <h3>wave packet</h3>
+        <div class="phys-desc">
+          Gaussian wave packet propagation. Observe dispersion, phase velocity, and probability density in a 3D box.
+        </div>
+        <div class="feature-tags">
+          <span>gaussian</span>
+          <span>probability</span>
+          <span>time evolution</span>
+        </div>
+        <button class="explore-btn" onclick="window.location.href='#'; alert('⚛️ opening wave packet animation (full page demo)');">
+          explore <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- live preview area (one larger canvas, just for atmosphere) – still shows a physics animation but not inside cards -->
+    <div class="live-preview-section">
+      <div class="live-text">
+        <h3><i class="fas fa-bolt" style="color:#5fd0ff;"></i> live: vector field</h3>
+        <p>rotating magnetic dipole · preview of the field lines animation</p>
+      </div>
+      <div class="live-canvas-box">
+        <canvas id="live-physics-canvas"></canvas>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <i class="fas fa-cube"></i> free 3D physics · each demo opens full page
+    </footer>
+  </div>
+
+  <!-- Three.js import -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.128.0/build/three.module.js"
+      }
+    }
+  </script>
+
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'https://unpkg.com/three@0.128.0/examples/jsm/controls/OrbitControls.js';
+
+    // ---------- background particles (same as original) ----------
+    const canvas = document.getElementById('particle-canvas');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let particles = [];
+
+    function resize() {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = width;
+      canvas.height = height;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    function initParticles() {
+      const count = 60;
+      particles = [];
+      for (let i = 0; i < count; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.3,
+          size: Math.random() * 2.4 + 0.8,
+        });
+      }
+    }
+    initParticles();
+
+    function drawParticles() {
+      ctx.clearRect(0, 0, width, height);
+      ctx.shadowBlur = 10;
+      ctx.shadowColor = '#4090ff';
+      
+      for (let p of particles) {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = '#90d0ff';
+        ctx.fill();
+        
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0 || p.x > width) p.vx *= -1;
+        if (p.y < 0 || p.y > height) p.vy *= -1;
+      }
+      
+      ctx.strokeStyle = '#5090ff20';
+      ctx.lineWidth = 0.5;
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i+1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx*dx + dy*dy);
+          if (dist < 130) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(110, 180, 255, ${0.12 - dist/1200})`;
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(drawParticles);
+    }
+    drawParticles();
+
+    // ----- live preview canvas (large) – magnetic / vector field (atmosphere) -----
+    function initLivePhysics() {
+      const canvasEl = document.getElementById('live-physics-canvas');
+      if (!canvasEl) return;
+      const renderer = new THREE.WebGLRenderer({ canvas: canvasEl, alpha: true, antialias: true });
+      const w = canvasEl.clientWidth, h = canvasEl.clientHeight;
+      renderer.setSize(w, h);
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(45, w/h, 0.1, 100);
+      camera.position.set(4, 2, 5);
+      
+      const controls = new OrbitControls(camera, canvasEl);
+      controls.enableDamping = true;
+      controls.autoRotate = true;
+      controls.autoRotateSpeed = 2.2;
+      controls.enableZoom = false;
+      controls.enablePan = false;
+
+      scene.add(new THREE.AmbientLight(0x303055));
+      const light1 = new THREE.PointLight(0x80aaff, 1.2);
+      light1.position.set(2, 3, 3);
+      scene.add(light1);
+      const light2 = new THREE.PointLight(0xffaa88, 0.8);
+      light2.position.set(-2, 1, -2);
+      scene.add(light2);
+
+      // central dipole magnet shape (cylinder)
+      const coreGeo = new THREE.CylinderGeometry(0.8, 0.8, 0.6, 16);
+      const coreMat = new THREE.MeshStandardMaterial({ color: 0xaaaaff, emissive: 0x113344 });
+      const core = new THREE.Mesh(coreGeo, coreMat);
+      core.rotation.x = Math.PI/2;
+      core.position.y = 0.1;
+      scene.add(core);
+
+      // field lines as rotating arrows (simple representation)
+      for (let i = 0; i < 10; i++) {
+        const angle = (i / 10) * Math.PI * 2;
+        const r = 2.0;
+        const arrowDir = new THREE.Vector3(Math.cos(angle), 0, Math.sin(angle));
+        const arrowPos = new THREE.Vector3(Math.cos(angle)*r, 0, Math.sin(angle)*r);
+        const arrow = new THREE.ArrowHelper(arrowDir, arrowPos, 0.8, 0x60a0ff, 0.4, 0.3);
+        scene.add(arrow);
+      }
+
+      // floating particles
+      const starGeo = new THREE.BufferGeometry();
+      const starPos = new Float32Array(70 * 3);
+      for (let i = 0; i < 70; i++) {
+        starPos[i*3] = (Math.random() - 0.5) * 8;
+        starPos[i*3+1] = (Math.random() - 0.5) * 5;
+        starPos[i*3+2] = (Math.random() - 0.5) * 6;
+      }
+      starGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
+      const stars = new THREE.Points(starGeo, new THREE.PointsMaterial({ color: 0xaaccff, size: 0.08 }));
+      scene.add(stars);
+
+      function animate() {
+        requestAnimationFrame(animate);
+        controls.update();
+        renderer.render(scene, camera);
+      }
+      animate();
+    }
+
+    // initialize the live preview
+    window.addEventListener('load', () => {
+      initLivePhysics();
+    });
+
+    // tilt effect on cards (same as original)
+    const cards = document.querySelectorAll('.phys-card');
+    cards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotX = (y - centerY) / 30;
+        const rotY = (centerX - x) / 30;
+        card.style.transform = `perspective(400px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale3d(1.01, 1.01, 1.01)`;
+        card.style.setProperty('--x', x + 'px');
+        card.style.setProperty('--y', y + 'px');
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(400px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+      });
+    });
+  </script>
+</body>
+</html>
